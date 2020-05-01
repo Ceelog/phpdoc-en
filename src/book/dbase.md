@@ -1,0 +1,1037 @@
+dBase
+=====
+
+**Table of Contents**
+
+-   [Introduction](/book/dbase.html#Introduction)
+-   [Installing/Configuring](/book/dbase.html#Installing/Configuring)
+    -   [Requirements](/book/dbase.html#Requirements)
+    -   [Installation](/book/dbase.html#Installation)
+    -   [Runtime
+        Configuration](/book/dbase.html#Runtime%20Configuration)
+    -   [Resource Types](/book/dbase.html#Resource%20Types)
+-   [Predefined Constants](/book/dbase.html#Predefined%20Constants)
+-   [dBase Functions](/book/dbase.html#dBase%20Functions)
+    -   [dbase\_add\_record](/book/dbase.html#dbase_add_record) — Adds a
+        record to a database
+    -   [dbase\_close](/book/dbase.html#dbase_close) — Closes a database
+    -   [dbase\_create](/book/dbase.html#dbase_create) — Creates a
+        database
+    -   [dbase\_delete\_record](/book/dbase.html#dbase_delete_record) —
+        Deletes a record from a database
+    -   [dbase\_get\_header\_info](/book/dbase.html#dbase_get_header_info)
+        — Gets the header info of a database
+    -   [dbase\_get\_record\_with\_names](/book/dbase.html#dbase_get_record_with_names)
+        — Gets a record from a database as an associative array
+    -   [dbase\_get\_record](/book/dbase.html#dbase_get_record) — Gets a
+        record from a database as an indexed array
+    -   [dbase\_numfields](/book/dbase.html#dbase_numfields) — Gets the
+        number of fields of a database
+    -   [dbase\_numrecords](/book/dbase.html#dbase_numrecords) — Gets
+        the number of records in a database
+    -   [dbase\_open](/book/dbase.html#dbase_open) — Opens a database
+    -   [dbase\_pack](/book/dbase.html#dbase_pack) — Packs a database
+    -   [dbase\_replace\_record](/book/dbase.html#dbase_replace_record)
+        — Replaces a record in a database
+
+> **Note**:
+>
+> This extension has been moved to the
+> <a href="https://pecl.php.net/" class="link external">» PECL</a>
+> repository and is no longer bundled with PHP as of PHP 5.3.0.
+
+These functions allow you to access records stored in dBase-format (dbf)
+databases.
+
+**Warning**
+
+We recommend against using dBase files as your production database. Use
+<a href="http://sqlite.org/" class="link external">» SQLite</a> or
+choose any real SQL server instead;
+<a href="http://www.mysql.com/" class="link external">» MySQL</a> or
+<a href="http://www.postgresql.org/" class="link external">» Postgres</a>
+are common choices with PHP. dBase support is here to allow you to
+import and export data to and from your web database, because the file
+format is commonly understood by Windows spreadsheets and organizers.
+
+**Caution**
+
+As of dbase 7.0.0 the databases are automatically locked via <span
+class="function">flock</span>. There has been no support for locking
+earlier, so two concurrent web server processes modifying the same dBase
+file would have very likely ruined your database. This can happen even
+with dbase 7.0.0+ on systems which implement the locks at the process
+level with multithreaded SAPIs such as ISAPI.
+
+dBase files are simple sequential files of fixed length records. Records
+are appended to the end of the file and deleted records are kept until
+you call <span class="function">dbase\_pack</span>.
+
+Only dbf file levels 3 (dBASE III+) - 5 (dBASE V) are supported. The
+types of dBase fields available are:
+
+| Field | dBase Type | Format                                                                        | Additional information                                                                                                                                                                                    |
+|-------|------------|-------------------------------------------------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *M*   | Memo       | n/a                                                                           | This type is not supported by PHP, such field will be ignored                                                                                                                                             |
+| *D*   | Date       | *YYYYMMDD*                                                                    | The field length is limited to 8                                                                                                                                                                          |
+| *T*   | DateTime   | *YYYYMMDDhhmmss.uuu*                                                          | (FoxPro) No validity checks are done. Available as of dbase 7.0.0.                                                                                                                                        |
+| *N*   | Number     | A number                                                                      | You must declare a length and a precision (the number of digits after the decimal point).                                                                                                                 |
+| *F*   | Float      | A float number                                                                | Same as *N*. Available as of PHP 5.2.0                                                                                                                                                                    |
+| *C*   | String     | A string                                                                      | You must declare a length. When retrieving data, the string will be right-padded with spaces to fit the declared length. Overlong strings will be silently truncated when storing data.                   |
+| *L*   | Boolean    | *T* or *Y* for **`TRUE`**, *F* or *N* for **`FALSE`**, *?* for uninitialized. | As of dbase 7.0.0, returned as a <span class="type">bool</span> (**`TRUE`** or **`FALSE`**), or **`NULL`** for uninitialized fields. Formerly, returned as an <span class="type">int</span> (*1* or *0*). |
+
+> **Note**:
+>
+> As of dbase 7.0.0 nullable fields are supported for
+> **`DBASE_TYPE_FOXPRO`** databases. If a field is nullable, passing
+> **`NULL`** will set the respective flag, and on later retrieval the
+> field value will be **`NULL`**.
+
+> **Note**:
+>
+> There is no support for indexes or memo fields.
+
+Installing/Configuring
+======================
+
+**Table of Contents**
+
+-   [Requirements](/book/dbase.html#Requirements)
+-   [Installation](/book/dbase.html#Installation)
+-   [Runtime Configuration](/book/dbase.html#Runtime%20Configuration)
+-   [Resource Types](/book/dbase.html#Resource%20Types)
+
+Requirements
+------------
+
+No external libraries are needed to build this extension.
+
+Installation
+------------
+
+Information for installing this PECL extension may be found in the
+manual chapter titled
+<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
+Additional information such as new releases, downloads, source files,
+maintainer information, and a CHANGELOG, can be located here:
+<a href="https://pecl.php.net/package/dbase" class="link external">» https://pecl.php.net/package/dbase</a>.
+
+Runtime Configuration
+---------------------
+
+This extension has no configuration directives defined in `php.ini`.
+
+Resource Types
+--------------
+
+As of dbase 7.0.0, the resource type *dbase* is defined, which is
+returned by <span class="function">dbase\_open</span> and <span
+class="function">dbase\_create</span>.
+
+Predefined Constants
+====================
+
+The constants below are defined by this extension, and will only be
+available when the extension has either been compiled into PHP or
+dynamically loaded at runtime.
+
+**`DBASE_VERSION`** (<span class="type">string</span>)  
+<span class="simpara"> The extension version. (Available as of dbase
+7.0.0) </span>
+
+**`DBASE_RDONLY`** (<span class="type">int</span>)  
+<span class="simpara"> Open database for reading only. Used with <span
+class="function">dbase\_open</span>. (Available as of dbase 7.0.0)
+</span>
+
+**`DBASE_RDWR`** (<span class="type">int</span>)  
+<span class="simpara"> Open database for reading and writing. Used with
+<span class="function">dbase\_open</span>. (Available as of dbase 7.0.0)
+</span>
+
+**`DBASE_TYPE_DBASE`** (<span class="type">int</span>)  
+<span class="simpara"> Create dBASE style database. Used with <span
+class="function">dbase\_create</span>. (Available as of dbase 7.0.0)
+</span>
+
+**`DBASE_TYPE_FOXPRO`** (<span class="type">int</span>)  
+<span class="simpara"> Create FoxPro style database. Used with <span
+class="function">dbase\_create</span>. (Available as of dbase 7.0.0)
+</span>
+
+Examples
+--------
+
+Many examples in this reference require a dBase database. We will use
+`/tmp/test.dbf` that will be created in the example of <span
+class="function">dbase\_create</span>.
+
+dbase\_add\_record
+==================
+
+Adds a record to a database
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">dbase\_add\_record</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> , <span class="methodparam"><span
+class="type">array</span> `$record`</span> )
+
+Adds the given data to the database.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+`record`  
+An indexed array of data. The number of items must be equal to the
+number of fields in the database, otherwise <span
+class="function">dbase\_add\_record</span> will fail.
+
+> **Note**:
+>
+> If you're using <span class="function">dbase\_get\_record</span>
+> return value for this parameter, remember to reset the key named
+> *deleted*.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Inserting a record in a dBase database**
+
+``` php
+<?php
+
+// open in read-write mode
+$db = dbase_open('/tmp/test.dbf', 2);
+
+if ($db) {
+  dbase_add_record($db, array(
+      date('Ymd'), 
+      'Maxim Topolov', 
+      '23', 
+      'max@example.com',
+      'T'));   
+  dbase_close($db);
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_delete\_record</span>
+-   <span class="function">dbase\_replace\_record</span>
+
+dbase\_close
+============
+
+Closes a database
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">dbase\_close</span> ( <span class="methodparam"><span
+class="type">resource</span> `$dbase_identifier`</span> )
+
+Closes the given database link identifier.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Closing a dBase database file**
+
+``` php
+<?php
+
+// open in read-only mode
+$db = dbase_open('/tmp/test.dbf', 0);
+
+if ($db) {
+  // read some data ..
+  
+  dbase_close($db);
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_open</span>
+-   <span class="function">dbase\_create</span>
+
+dbase\_create
+=============
+
+Creates a database
+
+### Description
+
+<span class="type">resource</span> <span
+class="methodname">dbase\_create</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$fields`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$type`<span class="initializer"> =
+DBASE\_TYPE\_DBASE</span></span> \] )
+
+<span class="function">dbase\_create</span> creates a dBase database
+with the given definition. If the file already exists, it is not
+truncated. <span class="function">dbase\_pack</span> can be called to
+force truncation.
+
+> **Note**: <span class="simpara">When
+> <a href="/features/safe-mode.html" class="link">safe mode</a> is
+> enabled, PHP checks whether the files or directories being operated
+> upon have the same UID (owner) as the script that is being
+> executed.</span>
+
+> **Note**:
+>
+> This function is affected by
+> <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>.
+
+### Parameters
+
+`filename`  
+The name of the database. It can be a relative or absolute path to the
+file where dBase will store your data.
+
+`fields`  
+An array of arrays, each array describing the format of one field of the
+database. Each field consists of a name, a character indicating the
+field type, and optionally, a length, a precision and a nullable flag.
+The supported field types are listed in the
+<a href="/book/dbase.html#Introduction" class="link">introduction section</a>.
+
+> **Note**:
+>
+> The fieldnames are limited in length and must not exceed 10 chars.
+
+`type`  
+The type of database to be created. Either **`DBASE_TYPE_DBASE`** or
+**`DBASE_TYPE_FOXPRO`**.
+
+### Return Values
+
+Returns a database link identifier if the database is successfully
+created, or **`FALSE`** if an error occurred.
+
+### Changelog
+
+| Version     | Description                                                                                               |
+|-------------|-----------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | The `type` parameter has been added.                                                                      |
+| dbase 7.0.0 | The return value is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Creating a dBase database file**
+
+``` php
+<?php
+
+// database "definition"
+$def = array(
+  array("date",     "D"),
+  array("name",     "C",  50),
+  array("age",      "N",   3, 0),
+  array("email",    "C", 128),
+  array("ismember", "L")
+);
+
+// creation
+if (!dbase_create('/tmp/test.dbf', $def)) {
+  echo "Error, can't create the database\n";
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_open</span>
+-   <span class="function">dbase\_close</span>
+
+dbase\_delete\_record
+=====================
+
+Deletes a record from a database
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">dbase\_delete\_record</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> , <span class="methodparam"><span
+class="type">int</span> `$record_number`</span> )
+
+Marks the given record to be deleted from the database.
+
+> **Note**:
+>
+> To actually remove the record from the database, you must also call
+> <span class="function">dbase\_pack</span>.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+`record_number`  
+An integer which spans from 1 to the number of records in the database
+(as returned by <span class="function">dbase\_numrecords</span>).
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### See Also
+
+-   <span class="function">dbase\_add\_record</span>
+-   <span class="function">dbase\_replace\_record</span>
+
+dbase\_get\_header\_info
+========================
+
+Gets the header info of a database
+
+### Description
+
+<span class="type">array</span> <span
+class="methodname">dbase\_get\_header\_info</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> )
+
+Returns information on the column structure of the given database link
+identifier.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+### Return Values
+
+An indexed array with an entry for each column in the database. The
+array index starts at 0.
+
+Each array element contains an associative array of column information,
+as described here:
+
+name  
+<span class="simpara"> The name of the column </span>
+
+type  
+<span class="simpara"> The human-readable name for the dbase type of the
+column (i.e. date, boolean, etc.) The supported field types are listed
+in the
+<a href="/book/dbase.html#Introduction" class="link">introduction section</a>.
+</span>
+
+length  
+<span class="simpara"> The number of bytes this column can hold </span>
+
+precision  
+<span class="simpara"> The number of digits of decimal precision for the
+column </span>
+
+format  
+<span class="simpara"> A suggested <span class="function">printf</span>
+format specifier for the column </span>
+
+offset  
+<span class="simpara"> The byte offset of the column from the start of
+the row </span>
+
+If the database header information cannot be read, **`FALSE`** is
+returned.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Showing header information for a dBase database file**
+
+``` php
+<?php
+// Path to dbase file
+$db_path = "/tmp/test.dbf";
+
+// Open dbase file
+$dbh = dbase_open($db_path, 0)
+  or die("Error! Could not open dbase database file '$db_path'.");
+
+// Get column information
+$column_info = dbase_get_header_info($dbh);
+
+// Display information
+print_r($column_info);
+?>
+```
+
+dbase\_get\_record\_with\_names
+===============================
+
+Gets a record from a database as an associative array
+
+### Description
+
+<span class="type">array</span> <span
+class="methodname">dbase\_get\_record\_with\_names</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> , <span class="methodparam"><span
+class="type">int</span> `$record_number`</span> )
+
+Gets a record from a dBase database as an associative array.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+`record_number`  
+The index of the record between *1* and
+*dbase\_numrecords($dbase\_identifier)*.
+
+### Return Values
+
+An associative array with the record. This will also include a key named
+*deleted* which is set to 1 if the record has been marked for deletion
+(see <span class="function">dbase\_delete\_record</span>). Therefore it
+is not possible to retrieve the value of a field named *deleted* with
+this function.
+
+Each field is converted to the appropriate PHP type, except:
+
+-   <span class="simpara"> Dates are left as strings. </span>
+-   <span class="simpara"> DateTime values are converted to strings.
+    </span>
+-   <span class="simpara"> Integers outside the range
+    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** are returned as strings.
+    </span>
+-   <span class="simpara"> Before dbase 7.0.0, booleans (*L*) were
+    converted to *1* or *0*. </span>
+
+On error, <span class="function">dbase\_get\_record\_with\_names</span>
+will return **`FALSE`**.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Listing all the registered members in the database**
+
+``` php
+<?php
+// open in read-only mode
+$db = dbase_open('/tmp/test.dbf', 0);
+
+if ($db) {
+  $record_numbers = dbase_numrecords($db);
+  for ($i = 1; $i <= $record_numbers; $i++) {
+      $row = dbase_get_record_with_names($db, $i);
+      if ($row['ismember'] == 1) {
+          echo "Member #$i: " . trim($row['name']) . "\n";
+      }
+  }
+}
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_get\_record</span>
+
+dbase\_get\_record
+==================
+
+Gets a record from a database as an indexed array
+
+### Description
+
+<span class="type">array</span> <span
+class="methodname">dbase\_get\_record</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> , <span class="methodparam"><span
+class="type">int</span> `$record_number`</span> )
+
+Gets a record from a database as an indexed array.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+`record_number`  
+The index of the record between *1* and
+*dbase\_numrecords($dbase\_identifier)*.
+
+### Return Values
+
+An indexed array with the record. This array will also include an
+associative key named *deleted* which is set to 1 if the record has been
+marked for deletion (see <span
+class="function">dbase\_delete\_record</span>).
+
+Each field is converted to the appropriate PHP type, except:
+
+-   <span class="simpara"> Dates are left as strings. </span>
+-   <span class="simpara"> DateTime values are converted to strings.
+    </span>
+-   <span class="simpara"> Integers outside the range
+    **`PHP_INT_MIN`**..**`PHP_INT_MAX`** are returned as strings.
+    </span>
+-   <span class="simpara"> Before dbase 7.0.0, booleans (*L*) were
+    converted to *1* or *0*. </span>
+
+On error, <span class="function">dbase\_get\_record</span> will return
+**`FALSE`**.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### See Also
+
+-   <span class="function">dbase\_get\_record\_with\_names</span>
+
+dbase\_numfields
+================
+
+Gets the number of fields of a database
+
+### Description
+
+<span class="type">int</span> <span
+class="methodname">dbase\_numfields</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> )
+
+Gets the number of fields (columns) in the specified database.
+
+> **Note**:
+>
+> Field numbers are between 0 and *dbase\_numfields($db)-1*, while
+> record numbers are between 1 and *dbase\_numrecords($db)*.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+### Return Values
+
+The number of fields in the database, or **`FALSE`** if an error occurs.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 <span class="function">dbase\_numfields</span> Example**
+
+``` php
+<?php
+
+$rec = dbase_get_record($db, $recno);
+$nf  = dbase_numfields($db);
+for ($i = 0; $i < $nf; $i++) {
+  echo $rec[$i], "\n";
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_numrecords</span>
+
+dbase\_numrecords
+=================
+
+Gets the number of records in a database
+
+### Description
+
+<span class="type">int</span> <span
+class="methodname">dbase\_numrecords</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> )
+
+Gets the number of records (rows) in the specified database.
+
+> **Note**:
+>
+> Records which are marked as deleted are counted as well.
+
+> **Note**:
+>
+> Record numbers are between 1 and *dbase\_numrecords($db)*, while field
+> numbers are between 0 and *dbase\_numfields($db)-1*.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+### Return Values
+
+The number of records in the database, or **`FALSE`** if an error
+occurs.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Looping over all the records of the database**
+
+``` php
+<?php
+
+// open in read-only mode
+$db = dbase_open('/tmp/test.dbf', 0);
+
+if ($db) {
+  $record_numbers = dbase_numrecords($db);
+  for ($i = 1; $i <= $record_numbers; $i++) {
+      $record = dbase_get_record($db, $i);
+      if (!$record['deleted']) {
+          // do something with the $record
+      } else {
+          // do something with the deleted $record or ignore it
+      }
+  }
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_numfields</span>
+
+dbase\_open
+===========
+
+Opens a database
+
+### Description
+
+<span class="type">resource</span> <span
+class="methodname">dbase\_open</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> , <span
+class="methodparam"><span class="type">int</span> `$mode`</span> )
+
+<span class="function">dbase\_open</span> opens a dBase database with
+the given access mode.
+
+> **Note**: <span class="simpara">When
+> <a href="/features/safe-mode.html" class="link">safe mode</a> is
+> enabled, PHP checks whether the files or directories being operated
+> upon have the same UID (owner) as the script that is being
+> executed.</span>
+
+> **Note**:
+>
+> This function is affected by
+> <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>.
+
+### Parameters
+
+`filename`  
+The name of the database. It can be a relative or absolute path to the
+file where dBase will store your data.
+
+`mode`  
+An integer which correspond to those for the **open()** system call
+(Typically 0 means read-only, 1 means write-only, and 2 means read and
+write).
+
+> **Note**:
+>
+> You can't open a dBase file in write-only mode as the function will
+> fail to read the headers information and thus you can't use 1 as
+> `mode`.
+
+As of dbase 7.0.0 you can use **`DBASE_RDONLY`** and **`DBASE_RDWR`**,
+respectively, to specify the `mode`.
+
+### Changelog
+
+| Version     | Description                                                                                               |
+|-------------|-----------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | The return value is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Opening a dBase database file**
+
+``` php
+<?php
+
+// open in read-only mode
+$db = dbase_open('/tmp/test.dbf', 0);
+
+if ($db) {
+  // read some data ..
+  
+  dbase_close($db);
+}
+
+?>
+```
+
+### Return Values
+
+Returns a database link identifier if the database is successfully
+opened, or **`FALSE`** if an error occurred.
+
+### See Also
+
+-   <span class="function">dbase\_create</span>
+-   <span class="function">dbase\_close</span>
+
+dbase\_pack
+===========
+
+Packs a database
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">dbase\_pack</span> ( <span class="methodparam"><span
+class="type">resource</span> `$dbase_identifier`</span> )
+
+Packs the specified database by permanently deleting all records marked
+for deletion using <span class="function">dbase\_delete\_record</span>.
+Note that the file will be truncated after successful packing (contrary
+to dBASE III's PACK command).
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Emptying a dBase database**
+
+``` php
+<?php
+
+// open in read-write mode
+$db = dbase_open('/tmp/test.dbf', 2);
+
+if ($db) {
+  $record_numbers = dbase_numrecords($db);
+  for ($i = 1; $i <= $record_numbers; $i++) {
+      dbase_delete_record($db, $i);
+  }
+  // expunge the database
+  dbase_pack($db);
+}
+
+?>
+```
+
+### See Also
+
+-   <span class="function">dbase\_delete\_record</span>
+
+dbase\_replace\_record
+======================
+
+Replaces a record in a database
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">dbase\_replace\_record</span> ( <span
+class="methodparam"><span class="type">resource</span>
+`$dbase_identifier`</span> , <span class="methodparam"><span
+class="type">array</span> `$record`</span> , <span
+class="methodparam"><span class="type">int</span>
+`$record_number`</span> )
+
+Replaces the given record in the database with the given data.
+
+### Parameters
+
+`dbase_identifier`  
+The database link identifier, returned by <span
+class="function">dbase\_open</span> or <span
+class="function">dbase\_create</span>.
+
+`record`  
+An indexed array of data. The number of items must be equal to the
+number of fields in the database, otherwise <span
+class="function">dbase\_replace\_record</span> will fail.
+
+> **Note**:
+>
+> If you're using <span class="function">dbase\_get\_record</span>
+> return value for this parameter, remember to reset the key named
+> *deleted*.
+
+`record_number`  
+An integer which spans from 1 to the number of records in the database
+(as returned by <span class="function">dbase\_numrecords</span>).
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version     | Description                                                                                                 |
+|-------------|-------------------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+
+### Examples
+
+**Example \#1 Updating a record in the database**
+
+``` php
+<?php
+
+// open in read-write mode
+$db = dbase_open('/tmp/test.dbf', 2);
+
+if ($db) {
+  // gets the old row
+  $row = dbase_get_record_with_names($db, 1);
+  
+  // remove the 'deleted' entry
+  unset($row['deleted']);
+  
+  // Update the date field with the current timestamp
+  $row['date'] = date('Ymd');
+  
+  // convert the row to an indexed array
+  $row = array_values($row);
+
+  // Replace the record
+  dbase_replace_record($db, $row, 1);
+  dbase_close($db);
+}
+
+?>
+```
+
+### Notes
+
+> **Note**:
+>
+> Boolean fields result in an <span class="type">integer</span> element
+> value (*0* or *1*) when retrieved via <span
+> class="function">dbase\_get\_record</span> or <span
+> class="function">dbase\_get\_record\_with\_names</span>. If they are
+> written back, this results in the value becoming *0*, so care has to
+> be taken to properly adjust the values.
+
+### See Also
+
+-   <span class="function">dbase\_add\_record</span>
+-   <span class="function">dbase\_delete\_record</span>
+
+**Table of Contents**
+
+-   [dbase\_add\_record](/book/dbase.html#dbase_add_record) — Adds a
+    record to a database
+-   [dbase\_close](/book/dbase.html#dbase_close) — Closes a database
+-   [dbase\_create](/book/dbase.html#dbase_create) — Creates a database
+-   [dbase\_delete\_record](/book/dbase.html#dbase_delete_record) —
+    Deletes a record from a database
+-   [dbase\_get\_header\_info](/book/dbase.html#dbase_get_header_info) —
+    Gets the header info of a database
+-   [dbase\_get\_record\_with\_names](/book/dbase.html#dbase_get_record_with_names)
+    — Gets a record from a database as an associative array
+-   [dbase\_get\_record](/book/dbase.html#dbase_get_record) — Gets a
+    record from a database as an indexed array
+-   [dbase\_numfields](/book/dbase.html#dbase_numfields) — Gets the
+    number of fields of a database
+-   [dbase\_numrecords](/book/dbase.html#dbase_numrecords) — Gets the
+    number of records in a database
+-   [dbase\_open](/book/dbase.html#dbase_open) — Opens a database
+-   [dbase\_pack](/book/dbase.html#dbase_pack) — Packs a database
+-   [dbase\_replace\_record](/book/dbase.html#dbase_replace_record) —
+    Replaces a record in a database

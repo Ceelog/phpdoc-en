@@ -1,0 +1,57 @@
+Predefined Constants
+====================
+
+The constants below are defined by this extension, and will only be
+available when the extension has either been compiled into PHP or
+dynamically loaded at runtime.
+
+**`GUPNP_TYPE_BOOLEAN`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_TYPE_INT`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_TYPE_LONG`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_TYPE_DOUBLE`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_TYPE_FLOAT`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_TYPE_STRING`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_DEVICE_PROXY_AVAILABLE`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_DEVICE_PROXY_UNAVAILABLE`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_SERVICE_PROXY_AVAILABLE`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_SERVICE_PROXY_UNAVAILABLE`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_ACTION_INVOKED`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_NOTIFY_FAILED`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_SIGNAL_SUBSCRIPTION_LOST`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_CONTROL_ERROR_INVALID_ACTION`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_CONTROL_ERROR_INVALID_ARGS`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_CONTROL_ERROR_OUT_OF_SYNC`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>
+
+**`GUPNP_CONTROL_ERROR_ACTION_FAILED`** (<span class="type">integer</span>)  
+<span class="simpara"> </span>

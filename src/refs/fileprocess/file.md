@@ -1,0 +1,55 @@
+File System Related Extensions
+==============================
+
+**Table of Contents**
+
+-   [Direct IO](/book/dio.html)
+    -   [Introduction](/intro/dio.html)
+    -   [Installing/Configuring](/dio/setup.html)
+    -   [Predefined Constants](/dio/constants.html)
+    -   [Direct IO Functions](/ref/dio.html)
+-   [Directories](/book/dir.html)
+    -   [Installing/Configuring](/dir/setup.html)
+    -   [Predefined Constants](/dir/constants.html)
+    -   [Directory](/class/directory.html) — The Directory class
+    -   [Directory Functions](/ref/dir.html)
+-   [Fileinfo](/book/fileinfo.html) — File Information
+    -   [Introduction](/intro/fileinfo.html)
+    -   [Installing/Configuring](/fileinfo/setup.html)
+    -   [Predefined Constants](/fileinfo/constants.html)
+    -   [Fileinfo Functions](/ref/fileinfo.html)
+    -   [finfo](/class/finfo.html) — The finfo class
+-   [Filesystem](/book/filesystem.html)
+    -   [Introduction](/intro/filesystem.html)
+    -   [Installing/Configuring](/filesystem/setup.html)
+    -   [Predefined Constants](/filesystem/constants.html)
+    -   [Filesystem Functions](/ref/filesystem.html)
+-   [Inotify](/book/inotify.html)
+    -   [Introduction](/intro/inotify.html)
+    -   [Installing/Configuring](/inotify/setup.html)
+    -   [Predefined Constants](/inotify/constants.html)
+    -   [Inotify Functions](/ref/inotify.html)
+-   [Mimetype](/book/mime-magic.html)
+    -   [Introduction](/intro/mime-magic.html)
+    -   [Installing/Configuring](/mime-magic/setup.html)
+    -   [Predefined Constants](/mime-magic/constants.html)
+-   [Phdfs](/book/phdfs.html) — Phdfs
+    -   [](/intro/phdfs.html)
+    -   [Installing/Configuring](/phdfs/setup.html)
+    -   [Predefined Constants](/phdfs/constants.html)
+    -   [phdfs](/class/phdfs.html) — The phdfs class
+-   [Proctitle](/book/proctitle.html) — Proctitle
+    -   [Introduction](/intro/proctitle.html)
+    -   [Installing/Configuring](/proctitle/setup.html)
+    -   [Predefined Constants](/proctitle/constants.html)
+    -   [Proctitle Functions](/ref/proctitle.html)
+-   [xattr](/book/xattr.html)
+    -   [Introduction](/intro/xattr.html)
+    -   [Installing/Configuring](/xattr/setup.html)
+    -   [Predefined Constants](/xattr/constants.html)
+    -   [xattr Functions](/ref/xattr.html)
+-   [xdiff](/book/xdiff.html)
+    -   [Introduction](/intro/xdiff.html)
+    -   [Installing/Configuring](/xdiff/setup.html)
+    -   [Predefined Constants](/xdiff/constants.html)
+    -   [xdiff Functions](/ref/xdiff.html)

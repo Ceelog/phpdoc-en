@@ -1,0 +1,40 @@
+PHP tags
+--------
+
+When PHP parses a file, it looks for opening and closing tags, which are
+*\<?php* and *?\>* which tell PHP to start and stop interpreting the
+code between them. Parsing in this manner allows PHP to be embedded in
+all sorts of different documents, as everything outside of a pair of
+opening and closing tags is ignored by the PHP parser.
+
+PHP includes a short echo tag *\<?=* which is a short-hand to the more
+verbose `<?php echo`.
+
+PHP also allows for short open tag *\<?* (which is discouraged since it
+is only available if enabled using the
+<a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>
+`php.ini` configuration file directive, or if PHP was configured with
+the **--enable-short-tags** option).
+
+If a file contains only PHP code, it is preferable to omit the PHP
+closing tag at the end of the file. This prevents accidental whitespace
+or new lines being added after the PHP closing tag, which may cause
+unwanted effects because PHP will start output buffering when there is
+no intention from the programmer to send any output at that point in the
+script.
+
+``` php
+<?php
+echo "Hello world";
+
+// ... more code
+
+echo "Last statement";
+
+// the script ends here with no PHP closing tag
+```
+
+| Version | Description                                                                                        |
+|---------|----------------------------------------------------------------------------------------------------|
+| 7.0.0   | The ASP tags `<%`, `%>`, `<%=`, and the script tag `<script language="php">` are removed from PHP. |
+| 5.4.0   | The tag \<?= is always available regardless of the short\_open\_tag ini setting.                   |

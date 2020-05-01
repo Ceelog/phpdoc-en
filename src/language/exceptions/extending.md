@@ -1,0 +1,203 @@
+Extending Exceptions
+--------------------
+
+A User defined Exception class can be defined by extending the built-in
+Exception class. The members and properties below, show what is
+accessible within the child class that derives from the built-in
+Exception class.
+
+**Example \#1 The Built in Exception class**
+
+``` php
+<?php
+class Exception extends Throwable
+{
+    protected $message = 'Unknown exception';   // exception message
+    private   $string;                          // __toString cache
+    protected $code = 0;                        // user defined exception code
+    protected $file;                            // source filename of exception
+    protected $line;                            // source line of exception
+    private   $trace;                           // backtrace
+    private   $previous;                        // previous exception if nested exception
+
+    public function __construct($message = null, $code = 0, Exception $previous = null);
+
+    final private function __clone();           // Inhibits cloning of exceptions.
+
+    final public  function getMessage();        // message of exception
+    final public  function getCode();           // code of exception
+    final public  function getFile();           // source filename
+    final public  function getLine();           // source line
+    final public  function getTrace();          // an array of the backtrace()
+    final public  function getPrevious();       // previous exception
+    final public  function getTraceAsString();  // formatted string of trace
+
+    // Overrideable
+    public function __toString();               // formatted string for display
+}
+?>
+```
+
+If a class extends the built-in Exception class and re-defines the
+<a href="/language/oop5/decon.html" class="link">constructor</a>, it is
+highly recommended that it also call
+<a href="/language/oop5/paamayim-nekudotayim.html" class="link">parent::__construct()</a>
+to ensure all available data has been properly assigned. The
+<a href="/language/oop5/magic.html" class="link">__toString()</a> method
+can be overridden to provide a custom output when the object is
+presented as a string.
+
+> **Note**:
+>
+> Exceptions cannot be cloned. Attempting to
+> <a href="/language/oop5/cloning.html" class="link">clone</a> an
+> Exception will result in a fatal **`E_ERROR`** error.
+
+**Example \#2 Extending the Exception class (PHP 5.3.0+)**
+
+``` php
+<?php
+/**
+ * Define a custom exception class
+ */
+class MyException extends Exception
+{
+    // Redefine the exception so message isn't optional
+    public function __construct($message, $code = 0, Exception $previous = null) {
+        // some code
+    
+        // make sure everything is assigned properly
+        parent::__construct($message, $code, $previous);
+    }
+
+    // custom string representation of object
+    public function __toString() {
+        return __CLASS__ . ": [{$this->code}]: {$this->message}\n";
+    }
+
+    public function customFunction() {
+        echo "A custom function for this type of exception\n";
+    }
+}
+
+
+/**
+ * Create a class to test the exception
+ */
+class TestException
+{
+    public $var;
+
+    const THROW_NONE    = 0;
+    const THROW_CUSTOM  = 1;
+    const THROW_DEFAULT = 2;
+
+    function __construct($avalue = self::THROW_NONE) {
+
+        switch ($avalue) {
+            case self::THROW_CUSTOM:
+                // throw custom exception
+                throw new MyException('1 is an invalid parameter', 5);
+                break;
+
+            case self::THROW_DEFAULT:
+                // throw default one.
+                throw new Exception('2 is not allowed as a parameter', 6);
+                break;
+
+            default: 
+                // No exception, object will be created.
+                $this->var = $avalue;
+                break;
+        }
+    }
+}
+
+
+// Example 1
+try {
+    $o = new TestException(TestException::THROW_CUSTOM);
+} catch (MyException $e) {      // Will be caught
+    echo "Caught my exception\n", $e;
+    $e->customFunction();
+} catch (Exception $e) {        // Skipped
+    echo "Caught Default Exception\n", $e;
+}
+
+// Continue execution
+var_dump($o); // Null
+echo "\n\n";
+
+
+// Example 2
+try {
+    $o = new TestException(TestException::THROW_DEFAULT);
+} catch (MyException $e) {      // Doesn't match this type
+    echo "Caught my exception\n", $e;
+    $e->customFunction();
+} catch (Exception $e) {        // Will be caught
+    echo "Caught Default Exception\n", $e;
+}
+
+// Continue execution
+var_dump($o); // Null
+echo "\n\n";
+
+
+// Example 3
+try {
+    $o = new TestException(TestException::THROW_CUSTOM);
+} catch (Exception $e) {        // Will be caught
+    echo "Default Exception caught\n", $e;
+}
+
+// Continue execution
+var_dump($o); // Null
+echo "\n\n";
+
+
+// Example 4
+try {
+    $o = new TestException();
+} catch (Exception $e) {        // Skipped, no exception
+    echo "Default Exception caught\n", $e;
+}
+
+// Continue execution
+var_dump($o); // TestException
+echo "\n\n";
+?>
+```
+
+> **Note**:
+>
+> Versions of PHP 5, prior to PHP 5.3.0 do not support nesting of
+> exceptions. The following code fragment can be used as a replacement
+> MyException class if you wish to run this example.
+>
+> ``` php
+> <?php
+> /**
+>  * Define a custom exception class
+>  */
+> class MyException extends Exception
+> {
+>     // Redefine the exception so message isn't optional
+>     public function __construct($message, $code = 0) {
+>         // some code
+>     
+>         // make sure everything is assigned properly
+>         parent::__construct($message, $code);
+>     }
+>
+>     // custom string representation of object
+>     public function __toString() {
+>         return __CLASS__ . ": [{$this->code}]: {$this->message}\n";
+>     }
+>
+>     public function customFunction() {
+>         echo "A custom function for this type of exception\n";
+>     }
+> }
+> ?>
+> ```
