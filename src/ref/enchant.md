@@ -20,7 +20,8 @@ Broker resource
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns an <span class="type">array</span> of available Enchant
+providers with their details, or **`FALSE`** on failure.
 
 ### Examples
 
@@ -269,7 +270,8 @@ Broker resource
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns an <span class="type">array</span> of available dictionaries
+with their details, or **`FALSE`** on failure.
 
 ### Examples
 
