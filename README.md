@@ -26,4 +26,5 @@ You can also read the generated documentation directly at http://phpdoc-en.roadm
 - http://doc.php.net/phd.php
 - https://github.com/jgm/pandoc
 - https://github.com/rust-lang/mdBook
+- http://phpdoc-zh.roadmapedu.com/
 - http://phpdoc-en.roadmapedu.com/
