@@ -7,7 +7,7 @@ multilingual = false
 src = "src"
 
 [output.html]
-git-repository-url = "https://github.com/Ceelog/phpdoc-zh"
+git-repository-url = "https://github.com/Ceelog/phpdoc-en"
 git-repository-icon = "fa-github"
 
 [output.html.fold]
