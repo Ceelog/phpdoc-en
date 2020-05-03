@@ -223,12 +223,14 @@ example addresses:
 <?php
 function test_global_ref() {
     global $obj;
-    $obj = &new stdclass;
+    $new = new stdclass;
+    $obj = &$new;
 }
 
 function test_global_noref() {
     global $obj;
-    $obj = new stdclass;
+    $new = new stdclass;
+    $obj = $new;
 }
 
 test_global_ref();
@@ -240,10 +242,9 @@ var_dump($obj);
 
 The above example will output:
 
-  
-NULL  
-object(stdClass)(0) {  
-}  
+    NULL
+    object(stdClass)#1 (0) {
+    }
 
 A similar behaviour applies to the *static* statement. References are
 not stored statically:
@@ -256,10 +257,15 @@ function &get_instance_ref() {
     echo 'Static object: ';
     var_dump($obj);
     if (!isset($obj)) {
+        $new = new stdclass;
         // Assign a reference to the static variable
-        $obj = &new stdclass;
+        $obj = &$new;
     }
-    $obj->property++;
+    if (!isset($obj->property)) {
+        $obj->property = 1;
+    } else {
+        $obj->property++;
+    }
     return $obj;
 }
 
@@ -269,10 +275,15 @@ function &get_instance_noref() {
     echo 'Static object: ';
     var_dump($obj);
     if (!isset($obj)) {
+        $new = new stdclass;
         // Assign the object to the static variable
-        $obj = new stdclass;
+        $obj = $new;
     }
-    $obj->property++;
+    if (!isset($obj->property)) {
+        $obj->property = 1;
+    } else {
+        $obj->property++;
+    }
     return $obj;
 }
 
@@ -286,15 +297,14 @@ $still_obj2 = get_instance_noref();
 
 The above example will output:
 
-  
-Static object: NULL  
-Static object: NULL  
-  
-Static object: NULL  
-Static object: object(stdClass)(1) {  
-\["property"\]=\>  
-int(1)  
-}  
+    Static object: NULL
+    Static object: NULL
+
+    Static object: NULL
+    Static object: object(stdClass)#3 (1) {
+      ["property"]=>
+      int(1)
+    }
 
 This example demonstrates that when assigning a reference to a static
 variable, it's not *remembered* when you call the

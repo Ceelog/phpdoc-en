@@ -151,9 +151,9 @@ configuration directive is ignored in PHP \< 5.3.0.
 The maximum number of keys (and therefore scripts) in the OPcache hash
 table. The actual value used will be the first number in the set of
 prime numbers *{ 223, 463, 983, 1979, 3907, 7963, 16229, 32531, 65407,
-130987 }* that is greater than or equal to the configured value. The
-minimum value is 200. The maximum value is 100000 in PHP \< 5.5.6, and
-1000000 in later versions.
+130987, 262237, 524521, 1048793 }* that is greater than or equal to the
+configured value. The minimum value is 200. The maximum value is 100000
+in PHP \< 5.5.6, and 1000000 in later versions.
 
 `opcache.max_wasted_percentage` <span class="type">integer</span>  
 The maximum percentage of wasted memory that is allowed before a restart
