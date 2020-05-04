@@ -13,9 +13,8 @@ evaluates to **`TRUE`**. The value of the expression is checked each
 time at the beginning of the loop, so even if this value changes during
 the execution of the nested statement(s), execution will not stop until
 the end of the iteration (each time PHP runs the statements in the loop
-is one iteration). Sometimes, if the *while* expression evaluates to
-**`FALSE`** from the very beginning, the nested statement(s) won't even
-be run once.
+is one iteration). If the *while* expression evaluates to **`FALSE`**
+from the very beginning, the nested statement(s) won't even be run once.
 
 Like with the *if* statement, you can group multiple statements within
 the same *while* loop by surrounding a group of statements with curly
