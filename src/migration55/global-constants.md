@@ -48,6 +48,9 @@ New Global Constants
 -   <span class="simpara">
     <a href="/json/constants.html#" class="link"><strong><code>JSON_ERROR_UNSUPPORTED_TYPE</code></strong></a>
     </span>
+-   <span class="simpara">
+    <a href="/json/constants.html#" class="link"><strong><code>JSON_PARTIAL_OUTPUT_ON_ERROR</code></strong></a>
+    </span>
 
 ### <a href="/set/mysqlinfo.html#MySQLi" class="link">MySQLi</a>
 

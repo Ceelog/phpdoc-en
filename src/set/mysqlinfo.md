@@ -7500,9 +7500,9 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** if one or more result sets are available from a
-previous call to <span class="function">mysqli\_multi\_query</span>,
-otherwise **`FALSE`**.
+Returns **`TRUE`** if one or more result sets (including errors) are
+available from a previous call to <span
+class="function">mysqli\_multi\_query</span>, otherwise **`FALSE`**.
 
 ### Examples
 
@@ -7700,7 +7700,9 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`TRUE`** on success or **`FALSE`** on failure. Also returns
+**`FALSE`** if the next statement resulted in an error, unlike <span
+class="methodname">mysqli\_more\_results</span>.
 
 ### Examples
 

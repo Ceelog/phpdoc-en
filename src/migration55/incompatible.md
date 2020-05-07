@@ -62,6 +62,16 @@ if (version_compare(PHP_VERSION, '5.5.0-dev', '>=')) {
 ?>
 ```
 
+### <span class="function">json\_encode</span> changes
+
+When the `value` passed to <span class="function">json\_encode</span>
+triggers a JSON encoding error, **`FALSE`** is returned instead of
+partial output, unless `options` contains
+**`JSON_PARTIAL_OUTPUT_ON_ERROR`**. See <span
+class="function">json\_last\_error</span> for the full list of reasons
+that can cause JSON encoding to fail. One of the potential failure
+reasons is that `value` contains strings containing invalid UTF-8.
+
 ### *self*, *parent* and *static* are now always case insensitive
 
 Prior to PHP 5.5, cases existed where the

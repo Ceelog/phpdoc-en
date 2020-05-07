@@ -292,7 +292,6 @@ The above example will output:
 
 ``` php
 <?php
-declare(encoding='UTF-8');
 $str = chr(240) . chr(159) . chr(144) . chr(152);
 echo $str;
 ?>
