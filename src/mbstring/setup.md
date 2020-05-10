@@ -42,7 +42,9 @@ The following configure options are related to the *mbstring* module.
     class="productname">Oniguruma</span> is bundled with *mbstring*. As
     of PHP 5.4.0, if <span class="productname">Oniguruma</span> is
     already installed on the system, **--with-onig\[=DIR\]** can be
-    specified to use the installed library.
+    specified to use the installed library. As of PHP 7.4.0
+    **--with-onig** has been removed and pkg-config is now used to
+    detect the libonig library.
 
     As of PHP 5.4.0 it is possible to disable the multibyte regex
     backtrack check by specifying **--disable-mbregex-backtrack**.
