@@ -184,9 +184,9 @@ class="function">snmp\_set\_oid\_output\_format</span>.
 
 ### Changelog
 
-| Version | Description      |
-|---------|------------------|
-| 5.2.0   | Since PHP 5.2.0. |
+| Version | Description                                                                                    |
+|---------|------------------------------------------------------------------------------------------------|
+| 5.2.0   | This function is now an alias of <span class="function">snmp\_set\_oid\_output\_format</span>. |
 
 ### See Also
 
