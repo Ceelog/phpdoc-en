@@ -1396,8 +1396,7 @@ The input string.
 `limit`  
 If specified, then only substrings up to `limit` are returned with the
 rest of the string being placed in the last substring. A `limit` of -1
-or 0 means "no limit" and, as is standard across PHP, you can use
-**`NULL`** to skip to the `flags` parameter.
+or 0 means "no limit".
 
 `flags`  
 `flags` can be any combination of the following flags (combined with the

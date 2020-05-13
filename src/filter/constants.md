@@ -70,6 +70,10 @@ variables. (not implemented yet) </span>
 **`FILTER_VALIDATE_URL`** (<span class="type">integer</span>)  
 <span class="simpara"> ID of "validate\_url" filter. </span>
 
+**`FILTER_VALIDATE_DOMAIN`** (<span class="type">integer</span>)  
+<span class="simpara"> ID of "validate\_domain" filter. (Available as of
+PHP 7.0.0) </span>
+
 **`FILTER_VALIDATE_EMAIL`** (<span class="type">integer</span>)  
 <span class="simpara"> ID of "validate\_email" filter. </span>
 
@@ -112,7 +116,12 @@ equivalent to **`FILTER_UNSAFE_RAW`**. </span>
 <span class="simpara"> ID of "number\_float" filter. </span>
 
 **`FILTER_SANITIZE_MAGIC_QUOTES`** (<span class="type">integer</span>)  
-<span class="simpara"> ID of "magic\_quotes" filter. </span>
+<span class="simpara"> ID of "magic\_quotes" filter. (Deprecated per PHP
+7.3.0, use FILTER\_SANITIZE\_ADD\_SLASHES instead.) </span>
+
+**`FILTER_SANITIZE_ADD_SLASHES`** (<span class="type">integer</span>)  
+<span class="simpara"> ID of "add\_slashes" filter. (Available as of PHP
+7.3.0) </span>
 
 **`FILTER_CALLBACK`** (<span class="type">integer</span>)  
 <span class="simpara"> ID of "callback" filter. </span>
@@ -132,6 +141,10 @@ filter. </span>
 **`FILTER_FLAG_STRIP_HIGH`** (<span class="type">integer</span>)  
 <span class="simpara"> Strip characters with ASCII value greater than
 127. </span>
+
+**`FILTER_FLAG_STRIP_BACKTICK`** (<span class="type">integer</span>)  
+<span class="simpara"> Strips backtick characters. (Available as of PHP
+5.3.2) </span>
 
 **`FILTER_FLAG_ENCODE_LOW`** (<span class="type">integer</span>)  
 <span class="simpara"> Encode characters with ASCII value less than 32.
@@ -167,6 +180,19 @@ filter. </span>
 
 **`FILTER_FLAG_QUERY_REQUIRED`** (<span class="type">integer</span>)  
 <span class="simpara"> Require query in "validate\_url" filter. </span>
+
+**`FILTER_FLAG_SCHEME_REQUIRED`** (<span class="type">integer</span>)  
+<span class="simpara"> Require scheme in "validate\_url" filter.
+(Deprecated per PHP 7.3 as it is implied in the filter already.) </span>
+
+**`FILTER_FLAG_HOST_REQUIRED`** (<span class="type">integer</span>)  
+<span class="simpara"> Require host in "validate\_url" filter.
+(Deprecated per PHP 7.3 as it is implied in the filter already.) </span>
+
+**`FILTER_FLAG_HOSTNAME`** (<span class="type">integer</span>)  
+<span class="simpara"> Require hostnames to start with an alphanumeric
+character and contain only alphanumerics or hyphens. (Available as of
+PHP 7.0.0) </span>
 
 **`FILTER_FLAG_IPV4`** (<span class="type">integer</span>)  
 <span class="simpara"> Allow only IPv4 address in "validate\_ip" filter.
