@@ -32,8 +32,9 @@ is also available; nOFB.
 Installation
 ------------
 
-This <a href="https://pecl.php.net/" class="link external">» PECL</a>
-extension is not bundled with PHP.
+This extension has been moved to the
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+repository and is no longer bundled with PHP as of PHP 7.2.0
 
 Information for installing this PECL extension may be found in the
 manual chapter titled

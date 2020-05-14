@@ -83,6 +83,8 @@ Variable and Type Related Extensions
         ReflectionType class
     -   [ReflectionGenerator](/class/reflectiongenerator.html) — The
         ReflectionGenerator class
+    -   [ReflectionReference](/class/reflectionreference.html) — The
+        ReflectionReference class
     -   [Reflector](/class/reflector.html) — The Reflector interface
     -   [ReflectionException](/class/reflectionexception.html) — The
         ReflectionException class

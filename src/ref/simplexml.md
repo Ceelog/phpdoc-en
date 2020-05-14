@@ -152,6 +152,12 @@ suppress all XML errors, and <span
 class="function">libxml\_get\_errors</span> to iterate over them
 afterwards.
 
+### Changelog
+
+| Version | Description                                   |
+|---------|-----------------------------------------------|
+| 5.2.0   | The optional parameter `is_prefix` was added. |
+
 ### Examples
 
 **Example \#1 Interpret an XML document**
@@ -262,6 +268,12 @@ Use <span class="function">libxml\_use\_internal\_errors</span> to
 suppress all XML errors, and <span
 class="function">libxml\_get\_errors</span> to iterate over them
 afterwards.
+
+### Changelog
+
+| Version | Description                                   |
+|---------|-----------------------------------------------|
+| 5.2.0   | The optional parameter `is_prefix` was added. |
 
 ### Examples
 

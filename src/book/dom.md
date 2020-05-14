@@ -6008,9 +6008,9 @@ An integer indicating the type of error generated
 Introduction
 ------------
 
-The <span class="classname">DOMImplementation</span> interface provides
-a number of methods for performing operations that are independent of
-any particular instance of the document object model.
+The <span class="classname">DOMImplementation</span> class provides a
+number of methods for performing operations that are independent of any
+particular instance of the document object model.
 
 Class synopsis
 --------------

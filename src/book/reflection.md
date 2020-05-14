@@ -440,6 +440,12 @@ Reflection
         — Gets the $this value of the generator
     -   [ReflectionGenerator::getTrace](/class/reflectiongenerator.html#ReflectionGenerator::getTrace)
         — Gets the trace of the executing generator
+-   [ReflectionReference](/class/reflectionreference.html) — The
+    ReflectionReference class
+    -   [ReflectionReference::fromArrayElement](/class/reflectionreference.html#ReflectionReference::fromArrayElement)
+        — Create a ReflectionReference from an array element
+    -   [ReflectionReference::getId](/class/reflectionreference.html#ReflectionReference::getId)
+        — Get unique ID of a reference
 -   [Reflector](/class/reflector.html) — The Reflector interface
     -   [Reflector::export](/class/reflector.html#Reflector::export) —
         Exports
@@ -11147,6 +11153,126 @@ The above example will output something similar to:
 
 -   <span class="methodname">ReflectionGenerator::getFunction</span>
 -   <span class="methodname">ReflectionGenerator::getThis</span>
+
+Introduction
+------------
+
+The <span class="classname">ReflectionReference</span> class provides
+information about a reference.
+
+Class synopsis
+--------------
+
+**ReflectionReference**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**ReflectionReference** </span> {
+
+/\* Methods \*/
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span
+class="type">ReflectionReference</span> <span
+class="methodname">fromArrayElement</span> ( <span
+class="methodparam"><span class="type">array</span> `$array`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$key`</span>
+)
+
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">getId</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+ReflectionReference::fromArrayElement
+=====================================
+
+Create a ReflectionReference from an array element
+
+### Description
+
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span
+class="type">ReflectionReference</span> <span
+class="methodname">ReflectionReference::fromArrayElement</span> ( <span
+class="methodparam"><span class="type">array</span> `$array`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$key`</span>
+)
+
+Creates a <span class="classname">ReflectionReference</span> from an
+array element.
+
+### Parameters
+
+`array`  
+The <span class="type">array</span> which contains the potential
+reference.
+
+`key`  
+The key; either an <span class="type">integer</span> or a <span
+class="type">string</span>.
+
+### Return Values
+
+Returns a <span class="classname">ReflectionReference </span> instance
+if *$array\[$key\]* is a reference, or **`NULL`** otherwise.
+
+### Errors/Exceptions
+
+If `array` is not an <span class="type">array</span>, or `key` is not an
+<span class="type">integer</span> or <span class="type">string</span>, a
+<span class="classname">TypeError</span> is thrown. If *$array\[$key\]*
+does not exist, a <span class="classname">ReflectionException</span> is
+thrown.
+
+ReflectionReference::getId
+==========================
+
+Get unique ID of a reference
+
+### Description
+
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">ReflectionReference::getId</span> ( <span
+class="methodparam">void</span> )
+
+Returns an ID which is unique for the reference for the lifetime of that
+reference. This ID can be used to compare references for equality, or to
+maintain a map of known references.
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+Returns an <span class="type">integer</span> or <span
+class="type">string</span> of unspecified format.
+
+### Examples
+
+**Example \#1 Basic <span
+class="methodname">ReflectionReference::getId</span> usage**
+
+``` php
+<?php
+$val1 = 'foo';
+$val2 = 'bar';
+$arr = [&$val1, &$val2, &$val1];
+
+$rr1 = ReflectionReference::fromArrayElement($arr, 0);
+$rr2 = ReflectionReference::fromArrayElement($arr, 1);
+$rr3 = ReflectionReference::fromArrayElement($arr, 2);
+
+var_dump($rr1->getId() === $rr2->getId());
+var_dump($rr1->getId() === $rr3->getId());
+?>
+```
+
+The above example will output:
+
+    bool(false)
+    bool(true)
 
 Introduction
 ------------

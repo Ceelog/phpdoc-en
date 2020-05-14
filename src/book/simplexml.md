@@ -529,6 +529,12 @@ Returns **`NULL`** if called on a <span
 class="classname">SimpleXMLElement</span> object that already represents
 an attribute and not a tag.
 
+### Changelog
+
+| Version | Description                                   |
+|---------|-----------------------------------------------|
+| 5.2.0   | The optional parameter `is_prefix` was added. |
+
 ### Examples
 
 **Example \#1 Interpret an XML string**
@@ -754,6 +760,13 @@ suppress all XML errors, and <span
 class="function">libxml\_get\_errors</span> to iterate over them
 afterwards.
 
+### Changelog
+
+| Version | Description                                       |
+|---------|---------------------------------------------------|
+| 5.2.0   | Added the `ns` and `is_prefix` parameters.        |
+| 5.1.2   | Added the `options` and `data_is_url` parameters. |
+
 ### Examples
 
 > **Note**:
@@ -790,13 +803,6 @@ echo $sxe->asXML();
 
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                       |
-|---------|---------------------------------------------------|
-| 5.2.0   | Added the `ns` and `is_prefix` parameters.        |
-| 5.1.2   | Added the `options` and `data_is_url` parameters. |
 
 ### See Also
 

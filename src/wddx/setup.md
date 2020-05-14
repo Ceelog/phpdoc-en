@@ -23,6 +23,23 @@ comes with Apache 1.3.7 or higher).
 Installation
 ------------
 
+PHP 7.4
+-------
+
+This extension has been moved to the
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+repository and is no longer bundled with PHP as of PHP 7.4.0
+
+Information for installing this PECL extension may be found in the
+manual chapter titled
+<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
+Additional information such as new releases, downloads, source files,
+maintainer information, and a CHANGELOG, can be located here:
+<a href="https://pecl.php.net/package/wddx" class="link external">» https://pecl.php.net/package/wddx</a>.
+
+PHP \< 7.4
+----------
+
 After installing the required expat library, compile PHP with
 **--enable-wddx**, and use **--with-libexpat-dir** for expat.
 
