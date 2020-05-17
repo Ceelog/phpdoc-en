@@ -12,6 +12,8 @@ Password Hashing
     -   [Resource Types](/password/setup.html#Resource%20Types)
 -   [Predefined Constants](/password/constants.html)
 -   [Password Hashing Functions](/ref/password.html)
+    -   [password\_algos](/ref/password.html#password_algos) — Get
+        available password hashing algorithm IDs
     -   [password\_get\_info](/ref/password.html#password_get_info) —
         Returns information about the given hash
     -   [password\_hash](/ref/password.html#password_hash) — Creates a

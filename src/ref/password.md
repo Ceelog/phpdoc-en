@@ -1,3 +1,45 @@
+password\_algos
+===============
+
+Get available password hashing algorithm IDs
+
+### Description
+
+<span class="type">array</span> <span
+class="methodname">password\_algos</span> ( <span
+class="methodparam">void</span> )
+
+Returns a complete list of all registered password hashing algorithm IDs
+as an <span class="type">array</span> of <span
+class="type">string</span>s.
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+Returns the available password hashing algorithm IDs.
+
+### Examples
+
+**Example \#1 Basic <span class="function">password</span> usage**
+
+``` php
+<?php
+print_r(password_algos());
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [0] => 2y
+        [1] => argon2i
+        [2] => argon2id
+    )
+
 password\_get\_info
 ===================
 
@@ -41,9 +83,9 @@ Creates a password hash
 <span class="type">string</span> <span
 class="methodname">password\_hash</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
-, <span class="methodparam"><span class="type">int</span> `$algo`</span>
-\[, <span class="methodparam"><span class="type">array</span>
-`$options`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$algo`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`</span> \] )
 
 <span class="function">password\_hash</span> creates a new password hash
 using a strong one-way hashing algorithm. <span
@@ -263,10 +305,11 @@ removed in a future PHP release.
 
 ### Changelog
 
-| Version | Description                                                             |
-|---------|-------------------------------------------------------------------------|
-| 7.3.0   | Support for Argon2id passwords using **`PASSWORD_ARGON2ID`** was added. |
-| 7.2.0   | Support for Argon2i passwords using **`PASSWORD_ARGON2I`** was added.   |
+| Version | Description                                                                                                                                           |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
+| 7.3.0   | Support for Argon2id passwords using **`PASSWORD_ARGON2ID`** was added.                                                                               |
+| 7.2.0   | Support for Argon2i passwords using **`PASSWORD_ARGON2I`** was added.                                                                                 |
 
 ### See Also
 
@@ -285,7 +328,7 @@ Checks if the given hash matches the given options
 <span class="type">bool</span> <span
 class="methodname">password\_needs\_rehash</span> ( <span
 class="methodparam"><span class="type">string</span> `$hash`</span> ,
-<span class="methodparam"><span class="type">int</span> `$algo`</span>
+<span class="methodparam"><span class="type">mixed</span> `$algo`</span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$options`</span> \] )
 
@@ -340,6 +383,12 @@ if (password_verify($password, $hash)) {
 
 Returns **`TRUE`** if the hash should be rehashed to match the given
 `algo` and `options`, or **`FALSE`** otherwise.
+
+### Changelog
+
+| Version | Description                                                                                                                                           |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
 
 password\_verify
 ================
@@ -406,6 +455,8 @@ The above example will output:
 
 **Table of Contents**
 
+-   [password\_algos](/ref/password.html#password_algos) — Get available
+    password hashing algorithm IDs
 -   [password\_get\_info](/ref/password.html#password_get_info) —
     Returns information about the given hash
 -   [password\_hash](/ref/password.html#password_hash) — Creates a

@@ -2643,7 +2643,7 @@ class="function">openssl\_random\_pseudo\_bytes</span> example**
 
 ``` php
 <?php
-for ($i = -1; $i <= 4; $i++) {
+for ($i = 1; $i <= 4; $i++) {
     $bytes = openssl_random_pseudo_bytes($i, $cstrong);
     $hex   = bin2hex($bytes);
 
@@ -2656,14 +2656,6 @@ for ($i = -1; $i <= 4; $i++) {
 ```
 
 The above example will output something similar to:
-
-    Lengths: Bytes: -1 and Hex: 0
-    string(0) ""
-    NULL
-
-    Lengths: Bytes: 0 and Hex: 0
-    string(0) ""
-    NULL
 
     Lengths: Bytes: 1 and Hex: 2
     string(2) "42"

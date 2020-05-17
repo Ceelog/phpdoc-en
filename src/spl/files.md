@@ -3165,7 +3165,7 @@ comes first.
 
 ### Return Values
 
-Returns the number of bytes written, or 0 on error.
+Returns the number of bytes written, or **`FALSE`** on error.
 
 ### Examples
 
