@@ -95,6 +95,10 @@ These functions allow you to access mSQL database servers. More
 information about mSQL can be found at
 <a href="http://www.hughes.com.au/" class="link external">» http://www.hughes.com.au/</a>.
 
+> **Note**:
+>
+> This extension is no longer bundled with PHP as of PHP 5.3.
+
 Installing/Configuring
 ======================
 
@@ -112,6 +116,9 @@ No external libraries are needed to build this extension.
 
 Installation
 ------------
+
+This extension is no longer bundled with PHP as of PHP 5.3. This
+extension is considered unmaintained and dead.
 
 In order to have these functions available, you must compile PHP with
 msql support by using the **--with-msql\[=DIR\]** option. DIR is the

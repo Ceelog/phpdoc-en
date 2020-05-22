@@ -229,6 +229,10 @@ about Firebird is available at
 
 > **Note**:
 >
+> This extension has been moved to the
+> <a href="https://pecl.php.net/" class="link external">» PECL</a>
+> repository and is no longer bundled with PHP as of PHP 7.4.0
+>
 > This extension supports InterBase versions 6 and up and Firebird
 > version 2.0 and up.
 >
@@ -257,6 +261,17 @@ No external libraries are needed to build this extension.
 
 Installation
 ------------
+
+This extension has been moved to the
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+repository and is no longer bundled with PHP as of PHP 7.4.0
+
+Information for installing this PECL extension may be found in the
+manual chapter titled
+<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
+Additional information such as new releases, downloads, source files,
+maintainer information, and a CHANGELOG, can be located here:
+<a href="https://pecl.php.net/package/ibase" class="link external">» https://pecl.php.net/package/ibase</a>.
 
 To enable Firebird/InterBase support configure PHP
 **--with-interbase\[=DIR\]**, where DIR is the Firebird/InterBase base

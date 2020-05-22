@@ -1800,7 +1800,7 @@ MongoDB driver classes
     -   [MongoDB\\Driver\\WriteConcernError::getCode](/set/mongodb.html#MongoDB\Driver\WriteConcernError::getCode)
         — Returns the WriteConcernError's error code
     -   [MongoDB\\Driver\\WriteConcernError::getInfo](/set/mongodb.html#MongoDB\Driver\WriteConcernError::getInfo)
-        — Returns additional metadata for the WriteConcernError
+        — Returns metadata document for the WriteConcernError
     -   [MongoDB\\Driver\\WriteConcernError::getMessage](/set/mongodb.html#MongoDB\Driver\WriteConcernError::getMessage)
         — Returns the WriteConcernError's error message
 -   [MongoDB\\Driver\\WriteError](/set/mongodb.html#MongoDB\Driver\WriteError)
@@ -1811,7 +1811,7 @@ MongoDB driver classes
         — Returns the index of the write operation corresponding to this
         WriteError
     -   [MongoDB\\Driver\\WriteError::getInfo](/set/mongodb.html#MongoDB\Driver\WriteError::getInfo)
-        — Returns additional metadata for the WriteError
+        — Returns metadata document for the WriteError
     -   [MongoDB\\Driver\\WriteError::getMessage](/set/mongodb.html#MongoDB\Driver\WriteError::getMessage)
         — Returns the WriteError's error message
 -   [MongoDB\\Driver\\WriteResult](/set/mongodb.html#MongoDB\Driver\WriteResult)
@@ -11190,8 +11190,9 @@ Class synopsis
 <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">mixed</span> <span class="methodname">getInfo</span>
-( <span class="methodparam">void</span> )
+<span class="type">object\|null</span> <span
+class="methodname">getInfo</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -11262,12 +11263,12 @@ The above example will output something similar to:
 MongoDB\\Driver\\WriteConcernError::getInfo
 ===========================================
 
-Returns additional metadata for the WriteConcernError
+Returns metadata document for the WriteConcernError
 
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">mixed</span> <span
+<span class="type">object\|null</span> <span
 class="methodname">MongoDB\\Driver\\WriteConcernError::getInfo</span> (
 <span class="methodparam">void</span> )
 
@@ -11277,8 +11278,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns additional metadata for the WriteConcernError, or **`NULL`** if
-no metadata is available.
+Returns the metadata document for the WriteConcernError, or **`NULL`**
+if no metadata is available.
 
 ### Errors/Exceptions
 
@@ -11408,8 +11409,9 @@ Class synopsis
 <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">mixed</span> <span class="methodname">getInfo</span>
-( <span class="methodparam">void</span> )
+<span class="type">object\|null</span> <span
+class="methodname">getInfo</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -11534,12 +11536,12 @@ The above example will output something similar to:
 MongoDB\\Driver\\WriteError::getInfo
 ====================================
 
-Returns additional metadata for the WriteError
+Returns metadata document for the WriteError
 
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">mixed</span> <span
+<span class="type">object\|null</span> <span
 class="methodname">MongoDB\\Driver\\WriteError::getInfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -11549,7 +11551,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns additional metadata for the WriteError, or **`NULL`** if no
+Returns the metadata document for the WriteError, or **`NULL`** if no
 metadata is available.
 
 ### Errors/Exceptions
@@ -14280,7 +14282,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the Javascript's scope document.
+Returns the Javascript's scope document, or **`NULL`** if the is no
+scope.
 
 ### Errors/Exceptions
 

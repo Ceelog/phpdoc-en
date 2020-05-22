@@ -58,6 +58,10 @@ No external libraries are needed to build this extension.
 Installation
 ------------
 
+This extension has been moved to the
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+repository and is no longer bundled with PHP as of PHP 5.2.0
+
 Information for installing this PECL extension may be found in the
 manual chapter titled
 <a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
