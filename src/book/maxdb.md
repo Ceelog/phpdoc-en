@@ -296,6 +296,13 @@ Download the MaxDB SQLDBC package from
 Installation
 ------------
 
+Information for installing this PECL extension may be found in the
+manual chapter titled
+<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
+Additional information such as new releases, downloads, source files,
+maintainer information, and a CHANGELOG, can be located here:
+<a href="https://pecl.php.net/package/maxdb" class="link external">» https://pecl.php.net/package/maxdb</a>.
+
 By using the **--with-maxdb\[=DIR\]** configuration option you enable
 PHP to access MaxDB databases. *\[DIR\]* points to the directory that
 contains the installed MaxDB SQLDBC package.

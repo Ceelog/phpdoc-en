@@ -126,6 +126,17 @@ Requirements
 Installation
 ------------
 
+This extension has been moved to the
+<a href="https://pecl.php.net/" class="link external">» PECL</a>
+repository and is no longer bundled with PHP as of PHP 5.2.1
+
+Information for installing this PECL extension may be found in the
+manual chapter titled
+<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
+Additional information such as new releases, downloads, source files,
+maintainer information, and a CHANGELOG, can be located here:
+<a href="https://pecl.php.net/package/informix" class="link external">» https://pecl.php.net/package/informix</a>.
+
 To be able to use the functions defined in this module you must compile
 your PHP interpreter using the configure line
 **--with-informix\[=DIR\]**, where DIR is the Informix base install
