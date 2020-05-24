@@ -185,6 +185,14 @@ in it. This allows the <span class="function">password\_verify</span>
 function to verify the hash without needing separate storage for the
 salt or algorithm information.
 
+### Changelog
+
+| Version | Description                                                                                                                                           |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
+| 7.3.0   | Support for Argon2id passwords using **`PASSWORD_ARGON2ID`** was added.                                                                               |
+| 7.2.0   | Support for Argon2i passwords using **`PASSWORD_ARGON2I`** was added.                                                                                 |
+
 ### Examples
 
 **Example \#1 <span class="function">password\_hash</span> example**
@@ -303,14 +311,6 @@ removed in a future PHP release.
 >     only exception to this is in an emergency when a critical security
 >     flaw is found in the current default. </span>
 
-### Changelog
-
-| Version | Description                                                                                                                                           |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
-| 7.3.0   | Support for Argon2id passwords using **`PASSWORD_ARGON2ID`** was added.                                                                               |
-| 7.2.0   | Support for Argon2i passwords using **`PASSWORD_ARGON2I`** was added.                                                                                 |
-
 ### See Also
 
 -   <span class="function">password\_verify</span>
@@ -351,6 +351,17 @@ An associative array containing options. See the
 <a href="/password/constants.html" class="link">password algorithm constants</a>
 for documentation on the supported options for each algorithm.
 
+### Return Values
+
+Returns **`TRUE`** if the hash should be rehashed to match the given
+`algo` and `options`, or **`FALSE`** otherwise.
+
+### Changelog
+
+| Version | Description                                                                                                                                           |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
+
 ### Examples
 
 **Example \#1 Usage of <span
@@ -378,17 +389,6 @@ if (password_verify($password, $hash)) {
 }
 ?>
 ```
-
-### Return Values
-
-Returns **`TRUE`** if the hash should be rehashed to match the given
-`algo` and `options`, or **`FALSE`** otherwise.
-
-### Changelog
-
-| Version | Description                                                                                                                                           |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0   | The `algo` parameter expects a <span class="type">string</span> now, but still accepts <span class="type">integer</span>s for backward compatibility. |
 
 password\_verify
 ================
