@@ -96,8 +96,8 @@ class="function">system</span> functions, or to the
 
 Following characters are preceded by a backslash:
 *&\#;\`\|\*?\~\<\>^()\[\]{}$\\*, *\\x0A* and *\\xFF*. *'* and *"* are
-escaped only if they are not paired. In Windows, all these characters
-plus *%* and *!* are replaced by a space instead.
+escaped only if they are not paired. On Windows, all these characters
+plus *%* and *!* are preceded by a caret (*^*).
 
 ### Parameters
 
@@ -132,9 +132,10 @@ class="function">escapeshellarg</span> should be used instead.
 
 ### Changelog
 
-| Version                | Description                               |
-|------------------------|-------------------------------------------|
-| 5.4.43, 5.5.27, 5.6.11 | Exclamation marks are replaced by spaces. |
+| Version                | Description                                                                                                              |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------|
+| 5.4.43, 5.5.27, 5.6.11 | Exclamation marks are replaced by spaces.                                                                                |
+| 5.3.0                  | On Windows, the special characters are now properly escaped. Previously, they have been replaced with a space character. |
 
 ### See Also
 
