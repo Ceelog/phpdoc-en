@@ -327,15 +327,33 @@ connection, rather than re-using an existing identical connection.
 class="function">pg\_connect</span> to create an asynchronous
 connection. Added in PHP 5.6.0. </span>
 
+**`PGSQL_CONNECTION_AUTH_OK`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
+
+**`PGSQL_CONNECTION_AWAITING_RESPONSE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
+
 **`PGSQL_CONNECTION_BAD`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connection\_status</span> indicating that the
 database connection is in an invalid state. </span>
 
+**`PGSQL_CONNECTION_MADE`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
+
 **`PGSQL_CONNECTION_OK`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connection\_status</span> indicating that the
 database connection is in a valid state. </span>
+
+**`PGSQL_CONNECTION_SETENV`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
+
+**`PGSQL_CONNECTION_SSL_STARTUP`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
+
+**`PGSQL_CONNECTION_STARTED`** (<span class="type">integer</span>)  
+<span class="simpara"> Available since PHP 5.6.0. </span>
 
 **`PGSQL_SEEK_SET`** (<span class="type">integer</span>)  
 <span class="simpara"> Passed to <span
@@ -496,6 +514,21 @@ PostgreSQL source-code location where the error was reported. </span>
 class="function">pg\_result\_error\_field</span>. The name of the
 PostgreSQL source-code function reporting the error. </span>
 
+**`PGSQL_DIAG_SCHEMA_NAME`** (<span class="type">string</span>)  
+<span class="simpara"> Available since PHP 7.3.0. </span>
+
+**`PGSQL_DIAG_TABLE_NAME`** (<span class="type">string</span>)  
+<span class="simpara"> Available since PHP 7.3.0. </span>
+
+**`PGSQL_DIAG_COLUMN_NAME`** (<span class="type">string</span>)  
+<span class="simpara"> Available since PHP 7.3.0. </span>
+
+**`PGSQL_DIAG_DATATYPE_NAME`** (<span class="type">string</span>)  
+<span class="simpara"> Available since PHP 7.3.0. </span>
+
+**`PGSQL_DIAG_CONSTRAINT_NAME`** (<span class="type">string</span>)  
+<span class="simpara"> Available since PHP 7.3.0. </span>
+
 **`PGSQL_ERRORS_TERSE`** (<span class="type">integer</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_set\_error\_verbosity</span>. Specified that
@@ -595,39 +628,43 @@ class="function">pg\_delete</span>. Apply escape to all parameters
 instead of calling <span class="function">pg\_convert</span> internally.
 This option omits meta data look up. Query could be as fast as <span
 class="function">pg\_query</span> and <span
-class="function">pg\_send\_query</span>. </span>
+class="function">pg\_send\_query</span>. Available since PHP 5.6.0.
+</span>
 
 **`PGSQL_POLLING_FAILED`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
-connection attempt failed. </span>
+connection attempt failed. Available since PHP 5.6.0. </span>
 
 **`PGSQL_POLLING_READING`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
-connection is waiting for the PostgreSQL socket to be readable. </span>
+connection is waiting for the PostgreSQL socket to be readable.
+Available since PHP 5.6.0. </span>
 
 **`PGSQL_POLLING_WRITING`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
-connection is waiting for the PostgreSQL socket to be writable. </span>
+connection is waiting for the PostgreSQL socket to be writable.
+Available since PHP 5.6.0. </span>
 
 **`PGSQL_POLLING_OK`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
-connection is ready to be used. </span>
+connection is ready to be used. Available since PHP 5.6.0. </span>
 
 **`PGSQL_POLLING_ACTIVE`** (<span class="type">integer</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
-connection is currently active. </span>
+connection is currently active. Available since PHP 5.6.0. </span>
 
 **`PGSQL_DIAG_SEVERITY_NONLOCALIZED`** (<span class="type">integer</span>)  
 <span class="simpara"> The severity; the field contents are ERROR,
 FATAL, or PANIC (in an error message), or WARNING, NOTICE, DEBUG, INFO,
 or LOG (in a notice message). This is identical to the
 PG\_DIAG\_SEVERITY field except that the contents are never localized.
-This is present only in versions 9.6 and later. </span>
+This is present only in versions 9.6 and later / PHP 7.3.0 and later.
+</span>
 
 Examples
 ========
