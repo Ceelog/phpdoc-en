@@ -1692,6 +1692,8 @@ MongoDB driver classes
         — Returns an object for BSON serialization
     -   [MongoDB\\Driver\\ReadPreference::\_\_construct](/set/mongodb.html#MongoDB\Driver\ReadPreference::__construct)
         — Create a new ReadPreference
+    -   [MongoDB\\Driver\\ReadPreference::getHedge](/set/mongodb.html#MongoDB\Driver\ReadPreference::getHedge)
+        — Returns the ReadPreference's "hedge" option
     -   [MongoDB\\Driver\\ReadPreference::getMaxStalenessSeconds](/set/mongodb.html#MongoDB\Driver\ReadPreference::getMaxStalenessSeconds)
         — Returns the ReadPreference's "maxStalenessSeconds" option
     -   [MongoDB\\Driver\\ReadPreference::getMode](/set/mongodb.html#MongoDB\Driver\ReadPreference::getMode)
@@ -7272,6 +7274,11 @@ class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">object\|null</span> <span
+class="methodname">getHedge</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">int</span> <span
 class="methodname">getMaxStalenessSeconds</span> ( <span
 class="methodparam">void</span> )
@@ -7586,6 +7593,12 @@ lowest network latency. This member may be a primary or secondary.
 </thead>
 <tbody>
 <tr class="odd">
+<td>hedge</td>
+<td><span class="type">object|array</span></td>
+<td><p>Specifies whether to use hedged reads.</p>
+<p>Server hedged reads are available for all non-primary read preferences and are enabled by default when using the <em>"nearest"</em> mode. This object allows explicitly enabling server hedged reads for non-primary read preferences, as well as disabling them for the <em>"nearest"</em> read preference.</p></td>
+</tr>
+<tr class="even">
 <td>maxStalenessSeconds</td>
 <td><span class="type">integer</span></td>
 <td><p>Specifies a maximum replication lag, or "staleness", for reads from secondaries. When a secondary's estimated staleness exceeds this value, the driver stops using it for read operations.</p>
@@ -7638,6 +7651,9 @@ var_dump(new MongoDB\Driver\ReadPreference(MongoDB\Driver\ReadPreference::RP_NEA
 /* Require a secondary node whose replication lag is within two minutes of the primary */
 var_dump(new MongoDB\Driver\ReadPreference(MongoDB\Driver\ReadPreference::RP_SECONDARY, null, ['maxStalenessSeconds' => 120]));
 
+/* Explicitly enable server hedged reads */
+var_dump(new MongoDB\Driver\ReadPreference(MongoDB\Driver\ReadPreference::RP_SECONDARY, null, ['hedge' => ['enabled' => true]]));
+
 ?>
 ```
 
@@ -7665,6 +7681,45 @@ The above example will output:
       ["maxStalenessSeconds"]=>
       int(120)
     }
+    object(MongoDB\Driver\ReadPreference)#1 (2) {
+      ["mode"]=>
+      string(9) "secondary"
+      ["hedge"]=>
+      object(stdClass)#1 (1) {
+        ["enabled"]=>
+        bool(true)
+      }
+    }
+
+### See Also
+
+-   <a href="https://docs.mongodb.com/manual/core/read-preference/" class="link external">» Read Preference reference</a>
+
+MongoDB\\Driver\\ReadPreference::getHedge
+=========================================
+
+Returns the ReadPreference's "hedge" option
+
+### Description
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">object\|null</span> <span
+class="methodname">MongoDB\\Driver\\ReadPreference::getHedge</span> (
+<span class="methodparam">void</span> )
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+Returns the ReadPreference's "hedge" option.
+
+### Errors/Exceptions
+
+-   Throws <span
+    class="classname">MongoDB\\Driver\\Exception\\InvalidArgumentException</span>
+    on argument parsing errors.
 
 ### See Also
 
