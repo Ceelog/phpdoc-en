@@ -445,7 +445,7 @@ if ($db->getAttribute(PDO::ATTR_DRIVER_NAME) == 'mysql') {
 <span class="simpara"> Convert empty strings to SQL NULL values on data
 fetches. </span>
 
-**`PDO::ATTR_PERSISTENT`** (<span class="type">integer</span>)  
+**`PDO::ATTR_PERSISTENT`** (<span class="type">mixed</span>)  
 <span class="simpara"> Request a persistent connection, rather than
 creating a new connection. See
 <a href="/book/pdo.html#Connections%20and%20Connection%20management" class="link">Connections and Connection management</a>
@@ -698,6 +698,13 @@ $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass, array(
 ));
 ?>
 ```
+
+The value of the **`PDO::ATTR_PERSISTENT`** option is converted to <span
+class="type">boolean</span> (enable/disable persistent connections),
+unless it is a non-numeric <span class="type">string</span>, in which
+case it allows to use multiple persistent connection pools. This is
+useful if different connections use incompatible settings, for instance,
+different values of **`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`**.
 
 > **Note**:
 >

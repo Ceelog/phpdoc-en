@@ -141,7 +141,9 @@ Trying to enable it at in a script will generate a warning.
 Enables the opcode cache for the CLI version of PHP.
 
 `opcache.memory_consumption` <span class="type">integer</span>  
-The size of the shared memory storage used by OPcache, in megabytes.
+The size of the shared memory storage used by OPcache, in megabytes. The
+minimum permissible value is *"8"*, which is enforced if a smaller value
+is set.
 
 `opcache.interned_strings_buffer` <span class="type">integer</span>  
 The amount of memory used to store interned strings, in megabytes. This
@@ -153,11 +155,13 @@ table. The actual value used will be the first number in the set of
 prime numbers *{ 223, 463, 983, 1979, 3907, 7963, 16229, 32531, 65407,
 130987, 262237, 524521, 1048793 }* that is greater than or equal to the
 configured value. The minimum value is 200. The maximum value is 100000
-in PHP \< 5.5.6, and 1000000 in later versions.
+in PHP \< 5.5.6, and 1000000 in later versions. Values outside of this
+range are clamped to the permissible range.
 
 `opcache.max_wasted_percentage` <span class="type">integer</span>  
 The maximum percentage of wasted memory that is allowed before a restart
-is scheduled.
+is scheduled. The maximum permissible value is *"50"*, which is enforced
+if a larger value is set.
 
 `opcache.use_cwd` <span class="type">boolean</span>  
 If enabled, OPcache appends the current working directory to the script

@@ -2095,12 +2095,13 @@ disputed. Added in PHP 5.2.0. **`TRUE`** or **`FALSE`**
 `options`  
 An associative <span class="type">array</span> which may have any of the
 keys *expires*, *path*, *domain*, *secure*, *httponly* and *samesite*.
-The values have the same meaning as described for the parameters with
-the same name. The value of the *samesite* element should be either
-*None*, *Lax* or *Strict*. If any of the allowed options are not given,
-their default values are the same as the default values of the explicit
-parameters. If the *samesite* element is omitted, no SameSite cookie
-attribute is set.
+If any other key is present an error of level **`E_WARNING`** is
+generated. The values have the same meaning as described for the
+parameters with the same name. The value of the *samesite* element
+should be either *None*, *Lax* or *Strict*. If any of the allowed
+options are not given, their default values are the same as the default
+values of the explicit parameters. If the *samesite* element is omitted,
+no SameSite cookie attribute is set.
 
 ### Return Values
 
