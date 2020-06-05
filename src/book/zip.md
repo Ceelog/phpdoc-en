@@ -55,6 +55,10 @@ Zip
     -   [ZipArchive::getStream](/class/ziparchive.html#ZipArchive::getStream)
         — Get a file handler to the entry defined by its name (read
         only)
+    -   [ZipArchive::isCompressionMethodSupported](/class/ziparchive.html#ZipArchive::isCompressionMethodSupported)
+        — Check if a compression method is supported by libzip
+    -   [ZipArchive::isEncryptionMethodSupported](/class/ziparchive.html#ZipArchive::isEncryptionMethodSupported)
+        — Check if a encryption method is supported by libzip
     -   [ZipArchive::locateName](/class/ziparchive.html#ZipArchive::locateName)
         — Returns the index of the entry in the archive
     -   [ZipArchive::open](/class/ziparchive.html#ZipArchive::open) —
@@ -276,6 +280,18 @@ class="methodparam">void</span> )
 <span class="type">resource</span> <span
 class="methodname">getStream</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> )
+
+<span class="type">bool</span> <span
+class="methodname">isCompressionMethodSupported</span> ( <span
+class="methodparam"><span class="type">int</span> `$method`</span> \[,
+<span class="methodparam"><span class="type">bool</span> `$encode`<span
+class="initializer"> = true</span></span> \] )
+
+<span class="type">bool</span> <span
+class="methodname">isEncryptionMethodSupported</span> ( <span
+class="methodparam"><span class="type">int</span> `$method`</span> \[,
+<span class="methodparam"><span class="type">bool</span> `$encode`<span
+class="initializer"> = true</span></span> \] )
 
 <span class="type">int</span> <span class="methodname">locateName</span>
 ( <span class="methodparam"><span class="type">string</span>
@@ -1557,6 +1573,82 @@ $im = imagecreatefromgif('zip://' . dirname(__FILE__) . '/test_im.zip#pear_item.
 imagepng($im, 'a.png');
 ?>
 ```
+
+ZipArchive::isCompressionMethodSupported
+========================================
+
+Check if a compression method is supported by libzip
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">ZipArchive::isCompressionMethodSupported</span> (
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$encode`<span class="initializer"> = true</span></span> \] )
+
+Check if a compression method is supported by libzip.
+
+### Parameters
+
+`method`  
+The compression method, one of the **`ZipArchive::CM_*`** constants.
+
+`encode`  
+If **`TRUE`** check for compression, else check for decompression.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if built against libzip ≥ 1.7.0.
+
+### See Also
+
+-   <span class="methodname">ZipArchive::setCompressionIndex</span>
+-   <span class="methodname">ZipArchive::setCompressionName</span>
+
+ZipArchive::isEncryptionMethodSupported
+=======================================
+
+Check if a encryption method is supported by libzip
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">ZipArchive::isEncryptionMethodSupported</span> (
+<span class="methodparam"><span class="type">int</span> `$method`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$encode`<span class="initializer"> = true</span></span> \] )
+
+Check if a compression method is supported by libzip.
+
+### Parameters
+
+`method`  
+The encryption method, one of the **`ZipArchive::EM_*`** constants.
+
+`encode`  
+If **`TRUE`** check for encryption, else check for decryption.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if built against libzip ≥ 1.7.0.
+
+### See Also
+
+-   <span class="methodname">ZipArchive::setEncryptionIndex</span>
+-   <span class="methodname">ZipArchive::setEncryptionName</span>
 
 ZipArchive::locateName
 ======================
