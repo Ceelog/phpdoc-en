@@ -1,9 +1,9 @@
 Properties
 ----------
 
-Class member variables are called "properties". You may also see them
-referred to using other terms such as "attributes" or "fields", but for
-the purposes of this reference we will use "properties". They are
+Class member variables are called *properties*. You may also see them
+referred to using other terms such as *attributes* or *fields*, but for
+the purposes of this reference we will use *properties*. They are
 defined by using one of the keywords *public*, *protected*, or
 *private*, optionally followed by a type declaration, followed by a
 normal variable declaration. This declaration may include an
@@ -80,6 +80,8 @@ EOD;
 > want to take a look at the
 > <a href="/ref/classobj.html" class="link">Class/Object Functions</a>.
 
+### Heredoc and Nowdoc
+
 As of PHP 5.3.0
 <a href="/language/types/string.html#language.types.string.syntax.heredoc" class="link">heredocs</a>
 and
@@ -106,8 +108,9 @@ EOT;
 >
 > Nowdoc and Heredoc support was added in PHP 5.3.0.
 
-As of PHP 7.4.0, property definitions can include a type declaration,
-with the exception of the *callable* type.
+### Type declarations
+
+As of PHP 7.4.0, property definitions can include a type declaration.
 
 **Example \#3 Example of typed properties**
 
@@ -117,24 +120,95 @@ with the exception of the *callable* type.
 class User
 {
     public int $id;
-    public string $name;
+    public ?string $name;
 
-    public function __construct(int $id, string $name)
+    public function __construct(int $id, ?string $name)
     {
         $this->id = $id;
         $this->name = $name;
     }
 }
 
-$user = new User(1234, "php");
-echo "ID: " . $user->id;
-echo "\n";
-echo "Name: " . $user->name;
+$user = new User(1234, null);
+
+var_dump($user->id);
+var_dump($user->name);
 
 ?>
 ```
 
 The above example will output:
 
-    ID: 1234
-    Name: php
+    int(1234)
+    NULL
+
+Typed properties must be initialized before accessing, otherwise an
+<span class="classname">Error</span> is thrown.
+
+**Example \#4 Accessing properties**
+
+``` php
+<?php
+
+class Shape
+{
+    public int $numberOfSides;
+    public string $name;
+
+    public function setNumberOfSides(int $numberOfSides): void
+    {
+        $this->numberOfSides = $numberOfSides;
+    }
+
+    public function setName(string $name): void
+    {
+        $this->name = $name;
+    }
+
+    public function getNumberOfSides(): int
+    {
+        return $this->numberOfSides;
+    }
+
+    public function getName(): string
+    {
+        return $this->name;
+    }
+}
+
+$triangle = new Shape();
+$triangle->setName("triangle");
+$triangle->setNumberofSides(3);
+var_dump($triangle->getName());
+var_dump($triangle->getNumberOfSides());
+
+$circle = new Shape();
+$circle->setName("circle");
+var_dump($circle->getName());
+var_dump($circle->getNumberOfSides());
+?>
+```
+
+The above example will output:
+
+    string(8) "triangle"
+    int(3)
+    string(6) "circle"
+
+    Fatal error: Uncaught Error: Typed property Shape::$numberOfSides must not be accessed before initialization
+
+#### Valid property types
+
+| Type                             | Description                                                                                                                                                                                       | Minimum PHP version |
+|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
+| <span class="type">bool</span>   | The property must be <span class="type">boolean</span> value.                                                                                                                                     | PHP 7.4.0           |
+| <span class="type">int</span>    | The property must be an <span class="type">integer</span>.                                                                                                                                        | PHP 7.4.0           |
+| <span class="type">float</span>  | The property must be a <span class="type">float</span>ing point number.                                                                                                                           | PHP 7.4.0           |
+| <span class="type">string</span> | The property must be a <span class="type">string</span>.                                                                                                                                          | PHP 7.4.0           |
+| <span class="type">array</span>  | The property must be an <span class="type">array</span>.                                                                                                                                          | PHP 7.4.0           |
+| *object*                         | The property must be an <span class="type">object</span>.                                                                                                                                         | PHP 7.4.0           |
+| *iterable*                       | The property must be either an <span class="type">array</span> or an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="interfacename">Traversable</span>. | PHP 7.4.0           |
+| *self*                           | The property must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class in which the property is defined.                                             | PHP 7.4.0           |
+| *parent*                         | The property must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the parent class of the class in which the property is defined.                              | PHP 7.4.0           |
+| Class/interface name             | The property must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the given class or interface name.                                                           | PHP 7.4.0           |
+| ?type                            | The property must be the specified type, or **`NULL`**.                                                                                                                                           | PHP 7.4.0           |

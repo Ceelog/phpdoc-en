@@ -237,7 +237,9 @@ Using <span class="type">string</span> as the `assertion` is
 
 `description`  
 An optional description that will be included in the failure message if
-the `assertion` fails.
+the `assertion` fails. From PHP 7, if no description is provided, a
+default description equal to the source code for the invocation of <span
+class="function">assert</span> is provided.
 
 `exception`  
 In PHP 7, the second parameter can be a <span
