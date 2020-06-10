@@ -60,7 +60,8 @@ class="function">require\_once</span>.
 Define the user agent for PHP to send.
 
 `default_socket_timeout` <span class="type">integer</span>  
-Default timeout (in seconds) for socket based streams.
+Default timeout (in seconds) for socket based streams. Specifying a
+negative value means an infinite timeout.
 
 `from` <span class="type">string</span>  
 The email address to be used on unauthenticated FTP connections and as

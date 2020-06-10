@@ -3,6 +3,11 @@ ezmlm\_hash
 
 Calculate the hash value needed by EZMLM
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="type">int</span> <span

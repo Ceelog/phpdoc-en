@@ -564,7 +564,8 @@ class="methodparam"><span class="type">array</span> `$munglist`</span> )
 <span class="methodname">offsetExists</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="type">PharFileInfo</span> <span
 class="methodname">offsetGet</span> ( <span class="methodparam"><span
 class="type">string</span> `$offset`</span> )
 
@@ -3463,7 +3464,8 @@ file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="type">PharFileInfo</span> <span
 class="methodname">Phar::offsetGet</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 
@@ -4985,7 +4987,8 @@ class="methodparam"><span class="type">array</span> `$munglist`</span> )
 <span class="methodname">Phar::offsetExists</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span
+class="type">PharFileInfo</span> <span
 class="methodname">Phar::offsetGet</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 

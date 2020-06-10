@@ -1842,10 +1842,16 @@ class="methodparam"><span class="type">mixed</span> `$index`</span> )
 
 Unsets a value for an offset.
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+If iteration is in progress, and <span
+class="methodname">ArrayIterator::offsetUnset</span> is used to unset
+the current index of iteration, the iteration position will be advanced
+to the next index. Since the iteration position is also advanced at the
+end of a
+<a href="/control-structures/foreach.html" class="link">foreach</a> loop
+body, use of <span class="methodname">ArrayIterator::offsetUnset</span>
+inside a
+<a href="/control-structures/foreach.html" class="link"><em>foreach</em></a>
+loop may result in indices being skipped.
 
 ### Parameters
 
