@@ -381,7 +381,7 @@ a string is passed, it is interpreted as the name of the configuration
 file, otherwise, it is interpreted as the options themselves.
 
 For an explanation about each option, visit
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>.
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>.
 
 `encoding`  
 The `encoding` parameter sets the encoding for input/output documents.
@@ -613,7 +613,7 @@ The <span class="classname">Tidy</span> object.
 Returns an array of configuration options.
 
 For an explanation about each option, visit
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>.
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>.
 
 ### Examples
 
@@ -797,7 +797,7 @@ The <span class="classname">Tidy</span> object.
 
 `option`  
 You will find a list with each configuration option and their types at:
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>.
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>.
 
 ### Return Values
 
@@ -1270,7 +1270,7 @@ a string is passed, it is interpreted as the name of the configuration
 file, otherwise, it is interpreted as the options themselves.
 
 For an explanation about each option, see
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>.
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>.
 
 `encoding`  
 The `encoding` parameter sets the encoding for input/output documents.
@@ -1351,7 +1351,7 @@ a string is passed, it is interpreted as the name of the configuration
 file, otherwise, it is interpreted as the options themselves.
 
 For an explanation about each option, visit
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>.
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>.
 
 `encoding`  
 The `encoding` parameter sets the encoding for input/output documents.
@@ -1545,7 +1545,7 @@ a string is passed, it is interpreted as the name of the configuration
 file, otherwise, it is interpreted as the options themselves.
 
 Check
-<a href="http://tidy.sourceforge.net/docs/quickref.html" class="link external">» http://tidy.sourceforge.net/docs/quickref.html</a>
+<a href="http://api.html-tidy.org/#quick-reference" class="link external">» http://api.html-tidy.org/#quick-reference</a>
 for an explanation about each option.
 
 `encoding`  
