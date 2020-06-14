@@ -974,9 +974,9 @@ echo "Sum: ", 1 + 2;
 echo "Hello ", isset($name) ? $name : "John Doe", "!";
 ```
 
-With concatenation, the period operator has a higher precedence than
-both the addition and ternary operators, and so parentheses must be used
-for the correct behaviour:
+With concatenation, the period operator has the same precedence as the
+addition operator, and higher precedence than the ternary operator, so
+parentheses must be used for the correct behaviour:
 
 ``` php
 <?php
