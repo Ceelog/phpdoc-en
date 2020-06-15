@@ -15940,7 +15940,8 @@ available.
 ### Parameters
 
 `rules`  
-The rules.
+The rules as defined in Transform Rules Syntax of UTS \#35: Unicode
+LDML.
 
 `direction`  
 The direction, defaults to

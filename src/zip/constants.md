@@ -241,7 +241,11 @@ and PECL zip 1.16.1, respectively, if built against libzip ≥ 1.6.0.
 
 **`ZipArchive::EM_NONE`** (<span class="type">integer</span>)  
 <span class="simpara"> No encryption. Available as of PHP 7.2.0 and PECL
-zip 1.14.0, respectively, if built against libzip ≥ 1.2.0. </span>
+zip 1.14.0, respectively. </span>
+
+**`ZipArchive::EM_TRAD_PKWARE`** (<span class="type">integer</span>)  
+<span class="simpara"> Traditional PKWARE encryption. Available as of
+PHP 8.0.0 and PECL zip 1.19.0, respectively. </span>
 
 **`ZipArchive::EM_AES_128`** (<span class="type">integer</span>)  
 <span class="simpara"> AES 128 encryption. Available as of PHP 7.2.0 and
@@ -254,6 +258,10 @@ PECL zip 1.14.0, respectively, if built against libzip ≥ 1.2.0. </span>
 **`ZipArchive::EM_AES_256`** (<span class="type">integer</span>)  
 <span class="simpara"> AES 256 encryption. Available as of PHP 7.2.0 and
 PECL zip 1.14.0, respectively, if built against libzip ≥ 1.2.0. </span>
+
+**`ZipArchive::EM_UNKNOWN`** (<span class="type">integer</span>)  
+<span class="simpara"> Unknown encryption algorithm. Available as of PHP
+8.0.0 and PECL zip 1.19.0, respectively. </span>
 
 **`ZipArchive::LIBZIP_VERSION`** (<span class="type">string</span>)  
 <span class="simpara"> Zip library version. Available as of PHP 7.4.3
