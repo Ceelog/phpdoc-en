@@ -6480,12 +6480,13 @@ Returns the assigned array.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | It is now possible to specify keys in <span class="function">list</span>. This enables destructuring of arrays with non-integer or non-sequential keys.                                           |
-| 7.0.0   | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.order" class="link">The order that the assignment operations are performed in has changed.</a>            |
-| 7.0.0   | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.empty" class="link"><span class="function">list</span> expressions can no longer be completely empty.</a> |
-| 7.0.0   | <a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.list.string" class="link">Strings can no longer be unpacked.</a>                                               |
+| Version | Description                                                                                                                                             |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.3.0   | Support for reference assignments in array destructuring was added.                                                                                     |
+| 7.1.0   | It is now possible to specify keys in <span class="function">list</span>. This enables destructuring of arrays with non-integer or non-sequential keys. |
+| 7.0.0   | The order that the assignment operations are performed in has changed.                                                                                  |
+| 7.0.0   | <span class="function">list</span> expressions can no longer be completely empty.                                                                       |
+| 7.0.0   | Strings can no longer be unpacked.                                                                                                                      |
 
 ### Examples
 

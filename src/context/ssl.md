@@ -108,10 +108,18 @@ When an <span class="type">array</span> is used, the keys indicate the
 hashing algorithm name and each corresponding value is the expected
 digest.
 
+`security_level` <span class="type">integer</span>  
+Sets the security level. If not specified the library default security
+level is used. The security levels are described in
+<a href="https://www.openssl.org/docs/man1.1.0/man3/SSL_CTX_get_security_level.html" class="link external">» SSL_CTX_get_security_level(3)</a>.
+
+Available as of PHP 7.2.0 and OpenSSL 1.1.0.
+
 ### Changelog
 
 | Version | Description                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------|
+| 7.2.0   | Added `security_levels`. Requires OpenSSL \>= 1.1.0.                                          |
 | 5.6.0   | Added `peer_fingerprint` and `verify_peer_name`. `verify_peer` default changed to **`TRUE`**. |
 | 5.4.13  | Added `disable_compression`. Requires OpenSSL \>= 1.0.0.                                      |
 | 5.3.2   | Added `SNI_enabled` and `SNI_server_name`.                                                    |

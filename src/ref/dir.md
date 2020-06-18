@@ -61,6 +61,17 @@ The above example will output something similar to:
 > operating has the same UID (owner) as the script that is being
 > executed.</span>
 
+**Caution**
+
+If the PHP interpreter has been built with ZTS (Zend Thread Safety)
+enabled, any changes to the current directory made through <span
+class="function">chdir</span> will be invisible to the operating system.
+All built-in PHP functions will still respect the change in current
+directory; but external library functions called using
+<a href="/book/ffi.html" class="link">FFI</a> will not. You can tell
+whether your copy of PHP was built with ZTS enabled using **php -i** or
+the built-in constant **`PHP_ZTS`**.
+
 ### See Also
 
 -   <span class="function">getcwd</span>
@@ -111,6 +122,11 @@ The above example will output:
 
 > **Note**: <span class="simpara">This function is not implemented on
 > Windows platforms.</span>
+
+> **Note**: <span class="simpara">This function is not available in PHP
+> interpreters built with ZTS (Zend Thread Safety) enabled. To check
+> whether your copy of PHP was built with ZTS enabled, use **php -i** or
+> test the built-in constant **`PHP_ZTS`**.</span>
 
 closedir
 ========
@@ -246,6 +262,15 @@ On some Unix variants, <span class="function">getcwd</span> will return
 readable or search mode set, even if the current directory does. See
 <span class="function">chmod</span> for more information on modes and
 permissions.
+
+**Caution**
+
+If the PHP interpreter has been built with ZTS (Zend Thread Safety)
+enabled, the current working directory returned by <span
+class="function">getcwd</span> may be different from that returned by
+operating system interfaces. External libraries (invoked through
+<a href="/book/ffi.html" class="link">FFI</a>) which depend on the
+current working directory will be affected.
 
 ### Examples
 

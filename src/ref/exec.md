@@ -523,6 +523,13 @@ of command parameters. In this case the process will be opened directly
 (without going through a shell) and PHP will take care of any necessary
 argument escaping.
 
+> **Note**:
+>
+> On Windows, the argument escaping of the <span
+> class="type">array</span> elements assumes that the command line
+> parsing of the executed command is compatible with the parsing of
+> command line arguments done by the VC runtime.
+
 `descriptorspec`  
 An indexed array where the key represents the descriptor number and the
 value represents how PHP will pass that descriptor to the child process.
