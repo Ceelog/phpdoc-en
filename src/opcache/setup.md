@@ -75,6 +75,12 @@ however note that you will have to test your code before using these in
 production as they are known to break some frameworks and applications,
 particularly in cases where documentation comment annotations are used.
 
+On Windows,
+<a href="/opcache/setup.html#" class="link">opcache.file_cache_fallback</a>
+should be enabled, and
+<a href="/opcache/setup.html#" class="link">opcache.file_cache</a>
+should be set to an already existing and writable directory.
+
 A full list of configuration directives supported by OPcache
 <a href="/opcache/setup.html#Runtime%20Configuration" class="link">is also available</a>.
 

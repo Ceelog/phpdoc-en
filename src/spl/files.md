@@ -3387,7 +3387,7 @@ The above example will output something similar to:
 
 ### See Also
 
--   <span class="methodname">Classname::Method</span>
+-   <span class="methodname">SplFileObject::setMaxLineLen</span>
 
 SplFileObject::hasChildren
 ==========================
@@ -3836,7 +3836,7 @@ The above example will output something similar to:
 
 ### See Also
 
--   <span class="methodname">Classname::Method</span>
+-   <span class="methodname">SplFileObject::getMaxLineLen</span>
 
 SplFileObject::\_\_toString
 ===========================
