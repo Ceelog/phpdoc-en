@@ -160,287 +160,296 @@ class="interfacename">Countable</span> </span> {
 
 /\* Methods \*/
 
-<span class="type">bool</span> <span
-class="methodname">addEmptyDir</span> ( <span class="methodparam"><span
-class="type">string</span> `$dirname`</span> \[, <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">addEmptyDir</span> ( <span
+class="methodparam"><span class="type">string</span> `$dirname`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = 0</span></span> \] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">addFile</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$localname`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$start`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
+class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \] )
+class="initializer"> = ZipArchive::FL\_OVERWRITE</span></span> \]\]\]\]
+)
 
-<span class="type">bool</span> <span class="methodname">addFile</span> (
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$localname`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$start`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$length`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`<span class="initializer"> =
-ZipArchive::FL\_OVERWRITE</span></span> \]\]\]\] )
-
-<span class="type">bool</span> <span
-class="methodname">addFromString</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">addFromString</span> ( <span
 class="methodparam"><span class="type">string</span> `$localname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$contents`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 ZipArchive::FL\_OVERWRITE</span></span> \] )
 
-<span class="type">array</span> <span class="methodname">addGlob</span>
-( <span class="methodparam"><span class="type">string</span>
-`$pattern`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$options`<span class="initializer"> =
-array()</span></span> \]\] )
-
-<span class="type">array</span> <span
-class="methodname">addPattern</span> ( <span class="methodparam"><span
-class="type">string</span> `$pattern`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$path`<span
-class="initializer"> = "."</span></span> \[, <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">addGlob</span> ( <span
+class="methodparam"><span class="type">string</span> `$pattern`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`<span
 class="initializer"> = array()</span></span> \]\] )
 
-<span class="type">bool</span> <span class="methodname">close</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">addPattern</span> ( <span
+class="methodparam"><span class="type">string</span> `$pattern`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$path`<span class="initializer"> = "."</span></span> \[, <span
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = array()</span></span> \]\] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">close</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">count</span> ( <span class="methodparam">void</span>
 )
 
-<span class="type">bool</span> <span
-class="methodname">deleteIndex</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">deleteIndex</span> ( <span
+class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">deleteName</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">deleteName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="type">bool</span> <span class="methodname">extractTo</span>
-( <span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">extractTo</span> ( <span
+class="methodparam"><span class="type">string</span>
 `$destination`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$entries`</span> \] )
 
-<span class="type">string</span> <span
-class="methodname">getArchiveComment</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getArchiveComment</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="type">string</span> <span
-class="methodname">getCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
 
-<span class="type">string</span> <span
-class="methodname">getCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
 
-<span class="type">bool</span> <span
-class="methodname">GetExternalAttributesIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">GetExternalAttributesIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span> `&$opsys`</span>
 , <span class="methodparam"><span class="type">int</span>
 `&$attr`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">getExternalAttributesName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getExternalAttributesName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span> `&$opsys`</span>
 , <span class="methodparam"><span class="type">int</span>
 `&$attr`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`</span> \] )
 
-<span class="type">string</span> <span
-class="methodname">getFromIndex</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFromIndex</span> ( <span
+class="methodparam"><span class="type">int</span> `$index`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \]\] )
 
-<span class="type">string</span> <span
-class="methodname">getFromName</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFromName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \]\] )
 
-<span class="type">string</span> <span
-class="methodname">getNameIndex</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getNameIndex</span> ( <span
+class="methodparam"><span class="type">int</span> `$index`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`</span>
+\] )
 
-<span class="type">string</span> <span
-class="methodname">getStatusString</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getStatusString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">resource</span> <span
-class="methodname">getStream</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+<span class="modifier">public</span> <span class="type">resource</span>
+<span class="methodname">getStream</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">isCompressionMethodSupported</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isCompressionMethodSupported</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$encode`<span
 class="initializer"> = true</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">isEncryptionMethodSupported</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isEncryptionMethodSupported</span> ( <span
 class="methodparam"><span class="type">int</span> `$method`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$encode`<span
 class="initializer"> = true</span></span> \] )
 
-<span class="type">int</span> <span class="methodname">locateName</span>
-( <span class="methodparam"><span class="type">string</span>
-`$name`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">int</span> <span
+class="methodname">locateName</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="type">mixed</span> <span class="methodname">open</span> (
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">open</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">registerCancelCallback</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">registerCancelCallback</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">registerProgressCallback</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">registerProgressCallback</span> ( <span
 class="methodparam"><span class="type">float</span> `$rate`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">renameIndex</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> , <span
-class="methodparam"><span class="type">string</span> `$newname`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">renameIndex</span> ( <span
+class="methodparam"><span class="type">int</span> `$index`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$newname`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">renameName</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string</span> `$newname`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">renameName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$newname`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">replaceFile</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> , <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$start`<span
-class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \]\]\] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">replaceFile</span> ( <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$index`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$start`<span class="initializer"> =
+0</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$length`<span class="initializer"> =
+0</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+0</span></span> \]\]\] )
 
-<span class="type">bool</span> <span
-class="methodname">setArchiveComment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setArchiveComment</span> ( <span
 class="methodparam"><span class="type">string</span> `$comment`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$comment`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$comment`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">setCompressionIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCompressionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$comp_method`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$comp_flags`<span class="initializer"> =
 0</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setCompressionName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setCompressionName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$comp_method`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$comp_flags`<span class="initializer"> =
 0</span></span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setEncryptionIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setEncryptionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$method`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$password`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setEncryptionName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setEncryptionName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span> `$method`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$password`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setExternalAttributesIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setExternalAttributesIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span> `$opsys`</span>
 , <span class="methodparam"><span class="type">int</span> `$attr`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setExternalAttributesName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setExternalAttributesName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span> `$opsys`</span>
 , <span class="methodparam"><span class="type">int</span> `$attr`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setMtimeIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setMtimeIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`</span> \] )
 
-<span class="type">bool</span> <span
-class="methodname">setMtimeName</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">int</span> `$timestamp`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">setMtimeName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$timestamp`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setPassword</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 )
 
-<span class="type">array</span> <span
-class="methodname">statIndex</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">statIndex</span> ( <span
+class="methodparam"><span class="type">int</span> `$index`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`</span>
+\] )
 
-<span class="type">array</span> <span class="methodname">statName</span>
-( <span class="methodparam"><span class="type">string</span>
-`$name`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">statName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`</span>
+\] )
 
-<span class="type">bool</span> <span
-class="methodname">unchangeAll</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">unchangeAll</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">unchangeArchive</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">unchangeArchive</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">bool</span> <span
-class="methodname">unchangeIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">unchangeIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="type">bool</span> <span
-class="methodname">unchangeName</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">unchangeName</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> )
 
 }
 
@@ -475,8 +484,8 @@ Add a new directory
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::addEmptyDir</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::addEmptyDir</span> ( <span
 class="methodparam"><span class="type">string</span> `$dirname`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`<span class="initializer"> = 0</span></span> \] )
@@ -531,8 +540,8 @@ Adds a file to a ZIP archive from the given path
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::addFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$localname`<span class="initializer"> = **`NULL`**</span></span> \[,
@@ -626,8 +635,8 @@ Add a file to a ZIP archive using its contents
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::addFromString</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::addFromString</span> ( <span
 class="methodparam"><span class="type">string</span> `$localname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$contents`</span> \[, <span class="methodparam"><span
@@ -706,8 +715,8 @@ Add files from a directory by glob pattern
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">ZipArchive::addGlob</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ZipArchive::addGlob</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`<span class="initializer"> = 0</span></span> \[, <span
@@ -819,8 +828,8 @@ Add files from a directory by PCRE pattern
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">ZipArchive::addPattern</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ZipArchive::addPattern</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$path`<span class="initializer"> = "."</span></span> \[, <span
@@ -884,8 +893,8 @@ Close the active archive (opened or newly created)
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::close</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::close</span> ( <span
 class="methodparam">void</span> )
 
 Close opened or created archive and save changes. This method is
@@ -925,8 +934,8 @@ Delete an entry in the archive using its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::deleteIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::deleteIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Delete an entry in the archive using its index.
@@ -964,8 +973,8 @@ Delete an entry in the archive using its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::deleteName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::deleteName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Delete an entry in the archive using its name.
@@ -1005,8 +1014,8 @@ Extract the archive contents
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::extractTo</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::extractTo</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$destination`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$entries`</span> \] )
@@ -1073,8 +1082,8 @@ Returns the Zip archive comment
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getArchiveComment</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getArchiveComment</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Returns the Zip archive comment.
@@ -1114,8 +1123,8 @@ Returns the comment of an entry using the entry index
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1158,8 +1167,8 @@ Returns the comment of an entry using the entry name
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1202,13 +1211,13 @@ Retrieve the external attributes of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::GetExternalAttributesIndex</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> ,
-<span class="methodparam"><span class="type">int</span> `&$opsys`</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::GetExternalAttributesIndex</span> (
+<span class="methodparam"><span class="type">int</span> `$index`</span>
 , <span class="methodparam"><span class="type">int</span>
-`&$attr`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+`&$opsys`</span> , <span class="methodparam"><span
+class="type">int</span> `&$attr`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Retrieve the external attributes of an entry defined by its index.
 
@@ -1267,13 +1276,13 @@ Retrieve the external attributes of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::getExternalAttributesName</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">int</span> `&$opsys`</span>
-, <span class="methodparam"><span class="type">int</span>
-`&$attr`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::getExternalAttributesName</span> (
+<span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span class="type">int</span>
+`&$opsys`</span> , <span class="methodparam"><span
+class="type">int</span> `&$attr`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Retrieve the external attributes of an entry defined by its name.
 
@@ -1305,8 +1314,8 @@ Returns the entry contents using its index
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getFromIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getFromIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
@@ -1362,8 +1371,8 @@ Returns the entry contents using its name
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getFromName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getFromName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
@@ -1433,8 +1442,8 @@ Returns the name of an entry using its index
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getNameIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getNameIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -1477,8 +1486,8 @@ Returns the status error message, system and/or zip messages
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">ZipArchive::getStatusString</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ZipArchive::getStatusString</span> ( <span
 class="methodparam">void</span> )
 
 Returns the status error message, system and/or zip messages.
@@ -1505,8 +1514,8 @@ Get a file handler to the entry defined by its name (read only)
 
 ### Description
 
-<span class="type">resource</span> <span
-class="methodname">ZipArchive::getStream</span> ( <span
+<span class="modifier">public</span> <span class="type">resource</span>
+<span class="methodname">ZipArchive::getStream</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Get a file handler to the entry defined by its name. For now it only
@@ -1581,11 +1590,12 @@ Check if a compression method is supported by libzip
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::isCompressionMethodSupported</span> (
-<span class="methodparam"><span class="type">int</span> `$method`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$encode`<span class="initializer"> = true</span></span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::isCompressionMethodSupported</span>
+( <span class="methodparam"><span class="type">int</span>
+`$method`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$encode`<span class="initializer"> =
+true</span></span> \] )
 
 Check if a compression method is supported by libzip.
 
@@ -1619,11 +1629,12 @@ Check if a encryption method is supported by libzip
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::isEncryptionMethodSupported</span> (
-<span class="methodparam"><span class="type">int</span> `$method`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$encode`<span class="initializer"> = true</span></span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::isEncryptionMethodSupported</span>
+( <span class="methodparam"><span class="type">int</span>
+`$method`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$encode`<span class="initializer"> =
+true</span></span> \] )
 
 Check if a compression method is supported by libzip.
 
@@ -1657,7 +1668,7 @@ Returns the index of the entry in the archive
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ZipArchive::locateName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
@@ -1732,8 +1743,8 @@ Open a ZIP file archive
 
 ### Description
 
-<span class="type">mixed</span> <span
-class="methodname">ZipArchive::open</span> ( <span
+<span class="modifier">public</span> <span class="type">mixed</span>
+<span class="methodname">ZipArchive::open</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$flags`</span> \] )
@@ -1860,9 +1871,9 @@ Register a callback to allow cancellation during archive close.
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::registerCancelCallback</span> ( <span
-class="methodparam"><span class="type">callable</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::registerCancelCallback</span> (
+<span class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
 Register a `callback` function to allow cancellation during archive
@@ -1914,10 +1925,10 @@ Register a callback to provide updates during archive close.
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::registerProgressCallback</span> ( <span
-class="methodparam"><span class="type">float</span> `$rate`</span> ,
-<span class="methodparam"><span class="type">callable</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::registerProgressCallback</span> (
+<span class="methodparam"><span class="type">float</span> `$rate`</span>
+, <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> )
 
 Register a `callback` function to provide updates during archive close.
@@ -1969,8 +1980,8 @@ Renames an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::renameIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::renameIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$newname`</span> )
@@ -2013,8 +2024,8 @@ Renames an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::renameName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::renameName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$newname`</span> )
@@ -2057,8 +2068,8 @@ Replace file in ZIP archive with a given path
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::replaceFile</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::replaceFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$index`</span> \[, <span class="methodparam"><span
@@ -2131,8 +2142,8 @@ Set the comment of a ZIP archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setArchiveComment</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setArchiveComment</span> ( <span
 class="methodparam"><span class="type">string</span> `$comment`</span> )
 
 Set the comment of a ZIP archive.
@@ -2172,8 +2183,8 @@ Set the comment of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setCommentIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setCommentIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$comment`</span> )
@@ -2217,8 +2228,8 @@ Set the comment of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setCommentName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setCommentName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$comment`</span> )
@@ -2262,8 +2273,8 @@ Set the compression method of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setCompressionIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setCompressionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$comp_method`</span> \[, <span class="methodparam"><span
@@ -2316,8 +2327,8 @@ Set the compression method of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setCompressionName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setCompressionName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$comp_method`</span> \[, <span class="methodparam"><span
@@ -2387,8 +2398,8 @@ Set the encryption method of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setEncryptionIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setEncryptionIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$method`</span> \[, <span class="methodparam"><span
@@ -2429,8 +2440,8 @@ Set the encryption method of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setEncryptionName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setEncryptionName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span> `$method`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2493,13 +2504,13 @@ Set the external attributes of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setExternalAttributesIndex</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> ,
-<span class="methodparam"><span class="type">int</span> `$opsys`</span>
-, <span class="methodparam"><span class="type">int</span> `$attr`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setExternalAttributesIndex</span> (
+<span class="methodparam"><span class="type">int</span> `$index`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$opsys`</span> , <span class="methodparam"><span
+class="type">int</span> `$attr`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Set the external attributes of an entry defined by its index.
 
@@ -2529,13 +2540,13 @@ Set the external attributes of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setExternalAttributesName</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">int</span> `$opsys`</span>
-, <span class="methodparam"><span class="type">int</span> `$attr`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`</span> \] )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setExternalAttributesName</span> (
+<span class="methodparam"><span class="type">string</span>
+`$name`</span> , <span class="methodparam"><span class="type">int</span>
+`$opsys`</span> , <span class="methodparam"><span
+class="type">int</span> `$attr`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \] )
 
 Set the external attributes of an entry defined by its name.
 
@@ -2587,8 +2598,8 @@ Set the modification time of an entry defined by its index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setMtimeIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setMtimeIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
@@ -2649,8 +2660,8 @@ Set the modification time of an entry defined by its name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::setMtimeName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::setMtimeName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
@@ -2752,8 +2763,8 @@ Get the details of an entry defined by its index
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">ZipArchive::statIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ZipArchive::statIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -2810,8 +2821,8 @@ Get the details of an entry defined by its name
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">ZipArchive::statName</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ZipArchive::statName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
@@ -2875,8 +2886,8 @@ Undo all changes done in the archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::unchangeAll</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::unchangeAll</span> ( <span
 class="methodparam">void</span> )
 
 Undo all changes done in the archive.
@@ -2896,8 +2907,8 @@ Revert all global changes done in the archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::unchangeArchive</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::unchangeArchive</span> ( <span
 class="methodparam">void</span> )
 
 Revert all global changes to the archive. For now, this only reverts
@@ -2918,8 +2929,8 @@ Revert all changes done to an entry at the given index
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::unchangeIndex</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::unchangeIndex</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Revert all changes done to an entry at the given index.
@@ -2940,8 +2951,8 @@ Revert all changes done to an entry with the given name
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">ZipArchive::unchangeName</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ZipArchive::unchangeName</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Revert all changes done to an entry.
