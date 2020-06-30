@@ -319,7 +319,7 @@ protects from caching of incompletely updated files. In case all file
 updates on your site are atomic, you may increase performance by setting
 it to "0".
 
-`opcache.huge_code_pages` <span class="type">string</span>  
+`opcache.huge_code_pages` <span class="type">boolean</span>  
 Enables or disables copying of PHP code (text segment) into HUGE PAGES.
 This should improve performance, but requires appropriate OS
 configuration.
