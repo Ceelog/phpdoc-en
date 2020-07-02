@@ -5676,15 +5676,19 @@ function.
 `path`  
 The symbolic link path.
 
+### Return Values
+
+Returns the contents of the symbolic link path or **`FALSE`** on error.
+
+> **Note**: <span class="simpara"> The function fails if `path` is not a
+> symlink, except on Windows, where the normalized path will be
+> returned. </span>
+
 ### Changelog
 
 | Version | Description                                                                          |
 |---------|--------------------------------------------------------------------------------------|
 | 5.3.0   | This function is now available on Windows platforms (Vista, Server 2008 or greater). |
-
-### Return Values
-
-Returns the contents of the symbolic link path or **`FALSE`** on error.
 
 ### Examples
 

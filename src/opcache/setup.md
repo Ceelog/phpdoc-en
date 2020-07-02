@@ -322,7 +322,8 @@ it to "0".
 `opcache.huge_code_pages` <span class="type">boolean</span>  
 Enables or disables copying of PHP code (text segment) into HUGE PAGES.
 This should improve performance, but requires appropriate OS
-configuration.
+configuration. Available on Linux as of PHP 7.0.0, and on FreeBSD as of
+PHP 7.4.0.
 
 `opcache.lockfile_path` <span class="type">string</span>  
 Absolute path used to store shared lockfiles (for \*nix only)

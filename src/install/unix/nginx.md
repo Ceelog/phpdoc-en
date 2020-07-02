@@ -8,7 +8,7 @@ This guide will assume that you have built Nginx from source and
 therefore all binaries and configuration files are located at
 */usr/local/nginx*. If this is not the case and you have obtained Nginx
 through other means then please refer to the
-<a href="http://wiki.nginx.org/Main" class="link external">» Nginx Wiki</a>
+<a href="https://www.nginx.com/resources/wiki/" class="link external">» Nginx Wiki</a>
 in order to translate this manual to your setup.
 
 This guide will cover the basics of configuring an Nginx server to
@@ -22,7 +22,7 @@ future, please replace these as necessary with the corresponding version
 numbers.
 
 1.  It is recommended that you visit the Nginx Wiki
-    <a href="http://wiki.nginx.org/Install" class="link external">» install</a>
+    <a href="https://www.nginx.com/resources/wiki/start/topics/tutorials/install/" class="link external">» install</a>
     page in order to obtain and install Nginx on your system.
 
 2.  Obtain and unpack the PHP source:
