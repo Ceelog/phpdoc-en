@@ -6132,7 +6132,7 @@ Path to the file.
 
 | Numeric | Associative | Description                                |
 |---------|-------------|--------------------------------------------|
-| 0       | dev         | device number                              |
+| 0       | dev         | device number \*\*\*                       |
 | 1       | ino         | inode number \*                            |
 | 2       | mode        | inode protection mode                      |
 | 3       | nlink       | number of links                            |
@@ -6146,10 +6146,17 @@ Path to the file.
 | 11      | blksize     | blocksize of filesystem IO \*\*            |
 | 12      | blocks      | number of 512-byte blocks allocated \*\*   |
 
-\* On Windows this will always be 0.
+\* On Windows this will always be *0*.
 
 \*\* Only valid on systems supporting the st\_blksize type - other
-systems (e.g. Windows) return -1.
+systems (e.g. Windows) return *-1*.
+
+\*\*\* On Windows, as of PHP 7.4.0, this is the serial number of the
+volume that contains the file, which is a 32-bit *unsigned* integer, so
+may overflow on 32-bit systems. Previously, it was the numeric
+representation of the drive letter (e.g. *2* for *C:*) for <span
+class="function">stat</span>, and *0* for <span
+class="function">lstat</span>.
 
 The value of *mode* contains information read by several functions. When
 written in octal, starting from the right, the first three digits are
@@ -6177,6 +6184,12 @@ In case of error, <span class="function">stat</span> returns
 ### Errors/Exceptions
 
 Upon failure, an **`E_WARNING`** is emitted.
+
+### Changelog
+
+| Version | Description                                                                                  |
+|---------|----------------------------------------------------------------------------------------------|
+| 7.4.0   | On Windows, the device number is now the serial number of the volume that contains the file. |
 
 ### Examples
 
