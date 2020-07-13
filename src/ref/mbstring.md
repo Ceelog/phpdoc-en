@@ -2530,11 +2530,18 @@ in the string '*abcdef*', the byte at position *0* is '*a*', the byte at
 position *2* is '*c*', and so forth.
 
 If `start` is negative, the returned string will start at the `start`'th
-byte from the end of `str`.
+byte counting back from the end of `str`. However, if the magnitude of a
+negative `start` is greater than the length of the string, the returned
+portion will start from the beginning of `str`.
 
 `length`  
 Length in *bytes*. If omitted or *NULL* is passed, extract all bytes to
 the end of the string.
+
+If `length` is negative, the returned string will end at the `length`'th
+byte counting back from the end of `str`. However, if the magnitude of a
+negative `length` is greater than the number of characters after the
+`start` position, an empty string will be returned.
 
 `encoding`  
 The `encoding` parameter is the character encoding. If it is omitted,

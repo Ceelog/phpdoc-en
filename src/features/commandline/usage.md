@@ -184,3 +184,9 @@ command line applications in PHP.
 On Windows, PHP can be configured to run without the need to supply the
 `C:\php\php.exe` or the *.php* extension, as described in
 <a href="/install/windows/legacy/index.html#install.windows.legacy.commandline" class="link">Command Line PHP on Microsoft Windows</a>.
+
+> **Note**:
+>
+> On Windows it is recommended to run PHP under an actual user account.
+> When running under a network service certain operations will fail,
+> because "No mapping between account names and security IDs was done".
