@@ -4064,13 +4064,13 @@ Sets locale information.
 **Warning**
 
 The locale information is maintained per process, not per thread. If you
-are running PHP on a multithreaded server API like IIS, HHVM or Apache
-on Windows, you may experience sudden changes in locale settings while a
-script is running, though the script itself never called <span
-class="function">setlocale</span>. This happens due to other scripts
-running in different threads of the same process at the same time,
-changing the process-wide locale using <span
-class="function">setlocale</span>.
+are running PHP on a multithreaded server API , you may experience
+sudden changes in locale settings while a script is running, though the
+script itself never called <span class="function">setlocale</span>. This
+happens due to other scripts running in different threads of the same
+process at the same time, changing the process-wide locale using <span
+class="function">setlocale</span>. On Windows, locale information is
+maintained per thread as of PHP 5.6.20 and PHP 7.0.5, respectively.
 
 ### Parameters
 
