@@ -6133,7 +6133,7 @@ Path to the file.
 | Numeric | Associative | Description                                |
 |---------|-------------|--------------------------------------------|
 | 0       | dev         | device number \*\*\*                       |
-| 1       | ino         | inode number \*                            |
+| 1       | ino         | inode number \*\*\*\*                      |
 | 2       | mode        | inode protection mode                      |
 | 3       | nlink       | number of links                            |
 | 4       | uid         | userid of owner \*                         |
@@ -6152,11 +6152,14 @@ Path to the file.
 systems (e.g. Windows) return *-1*.
 
 \*\*\* On Windows, as of PHP 7.4.0, this is the serial number of the
-volume that contains the file, which is a 32-bit *unsigned* integer, so
-may overflow on 32-bit systems. Previously, it was the numeric
-representation of the drive letter (e.g. *2* for *C:*) for <span
-class="function">stat</span>, and *0* for <span
-class="function">lstat</span>.
+volume that contains the file, which is a 64-bit *unsigned* integer, so
+may overflow. Previously, it was the numeric representation of the drive
+letter (e.g. *2* for *C:*) for <span class="function">stat</span>, and
+*0* for <span class="function">lstat</span>.
+
+\*\*\*\* On Windows, as of PHP 7.4.0, this is the identifier associated
+with the file, which is a 64-bit *unsigned* integer, so may overflow.
+Previously, it was always *0*.
 
 The value of *mode* contains information read by several functions. When
 written in octal, starting from the right, the first three digits are
@@ -6187,9 +6190,9 @@ Upon failure, an **`E_WARNING`** is emitted.
 
 ### Changelog
 
-| Version | Description                                                                                  |
-|---------|----------------------------------------------------------------------------------------------|
-| 7.4.0   | On Windows, the device number is now the serial number of the volume that contains the file. |
+| Version | Description                                                                                                                                                   |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | On Windows, the device number is now the serial number of the volume that contains the file, and the inode number is the identifier associated with the file. |
 
 ### Examples
 

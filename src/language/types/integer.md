@@ -168,7 +168,7 @@ class="type">integer</span>, the number will be rounded *towards zero*.
 If the float is beyond the boundaries of <span
 class="type">integer</span> (usually *+/- 2.15e+9 = 2^31* on 32-bit
 platforms and *+/- 9.22e+18 = 2^63* on 64-bit platforms other than
-Windows), the result is undefined, since the <span
+Windows prior to PHP 7), the result is undefined, since the <span
 class="type">float</span> doesn't have enough precision to give an exact
 <span class="type">integer</span> result. No warning, not even a notice
 will be issued when this happens!

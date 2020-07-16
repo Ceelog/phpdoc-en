@@ -19798,8 +19798,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -19890,8 +19890,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 <span class="modifier">protected</span> <span
 class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -19989,8 +19989,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20119,8 +20119,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20212,8 +20212,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20301,8 +20301,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20408,8 +20408,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20665,8 +20665,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 /\* Inherited properties \*/
 
@@ -20815,8 +20815,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20910,8 +20910,8 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -21087,8 +21087,8 @@ class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span class="type">bool</span>
-`$errorLabels` ;
+<span class="modifier">protected</span> <span
+class="type">array\|null</span> `$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
