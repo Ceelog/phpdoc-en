@@ -1724,6 +1724,10 @@ Must be a non-negative integer.
 `nanoseconds`  
 Must be a non-negative integer less than 1 billion.
 
+> **Note**: <span class="simpara"> On Windows, the system may sleep
+> longer that the given number of nanoseconds, depending on the
+> hardware. </span>
+
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
@@ -2104,6 +2108,10 @@ Delays program execution for the given number of microseconds.
 
 `micro_seconds`  
 Halt time in microseconds. A microsecond is one millionth of a second.
+
+> **Note**: <span class="simpara"> On Windows, the system may sleep
+> longer that the given number of microseconds, depending on the
+> hardware. </span>
 
 ### Return Values
 
