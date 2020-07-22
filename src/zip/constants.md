@@ -123,6 +123,11 @@ PHP 7.0.8. </span>
 <span class="simpara"> LZMA2 algorithm. Available as of PHP 7.4.3 and
 PECL zip 1.16.0, respectively, if built against libzip ≥ 1.6.0. </span>
 
+**`ZipArchive::CM_ZSTD`** (<span class="type">integer</span>)  
+<span class="simpara"> Zstandard algorithm. Available as of PHP 8.0.0
+and PECL zip 1.19.1, respectively, if built against libzip ≥ 1.8.0.
+</span>
+
 **`ZipArchive::CM_XZ`** (<span class="type">integer</span>)  
 <span class="simpara"> XZ algorithm. Available as of PHP 7.4.3 and PECL
 zip 1.16.1, respectively, if built against libzip ≥ 1.6.0. </span>

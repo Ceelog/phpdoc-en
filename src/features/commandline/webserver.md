@@ -44,9 +44,9 @@ Standard MIME types are returned for files with extensions: .3gp, .apk,
 | 5.4.11  | .ogg, .ogv, and .webm                                                                                                                                                                                                           |
 | 5.4.4   | .htm and .svg                                                                                                                                                                                                                   |
 
-| Version | Description                                                                                                                                                                                                                                                                      |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0   | You can configure the built-in webserver to fork multiple workers in order to test code that requires multiple concurrent requests to the built-in webserver. Set the `PHP_CLI_SERVER_WORKERS` environment variable to the number of desired workers before starting the server. |
+| Version | Description                                                                                                                                                                                                                                                                                                        |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.4.0   | You can configure the built-in webserver to fork multiple workers in order to test code that requires multiple concurrent requests to the built-in webserver. Set the `PHP_CLI_SERVER_WORKERS` environment variable to the number of desired workers before starting the server. This is not supported on Windows. |
 
 **Example \#1 Starting the web server**
 
@@ -75,6 +75,9 @@ similar to:
     [Thu Jul 21 10:48:50 2011] ::1:39147 GET /favicon.ico - Request read
     [Thu Jul 21 10:48:52 2011] ::1:39148 GET /myscript.html - Request read
     [Thu Jul 21 10:48:52 2011] ::1:39149 GET /favicon.ico - Request read
+
+Note that prior to PHP 7.4.0, symlinked statical resources have not been
+accessible on Windows, unless the router script would handle these.
 
 **Example \#2 Starting with a specific document root directory**
 

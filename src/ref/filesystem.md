@@ -6118,6 +6118,8 @@ Gives information about a file
 
 Gathers the statistics of the file named by `filename`. If `filename` is
 a symbolic link, statistics are from the file itself, not the symlink.
+Prior to PHP 7.4.0, on Windows NTS builds the *size*, *atime*, *mtime*
+and *ctime* statistics have been from the symlink, in this case.
 
 <span class="function">lstat</span> is identical to <span
 class="function">stat</span> except it would instead be based off the
@@ -6193,6 +6195,7 @@ Upon failure, an **`E_WARNING`** is emitted.
 | Version | Description                                                                                                                                                   |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.4.0   | On Windows, the device number is now the serial number of the volume that contains the file, and the inode number is the identifier associated with the file. |
+| 7.4.0   | The *size*, *atime*, *mtime* and *ctime* statistics of symlinks are always those of the target. This was previously not the case for NTS builds on Windows.   |
 
 ### Examples
 
