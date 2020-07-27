@@ -213,7 +213,7 @@ Sets the default timezone used by all date/time functions in a script
 <span class="type">bool</span> <span
 class="methodname">date\_default\_timezone\_set</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$timezone_identifier`</span> )
+`$timezoneID`</span> )
 
 <span class="function">date\_default\_timezone\_set</span> sets the
 default timezone used by all date/time functions.
@@ -232,15 +232,15 @@ the default timezone.
 
 ### Parameters
 
-`timezone_identifier`  
-The timezone identifier, like *UTC* or *Europe/Lisbon*. The list of
-valid identifiers is available in the
+`timezoneID`  
+The timezone identifier, like *UTC*, *Africa/Lagos*, *Asia/Hong\_Kong*,
+or *Europe/Lisbon*. The list of valid identifiers is available in the
 <a href="/timezones.html" class="xref">List of Supported Timezones</a>.
 
 ### Return Values
 
-This function returns **`FALSE`** if the `timezone_identifier` isn't
-valid, or **`TRUE`** otherwise.
+This function returns **`FALSE`** if the `timezoneID` isn't valid, or
+**`TRUE`** otherwise.
 
 ### Examples
 
@@ -262,10 +262,10 @@ if (strcmp($script_tz, ini_get('date.timezone'))){
 
 ### Changelog
 
-| Version | Description                                                           |
-|---------|-----------------------------------------------------------------------|
-| 5.3.0   | Now throws **`E_WARNING`** rather than **`E_STRICT`**.                |
-| 5.1.2   | The function started to validate the `timezone_identifier` parameter. |
+| Version | Description                                                  |
+|---------|--------------------------------------------------------------|
+| 5.3.0   | Now throws **`E_WARNING`** rather than **`E_STRICT`**.       |
+| 5.1.2   | The function started to validate the `timezoneID` parameter. |
 
 ### See Also
 
@@ -364,9 +364,9 @@ Get info about given date formatted according to the specified format
 class="methodname">date\_parse\_from\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$date`</span> )
+`$datetime`</span> )
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ### Parameters
 
@@ -374,12 +374,12 @@ Returns associative array with detailed info about given date.
 Format accepted by <span
 class="function">DateTime::createFromFormat</span>.
 
-`date`  
-String representing the date.
+`datetime`  
+String representing the date/time.
 
 ### Return Values
 
-Returns associative array with detailed info about given date.
+Returns associative array with detailed info about given date/time.
 
 ### Changelog
 
@@ -434,28 +434,29 @@ The above example will output:
 date\_parse
 ===========
 
-Returns associative array with detailed info about given date
+Returns associative array with detailed info about given date/time
 
 ### Description
 
 <span class="type">array</span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
-class="type">string</span> `$date`</span> )
+class="type">string</span> `$datetime`</span> )
 
 ### Parameters
 
-`date`  
-Date in format accepted by <span class="function">strtotime</span>.
+`datetime`  
+Date/time in format accepted by <span
+class="function">DateTimeImmutable::\_\_construct</span>.
 
 ### Return Values
 
 Returns <span class="type">array</span> with information about the
-parsed date on success or **`FALSE`** on failure.
+parsed date/time on success or **`FALSE`** on failure.
 
 ### Errors/Exceptions
 
-In case the date format has an error, the element 'errors' will contains
-the error messages.
+In case the date/time format has an error, the element 'errors' will
+contains the error messages.
 
 ### Changelog
 
@@ -563,15 +564,15 @@ begin/end
 
 <span class="type">array</span> <span
 class="methodname">date\_sun\_info</span> ( <span
-class="methodparam"><span class="type">int</span> `$time`</span> , <span
-class="methodparam"><span class="type">float</span> `$latitude`</span> ,
+class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
-`$longitude`</span> )
+`$latitude`</span> , <span class="methodparam"><span
+class="type">float</span> `$longitude`</span> )
 
 ### Parameters
 
-`time`  
-Timestamp.
+`timestamp`  
+Unix timestamp.
 
 `latitude`  
 Latitude in degrees.
@@ -585,16 +586,16 @@ Returns array on success or **`FALSE`** on failure. The structure of the
 array is detailed in the following list:
 
 *sunrise*  
-<span class="simpara"> The time of the sunrise (zenith angle = 90°35').
-</span>
+<span class="simpara"> The timestamp of the sunrise (zenith angle =
+90°35'). </span>
 
 *sunset*  
-<span class="simpara"> The time of the sunset (zenith angle = 90°35').
-</span>
+<span class="simpara"> The timestamp of the sunset (zenith angle =
+90°35'). </span>
 
 *transit*  
-<span class="simpara"> The time when the sun is at its zenith, i.e. has
-reached its topmost point. </span>
+<span class="simpara"> The timestamp when the sun is at its zenith, i.e.
+has reached its topmost point. </span>
 
 *civil\_twilight\_begin*  
 <span class="simpara"> The start of the civil dawn (zenith angle = 96°).
@@ -733,7 +734,7 @@ Returns time of sunrise for a given day and location
 class="methodname">date\_sunrise</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$format`<span class="initializer"> =
+`$returnFormat`<span class="initializer"> =
 SUNFUNCS\_RET\_STRING</span></span> \[, <span class="methodparam"><span
 class="type">float</span> `$latitude`<span class="initializer"> =
 ini\_get("date.default\_latitude")</span></span> \[, <span
@@ -742,7 +743,7 @@ class="initializer"> = ini\_get("date.default\_longitude")</span></span>
 \[, <span class="methodparam"><span class="type">float</span>
 `$zenith`<span class="initializer"> =
 ini\_get("date.sunrise\_zenith")</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$gmt_offset`<span
+class="methodparam"><span class="type">float</span> `$utcOffset`<span
 class="initializer"> = 0</span></span> \]\]\]\]\] )
 
 <span class="function">date\_sunrise</span> returns the sunrise time for
@@ -753,7 +754,7 @@ a given day (specified as a `timestamp`) and location.
 `timestamp`  
 The `timestamp` of the day from which the sunrise time is taken.
 
-`format`  
+`returnFormat`  
 | constant                 | description                                                         | example     |
 |--------------------------|---------------------------------------------------------------------|-------------|
 | SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>              | 16:46       |
@@ -780,13 +781,13 @@ perpendicular to earth's surface. It defaults to
 | 102°   | Nautical twilight: the point at which the horizon starts being visible at sea.                 |
 | 108°   | Astronomical twilight: the point at which the sun starts being the source of any illumination. |
 
-`gmtoffset`  
-Specified in hours. The `gmtoffset` is ignored, if `format` is
+`utcOffset`  
+Specified in hours. The `utcOffset` is ignored, if `returnFormat` is
 **`SUNFUNCS_RET_TIMESTAMP`**.
 
 ### Return Values
 
-Returns the sunrise time in a specified `format` on success or
+Returns the sunrise time in a specified `returnFormat` on success or
 **`FALSE`** on failure. One potential reason for failure is that the sun
 does not rise at all, which happens inside the polar circles for part of
 the year.
@@ -855,7 +856,7 @@ Returns time of sunset for a given day and location
 <span class="type">mixed</span> <span
 class="methodname">date\_sunset</span> ( <span class="methodparam"><span
 class="type">int</span> `$timestamp`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$format`<span
+class="methodparam"><span class="type">int</span> `$returnFormat`<span
 class="initializer"> = SUNFUNCS\_RET\_STRING</span></span> \[, <span
 class="methodparam"><span class="type">float</span> `$latitude`<span
 class="initializer"> = ini\_get("date.default\_latitude")</span></span>
@@ -865,7 +866,7 @@ ini\_get("date.default\_longitude")</span></span> \[, <span
 class="methodparam"><span class="type">float</span> `$zenith`<span
 class="initializer"> = ini\_get("date.sunset\_zenith")</span></span> \[,
 <span class="methodparam"><span class="type">float</span>
-`$gmt_offset`<span class="initializer"> = 0</span></span> \]\]\]\]\] )
+`$utcOffset`<span class="initializer"> = 0</span></span> \]\]\]\]\] )
 
 <span class="function">date\_sunset</span> returns the sunset time for a
 given day (specified as a `timestamp`) and location.
@@ -875,7 +876,7 @@ given day (specified as a `timestamp`) and location.
 `timestamp`  
 The `timestamp` of the day from which the sunset time is taken.
 
-`format`  
+`returnFormat`  
 | constant                 | description                                                         | example     |
 |--------------------------|---------------------------------------------------------------------|-------------|
 | SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>              | 16:46       |
@@ -902,8 +903,8 @@ perpendicular to earth's surface. It defaults to
 | 102°   | Nautical twilight: the point at which the horizon ends being visible at sea.                 |
 | 108°   | Astronomical twilight: the point at which the sun ends being the source of any illumination. |
 
-`gmtoffset`  
-Specified in hours. The `gmtoffset` is ignored, if `format` is
+`utcOffset`  
+Specified in hours. The `utcOffset` is ignored, if `returnFormat` is
 **`SUNFUNCS_RET_TIMESTAMP`**.
 
 ### Errors/Exceptions
@@ -921,7 +922,7 @@ See also <span class="function">date\_default\_timezone\_set</span>
 
 ### Return Values
 
-Returns the sunset time in a specified `format` on success or
+Returns the sunset time in a specified `returnFormat` on success or
 **`FALSE`** on failure. One potential reason for failure is that the sun
 does not set at all, which happens inside the polar circles for part of
 the year.
@@ -1038,70 +1039,8 @@ of <span class="function">time</span>.
 ### Parameters
 
 `format`  
-The format of the outputted date <span class="type">string</span>. See
-the formatting options below. There are also several
-<a href="/class/datetimeinterface.html#Predefined%20Constants" class="link">predefined date constants</a>
-that may be used instead, so for example **`DATE_RSS`** contains the
-format string *'D, d M Y H:i:s'*.
-
-|  `format` character | Description                                                                                                                                                                                                                                                                                                                               | Example returned values                       |
-|:-------------------:|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-----------------------------------------------|
-|        *Day*        | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *d*         | Day of the month, 2 digits with leading zeros                                                                                                                                                                                                                                                                                             | *01* to *31*                                  |
-|         *D*         | A textual representation of a day, three letters                                                                                                                                                                                                                                                                                          | *Mon* through *Sun*                           |
-|         *j*         | Day of the month without leading zeros                                                                                                                                                                                                                                                                                                    | *1* to *31*                                   |
-| *l* (lowercase 'L') | A full textual representation of the day of the week                                                                                                                                                                                                                                                                                      | *Sunday* through *Saturday*                   |
-|         *N*         | ISO-8601 numeric representation of the day of the week (added in PHP 5.1.0)                                                                                                                                                                                                                                                               | *1* (for Monday) through *7* (for Sunday)     |
-|         *S*         | English ordinal suffix for the day of the month, 2 characters                                                                                                                                                                                                                                                                             | *st*, *nd*, *rd* or *th*. Works well with *j* |
-|         *w*         | Numeric representation of the day of the week                                                                                                                                                                                                                                                                                             | *0* (for Sunday) through *6* (for Saturday)   |
-|         *z*         | The day of the year (starting from 0)                                                                                                                                                                                                                                                                                                     | *0* through *365*                             |
-|        *Week*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *W*         | ISO-8601 week number of year, weeks starting on Monday                                                                                                                                                                                                                                                                                    | Example: *42* (the 42nd week in the year)     |
-|       *Month*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *F*         | A full textual representation of a month, such as January or March                                                                                                                                                                                                                                                                        | *January* through *December*                  |
-|         *m*         | Numeric representation of a month, with leading zeros                                                                                                                                                                                                                                                                                     | *01* through *12*                             |
-|         *M*         | A short textual representation of a month, three letters                                                                                                                                                                                                                                                                                  | *Jan* through *Dec*                           |
-|         *n*         | Numeric representation of a month, without leading zeros                                                                                                                                                                                                                                                                                  | *1* through *12*                              |
-|         *t*         | Number of days in the given month                                                                                                                                                                                                                                                                                                         | *28* through *31*                             |
-|        *Year*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *L*         | Whether it's a leap year                                                                                                                                                                                                                                                                                                                  | *1* if it is a leap year, *0* otherwise.      |
-|         *o*         | ISO-8601 week-numbering year. This has the same value as *Y*, except that if the ISO week number (*W*) belongs to the previous or next year, that year is used instead. (added in PHP 5.1.0)                                                                                                                                              | Examples: *1999* or *2003*                    |
-|         *Y*         | A full numeric representation of a year, 4 digits                                                                                                                                                                                                                                                                                         | Examples: *1999* or *2003*                    |
-|         *y*         | A two digit representation of a year                                                                                                                                                                                                                                                                                                      | Examples: *99* or *03*                        |
-|        *Time*       | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *a*         | Lowercase Ante meridiem and Post meridiem                                                                                                                                                                                                                                                                                                 | *am* or *pm*                                  |
-|         *A*         | Uppercase Ante meridiem and Post meridiem                                                                                                                                                                                                                                                                                                 | *AM* or *PM*                                  |
-|         *B*         | Swatch Internet time                                                                                                                                                                                                                                                                                                                      | *000* through *999*                           |
-|         *g*         | 12-hour format of an hour without leading zeros                                                                                                                                                                                                                                                                                           | *1* through *12*                              |
-|         *G*         | 24-hour format of an hour without leading zeros                                                                                                                                                                                                                                                                                           | *0* through *23*                              |
-|         *h*         | 12-hour format of an hour with leading zeros                                                                                                                                                                                                                                                                                              | *01* through *12*                             |
-|         *H*         | 24-hour format of an hour with leading zeros                                                                                                                                                                                                                                                                                              | *00* through *23*                             |
-|         *i*         | Minutes with leading zeros                                                                                                                                                                                                                                                                                                                | *00* to *59*                                  |
-|         *s*         | Seconds with leading zeros                                                                                                                                                                                                                                                                                                                | *00* through *59*                             |
-|         *u*         | Microseconds (added in PHP 5.2.2). Note that <span class="function">date</span> will always generate *000000* since it takes an <span class="type">integer</span> parameter, whereas <span class="methodname">DateTime::format</span> does support microseconds if <span class="classname">DateTime</span> was created with microseconds. | Example: *654321*                             |
-|         *v*         | Milliseconds (added in PHP 7.0.0). Same note applies as for *u*.                                                                                                                                                                                                                                                                          | Example: *654*                                |
-|      *Timezone*     | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *e*         | Timezone identifier (added in PHP 5.1.0)                                                                                                                                                                                                                                                                                                  | Examples: *UTC*, *GMT*, *Atlantic/Azores*     |
-|   *I* (capital i)   | Whether or not the date is in daylight saving time                                                                                                                                                                                                                                                                                        | *1* if Daylight Saving Time, *0* otherwise.   |
-|         *O*         | Difference to Greenwich time (GMT) without colon between hours and minutes                                                                                                                                                                                                                                                                | Example: *+0200*                              |
-|         *P*         | Difference to Greenwich time (GMT) with colon between hours and minutes (added in PHP 5.1.3)                                                                                                                                                                                                                                              | Example: *+02:00*                             |
-|         *T*         | Timezone abbreviation                                                                                                                                                                                                                                                                                                                     | Examples: *EST*, *MDT* ...                    |
-|         *Z*         | Timezone offset in seconds. The offset for timezones west of UTC is always negative, and for those east of UTC is always positive.                                                                                                                                                                                                        | *-43200* through *50400*                      |
-|   *Full Date/Time*  | ---                                                                                                                                                                                                                                                                                                                                       | ---                                           |
-|         *c*         | ISO 8601 date (added in PHP 5)                                                                                                                                                                                                                                                                                                            | 2004-02-12T15:19:21+00:00                     |
-|         *r*         | <a href="http://www.faqs.org/rfcs/rfc2822" class="link external">» RFC 2822</a> formatted date                                                                                                                                                                                                                                            | Example: *Thu, 21 Dec 2000 16:01:07 +0200*    |
-|         *U*         | Seconds since the Unix Epoch (January 1 1970 00:00:00 GMT)                                                                                                                                                                                                                                                                                | See also <span class="function">time</span>   |
-
-Unrecognized characters in the format string will be printed as-is. The
-*Z* format will always return *0* when using <span
-class="function">gmdate</span>.
-
-> **Note**:
->
-> Since this function only accepts <span class="type">integer</span>
-> timestamps the *u* format character is only useful when using the
-> <span class="function">date\_format</span> function with user based
-> timestamps created with <span class="function">date\_create</span>.
+Format accepted by <span
+class="function">DateTimeInterface::format</span>.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span
@@ -1251,7 +1190,7 @@ Timestamp of the start of the request is available in
 -   <span class="function">mktime</span>
 -   <span class="function">strftime</span>
 -   <span class="function">time</span>
--   <span class="function">strtotime</span>
+-   <span class="function">DateTimeImmutable::\_\_construct</span>
 -   <a href="/class/datetimeinterface.html#Predefined%20Constants" class="link">Predefined DateTime Constants</a>
 
 getdate
@@ -1342,7 +1281,7 @@ Get current time
 
 <span class="type">mixed</span> <span
 class="methodname">gettimeofday</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$return_float`<span
+class="methodparam"><span class="type">bool</span> `$returnFloat`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 This is an interface to gettimeofday(2). It returns an associative array
@@ -1350,13 +1289,13 @@ containing the data returned from the system call.
 
 ### Parameters
 
-`return_float`  
+`returnFloat`  
 When set to **`TRUE`**, a float instead of an array is returned.
 
 ### Return Values
 
 By default an <span class="type">array</span> is returned. If
-`return_float` is set, then a <span class="type">float</span> is
+`returnFloat` is set, then a <span class="type">float</span> is
 returned.
 
 Array keys:
@@ -1369,9 +1308,9 @@ Array keys:
 
 ### Changelog
 
-| Version | Description                             |
-|---------|-----------------------------------------|
-| 5.1.0   | The `return_float` parameter was added. |
+| Version | Description                            |
+|---------|----------------------------------------|
+| 5.1.0   | The `returnFloat` parameter was added. |
 
 ### Examples
 
@@ -1480,7 +1419,7 @@ class="methodparam"><span class="type">int</span> `$day`<span
 class="initializer"> = gmdate("j")</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$year`<span
 class="initializer"> = gmdate("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$is_dst`<span
+class="methodparam"><span class="type">int</span> `$isDST`<span
 class="initializer"> = -1</span></span> \]\]\]\]\]\]\] )
 
 Identical to <span class="function">mktime</span> except the passed
@@ -1530,8 +1469,8 @@ day in the following month(s).
 `year`  
 The year
 
-`is_dst`  
-Parameters always represent a GMT date so `is_dst` doesn't influence the
+`isDST`  
+Parameters always represent a GMT date so `isDST` doesn't influence the
 result.
 
 > **Note**:
@@ -1544,10 +1483,10 @@ Returns a <span class="type">integer</span> Unix timestamp.
 
 ### Changelog
 
-| Version | Description                                                                                                                        |
-|---------|------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | `is_dst` parameter has been removed.                                                                                               |
-| 5.1.0   | As of PHP 5.1.0, the `is_dst` parameter became deprecated. As a result, the new timezone handling features should be used instead. |
+| Version | Description                                                                                                                       |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------|
+| 7.0.0   | `isDST` parameter has been removed.                                                                                               |
+| 5.1.0   | As of PHP 5.1.0, the `isDST` parameter became deprecated. As a result, the new timezone handling features should be used instead. |
 
 ### Examples
 
@@ -1724,7 +1663,7 @@ Get the local time
 class="methodname">localtime</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$timestamp`<span class="initializer"> =
 time()</span></span> \[, <span class="methodparam"><span
-class="type">bool</span> `$is_associative`<span class="initializer"> =
+class="type">bool</span> `$associative`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
 The <span class="function">localtime</span> function returns an array
@@ -1738,7 +1677,7 @@ class="type">integer</span> Unix timestamp that defaults to the current
 local time if a `timestamp` is not given. In other words, it defaults to
 the value of <span class="function">time</span>.
 
-`is_associative`  
+`associative`  
 If set to **`FALSE`** or not supplied then the array is returned as a
 regular, numerically indexed array. If the argument is set to **`TRUE`**
 then <span class="function">localtime</span> returns an associative
@@ -1829,7 +1768,7 @@ Return current Unix timestamp with microseconds
 
 <span class="type">mixed</span> <span
 class="methodname">microtime</span> (\[ <span class="methodparam"><span
-class="type">bool</span> `$get_as_float`<span class="initializer"> =
+class="type">bool</span> `$getAsFloat`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
 <span class="function">microtime</span> returns the current Unix
@@ -1841,7 +1780,7 @@ is recommended.
 
 ### Parameters
 
-`get_as_float`  
+`getAsFloat`  
 If used and set to **`TRUE`**, <span class="function">microtime</span>
 will return a <span class="type">float</span> instead of a <span
 class="type">string</span>, as described in the return values section
@@ -1855,7 +1794,7 @@ number of seconds since the Unix epoch (0:00:00 January 1,1970 GMT), and
 *msec* measures microseconds that have elapsed since *sec* and is also
 expressed in seconds.
 
-If `get_as_float` is set to **`TRUE`**, then <span
+If `getAsFloat` is set to **`TRUE`**, then <span
 class="function">microtime</span> returns a <span
 class="type">float</span>, which represents the current time in seconds
 since the Unix epoch accurate to the nearest microsecond.
@@ -1945,7 +1884,7 @@ class="methodparam"><span class="type">int</span> `$day`<span
 class="initializer"> = date("j")</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$year`<span
 class="initializer"> = date("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$is_dst`<span
+class="methodparam"><span class="type">int</span> `$isDST`<span
 class="initializer"> = -1</span></span> \]\]\]\]\]\]\] )
 
 Returns the Unix timestamp corresponding to the arguments given. This
@@ -2007,13 +1946,13 @@ range for `year` is somewhere between 1901 and 2038. However, before PHP
 5.1.0 this range was limited from 1970 to 2038 on some systems (e.g.
 Windows).
 
-`is_dst`  
+`isDST`  
 This parameter can be set to 1 if the time is during daylight savings
 time (DST), 0 if it is not, or -1 (the default) if it is unknown whether
 the time is within daylight savings time or not. If it's unknown, PHP
 tries to figure it out itself. This can cause unexpected (but not
 incorrect) results. Some times are invalid if DST is enabled on the
-system PHP is running on or `is_dst` is set to 1. If DST is enabled in
+system PHP is running on or `isDST` is set to 1. If DST is enabled in
 e.g. 2:00, all times between 2:00 and 3:00 are invalid and <span
 class="function">mktime</span> returns an undefined (usually negative)
 value. Some systems (e.g. Solaris 8) enable DST at midnight so time 0:30
@@ -2044,13 +1983,13 @@ See also <span class="function">date\_default\_timezone\_set</span>
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                              |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | `is_dst` parameter has been removed.                                                                                                                                                     |
-| 5.3.0   | <span class="function">mktime</span> now throws **`E_DEPRECATED`** notice if the `is_dst` parameter is used.                                                                             |
-| 5.1.0   | The `is_dst` parameter became deprecated. Made the function return **`FALSE`** on error, instead of *-1*. Fixed the function to accept the year, month and day to be all passed as zero. |
-| 5.1.0   | When called with no arguments, <span class="function">mktime</span> throws **`E_STRICT`** notice. Use the <span class="function">time</span> function instead.                           |
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                       |
+| Version | Description                                                                                                                                                                             |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.0.0   | `isDST` parameter has been removed.                                                                                                                                                     |
+| 5.3.0   | <span class="function">mktime</span> now throws **`E_DEPRECATED`** notice if the `isDST` parameter is used.                                                                             |
+| 5.1.0   | The `isDST` parameter became deprecated. Made the function return **`FALSE`** on error, instead of *-1*. Fixed the function to accept the year, month and day to be all passed as zero. |
+| 5.1.0   | When called with no arguments, <span class="function">mktime</span> throws **`E_STRICT`** notice. Use the <span class="function">time</span> function instead.                          |
+| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                      |
 
 ### Examples
 
@@ -2625,7 +2564,7 @@ timestamp
 
 <span class="type">int</span> <span class="methodname">strtotime</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$time`</span> \[, <span class="methodparam"><span
+`$datetime`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$now`<span class="initializer"> =
 time()</span></span> \] )
 
@@ -2633,6 +2572,13 @@ The function expects to be given a string containing an English date
 format and will try to parse that format into a Unix timestamp (the
 number of seconds since January 1 1970 00:00:00 UTC), relative to the
 timestamp given in `now`, or the current time if `now` is not supplied.
+
+**Warning**
+
+The Unix timestamp that this function returns does not contain
+information about time zones. In order to do calculations with date/time
+information, you should use the more capable <span
+class="classname">DateTimeImmutable</span>.
 
 Each parameter of this function uses the default time zone unless a time
 zone is specified in that parameter. Be careful not to use different
@@ -2642,7 +2588,7 @@ to define the default time zone.
 
 ### Parameters
 
-`time`  
+`datetime`  
 A date/time string. Valid formats are explained in
 <a href="/datetime/formats.html" class="link">Date and Time Formats</a>.
 
@@ -2664,15 +2610,15 @@ See also <span class="function">date\_default\_timezone\_set</span>
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                                                |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Prior to PHP 5.3.0, relative time formats supplied to the `time` argument of <span class="function">strtotime</span> such as *this week*, *previous week*, *last week*, and *next week* were interpreted to mean a 7 day period relative to the current date/time, rather than a week period of *Monday* through *Sunday*. |
-| 5.3.0   | Prior to PHP 5.3.0, *24:00* was not a valid format and <span class="function">strtotime</span> returned **`FALSE`**.                                                                                                                                                                                                       |
-| 5.2.7   | In PHP 5 prior to 5.2.7, requesting a given occurrence of a given weekday in a month where that weekday was the first day of the month would incorrectly add one week to the returned timestamp. This has been corrected in 5.2.7 and later versions.                                                                      |
-| 5.1.0   | Now returns **`FALSE`** on failure, instead of *-1*.                                                                                                                                                                                                                                                                       |
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                                                                                                                                                         |
-| 5.0.2   | In PHP 5 up to 5.0.2, *"now"* and other relative times are wrongly computed from today's midnight. This differs from other versions where it is correctly computed from current time.                                                                                                                                      |
-| 5.0.0   | Microseconds began to be allowed, but they are ignored.                                                                                                                                                                                                                                                                    |
+| Version | Description                                                                                                                                                                                                                                                                                                                    |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 5.3.0   | Prior to PHP 5.3.0, relative time formats supplied to the `datetime` argument of <span class="function">strtotime</span> such as *this week*, *previous week*, *last week*, and *next week* were interpreted to mean a 7 day period relative to the current date/time, rather than a week period of *Monday* through *Sunday*. |
+| 5.3.0   | Prior to PHP 5.3.0, *24:00* was not a valid format and <span class="function">strtotime</span> returned **`FALSE`**.                                                                                                                                                                                                           |
+| 5.2.7   | In PHP 5 prior to 5.2.7, requesting a given occurrence of a given weekday in a month where that weekday was the first day of the month would incorrectly add one week to the returned timestamp. This has been corrected in 5.2.7 and later versions.                                                                          |
+| 5.1.0   | Now returns **`FALSE`** on failure, instead of *-1*.                                                                                                                                                                                                                                                                           |
+| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                                                                                                                                                             |
+| 5.0.2   | In PHP 5 up to 5.0.2, *"now"* and other relative times are wrongly computed from today's midnight. This differs from other versions where it is correctly computed from current time.                                                                                                                                          |
+| 5.0.0   | Microseconds began to be allowed, but they are ignored.                                                                                                                                                                                                                                                                        |
 
 ### Examples
 
@@ -2846,8 +2792,8 @@ Returns the timezone name from abbreviation
 class="methodname">timezone\_name\_from\_abbr</span> ( <span
 class="methodparam"><span class="type">string</span> `$abbr`</span> \[,
 <span class="methodparam"><span class="type">int</span>
-`$gmtOffset`<span class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$isdst`<span
+`$utcOffset`<span class="initializer"> = -1</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$isDST`<span
 class="initializer"> = -1</span></span> \]\] )
 
 ### Parameters
@@ -2855,20 +2801,20 @@ class="initializer"> = -1</span></span> \]\] )
 `abbr`  
 Time zone abbreviation.
 
-`gmtOffset`  
+`utcOffset`  
 Offset from GMT in seconds. Defaults to -1 which means that first found
 time zone corresponding to `abbr` is returned. Otherwise exact offset is
 searched and only if not found then the first time zone with any offset
 is returned.
 
-`isdst`  
+`isDST`  
 Daylight saving time indicator. Defaults to -1, which means that whether
 the time zone has daylight saving or not is not taken into consideration
-when searching. If this is set to 1, then the `gmtOffset` is assumed to
-be an offset with daylight saving in effect; if 0, then `gmtOffset` is
+when searching. If this is set to 1, then the `utcOffset` is assumed to
+be an offset with daylight saving in effect; if 0, then `utcOffset` is
 assumed to be an offset without daylight saving in effect. If `abbr`
-doesn't exist then the time zone is searched solely by the `gmtOffset`
-and `isdst`.
+doesn't exist then the time zone is searched solely by the `utcOffset`
+and `isDST`.
 
 ### Return Values
 
@@ -3010,7 +2956,7 @@ The above example will output something similar to:
     — Get info about given date formatted according to the specified
     format
 -   [date\_parse](/ref/datetime.html#date_parse) — Returns associative
-    array with detailed info about given date
+    array with detailed info about given date/time
 -   [date\_sub](/ref/datetime.html#date_sub) — Alias of DateTime::sub
 -   [date\_sun\_info](/ref/datetime.html#date_sun_info) — Returns an
     array with information about sunset/sunrise and twilight begin/end

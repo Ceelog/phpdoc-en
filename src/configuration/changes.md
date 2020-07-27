@@ -75,7 +75,7 @@ it. The values under the key should have the name of the PHP
 configuration directive and the string value. PHP constants in the
 values are not parsed. However, only configuration values changeable in
 **`PHP_INI_USER`** can be set this way, **`PHP_INI_PERDIR`** values can
-not.
+not, because these configuration values are re-read for each request.
 
 ### Other interfaces to PHP
 

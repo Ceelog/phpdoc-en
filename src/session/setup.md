@@ -243,15 +243,26 @@ bytes which will be read from the file specified above. Defaults to
 `session.use_strict_mode` <span class="type">boolean</span>  
 <span class="simpara"> *session.use\_strict\_mode* specifies whether the
 module will use strict session id mode. If this mode is enabled, the
-module does not accept uninitialized session ID. If uninitialized
-session ID is sent from browser, new session ID is sent to browser.
-Applications are protected from session fixation via session adoption
-with strict mode. Defaults to *0* (disabled). </span>
+module does not accept uninitialized session IDs. If an uninitialized
+session ID is sent from the browser, a new session ID is sent to the
+browser. Applications are protected from session fixation via session
+adoption with strict mode. Defaults to *0* (disabled). </span>
 
 > **Note**: <span class="simpara"> Enabling *session.use\_strict\_mode*
 > is mandatory for general session security. All sites are advised to
 > enable this. See <span class="function">session\_create\_id</span>
 > example code for more details. </span>
+
+**Warning**
+If a custom session handler registered via <span
+class="function">session\_set\_save\_handler</span> does not implement
+<span
+class="methodname">SessionUpdateTimestampHandlerInterface::validateId</span>,
+nor supplies the `validate_sid` callback, respectively, strict session
+ID mode is effectively disabled, regardless of the value of this
+directive. Particularly note that <span
+class="classname">SessionHandler</span> does *not* implement <span
+class="methodname">SessionHandler::validateId</span>.
 
 `session.use_cookies` <span class="type">boolean</span>  
 <span class="simpara"> *session.use\_cookies* specifies whether the

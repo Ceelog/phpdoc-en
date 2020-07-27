@@ -641,12 +641,11 @@ failure). Note this value is returned internally to PHP for processing.
 Introduction
 ------------
 
-<span class="classname">SessionHandlerInterface</span> is an
-<a href="/language/oop5/interfaces.html" class="link">interface</a>
-which defines a prototype for creating a custom session handler. In
-order to pass a custom session handler to <span
-class="function">session\_set\_save\_handler</span> using its *OOP*
-invocation, the class must implement this interface.
+<span class="classname">SessionHandlerInterface</span> is an interface
+which defines the minimal prototype for creating a custom session
+handler. In order to pass a custom session handler to <span
+class="function">session\_set\_save\_handler</span> using its OOP
+invocation, the class can implement this interface.
 
 Please note the callback methods of this class are designed to be called
 internally by PHP and are not meant to be called from user-space code.
@@ -1009,6 +1008,16 @@ failure). Note this value is returned internally to PHP for processing.
 Introduction
 ------------
 
+<span class="classname">SessionIdInterface</span> is an interface which
+defines optional methods for creating a custom session handler. In order
+to pass a custom session handler to <span
+class="function">session\_set\_save\_handler</span> using its OOP
+invocation, the class can implement this interface.
+
+Note that the callback methods of classes implementing this interface
+are designed to be called internally by PHP and are not meant to be
+called from user-space code.
+
 Class synopsis
 --------------
 
@@ -1037,10 +1046,8 @@ class="modifier">public</span> <span class="type">string</span> <span
 class="methodname">SessionIdInterface::create\_sid</span> ( <span
 class="methodparam">void</span> )
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+Creates a new session ID.This function is automatically executed when a
+new session ID needs to be created.
 
 ### Parameters
 
@@ -1048,12 +1055,25 @@ This function has no parameters.
 
 ### Return Values
 
+The new session ID. Note that this value is returned internally to PHP
+for processing.
+
 ### See Also
 
 -   <span class="methodname">SessionHandler::create\_sid</span>
 
 Introduction
 ------------
+
+<span class="classname">SessionUpdateTimestampHandlerInterface</span> is
+an interface which defines optional methods for creating a custom
+session handler. In order to pass a custom session handler to <span
+class="function">session\_set\_save\_handler</span> using its OOP
+invocation, the class can implement this interface.
+
+Note that the callback methods of classes implementing this interface
+are designed to be called internally by PHP and are not meant to be
+called from user-space code.
 
 Class synopsis
 --------------
@@ -1093,20 +1113,21 @@ class="methodname">SessionUpdateTimestampHandlerInterface::updateTimestamp</span
 `$key`</span> , <span class="methodparam"><span
 class="type">string</span> `$val`</span> )
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+Updates the last modification timestamp of the session. This function is
+automatically executed when a session is updated.
 
 ### Parameters
 
 `key`  
+The session ID.
 
 `val`  
+The session data.
 
 ### Return Values
 
 Returns **`TRUE`** if the timestamp was updated, **`FALSE`** otherwise.
+Note that this value is returned internally to PHP for processing.
 
 SessionUpdateTimestampHandlerInterface::validateId
 ==================================================
@@ -1121,15 +1142,18 @@ class="methodname">SessionUpdateTimestampHandlerInterface::validateId</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$key`</span> )
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+Validates a given session ID. A session ID is valid, if a session with
+that ID already exists. This function is automatically executed when a
+session is to be started, a session ID is supplied and
+<a href="/session/setup.html#" class="link">session.use_strict_mode</a>
+is enabled.
 
 ### Parameters
 
 `key`  
+The session ID.
 
 ### Return Values
 
-Returns **`TRUE`** for valid ID, **`FALSE`** otherwise.
+Returns **`TRUE`** for valid ID, **`FALSE`** otherwise. Note that this
+value is returned internally to PHP for processing.

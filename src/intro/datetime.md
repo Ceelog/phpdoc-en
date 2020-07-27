@@ -9,9 +9,9 @@ future.
 
 > **Note**: <span class="simpara"> Please keep in mind that these
 > functions are dependent on the locale settings of your server. Make
-> sure to take daylight saving time (use e.g. *$date = strtotime('+7
-> days', $date)* and not *$date += 7\*24\*60\*60*) and leap years into
-> consideration when working with these functions. </span>
+> sure to take daylight saving time (use e.g. *$date =
+> $date-\>modify('+7 days')* and not *$date += 7\*24\*60\*60*) and leap
+> years into consideration when working with these functions. </span>
 
 > **Note**: <span class="simpara"> The timezones referenced in this
 > section can be found in the

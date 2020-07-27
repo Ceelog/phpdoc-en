@@ -1346,8 +1346,8 @@ This function has two prototypes.
 
 `sessionhandler`  
 An instance of a class implementing <span
-class="interfacename">SessionHandlerInterface</span>, <span
-class="interfacename">SessionIdInterface</span>, and/or <span
+class="interfacename">SessionHandlerInterface</span>, and optionally
+<span class="interfacename">SessionIdInterface</span> and/or <span
 class="interfacename">SessionUpdateTimestampHandlerInterface</span>,
 such as <span class="classname">SessionHandler</span>, to register as
 the session handler. Since PHP 5.4 only.
@@ -1358,20 +1358,40 @@ class="function">register\_shutdown\_function</span> function.
 
 or
 
-`open(string $savePath, string $sessionName)`  
+`open`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">open</span></span> ( <span class="methodparam"><span
+class="type">string</span> `$savePath`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$sessionName`</span> )
+
 The open callback works like a constructor in classes and is executed
 when the session is being opened. It is the first callback function
 executed when the session is started automatically or manually with
 <span class="function">session\_start</span>. Return value is **`TRUE`**
 for success, **`FALSE`** for failure.
 
-`close()`  
+`close`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">close</span></span> ( <span
+class="methodparam">void</span> )
+
 The close callback works like a destructor in classes and is executed
 after the session write callback has been called. It is also invoked
 when <span class="function">session\_write\_close</span> is called.
 Return value should be **`TRUE`** for success, **`FALSE`** for failure.
 
-`read(string $sessionId)`  
+`read`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">read</span></span> ( <span class="methodparam"><span
+class="type">string</span> `$sessionId`</span> )
+
 The `read` callback must always return a session encoded (serialized)
 string, or an empty string if there is no data to read.
 
@@ -1388,7 +1408,15 @@ format which is specified in the
 <a href="/session/setup.html#" class="link">session.serialize_handler</a>
 ini setting.
 
-`write(string $sessionId, string $data)`  
+`write`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">write</span></span> ( <span
+class="methodparam"><span class="type">string</span> `$sessionId`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$data`</span> )
+
 The `write` callback is called when the session needs to be saved and
 closed. This callback receives the current session ID a serialized
 version the `$_SESSION` superglobal. The serialization method used
@@ -1413,14 +1441,27 @@ callback.
 > will never be seen in the browser. If debugging output is necessary,
 > it is suggested that the debug output be written to a file instead.
 
-`destroy($sessionId)`  
+`destroy`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">destroy</span></span> ( <span
+class="methodparam"><span class="type">string</span> `$sessionId`</span>
+)
+
 This callback is executed when a session is destroyed with <span
 class="function">session\_destroy</span> or with <span
 class="function">session\_regenerate\_id</span> with the destroy
 parameter set to **`TRUE`**. Return value should be **`TRUE`** for
 success, **`FALSE`** for failure.
 
-`gc($lifetime)`  
+`gc`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">gc</span></span> ( <span class="methodparam"><span
+class="type">int</span> `$lifetime`</span> )
+
 The garbage collector callback is invoked internally by PHP periodically
 in order to purge old session data. The frequency is controlled by
 <a href="/session/setup.html#" class="link">session.gc_probability</a>
@@ -1429,10 +1470,43 @@ The value of lifetime which is passed to this callback can be set in
 <a href="/session/setup.html#" class="link">session.gc_maxlifetime</a>.
 Return value should be **`TRUE`** for success, **`FALSE`** for failure.
 
-`create_sid()`  
+`create_sid`  
+A callable with the following signature:
+
+<span class="type">string</span> <span class="methodname"><span
+class="replaceable">create\_sid</span></span> ( <span
+class="methodparam">void</span> )
+
 This callback is executed when a new session ID is required. No
 parameters are provided, and the return value should be a string that is
 a valid session ID for your handler.
+
+`validate_sid`  
+A callable with the following signature:
+
+<span class="type">bool</span> <span class="methodname"><span
+class="replaceable">validate\_sid</span></span> ( <span
+class="methodparam"><span class="type">string</span> `$key`</span> )
+
+This callback is executed when a session is to be started, a session ID
+is supplied and
+<a href="/session/setup.html#" class="link">session.use_strict_mode</a>
+is enabled. The `key` is the session ID to validate. A session ID is
+valid, if a session with that ID already exists. The return value should
+be **`TRUE`** for success, **`FALSE`** for failure.
+
+`update_timestamp`  
+A callable with the following signature:
+
+<span class="type">string</span> <span class="methodname"><span
+class="replaceable">update\_timestamp</span></span> ( <span
+class="methodparam"><span class="type">string</span> `$key`</span> ,
+<span class="methodparam"><span class="type">string</span> `$val`</span>
+)
+
+This callback is executed when a session is updated. `key` is the
+session ID, `val` is the session data. The return value should be
+**`TRUE`** for success, **`FALSE`** for failure.
 
 ### Return Values
 
