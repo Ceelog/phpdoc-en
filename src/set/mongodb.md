@@ -3479,7 +3479,7 @@ Executes the command on the primary server.
 
 This method will apply logic that is specific to commands that read and
 write (e.g.
-<a href="https://docs.mongodb.com/manual/reference/command/findAndModify/" class="link external">» findAndModify</a>)
+<a href="https://docs.mongodb.com/manual/reference/command/aggregate/" class="link external">» aggregate</a>)
 and take the MongoDB server version into account. The *"readConcern"*
 and *"writeConcern"* options will default to the corresponding values
 from the
@@ -10529,7 +10529,7 @@ Executes the command on this server.
 
 This method will apply logic that is specific to commands that read and
 write (e.g.
-<a href="https://docs.mongodb.com/manual/reference/command/findAndModify/" class="link external">» findAndModify</a>)
+<a href="https://docs.mongodb.com/manual/reference/command/aggregate/" class="link external">» aggregate</a>)
 and take the MongoDB server version into account. The *"readConcern"*
 and *"writeConcern"* options will default to the corresponding values
 from the

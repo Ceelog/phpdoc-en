@@ -28,6 +28,7 @@ Language Options
 | <a href="/ini/core.html#ini.exit-on-timeout" class="link">exit_on_timeout</a>                               | ""      | PHP\_INI\_ALL                   | Available since PHP 5.3.0.                                                                                                                  |
 | <a href="/ini/core.html#ini.expose-php" class="link">expose_php</a>                                         | "1"     | `php.ini` only                  |                                                                                                                                             |
 | <a href="/ini/core.html#ini.hard-timeout" class="link">hard_timeout</a>                                     | "2"     | PHP\_INI\_SYSTEM                | Available since PHP 7.1.0.                                                                                                                  |
+| <a href="/ini/core.html#ini.zend.exception-ignore-args" class="link">zend.exception_ignore_args</a>         | "0"     | PHP\_INI\_ALL                   | Available since PHP 7.4.0                                                                                                                   |
 | <a href="/ini/core.html#ini.zend.multibyte" class="link">zend.multibyte</a>                                 | "0"     | PHP\_INI\_ALL                   | Available since PHP 5.4.0                                                                                                                   |
 | <a href="/ini/core.html#ini.zend.script-encoding" class="link">zend.script_encoding</a>                     | NULL    | PHP\_INI\_ALL                   | Available since PHP 5.4.0                                                                                                                   |
 | <a href="/ini/core.html#ini.zend.detect-unicode" class="link">zend.detect-unicode</a>                       | NULL    | PHP\_INI\_ALL                   | Available since PHP 5.4.0                                                                                                                   |
@@ -176,6 +177,9 @@ See also the section titled
 This feature has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
 `hard_timeout` <span class="type">integer</span>  
+
+`zend.exception_ignore_args` <span class="type">boolean</span>  
+Excludes arguments from stack traces generated from exceptions.
 
 `zend.multibyte` <span class="type">boolean</span>  
 Enables parsing of source files in multibyte encodings. Enabling

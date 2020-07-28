@@ -370,6 +370,10 @@ class="function">opcache\_compile\_file</span> function. All the
 entities (e.g. functions and classes) defined in these files will be
 available to requests out of the box, until the server is shut down.
 
+> **Note**:
+>
+> Preloading is not supported on Windows.
+
 `opcache.preload_user` <span class="type">string</span>  
 Preloading code as root is not allowed for security reasons. This
 directive facilitates to let the preloading to be run as another user.

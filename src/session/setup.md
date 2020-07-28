@@ -155,10 +155,6 @@ of wasted space and inodes.
 Only use *N* greater than 2 if you are absolutely certain that your site
 is large enough to require it.
 
-> **Note**: <span class="simpara"> Prior to PHP 4.3.6, Windows users had
-> to change this variable in order to use PHP's session functions. A
-> valid path must be specified, e.g.: `c:/temp`. </span>
-
 `session.name` <span class="type">string</span>  
 <span class="simpara"> *session.name* specifies the name of the session
 which is used as cookie name. It should only contain alphanumeric
