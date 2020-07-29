@@ -337,10 +337,9 @@ class="type">resource</span> `$process`</span> )
 class="function">pclose</span> except that it only works on processes
 opened by <span class="function">proc\_open</span>. <span
 class="function">proc\_close</span> waits for the process to terminate,
-and returns its exit code. If you have open pipes to that process, you
-should <span class="function">fclose</span> them prior to calling this
-function in order to avoid a deadlock - the child process may not be
-able to exit while the pipes are open.
+and returns its exit code. Open pipes to that process are closed when
+this function is called, in order to avoid a deadlock - the child
+process may not be able to exit while the pipes are open.
 
 ### Parameters
 
