@@ -82,6 +82,7 @@ Affecting PHP's Behaviour
 -   [OPcache](/book/opcache.html)
     -   [Introduction](/intro/opcache.html)
     -   [Installing/Configuring](/opcache/setup.html)
+    -   [Preloading](/opcache/preloading.html)
     -   [OPcache Functions](/ref/opcache.html)
 -   [Output Control](/book/outcontrol.html) — Output Buffering Control
     -   [Introduction](/intro/outcontrol.html)

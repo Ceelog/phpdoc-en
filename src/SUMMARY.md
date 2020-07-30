@@ -339,6 +339,7 @@
     * [OPcache](book/opcache.md)
       * [Introduction](intro/opcache.md)
       * [Installing/Configuring](opcache/setup.md)
+      * [Preloading](opcache/preloading.md)
       * [OPcache Functions](ref/opcache.md)
     * [Output Control](book/outcontrol.md)
       * [Introduction](intro/outcontrol.md)

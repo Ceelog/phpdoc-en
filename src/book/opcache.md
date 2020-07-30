@@ -10,6 +10,7 @@ OPcache
     -   [Runtime
         Configuration](/opcache/setup.html#Runtime%20Configuration)
     -   [Resource Types](/opcache/setup.html#Resource%20Types)
+-   [Preloading](/opcache/preloading.html)
 -   [OPcache Functions](/ref/opcache.html)
     -   [opcache\_compile\_file](/ref/opcache.html#opcache_compile_file)
         — Compiles and caches a PHP script without executing it
