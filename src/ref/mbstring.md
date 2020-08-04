@@ -2110,8 +2110,8 @@ Parse GET/POST/COOKIE data and set global variable
 <span class="type">bool</span> <span
 class="methodname">mb\_parse\_str</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$encoded_string`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$result`</span> \] )
+`$encoded_string`</span> , <span class="methodparam"><span
+class="type">array</span> `&$result`</span> )
 
 Parses GET/POST/COOKIE data and sets global variables. Since PHP does
 not provide raw POST/COOKIE data, it can only be used for GET data for
@@ -2131,6 +2131,13 @@ encoded converted values.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                       |
+|---------|---------------------------------------------------------------------------------------------------|
+| 8.0.0   | The second parameter was no longer optional.                                                      |
+| 7.2.0   | Calling <span class="function">mb\_parse\_str</span> without the second parameter was deprecated. |
 
 ### See Also
 

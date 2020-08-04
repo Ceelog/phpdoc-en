@@ -48,7 +48,10 @@ To enable GD-support configure PHP **--with-gd\[=DIR\]**, where DIR is
 the GD base install directory. To use the recommended bundled version of
 the GD library, use the configure option **--with-gd**. GD library
 requires <span class="productname">libpng</span> and <span
-class="productname">libjpeg</span> to compile.
+class="productname">libjpeg</span> to compile. As of PHP 7.4.0,
+**--with-gd** becomes **--enable-gd** (whether to enable the extension
+at all) and **--with-external-gd** (to opt into using an external <span
+class="productname">libgd</span>, rather than the bundled one).
 
 In Windows, you'll include the GD2 DLL `php_gd2.dll` as an extension in
 `php.ini`.
@@ -57,12 +60,12 @@ Enhance the capabilities of GD to handle more image formats by
 specifying the *--with-XXXX* configure switch to your PHP configure
 line.
 
-| Image Format | Configure Switch                                                                                                                                                                                                         |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *jpeg*       | To enable support for jpeg add **--with-jpeg-dir=DIR**. Jpeg 6b, 7 or 8 are supported.                                                                                                                                   |
-| *png*        | To enable support for png add **--with-png-dir=DIR**. Note, libpng requires the <a href="/zlib/setup.html#Requirements" class="link">zlib library</a>, therefore add **--with-zlib-dir\[=DIR\]** to your configure line. |
-| *xpm*        | To enable support for xpm add **--with-xpm-dir=DIR**. If configure is not able to find the required libraries, you may add the path to your X11 libraries.                                                               |
-| *webp*       | To enable support for webp add **--with-vpx-dir=DIR**. Available as of PHP 5.4.0. As of PHP 7.0.0 **--with-webp-dir=DIR** has to be added, i.e. support for libvpx has been removed in favor of libwebp.                 |
+| Image Format | Configure Switch                                                                                                                                                                                                                                                                                                                                                                                        |
+|--------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *jpeg*       | To enable support for jpeg add **--with-jpeg-dir=DIR**. Jpeg 6b, 7 or 8 are supported. As of PHP 7.4.0, use **--with-jpeg** instead.                                                                                                                                                                                                                                                                    |
+| *png*        | To enable support for png add **--with-png-dir=DIR**. Note, libpng requires the <a href="/zlib/setup.html#Requirements" class="link">zlib library</a>, therefore add **--with-zlib-dir\[=DIR\]** to your configure line. As of PHP 7.4.0, **--with-png-dir** and **--with-zlib-dir** have been removed. <span class="productname">libpng</span> and <span class="productname">zlib</span> are required. |
+| *xpm*        | To enable support for xpm add **--with-xpm-dir=DIR**. If configure is not able to find the required libraries, you may add the path to your X11 libraries. As of PHP 7.4.0, use **--with-xpm** instead.                                                                                                                                                                                                 |
+| *webp*       | To enable support for webp add **--with-vpx-dir=DIR**. Available as of PHP 5.4.0. As of PHP 7.0.0 **--with-webp-dir=DIR** has to be added, i.e. support for libvpx has been removed in favor of libwebp. As of PHP 7.4.0, use **--with-webp** instead.                                                                                                                                                  |
 
 > **Note**: <span class="simpara"> When compiling PHP with libpng, you
 > must use the same version that was linked with the GD library. </span>
