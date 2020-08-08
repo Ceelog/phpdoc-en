@@ -28,11 +28,11 @@ The object to which the given anonymous function should be bound, or
 **`NULL`** for the closure to be unbound.
 
 `newscope`  
-The class scope to which associate the closure is to be associated, or
-'static' to keep the current one. If an object is given, the type of the
-object will be used instead. This determines the visibility of protected
-and private methods of the bound object. It is not allowed to pass (an
-object of) an internal class as this parameter.
+The class scope to which the closure is to be associated, or 'static' to
+keep the current one. If an object is given, the type of the object will
+be used instead. This determines the visibility of protected and private
+methods of the bound object. It is not allowed to pass (an object of) an
+internal class as this parameter.
 
 ### Return Values
 
