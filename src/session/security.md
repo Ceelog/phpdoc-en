@@ -545,3 +545,10 @@ settings. Developers are responsible for hardening session settings.
     algorithm like sha384 and sha512. Developers must ensure they feed a
     long enough <a href="/session/setup.html#" class="link">entropy</a>
     for the hashing function used.
+
+-   <a href="/session/setup.html#" class="link">session.save_path</a>=\[non
+    world-readable directory\]
+
+    If this is set to a world-readable directory, such as `/tmp` (the
+    default), other users on the server may be able to hijack sessions
+    by getting the list of files in that directory.

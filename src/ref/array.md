@@ -5714,8 +5714,9 @@ var_dump(current($arr)); // array(0) { }
 
 ### Notes
 
-> **Note**: <span class="simpara"> The end of an array and the result of
-> calling <span class="function">current</span> on an empty array are
+> **Note**: <span class="simpara"> The results of calling <span
+> class="function">current</span> on an empty array and on an array,
+> whose internal pointer points beyond the end of the elements, are
 > indistinguishable from a <span class="type">boolean</span> **`FALSE`**
 > element. To properly traverse an array which may contain **`FALSE`**
 > elements, see the <span class="function">foreach</span> function.

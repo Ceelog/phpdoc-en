@@ -74,9 +74,17 @@ type declarations.
 <a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">Strict typing</a>
 also has an effect on return type declarations. In the default weak
 mode, returned values will be coerced to the correct type if they are
-not already of that type. In strong mode, the returned value must be of
-the correct type, otherwise a <span class="classname">TypeError</span>
-will be thrown.
+not already of that type. If this type conversion is not allowed (e.g.
+when returning an <span class="type">array</span> from a function with
+return type <span class="type">integer</span>), a <span
+class="classname">TypeError</span> will be thrown. In strict mode, the
+returned value must be of the correct type, otherwise a <span
+class="classname">TypeError</span> will be thrown.
+
+As of PHP 7.1.0, return statements without an argument trigger
+**`E_COMPILE_ERROR`**, unless the return type is <span
+class="type">void</span>, in which case return statements with an
+argument trigger that error.
 
 As of PHP 7.1.0, return values can be marked as nullable by prefixing
 the type name with a question mark (*?*). This signifies that the

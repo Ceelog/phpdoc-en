@@ -1,24 +1,6 @@
 Other changes
 -------------
 
--   <span class="simpara"> The default character set for <span
-    class="function">htmlspecialchars</span>, <span
-    class="function">htmlentities</span> and <span
-    class="function">html\_entity\_decode</span> is now *UTF-8*, instead
-    of *ISO-8859-1*. Note that changing your output charset via the
-    <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
-    configuration setting does not affect htmlspecialchars/htmlentities
-    unless you are passing "" (an empty string) as the encoding
-    parameter to your <span
-    class="function">htmlspecialchars</span>/<span
-    class="function">htmlentities</span>/<span
-    class="function">html\_entity\_decode</span> calls. Generally we do
-    not recommend doing this because you should be able to change your
-    output charset without affecting the runtime charset used by these
-    functions. The safest approach is to explicitly set the charset on
-    each call to <span class="function">htmlspecialchars</span>, <span
-    class="function">htmlentities</span> and <span
-    class="function">html\_entity\_decode</span>. </span>
 -   <span class="simpara"> **`E_ALL`** now includes **`E_STRICT`** level
     errors in the
     <a href="/errorfunc/setup.html#PHP%20Constants%20outside%20of%20PHP" class="link">error_reporting</a>

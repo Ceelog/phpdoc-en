@@ -32,7 +32,7 @@ There are a few implementation details of the namespace implementations
 that are helpful to understand.
 
 1.  <span class="simpara">
-    <a href="/language/namespaces/faq.html#language.namespaces.faq.conflict" class="link">Import names cannot conflict with classes defined in the same file.</a>
+    <a href="/language/namespaces/faq.html#language.namespaces.faq.conflict" class="link">Import names must not conflict with classes defined in the same file.</a>
     </span>
 2.  <span class="simpara">
     <a href="/language/namespaces/faq.html#language.namespaces.faq.nested" class="link">Nested namespaces are not allowed.</a>
@@ -221,7 +221,7 @@ $b = INI_ALL; // sets $b to value of global constant "INI_ALL"
 ?>
 ```
 
-### Import names cannot conflict with classes defined in the same file.
+### Import names must not conflict with classes defined in the same file.
 
 The following script combinations are legal:
 

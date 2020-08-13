@@ -392,3 +392,10 @@ would not have been modified.
 ### Drop support for the sslv2 stream
 
 The sslv2 stream has now been dropped in OpenSSL.
+
+### Forbid "return;" for typed returns already at compile-time
+
+Return statements without argument in functions which declare a return
+type now trigger **`E_COMPILE_ERROR`** (unless the return type is
+declared as <span class="type">void</span>), even if the return
+statement would never be reached.

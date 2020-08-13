@@ -36,10 +36,11 @@ Runtime Configuration
 
 The behaviour of these functions is affected by settings in `php.ini`.
 
-| Name                                                      | Default | Changeable       | Changelog                  |
-|-----------------------------------------------------------|---------|------------------|----------------------------|
-| <a href="/uopz/setup.html#" class="link">uopz.disable</a> | "0"     | PHP\_INI\_SYSTEM | Available as of uopz 5.0.2 |
-| <a href="/uopz/setup.html#" class="link">uopz.exit</a>    | "0"     | PHP\_INI\_SYSTEM | Available as of uopz 6.0.1 |
+| Name                                                        | Default | Changeable       | Changelog                                             |
+|-------------------------------------------------------------|---------|------------------|-------------------------------------------------------|
+| <a href="/uopz/setup.html#" class="link">uopz.disable</a>   | "0"     | PHP\_INI\_SYSTEM | Available as of uopz 5.0.2                            |
+| <a href="/uopz/setup.html#" class="link">uopz.exit</a>      | "0"     | PHP\_INI\_SYSTEM | Available as of uopz 6.0.1                            |
+| <a href="/uopz/setup.html#" class="link">uopz.overloads</a> | "1"     | PHP\_INI\_SYSTEM | Available as of uopz 2.0.2. Removed as of uopz 5.0.0. |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.
@@ -53,6 +54,9 @@ If enabled, uopz should stop having any effect on the engine.
 Whether to allow the execution of exit opcodes or not. This setting can
 be overridden during runtime by calling <span
 class="function">uopz\_allow\_exit</span>.
+
+`uopz.exit` <span class="type">bool</span>  
+Enables the ability to use <span class="function">uopz\_overload</span>.
 
 Resource Types
 --------------

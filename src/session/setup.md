@@ -140,7 +140,7 @@ where *MODE* is the octal representation of the mode. Setting *MODE*
 does not affect the process umask.
 
 **Warning**
-If you leave this set to a world-readable directory, such as `/tmp` (the
+If this is set to a world-readable directory, such as `/tmp` (the
 default), other users on the server may be able to hijack sessions by
 getting the list of files in that directory.
 

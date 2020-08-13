@@ -959,6 +959,9 @@ This function's behaviour is controlled by the
 <a href="/outcontrol/setup.html#" class="link">url_rewriter.hosts</a>
 `php.ini` parameters.
 
+Note that this function can be successfully called at most once per
+request.
+
 > **Note**: <span class="simpara"> Calling this function will implicitly
 > start output buffering if it is not active already. </span>
 
