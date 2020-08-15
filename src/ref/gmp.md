@@ -1892,11 +1892,6 @@ available memory.
 `bits`  
 The number of bits.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
-
 ### Return Values
 
 A random GMP number.
