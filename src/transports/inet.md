@@ -1,8 +1,7 @@
 Internet Domain: TCP, UDP, SSL, and TLS
 ---------------------------------------
 
-PHP 4, PHP 5. *ssl://* & *tls://* since PHP 4.3.0 *sslv2://* &
-*sslv3://* since PHP 5.0.2
+*sslv2://* & *sslv3://* as of PHP 5.0.2
 
 > **Note**: <span class="simpara"> If no transport is specified,
 > *tcp://* will be assumed. </span>
@@ -40,9 +39,7 @@ of the transport URL delimited by a colon.
 
 The *ssl://* and *tls://* transports (available only when openssl
 support is compiled into PHP) are extensions of the *tcp://* transport
-which include SSL encryption. Since PHP 4.3.0 OpenSSL support must be
-statically compiled into PHP, since PHP 5.0.0 it may be compiled as a
-module or statically.
+which include SSL encryption.
 
 *ssl://* will attempt to negotiate an SSL V2, or SSL V3 connection
 depending on the capabilities and preferences of the remote host.

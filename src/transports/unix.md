@@ -13,3 +13,6 @@ using the user datagram protocol.
 Unix domain sockets, unlike Internet domain sockets, do not expect a
 port number. In the case of <span class="function">fsockopen</span> the
 `portno` parameter should be set to 0.
+
+> **Note**: <span class="simpara"> Unix domain sockets are not supported
+> on Windows. </span>
