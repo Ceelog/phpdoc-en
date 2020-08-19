@@ -2512,8 +2512,8 @@ typically created using <span class="function">fopen</span>.
     exclusive). </span>
 
 It is also possible to add **`LOCK_NB`** as a bitmask to one of the
-above operations if you don't want <span class="function">flock</span>
-to block while locking.
+above operations, if <span class="function">flock</span> should not
+block during the locking attempt.
 
 `wouldblock`  
 The optional third argument is set to 1 if the lock would block
