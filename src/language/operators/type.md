@@ -138,8 +138,8 @@ The above example will output:
     bool(false)
 
 instanceof does not throw any error if the variable being tested is not
-an object, it simply returns **`FALSE`**. Constants, however, are not
-allowed.
+an object, it simply returns **`FALSE`**. Constants, however, were not
+allowed prior to PHP 7.3.0.
 
 **Example \#6 Using *instanceof* to test other variables**
 
@@ -162,13 +162,28 @@ The above example will output:
     bool(false)
     PHP Fatal error:  instanceof expects an object instance, constant given
 
+As of PHP 7.3.0, constants are allowed on the left-hand-side of the
+*instanceof* operator.
+
+**Example \#7 Using *instanceof* to test constants**
+
+``` php
+<?php
+var_dump(FALSE instanceof stdClass);
+?>
+```
+
+Output of the above example in PHP 7.3:
+
+    bool(false)
+
 There are a few pitfalls to be aware of. Before PHP version 5.1.0,
 *instanceof* would call <span class="function">\_\_autoload</span> if
 the class name did not exist. In addition, if the class was not loaded,
 a fatal error would occur. This can be worked around by using a dynamic
 class reference, or a string variable containing the class name:
 
-**Example \#7 Avoiding classname lookups and fatal errors with
+**Example \#8 Avoiding classname lookups and fatal errors with
 *instanceof* in PHP 5.0**
 
 ``` php

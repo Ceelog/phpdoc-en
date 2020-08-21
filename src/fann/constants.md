@@ -112,11 +112,11 @@ defined by David Elliott. </span>
 <span class="simpara"> Standard linear error function. </span>
 
 **`FANN_ERRORFUNC_TANH`** (<span class="type">integer</span>)  
-<span class="simpara"> Tanh error function, usually better but can
-require a lower learning rate. This error function agressively targets
-outputs that differ much from the desired, while not targetting outputs
-that only differ a little that much. This activation function is not
-recommended for cascade training and incremental training. </span>
+<span class="simpara"> Tanh error function; usually better but may
+require a lower learning rate. This error function aggressively targets
+outputs that differ much from the desired, while not targeting outputs
+that only differ slightly. Not recommended for cascade or incremental
+training. </span>
 
 <!-- -->
 

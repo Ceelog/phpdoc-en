@@ -601,6 +601,14 @@ A non-NULL Initialization Vector.
 The authentication tag in AEAD cipher mode. If it is incorrect, the
 authentication fails and the function returns **`FALSE`**.
 
+**Caution**
+The length of the `tag` is not checked by the function. It is the
+caller's responsibility to ensure that the length of the tag matches the
+length of the tag retrieved when <span
+class="function">openssl\_encrypt</span> has been called. Otherwise the
+decryption may succeed if the given tag only matches the start of the
+proper tag.
+
 `aad`  
 Additional authentication data.
 

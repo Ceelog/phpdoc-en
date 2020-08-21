@@ -1955,11 +1955,11 @@ the true color version.
 ### Parameters
 
 `image1`  
-A truecolor image link resource.
+A truecolor image resource.
 
 `image2`  
-A palette image link resource pointing to an image that has the same
-size as `image1`.
+A palette image resource pointing to an image that has the same size as
+`image1`.
 
 ### Return Values
 
@@ -2546,10 +2546,10 @@ portion defined will be copied onto the x,y coordinates, `dst_x` and
 ### Parameters
 
 `dst_im`  
-Destination image link resource.
+Destination image resource.
 
 `src_im`  
-Source image link resource.
+Source image resource.
 
 `dst_x`  
 x-coordinate of destination point.
@@ -2628,10 +2628,10 @@ portion defined will be copied onto the x,y coordinates, `dst_x` and
 ### Parameters
 
 `dst_im`  
-Destination image link resource.
+Destination image resource.
 
 `src_im`  
-Source image link resource.
+Source image resource.
 
 `dst_x`  
 x-coordinate of destination point.
@@ -2719,10 +2719,10 @@ gray scale before the copy operation.
 ### Parameters
 
 `dst_im`  
-Destination image link resource.
+Destination image resource.
 
 `src_im`  
-Source image link resource.
+Source image resource.
 
 `dst_x`  
 x-coordinate of destination point.
@@ -2819,10 +2819,10 @@ unpredictable.
 ### Parameters
 
 `dst_image`  
-Destination image link resource.
+Destination image resource.
 
 `src_image`  
-Source image link resource.
+Source image resource.
 
 `dst_x`  
 x-coordinate of destination point.
@@ -2990,10 +2990,10 @@ unpredictable.
 ### Parameters
 
 `dst_image`  
-Destination image link resource.
+Destination image resource.
 
 `src_image`  
-Source image link resource.
+Source image resource.
 
 `dst_x`  
 x-coordinate of destination point.
