@@ -8225,7 +8225,27 @@ $baz = ucwords($foo, "|");        // Hello|World!
 ?>
 ```
 
+**Example \#3 <span class="function">ucwords</span> example with
+additional delimiters**
+
+``` php
+<?php
+$foo = "mike o'hara";
+$bar = ucwords($foo);                 // Mike O'hara
+
+$baz = ucwords($foo, " \t\r\n\f\v'"); // Mike O'Hara
+?>
+```
+
 ### Notes
+
+> **Note**: <span class="simpara">This function is locale-aware and will
+> handle input according to the currently set locale. However, it only
+> works on single-byte character sets. If you need to use multibyte
+> characters (most non-western-European languages) look at the
+> <a href="/book/mbstring.html" class="link">multibyte</a> or
+> <a href="/book/intl.html" class="link">intl</a> extensions
+> instead.</span>
 
 > **Note**: <span class="simpara">This function is binary-safe.</span>
 
