@@ -104,3 +104,37 @@ More information on references and their potential uses can be found in
 the
 <a href="/language/references.html" class="link">References Explained</a>
 section of the manual.
+
+### Arithmetic Assignment Operators
+
+| Example   | Equivalent    | Operation      |
+|-----------|---------------|----------------|
+| $a += $b  | $a = $a + b   | Addition       |
+| $a -= $b  | $a = $a - $b  | Subtraction    |
+| $a \*= $b | $a = $a \* $b | Multiplication |
+| $a /= $b  | $a = $a / $b  | Division       |
+| $a %= $b  | $a = $a % $b  | Modulus        |
+
+### Bitwise Assignment Operators
+
+| Example     | Equivalent      | Operation   |
+|-------------|-----------------|-------------|
+| $a &= $b    | $a = $a & $b    | Bitwise And |
+| $a \|= $b   | $a = $a \| $b   | Bitwise Or  |
+| $a ^= $b    | $a = $a ^ $b    | Bitwise Xor |
+| $a \<\<= $b | $a = $a \<\< $b | Left Shift  |
+| $a \>\>= $b | $a = $a \>\> $b | Right Shift |
+
+### Other Assignment Operators
+
+| Example   | Equivalent    | Operation            |
+|-----------|---------------|----------------------|
+| $a .= $b  | $a = $a . $b  | String Concatenation |
+| $a ??= $b | $a = $a ?? $b | Null Coalesce        |
+
+See also the manual sections on
+<a href="/language/operators/arithmetic.html" class="link">arithmetic operators</a>,
+<a href="/language/operators/bitwise.html" class="link">bitwise operators</a>,
+<a href="/language/operators/string.html" class="link">string operators</a>,
+and
+<a href="/language/operators/comparison.html#language.operators.comparison.coalesce" class="link">null coalescing operator</a>.
