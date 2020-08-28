@@ -1805,6 +1805,10 @@ The flipped Gmagick object.
 
 Throws an <span class="classname">GmagickException</span> on error.
 
+### See Also
+
+-   <span class="function">Imagick::flopimage</span>
+
 Gmagick::flopimage
 ==================
 
@@ -1816,7 +1820,7 @@ The flopimage purpose
 <span class="methodname">Gmagick::flopimage</span> ( <span
 class="methodparam">void</span> )
 
-Creates a horizontal mirror image by reflecting the pixels around the
+Creates a vertical mirror image by reflecting the pixels around the
 central y-axis.
 
 ### Return Values
@@ -1826,6 +1830,10 @@ The flopped Gmagick object.
 ### Errors/Exceptions
 
 Throws an <span class="classname">GmagickException</span> on error.
+
+### See Also
+
+-   <span class="function">Imagick::flipimage</span>
 
 Gmagick::frameimage
 ===================

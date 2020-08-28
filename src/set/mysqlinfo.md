@@ -17182,11 +17182,8 @@ Considerations for compiling this extension from source.
     Windows PHP SDK batch scripts may overwrite the environment.
 
 -   Windows Specific Notes: To prepare the environment, see the official
-    Windows build documentation for either
-    <a href="https://wiki.php.net/internals/windows/stepbystepbuild" class="link external">» the original SDK</a>
-    (older, PHP-7.1 only) or
-    <a href="https://wiki.php.net/internals/windows/stepbystepbuild_sdk_2" class="link external">» the current SDK</a>
-    (PHP-7.1 or newer).
+    Windows build documentation for
+    <a href="https://wiki.php.net/internals/windows/stepbystepbuild_sdk_2" class="link external">» the current SDK</a>.
 
     We recommend using the backslash '\\\\' instead of a slash '/' for
     all paths.

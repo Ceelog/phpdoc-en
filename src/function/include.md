@@ -17,6 +17,10 @@ will emit an **`E_WARNING`** if it cannot find a file; this is different
 behavior from <span class="function">require</span>, which will emit an
 **`E_ERROR`**.
 
+Note that both *include* and *require* raise additional
+**`E_WARNING`**s, if the file cannot be accessed, before raising the
+final **`E_WARNING`** or **`E_ERROR`**, respectively.
+
 If a path is defined — whether absolute (starting with a drive letter or
 *\\* on Windows, or */* on Unix/Linux systems) or relative to the
 current directory (starting with *.* or *..*) — the
