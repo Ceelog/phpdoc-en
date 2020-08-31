@@ -225,6 +225,9 @@ The above example will output something similar to:
 
     2016
 
+> **Note**: <span class="simpara"> Prior to PHP 7.1, the arguments are
+> not evaluated if there is no constructor function defined. </span>
+
 ### Properties and methods
 
 Class properties and methods live in separate "namespaces", so it is

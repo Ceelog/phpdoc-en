@@ -3913,8 +3913,8 @@ Special characters:
 `flags`  
 Valid flags:
 
--   <span class="simpara"> **`GLOB_MARK`** - Adds a slash to each
-    directory returned </span>
+-   <span class="simpara"> **`GLOB_MARK`** - Adds a slash (a backslash
+    on Windows) to each directory returned </span>
 -   <span class="simpara"> **`GLOB_NOSORT`** - Return files as they
     appear in the directory (no sorting). When this flag is not used,
     the pathnames are sorted alphabetically </span>
