@@ -29,10 +29,11 @@ PHP ships with the extensions most useful to the majority of developers.
 They are called "core" extensions.
 
 However, if you need functionality not provided by any core extension,
-you may still be able to find one in PECL. The PHP Extension Community
-Library (PECL) is a repository for PHP Extensions, providing a directory
-of all known extensions and hosting facilities for downloading and
-development of PHP extensions.
+you may still be able to find one in
+<a href="https://pecl.php.net/" class="link external">» PECL</a>. The
+PHP Extension Community Library (PECL) is a repository for PHP
+Extensions, providing a directory of all known extensions and hosting
+facilities for downloading and development of PHP extensions.
 
 If you have developed an extension for your own uses, you might want to
 think about hosting it on PECL so that others with the same needs can
