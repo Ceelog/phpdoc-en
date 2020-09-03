@@ -968,7 +968,8 @@ More arrays to compare against
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the entries
-from `array1` that are not present in any of the other arrays.
+from `array1` that are not present in any of the other arrays. Keys in
+the `array1` array are preserved.
 
 ### Examples
 
@@ -992,13 +993,47 @@ will output :
         [1] => blue
     )
 
-### Notes
+**Example \#2 <span class="function">array\_diff</span> example with
+non-matching types**
 
-> **Note**:
->
-> Two elements are considered equal if and only if *(string) $elem1 ===
-> (string) $elem2*. In other words: when the string representation is
-> the same.
+Two elements are considered equal if and only if *(string) $elem1 ===
+(string) $elem2*. That is, when the
+<a href="/language/types/string.html#language.types.string.casting" class="link">string representation</a>
+is the same.
+
+``` php
+<?php
+// This will generate a Notice that an array cannot be cast to a string.
+$source = [1, 2, 3, 4];
+$filter = [3, 4, [5], 6];
+$result = array_diff($source, $filter);
+
+// Whereas this is fine, since the objects can cast to a string.
+class S {
+  private $v;
+
+  public function __construct(string $v) {
+    $this->v = $v;
+  }
+
+  public function __toString() {
+    return $this->v;
+  }
+}
+
+$source = [new S('a'), new S('b'), new S('c')];
+$filter = [new S('b'), new S('c'), new S('d')];
+
+$result = array_diff($source, $filter);
+
+// $result now contains one instance of S('a');
+?>
+```
+
+To use an alternate comparison function, see <span
+class="function">array\_udiff</span>.
+
+### Notes
 
 > **Note**:
 >
@@ -1009,6 +1044,7 @@ will output :
 ### See Also
 
 -   <span class="function">array\_diff\_assoc</span>
+-   <span class="function">array\_udiff</span>
 -   <span class="function">array\_intersect</span>
 -   <span class="function">array\_intersect\_assoc</span>
 
@@ -1175,7 +1211,11 @@ class="type">int</span> `$flag`<span class="initializer"> =
 Iterates over each value in the `array` passing them to the `callback`
 function. If the `callback` function returns **`TRUE`**, the current
 value from `array` is returned into the result <span
-class="type">array</span>. Array keys are preserved.
+class="type">array</span>.
+
+Array keys are preserved, and may result in gaps if the `array` was
+indexed. The result <span class="type">array</span> can be reindexed
+using the <span class="function">array\_values</span> function.
 
 ### Parameters
 
@@ -1185,10 +1225,9 @@ The array to iterate over
 `callback`  
 The callback function to use
 
-If no `callback` is supplied, all entries of `array` equal to
-**`FALSE`** (see
-<a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
-will be removed.
+If no `callback` is supplied, all empty entries of `array` will be
+removed. See <span class="function">empty</span> for how PHP defines
+empty in this case.
 
 `flag`  
 Flag determining what arguments are sent to `callback`:
@@ -2105,15 +2144,16 @@ class="methodparam"><span class="type">array</span> `$array1`</span> \[,
 
 <span class="function">array\_map</span> returns an <span
 class="type">array</span> containing the results of applying the
-`callback` function to the corresponding index of `array1` (and `...` if
-more arrays are provided) used as arguments for the callback. The number
-of parameters that the `callback` function accepts should match the
-number of arrays passed to <span class="function">array\_map</span>.
+`callback` to the corresponding index of `array1` (and `...` if more
+arrays are provided) used as arguments for the callback. The number of
+parameters that the `callback` function accepts should match the number
+of arrays passed to <span class="function">array\_map</span>.
 
 ### Parameters
 
 `callback`  
-Callback function to run for each element in each array.
+A <span class="type">callable</span> to run for each element in each
+array.
 
 **`NULL`** can be passed as a value to `callback` to perform a zip
 operation on multiple arrays. If only `array1` is provided, <span

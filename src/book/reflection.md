@@ -487,6 +487,11 @@ Reflection::export
 
 Exports
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -992,6 +997,11 @@ ReflectionClass::export
 
 Exports a class
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -1066,6 +1076,7 @@ The above example will output something similar to:
 ### See Also
 
 -   <span class="methodname">ReflectionClass::getName</span>
+-   <span class="methodname">ReflectionClass::\_\_toString</span>
 
 ReflectionClass::getConstant
 ============================
@@ -3784,6 +3795,11 @@ ReflectionClassConstant::export
 
 Export
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -4151,6 +4167,11 @@ ReflectionZendExtension::export
 
 Export
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -4172,6 +4193,11 @@ available.
 `return`  
 
 ### Return Values
+
+### See Also
+
+-   <span
+    class="methodname">ReflectionClassConstant::\_\_toString</span>
 
 ReflectionZendExtension::getAuthor
 ==================================
@@ -4478,6 +4504,11 @@ ReflectionExtension::export
 
 Export
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -4508,6 +4539,7 @@ returned.
 ### See Also
 
 -   <span class="methodname">ReflectionExtension::info</span>
+-   <span class="methodname">ReflectionExtension::\_\_toString</span>
 
 ReflectionExtension::getClasses
 ===============================
@@ -5439,6 +5471,11 @@ ReflectionFunction::export
 
 Exports function
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -5468,6 +5505,7 @@ returned.
 ### See Also
 
 -   <span class="methodname">ReflectionFunction::invoke</span>
+-   <span class="methodname">ReflectionFunction::\_\_toString</span>
 
 ReflectionFunction::getClosure
 ==============================
@@ -7232,6 +7270,11 @@ ReflectionMethod::export
 
 Export a reflection method
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -8677,6 +8720,11 @@ ReflectionParameter::export
 
 Exports
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="modifier">public</span> <span
@@ -8712,7 +8760,7 @@ The exported reflection.
 
 ### See Also
 
--   <span class="methodname">ReflectionParameter::toString</span>
+-   <span class="methodname">ReflectionParameter::\_\_toString</span>
 
 ReflectionParameter::getClass
 =============================
@@ -9409,7 +9457,7 @@ Introduction
 ------------
 
 The <span class="classname">ReflectionProperty</span> class reports
-information about classes properties.
+information about class properties.
 
 Class synopsis
 --------------
@@ -9769,7 +9817,7 @@ Setting to **`FALSE`** (the default) will do the opposite.
 
 ### See Also
 
--   <span class="methodname">ReflectionProperty::toString</span>
+-   <span class="methodname">ReflectionProperty::\_\_toString</span>
 
 ReflectionProperty::getDeclaringClass
 =====================================
@@ -11304,6 +11352,11 @@ Reflector::export
 =================
 
 Exports
+
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
 
 ### Description
 
