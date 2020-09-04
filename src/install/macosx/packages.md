@@ -22,5 +22,5 @@ binaries for PHP on Mac OS:
     <a href="http://www.finkproject.org/" class="link external">» http://www.finkproject.org/</a>
     </span>
 -   <span class="simpara"> Homebrew:
-    <a href="https://github.com/Homebrew/homebrew-php" class="link external">» https://github.com/Homebrew/homebrew-php</a>
+    <a href="https://github.com/Homebrew/brew" class="link external">» https://github.com/Homebrew/brew</a>
     </span>
