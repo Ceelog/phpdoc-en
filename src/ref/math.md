@@ -2217,24 +2217,24 @@ The value to round.
 `precision`  
 The optional number of decimal digits to round to.
 
-If the `precision` is positive, the rounding will occur after the
-decimal point.
+If the `precision` is positive, `val` is rounded to `precision`
+significant digits after the decimal point.
 
-If the `precision` is negative, the rounding will occur before the
-decimal point. If the absolute value of the `precision` is greater than
-or equal to the number of digits, the result of the rounding is equal to
-*0*
+If the `precision` is negative, `val` is rounded to `precision`
+significant digits before the decimal point, i.e. to the nearest
+multiple of *pow(10, -precision)*, e.g. for a `precision` of -1 `val` is
+rounded to tens, for a `precision` of -2 to hundreds, etc.
 
 `mode`  
 Use one of the following constants to specify the mode in which rounding
 occurs.
 
-| Constants                 | Description                                                                                                                 |
-|---------------------------|-----------------------------------------------------------------------------------------------------------------------------|
-| **`PHP_ROUND_HALF_UP`**   | Round `val` up to `precision` decimal places away from zero, when it is half way there. Making 1.5 into 2 and -1.5 into -2. |
-| **`PHP_ROUND_HALF_DOWN`** | Round `val` down to `precision` decimal places towards zero, when it is half way there. Making 1.5 into 1 and -1.5 into -1. |
-| **`PHP_ROUND_HALF_EVEN`** | Round `val` to `precision` decimal places towards the nearest even value.                                                   |
-| **`PHP_ROUND_HALF_ODD`**  | Round `val` to `precision` decimal places towards the nearest odd value.                                                    |
+| Constants                 | Description                                                                                                 |
+|---------------------------|-------------------------------------------------------------------------------------------------------------|
+| **`PHP_ROUND_HALF_UP`**   | Rounds `val` away from zero when it is half way there, making 1.5 into 2 and -1.5 into -2.                  |
+| **`PHP_ROUND_HALF_DOWN`** | Rounds `val` towards zero when it is half way there, making 1.5 into 1 and -1.5 into -1.                    |
+| **`PHP_ROUND_HALF_EVEN`** | Rounds `val` towards the nearest even value when it is half way there, making both 1.5 and 2.5 into 2.      |
+| **`PHP_ROUND_HALF_ODD`**  | Rounds `val` towards the nearest odd value when it is half way there, making 1.5 into 1 and and 2.5 into 3. |
 
 ### Return Values
 
@@ -2251,10 +2251,12 @@ var_dump(round(3.4));
 var_dump(round(3.5));
 var_dump(round(3.6));
 var_dump(round(3.6, 0));
-var_dump(round(1.95583, 2));
-var_dump(round(1241757, -3));
 var_dump(round(5.045, 2));
 var_dump(round(5.055, 2));
+var_dump(round(345, -2));
+var_dump(round(345, -3));
+var_dump(round(678, -2));
+var_dump(round(678, -3));
 ?>
 ```
 
@@ -2264,35 +2266,37 @@ The above example will output:
     float(4)
     float(4)
     float(4)
-    float(1.96)
-    float(1242000)
     float(5.05)
     float(5.06)
+    float(300)
+    float(0)
+    float(700)
+    float(1000)
 
 **Example \#2 How `precision` affects a float**
 
 ``` php
 <?php
-$number = 1346.21;
+$number = 135.79;
 
+var_dump(round($number, 3));
 var_dump(round($number, 2));
 var_dump(round($number, 1));
 var_dump(round($number, 0));
 var_dump(round($number, -1));
 var_dump(round($number, -2));
 var_dump(round($number, -3));
-var_dump(round($number, -4));
 ?>
 ```
 
 The above example will output:
 
-    float(1346.21)
-    float(1346.2)
-    float(1346)
-    float(1350)
-    float(1300)
-    float(1000)
+    float(135.79)
+    float(135.79)
+    float(135.8)
+    float(136)
+    float(140)
+    float(100)
     float(0)
 
 **Example \#3 `mode` examples**
@@ -2305,6 +2309,7 @@ var_dump(round(9.5, 0, PHP_ROUND_HALF_DOWN));
 var_dump(round(9.5, 0, PHP_ROUND_HALF_EVEN));
 var_dump(round(9.5, 0, PHP_ROUND_HALF_ODD));
 
+echo PHP_EOL;
 echo 'Rounding modes with 8.5' . PHP_EOL;
 var_dump(round(8.5, 0, PHP_ROUND_HALF_UP));
 var_dump(round(8.5, 0, PHP_ROUND_HALF_DOWN));
@@ -2320,6 +2325,7 @@ The above example will output:
     float(9)
     float(10)
     float(9)
+
     Rounding modes with 8.5
     float(9)
     float(8)
@@ -2332,30 +2338,22 @@ The above example will output:
 <?php
 echo 'Using PHP_ROUND_HALF_UP with 1 decimal digit precision' . PHP_EOL;
 var_dump(round( 1.55, 1, PHP_ROUND_HALF_UP));
-var_dump(round( 1.54, 1, PHP_ROUND_HALF_UP));
 var_dump(round(-1.55, 1, PHP_ROUND_HALF_UP));
-var_dump(round(-1.54, 1, PHP_ROUND_HALF_UP));
 
 echo PHP_EOL;
 echo 'Using PHP_ROUND_HALF_DOWN with 1 decimal digit precision' . PHP_EOL;
 var_dump(round( 1.55, 1, PHP_ROUND_HALF_DOWN));
-var_dump(round( 1.54, 1, PHP_ROUND_HALF_DOWN));
 var_dump(round(-1.55, 1, PHP_ROUND_HALF_DOWN));
-var_dump(round(-1.54, 1, PHP_ROUND_HALF_DOWN));
 
 echo PHP_EOL;
 echo 'Using PHP_ROUND_HALF_EVEN with 1 decimal digit precision' . PHP_EOL;
 var_dump(round( 1.55, 1, PHP_ROUND_HALF_EVEN));
-var_dump(round( 1.54, 1, PHP_ROUND_HALF_EVEN));
 var_dump(round(-1.55, 1, PHP_ROUND_HALF_EVEN));
-var_dump(round(-1.54, 1, PHP_ROUND_HALF_EVEN));
 
 echo PHP_EOL;
 echo 'Using PHP_ROUND_HALF_ODD with 1 decimal digit precision' . PHP_EOL;
 var_dump(round( 1.55, 1, PHP_ROUND_HALF_ODD));
-var_dump(round( 1.54, 1, PHP_ROUND_HALF_ODD));
 var_dump(round(-1.55, 1, PHP_ROUND_HALF_ODD));
-var_dump(round(-1.54, 1, PHP_ROUND_HALF_ODD));
 ?>
 ```
 
@@ -2363,26 +2361,18 @@ The above example will output:
 
     Using PHP_ROUND_HALF_UP with 1 decimal digit precision
     float(1.6)
-    float(1.5)
     float(-1.6)
-    float(-1.5)
 
     Using PHP_ROUND_HALF_DOWN with 1 decimal digit precision
     float(1.5)
-    float(1.5)
-    float(-1.5)
     float(-1.5)
 
     Using PHP_ROUND_HALF_EVEN with 1 decimal digit precision
     float(1.6)
-    float(1.5)
     float(-1.6)
-    float(-1.5)
 
     Using PHP_ROUND_HALF_ODD with 1 decimal digit precision
     float(1.5)
-    float(1.5)
-    float(-1.5)
     float(-1.5)
 
 ### Changelog
