@@ -21,16 +21,16 @@ class="function">zip\_open</span>.
 
 No value is returned.
 
-### See Also
-
--   <span class="function">zip\_open</span>
--   <span class="function">zip\_read</span>
-
 ### Changelog
 
 | Version | Description                                                                                                    |
 |---------|----------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::close</span>. |
+
+### See Also
+
+-   <span class="function">zip\_open</span>
+-   <span class="function">zip\_read</span>
 
 zip\_entry\_close
 =================
@@ -56,16 +56,16 @@ class="function">zip\_entry\_open</span>.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### See Also
-
--   <span class="function">zip\_entry\_open</span>
--   <span class="function">zip\_entry\_read</span>
-
 ### Changelog
 
 | Version | Description                                             |
 |---------|---------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API. |
+
+### See Also
+
+-   <span class="function">zip\_entry\_open</span>
+-   <span class="function">zip\_entry\_read</span>
 
 zip\_entry\_compressedsize
 ==========================
@@ -90,16 +90,16 @@ A directory entry returned by <span class="function">zip\_read</span>.
 
 The compressed size.
 
-### See Also
-
--   <span class="function">zip\_open</span>
--   <span class="function">zip\_read</span>
-
 ### Changelog
 
 | Version | Description                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
+
+### See Also
+
+-   <span class="function">zip\_open</span>
+-   <span class="function">zip\_read</span>
 
 zip\_entry\_compressionmethod
 =============================
@@ -125,16 +125,16 @@ A directory entry returned by <span class="function">zip\_read</span>.
 
 The compression method.
 
-### See Also
-
--   <span class="function">zip\_open</span>
--   <span class="function">zip\_read</span>
-
 ### Changelog
 
 | Version | Description                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
+
+### See Also
+
+-   <span class="function">zip\_open</span>
+-   <span class="function">zip\_read</span>
 
 zip\_entry\_filesize
 ====================
@@ -159,16 +159,16 @@ A directory entry returned by <span class="function">zip\_read</span>.
 
 The size of the directory entry.
 
-### See Also
-
--   <span class="function">zip\_open</span>
--   <span class="function">zip\_read</span>
-
 ### Changelog
 
 | Version | Description                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
+
+### See Also
+
+-   <span class="function">zip\_open</span>
+-   <span class="function">zip\_read</span>
 
 zip\_entry\_name
 ================
@@ -193,16 +193,16 @@ A directory entry returned by <span class="function">zip\_read</span>.
 
 The name of the directory entry.
 
-### See Also
-
--   <span class="function">zip\_open</span>
--   <span class="function">zip\_read</span>
-
 ### Changelog
 
 | Version | Description                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
+
+### See Also
+
+-   <span class="function">zip\_open</span>
+-   <span class="function">zip\_read</span>
 
 zip\_entry\_open
 ================
@@ -250,16 +250,16 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 > the operation and is not needed for reading or closing the directory
 > entry.
 
-### See Also
-
--   <span class="function">zip\_entry\_close</span>
--   <span class="function">zip\_entry\_read</span>
-
 ### Changelog
 
 | Version | Description                                             |
 |---------|---------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API. |
+
+### See Also
+
+-   <span class="function">zip\_entry\_close</span>
+-   <span class="function">zip\_entry\_read</span>
 
 zip\_entry\_read
 ================
@@ -294,17 +294,17 @@ The number of bytes to return.
 Returns the data read, empty string on end of a file, or **`FALSE`** on
 error.
 
-### See Also
-
--   <span class="function">zip\_entry\_open</span>
--   <span class="function">zip\_entry\_close</span>
--   <span class="function">zip\_entry\_filesize</span>
-
 ### Changelog
 
 | Version | Description                                                                                                           |
 |---------|-----------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::getFromIndex</span>. |
+
+### See Also
+
+-   <span class="function">zip\_entry\_open</span>
+-   <span class="function">zip\_entry\_close</span>
+-   <span class="function">zip\_entry\_filesize</span>
 
 zip\_open
 =========
@@ -331,16 +331,16 @@ class="function">zip\_read</span> and <span
 class="function">zip\_close</span> or returns the number of error if
 `filename` does not exist or in case of other error.
 
-### See Also
-
--   <span class="function">zip\_read</span>
--   <span class="function">zip\_close</span>
-
 ### Changelog
 
 | Version | Description                                                                                                   |
 |---------|---------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::open</span>. |
+
+### See Also
+
+-   <span class="function">zip\_read</span>
+-   <span class="function">zip\_close</span>
 
 zip\_read
 =========
@@ -367,18 +367,18 @@ Returns a directory entry resource for later use with the
 *zip\_entry\_...* functions, or **`FALSE`** if there are no more entries
 to read, or an error code if an error occurred.
 
+### Changelog
+
+| Version | Description                                                                                                        |
+|---------|--------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
+
 ### See Also
 
 -   <span class="function">zip\_open</span>
 -   <span class="function">zip\_close</span>
 -   <span class="function">zip\_entry\_open</span>
 -   <span class="function">zip\_entry\_read</span>
-
-### Changelog
-
-| Version | Description                                                                                                        |
-|---------|--------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | This function is deprecated in favor of the Object API, see <span class="methodname">ZipArchive::statIndex</span>. |
 
 **Table of Contents**
 

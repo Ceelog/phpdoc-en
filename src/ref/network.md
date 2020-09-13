@@ -236,6 +236,10 @@ specify the optional `type` parameter. May be any one of the following:
 > platforms, **`DNS_ANY`** will not always return every record, the
 > slower **`DNS_ALL`** will collect all records more reliably.
 
+> **Note**:
+>
+> **`DNS_CAA`** is not supported on Windows.
+
 `authns`  
 Passed by reference and, if given, will be populated with Resource
 Records for the *Authoritative Name Servers*.
