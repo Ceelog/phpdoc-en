@@ -311,6 +311,11 @@ have on disk.
 Path to the file holding the message. The file is opened and streamed
 through the parser.
 
+> **Note**:
+>
+> The message contained in `filename` is supposed to end with a newline
+> (*CRLF*); otherwise the last line of the message will not be parsed.
+
 ### Return Values
 
 Returns a *MIME* resource representing the structure, or **`FALSE`** on
@@ -345,6 +350,10 @@ than read and parse the whole thing.
 A valid *MIME* resource.
 
 `data`  
+> **Note**:
+>
+> The final chunk of `data` is supposed to end with a newline (*CRLF*);
+> otherwise the last line of the message will not be parsed.
 
 ### Return Values
 
