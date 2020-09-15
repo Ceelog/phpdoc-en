@@ -2857,6 +2857,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 | Name                                                                            | Default | Changeable       | Changelog                                                                   |
 |---------------------------------------------------------------------------------|---------|------------------|-----------------------------------------------------------------------------|
 | <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_local_infile</a>       | "0"     | PHP\_INI\_SYSTEM | Available as of PHP 5.2.4. Before PHP 7.2.16 and 7.3.3 the default was "1". |
+| <a href="/set/mysqlinfo.html#" class="link">mysqli.local_infile_directory</a>   |         | PHP\_INI\_SYSTEM |                                                                             |
 | <a href="/set/mysqlinfo.html#" class="link">mysqli.allow_persistent</a>         | "1"     | PHP\_INI\_SYSTEM | Available as of PHP 5.3.0.                                                  |
 | <a href="/set/mysqlinfo.html#" class="link">mysqli.max_persistent</a>           | "-1"    | PHP\_INI\_SYSTEM | Available as of PHP 5.3.0.                                                  |
 | <a href="/set/mysqlinfo.html#" class="link">mysqli.max_links</a>                | "-1"    | PHP\_INI\_SYSTEM |                                                                             |
@@ -2877,6 +2878,10 @@ Here's a short explanation of the configuration directives.
 `mysqli.allow_local_infile` <span class="type">integer</span>  
 Allow accessing, from PHP's perspective, local files with LOAD DATA
 statements
+
+`mysqli.local_infile_directory` <span class="type">string</span>  
+Allows restricting LOCAL DATA loading to files located in this
+designated directory.
 
 `mysqli.allow_persistent` <span class="type">integer</span>  
 Enable the ability to create persistent connections using <span
