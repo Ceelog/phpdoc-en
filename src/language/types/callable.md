@@ -34,6 +34,11 @@ instead of an <span class="type">object</span> at index 0. As of PHP
 
 Apart from common user-defined function,
 <a href="/functions/anonymous.html" class="link">anonymous functions</a>
+and <a href="/functions/arrow.html" class="link">arrow functions</a> can
+also be passed to a callback parameter.
+
+Generally, any object implementing
+<a href="/language/oop5/magic.html#object.invoke" class="link">__invoke()</a>
 can also be passed to a callback parameter.
 
 **Example \#1 Callback function examples**

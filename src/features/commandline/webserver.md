@@ -3,7 +3,7 @@ Built-in web server
 
 **Warning**
 
-This web server was designed to aid application development. It may also
+This web server is designed to aid application development. It may also
 be useful for testing purposes or for application demonstrations that
 are run in controlled environments. It is not intended to be a
 full-featured web server. It should not be used on a public network.
@@ -44,9 +44,29 @@ Standard MIME types are returned for files with extensions: .3gp, .apk,
 | 5.4.11  | .ogg, .ogv, and .webm                                                                                                                                                                                                           |
 | 5.4.4   | .htm and .svg                                                                                                                                                                                                                   |
 
-| Version | Description                                                                                                                                                                                                                                                                                                        |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0   | You can configure the built-in webserver to fork multiple workers in order to test code that requires multiple concurrent requests to the built-in webserver. Set the `PHP_CLI_SERVER_WORKERS` environment variable to the number of desired workers before starting the server. This is not supported on Windows. |
+<table>
+<caption><strong>Changelog</strong></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Version</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>7.4.0</td>
+<td>You can configure the built-in webserver to fork multiple workers in order to test code that requires multiple concurrent requests to the built-in webserver. Set the <var class="envar">PHP_CLI_SERVER_WORKERS</var> environment variable to the number of desired workers before starting the server. This is not supported on Windows.
+<div class="warning">
+<strong>Warning</strong>
+<p>This <em>experimental</em> feature is <em>not</em> intended for production usage. Generally, the built-in Web Server is <em>not</em> intended for production usage.</p>
+</div></td>
+</tr>
+</tbody>
+</table>
 
 **Example \#1 Starting the web server**
 
@@ -163,3 +183,7 @@ with:
 ``` shell
 $ php -S 0.0.0.0:8000
 ```
+
+**Warning**
+
+The built-in Web Server should not be used on a public network.

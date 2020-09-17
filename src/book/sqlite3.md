@@ -12,6 +12,8 @@ SQLite3
     -   [Resource Types](/book/sqlite3.html#Resource%20Types)
 -   [Predefined Constants](/book/sqlite3.html#Predefined%20Constants)
 -   [SQLite3](/book/sqlite3.html#SQLite3) — The SQLite3 class
+    -   [SQLite3::backup](/book/sqlite3.html#SQLite3::backup) — Backup
+        one database to another database
     -   [SQLite3::busyTimeout](/book/sqlite3.html#SQLite3::busyTimeout)
         — Sets the busy connection handler
     -   [SQLite3::changes](/book/sqlite3.html#SQLite3::changes) —
@@ -243,6 +245,15 @@ Class synopsis
 /\* Methods \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">backup</span> ( <span class="methodparam"><span
+class="type">SQLite3</span> `$destination_db`</span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$source_dbname`<span class="initializer"> = "main"</span></span> \[,
+<span class="methodparam"><span class="type">string</span>
+`$destination_dbname`<span class="initializer"> = "main"</span></span>
+\]\] )
+
+<span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">busyTimeout</span> ( <span
 class="methodparam"><span class="type">int</span> `$msecs`</span> )
 
@@ -362,6 +373,58 @@ class="methodname">version</span> ( <span
 class="methodparam">void</span> )
 
 }
+
+SQLite3::backup
+===============
+
+Backup one database to another database
+
+### Description
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">SQLite3::backup</span> ( <span
+class="methodparam"><span class="type">SQLite3</span>
+`$destination_db`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$source_dbname`<span class="initializer"> =
+"main"</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$destination_dbname`<span
+class="initializer"> = "main"</span></span> \]\] )
+
+<span class="methodname">SQLite3::backup</span> copies the contents of
+one database into another, overwriting the contents of the destination
+database. It is useful either for creating backups of databases or for
+copying in-memory databases to or from persistent files.
+
+### Parameters
+
+`destination_db`  
+A database connection opened with <span
+class="methodname">SQLite3::open</span>.
+
+`source_dbname`  
+The database name is *"main"* for the main database, *"temp"* for the
+temporary database, or the name specified after the *AS* keyword in an
+*ATTACH* statement for an attached database.
+
+`destination_dbname`  
+Analogous to `source_dbname` but for the `destination_db`.
+
+### Return Values
+
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Examples
+
+**Example \#1 Backup an existing database**
+
+``` php
+<?php
+// $conn is a connection to an already opened sqlite3 database
+
+$backup = new SQLite3('backup.sqlite');
+$conn->backup($backup);
+?>
+```
 
 SQLite3::busyTimeout
 ====================

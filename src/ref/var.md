@@ -878,9 +878,7 @@ class="initializer"> = **`FALSE`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `&$callable_name`</span> \]\] )
 
-Verify that the contents of a variable can be called as a function. This
-can check that a simple variable contains the name of a valid function,
-or that an array contains a properly encoded object and function name.
+Verify that a value is a <span class="type">callable</span>.
 
 ### Parameters
 
