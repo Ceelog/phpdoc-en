@@ -585,6 +585,27 @@ Procedural style: Returns a new xmlwriter
 <a href="/language/types/resource.html" class="link">resource</a> for
 later use with the xmlwriter functions on success, **`FALSE`** on error.
 
+### Examples
+
+**Example \#1 Direct output of XML**
+
+It is possible to directly output XML by using the
+<a href="/wrappers/php.html#wrappers.php.output" class="link">php://output stream wrapper</a>.
+
+``` php
+<?php
+$out =new XMLWriter();
+$out->openURI('php://output');
+?>
+```
+
+### Notes
+
+> **Note**:
+>
+> On Windows, files opened with this function are locked until the
+> writer is released.
+
 ### See Also
 
 -   <span class="methodname">XMLWriter::openMemory</span>
@@ -679,6 +700,28 @@ The indentation string.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Notes
+
+> **Note**:
+>
+> The indent is reset when an xmlwriter is opened.
+
+> **Note**: <span class="simpara">Because this is a language construct
+> and not a function, it cannot be called using
+> <a href="/functions/variable-functions.html" class="link">variable functions</a>.</span>
+
+**Warning**
+
+This function is not (yet) binary safe!
+
+> **Note**: **register\_globals: important note**  
+>
+> As of PHP 4.2.0, the default value for the PHP directive
+> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
+> is *off*. The PHP community discourages developers from relying on
+> this directive, and encourages the use of other means, such as the
+> <a href="/language/variables/predefined.html" class="link">superglobals</a>.
+
 ### See Also
 
 -   <span class="methodname">XMLWriter::setIndent</span>
@@ -723,6 +766,28 @@ Whether indentation is enabled.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Notes
+
+> **Note**:
+>
+> The indent is reset when an xmlwriter is opened.
+
+> **Note**: <span class="simpara">Because this is a language construct
+> and not a function, it cannot be called using
+> <a href="/functions/variable-functions.html" class="link">variable functions</a>.</span>
+
+**Warning**
+
+This function is not (yet) binary safe!
+
+> **Note**: **register\_globals: important note**  
+>
+> As of PHP 4.2.0, the default value for the PHP directive
+> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
+> is *off*. The PHP community discourages developers from relying on
+> this directive, and encourages the use of other means, such as the
+> <a href="/language/variables/predefined.html" class="link">superglobals</a>.
 
 ### See Also
 
@@ -828,6 +893,29 @@ The attribute name.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Examples
+
+**Example \#1 Basic <span
+class="methodname">XMLWriter::startAttribute</span> Usage**
+
+``` php
+<?php
+$writer = new XMLWriter;
+$writer->openURI('php://output');
+$writer->startDocument('1.0', 'UTF-8');?>
+$writer->startElement('element');
+$writer->startAttribute('attribute');
+$writer->text('value');
+$writer->endAttribute();
+$writer->endElement();
+$writer->endDocument();
+```
+
+The above example will output something similar to:
+
+    <?xml version="1.0" encoding="UTF-8"?>
+    <element attribute="value"/>
 
 ### See Also
 
@@ -1368,7 +1456,12 @@ from a call to <span class="function">xmlwriter\_open\_uri</span> or
 <span class="function">xmlwriter\_open\_memory</span>.
 
 `content`  
-The contents of the text.
+The contents of the text. The characters *\<*, *\>*, *&* and *"* are
+written as entity references (i.e. *&lt;*, *&gt;*, *&amp;* and *&quot;*,
+respectively). All other characters including *'* are written literally.
+To write the special XML characters literally, or to write literal
+entity references, <span class="function">xmlwriter\_write\_raw</span>
+has to be used.
 
 ### Return Values
 
@@ -1486,6 +1579,33 @@ The value of the attribute.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Examples
+
+**Example \#1 Intermixing Sub-elements and Attributes**
+
+If writing sub-elements and attributes is intermixed, any attempt to
+write attributes after the first sub-element will fail and return false.
+
+``` php
+<?php
+$xml = new XMLWriter();
+$xml->openMemory();
+
+$xml->startElement('element');
+$xml->writeAttribute('attr1', '0');
+$xml->writeElement('subelem', '0');
+var_dump($xml->writeAttribute('attr2', '0'));
+$xml->endElement();
+
+echo $xml->flush();
+?>
+```
+
+The above example will output:
+
+    bool(false)
+    <element attr1="0"><subelem>0</subelem></element>
+
 ### See Also
 
 -   <span class="methodname">XMLWriter::writeAttributeNs</span>
@@ -1533,6 +1653,41 @@ The contents of the CDATA.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Examples
+
+**Example \#1 Basic <span
+class="function">xmlwriter\_write\_cdata</span> Usage**
+
+``` php
+<?php
+// set up the document
+$xml = new XmlWriter();
+$xml->openMemory();
+$xml->setIndent(true);
+$xml->startDocument('1.0', 'UTF-8');
+$xml->startElement('mydoc');
+$xml->startElement('myele');
+
+// CData output
+$xml->startElement('mycdataelement');
+$xml->writeCData("text for inclusion as CData");
+$xml->endElement();
+
+// end the document and output
+$xml->endElement();
+$xml->endElement();
+echo $xml->outputMemory(true);
+?>
+```
+
+The above example will output:
+
+    <mydoc>
+     <myele>
+      <mycdataelement><![CDATA[text for inclusion as CData]​]></mycdataelement>
+     </myele>
+    </mydoc>
 
 ### See Also
 

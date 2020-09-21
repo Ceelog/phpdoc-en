@@ -9,7 +9,7 @@ Decodes a JSON string
 class="methodname">json\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$json`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$assoc`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$depth`<span
 class="initializer"> = 512</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
@@ -30,8 +30,12 @@ This function only works with UTF-8 encoded strings.
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `assoc`  
-When **`TRUE`**, returned <span class="type">object</span>s will be
-converted into associative <span class="type">array</span>s.
+When **`TRUE`**, JSON objects will be returned as associative <span
+class="type">array</span>s; when **`FALSE`**, JSON objects will be
+returned as <span class="type">object</span>s. When **`NULL`**, JSON
+objects will be returned as associative <span class="type">array</span>s
+or <span class="type">object</span>s depending on whether
+**`JSON_OBJECT_AS_ARRAY`** is set in the `options`.
 
 `depth`  
 User specified recursion depth.
@@ -55,6 +59,7 @@ decoded or if the encoded data is deeper than the recursion limit.
 | Version | Description                                                                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                                                |
+| 7.2.0   | `assoc` is nullable now.                                                                                                                      |
 | 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                                                  |
 | 7.1.0   | An empty JSON key ("") can be encoded to the empty object property instead of using a key with value *\_empty\_*.                             |
 | 7.0.0   | Rejected RFC 7159 incompatible number formats - top level (07, 0xff, .1, -.1) and all levels (\[1.\], \[1.e1\])                               |
