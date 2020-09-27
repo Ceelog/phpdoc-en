@@ -77,8 +77,6 @@ Streams
     -   [streamWrapper::url\_stat](/class/streamwrapper.html#streamWrapper::url_stat)
         — Retrieve information about a file
 -   [Stream Functions](/ref/stream.html)
-    -   [set\_socket\_blocking](/ref/stream.html#set_socket_blocking) —
-        Alias of stream\_set\_blocking
     -   [stream\_bucket\_append](/ref/stream.html#stream_bucket_append)
         — Append bucket to brigade
     -   [stream\_bucket\_make\_writeable](/ref/stream.html#stream_bucket_make_writeable)

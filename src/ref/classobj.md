@@ -236,12 +236,6 @@ default.
 Returns **`TRUE`** if `class_name` is a defined class, **`FALSE`**
 otherwise.
 
-### Changelog
-
-| Version | Description                                                                                               |
-|---------|-----------------------------------------------------------------------------------------------------------|
-| 5.0.2   | No longer returns **`TRUE`** for defined interfaces. Use <span class="function">interface\_exists</span>. |
-
 ### Examples
 
 **Example \#1 <span class="function">class\_exists</span> example**
@@ -435,14 +429,6 @@ current scope, with their default value. The resulting array elements
 are in the form of *varname =\> value*. In case of an error, it returns
 **`FALSE`**.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                           |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.3   | <span class="function">get\_class\_vars</span> will only return the properties that can be accessed from the current scope.                                                                           |
-| 5.0.2   | Calling <span class="function">get\_class\_vars</span> will now expose all the properties as an array, unlike previous behaviour where protected and private properties were prefixed with nul bytes. |
-| 5.0.1   | Calling <span class="function">get\_class\_vars</span> will expose all properties, as when converting an object to a class.                                                                           |
-
 ### Examples
 
 **Example \#1 <span class="function">get\_class\_vars</span> example**
@@ -573,10 +559,9 @@ other than an object, an **`E_WARNING`** level error is raised.
 
 ### Changelog
 
-| Version | Description                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | **`NULL`** was removed as the default value for `object`, and is no longer a valid input.                                             |
-| 5.3.0   | **`NULL`** became the default value for `object`, so passing **`NULL`** to `object` now has the same result as not passing any value. |
+| Version | Description                                                                                                                                                                                                                 |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.2.0   | Prior to this version the default value for `object` was **`NULL`** and it had the same effect as not passing any value. Now **`NULL`** has been removed as the default value for `object`, and is no longer a valid input. |
 
 ### Examples
 
@@ -824,12 +809,6 @@ An object instance.
 Returns an associative array of defined object accessible non-static
 properties for the specified `object` in scope.
 
-### Changelog
-
-| Version | Description                                                                                                |
-|---------|------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | This function now returns **`NULL`** if the `object` isn't an object. Previously **`FALSE`** was returned. |
-
 ### Examples
 
 **Example \#1 Use of <span class="function">get\_object\_vars</span>**
@@ -913,12 +892,6 @@ an instance or the name.
 
 If called without parameter outside object, this function returns
 **`FALSE`**.
-
-### Changelog
-
-| Version | Description                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 5.1.0   | If called without parameter outside object, this function would have returned **`NULL`** with a warning, but now returns **`FALSE`**. |
 
 ### Examples
 
@@ -1055,14 +1028,6 @@ doesn't exist.
 Returns **`TRUE`** if the object is of this class or has this class as
 one of its parents, **`FALSE`** otherwise.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                    |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.9   | Added `allow_string` parameter                                                                                                                                                                 |
-| 5.3.0   | This function is no longer deprecated, and will therefore no longer throw **`E_STRICT`** warnings.                                                                                             |
-| 5.0.0   | This function became deprecated in favour of the <a href="/language/operators/type.html" class="link">instanceof</a> operator. Calling this function will result in an **`E_STRICT`** warning. |
-
 ### Examples
 
 **Example \#1 <span class="function">is\_a</span> example**
@@ -1137,14 +1102,6 @@ exist.
 
 This function returns **`TRUE`** if the object `object`, belongs to a
 class which is a subclass of `class_name`, **`FALSE`** otherwise.
-
-### Changelog
-
-| Version | Description                                                                     |
-|---------|---------------------------------------------------------------------------------|
-| 5.3.9   | Added `allow_string` parameter                                                  |
-| 5.3.7   | Added support for `class_name` to work with interfaces                          |
-| 5.0.3   | You may also specify the `object` parameter as a string (the name of the class) |
 
 ### Examples
 
@@ -1377,12 +1334,6 @@ exist or **`NULL`** in case of an error.
 > detect properties that are magically accessible using the
 > <a href="/language/oop5/overloading.html#language.oop5.overloading.members" class="link"><em>__get</em></a>
 > magic method.
-
-### Changelog
-
-| Version | Description                                                                    |
-|---------|--------------------------------------------------------------------------------|
-| 5.3.0   | This function checks the existence of a property independent of accessibility. |
 
 ### Examples
 

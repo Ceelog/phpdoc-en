@@ -178,12 +178,6 @@ The above example will output:
       }
     }
 
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 5.4.0   | Added `add_empty` parameter. |
-
 ### Notes
 
 > **Note**:
@@ -431,12 +425,6 @@ The above example will output:
         int(2)
       }
     }
-
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 5.4.0   | Added `add_empty` parameter. |
 
 ### See Also
 

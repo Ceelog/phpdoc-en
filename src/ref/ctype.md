@@ -214,12 +214,6 @@ The tested string.
 Returns **`TRUE`** if every character in the string `text` is a decimal
 digit, **`FALSE`** otherwise.
 
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 5.1.0   | Before PHP 5.1.0, this function returned **`TRUE`** when `text` was an empty string. |
-
 ### Examples
 
 **Example \#1 A <span class="function">ctype\_digit</span> example**

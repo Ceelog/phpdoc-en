@@ -36,16 +36,10 @@ SQLite
         — Escapes a string for use as a query parameter
     -   [sqlite\_exec](/book/sqlite.html#sqlite_exec) — Executes a
         result-less query against a given database
-    -   [sqlite\_factory](/book/sqlite.html#sqlite_factory) — Opens an
-        SQLite database and returns an SQLiteDatabase object
     -   [sqlite\_fetch\_all](/book/sqlite.html#sqlite_fetch_all) —
         Fetches all rows from a result set as an array of arrays
     -   [sqlite\_fetch\_array](/book/sqlite.html#sqlite_fetch_array) —
         Fetches the next row from a result set as an array
-    -   [sqlite\_fetch\_column\_types](/book/sqlite.html#sqlite_fetch_column_types)
-        — Return an array of column types from a particular table
-    -   [sqlite\_fetch\_object](/book/sqlite.html#sqlite_fetch_object) —
-        Fetches the next row from a result set as an object
     -   [sqlite\_fetch\_single](/book/sqlite.html#sqlite_fetch_single) —
         Fetches the first column of a result set as a string
     -   [sqlite\_fetch\_string](/book/sqlite.html#sqlite_fetch_string) —
@@ -54,10 +48,6 @@ SQLite
         Returns the name of a particular field
     -   [sqlite\_has\_more](/book/sqlite.html#sqlite_has_more) — Finds
         whether or not more rows are available
-    -   [sqlite\_has\_prev](/book/sqlite.html#sqlite_has_prev) — Returns
-        whether or not a previous row is available
-    -   [sqlite\_key](/book/sqlite.html#sqlite_key) — Returns the
-        current row index
     -   [sqlite\_last\_error](/book/sqlite.html#sqlite_last_error) —
         Returns the error code of the last error for a database
     -   [sqlite\_last\_insert\_rowid](/book/sqlite.html#sqlite_last_insert_rowid)
@@ -77,8 +67,6 @@ SQLite
     -   [sqlite\_popen](/book/sqlite.html#sqlite_popen) — Opens a
         persistent handle to an SQLite database and create the database
         if it does not exist
-    -   [sqlite\_prev](/book/sqlite.html#sqlite_prev) — Seek to the
-        previous row number of a result set
     -   [sqlite\_query](/book/sqlite.html#sqlite_query) — Executes a
         query against a given database and returns a result handle
     -   [sqlite\_rewind](/book/sqlite.html#sqlite_rewind) — Seek to the
@@ -94,8 +82,6 @@ SQLite
         — Encode binary data before returning it from an UDF
     -   [sqlite\_unbuffered\_query](/book/sqlite.html#sqlite_unbuffered_query)
         — Execute a query that does not prefetch and buffer all data
-    -   [sqlite\_valid](/book/sqlite.html#sqlite_valid) — Returns
-        whether more rows are available
 
 This is an extension for the SQLite Embeddable SQL Database Engine.
 SQLite is a C library that implements an embeddable SQL database engine.
@@ -397,9 +383,6 @@ Methods
     class="simpara"><a href="/book/sqlite.html#sqlite_last_error" class="link">lastError</a> -
     Returns the last error code of the most recently encountered
     error</span>
--   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_fetch_column_types" class="link">fetchColumnTypes</a> -
-    Return an array of column types from a particular table</span>
 
 <span class="classname">SQLiteResult</span>
 -------------------------------------------
@@ -412,9 +395,6 @@ Methods
 -   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_fetch_array" class="link">fetch</a> -
     Fetches the next row from the result set as an array</span>
--   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_fetch_object" class="link">fetchObject</a> -
-    Fetches the next row from the result set as an object</span>
 -   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_fetch_single" class="link">fetchSingle</a> -
     Fetches the first column from the result set as a string</span>
@@ -434,23 +414,11 @@ Methods
     class="simpara"><a href="/book/sqlite.html#sqlite_current" class="link">current</a> -
     Fetches the current row from the result set as an array</span>
 -   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_key" class="link">key</a> -
-    Return the current row index</span>
--   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_next" class="link">next</a> -
     Seek to the next row number</span>
 -   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_valid" class="link">valid</a> -
-    Returns whether more rows are available</span>
--   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_rewind" class="link">rewind</a> -
     Seek to the first row number of the result set</span>
--   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_prev" class="link">prev</a> -
-    Seek to the previous row number of the result set</span>
--   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_has_prev" class="link">hasPrev</a> -
-    Returns whether or not a previous row is available</span>
 -   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_num_rows" class="link">numRows</a> -
     Returns the number of rows in the result set</span>
@@ -471,9 +439,6 @@ Methods
     class="simpara"><a href="/book/sqlite.html#sqlite_fetch_array" class="link">fetch</a> -
     Fetches the next row from the result set as an array</span>
 -   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_fetch_object" class="link">fetchObject</a> -
-    Fetches the next row from the result set as an object</span>
--   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_fetch_single" class="link">fetchSingle</a> -
     Fetches the first column from the result set as a string</span>
 -   <span
@@ -494,9 +459,6 @@ Methods
 -   <span
     class="simpara"><a href="/book/sqlite.html#sqlite_next" class="link">next</a> -
     Seek to the next row number</span>
--   <span
-    class="simpara"><a href="/book/sqlite.html#sqlite_valid" class="link">valid</a> -
-    Returns whether more rows are available</span>
 
 sqlite\_array\_query
 ====================
@@ -1472,70 +1434,6 @@ if (!$query) {
 -   <span class="function">sqlite\_unbuffered\_query</span>
 -   <span class="function">sqlite\_array\_query</span>
 
-sqlite\_factory
-===============
-
-Opens an SQLite database and returns an SQLiteDatabase object
-
-### Description
-
-<span class="type">SQLiteDatabase</span> <span
-class="methodname">sqlite\_factory</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">int</span> `$mode`<span
-class="initializer"> = 0666</span></span> \[, <span
-class="methodparam"><span class="type">string</span>
-`&$error_message`</span> \]\] )
-
-<span class="function">sqlite\_factory</span> behaves similarly to <span
-class="function">sqlite\_open</span> in that it opens an SQLite database
-or attempts to create it if it does not exist. However, a
-<a href="/book/sqlite.html#SQLiteDatabase" class="link">SQLiteDatabase</a>
-object is returned rather than a resource. Please see the <span
-class="function">sqlite\_open</span> reference page for further usage
-and caveats.
-
-### Parameters
-
-`filename`  
-The filename of the SQLite database.
-
-`mode`  
-The mode of the file. Intended to be used to open the database in
-read-only mode. Presently, this parameter is ignored by the sqlite
-library. The default value for mode is the octal value *0666* and this
-is the recommended value.
-
-`error_message`  
-Passed by reference and is set to hold a descriptive error message
-explaining why the database could not be opened if there was an error.
-
-### Return Values
-
-Returns an SQLiteDatabase object on success, **`NULL`** on error.
-
-### Examples
-
-**Example \#1 <span class="function">sqlite\_factory</span> example**
-
-``` php
-<?php
-$dbhandle = sqlite_factory('sqlitedb');
-$dbhandle->query('SELECT user_id, username FROM users');
-
-/* functionally equivalent to: */
-
-$dbhandle = new SQLiteDatabase('sqlitedb');
-$dbhandle->query('SELECT user_id, username FROM users');
-
-?>
-```
-
-### See Also
-
--   <span class="function">sqlite\_open</span>
--   <span class="function">sqlite\_popen</span>
-
 sqlite\_fetch\_all
 ==================
 
@@ -1759,148 +1657,6 @@ while ($entry = $query->fetch(SQLITE_ASSOC)) {
 -   <span class="function">sqlite\_array\_query</span>
 -   <span class="function">sqlite\_fetch\_string</span>
 
-sqlite\_fetch\_column\_types
-============================
-
-SQLiteDatabase::fetchColumnTypes
-================================
-
-Return an array of column types from a particular table
-
-### Description
-
-<span class="type">array</span> <span
-class="methodname">sqlite\_fetch\_column\_types</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$table_name`</span> , <span class="methodparam"><span
-class="type">resource</span> `$dbhandle`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$result_type`<span
-class="initializer"> = SQLITE\_ASSOC</span></span> \] )
-
-Object oriented style (method):
-
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SQLiteDatabase::fetchColumnTypes</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$table_name`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$result_type`<span class="initializer"> =
-SQLITE\_ASSOC</span></span> \] )
-
-<span class="function">sqlite\_fetch\_column\_types</span> returns an
-array of column data types from the specified `table_name` table.
-
-### Parameters
-
-`table_name`  
-The table name to query.
-
-`dbhandle`  
-The SQLite Database resource; returned from <span
-class="function">sqlite\_open</span> when used procedurally. This
-parameter is not required when using the object-oriented method.
-
-`result_type`  
-The optional `result_type` parameter accepts a constant and determines
-how the returned array will be indexed. Using **`SQLITE_ASSOC`** will
-return only associative indices (named fields) while **`SQLITE_NUM`**
-will return only numerical indices (ordinal field numbers).
-**`SQLITE_ASSOC`** is the default for this function.
-
-### Return Values
-
-Returns an array of column data types; **`FALSE`** on error.
-
-The column names returned by **`SQLITE_ASSOC`** and **`SQLITE_BOTH`**
-will be case-folded according to the value of the
-<a href="/book/sqlite.html#" class="link">sqlite.assoc_case</a>
-configuration option.
-
-### Changelog
-
-| Version | Description         |
-|---------|---------------------|
-| 5.1.0   | Added `result_type` |
-
-### Examples
-
-**Example \#1 Procedural example**
-
-``` php
-<?php
-$db = sqlite_open('mysqlitedb');
-sqlite_query($db, 'CREATE TABLE foo (bar varchar(10), arf text)');
-$cols = sqlite_fetch_column_types('foo', $db, SQLITE_ASSOC);
-
-foreach ($cols as $column => $type) {
-    echo "Column: $column  Type: $type\n";
-}
-?>
-```
-
-**Example \#2 Object-oriented example**
-
-``` php
-<?php
-$db = new SQLiteDatabase('mysqlitedb');
-$db->query('CREATE TABLE foo (bar varchar(10), arf text)');
-$cols = $db->fetchColumnTypes('foo', SQLITE_ASSOC);
-
-foreach ($cols as $column => $type) {
-    echo "Column: $column  Type: $type\n";
-}
-?>
-```
-
-The above example will output:
-
-    Column: bar  Type: VARCHAR
-    Column: arf  Type: TEXT
-
-sqlite\_fetch\_object
-=====================
-
-SQLiteResult::fetchObject
-=========================
-
-SQLiteUnbuffered::fetchObject
-=============================
-
-Fetches the next row from a result set as an object
-
-### Description
-
-<span class="type">object</span> <span
-class="methodname">sqlite\_fetch\_object</span> ( <span
-class="methodparam"><span class="type">resource</span> `$result`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$class_name`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$ctor_params`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$decode_binary`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
-
-Object oriented style (method):
-
-<span class="type">object</span> <span
-class="methodname">SQLiteResult::fetchObject</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$class_name`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$ctor_params`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$decode_binary`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
-
-<span class="type">object</span> <span
-class="methodname">SQLiteUnbuffered::fetchObject</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$class_name`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$ctor_params`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$decode_binary`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
 sqlite\_fetch\_single
 =====================
 
@@ -2075,83 +1831,6 @@ handle, or **`FALSE`** otherwise.
 
 -   <span class="function">sqlite\_num\_rows</span>
 -   <span class="function">sqlite\_changes</span>
-
-sqlite\_has\_prev
-=================
-
-SQLiteResult::hasPrev
-=====================
-
-Returns whether or not a previous row is available
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">sqlite\_has\_prev</span> ( <span
-class="methodparam"><span class="type">resource</span> `$result`</span>
-)
-
-Object oriented style (method):
-
-<span class="type">bool</span> <span
-class="methodname">SQLiteResult::hasPrev</span> ( <span
-class="methodparam">void</span> )
-
-Find whether there are more previous rows from the given result handle.
-
-### Parameters
-
-`result`  
-The SQLite result resource. This parameter is not required when using
-the object-oriented method.
-
-> **Note**:
->
-> This function cannot be used with unbuffered result handles.
-
-### Return Values
-
-Returns **`TRUE`** if there are more previous rows available from the
-`result` handle, or **`FALSE`** otherwise.
-
-### See Also
-
--   <span class="function">sqlite\_prev</span>
--   <span class="function">sqlite\_has\_more</span>
--   <span class="function">sqlite\_num\_rows</span>
-
-sqlite\_key
-===========
-
-SQLiteResult::key
-=================
-
-Returns the current row index
-
-### Description
-
-Object oriented style (method):
-
-<span class="type">int</span> <span
-class="methodname">SQLiteResult::key</span> ( <span
-class="methodparam">void</span> )
-
-<span class="methodname">SQLiteResult::key</span> returns the current
-row index of the buffered result set `result`.
-
-Unlike all other SQLite functions, this function does not have a
-procedural version, and can only be called as a method on a <span
-class="classname">SQLiteResult</span> object.
-
-### Return Values
-
-Returns the current row index of the buffered result set `result`.
-
-### See Also
-
--   <span class="function">sqlite\_next</span>
--   <span class="function">sqlite\_current</span>
--   <span class="function">sqlite\_rewind</span>
 
 sqlite\_last\_error
 ===================
@@ -2630,50 +2309,6 @@ Returns a resource (database handle) on success, **`FALSE`** on error.
 -   <span class="function">sqlite\_open</span>
 -   <span class="function">sqlite\_close</span>
 -   <span class="function">sqlite\_factory</span>
-
-sqlite\_prev
-============
-
-SQLiteResult::prev
-==================
-
-Seek to the previous row number of a result set
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">sqlite\_prev</span> ( <span class="methodparam"><span
-class="type">resource</span> `$result`</span> )
-
-Object oriented style (method):
-
-<span class="type">bool</span> <span
-class="methodname">SQLiteResult::prev</span> ( <span
-class="methodparam">void</span> )
-
-<span class="function">sqlite\_prev</span> seeks back the `result`
-handle to the previous row.
-
-### Parameters
-
-`result`  
-The SQLite result resource. This parameter is not required when using
-the object-oriented method.
-
-> **Note**:
->
-> This function cannot be used with unbuffered result handles.
-
-### Return Values
-
-Returns **`TRUE`** on success, or **`FALSE`** if there are no more
-previous rows.
-
-### See Also
-
--   <span class="function">sqlite\_has\_prev</span>
--   <span class="function">sqlite\_rewind</span>
--   <span class="function">sqlite\_next</span>
 
 sqlite\_query
 =============
@@ -3160,56 +2795,6 @@ row, one after the other.
 
 -   <span class="function">sqlite\_query</span>
 
-sqlite\_valid
-=============
-
-SQLiteResult::valid
-===================
-
-SQLiteUnbuffered::valid
-=======================
-
-Returns whether more rows are available
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">sqlite\_valid</span> ( <span
-class="methodparam"><span class="type">resource</span> `$result`</span>
-)
-
-Object oriented style (method):
-
-<span class="type">bool</span> <span
-class="methodname">SQLiteResult::valid</span> ( <span
-class="methodparam">void</span> )
-
-<span class="type">bool</span> <span
-class="methodname">SQLiteUnbuffered::valid</span> ( <span
-class="methodparam">void</span> )
-
-Finds whether more rows are available from the given result handle.
-
-### Parameters
-
-`result`  
-The SQLite result resource. This parameter is not required when using
-the object-oriented method.
-
-> **Note**:
->
-> This function cannot be used with unbuffered result handles.
-
-### Return Values
-
-Returns **`TRUE`** if there are more rows available from the `result`
-handle, or **`FALSE`** otherwise.
-
-### See Also
-
--   <span class="function">sqlite\_num\_rows</span>
--   <span class="function">sqlite\_changes</span>
-
 **Table of Contents**
 
 -   [sqlite\_array\_query](/book/sqlite.html#sqlite_array_query) —
@@ -3235,16 +2820,10 @@ handle, or **`FALSE`** otherwise.
     Escapes a string for use as a query parameter
 -   [sqlite\_exec](/book/sqlite.html#sqlite_exec) — Executes a
     result-less query against a given database
--   [sqlite\_factory](/book/sqlite.html#sqlite_factory) — Opens an
-    SQLite database and returns an SQLiteDatabase object
 -   [sqlite\_fetch\_all](/book/sqlite.html#sqlite_fetch_all) — Fetches
     all rows from a result set as an array of arrays
 -   [sqlite\_fetch\_array](/book/sqlite.html#sqlite_fetch_array) —
     Fetches the next row from a result set as an array
--   [sqlite\_fetch\_column\_types](/book/sqlite.html#sqlite_fetch_column_types)
-    — Return an array of column types from a particular table
--   [sqlite\_fetch\_object](/book/sqlite.html#sqlite_fetch_object) —
-    Fetches the next row from a result set as an object
 -   [sqlite\_fetch\_single](/book/sqlite.html#sqlite_fetch_single) —
     Fetches the first column of a result set as a string
 -   [sqlite\_fetch\_string](/book/sqlite.html#sqlite_fetch_string) —
@@ -3253,10 +2832,6 @@ handle, or **`FALSE`** otherwise.
     the name of a particular field
 -   [sqlite\_has\_more](/book/sqlite.html#sqlite_has_more) — Finds
     whether or not more rows are available
--   [sqlite\_has\_prev](/book/sqlite.html#sqlite_has_prev) — Returns
-    whether or not a previous row is available
--   [sqlite\_key](/book/sqlite.html#sqlite_key) — Returns the current
-    row index
 -   [sqlite\_last\_error](/book/sqlite.html#sqlite_last_error) — Returns
     the error code of the last error for a database
 -   [sqlite\_last\_insert\_rowid](/book/sqlite.html#sqlite_last_insert_rowid)
@@ -3276,8 +2851,6 @@ handle, or **`FALSE`** otherwise.
 -   [sqlite\_popen](/book/sqlite.html#sqlite_popen) — Opens a persistent
     handle to an SQLite database and create the database if it does not
     exist
--   [sqlite\_prev](/book/sqlite.html#sqlite_prev) — Seek to the previous
-    row number of a result set
 -   [sqlite\_query](/book/sqlite.html#sqlite_query) — Executes a query
     against a given database and returns a result handle
 -   [sqlite\_rewind](/book/sqlite.html#sqlite_rewind) — Seek to the
@@ -3293,5 +2866,3 @@ handle, or **`FALSE`** otherwise.
     — Encode binary data before returning it from an UDF
 -   [sqlite\_unbuffered\_query](/book/sqlite.html#sqlite_unbuffered_query)
     — Execute a query that does not prefetch and buffer all data
--   [sqlite\_valid](/book/sqlite.html#sqlite_valid) — Returns whether
-    more rows are available

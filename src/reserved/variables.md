@@ -266,10 +266,6 @@ capabilities of the user agent. </span>
 <span class="simpara"> Set to a non-empty value if the script was
 queried through the HTTPS protocol. </span>
 
-> **Note**: <span class="simpara"> Note that when using ISAPI with IIS,
-> the value will be *off* if the request was not made through the HTTPS
-> protocol. </span>
-
 '`REMOTE_ADDR`'  
 <span class="simpara"> The IP address from which the user is viewing the
 current page. </span>

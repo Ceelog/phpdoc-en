@@ -274,12 +274,6 @@ or <span class="classname">SimpleXMLElement</span> object.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.2.8   | Accepts <span class="classname">SimpleXMLElement</span> again which was broken since PHP 5.2.6. |
-
 XSLTProcessor::registerPHPFunctions
 ===================================
 
@@ -354,12 +348,6 @@ $proc->importStyleSheet($xsldoc);
 echo $proc->transformToXML($xmldoc);
 ?>
 ```
-
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.1.0   | The `restrict` parameter was added. |
 
 XSLTProcessor::removeParameter
 ==============================

@@ -29,12 +29,6 @@ Otherwise invalid characters will be silently discarded.
 Returns the decoded data or **`FALSE`** on failure. The returned data
 may be binary.
 
-### Changelog
-
-| Version | Description    |
-|---------|----------------|
-| 5.2.0   | `strict` added |
-
 ### Examples
 
 **Example \#1 <span class="function">base64\_decode</span> example**
@@ -146,10 +140,9 @@ on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | The `context` parameter was added.                                                                                                                         |
-| 5.1.3   | This function now uses the default stream context, which can be set/changed with the <span class="function">stream\_context\_set\_default</span> function. |
+| Version | Description                        |
+|---------|------------------------------------|
+| 7.1.0   | The `context` parameter was added. |
 
 ### Examples
 
@@ -362,14 +355,6 @@ and spaces will be percent encoded (*%20*).
 
 Returns a URL-encoded string.
 
-### Changelog
-
-| Version | Description                              |
-|---------|------------------------------------------|
-| 5.4.0   | The `enc_type` parameter was added.      |
-| 5.1.3   | Square brackets are escaped.             |
-| 5.1.2   | The `arg_separator` parameter was added. |
-
 ### Examples
 
 **Example \#1 Simple usage of <span
@@ -556,14 +541,6 @@ the case of **`PHP_URL_PORT`**) instead of an <span
 class="type">array</span>. If the requested component doesn't exist
 within the given URL, **`NULL`** will be returned.
 
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.4.7   | Fixed *host* recognition when *scheme* is omitted and a leading component separator is present. |
-| 5.3.3   | Removed the **`E_WARNING`** that was emitted when URL parsing failed.                           |
-| 5.1.2   | Added the `component` parameter.                                                                |
-
 ### Examples
 
 **Example \#1 A <span class="function">parse\_url</span> example**
@@ -742,13 +719,6 @@ media with character conversions (like some email systems).
 >
 > Prior to PHP 5.3.0, rawurlencode encoded tildes (*\~*) as per
 > <a href="http://www.faqs.org/rfcs/rfc1738" class="link external">» RFC 1738</a>.
-
-### Changelog
-
-| Version | Description                                                                                                         |
-|---------|---------------------------------------------------------------------------------------------------------------------|
-| 5.3.4   | Tilde characters are no longer encoded when <span class="function">rawurlencode</span> is used with EBCDIC strings. |
-| 5.3.0   | Now conforms to <a href="http://www.faqs.org/rfcs/rfc3986" class="link external">» RFC 3986</a>.                    |
 
 ### Examples
 

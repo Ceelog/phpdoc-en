@@ -12791,11 +12791,10 @@ The formatted string or, if an error occurred, **`FALSE`**.
 
 ### Changelog
 
-| Version          | Description                                                                                                                                                                                                      |
-|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.5            | Support for providing general <span class="classname">DateTimeInterface</span> objects to the `value` parameter was added. Formerly, only proper <span class="classname">DateTime</span> objects were supported. |
-| 5.5.0/PECL 3.0.0 | Support for providing <span class="classname">IntlCalendar</span> objects to the `value` parameter was added.                                                                                                    |
-| 5.3.4            | Support for providing <span class="classname">DateTime</span> objects to the `value` parameter was added.                                                                                                        |
+| Version    | Description                                                                                                                                                                                                      |
+|------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.1.5      | Support for providing general <span class="classname">DateTimeInterface</span> objects to the `value` parameter was added. Formerly, only proper <span class="classname">DateTime</span> objects were supported. |
+| PECL 3.0.0 | Support for providing <span class="classname">IntlCalendar</span> objects to the `value` parameter was added.                                                                                                    |
 
 ### Examples
 

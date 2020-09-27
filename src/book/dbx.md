@@ -63,9 +63,6 @@ supported, but others will follow:
     <a href="/book/fbsql.html#FrontBase%20Functions" class="link">FrontBase</a>
     </span>
 -   <span class="simpara">
-    <a href="/book/mssql.html#Mssql%20Functions" class="link">Microsoft SQL Server</a>
-    </span>
--   <span class="simpara">
     <a href="/set/mysqlinfo.html#MySQL%20Functions" class="link">MySQL</a>
     </span>
 -   <span class="simpara">
@@ -73,9 +70,6 @@ supported, but others will follow:
     </span>
 -   <span class="simpara">
     <a href="/book/pgsql.html#PostgreSQL%20Functions" class="link">PostgreSQL</a>
-    </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#Sybase%20Functions" class="link">Sybase-CT</a>
     </span>
 -   <span class="simpara">
     <a href="/book/oci8.html#OCI8%20Functions" class="link">Oracle (oci8)</a>

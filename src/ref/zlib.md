@@ -208,12 +208,6 @@ echo $compressed;
 ?>
 ```
 
-### Changelog
-
-| Version | Description                 |
-|---------|-----------------------------|
-| 5.4.0   | Added `encoding` parameter. |
-
 ### See Also
 
 -   <span class="function">gzdeflate</span>
@@ -301,12 +295,6 @@ echo $compressed;
 ?>
 ```
 
-### Changelog
-
-| Version | Description                 |
-|---------|-----------------------------|
-| 5.4.0   | Added `encoding` parameter. |
-
 ### See Also
 
 -   <span class="function">gzinflate</span>
@@ -361,12 +349,6 @@ checksum.
 ### Return Values
 
 The encoded string, or **`FALSE`** if an error occurred.
-
-### Changelog
-
-| Version | Description                                                  |
-|---------|--------------------------------------------------------------|
-| 5.4.0   | **`FORCE_DEFLATE`** now generates RFC 1950 compliant output. |
 
 ### Examples
 

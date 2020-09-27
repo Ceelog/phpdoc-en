@@ -74,7 +74,6 @@ PHP Manual
     -   [Authentication Services](/refs/remote/auth.html)
     -   [Command Line Specific Extensions](/refs/utilspec/cmdline.html)
     -   [Compression and Archive Extensions](/refs/compression.html)
-    -   [Credit Card Processing](/refs/creditcard.html)
     -   [Cryptography Extensions](/refs/crypto.html)
     -   [Database Extensions](/refs/database.html)
     -   [Date and Time Related Extensions](/refs/calendar.html)
@@ -196,7 +195,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">And several others</a>
 </span> </span>
 
-2020-09-23
+2020-09-28
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

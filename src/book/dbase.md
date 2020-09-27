@@ -61,7 +61,7 @@ class="function">flock</span>. There has been no support for locking
 earlier, so two concurrent web server processes modifying the same dBase
 file would have very likely ruined your database. This can happen even
 with dbase 7.0.0+ on systems which implement the locks at the process
-level with multithreaded SAPIs such as ISAPI.
+level with multithreaded SAPIs.
 
 dBase files are simple sequential files of fixed length records. Records
 are appended to the end of the file and deleted records are kept until
@@ -176,19 +176,19 @@ Adds a record to a database
 <span class="type">bool</span> <span
 class="methodname">dbase\_add\_record</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> , <span class="methodparam"><span
-class="type">array</span> `$record`</span> )
+`$database`</span> , <span class="methodparam"><span
+class="type">array</span> `$data`</span> )
 
 Adds the given data to the database.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
-`record`  
+`data`  
 An indexed array of data. The number of items must be equal to the
 number of fields in the database, otherwise <span
 class="function">dbase\_add\_record</span> will fail.
@@ -205,9 +205,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -246,14 +246,14 @@ Closes a database
 
 <span class="type">bool</span> <span
 class="methodname">dbase\_close</span> ( <span class="methodparam"><span
-class="type">resource</span> `$dbase_identifier`</span> )
+class="type">resource</span> `$database`</span> )
 
-Closes the given database link identifier.
+Closes the given database resource.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
@@ -263,9 +263,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -300,8 +300,8 @@ Creates a database
 
 <span class="type">resource</span> <span
 class="methodname">dbase\_create</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-, <span class="methodparam"><span class="type">array</span>
+class="methodparam"><span class="type">string</span> `$path`</span> ,
+<span class="methodparam"><span class="type">array</span>
 `$fields`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$type`<span class="initializer"> =
 DBASE\_TYPE\_DBASE</span></span> \] )
@@ -324,8 +324,8 @@ force truncation.
 
 ### Parameters
 
-`filename`  
-The name of the database. It can be a relative or absolute path to the
+`path`  
+The path of the database. It can be a relative or absolute path to the
 file where dBase will store your data.
 
 `fields`  
@@ -345,8 +345,8 @@ The type of database to be created. Either **`DBASE_TYPE_DBASE`** or
 
 ### Return Values
 
-Returns a database link identifier if the database is successfully
-created, or **`FALSE`** if an error occurred.
+Returns a database resource if the database is successfully created, or
+**`FALSE`** if an error occurred.
 
 ### Changelog
 
@@ -394,8 +394,8 @@ Deletes a record from a database
 <span class="type">bool</span> <span
 class="methodname">dbase\_delete\_record</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$record_number`</span> )
+`$database`</span> , <span class="methodparam"><span
+class="type">int</span> `$number`</span> )
 
 Marks the given record to be deleted from the database.
 
@@ -406,12 +406,12 @@ Marks the given record to be deleted from the database.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
-`record_number`  
+`number`  
 An integer which spans from 1 to the number of records in the database
 (as returned by <span class="function">dbase\_numrecords</span>).
 
@@ -421,9 +421,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### See Also
 
@@ -440,15 +440,15 @@ Gets the header info of a database
 <span class="type">array</span> <span
 class="methodname">dbase\_get\_header\_info</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> )
+`$database`</span> )
 
-Returns information on the column structure of the given database link
-identifier.
+Returns information on the column structure of the given database
+resource.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
@@ -490,9 +490,9 @@ returned.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -525,19 +525,19 @@ Gets a record from a database as an associative array
 <span class="type">array</span> <span
 class="methodname">dbase\_get\_record\_with\_names</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$record_number`</span> )
+`$database`</span> , <span class="methodparam"><span
+class="type">int</span> `$number`</span> )
 
 Gets a record from a dBase database as an associative array.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
-`record_number`  
+`_number`  
 The index of the record between *1* and
 *dbase\_numrecords($dbase\_identifier)*.
 
@@ -565,9 +565,9 @@ will return **`FALSE`**.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -604,19 +604,19 @@ Gets a record from a database as an indexed array
 <span class="type">array</span> <span
 class="methodname">dbase\_get\_record</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> , <span class="methodparam"><span
-class="type">int</span> `$record_number`</span> )
+`$database`</span> , <span class="methodparam"><span
+class="type">int</span> `$number`</span> )
 
 Gets a record from a database as an indexed array.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
-`record_number`  
+`number`  
 The index of the record between *1* and
 *dbase\_numrecords($dbase\_identifier)*.
 
@@ -643,9 +643,9 @@ On error, <span class="function">dbase\_get\_record</span> will return
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### See Also
 
@@ -661,7 +661,7 @@ Gets the number of fields of a database
 <span class="type">int</span> <span
 class="methodname">dbase\_numfields</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> )
+`$database`</span> )
 
 Gets the number of fields (columns) in the specified database.
 
@@ -672,8 +672,8 @@ Gets the number of fields (columns) in the specified database.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
@@ -683,9 +683,9 @@ The number of fields in the database, or **`FALSE`** if an error occurs.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -717,7 +717,7 @@ Gets the number of records in a database
 <span class="type">int</span> <span
 class="methodname">dbase\_numrecords</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> )
+`$database`</span> )
 
 Gets the number of records (rows) in the specified database.
 
@@ -732,8 +732,8 @@ Gets the number of records (rows) in the specified database.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
@@ -744,9 +744,9 @@ occurs.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -786,7 +786,7 @@ Opens a database
 
 <span class="type">resource</span> <span
 class="methodname">dbase\_open</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> , <span
+class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 <span class="function">dbase\_open</span> opens a dBase database with
@@ -805,8 +805,8 @@ the given access mode.
 
 ### Parameters
 
-`filename`  
-The name of the database. It can be a relative or absolute path to the
+`path`  
+The path of the database. It can be a relative or absolute path to the
 file where dBase will store your data.
 
 `mode`  
@@ -822,6 +822,10 @@ write).
 
 As of dbase 7.0.0 you can use **`DBASE_RDONLY`** and **`DBASE_RDWR`**,
 respectively, to specify the `mode`.
+
+### Return Values
+
+Returns a database resource on success, or **`FALSE`** on failure.
 
 ### Changelog
 
@@ -850,8 +854,8 @@ if ($db) {
 
 ### Return Values
 
-Returns a database link identifier if the database is successfully
-opened, or **`FALSE`** if an error occurred.
+Returns a database resource if the database is successfully opened, or
+**`FALSE`** if an error occurred.
 
 ### See Also
 
@@ -867,7 +871,7 @@ Packs a database
 
 <span class="type">bool</span> <span
 class="methodname">dbase\_pack</span> ( <span class="methodparam"><span
-class="type">resource</span> `$dbase_identifier`</span> )
+class="type">resource</span> `$database`</span> )
 
 Packs the specified database by permanently deleting all records marked
 for deletion using <span class="function">dbase\_delete\_record</span>.
@@ -876,8 +880,8 @@ to dBASE III's PACK command).
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
@@ -887,9 +891,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 
@@ -927,21 +931,20 @@ Replaces a record in a database
 <span class="type">bool</span> <span
 class="methodname">dbase\_replace\_record</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$dbase_identifier`</span> , <span class="methodparam"><span
-class="type">array</span> `$record`</span> , <span
-class="methodparam"><span class="type">int</span>
-`$record_number`</span> )
+`$database`</span> , <span class="methodparam"><span
+class="type">array</span> `$data`</span> , <span
+class="methodparam"><span class="type">int</span> `$number`</span> )
 
 Replaces the given record in the database with the given data.
 
 ### Parameters
 
-`dbase_identifier`  
-The database link identifier, returned by <span
+`database`  
+The database resource, returned by <span
 class="function">dbase\_open</span> or <span
 class="function">dbase\_create</span>.
 
-`record`  
+`data`  
 An indexed array of data. The number of items must be equal to the
 number of fields in the database, otherwise <span
 class="function">dbase\_replace\_record</span> will fail.
@@ -952,7 +955,7 @@ class="function">dbase\_replace\_record</span> will fail.
 > return value for this parameter, remember to reset the key named
 > *deleted*.
 
-`record_number`  
+`number`  
 An integer which spans from 1 to the number of records in the database
 (as returned by <span class="function">dbase\_numrecords</span>).
 
@@ -962,9 +965,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version     | Description                                                                                                 |
-|-------------|-------------------------------------------------------------------------------------------------------------|
-| dbase 7.0.0 | `dbase_identifier` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
+| Version     | Description                                                                                         |
+|-------------|-----------------------------------------------------------------------------------------------------|
+| dbase 7.0.0 | `database` is now a <span class="type">resource</span> instead of an <span class="type">int</span>. |
 
 ### Examples
 

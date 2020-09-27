@@ -659,12 +659,6 @@ The string to be converted.
 
 Returns the converted string or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                                                                                              |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | Since this version, the function returns **`FALSE`** on illegal characters, unless *//IGNORE* is specified in output charset. Before, it returned partial output string. |
-
 ### Examples
 
 **Example \#1 <span class="function">iconv</span> example**

@@ -43,7 +43,6 @@ much faster.
 | Version | Description         |
 |---------|---------------------|
 | 7.1.0   | Added WebP support. |
-| 5.3.0   | Added icon support. |
 
 ### Predefined Constants
 

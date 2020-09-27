@@ -2499,13 +2499,6 @@ if ($file->flock(LOCK_EX)) { // do an exclusive lock
 ?>
 ```
 
-### Changelog
-
-| Version       | Description                                                                                                                  |
-|---------------|------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.22, 5.6.6 | Added support for the `wouldblock` parameter on Windows.                                                                     |
-| 5.3.2         | The automatic unlocking when the file's resource handle is closed was removed. Unlocking now always has to be done manually. |
-
 ### See Also
 
 -   <span class="function">flock</span>
@@ -3694,7 +3687,6 @@ No value is returned.
 | Version | Description                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | 7.4.0   | The `escape` parameter now also accepts an empty string to disable the proprietary escape mechanism. |
-| 5.3.0   | Added the `escape` parameter.                                                                        |
 
 ### Examples
 

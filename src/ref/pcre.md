@@ -381,12 +381,9 @@ Returns the number of full pattern matches (which might be zero), or
 
 ### Changelog
 
-| Version | Description                                                                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | The **`PREG_UNMATCHED_AS_NULL`** is now supported for the `$flags` parameter.                                                                    |
-| 5.4.0   | The `matches` parameter became optional.                                                                                                         |
-| 5.3.6   | Returns **`FALSE`** if `offset` is higher than `subject` length.                                                                                 |
-| 5.2.2   | Named subpatterns now accept the syntax *(?\<name\>)* and *(?'name')* as well as *(?P\<name\>)*. Previous versions accepted only *(?P\<name\>)*. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.2.0   | The **`PREG_UNMATCHED_AS_NULL`** is now supported for the `$flags` parameter. |
 
 ### Examples
 
@@ -699,11 +696,9 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | The **`PREG_UNMATCHED_AS_NULL`** is now supported for the `$flags` parameter.                                                                    |
-| 5.3.6   | Returns **`FALSE`** if `offset` is higher than `subject` length.                                                                                 |
-| 5.2.2   | Named subpatterns now accept the syntax *(?\<name\>)* and *(?'name')* as well as *(?P\<name\>)*. Previous versions accepted only *(?P\<name\>)*. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.2.0   | The **`PREG_UNMATCHED_AS_NULL`** is now supported for the `$flags` parameter. |
 
 ### Examples
 
@@ -854,7 +849,6 @@ Returns the quoted (escaped) string.
 | Version | Description                      |
 |---------|----------------------------------|
 | 7.3.0   | The *\#* character is now quoted |
-| 5.3.0   | The *-* character is now quoted  |
 
 ### Examples
 
@@ -1094,7 +1088,6 @@ If matches are found, the new subject will be returned, otherwise
 | Version | Description                      |
 |---------|----------------------------------|
 | 7.4.0   | The `flags` parameter was added. |
-| 5.1.0   | The `count` parameter was added. |
 
 ### Examples
 
@@ -1261,14 +1254,6 @@ If matches are found, the new `subject` will be returned, otherwise
 As of PHP 5.5.0 **`E_DEPRECATED`** level error is emitted when passing
 in the "\\e" modifier. As of PHP 7.0.0 using the "\\e" modifier is an
 error; an **`E_WARNING`** is emitted in this case.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | Support for the */e* modifier has been removed. Use <span class="function">preg\_replace\_callback</span> instead.                                                                                                                          |
-| 5.5.0   | The */e* modifier is deprecated. Use <span class="function">preg\_replace\_callback</span> instead. See the <a href="/pcre/pattern.html#" class="link">PREG_REPLACE_EVAL</a> documentation for additional information about security risks. |
-| 5.1.0   | Added the `count` parameter                                                                                                                                                                                                                 |
 
 ### Examples
 

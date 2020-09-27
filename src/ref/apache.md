@@ -16,6 +16,10 @@ process after a script with high memory consumption has been run as
 memory will usually only be freed internally but not given back to the
 operating system.
 
+Works in the Apache, FastCGI and
+<a href="/book/nsapi.html" class="link">NSAPI server module</a> in
+Netscape/iPlanet/SunONE webservers.
+
 ### Return Values
 
 Returns **`TRUE`** if PHP is running as an Apache 1 module, the Apache
@@ -24,12 +28,6 @@ version is non-multithreaded, and the
 directive is enabled (disabled by default). If these conditions are not
 met, **`FALSE`** is returned and an error of level **`E_WARNING`** is
 generated.
-
-### Changelog
-
-| Version | Description                                                                                                                 |
-|---------|-----------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | This function became available under FastCGI. Previously, it was supported only when PHP was installed as an Apache module. |
 
 ### Notes
 
@@ -361,7 +359,10 @@ Fetch all HTTP request headers
 class="methodname">apache\_request\_headers</span> ( <span
 class="methodparam">void</span> )
 
-Fetches all HTTP request headers from the current request.
+Fetches all HTTP request headers from the current request. Works in the
+Apache, FastCGI, CLI, FPM and
+<a href="/book/nsapi.html" class="link">NSAPI server module</a> in
+Netscape/iPlanet/SunONE webservers.
 
 ### Return Values
 
@@ -370,11 +371,9 @@ An associative array of all the HTTP headers in the current request, or
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | This function became available in the FPM SAPI.                                                                                                                                                                                        |
-| 5.5.7   | This function became available in the CLI server.                                                                                                                                                                                      |
-| 5.4.0   | This function became available under FastCGI. Previously, it was supported when PHP was installed as an Apache module or by the <a href="/book/nsapi.html" class="link">NSAPI server module</a> in Netscape/iPlanet/SunONE webservers. |
+| Version | Description                                     |
+|---------|-------------------------------------------------|
+| 7.3.0   | This function became available in the FPM SAPI. |
 
 ### Examples
 
@@ -459,19 +458,14 @@ Fetch all HTTP response headers
 class="methodname">apache\_response\_headers</span> ( <span
 class="methodparam">void</span> )
 
-Fetch all HTTP response headers.
+Fetch all HTTP response headers. Works in the Apache, FastCGI, CLI, FPM
+and <a href="/book/nsapi.html" class="link">NSAPI server module</a> in
+Netscape/iPlanet/SunONE webservers.
 
 ### Return Values
 
 An array of all Apache response headers on success or **`FALSE`** on
 failure.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.7   | This function became available in the CLI server.                                                                                                                                                                                      |
-| 5.4.0   | This function became available under FastCGI. Previously, it was supported when PHP was installed as an Apache module or by the <a href="/book/nsapi.html" class="link">NSAPI server module</a> in Netscape/iPlanet/SunONE webservers. |
 
 ### Examples
 
@@ -585,11 +579,9 @@ An associative array of all the HTTP headers in the current request, or
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | This function became available in the FPM SAPI.                                                                                                                                                                                        |
-| 5.5.7   | This function became available in the CLI server.                                                                                                                                                                                      |
-| 5.4.0   | This function became available under FastCGI. Previously, it was supported when PHP was installed as an Apache module or by the <a href="/book/nsapi.html" class="link">NSAPI server module</a> in Netscape/iPlanet/SunONE webservers. |
+| Version | Description                                     |
+|---------|-------------------------------------------------|
+| 7.3.0   | This function became available in the FPM SAPI. |
 
 ### Examples
 

@@ -259,7 +259,6 @@ configuration directive is enabled.
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.2.0   | Usage of a <span class="type">string</span> as the `assertion` became deprecated. It now emits an **`E_DEPRECATED`** notice when both <a href="/info/setup.html#" class="link">assert.active</a> and <a href="/ini/core.html#ini.zend.assertions" class="link">zend.assertions</a> are set to *1*.                     |
 | 7.0.0   | <span class="function">assert</span> is now a language construct and not a function. `assertion` can now be an expression. The second parameter is now interpreted either as an `exception` (if a <span class="classname">Throwable</span> object is given), or as the `description` supported from PHP 5.4.8 onwards. |
-| 5.4.8   | The `description` parameter was added. The `description` is also now provided to a callback function in **`ASSERT_CALLBACK`** mode as the fourth argument.                                                                                                                                                             |
 
 ### Examples
 
@@ -599,14 +598,6 @@ if (!extension_loaded('sqlite')) {
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                 |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | <span class="function">dl</span> is disabled in PHP-FPM.                                                                                                                                                                                                                    |
-| 5.3.9   | <span class="function">dl</span> is enabled in PHP-FPM, albeit discouraged.                                                                                                                                                                                                 |
-| 5.3.0   | <span class="function">dl</span> is now disabled in some SAPIs due to stability issues. The only SAPIs that allow <span class="function">dl</span> are CLI and Embed. Use the <a href="/ini/core.html#ini.extension" class="link">Extension Loading Directives</a> instead. |
-
 ### Notes
 
 > **Note**:
@@ -929,12 +920,6 @@ The configuration option name.
 Returns the current value of the PHP configuration variable specified by
 `option`, or **`FALSE`** if an error occurs.
 
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.3.0   | <span class="function">get\_cfg\_var</span> was fixed to be able to return "array" ini options. |
-
 ### See Also
 
 -   <span class="function">ini\_get</span>
@@ -1053,14 +1038,6 @@ The above example will output something similar to:
 
 Returns an array of constant name =\> constant value array, optionally
 groupped by extension name registering the constant.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                              |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.1   | Windows only: Core constants are categorized under *Core*, previously *mhash*.                                                                                                                                           |
-| 5.3.0   | Core constants are categorized under *Core*, previously *internal*. On Windows, the Core Constants are categorized under *mhash*.                                                                                        |
-| 5.2.11  | The `categorize` parameter now operates appropriately. Previously, the `categorize` parameter was interpreted as *!is\_null($categorize)*, making any value other than **`NULL`** force the constants to be categorized. |
 
 ### Examples
 
@@ -1305,12 +1282,6 @@ are listed. Defaults to **`FALSE`** (return regular extensions).
 
 Returns an indexed array of all the modules names.
 
-### Changelog
-
-| Version | Description                                        |
-|---------|----------------------------------------------------|
-| 5.2.4   | The optional `zend_extensions` parameter was added |
-
 ### Examples
 
 **Example \#1 <span class="function">get\_loaded\_extensions</span>
@@ -1380,10 +1351,9 @@ Returns 0 if magic\_quotes\_gpc is off, 1 otherwise. Or always returns
 
 ### Changelog
 
-| Version | Description                                                                       |
-|---------|-----------------------------------------------------------------------------------|
-| 7.4.0   | This function has been deprecated.                                                |
-| 5.4.0   | Always returns **`FALSE`** because the magic quotes feature was removed from PHP. |
+| Version | Description                        |
+|---------|------------------------------------|
+| 7.4.0   | This function has been deprecated. |
 
 ### Examples
 
@@ -1411,19 +1381,6 @@ echo $lastname; // O\'reilly
 $sql = "INSERT INTO lastnames (lastname) VALUES ('$lastname')";
 ?>
 ```
-
-### Notes
-
-> **Note**:
->
-> If the directive
-> <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a> is
-> ON it will completely override
-> <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>. So even
-> when <span class="function">get\_magic\_quotes\_gpc</span> returns
-> **`TRUE`** neither double quotes, backslashes or NUL's will be
-> escaped. Only single quotes will be escaped. In this case they'll look
-> like: *''*
 
 ### See Also
 
@@ -1458,10 +1415,9 @@ returns **`FALSE`** as of PHP 5.4.0.
 
 ### Changelog
 
-| Version | Description                                                                       |
-|---------|-----------------------------------------------------------------------------------|
-| 7.4.0   | This function has been deprecated.                                                |
-| 5.4.0   | Always returns **`FALSE`** because the magic quotes feature was removed from PHP. |
+| Version | Description                        |
+|---------|------------------------------------|
+| 7.4.0   | This function has been deprecated. |
 
 ### Examples
 
@@ -1865,13 +1821,9 @@ This function will return an array of option / argument pairs, or
 
 ### Changelog
 
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 7.1.0   | Added the `optind` parameter.                                               |
-| 5.3.0   | Added support for "=" as argument/value separator.                          |
-| 5.3.0   | Added support for optional values (specified with "::").                    |
-| 5.3.0   | Parameter `longopts` is available on all systems.                           |
-| 5.3.0   | This function is no longer system dependent, and now works on Windows, too. |
+| Version | Description                   |
+|---------|-------------------------------|
+| 7.1.0   | Added the `optind` parameter. |
 
 ### Examples
 
@@ -2153,12 +2105,6 @@ for information on what access levels mean.
 > <span class="function">ini\_get\_all</span> ignores "array" ini
 > options such as pdo.dsn.\*.
 
-### Changelog
-
-| Version | Description      |
-|---------|------------------|
-| 5.3.0   | Added `details`. |
-
 ### Examples
 
 **Example \#1 <span class="function">ini\_get\_all</span> examples**
@@ -2339,12 +2285,6 @@ The above example will output something similar to:
 > <span class="function">ini\_get</span> can't read "array" ini options
 > such as pdo.dsn.\*, and returns **`FALSE`** in this case.
 
-### Changelog
-
-| Version | Description                                                                                                               |
-|---------|---------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Previously, the empty string was returned if the configuration option didn't exist. now, **`FALSE`** is returned instead. |
-
 ### See Also
 
 -   <span class="function">get\_cfg\_var</span>
@@ -2459,20 +2399,6 @@ echo ini_get('display_errors');
 -   <span class="function">ini\_restore</span>
 -   <a href="/configuration/changes.html" class="link">How to change configuration settings</a>
 
-magic\_quotes\_runtime
-======================
-
-Alias of <span class="function">set\_magic\_quotes\_runtime</span>
-
-**Warning**
-
-This alias was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP 7.0.0.
-
-### Description
-
-This function is an alias of: <span
-class="function">set\_magic\_quotes\_runtime</span>
-
 main
 ====
 
@@ -2535,13 +2461,6 @@ reported.
 
 Returns the memory peak in bytes.
 
-### Changelog
-
-| Version | Description                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.1   | Compiling with <a href="/ini/core.html#ini.memory-limit" class="link">--enable-memory-limit</a> is no longer required for this function to exist. |
-| 5.2.0   | `real_usage` was added.                                                                                                                           |
-
 ### See Also
 
 -   <span class="function">memory\_get\_usage</span>
@@ -2576,13 +2495,6 @@ is reported.
 ### Return Values
 
 Returns the memory amount in bytes.
-
-### Changelog
-
-| Version | Description                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.1   | Compiling with <a href="/ini/core.html#ini.memory-limit" class="link">--enable-memory-limit</a> is no longer required for this function to exist. |
-| 5.2.0   | `real_usage` was added.                                                                                                                           |
 
 ### Examples
 
@@ -2716,56 +2628,6 @@ if ($filelist = php_ini_scanned_files()) {
 -   <span class="function">phpinfo</span>
 -   <span class="function">php\_ini\_loaded\_file</span>
 
-php\_logo\_guid
-===============
-
-Gets the logo guid
-
-### Description
-
-<span class="type">string</span> <span
-class="methodname">php\_logo\_guid</span> ( <span
-class="methodparam">void</span> )
-
-This function returns the ID which can be used to display the PHP logo
-using the built-in image. Logo is displayed only if
-<a href="/ini/core.html#ini.expose-php" class="link">expose_php</a> is
-On.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.5.0.
-
-### Return Values
-
-Returns *PHPE9568F34-D428-11d2-A769-00AA001ACF42*.
-
-### Changelog
-
-| Version | Description                                                              |
-|---------|--------------------------------------------------------------------------|
-| 5.5.0   | <span class="function">php\_logo\_guid</span> has been removed from PHP. |
-
-### Examples
-
-**Example \#1 <span class="function">php\_logo\_guid</span> example**
-
-``` php
-<?php
-
-echo '<img src="' . $_SERVER['PHP_SELF'] .
-     '?=' . php_logo_guid() . '" alt="PHP Logo !" />';
-
-?>
-```
-
-### See Also
-
--   <span class="function">phpinfo</span>
--   <span class="function">phpversion</span>
--   <span class="function">phpcredits</span>
--   <span class="function">zend\_logo\_guid</span>
-
 php\_sapi\_name
 ===============
 
@@ -2786,11 +2648,9 @@ depending on the exact SAPI used. Possible values are listed below.
 
 Returns the interface type, as a lowercase string.
 
-Although not exhaustive, the possible return values include *aolserver*,
-*apache*, *apache2filter*, *apache2handler*, *caudium*, *cgi* (until PHP
-5.3), *cgi-fcgi*, *cli*, *cli-server*, *continuity*, *embed*,
-*fpm-fcgi*, *isapi*, *litespeed*, *milter*, *nsapi*, *phpdbg*, *phttpd*,
-*pi3web*, *roxen*, *thttpd*, *tux*, and *webjames*.
+Although not exhaustive, the possible return values include *apache*,
+*apache2handler*, *cgi* (until PHP 5.3), *cgi-fcgi*, *cli*,
+*cli-server*, *embed*, *fpm-fcgi*, *litespeed*, *nsapi*, *phpdbg*.
 
 ### Examples
 
@@ -2820,7 +2680,7 @@ if (substr($sapi_type, 0, 3) == 'cgi') {
 **Tip**
 
 The defined SAPI may not be obvious, because for example instead of
-*apache* it may be defined as *apache2handler* or *apache2filter*.
+*apache* it may be defined as *apache2handler*.
 
 ### See Also
 
@@ -3061,13 +2921,6 @@ values together with the
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.0   | Logo GUIDs were replaced with data URIs, and so turning off expose\_php now has no effect on the result of phpinfo(). Credits are also now embedded within the output itself instead of linked. |
-| 5.2.2   | The "Loaded Configuration File" information was added, when before only "Configuration File (php.ini) Path" existed.                                                                            |
 
 ### Examples
 
@@ -3380,81 +3233,6 @@ set_include_path(get_include_path() . PATH_SEPARATOR . $path);
 -   <span class="function">restore\_include\_path</span>
 -   <span class="function">include</span>
 
-set\_magic\_quotes\_runtime
-===========================
-
-Sets the current active configuration setting of magic\_quotes\_runtime
-
-**Warning**
-
-This function was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP
-7.0.0.
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">set\_magic\_quotes\_runtime</span> ( <span
-class="methodparam"><span class="type">bool</span> `$new_setting`</span>
-)
-
-Set the current active configuration setting of
-<a href="/info/setup.html#" class="link">magic_quotes_runtime</a>.
-
-### Errors/Exceptions
-
-Since PHP 5.3 this function has been deprecated and will raise an
-E\_DEPRECATED warning upon execution. Since PHP 5.4 this function will
-also raise an E\_CORE\_ERROR on trying to enable magic quotes.
-
-### Parameters
-
-`new_setting`  
-**`FALSE`** for off, **`TRUE`** for on.
-
-### Return Values
-
-Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Examples
-
-**Example \#1 <span class="function">set\_magic\_quotes\_runtime</span>
-example**
-
-``` php
-<?php
-// Create a temporary file pointer
-$fp = tmpfile();
-
-// Write some data to the pointer
-fwrite($fp, '\'PHP\' is a Recursive acronym');
-
-// Without magic_quotes_runtime
-rewind($fp);
-set_magic_quotes_runtime(false);
-
-echo 'Without magic_quotes_runtime: ' . fread($fp, 64), PHP_EOL;
-
-// With magic_quotes_runtime
-rewind($fp);
-set_magic_quotes_runtime(true);
-
-echo 'With magic_quotes_runtime: ' . fread($fp, 64), PHP_EOL;
-
-// Clean up
-fclose($fp);
-?>
-```
-
-The above example will output:
-
-    Without magic_quotes_runtime: 'PHP' is a Recursive acronym
-    With magic_quotes_runtime: \'PHP\' is a Recursive acronym
-
-### See Also
-
--   <span class="function">get\_magic\_quotes\_gpc</span>
--   <span class="function">get\_magic\_quotes\_runtime</span>
-
 set\_time\_limit
 ================
 
@@ -3667,51 +3445,6 @@ if (version_compare(PHP_VERSION, '5.0.0', '<')) {
 -   <span class="function">php\_uname</span>
 -   <span class="function">function\_exists</span>
 
-zend\_logo\_guid
-================
-
-Gets the Zend guid
-
-### Description
-
-<span class="type">string</span> <span
-class="methodname">zend\_logo\_guid</span> ( <span
-class="methodparam">void</span> )
-
-This function returns the ID which can be used to display the Zend logo
-using the built-in image.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.5.0.
-
-### Return Values
-
-Returns *PHPE9568F35-D428-11d2-A769-00AA001ACF42*.
-
-### Changelog
-
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 5.5.0   | <span class="function">zend\_logo\_guid</span> has been removed from PHP. |
-
-### Examples
-
-**Example \#1 <span class="function">zend\_logo\_guid</span> example**
-
-``` php
-<?php
-
-echo '<img src="' . $_SERVER['PHP_SELF'] .
-     '?=' . zend_logo_guid() . '" alt="Zend Logo !" />';
-
-?>
-```
-
-### See Also
-
--   <span class="function">php\_logo\_guid</span>
-
 zend\_thread\_id
 ================
 
@@ -3861,8 +3594,6 @@ The above example will output something similar to:
     configuration option
 -   [ini\_set](/ref/info.html#ini_set) — Sets the value of a
     configuration option
--   [magic\_quotes\_runtime](/ref/info.html#magic_quotes_runtime) —
-    Alias of set\_magic\_quotes\_runtime
 -   [main](/ref/info.html#main) — Dummy for main
 -   [memory\_get\_peak\_usage](/ref/info.html#memory_get_peak_usage) —
     Returns the peak of memory allocated by PHP
@@ -3872,7 +3603,6 @@ The above example will output something similar to:
     Retrieve a path to the loaded php.ini file
 -   [php\_ini\_scanned\_files](/ref/info.html#php_ini_scanned_files) —
     Return a list of .ini files parsed from the additional ini dir
--   [php\_logo\_guid](/ref/info.html#php_logo_guid) — Gets the logo guid
 -   [php\_sapi\_name](/ref/info.html#php_sapi_name) — Returns the type
     of interface between web server and PHP
 -   [php\_uname](/ref/info.html#php_uname) — Returns information about
@@ -3889,17 +3619,12 @@ The above example will output something similar to:
     Restores the value of the include\_path configuration option
 -   [set\_include\_path](/ref/info.html#set_include_path) — Sets the
     include\_path configuration option
--   [set\_magic\_quotes\_runtime](/ref/info.html#set_magic_quotes_runtime)
-    — Sets the current active configuration setting of
-    magic\_quotes\_runtime
 -   [set\_time\_limit](/ref/info.html#set_time_limit) — Limits the
     maximum execution time
 -   [sys\_get\_temp\_dir](/ref/info.html#sys_get_temp_dir) — Returns
     directory path used for temporary files
 -   [version\_compare](/ref/info.html#version_compare) — Compares two
     "PHP-standardized" version number strings
--   [zend\_logo\_guid](/ref/info.html#zend_logo_guid) — Gets the Zend
-    guid
 -   [zend\_thread\_id](/ref/info.html#zend_thread_id) — Returns a unique
     identifier for the current thread
 -   [zend\_version](/ref/info.html#zend_version) — Gets the version of

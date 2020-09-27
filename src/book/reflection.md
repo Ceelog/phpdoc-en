@@ -5366,12 +5366,6 @@ No value is returned.
 A <span class="classname">ReflectionException</span> if the `name`
 parameter does not contain a valid function.
 
-### Changelog
-
-| Version | Description                                                                       |
-|---------|-----------------------------------------------------------------------------------|
-| 5.3.0   | `name` can now be a <a href="/functions/anonymous.html" class="link">closure</a>. |
-
 ### Examples
 
 **Example \#1 <span
@@ -10698,6 +10692,12 @@ echo $reflectionParam->getType();
 The above example will output something similar to:
 
     string
+
+### Changelog
+
+| Version | Description                                                                       |
+|---------|-----------------------------------------------------------------------------------|
+| 7.1.0   | <span class="methodname">ReflectionType::\_\_toString</span> has been deprecated. |
 
 ### See Also
 

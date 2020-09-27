@@ -619,10 +619,9 @@ Emits <span class="classname">Exception</span> in case of an error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1     | From now on microseconds are filled with actual value. Not with '00000'.                                                                                                |
-| 5.3.0   | If `datetime` contains an invalid <a href="/datetime/formats.html" class="link">date/time format</a>, then an exception is now thrown. Previously an error was emitted. |
+| Version | Description                                                              |
+|---------|--------------------------------------------------------------------------|
+| 7.1.0   | From now on microseconds are filled with actual value. Not with '00000'. |
 
 ### Examples
 
@@ -834,7 +833,6 @@ Returns a new DateTime instance or **`FALSE`** on failure.
 | Version | Description                                |
 |---------|--------------------------------------------|
 | 7.3.0   | The *v* `format` specifier has been added. |
-| 5.3.9   | The + `format` specifier has been added.   |
 
 ### Examples
 
@@ -1084,13 +1082,6 @@ A date/time string. Valid formats are explained in
 Returns the <span class="classname">DateTime</span> object for method
 chaining or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.3.6   | Absolute date/time statements now take effect. Previously, only relative parts were used.       |
-| 5.3.0   | Changed the return value on success from **`NULL`** to <span class="classname">DateTime</span>. |
-
 ### Examples
 
 **Example \#1 <span class="function">DateTime::modify</span> example**
@@ -1224,12 +1215,6 @@ Day of the date.
 Returns the <span class="classname">DateTime</span> object for method
 chaining or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.3.0   | Changed the return value on success from **`NULL`** to <span class="classname">DateTime</span>. |
-
 ### Examples
 
 **Example \#1 <span class="function">DateTime::setDate</span> example**
@@ -1338,12 +1323,6 @@ Offset from the first day of the week.
 
 Returns the <span class="classname">DateTime</span> object for method
 chaining or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.3.0   | Changed the return value on success from **`NULL`** to <span class="classname">DateTime</span>. |
 
 ### Examples
 
@@ -1487,10 +1466,9 @@ chaining or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 7.1.0   | The `microsecond` parameter was added.                                                          |
-| 5.3.0   | Changed the return value on success from **`NULL`** to <span class="classname">DateTime</span>. |
+| Version | Description                            |
+|---------|----------------------------------------|
+| 7.1.0   | The `microsecond` parameter was added. |
 
 ### Examples
 
@@ -1704,12 +1682,6 @@ desired time zone.
 
 Returns the <span class="classname">DateTime</span> object for method
 chaining or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                     |
-|---------|-------------------------------------------------------------------------------------------------|
-| 5.3.0   | Changed the return value on success from **`NULL`** to <span class="classname">DateTime</span>. |
 
 ### Examples
 
@@ -3536,12 +3508,6 @@ End timestamp.
 Returns numerically indexed array containing associative array with all
 transitions on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                  |
-|---------|--------------------------------------------------------------|
-| 5.3.0   | The optional `timestampBegin` and `timestampEnd` were added. |
-
 ### Examples
 
 **Example \#1 A <span class="function">timezone\_transitions\_get</span>
@@ -3716,12 +3682,6 @@ A two-letter ISO 3166-1 compatible country code.
 ### Return Values
 
 Returns array on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                      |
-|---------|------------------------------------------------------------------|
-| 5.3.0   | Added the optional `timezoneGroup` and `countryCode` parameters. |
 
 ### Examples
 

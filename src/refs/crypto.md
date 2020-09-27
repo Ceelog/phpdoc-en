@@ -3,12 +3,6 @@ Cryptography Extensions
 
 **Table of Contents**
 
--   [Crack](/book/crack.html) — Cracklib
-    -   [Introduction](/intro/crack.html)
-    -   [Installing/Configuring](/crack/setup.html)
-    -   [Predefined Constants](/crack/constants.html)
-    -   [Examples](/crack/examples.html)
-    -   [Crack Functions](/ref/crack.html)
 -   [CSPRNG](/book/csprng.html)
     -   [Introduction](/intro/csprng.html)
     -   [Installing/Configuring](/csprng/setup.html)

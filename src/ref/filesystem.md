@@ -391,12 +391,6 @@ used if `clear_realpath_cache` is **`TRUE`**.
 
 No value is returned.
 
-### Changelog
-
-| Version | Description                                                      |
-|---------|------------------------------------------------------------------|
-| 5.3.0   | Added optional `clear_realpath_cache` and `filename` parameters. |
-
 ### Examples
 
 **Example \#1 <span class="function">clearstatcache</span> example**
@@ -468,13 +462,6 @@ class="function">stream\_context\_create</span>.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                        |
-|---------|----------------------------------------------------------------------------------------------------|
-| 5.3.4   | Changed the `context` parameter to actually have an effect. Previously, any `context` was ignored. |
-| 5.3.0   | Added context support.                                                                             |
 
 ### Examples
 
@@ -1042,8 +1029,6 @@ file.
 | Version | Description                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------|
 | 7.4.0   | The `escape` parameter now also accepts an empty string to disable the proprietary escape mechanism. |
-| 5.3.0   | The `escape` parameter was added                                                                     |
-| 5.1.0   | The `length` is now optional. Default is *0*, meaning no length limit.                               |
 
 ### Examples
 
@@ -1491,7 +1476,6 @@ $file = file_get_contents('http://www.example.com/', false, $context);
 | Version | Description                                    |
 |---------|------------------------------------------------|
 | 7.1.0   | Support for negative `offset`s has been added. |
-| 5.1.0   | Added the `offset` and `maxlen` parameters.    |
 
 ### Notes
 
@@ -1633,12 +1617,6 @@ $person = "John Smith\n";
 file_put_contents($file, $person, FILE_APPEND | LOCK_EX);
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 5.1.0   | Added support for **`LOCK_EX`** and the ability to pass a stream resource to the `data` parameter |
 
 ### Notes
 
@@ -2523,13 +2501,6 @@ The optional third argument is set to 1 if the lock would block
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version       | Description                                                                                                                  |
-|---------------|------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.22, 5.6.6 | Added support for the `wouldblock` parameter on Windows.                                                                     |
-| 5.3.2         | The automatic unlocking when the file's resource handle is closed was removed. Unlocking now always has to be done manually. |
-
 ### Examples
 
 **Example \#1 <span class="function">flock</span> example**
@@ -2607,9 +2578,9 @@ release the lock.
 
 On some operating systems <span class="function">flock</span> is
 implemented at the process level. When using a multithreaded server API
-like ISAPI you may not be able to rely on <span
-class="function">flock</span> to protect files against other PHP scripts
-running in parallel threads of the same server instance!
+you may not be able to rely on <span class="function">flock</span> to
+protect files against other PHP scripts running in parallel threads of
+the same server instance!
 
 <span class="function">flock</span> is not supported on antiquated
 filesystems like *FAT* and its derivates and will therefore always
@@ -2662,12 +2633,6 @@ joined with the
 ### Return Values
 
 Returns **`TRUE`** if there is a match, **`FALSE`** otherwise.
-
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
 
 ### Examples
 
@@ -2833,10 +2798,9 @@ Upon failure, an **`E_WARNING`** is emitted.
 
 ### Changelog
 
-| Version       | Description                             |
-|---------------|-----------------------------------------|
-| 7.0.16, 7.1.2 | The *'e'* option was added.             |
-| 5.2.6         | The *'c'* and *'c+'* options were added |
+| Version       | Description                 |
+|---------------|-----------------------------|
+| 7.0.16, 7.1.2 | The *'e'* option was added. |
 
 ### Examples
 
@@ -3939,12 +3903,6 @@ array if no file matched or **`FALSE`** on error.
 > On some systems it is impossible to distinguish between empty match
 > and an error.
 
-### Changelog
-
-| Version | Description              |
-|---------|--------------------------|
-| 5.1.0   | **`GLOB_ERR`** was added |
-
 ### Examples
 
 **Example \#1 Convenient way how <span class="function">glob</span> can
@@ -4623,12 +4581,6 @@ The link name.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms (Vista, Server 2008 or greater). |
-
 ### Examples
 
 **Example \#1 Creating a simple hard link**
@@ -4687,12 +4639,6 @@ Path to the link.
 the Unix C stat structure returned by the *lstat* system call. Returns a
 non-negative integer on success, -1 in case the link was not found, or
 **`FALSE`** if an open.base\_dir violation occurs.
-
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms (Vista, Server 2008 or greater). |
 
 ### Examples
 
@@ -5026,16 +4972,6 @@ strings are converted to integer type if it is possible.
 The settings are returned as an associative <span
 class="type">array</span> on success, and **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | Hash marks (*\#*) are no longer recognized as comments.                                                                                                                                                                                             |
-| 5.6.1   | Added new **`INI_SCANNER_TYPED`** mode.                                                                                                                                                                                                             |
-| 5.3.0   | Added optional `scanner_mode` parameter. Single quotes may now be used around variable assignments. Hash marks (*\#*) should no longer be used as comments and will throw a deprecation warning if used.                                            |
-| 5.2.7   | On syntax error this function will return **`FALSE`** rather than an empty array.                                                                                                                                                                   |
-| 5.2.4   | Keys and section names consisting of numbers are now evaluated as PHP <a href="/language/types/integer.html" class="link">integers</a> thus numbers starting by 0 are evaluated as octals and numbers starting by 0x are evaluated as hexadecimals. |
-
 ### Examples
 
 **Example \#1 Contents of `sample.ini`**
@@ -5335,12 +5271,6 @@ class="type">array</span> containing the following elements is returned:
 
 If `options` is present, returns a <span class="type">string</span>
 containing the requested element.
-
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.2.0   | The **`PATHINFO_FILENAME`** constant was added. |
 
 ### Examples
 
@@ -5684,12 +5614,6 @@ Returns the contents of the symbolic link path or **`FALSE`** on error.
 > symlink, except on Windows, where the normalized path will be
 > returned. </span>
 
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms (Vista, Server 2008 or greater). |
-
 ### Examples
 
 **Example \#1 <span class="function">readlink</span> example**
@@ -5865,13 +5789,6 @@ e.g. if the file does not exist.
 > and many platforms use 32bit integers, some filesystem functions may
 > return unexpected results for files which are larger than 2GB. </span>
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                    |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Prior to this release, if only the last `path` component did not exist, <span class="function">realpath</span> would not fail on \*BSD systems. <span class="function">realpath</span> now fails in this case. |
-| 5.2.1   | Prior to this version, <span class="function">realpath</span> returned **`FALSE`** if `path` is an empty string or **`NULL`**.                                                                                 |
-
 ### Examples
 
 **Example \#1 <span class="function">realpath</span> example**
@@ -5954,12 +5871,6 @@ The new name.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                         |
-|---------|-------------------------------------------------------------------------------------|
-| 5.3.1   | <span class="function">rename</span> can now rename files across drives in Windows. |
 
 ### Examples
 
@@ -6303,12 +6214,6 @@ The link name.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms (Vista, Server 2008 or greater). |
-
 ### Examples
 
 **Example \#1 Create a symbolic link**
@@ -6492,12 +6397,6 @@ parameter. If neither are present, the current system time is used.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                      |
-|---------|----------------------------------------------------------------------------------|
-| 5.3.0   | It became possible to change the modification time of a directory under Windows. |
 
 ### Examples
 

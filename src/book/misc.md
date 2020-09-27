@@ -38,8 +38,6 @@ Miscellaneous Functions
     -   [ignore\_user\_abort](/ref/misc.html#ignore_user_abort) — Set
         whether a client disconnect should abort script execution
     -   [pack](/ref/misc.html#pack) — Pack data into binary string
-    -   [php\_check\_syntax](/ref/misc.html#php_check_syntax) — Check
-        the PHP syntax of (and execute) the specified file
     -   [php\_strip\_whitespace](/ref/misc.html#php_strip_whitespace) —
         Return source with stripped comments and whitespace
     -   [sapi\_windows\_cp\_conv](/ref/misc.html#sapi_windows_cp_conv) —

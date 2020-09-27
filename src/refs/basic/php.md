@@ -3,12 +3,6 @@ Affecting PHP's Behaviour
 
 **Table of Contents**
 
--   [APC](/book/apc.html) — Alternative PHP Cache
-    -   [Introduction](/intro/apc.html)
-    -   [Installing/Configuring](/apc/setup.html)
-    -   [Predefined Constants](/apc/constants.html)
-    -   [APC Functions](/ref/apc.html)
-    -   [APCIterator](/class/apciterator.html) — The APCIterator class
 -   [APCu](/book/apcu.html) — APC User Cache
     -   [Introduction](/intro/apcu.html)
     -   [Installing/Configuring](/apcu/setup.html)
@@ -16,17 +10,6 @@ Affecting PHP's Behaviour
     -   [APCu Functions](/ref/apcu.html)
     -   [APCUIterator](/class/apcuiterator.html) — The APCUIterator
         class
--   [APD](/book/apd.html) — Advanced PHP debugger
-    -   [Introduction](/intro/apd.html)
-    -   [Installing/Configuring](/apd/setup.html)
-    -   [Predefined Constants](/apd/constants.html)
-    -   [Examples](/apd/examples.html)
-    -   [APD Functions](/ref/apd.html)
--   [bcompiler](/book/bcompiler.html) — PHP bytecode Compiler
-    -   [Introduction](/intro/bcompiler.html)
-    -   [Installing/Configuring](/bcompiler/setup.html)
-    -   [Predefined Constants](/bcompiler/constants.html)
-    -   [bcompiler Functions](/ref/bcompiler.html)
 -   [BLENC](/book/blenc.html) — Blenc - BLowfish ENCoder for PHP source
     scripts
     -   [Introduction](/intro/blenc.html)
@@ -64,16 +47,6 @@ Affecting PHP's Behaviour
     -   [FFI\\Exception](/class/ffi-exception.html) — FFI Exceptions
     -   [FFI\\ParserException](/class/ffi-parserexception.html) — FFI
         Parser Exceptions
--   [htscanner](/book/htscanner.html) — htaccess-like support for all
-    SAPIs
-    -   [Introduction](/intro/htscanner.html)
-    -   [Installing/Configuring](/htscanner/setup.html)
--   [inclued](/book/inclued.html) — Inclusion hierarchy viewer
-    -   [Introduction](/intro/inclued.html)
-    -   [Installing/Configuring](/inclued/setup.html)
-    -   [Predefined Constants](/inclued/constants.html)
-    -   [Examples](/inclued/examples.html)
-    -   [inclued Functions](/ref/inclued.html)
 -   [Memtrack](/book/memtrack.html) — Memtrack
     -   [Introduction](/intro/memtrack.html)
     -   [Installing/Configuring](/memtrack/setup.html)
@@ -100,20 +73,11 @@ Affecting PHP's Behaviour
     -   [Installing/Configuring](/phpdbg/setup.html)
     -   [Predefined Constants](/phpdbg/constants.html)
     -   [phpdbg Functions](/ref/phpdbg.html)
--   [runkit](/book/runkit.html)
-    -   [Introduction](/intro/runkit.html)
-    -   [Predefined Constants](/runkit/constants.html)
-    -   [Installing/Configuring](/runkit/setup.html)
-    -   [runkit Functions](/ref/runkit.html)
 -   [runkit7](/book/runkit7.html) — runkit7
     -   [Introduction](/intro/runkit7.html)
     -   [Installing/Configuring](/runkit7/setup.html)
     -   [Predefined Constants](/runkit7/constants.html)
     -   [runkit7 Functions](/ref/runkit7.html)
--   [scream](/book/scream.html) — Break the silence operator
-    -   [Introduction](/intro/scream.html)
-    -   [Installing/Configuring](/scream/setup.html)
-    -   [Examples](/scream/examples.html)
 -   [uopz](/book/uopz.html) — User Operations for Zend
     -   [Introduction](/intro/uopz.html)
     -   [Installing/Configuring](/uopz/setup.html)

@@ -140,15 +140,6 @@ Sets the magic\_quotes state for GPC (Get/Post/Cookie) operations. When
 magic\_quotes are on, all ' (single-quote), " (double quote), \\
 (backslash) and NUL's are escaped with a backslash automatically.
 
-> **Note**:
->
-> If the
-> <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-> directive is also ON it will completely override magic\_quotes\_gpc.
-> Having both directives enabled means only single quotes are escaped as
-> *''*. Double quotes, backslashes and NUL's will remain untouched and
-> unescaped.
-
 See also <span class="function">get\_magic\_quotes\_gpc</span>
 
 `magic_quotes_runtime` <span class="type">boolean</span>  
@@ -158,10 +149,7 @@ PHP 5.4.0.
 
 If `magic_quotes_runtime` is enabled, most functions that return data
 from any sort of external source including databases and text files will
-have quotes escaped with a backslash. If
-<a href="/book/sybase.html#" class="link">magic_quotes_sybase</a> is
-also on, a single-quote is escaped with a single-quote instead of a
-backslash.
+have quotes escaped with a backslash.
 
 Functions affected by `magic_quotes_runtime` (does not include functions
 from PECL):

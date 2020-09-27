@@ -535,12 +535,6 @@ Returns an <span class="type">array</span> of filenames on success, or
 **`FALSE`** is returned, and an error of level **`E_WARNING`** is
 generated.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                                                               |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | `sorting_order` <a href="/dir/constants.html" class="link">constants</a> were added. Any nonzero value caused descending order in previous versions. So for all PHP versions, use *0* for ascending order, and *1* for descending order. An option for **`SCANDIR_SORT_NONE`** behavior did not exist prior to PHP 5.4.0. |
-
 ### Examples
 
 **Example \#1 A simple <span class="function">scandir</span> example**

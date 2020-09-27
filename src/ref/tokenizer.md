@@ -38,13 +38,6 @@ three element array containing the token index in element 0, the string
 content of the original token in element 1 and the line number in
 element 2.
 
-### Changelog
-
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 7.0.0   | Added the optional `flags` parameter along with the **`TOKEN_PARSE`** flag. |
-| 5.2.2   | Line numbers are returned in element 2                                      |
-
 ### Examples
 
 **Example \#1 <span class="function">token\_get\_all</span> example**

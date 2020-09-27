@@ -592,12 +592,6 @@ negative). If $start denotes a position beyond this truncation,
 
 Returns the extracted part of $string.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                  |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4     | If `length` is given and positive and the argument string is shorter than the specified length, all the rest of the string according to `start` parameter is returned. Previously, **`FALSE`** was returned. |
-
 ### Examples
 
 **Example \#1 <span class="function">grapheme\_substr</span> example**

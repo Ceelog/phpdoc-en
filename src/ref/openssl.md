@@ -629,8 +629,6 @@ the `iv` parameter.
 | Version | Description                                |
 |---------|--------------------------------------------|
 | 7.1.0   | The `tag` and `aad` parameters were added. |
-| 5.4.0   | The `raw_output` was changed to `options`. |
-| 5.3.3   | The `iv` parameter was added.              |
 
 ### See Also
 
@@ -911,8 +909,6 @@ the `iv` parameter.
 | Version | Description                                              |
 |---------|----------------------------------------------------------|
 | 7.1.0   | The `tag`, `aad` and `tag_length` parameters were added. |
-| 5.4.0   | The `raw_output` was changed to `options`.               |
-| 5.3.3   | The `iv` parameter was added.                            |
 
 ### Examples
 
@@ -1524,13 +1520,6 @@ The initialization vector.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 7.0.0   | The `iv` has been added.     |
-| 5.3.0   | The `method` has been added. |
-
 ### Examples
 
 **Example \#1 <span class="function">openssl\_open</span> example**
@@ -2117,7 +2106,6 @@ certificate is invalid), or -1 on error.
 | Version | Description                            |
 |---------|----------------------------------------|
 | 7.2.0   | The `p7bfilename` parameter was added. |
-| 5.1.0   | The `content` parameter was added.     |
 
 ### Notes
 
@@ -2743,13 +2731,6 @@ Returns the length of the sealed data on success, or **`FALSE`** on
 error. If successful the sealed data is returned in `sealed_data`, and
 the envelope keys in `env_keys`.
 
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 7.0.0   | The `iv` has been added.     |
-| 5.3.0   | The `method` has been added. |
-
 ### Examples
 
 **Example \#1 <span class="function">openssl\_seal</span> example**
@@ -3232,12 +3213,6 @@ class="function">openssl\_get\_md\_methods</span> example,
 
 Returns 1 if the signature is correct, 0 if it is incorrect, and -1 on
 error.
-
-### Changelog
-
-| Version | Description                              |
-|---------|------------------------------------------|
-| 5.2.0   | The `signature_alg` parameter was added. |
 
 ### Examples
 

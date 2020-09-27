@@ -2389,12 +2389,6 @@ class="function">ftp\_get\_option</span>.
 
 Returns a SSL-FTP stream on success or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.2   | The function was changed to return **`FALSE`** when it can't use an SSL connection, instead of falling back to a non-SSL one as previously. |
-
 ### Examples
 
 **Example \#1 <span class="function">ftp\_ssl\_connect</span> example**

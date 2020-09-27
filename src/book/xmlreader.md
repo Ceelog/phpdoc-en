@@ -491,12 +491,6 @@ class="classname">DOMDocument</span> for the created DOM object.
 The resulting <span class="classname">DOMNode</span> or **`FALSE`** on
 error.
 
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.3.0   | The parameter `basenode` was added. |
-
 XMLReader::getAttribute
 =======================
 
@@ -520,12 +514,6 @@ The name of the attribute.
 
 The value of the attribute, or **`NULL`** if no attribute with the given
 `name` is found or not positioned on an element node.
-
-### Changelog
-
-| Version | Description                                                                    |
-|---------|--------------------------------------------------------------------------------|
-| 5.1.3   | Return **`NULL`** if no attribute found. Previously, returned an empty string. |
 
 ### See Also
 
@@ -941,12 +929,6 @@ statically, returns an <span class="classname">XMLReader</span> or
 This method *may* be called statically, but will issue an **`E_STRICT`**
 error.
 
-### Changelog
-
-| Version | Description                          |
-|---------|--------------------------------------|
-| 5.2.0   | `encoding` and `options` were added. |
-
 ### See Also
 
 -   <span class="methodname">XMLReader::xml</span>
@@ -1253,12 +1235,6 @@ statically, returns an <span class="classname">XMLReader</span> or
 
 This method *may* be called statically, but will issue an **`E_STRICT`**
 error.
-
-### Changelog
-
-| Version | Description                          |
-|---------|--------------------------------------|
-| 5.2.0   | `encoding` and `options` were added. |
 
 ### See Also
 

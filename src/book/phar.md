@@ -4068,12 +4068,6 @@ The above example will output:
     string(5) "World"
     string(83) "<?php var_dump("Second"); Phar::mapPhar("brandnewphar.phar"); __HALT_COMPILER(); ?>"
 
-### Changelog
-
-| Version | Description            |
-|---------|------------------------|
-| 5.4.0   | Added `len` parameter. |
-
 ### See Also
 
 -   <span class="function">Phar::getStub</span>
@@ -6640,12 +6634,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 ### Errors/Exceptions
 
 Throws <span class="classname">PharException</span> on all method calls
-
-### Changelog
-
-| Version | Description            |
-|---------|------------------------|
-| 5.4.0   | Added `len` parameter. |
 
 ### See Also
 

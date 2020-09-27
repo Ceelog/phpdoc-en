@@ -97,12 +97,6 @@ The value to process
 
 The inverse hyperbolic cosine of `arg`
 
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.3.0   | This function is now available on all platforms |
-
 ### See Also
 
 -   <span class="function">cosh</span>
@@ -165,12 +159,6 @@ The argument to process
 ### Return Values
 
 The inverse hyperbolic sine of `arg`
-
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.3.0   | This function is now available on all platforms |
 
 ### See Also
 
@@ -269,12 +257,6 @@ The argument to process
 ### Return Values
 
 Inverse hyperbolic tangent of `arg`
-
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.3.0   | This function is now available on all platforms |
 
 ### See Also
 
@@ -939,12 +921,6 @@ The argument to process
 
 'e' to the power of `arg` minus one
 
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.3.0   | This function is now available on all platforms |
-
 ### See Also
 
 -   <span class="function">log1p</span>
@@ -1418,12 +1394,6 @@ The argument to process
 
 log(1 + `number`)
 
-### Changelog
-
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 5.3.0   | This function is now available on all platforms |
-
 ### See Also
 
 -   <span class="function">expm1</span>
@@ -1782,7 +1752,6 @@ class="function">mt\_getrandmax</span>, inclusive), or **`FALSE`** if
 | 7.2.0   | <span class="function">mt\_rand</span> <a href="/migration72/incompatible.html#migration72.incompatible.rand-mt_rand-output" class="link">has received a bug fix</a> for a modulo bias bug. This means that sequences generated with a specific seed may differ from PHP 7.1 on 64-bit machines.                                                                           |
 | 7.1.0   | <span class="function">rand</span> <a href="/migration71/incompatible.html#migration71.incompatible.rand-srand-aliases" class="link">has been made</a> an alias of <span class="function">mt\_rand</span>.                                                                                                                                                                 |
 | 7.1.0   | <span class="function">mt\_rand</span> <a href="/migration71/incompatible.html#migration71.incompatible.fixes-to-mt_rand-algorithm" class="link">has been updated</a> to use the fixed, correct, version of the Mersenne Twister algorithm. To fall back to the old behaviour, use <span class="function">mt\_srand</span> with **`MT_RAND_PHP`** as the second parameter. |
-| 5.3.4   | Issues an **`E_WARNING`** and returns **`FALSE`** if `max` \< `min`.                                                                                                                                                                                                                                                                                                       |
 
 ### Examples
 
@@ -1867,7 +1836,6 @@ No value is returned.
 |---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.1.0   | <span class="function">srand</span> <a href="/migration71/incompatible.html#migration71.incompatible.rand-srand-aliases" class="link">has been made</a> an alias of <span class="function">mt\_srand</span>.                                                                                                                                                               |
 | 7.1.0   | <span class="function">mt\_rand</span> <a href="/migration71/incompatible.html#migration71.incompatible.fixes-to-mt_rand-algorithm" class="link">has been updated</a> to use the fixed, correct, version of the Mersenne Twister algorithm. To fall back to the old behaviour, use <span class="function">mt\_srand</span> with **`MT_RAND_PHP`** as the second parameter. |
-| 5.2.1   | The Mersenne Twister implementation in PHP now uses a new seeding algorithm by Richard Wagner. Identical seeds no longer produce the same sequence of values they did in previous versions. This behavior is not expected to change again, but it is considered unsafe to rely upon it nonetheless.                                                                        |
 
 ### Examples
 
@@ -2374,13 +2342,6 @@ The above example will output:
     Using PHP_ROUND_HALF_ODD with 1 decimal digit precision
     float(1.5)
     float(-1.5)
-
-### Changelog
-
-| Version | Description                                                                                           |
-|---------|-------------------------------------------------------------------------------------------------------|
-| 5.3.0   | The `mode` parameter was introduced.                                                                  |
-| 5.2.7   | The inner workings of <span class="function">round</span> was changed to conform to the C99 standard. |
 
 ### See Also
 

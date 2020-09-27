@@ -27,11 +27,9 @@ There are three magic quote directives:
     class="simpara"> See also <span
     class="function">set\_magic\_quotes\_runtime</span> and <span
     class="function">get\_magic\_quotes\_runtime</span>. </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-    </span> <span class="simpara"> If enabled, a single-quote is escaped
-    with a single-quote instead of a backslash. If on, it completely
-    overrides
+-   <span class="simpara"> magic\_quotes\_sybase </span> <span
+    class="simpara"> If enabled, a single-quote is escaped with a
+    single-quote instead of a backslash. If on, it completely overrides
     <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>.
     Having both directives enabled means only single quotes are escaped
     as *''*. Double quotes, backslashes and NULL's will remain untouched

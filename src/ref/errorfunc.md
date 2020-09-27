@@ -50,15 +50,6 @@ possible returned elements are as follows:
 | type     | <span class="type">string</span>  | The current call type. If a method call, "-\>" is returned. If a static method call, "::" is returned. If a function call, nothing is returned.          |
 | args     | <span class="type">array</span>   | If inside a function, this lists the functions arguments. If inside an included file, this lists the included file name(s).                              |
 
-### Changelog
-
-| Version | Description                                                                                                           |
-|---------|-----------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | Added the optional parameter `limit`.                                                                                 |
-| 5.3.6   | The parameter `provide_object` changed to `options` and additional option **`DEBUG_BACKTRACE_IGNORE_ARGS`** is added. |
-| 5.2.5   | Added the optional parameter `provide_object`.                                                                        |
-| 5.1.1   | Added the current <span class="type">object</span> as a possible return element.                                      |
-
 ### Examples
 
 **Example \#1 <span class="function">debug\_backtrace</span> example**
@@ -147,13 +138,6 @@ frames printed. By default (`limit`=*0*) it prints all stack frames.
 ### Return Values
 
 No value is returned.
-
-### Changelog
-
-| Version | Description                             |
-|---------|-----------------------------------------|
-| 5.4.0   | Added the optional parameter `limit`.   |
-| 5.3.6   | Added the optional parameter `options`. |
 
 ### Examples
 
@@ -394,12 +378,6 @@ error_log("You messed up!", 3, "/var/tmp/my-errors.log");
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.2.7   | The possible value of 4 was added to `message_type`. |
-
 error\_reporting
 ================
 
@@ -438,14 +416,6 @@ error levels are described in the
 Returns the old
 <a href="/errorfunc/setup.html#PHP%20Constants%20outside%20of%20PHP" class="link">error_reporting</a>
 level or the current level if no `level` parameter is given.
-
-### Changelog
-
-| Version | Description                                                |
-|---------|------------------------------------------------------------|
-| 5.4.0   | **`E_STRICT`** became part of **`E_ALL`**.                 |
-| 5.3.0   | **`E_DEPRECATED`** and **`E_USER_DEPRECATED`** introduced. |
-| 5.2.0   | **`E_RECOVERABLE_ERROR`** introduced.                      |
 
 ### Examples
 
@@ -735,8 +705,6 @@ name.
 | Version | Description                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------|
 | 7.2.0   | `errcontext` became deprecated. Usage of this parameter now emits an **`E_DEPRECATED`** notice. |
-| 5.5.0   | `error_handler` now accepts **`NULL`**.                                                         |
-| 5.2.0   | The error handler must return **`FALSE`** to populate `$php_errormsg`.                          |
 
 ### Examples
 

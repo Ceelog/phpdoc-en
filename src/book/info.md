@@ -82,8 +82,6 @@ PHP Options and Information
         of a configuration option
     -   [ini\_set](/ref/info.html#ini_set) — Sets the value of a
         configuration option
-    -   [magic\_quotes\_runtime](/ref/info.html#magic_quotes_runtime) —
-        Alias of set\_magic\_quotes\_runtime
     -   [main](/ref/info.html#main) — Dummy for main
     -   [memory\_get\_peak\_usage](/ref/info.html#memory_get_peak_usage)
         — Returns the peak of memory allocated by PHP
@@ -93,8 +91,6 @@ PHP Options and Information
         Retrieve a path to the loaded php.ini file
     -   [php\_ini\_scanned\_files](/ref/info.html#php_ini_scanned_files)
         — Return a list of .ini files parsed from the additional ini dir
-    -   [php\_logo\_guid](/ref/info.html#php_logo_guid) — Gets the logo
-        guid
     -   [php\_sapi\_name](/ref/info.html#php_sapi_name) — Returns the
         type of interface between web server and PHP
     -   [php\_uname](/ref/info.html#php_uname) — Returns information
@@ -111,17 +107,12 @@ PHP Options and Information
         Restores the value of the include\_path configuration option
     -   [set\_include\_path](/ref/info.html#set_include_path) — Sets the
         include\_path configuration option
-    -   [set\_magic\_quotes\_runtime](/ref/info.html#set_magic_quotes_runtime)
-        — Sets the current active configuration setting of
-        magic\_quotes\_runtime
     -   [set\_time\_limit](/ref/info.html#set_time_limit) — Limits the
         maximum execution time
     -   [sys\_get\_temp\_dir](/ref/info.html#sys_get_temp_dir) — Returns
         directory path used for temporary files
     -   [version\_compare](/ref/info.html#version_compare) — Compares
         two "PHP-standardized" version number strings
-    -   [zend\_logo\_guid](/ref/info.html#zend_logo_guid) — Gets the
-        Zend guid
     -   [zend\_thread\_id](/ref/info.html#zend_thread_id) — Returns a
         unique identifier for the current thread
     -   [zend\_version](/ref/info.html#zend_version) — Gets the version

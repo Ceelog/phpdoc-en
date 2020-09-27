@@ -25,8 +25,6 @@ Variable handling
     -   [get\_resource\_type](/ref/var.html#get_resource_type) — Returns
         the resource type
     -   [gettype](/ref/var.html#gettype) — Get the type of a variable
-    -   [import\_request\_variables](/ref/var.html#import_request_variables)
-        — Import GET/POST/Cookie variables into the global scope
     -   [intval](/ref/var.html#intval) — Get the integer value of a
         variable
     -   [is\_array](/ref/var.html#is_array) — Finds whether a variable

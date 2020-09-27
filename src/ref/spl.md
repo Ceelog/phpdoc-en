@@ -28,12 +28,6 @@ the <span class="function">\_\_autoload</span> magic method.
 
 An array on success, or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                                                                                 |
-|---------|---------------------------------------------------------------------------------------------|
-| 5.1.0   | Added the option to pass the `class` parameter as a string. Added the `autoload` parameter. |
-
 ### Examples
 
 **Example \#1 <span class="function">class\_implements</span> example**
@@ -105,12 +99,6 @@ the <span class="function">\_\_autoload</span> magic method.
 ### Return Values
 
 An array on success, or **`FALSE`** on error.
-
-### Changelog
-
-| Version | Description                                                                                 |
-|---------|---------------------------------------------------------------------------------------------|
-| 5.1.0   | Added the option to pass the `class` parameter as a string. Added the `autoload` parameter. |
 
 ### Examples
 
@@ -414,13 +402,6 @@ keys will be converted to integers.
 An <span class="type">array</span> containing the elements of the
 `iterator`.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.0   | <span class="function">iterator\_to\_array</span> gained support for key types other than <span class="type">integer</span> and <span class="type">string</span> when the `use_keys` parameter is enabled. |
-| 5.2.1   | The `use_keys` parameter was added.                                                                                                                                                                        |
-
 ### Examples
 
 **Example \#1 <span class="function">iterator\_to\_array</span>
@@ -601,13 +582,6 @@ prepend the autoloader on the autoload queue instead of appending it.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                        |
-|---------|------------------------------------|
-| 5.3.0   | Namespaces support was introduced. |
-| 5.3.0   | The `prepend` parameter was added. |
 
 ### Examples
 

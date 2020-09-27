@@ -30,9 +30,7 @@ at startup.
 -   <span class="simpara">
     <a href="/info/setup.html#" class="link">magic_quotes_runtime</a>
     </span>
--   <span class="simpara">
-    <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-    </span>
+-   <span class="simpara"> magic\_quotes\_sybase </span>
 -   <span class="simpara"> Comments starting with '\#' are now
     deprecated in .INI files. </span>
 

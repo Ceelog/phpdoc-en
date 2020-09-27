@@ -1578,12 +1578,6 @@ try {
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Classes which extends <span class="classname">PDO</span> and implements the *\_\_call* magic method will now receive the method name in the declared casing. Previously this was always lower case. |
-
 PDO::errorCode
 ==============
 
@@ -3355,12 +3349,6 @@ an error is emitted.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                                           |
-|---------|-----------------------------------------------------------------------------------------------------------------------|
-| 5.2.0   | The keys from `input_parameters` must match the ones declared in the SQL. Before PHP 5.2.0 this was silently ignored. |
-
 ### Examples
 
 **Example \#1 Execute a prepared statement with a bound variable and
@@ -4218,13 +4206,6 @@ representing the metadata for a single column:
 Returns **`FALSE`** if the requested column does not exist in the result
 set, or if no result set exists.
 
-### Changelog
-
-| Version | Description                                                                                        |
-|---------|----------------------------------------------------------------------------------------------------|
-| 5.4.0   | <a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="link">PDO_DBLIB</a> driver support added |
-| 5.2.3   | *table* field                                                                                      |
-
 ### Examples
 
 **Example \#1 Retrieving column metadata**
@@ -4843,7 +4824,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-1126" class="example">
+<div id="example-1033" class="example">
 <p><strong>Example #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4859,7 +4840,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1127" class="example">
+<div id="example-1034" class="example">
 <p><strong>Example #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4900,7 +4881,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-1128" class="example">
+<div id="example-1035" class="example">
 <p><strong>Example #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4921,7 +4902,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1129" class="example">
+<div id="example-1036" class="example">
 <p><strong>Example #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -5920,12 +5901,6 @@ $options = array(
 $dbh = new PDO($dsn, $username, $password, $options);
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                    |
-|---------|------------------------------------------------|
-| 5.3.6   | Prior to version 5.3.6, *charset* was ignored. |
 
 ### Examples
 

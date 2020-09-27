@@ -3677,12 +3677,6 @@ The above example will output something similar to:
     NULL
     string(5) "hello"
 
-### Changelog
-
-| Version | Description                 |
-|---------|-----------------------------|
-| 5.3.0   | Added the `data` parameter. |
-
 ### See Also
 
 -   <span class="methodname">SplObjectStorage::detach</span>

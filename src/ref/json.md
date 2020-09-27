@@ -56,20 +56,12 @@ decoded or if the encoded data is deeper than the recursion limit.
 
 ### Changelog
 
-| Version | Description                                                                                                                                   |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                                                |
-| 7.2.0   | `assoc` is nullable now.                                                                                                                      |
-| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                                                  |
-| 7.1.0   | An empty JSON key ("") can be encoded to the empty object property instead of using a key with value *\_empty\_*.                             |
-| 7.0.0   | Rejected RFC 7159 incompatible number formats - top level (07, 0xff, .1, -.1) and all levels (\[1.\], \[1.e1\])                               |
-| 7.0.0   | An empty PHP string or value that after casting to string is an empty string (*NULL*, *FALSE*) results in JSON syntax error.                  |
-| 5.6.0   | Invalid non-lowercased variants of the *true*, *false* and *null* literals are no longer accepted as valid input, and will generate warnings. |
-| 5.4.0   | **`JSON_BIGINT_AS_STRING`**, and **`JSON_OBJECT_AS_ARRAY`** `options` were added.                                                             |
-| 5.4.0   | The `options` parameter was added.                                                                                                            |
-| 5.3.0   | Added the optional `depth`. The default recursion depth was increased from 128 to 512                                                         |
-| 5.2.3   | The nesting limit was increased from 20 to 128                                                                                                |
-| 5.2.1   | Added support for JSON decoding of basic types.                                                                                               |
+| Version | Description                                                                                                       |
+|---------|-------------------------------------------------------------------------------------------------------------------|
+| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                    |
+| 7.2.0   | `assoc` is nullable now.                                                                                          |
+| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                      |
+| 7.1.0   | An empty JSON key ("") can be encoded to the empty object property instead of using a key with value *\_empty\_*. |
 
 ### Examples
 
@@ -305,22 +297,12 @@ Returns a JSON encoded <span class="type">string</span> on success or
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                                                                                                                                                                                                                                                                                       |
-| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                                                                                                                                                                                                                                                                                         |
-| 7.1.0   | **`JSON_UNESCAPED_LINE_TERMINATORS`** `options` was added.                                                                                                                                                                                                                                                                                                                           |
-| 7.1.0   | <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a> is used instead of <a href="/ini/core.html#ini.precision" class="link">precision</a> when encoding double values.                                                                                                                                                                              |
-| 5.6.6   | **`JSON_PRESERVE_ZERO_FRACTION`** `options` was added.                                                                                                                                                                                                                                                                                                                               |
-| 5.5.0   | `depth` parameter was added.                                                                                                                                                                                                                                                                                                                                                         |
-| 5.5.0   | **`JSON_PARTIAL_OUTPUT_ON_ERROR`** `options` was added.                                                                                                                                                                                                                                                                                                                              |
-| 5.5.0   | When `value` triggers a JSON encoding error, **`FALSE`** is returned instead of partial output, unless `options` contains **`JSON_PARTIAL_OUTPUT_ON_ERROR`**. See <span class="function">json\_last\_error</span> for the full list of reasons that can cause JSON encoding to fail. One of the potential failure reasons is that `value` contains strings containing invalid UTF-8. |
-| 5.5.0   | **`E_WARNING`** is no longer emitted for an invalid `value`.                                                                                                                                                                                                                                                                                                                         |
-| 5.5.0   | The return value on failure was changed from *null* string to **`FALSE`**.                                                                                                                                                                                                                                                                                                           |
-| 5.4.0   | **`JSON_PRETTY_PRINT`**, **`JSON_UNESCAPED_SLASHES`**, and **`JSON_UNESCAPED_UNICODE`** `options` were added.                                                                                                                                                                                                                                                                        |
-| 5.3.3   | **`JSON_NUMERIC_CHECK`** `options` was added.                                                                                                                                                                                                                                                                                                                                        |
-| 5.3.0   | **`JSON_FORCE_OBJECT`**, **`JSON_HEX_AMP`**, **`JSON_HEX_APOS`**, **`JSON_HEX_QUOT`**, and **`JSON_HEX_TAG`**, `options` were added.                                                                                                                                                                                                                                                 |
-| 5.3.0   | The `options` parameter was added.                                                                                                                                                                                                                                                                                                                                                   |
+| Version | Description                                                                                                                                                                                             |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                                                                                                          |
+| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                                                                                                            |
+| 7.1.0   | **`JSON_UNESCAPED_LINE_TERMINATORS`** `options` was added.                                                                                                                                              |
+| 7.1.0   | <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a> is used instead of <a href="/ini/core.html#ini.precision" class="link">precision</a> when encoding double values. |
 
 ### Examples
 

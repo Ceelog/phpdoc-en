@@ -3,11 +3,6 @@ Search Engine Extensions
 
 **Table of Contents**
 
--   [mnoGoSearch](/book/mnogosearch.html)
-    -   [Introduction](/intro/mnogosearch.html)
-    -   [Installing/Configuring](/mnogosearch/setup.html)
-    -   [Predefined Constants](/mnogosearch/constants.html)
-    -   [mnoGoSearch Functions](/ref/mnogosearch.html)
 -   [Solr](/book/solr.html) — Apache Solr
     -   [Introduction](/intro/solr.html)
     -   [Installing/Configuring](/solr/setup.html)
@@ -60,9 +55,3 @@ Search Engine Extensions
     -   [Examples](/sphinx/examples.html)
     -   [SphinxClient](/class/sphinxclient.html) — The SphinxClient
         class
--   [Swish](/book/swish.html) — Swish Indexing
-    -   [Introduction](/intro/swish.html)
-    -   [Installing/Configuring](/swish/setup.html)
-    -   [Predefined Constants](/swish/constants.html)
-    -   [Examples](/swish/examples.html)
-    -   [Swish Functions](/ref/swish.html)

@@ -232,13 +232,6 @@ The following values are considered to be empty:
 -   **`FALSE`**
 -   *array()* (an empty array)
 
-### Changelog
-
-| Version | Description                                                                               |
-|---------|-------------------------------------------------------------------------------------------|
-| 5.5.0   | <span class="function">empty</span> now supports expressions, rather than only variables. |
-| 5.4.0   | Checking non-numeric offsets of strings returns **`TRUE`**.                               |
-
 ### Examples
 
 **Example \#1 A simple <span class="function">empty</span> / <span
@@ -461,12 +454,6 @@ the return value will be the string *Unknown*.
 This function will return **`NULL`** and generate an error if `handle`
 is not a <span class="type">resource</span>.
 
-### Changelog
-
-| Version | Description                                                                                                                         |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | If `handle` is not a <span class="type">resource</span> this functions returns **`NULL`**. Formerly, **`FALSE`** has been returned. |
-
 ### Examples
 
 **Example \#1 <span class="function">get\_resource\_type</span>
@@ -572,90 +559,6 @@ The above example will output something similar to:
 -   <span class="function">function\_exists</span>
 -   <span class="function">method\_exists</span>
 
-import\_request\_variables
-==========================
-
-Import GET/POST/Cookie variables into the global scope
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">import\_request\_variables</span> ( <span
-class="methodparam"><span class="type">string</span> `$types`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$prefix`</span> \] )
-
-Imports GET/POST/Cookie variables into the global scope. It is useful if
-you disabled
-<a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>,
-but would like to see some variables in the global scope.
-
-If you're interested in importing other variables into the global scope,
-such as `$_SERVER`, consider using <span
-class="function">extract</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### Parameters
-
-`types`  
-Using the `types` parameter, you can specify which request variables to
-import. You can use 'G', 'P' and 'C' characters respectively for GET,
-POST and Cookie. These characters are not case sensitive, so you can
-also use any combination of 'g', 'p' and 'c'. POST includes the POST
-uploaded file information.
-
-> **Note**:
->
-> Note that the order of the letters matters, as when using "*GP*", the
-> POST variables will overwrite GET variables with the same name. Any
-> other letters than GPC are discarded.
-
-`prefix`  
-Variable name prefix, prepended before all variable's name imported into
-the global scope. So if you have a GET value named "*userid*", and
-provide a prefix "*pref\_*", then you'll get a global variable named
-`$pref_userid`.
-
-> **Note**:
->
-> Although the `prefix` parameter is optional, you will get an
-> <a href="" class="link"><strong><code>E_NOTICE</code></strong></a>
-> level error if you specify no prefix, or specify an empty string as a
-> prefix. This is a possible security hazard. Notice level errors are
-> not displayed using the default
-> <a href="/errorfunc/setup.html#PHP%20Constants%20outside%20of%20PHP" class="link">error reporting</a>
-> level.
-
-### Return Values
-
-Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Examples
-
-**Example \#1 <span class="function">import\_request\_variables</span>
-example**
-
-``` php
-<?php
-// This will import GET and POST vars
-// with an "rvar_" prefix
-import_request_variables("gp", "rvar_");
-
-echo $rvar_foo;
-?>
-```
-
-### See Also
-
--   `$_REQUEST`
--   <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
--   <a href="/language/variables/predefined.html" class="link">Predefined Variables</a>
--   <span class="function">extract</span>
-
 intval
 ======
 
@@ -742,12 +645,6 @@ echo intval(true);                    // 1
 >
 > The `base` parameter has no effect unless the `var` parameter is a
 > string.
-
-### Changelog
-
-| Version | Description                                                             |
-|---------|-------------------------------------------------------------------------|
-| 5.1.0   | Throws **`E_NOTICE`** and returns 1, when an object is passed to `var`. |
 
 ### See Also
 
@@ -1694,12 +1591,6 @@ Another variable ...
 Returns **`TRUE`** if `var` exists and has any value other than
 **`NULL`**. **`FALSE`** otherwise.
 
-### Changelog
-
-| Version | Description                                                      |
-|---------|------------------------------------------------------------------|
-| 5.4.0   | Checking non-numeric offsets of strings now returns **`FALSE`**. |
-
 ### Examples
 
 **Example \#1 <span class="function">isset</span> Examples**
@@ -2638,7 +2529,6 @@ and evaluates to **`TRUE`**. Otherwise, this function will return
 | Version | Description                                                                                                                                                                                                                                                                                                                                                                     |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0   | Now exports <span class="classname">stdClass</span> objects as an array cast to an object (`(object) array( ... )`), rather than using the nonexistent method <span class="methodname">stdClass::\_\_setState</span>. The practical effect is that now <span class="classname">stdClass</span> is exportable, and the resulting code will even work on earlier versions of PHP. |
-| 5.1.0   | Made it possible to export classes and arrays containing classes using the <a href="/language/oop5/magic.html#object.set-state" class="link">__set_state()</a> magic method.                                                                                                                                                                                                    |
 
 ### Examples
 
@@ -2804,8 +2694,6 @@ classes for maximum compatibility.
 -   [get\_resource\_type](/ref/var.html#get_resource_type) — Returns the
     resource type
 -   [gettype](/ref/var.html#gettype) — Get the type of a variable
--   [import\_request\_variables](/ref/var.html#import_request_variables)
-    — Import GET/POST/Cookie variables into the global scope
 -   [intval](/ref/var.html#intval) — Get the integer value of a variable
 -   [is\_array](/ref/var.html#is_array) — Finds whether a variable is an
     array

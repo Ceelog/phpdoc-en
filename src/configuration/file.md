@@ -10,8 +10,7 @@ invocation.
 
 -   <span class="simpara"> SAPI module specific location (*PHPIniDir*
     directive in Apache 2, *-c* command line option in CGI and CLI,
-    *php\_ini* parameter in NSAPI, *PHP\_INI\_PATH* environment variable
-    in THTTPD) </span>
+    *php\_ini* parameter in NSAPI) </span>
 -   <span class="simpara"> The `PHPRC` environment variable. Before PHP
     5.2.0, this was checked after the registry key mentioned below.
     </span>

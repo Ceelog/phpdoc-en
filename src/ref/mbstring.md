@@ -448,12 +448,6 @@ This parameter is not used.
 
 The converted <span class="type">string</span>.
 
-### Changelog
-
-| Version | Description               |
-|---------|---------------------------|
-| 5.4.0   | Added `is_hex` parameter. |
-
 ### Examples
 
 **Example \#1 `convmap` example**
@@ -811,12 +805,6 @@ Whether the returned entity reference should be in hexadecimal notation
 ### Return Values
 
 The converted <span class="type">string</span>.
-
-### Changelog
-
-| Version | Description               |
-|---------|---------------------------|
-| 5.4.0   | Added `is_hex` parameter. |
 
 ### Examples
 
@@ -1720,13 +1708,6 @@ will be returned.
 An <span class="type">array</span> of type information if `type` is not
 specified, otherwise a specific `type`.
 
-### Changelog
-
-| Version | Description                                                                                            |
-|---------|--------------------------------------------------------------------------------------------------------|
-| 5.3.0   | The entry "http\_output\_conv\_mimetypes" was made available.                                          |
-| 5.1.3   | The entries "mail\_charset", "mail\_header\_encoding", and "mail\_body\_encoding" were made available. |
-
 ### See Also
 
 -   <span class="function">mb\_regex\_encoding</span>
@@ -2559,12 +2540,6 @@ the internal character encoding value will be used.
 <span class="function">mb\_strcut</span> returns the portion of `str`
 specified by the `start` and `length` parameters.
 
-### Changelog
-
-| Version | Description                                                                                                                       |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.8   | Passing *NULL* as `length` extracts all bytes to the end of the string. Prior to this version *NULL* was treated the same as *0*. |
-
 ### See Also
 
 -   <span class="function">mb\_substr</span>
@@ -3045,12 +3020,6 @@ Returns the numeric position of the last occurrence of `needle` in the
 `haystack` <span class="type">string</span>. If `needle` is not found,
 it returns **`FALSE`**.
 
-### Changelog
-
-| Version | Description                            |
-|---------|----------------------------------------|
-| 5.2.0   | Added the optional parameter `offset`. |
-
 ### Notes
 
 > **Note**: <span class="simpara"> The `encoding` parameter was moved
@@ -3459,12 +3428,6 @@ the internal character encoding value will be used.
 
 <span class="function">mb\_substr</span> returns the portion of `str`
 specified by the `start` and `length` parameters.
-
-### Changelog
-
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.8   | Passing *NULL* as `length` extracts all characters to the end of the string. Prior to this version *NULL* was treated the same as *0*. |
 
 ### See Also
 

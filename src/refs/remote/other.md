@@ -3,13 +3,6 @@ Other Services
 
 **Table of Contents**
 
--   [chdb](/book/chdb.html) — Constant hash database
-    -   [Introduction](/intro/chdb.html)
-    -   [Installing/Configuring](/chdb/setup.html)
-    -   [Predefined Constants](/chdb/constants.html)
-    -   [Examples](/chdb/examples.html)
-    -   [chdb](/class/chdb.html) — The chdb class
-    -   [chdb Functions](/ref/chdb.html)
 -   [cURL](/book/curl.html) — Client URL Library
     -   [Introduction](/intro/curl.html)
     -   [Installing/Configuring](/curl/setup.html)
@@ -46,11 +39,6 @@ Other Services
     -   [EventSslContext](/class/eventsslcontext.html) — The
         EventSslContext class
     -   [EventUtil](/class/eventutil.html) — The EventUtil class
--   [FAM](/book/fam.html) — File Alteration Monitor
-    -   [Introduction](/intro/fam.html)
-    -   [Installing/Configuring](/fam/setup.html)
-    -   [Predefined Constants](/fam/constants.html)
-    -   [FAM Functions](/ref/fam.html)
 -   [FTP](/book/ftp.html)
     -   [Introduction](/intro/ftp.html)
     -   [Installing/Configuring](/ftp/setup.html)
@@ -70,24 +58,6 @@ Other Services
         class
     -   [GearmanException](/class/gearmanexception.html) — The
         GearmanException class
--   [Gopher](/book/net-gopher.html) — Net Gopher
-    -   [Introduction](/intro/net-gopher.html)
-    -   [Installing/Configuring](/net-gopher/setup.html)
-    -   [Predefined Constants](/net-gopher/constants.html)
-    -   [Examples](/net-gopher/examples.html)
-    -   [Gopher Functions](/ref/net-gopher.html)
--   [Gupnp](/book/gupnp.html) — Gupnp
-    -   [Introduction](/intro/gupnp.html)
-    -   [Installing/Configuring](/gupnp/setup.html)
-    -   [Predefined Constants](/gupnp/constants.html)
-    -   [Examples](/gupnp/examples.html)
-    -   [Gupnp Functions](/ref/gupnp.html)
--   [Hyperwave API](/book/hwapi.html)
-    -   [Introduction](/intro/hwapi.html)
-    -   [Installing/Configuring](/hwapi/setup.html)
-    -   [Predefined Constants](/hwapi/constants.html)
-    -   [Integration with Apache](/hwapi/apache-integration.html)
-    -   [Hyperwave API Functions](/ref/hwapi.html)
 -   [LDAP](/book/ldap.html) — Lightweight Directory Access Protocol
     -   [Introduction](/intro/ldap.html)
     -   [Installing/Configuring](/ldap/setup.html)
@@ -132,12 +102,6 @@ Other Services
     -   [RRDCreator](/class/rrdcreator.html) — The RRDCreator class
     -   [RRDGraph](/class/rrdgraph.html) — The RRDGraph class
     -   [RRDUpdater](/class/rrdupdater.html) — The RRDUpdater class
--   [SAM](/book/sam.html) — Simple Asynchronous Messaging
-    -   [Introduction](/intro/sam.html)
-    -   [Installing/Configuring](/sam/setup.html)
-    -   [Predefined Constants](/sam/constants.html)
-    -   [Examples](/sam/examples.html)
-    -   [SAM Functions](/ref/sam.html)
 -   [ScoutAPM](/book/scoutapm.html) — ScoutAPM
     -   [Introduction](/intro/scoutapm.html)
     -   [Installing/Configuring](/scoutapm/setup.html)
@@ -203,11 +167,6 @@ Other Services
     -   [Predefined Constants](/yaz/constants.html)
     -   [Examples](/yaz/examples.html)
     -   [YAZ Functions](/ref/yaz.html)
--   [YP/NIS](/book/nis.html)
-    -   [Introduction](/intro/nis.html)
-    -   [Installing/Configuring](/nis/setup.html)
-    -   [Predefined Constants](/nis/constants.html)
-    -   [YP/NIS Functions](/ref/nis.html)
 -   [0MQ messaging](/book/zmq.html) — ZMQ
     -   [Introduction](/intro/zmq.html)
     -   [Installing/Configuring](/zmq/setup.html)

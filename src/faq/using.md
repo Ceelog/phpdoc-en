@@ -263,8 +263,8 @@ all CGI programs running under IIS. A workaround is to create a plain
 HTML file (not parsed by PHP) as the entry page into an authenticated
 directory. Then use a META tag to redirect to the PHP page, or have a
 link to the PHP page. PHP will then recognize the authentication
-correctly. With the ISAPI module, this is not a problem. This should not
-affect other NT web servers. For more information, see:
+correctly. This should not affect other NT web servers. For more
+information, see:
 <a href="http://support.microsoft.com/kb/q160422/" class="link external">» http://support.microsoft.com/kb/q160422/</a>
 and the manual section on
 <a href="/features/http-auth.html" class="link">HTTP Authentication</a>
@@ -322,9 +322,6 @@ HTML form, a Cookie, and the URL.
 There are a few alternatives written in PHP such as
 <a href="http://www.fpdf.org/" class="link external">» FPDF</a> and
 <a href="http://www.tcpdf.org/" class="link external">» TCPDF</a>.
-
-There is also the <a href="/book/haru.html" class="link">Haru</a>
-extension that uses the free libHaru external library.
 
 <!-- -->
 

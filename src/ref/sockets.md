@@ -552,12 +552,6 @@ inserted.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-
 ### Examples
 
 **Example \#1 <span class="function">socket\_create\_pair</span>

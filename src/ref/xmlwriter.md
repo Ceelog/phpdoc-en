@@ -2029,12 +2029,6 @@ The element contents.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                              |
-|---------|------------------------------------------|
-| 5.2.3   | The `content` parameter became optional. |
-
 ### See Also
 
 -   <span class="methodname">XMLWriter::startElementNs</span>
@@ -2088,12 +2082,6 @@ The element contents.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                              |
-|---------|------------------------------------------|
-| 5.2.3   | The `content` parameter became optional. |
 
 ### See Also
 

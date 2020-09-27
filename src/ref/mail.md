@@ -173,10 +173,9 @@ destination.
 
 ### Changelog
 
-| Version        | Description                                                                                                                                             |
-|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0          | The `additional_headers` parameter now also accepts an <span class="type">array</span>.                                                                 |
-| 5.4.42, 5.5.27 | Header injection protection has been added for the `additional_headers` parameter. This means that multiple consecutive newlines are no longer allowed. |
+| Version | Description                                                                             |
+|---------|-----------------------------------------------------------------------------------------|
+| 7.2.0   | The `additional_headers` parameter now also accepts an <span class="type">array</span>. |
 
 ### Examples
 

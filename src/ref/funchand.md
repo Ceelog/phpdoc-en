@@ -26,12 +26,6 @@ The parameters to be passed to the callback, as an indexed array.
 
 Returns the return value of the callback, or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                               |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | The interpretation of object oriented keywords like *parent* and *self* has changed. Previously, calling them using the double colon syntax would emit an **`E_STRICT`** warning because they were interpreted as static. |
-
 ### Examples
 
 **Example \#1 <span class="function">call\_user\_func\_array</span>
@@ -225,13 +219,6 @@ Zero or more parameters to be passed to the callback.
 ### Return Values
 
 Returns the return value of the callback.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                               |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | The interpretation of object oriented keywords like *parent* and *self* has changed. Previously, calling them using the double colon syntax would emit an **`E_STRICT`** warning because they were interpreted as static. |
-| 5.3.0   | If the called function expects a parameter to be passed by reference, an **`E_WARNING`** is now issued.                                                                                                                   |
 
 ### Examples
 
@@ -748,13 +735,6 @@ The argument offset. Function arguments are counted starting from zero.
 
 Returns the specified argument, or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                     |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | This function can now be used in parameter lists.                                                                                                                                                                                                                               |
-| 5.3.0   | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`FALSE`**. |
-
 ### Errors/Exceptions
 
 Generates a warning if called from outside of a user-defined function,
@@ -903,13 +883,6 @@ to accept variable-length argument lists.
 
 Returns an array in which each element is a copy of the corresponding
 member of the current user-defined function's argument list.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                     |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | This function can now be used in parameter lists.                                                                                                                                                                                                                               |
-| 5.3.0   | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns **`FALSE`**. |
 
 ### Errors/Exceptions
 
@@ -1086,13 +1059,6 @@ to accept variable-length argument lists.
 
 Returns the number of arguments passed into the current user-defined
 function.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                            |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | This function can now be used in parameter lists.                                                                                                                                                                                                                      |
-| 5.3.0   | If this function is called from the outermost scope of a file which has been included by calling <span class="function">include</span> or <span class="function">require</span> from within a function in the calling file, it now generates a warning and returns -1. |
 
 ### Errors/Exceptions
 
@@ -1443,12 +1409,6 @@ $object = new my_class();
 register_tick_function(array(&$object, 'my_method'), true);
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                             |
-|---------|---------------------------------------------------------|
-| 5.3.0   | Ticks are now supported on threaded web server modules. |
 
 ### Notes
 

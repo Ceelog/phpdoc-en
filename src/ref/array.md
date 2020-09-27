@@ -411,12 +411,6 @@ number of elements for each array isn't equal.
 Throws **`E_WARNING`** if the number of elements in `keys` and `values`
 does not match.
 
-### Changelog
-
-| Version | Description                                                                         |
-|---------|-------------------------------------------------------------------------------------|
-| 5.4.0   | Previous versions issued **`E_WARNING`** and returned **`FALSE`** for empty arrays. |
-
 ### Examples
 
 **Example \#1 A simple <span class="function">array\_combine</span>
@@ -2730,13 +2724,6 @@ other words, the sort is lexicographical.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                               |
-|---------|-----------------------------------------------------------------------------------------------------------|
-| 5.4.0   | The **`SORT_NATURAL`** and **`SORT_FLAG_CASE`** were added to `array1_sort_flags` as possible sort flags. |
-| 5.3.0   | The **`SORT_LOCALE_STRING`** was added to `array1_sort_flags` as possible sort flags.                     |
-
 ### Examples
 
 **Example \#1 Sorting multiple arrays**
@@ -3059,12 +3046,6 @@ The array.
 
 Returns the product as an integer or float.
 
-### Changelog
-
-| Version | Description                                                                                          |
-|---------|------------------------------------------------------------------------------------------------------|
-| 5.3.6   | The product of an empty array is now 1, when before this function would return 0 for an empty array. |
-
 ### Examples
 
 **Example \#1 <span class="function">array\_product</span> examples**
@@ -3204,7 +3185,6 @@ level error, and NULL will be returned.
 | Version | Description                                                                                                                                                                                                                                                                                                                                       |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.1.0   | The internal randomization algorithm <a href="/migration71/incompatible.html#migration71.incompatible.rand-srand-aliases" class="link">has been changed</a> to use the <a href="http://www.math.sci.hiroshima-u.ac.jp/~m-mat/MT/emt.html" class="link external">» Mersenne Twister</a> Random Number Generator instead of the libc rand function. |
-| 5.2.10  | The resulting array of keys is no longer shuffled.                                                                                                                                                                                                                                                                                                |
 
 ### Examples
 
@@ -3271,12 +3251,6 @@ Returns the resulting value.
 
 If the array is empty and `initial` is not passed, <span
 class="function">array\_reduce</span> returns **`NULL`**.
-
-### Changelog
-
-| Version | Description                                                                                               |
-|---------|-----------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Changed `initial` to allow <span class="type">mixed</span>, previously <span class="type">integer</span>. |
 
 ### Examples
 
@@ -3659,12 +3633,6 @@ more information. Use
 <a href="/language/operators/comparison.html" class="link">the === operator</a>
 for testing the return value of this function.
 
-### Changelog
-
-| Version | Description                                                                                                                                            |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | As with all internal PHP functions as of 5.3.0, <span class="function">array\_search</span> returns **`NULL`** if invalid parameters are passed to it. |
-
 ### Examples
 
 **Example \#1 <span class="function">array\_search</span> example**
@@ -3805,13 +3773,6 @@ up until the end of the `array`.
 
 Returns the slice. If the offset is larger than the size of the array,
 an empty array is returned.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.4   | The default value of the `length` parameter was changed to **`NULL`**. A **`NULL`** `length` now tells the function to use the length of `array`. Prior to this version, a **`NULL`** `length` was taken to mean a zero length (nothing will be returned). |
-| 5.0.2   | The optional `preserve_keys` parameter was added.                                                                                                                                                                                                          |
 
 ### Examples
 
@@ -4853,8 +4814,6 @@ Returns the filtered array.
 | Version | Description                                                                                                                                                                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.2.0   | If `sort_flags` is **`SORT_STRING`**, formerly `array` has been copied and non-unique elements have been removed (without packing the array afterwards), but now a new array is built by adding the unique elements. This can result in different numeric indexes. |
-| 5.2.10  | Changed the default value of `sort_flags` back to **`SORT_STRING`**.                                                                                                                                                                                               |
-| 5.2.9   | Added the optional `sort_flags` defaulting to **`SORT_REGULAR`**. Prior to 5.2.9, this function used to sort the array with **`SORT_STRING`** internally.                                                                                                          |
 
 ### Examples
 
@@ -6820,12 +6779,6 @@ The input array.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                       |
-|---------|-----------------------------------------------------------------------------------|
-| 5.2.10  | Zero padded numeric strings (e.g., '00005') now essentially ignore the 0 padding. |
-
 ### Examples
 
 **Example \#1 <span class="function">natsort</span> examples
@@ -7430,13 +7383,6 @@ Sorting type flags:
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 5.4.0   | Added support for **`SORT_NATURAL`** and **`SORT_FLAG_CASE`** as `sort_flags` |
-| 5.0.2   | Added **`SORT_LOCALE_STRING`**                                                |
 
 ### Examples
 

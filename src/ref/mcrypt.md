@@ -124,14 +124,6 @@ Note that the default value of this parameter was
 
 Returns the initialization vector, or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                                                                                                 |
-|---------|-------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | **`MCRYPT_DEV_URANDOM`** is now the default value of `source`.                                              |
-| 5.3.0   | **`MCRYPT_DEV_RANDOM`** and **`MCRYPT_DEV_URANDOM`** became available on Windows platforms.                 |
-| 5.3.0   | It is no longer required to call <span class="function">srand</span> first. This is now done automatically. |
-
 ### Examples
 
 **Example \#1 <span class="function">mcrypt\_create\_iv</span> Example**

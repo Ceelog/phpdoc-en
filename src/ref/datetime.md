@@ -154,13 +154,6 @@ default timezone of *UTC*.
 
 Returns a <span class="type">string</span>.
 
-### Changelog
-
-| Version | Description                                                                                                                             |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | The *TZ* environment variable is no longer used to guess the timezone.                                                                  |
-| 5.4.0   | The timezone is no longer guessed from information available through the operating system as the guessed timezone can not be relied on. |
-
 ### Examples
 
 **Example \#1 Getting the default timezone**
@@ -259,13 +252,6 @@ if (strcmp($script_tz, ini_get('date.timezone'))){
 }
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                                  |
-|---------|--------------------------------------------------------------|
-| 5.3.0   | Now throws **`E_WARNING`** rather than **`E_STRICT`**.       |
-| 5.1.2   | The function started to validate the `timezoneID` parameter. |
 
 ### See Also
 
@@ -625,12 +611,6 @@ The values of the array elements are either UNIX timestamps, **`FALSE`**
 if the sun is below the respective zenith for the whole day, or
 **`TRUE`** if the sun is above the respective zenith for the whole day.
 
-### Changelog
-
-| Version | Description                                               |
-|---------|-----------------------------------------------------------|
-| 5.2.2   | The order of `latitude` and `longitude` has been swapped. |
-
 ### Examples
 
 **Example \#1 A <span class="function">date\_sun\_info</span> example**
@@ -799,12 +779,6 @@ time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
 
-### Changelog
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors. |
-
 ### Examples
 
 **Example \#1 <span class="function">date\_sunrise</span> example**
@@ -913,12 +887,6 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
-
-### Changelog
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors. |
 
 ### Return Values
 
@@ -1060,14 +1028,6 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.1.1   | There are useful <a href="/datetime/constants.html" class="link">constants</a> of standard date/time formats that can be used to specify the `format` parameter.                                                                                                                                                                     |
-| 5.1.0   | The valid range of a timestamp is typically from Fri, 13 Dec 1901 20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates that correspond to the minimum and maximum values for a 32-bit signed integer). However, before PHP 5.1.0 this range was limited from 01-01-1970 to 19-01-2038 on some systems (e.g. Windows). |
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                                                                                                                                                                   |
 
 ### Examples
 
@@ -1306,12 +1266,6 @@ Array keys:
     </span>
 -   <span class="simpara"> "dsttime" - type of dst correction </span>
 
-### Changelog
-
-| Version | Description                            |
-|---------|----------------------------------------|
-| 5.1.0   | The `returnFloat` parameter was added. |
-
 ### Examples
 
 **Example \#1 <span class="function">gettimeofday</span> example**
@@ -1370,13 +1324,6 @@ the value of <span class="function">time</span>.
 Returns a formatted date string. If a non-numeric value is used for
 `timestamp`, **`FALSE`** is returned and an **`E_WARNING`** level error
 is emitted.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.1.1   | There are useful <a href="/datetime/constants.html" class="link">constants</a> of standard date/time formats that can be used to specify the `format` parameter.                                                                                                                                                                     |
-| 5.1.0   | The valid range of a timestamp is typically from Fri, 13 Dec 1901 20:45:54 GMT to Tue, 19 Jan 2038 03:14:07 GMT. (These are the dates that correspond to the minimum and maximum values for a 32-bit signed integer). However, before PHP 5.1.0 this range was limited from 01-01-1970 to 19-01-2038 on some systems (e.g. Windows). |
 
 ### Examples
 
@@ -1480,13 +1427,6 @@ result.
 ### Return Values
 
 Returns a <span class="type">integer</span> Unix timestamp.
-
-### Changelog
-
-| Version | Description                                                                                                                       |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | `isDST` parameter has been removed.                                                                                               |
-| 5.1.0   | As of PHP 5.1.0, the `isDST` parameter became deprecated. As a result, the new timezone handling features should be used instead. |
 
 ### Examples
 
@@ -1625,12 +1565,6 @@ time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
 
-### Changelog
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors. |
-
 ### Examples
 
 **Example \#1 <span class="function">idate</span> example**
@@ -1707,12 +1641,6 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
-
-### Changelog
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors. |
 
 ### Examples
 
@@ -1981,16 +1909,6 @@ time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
 
-### Changelog
-
-| Version | Description                                                                                                                                                                             |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | `isDST` parameter has been removed.                                                                                                                                                     |
-| 5.3.0   | <span class="function">mktime</span> now throws **`E_DEPRECATED`** notice if the `isDST` parameter is used.                                                                             |
-| 5.1.0   | The `isDST` parameter became deprecated. Made the function return **`FALSE`** on error, instead of *-1*. Fixed the function to accept the year, month and day to be all passed as zero. |
-| 5.1.0   | When called with no arguments, <span class="function">mktime</span> throws **`E_STRICT`** notice. Use the <span class="function">time</span> function instead.                          |
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                      |
-
 ### Examples
 
 **Example \#1 <span class="function">mktime</span> basic example**
@@ -2183,12 +2101,6 @@ conversion specifiers will result in 5 **`E_WARNING`** messages and
 return **`FALSE`**. On other operating systems you may not get any
 **`E_WARNING`** messages and the output may contain the conversion
 specifiers unconverted.
-
-### Changelog
-
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors. |
 
 ### Examples
 
@@ -2607,18 +2519,6 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                                                                    |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Prior to PHP 5.3.0, relative time formats supplied to the `datetime` argument of <span class="function">strtotime</span> such as *this week*, *previous week*, *last week*, and *next week* were interpreted to mean a 7 day period relative to the current date/time, rather than a week period of *Monday* through *Sunday*. |
-| 5.3.0   | Prior to PHP 5.3.0, *24:00* was not a valid format and <span class="function">strtotime</span> returned **`FALSE`**.                                                                                                                                                                                                           |
-| 5.2.7   | In PHP 5 prior to 5.2.7, requesting a given occurrence of a given weekday in a month where that weekday was the first day of the month would incorrectly add one week to the returned timestamp. This has been corrected in 5.2.7 and later versions.                                                                          |
-| 5.1.0   | Now returns **`FALSE`** on failure, instead of *-1*.                                                                                                                                                                                                                                                                           |
-| 5.1.0   | Now issues the **`E_STRICT`** and **`E_NOTICE`** time zone errors.                                                                                                                                                                                                                                                             |
-| 5.0.2   | In PHP 5 up to 5.0.2, *"now"* and other relative times are wrongly computed from today's midnight. This differs from other versions where it is correctly computed from current time.                                                                                                                                          |
-| 5.0.0   | Microseconds began to be allowed, but they are ignored.                                                                                                                                                                                                                                                                        |
 
 ### Examples
 

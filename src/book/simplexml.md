@@ -600,12 +600,6 @@ If `is_prefix` is **`TRUE`**, `ns` will be regarded as a prefix. If
 Returns a <span class="classname">SimpleXMLElement</span> element,
 whether the node has children or not.
 
-### Changelog
-
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 5.2.0   | The optional parameter `is_prefix` was added. |
-
 ### Examples
 
 **Example \#1 Traversing a *children()* pseudo-array**
@@ -963,12 +957,6 @@ The above example will output:
       ["a"]=>
       string(23) "http://example.org/addr"
     }
-
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 5.4.0   | Added `from_root` parameter. |
 
 ### See Also
 

@@ -1,17 +1,3 @@
-set\_socket\_blocking
-=====================
-
-Alias of <span class="function">stream\_set\_blocking</span>
-
-**Warning**
-
-This alias was *DEPRECATED* in PHP 5.3.0, and *REMOVED* as of PHP 7.0.0.
-
-### Description
-
-This function is an alias of: <span
-class="function">stream\_set\_blocking</span>
-
 stream\_bucket\_append
 ======================
 
@@ -156,12 +142,6 @@ listing of standard stream parameters.
 ### Return Values
 
 A stream context <span class="type">resource</span>.
-
-### Changelog
-
-| Version | Description                           |
-|---------|---------------------------------------|
-| 5.3.0   | Added the optional `params` argument. |
 
 ### Examples
 
@@ -580,12 +560,6 @@ The offset where to start to copy data
 
 Returns the total count of bytes copied, or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 5.1.0   | Added the `offset` parameter |
-
 ### Examples
 
 **Example \#1 A <span class="function">stream\_copy\_to\_stream</span>
@@ -656,12 +630,6 @@ class="function">stream\_filter\_remove</span>.
 
 **`FALSE`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
-
-### Changelog
-
-| Version | Description                                                                                |
-|---------|--------------------------------------------------------------------------------------------|
-| 5.1.0   | Prior to PHP 5.1.0, this function returns **`TRUE`** on success or **`FALSE`** on failure. |
 
 ### Examples
 
@@ -779,12 +747,6 @@ class="function">stream\_filter\_remove</span>.
 
 **`FALSE`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
-
-### Changelog
-
-| Version | Description                                                                                |
-|---------|--------------------------------------------------------------------------------------------|
-| 5.1.0   | Prior to PHP 5.1.0, this function returns **`TRUE`** on success or **`FALSE`** on failure. |
 
 ### Notes
 
@@ -1075,12 +1037,6 @@ no seeking will occur and reading will start from the current position.
 ### Return Values
 
 Returns a string or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description             |
-|---------|-------------------------|
-| 5.1.0   | The `offset` was added. |
 
 ### Examples
 
@@ -2639,12 +2595,6 @@ The protocol to be used: **`STREAM_IPPROTO_ICMP`**,
 Returns an <span class="type">array</span> with the two socket resources
 on success, or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-
 ### Examples
 
 **Example \#1 A <span class="function">stream\_socket\_pair</span>
@@ -3114,12 +3064,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 <span class="function">stream\_wrapper\_register</span> will return
 **`FALSE`** if the `protocol` already has a handler.
 
-### Changelog
-
-| Version | Description                  |
-|---------|------------------------------|
-| 5.2.4   | Added the `flags` parameter. |
-
 ### Examples
 
 **Example \#1 How to register a stream wrapper**
@@ -3224,8 +3168,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 **Table of Contents**
 
--   [set\_socket\_blocking](/ref/stream.html#set_socket_blocking) —
-    Alias of stream\_set\_blocking
 -   [stream\_bucket\_append](/ref/stream.html#stream_bucket_append) —
     Append bucket to brigade
 -   [stream\_bucket\_make\_writeable](/ref/stream.html#stream_bucket_make_writeable)

@@ -146,12 +146,6 @@ rfc2060 specifications for a date\_time value.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                 |
-|---------|---------------------------------------------|
-| 5.3.2   | Added INTERNALDATE support to imap\_append. |
-
 ### Examples
 
 **Example \#1 <span class="function">imap\_append</span> example**
@@ -807,12 +801,6 @@ are:
     draft </span>
 -   <span class="simpara"> *udate* - the UNIX timestamp of the arrival
     date </span>
-
-### Changelog
-
-| Version | Description               |
-|---------|---------------------------|
-| 5.3.3   | Add the *udate* property. |
 
 ### Examples
 
@@ -2533,13 +2521,6 @@ or more connection parameters:
 
 Returns an IMAP stream on success or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description       |
-|---------|-------------------|
-| 5.3.2   | `params` added    |
-| 5.2.0   | `n_retries` added |
-
 ### Examples
 
 **Example \#1 Different use of <span
@@ -2790,12 +2771,6 @@ Number of maximum connect attempts
 ### Return Values
 
 Returns **`TRUE`** if the stream is reopened, **`FALSE`** otherwise.
-
-### Changelog
-
-| Version | Description       |
-|---------|-------------------|
-| 5.2.0   | `n_retries` added |
 
 ### Examples
 

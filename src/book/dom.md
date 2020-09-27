@@ -3110,12 +3110,6 @@ echo $doc->saveHTML();
 ?>
 ```
 
-### Changelog
-
-| Version | Description                |
-|---------|----------------------------|
-| 5.4.0   | Added `options` parameter. |
-
 ### See Also
 
 -   <span class="methodname">DOMDocument::loadHTMLFile</span>
@@ -3180,12 +3174,6 @@ $doc->loadHTMLFile("filename.html");
 echo $doc->saveHTML();
 ?>
 ```
-
-### Changelog
-
-| Version | Description                |
-|---------|----------------------------|
-| 5.4.0   | Added `options` parameter. |
 
 ### See Also
 
@@ -3316,12 +3304,6 @@ registered class extending `baseclass` will be removed.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                                                                              |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.2.2   | Prior to 5.2.2, a previously registered `extendedclass` had to be unregistered before being able to register a new class extending the same `baseclass`. |
 
 ### Examples
 
@@ -3521,12 +3503,6 @@ supported.
 
 Returns the number of bytes written or **`FALSE`** if an error occurred.
 
-### Changelog
-
-| Version | Description                   |
-|---------|-------------------------------|
-| 5.1.0   | Added the `options` parameter |
-
 ### Examples
 
 **Example \#1 Saving a DOM tree into a file**
@@ -3582,12 +3558,6 @@ Optional parameter to output a subset of the document.
 ### Return Values
 
 Returns the HTML, or **`FALSE`** if an error occurred.
-
-### Changelog
-
-| Version | Description                     |
-|---------|---------------------------------|
-| 5.3.6   | The `node` parameter was added. |
 
 ### Examples
 
@@ -3716,12 +3686,6 @@ Returns the XML, or **`FALSE`** if an error occurred.
 
 **`DOM_WRONG_DOCUMENT_ERR`**  
 Raised if `node` is from another document.
-
-### Changelog
-
-| Version | Description                   |
-|---------|-------------------------------|
-| 5.1.0   | Added the `options` parameter |
 
 ### Examples
 
@@ -8437,12 +8401,6 @@ given XPath `expression`.
 If the `expression` is malformed or the `contextnode` is invalid, <span
 class="methodname">DOMXPath::evaluate</span> returns **`FALSE`**.
 
-### Changelog
-
-| Version | Description                               |
-|---------|-------------------------------------------|
-| 5.3.3   | The `registerNodeNS` parameter was added. |
-
 ### Examples
 
 **Example \#1 Getting the count of all the english books**
@@ -8516,12 +8474,6 @@ class="classname">DOMNodeList</span>.
 
 If the `expression` is malformed or the `contextnode` is invalid, <span
 class="methodname">DOMXPath::query</span> returns **`FALSE`**.
-
-### Changelog
-
-| Version | Description                               |
-|---------|-------------------------------------------|
-| 5.3.3   | The `registerNodeNS` parameter was added. |
 
 ### Examples
 

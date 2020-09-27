@@ -36,8 +36,45 @@ Runtime Configuration
 
 The behaviour of these functions is affected by settings in `php.ini`.
 
-Currently the same as
-<a href="/runkit/setup.html#Runtime%20Configuration" class="link">Runkit Configuration Options</a>
+| Name                                                                     | Default | Changeable       | Changelog |
+|--------------------------------------------------------------------------|---------|------------------|-----------|
+| <a href="/runkit7/setup.html#" class="link">runkit.superglobal</a>       | ""      | PHP\_INI\_PERDIR |           |
+| <a href="/runkit7/setup.html#" class="link">runkit.internal_override</a> | "0"     | PHP\_INI\_SYSTEM |           |
+
+For further details and definitions of the PHP\_INI\_\* modes, see the
+<a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.
+
+Here's a short explanation of the configuration directives.
+
+`runkit.superglobal` <span class="type">string</span>  
+<span class="simpara"> Comma-separated list of variable names to be
+treated as superglobals. This value should be set in the systemwide
+php.ini file, but may work in perdir configuration contexts depending on
+your SAPI. </span>
+
+**Example \#1 Custom Superglobals with runkit.superglobal=\_FOO,\_BAR in
+php.ini**
+
+``` php
+<?php
+function show_values() {
+  echo "Foo is $_FOO\n";
+  echo "Bar is $_BAR\n";
+  echo "Baz is $_BAZ\n";
+}
+
+$_FOO = 'foo';
+$_BAR = 'bar';
+$_BAZ = 'baz';
+
+/* Displays foo and bar, but not baz */
+show_values();
+?>
+```
+
+`runkit.internal_override` <span class="type">boolean</span>  
+<span class="simpara"> Enables ability to modify/rename/remove internal
+functions. </span>
 
 Resource Types
 --------------

@@ -14,12 +14,6 @@ Web Services
         class
     -   [OAuthException](/class/oauthexception.html) — OAuthException
         class
--   [SCA](/book/sca.html)
-    -   [Introduction](/intro/sca.html)
-    -   [Installing/Configuring](/sca/setup.html)
-    -   [Predefined Constants](/sca/constants.html)
-    -   [Examples](/sca/examples.html)
-    -   [SCA Functions](/ref/sca.html)
 -   [SOAP](/book/soap.html) — SOAP
     -   [Introduction](/intro/soap.html)
     -   [Installing/Configuring](/soap/setup.html)

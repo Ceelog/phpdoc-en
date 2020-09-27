@@ -29,13 +29,6 @@ NAPTR, TXT or ANY.
 Returns **`TRUE`** if any records are found; returns **`FALSE`** if no
 records were found or if an error occurred.
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-| 5.2.4   | TXT `type` was added.                                |
-
 ### Notes
 
 > **Note**:
@@ -284,12 +277,9 @@ keys:
 
 ### Changelog
 
-| Version       | Description                                                                                          |
-|---------------|------------------------------------------------------------------------------------------------------|
-| 7.0.16, 7.1.2 | Added support for CAA record type.                                                                   |
-| 5.4.0         | Added `raw` parameter.                                                                               |
-| 5.3.0         | This function is now available on Windows platforms.                                                 |
-| 5.3.0         | Prior to this release, if the `authns` parameter was given, the `addtl` parameter was also required. |
+| Version       | Description                        |
+|---------------|------------------------------------|
+| 7.0.16, 7.1.2 | Added support for CAA record type. |
 
 ### Examples
 
@@ -842,12 +832,6 @@ information gathered.
 Returns **`TRUE`** if any records are found; returns **`FALSE`** if no
 records were found or if an error occurred.
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-
 ### Notes
 
 > **Note**:
@@ -1269,12 +1253,6 @@ parameter only has an effect if the `header` is not empty.
 
 No value is returned.
 
-### Changelog
-
-| Version | Description                                                                                                          |
-|---------|----------------------------------------------------------------------------------------------------------------------|
-| 5.1.2   | This function now prevents more than one header to be sent at once as a protection against header injection attacks. |
-
 ### Examples
 
 **Example \#1 Download dialog**
@@ -1681,12 +1659,6 @@ echo $expanded;
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-
 ### See Also
 
 -   <span class="function">long2ip</span>
@@ -1732,12 +1704,6 @@ $in6_addr = inet_pton('::1');
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                          |
-|---------|------------------------------------------------------|
-| 5.3.0   | This function is now available on Windows platforms. |
-
 ### See Also
 
 -   <span class="function">ip2long</span>
@@ -1773,13 +1739,6 @@ A standard format address.
 ### Return Values
 
 Returns the long integer or **`FALSE`** if `ip_address` is invalid.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                    |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.0   | Prior to this version, on Windows <span class="function">ip2long</span> would sometimes return a valid number even if passed a value which was not an (IPv4) Internet Protocol dotted address. |
-| 5.2.10  | Prior to this version, <span class="function">ip2long</span> would sometimes return a valid number even if passed a value which was not an (IPv4) Internet Protocol dotted address.            |
 
 ### Examples
 
@@ -2199,8 +2158,6 @@ The above example will output:
 | Version | Description                                                                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0   | An alternative signature supporting an `options` array has been added. This signature supports also setting of the SameSite cookie attribute. |
-| 5.5.0   | A Max-Age attribute is now included in the Set-Cookie header sent to the client.                                                              |
-| 5.2.0   | The `httponly` parameter was added.                                                                                                           |
 
 ### Notes
 
@@ -2306,8 +2263,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 | Version | Description                                                                                                                                   |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0   | An alternative signature supporting an `options` array has been added. This signature supports also setting of the SameSite cookie attribute. |
-| 5.5.0   | A Max-Age attribute is now included in the Set-Cookie header sent to the client.                                                              |
-| 5.2.0   | The `httponly` parameter was added.                                                                                                           |
 
 ### See Also
 

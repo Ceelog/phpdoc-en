@@ -17,12 +17,6 @@ Windows Only Extensions
     -   [com\_exception](/class/com-exception.html) — The com\_exception
         class
     -   [COM Functions](/ref/com.html)
--   [win32ps](/book/win32ps.html)
-    -   [Introduction](/intro/win32ps.html)
-    -   [Installing/Configuring](/win32ps/setup.html)
-    -   [Predefined Constants](/win32ps/constants.html)
-    -   [Examples](/win32ps/examples.html)
-    -   [win32ps Functions](/ref/win32ps.html)
 -   [win32service](/book/win32service.html)
     -   [Introduction](/intro/win32service.html)
     -   [Installing/Configuring](/win32service/setup.html)

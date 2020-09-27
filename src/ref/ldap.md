@@ -1371,12 +1371,6 @@ pointer.
 Returns the first attribute in the entry on success and **`FALSE`** on
 error.
 
-### Changelog
-
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 5.2.4   | The `ber_identifier` was removed. This is now handled automatically by PHP. |
-
 ### See Also
 
 -   <span class="function">ldap\_next\_attribute</span>
@@ -2471,12 +2465,6 @@ The internal state of the pointer is maintained by this parameter.
 Returns the next attribute in an entry on success and **`FALSE`** on
 error.
 
-### Changelog
-
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 5.2.4   | The `ber_identifier` was removed. This is now handled automatically by PHP. |
-
 ### See Also
 
 -   <span class="function">ldap\_get\_attributes</span>
@@ -2937,12 +2925,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 > requires SASL support (`sasl.h`). Be sure *--with-ldap-sasl* is used
 > when configuring PHP otherwise this function will be undefined.
 > </span>
-
-### Changelog
-
-| Version | Description                   |
-|---------|-------------------------------|
-| 5.3.3   | Support on Windows was added. |
 
 ldap\_search
 ============

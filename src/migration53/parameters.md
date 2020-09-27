@@ -43,7 +43,7 @@ PHP Core:
     class="function">stream\_set\_write\_buffer</span> now work with
     user-space stream wrappers. </span>
 
-<a href="/book/sybase.html" class="link">sybase_ct</a>:
+sybase\_ct:
 
 -   <span class="simpara"> <span
     class="function">sybase\_connect</span> - Added `new`. </span>

@@ -61,12 +61,6 @@ system('ls '.escapeshellarg($dir));
 ?>
 ```
 
-### Changelog
-
-| Version                | Description                               |
-|------------------------|-------------------------------------------|
-| 5.4.43, 5.5.27, 5.6.11 | Exclamation marks are replaced by spaces. |
-
 ### See Also
 
 -   <span class="function">escapeshellcmd</span>
@@ -129,13 +123,6 @@ system($escaped_command);
 command string, and it still allows the attacker to pass arbitrary
 number of arguments. For escaping a single argument <span
 class="function">escapeshellarg</span> should be used instead.
-
-### Changelog
-
-| Version                | Description                                                                                                              |
-|------------------------|--------------------------------------------------------------------------------------------------------------------------|
-| 5.4.43, 5.5.27, 5.6.11 | Exclamation marks are replaced by spaces.                                                                                |
-| 5.3.0                  | On Windows, the special characters are now properly escaped. Previously, they have been replaced with a space character. |
 
 ### See Also
 
@@ -595,8 +582,6 @@ On failure returns **`FALSE`**.
 | 7.4.4   | Added the *create\_new\_console* option to the `other_options` parameter.                                   |
 | 7.4.0   | <span class="function">proc\_open</span> now also accepts an <span class="type">array</span> for the `cmd`. |
 | 7.4.0   | Added the *create\_process\_group* option to the `other_options` parameter.                                 |
-| 7.0.0   | Added the *blocking\_pipes* option to the `other_options` parameter.                                        |
-| 5.2.1   | Added the *bypass\_shell* option to the `other_options` parameter.                                          |
 
 ### Examples
 
@@ -737,12 +722,6 @@ call. The default is *SIGTERM*.
 ### Return Values
 
 Returns the termination status of the process that was run.
-
-### Changelog
-
-| Version | Description                                                     |
-|---------|-----------------------------------------------------------------|
-| 5.2.2   | Previous versions used to destroy the given process `resource`. |
 
 ### See Also
 

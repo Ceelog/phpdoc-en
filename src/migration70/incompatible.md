@@ -495,9 +495,12 @@ API, see
 
 #### All ext/mssql functions
 
-All <a href="/book/mssql.html" class="link">ext/mssql</a> functions were
-removed. For a list of alternatives, see the
-<a href="/book/mssql.html#Introduction" class="link">MSSQL Introduction</a>.
+All *ext/mssql* functions were removed.
+
+-   <a href="/book/pdo.html#MS%20SQL%20Server%20(PDO)" class="link">PDO_SQLSRV</a>
+-   <a href="/book/pdo.html#ODBC%20and%20DB2%20(PDO)" class="link">PDO_ODBC</a>
+-   <a href="/book/sqlsrv.html" class="link">SQLSRV</a>
+-   <a href="/book/uodbc.html" class="link">Unified ODBC API</a>
 
 #### <a href="/book/intl.html" class="link">intl</a> aliases
 

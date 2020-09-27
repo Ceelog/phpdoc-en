@@ -24,11 +24,10 @@ In case of setting up the server and PHP on your own, you have two
 choices for the method of connecting PHP to the server. For many servers
 PHP has a direct module interface (also called SAPI). These servers
 include Apache, Microsoft Internet Information Server, Netscape and
-iPlanet servers. Many other servers have support for ISAPI, the
-Microsoft module interface (OmniHTTPd for example). If PHP has no module
-support for your web server, you can always use it as a CGI or FastCGI
-processor. This means you set up your server to use the CGI executable
-of PHP to process all PHP file requests on the server.
+iPlanet servers. If PHP has no module support for your web server, you
+can always use it as a CGI or FastCGI processor. This means you set up
+your server to use the CGI executable of PHP to process all PHP file
+requests on the server.
 
 If you are also interested in using PHP for command line scripting (e.g.
 write scripts autogenerating some images for you offline, or processing

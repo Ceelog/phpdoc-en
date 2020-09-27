@@ -628,7 +628,6 @@ contains the following items:
 | Version | Description                                           |
 |---------|-------------------------------------------------------|
 | 7.3.0   | The "samesite" entry was added in the returned array. |
-| 5.2.0   | The "httponly" entry was added in the returned array. |
 
 ### See Also
 
@@ -882,13 +881,6 @@ detect/avoid session hijack attacks.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                  |
-|---------|----------------------------------------------------------------------------------------------|
-| 7.0.0   | <span class="function">session\_regenerate\_id</span> saves old session data before closing. |
-| 5.1.0   | Added the `delete_old_session` parameter.                                                    |
 
 ### Examples
 
@@ -1290,7 +1282,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.3.0   | An alternative signature supporting an `options` array has been added. This signature supports also setting of the SameSite cookie attribute. |
 | 7.2.0   | Returns **`TRUE`** on success or **`FALSE`** on failure. Formerly the function returned <span class="type">void</span>.                       |
-| 5.2.0   | The `httponly` parameter was added.                                                                                                           |
 
 ### See Also
 
@@ -1511,14 +1502,6 @@ session ID, `val` is the session data. The return value should be
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                   |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | Added the optional `validate_sid` and `update_timestamp` parameters.                                                                                                                          |
-| 5.5.1   | Added the optional `create_sid` parameter.                                                                                                                                                    |
-| 5.4.0   | Added <span class="interfacename">SessionHandlerInterface</span> for implementing session handlers and <span class="classname">SessionHandler</span> to expose internal PHP session handlers. |
 
 ### Examples
 
@@ -1749,8 +1732,6 @@ otherwise **`FALSE`**.
 | Version | Description                                                                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.1.0   | <span class="function">session\_start</span> now returns **`FALSE`** and no longer initializes `$_SESSION` when it failed to start the session. |
-| 7.0.0   | The `options` parameter was added.                                                                                                              |
-| 5.3.0   | If a session fails to start, then **`FALSE`** is returned. Previously **`TRUE`** was returned.                                                  |
 
 ### Examples
 

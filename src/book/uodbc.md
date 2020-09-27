@@ -30,7 +30,7 @@ ODBC (Unified)
         datasource
     -   [odbc\_cursor](/book/uodbc.html#odbc_cursor) — Get cursorname
     -   [odbc\_data\_source](/book/uodbc.html#odbc_data_source) —
-        Returns information about a current connection
+        Returns information about available DSNs
     -   [odbc\_do](/book/uodbc.html#odbc_do) — Alias of odbc\_exec
     -   [odbc\_error](/book/uodbc.html#odbc_error) — Get the last error
         code
@@ -271,7 +271,8 @@ connections.
 
 `odbc.defaultlrl` <span class="type">integer</span>  
 Handling of LONG fields. Specifies the number of bytes returned to
-variables.
+variables. See <span class="function">odbc\_longreadlen</span> for
+details.
 
 <span class="simpara">When an <span class="type">integer</span> is used,
 the value is measured in bytes. Shorthand notation, as described in
@@ -279,7 +280,8 @@ the value is measured in bytes. Shorthand notation, as described in
 may also be used. </span>
 
 `odbc.defaultbinmode` <span class="type">integer</span>  
-Handling of binary data.
+Handling of binary data. See <span class="function">odbc\_binmode</span>
+for details.
 
 `odbc.default_cursortype` <span class="type">integer</span>  
 Controls the ODBC cursor model. Possible values are
@@ -512,7 +514,10 @@ class="methodparam"><span class="type">resource</span>
 class="type">int</span> `$mode`</span> )
 
 Enables handling of binary column data. ODBC SQL types affected are
-*BINARY*, *VARBINARY*, and *LONGVARBINARY*.
+*BINARY*, *VARBINARY*, and *LONGVARBINARY*. The default mode can be set
+using the
+<a href="/book/uodbc.html#" class="link">uodbc.defaultbinmode</a>
+`php.ini` directive.
 
 When binary SQL data is converted to character C data, each byte (8
 bits) of source data is represented as two ASCII characters. These
@@ -629,8 +634,8 @@ Lists columns and associated privileges for the given table
 class="methodname">odbc\_columnprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$column_name`</span> )
@@ -643,20 +648,23 @@ Lists columns and associated privileges for the given table.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner.
+`schema`  
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `table_name`  
-The table name.
+The table name. This parameter accepts the following search patterns:
+*%* to match zero or more characters, and *\_* to match a single
+character.
 
 `column_name`  
-The column name.
-
-The `owner`, `table_name`, and `column_name` accept search patterns ('%'
-to match zero or more characters and '\_' to match a single character).
+The column name. This parameter accepts the following search patterns:
+*%* to match zero or more characters, and *\_* to match a single
+character.
 
 ### Return Values
 
@@ -666,16 +674,48 @@ privileges.
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_OWNER</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">GRANTOR</span>
--   <span class="simpara">GRANTEE</span>
--   <span class="simpara">PRIVILEGE</span>
--   <span class="simpara">IS\_GRANTABLE</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*GRANTOR*</span>
+-   <span class="simpara">*GRANTEE*</span>
+-   <span class="simpara">*PRIVILEGE*</span>
+-   <span class="simpara">*IS\_GRANTABLE*</span>
 
-The result set is ordered by TABLE\_QUALIFIER, TABLE\_OWNER and
-TABLE\_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by *TABLE\_CAT*, *TABLE\_SCHEM*,
+*TABLE\_NAME*, *COLUMN\_NAME* and *PRIVILEGE*.
+
+### Examples
+
+**Example \#1 List Privileges for a Column**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$privileges = odbc_columnprivileges($conn, 'TutorialDB', 'dbo', 'test', 'id');
+while (($row = odbc_fetch_array($privileges))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => TutorialDB
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => test
+        [COLUMN_NAME] => id
+        [GRANTOR] => dbo
+        [GRANTEE] => dbo
+        [PRIVILEGE] => INSERT
+        [IS_GRANTABLE] => YES
+    )
 
 odbc\_columns
 =============
@@ -688,7 +728,7 @@ Lists the column names in specified tables
 class="methodname">odbc\_columns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> \[, <span
+class="type">string</span> `$catalog`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$schema`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> \[, <span class="methodparam"><span
@@ -702,21 +742,23 @@ Lists all columns in the requested range.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
 `schema`  
-The owner.
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `table_name`  
-The table name.
+The table name. This parameter accepts the following search patterns:
+*%* to match zero or more characters, and *\_* to match a single
+character.
 
 `column_name`  
-The column name.
-
-The `schema`, `table_name`, and `column_name` accept search patterns
-('%' to match zero or more characters and '\_' to match a single
-character).
+The column name. This parameter accepts the following search patterns:
+*%* to match zero or more characters, and *\_* to match a single
+character.
 
 ### Return Values
 
@@ -724,26 +766,73 @@ Returns an ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_SCHEM</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">COLUMN\_NAME</span>
--   <span class="simpara">DATA\_TYPE</span>
--   <span class="simpara">TYPE\_NAME</span>
--   <span class="simpara">PRECISION</span>
--   <span class="simpara">LENGTH</span>
--   <span class="simpara">SCALE</span>
--   <span class="simpara">RADIX</span>
--   <span class="simpara">NULLABLE</span>
--   <span class="simpara">REMARKS</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*DATA\_TYPE*</span>
+-   <span class="simpara">*TYPE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_SIZE*</span>
+-   <span class="simpara">*BUFFER\_LENGTH*</span>
+-   <span class="simpara">*DECIMAL\_DIGITS*</span>
+-   <span class="simpara">*NUM\_PREC\_RADIX*</span>
+-   <span class="simpara">*NULLABLE*</span>
+-   <span class="simpara">*REMARKS*</span>
+-   <span class="simpara">*COLUMN\_DEF*</span>
+-   <span class="simpara">*SQL\_DATA\_TYPE*</span>
+-   <span class="simpara">*SQL\_DATETIME\_SUB*</span>
+-   <span class="simpara">*CHAR\_OCTET\_LENGTH*</span>
+-   <span class="simpara">*ORDINAL\_POSITION*</span>
+-   <span class="simpara">*IS\_NULLABLE*</span>
 
-The result set is ordered by TABLE\_QUALIFIER, TABLE\_SCHEM and
-TABLE\_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by *TABLE\_CAT*, *TABLE\_SCHEM*, *TABLE\_NAME*
+and *ORDINAL\_POSITION*.
+
+### Examples
+
+**Example \#1 List Columns of a Table**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$columns = odbc_columns($conn, 'TutorialDB', 'dbo', 'test', '%');
+while (($row = odbc_fetch_array($columns))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => TutorialDB
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => TEST
+        [COLUMN_NAME] => id
+        [DATA_TYPE] => 4
+        [TYPE_NAME] => int
+        [COLUMN_SIZE] => 10
+        [BUFFER_LENGTH] => 4
+        [DECIMAL_DIGITS] => 0
+        [NUM_PREC_RADIX] => 10
+        [NULLABLE] => 0
+        [REMARKS] =>
+        [COLUMN_DEF] =>
+        [SQL_DATA_TYPE] => 4
+        [SQL_DATETIME_SUB] =>
+        [CHAR_OCTET_LENGTH] =>
+        [ORDINAL_POSITION] => 1
+        [IS_NULLABLE] => NO
+    )
 
 ### See Also
 
--   <span class="function">odbc\_columnprivileges</span> to retrieve
-    associated privileges
+-   <span class="function">odbc\_columnprivileges</span>
+-   <span class="function">odbc\_procedurecolumns</span>
 
 odbc\_commit
 ============
@@ -873,7 +962,7 @@ Returns the cursor name, as a string.
 odbc\_data\_source
 ==================
 
-Returns information about a current connection
+Returns information about available DSNs
 
 ### Description
 
@@ -900,7 +989,36 @@ the first time this function is called, thereafter use the
 
 ### Return Values
 
-Returns **`FALSE`** on error, and an array upon success.
+Returns **`FALSE`** on error, an <span class="type">array</span> upon
+success, and **`NULL`** after fetching the last available DSN.
+
+### Examples
+
+**Example \#1 List available DSNs**
+
+``` php
+<?php
+$conn = odbc_connect('dsn', 'user', 'pass');
+$dsn_info = odbc_data_source($conn, SQL_FETCH_FIRST);
+while ($dsn_info) {
+    print_r($dsn_info);
+    $dsn_info = odbc_data_source($conn, SQL_FETCH_NEXT);
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [server] => dsn
+        [description] => ODBC Driver 17 for SQL Server
+    )
+    Array
+    (
+        [server] => other_dsn
+        [description] => Microsoft Access Driver (*.mdb, *.accdb)
+    )
 
 odbc\_do
 ========
@@ -1081,9 +1199,7 @@ $success = odbc_execute($stmt, array($a, $b, $c));
 If you need to call a stored procedure using INOUT or OUT parameters,
 the recommended workaround is to use a native extension for your
 database (for example,
-<a href="/book/mssql.html#Mssql%20Functions" class="link">mssql</a> for
-MS SQL Server, or
-<a href="/book/mssql.html#Mssql%20Functions" class="link">oci8</a> for
+<a href="/book/oci8.html#OCI8%20Functions" class="link">oci8</a> for
 Oracle).
 
 ### See Also
@@ -1434,12 +1550,12 @@ Retrieves a list of foreign keys
 class="methodname">odbc\_foreignkeys</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$pk_qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$pk_owner`</span>
+class="type">string</span> `$pk_catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$pk_schema`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$pk_table`</span> , <span class="methodparam"><span
-class="type">string</span> `$fk_qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$fk_owner`</span>
+class="type">string</span> `$fk_catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$fk_schema`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$fk_table`</span> )
 
@@ -1453,20 +1569,20 @@ specified table
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`pk_qualifier`  
-The primary key qualifier.
+`pk_catalog`  
+The catalog ('qualifier' in ODBC 2 parlance) of the primary key table.
 
-`pk_owner`  
-The primary key owner.
+`pk_schema`  
+The schema ('owner' in ODBC 2 parlance) of the primary key table.
 
 `pk_table`  
 The primary key table.
 
-`fk_qualifier`  
-The foreign key qualifier.
+`pk_catalog`  
+The catalog ('qualifier' in ODBC 2 parlance) of the foreign key table.
 
-`fk_owner`  
-The foreign key owner.
+`fk_schema`  
+The schema ('owner' in ODBC 2 parlance) of the foreign key table.
 
 `fk_table`  
 The foreign key table.
@@ -1477,19 +1593,28 @@ Returns an ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">PKTABLE\_QUALIFIER</span>
--   <span class="simpara">PKTABLE\_OWNER</span>
--   <span class="simpara">PKTABLE\_NAME</span>
--   <span class="simpara">PKCOLUMN\_NAME</span>
--   <span class="simpara">FKTABLE\_QUALIFIER</span>
--   <span class="simpara">FKTABLE\_OWNER</span>
--   <span class="simpara">FKTABLE\_NAME</span>
--   <span class="simpara">FKCOLUMN\_NAME</span>
--   <span class="simpara">KEY\_SEQ</span>
--   <span class="simpara">UPDATE\_RULE</span>
--   <span class="simpara">DELETE\_RULE</span>
--   <span class="simpara">FK\_NAME</span>
--   <span class="simpara">PK\_NAME</span>
+-   <span class="simpara">*PKTABLE\_CAT*</span>
+-   <span class="simpara">*PKTABLE\_SCHEM*</span>
+-   <span class="simpara">*PKTABLE\_NAME*</span>
+-   <span class="simpara">*PKCOLUMN\_NAME*</span>
+-   <span class="simpara">*FKTABLE\_CAT*</span>
+-   <span class="simpara">*FKTABLE\_SCHEM*</span>
+-   <span class="simpara">*FKTABLE\_NAME*</span>
+-   <span class="simpara">*FKCOLUMN\_NAME*</span>
+-   <span class="simpara">*KEY\_SEQ*</span>
+-   <span class="simpara">*UPDATE\_RULE*</span>
+-   <span class="simpara">*DELETE\_RULE*</span>
+-   <span class="simpara">*FK\_NAME*</span>
+-   <span class="simpara">*PK\_NAME*</span>
+-   <span class="simpara">*DEFERRABILITY*</span>
+
+Drivers can report additional columns.
+
+If the foreign keys associated with a primary key are requested, the
+result set is ordered by *FKTABLE\_CAT*, *FKTABLE\_SCHEM*,
+*FKTABLE\_NAME* and *KEY\_SEQ*. If the primary keys associated with a
+foreign key are requested, the result set is ordered by *PKTABLE\_CAT*,
+*PKTABLE\_SCHEM*, *PKTABLE\_NAME* and *KEY\_SEQ*.
 
 If `pk_table` contains a table name, <span
 class="function">odbc\_foreignkeys</span> returns a result set
@@ -1505,6 +1630,11 @@ If both `pk_table` and `fk_table` contain table names, <span
 class="function">odbc\_foreignkeys</span> returns the foreign keys in
 the table specified in `fk_table` that refer to the primary key of the
 table specified in `pk_table`. This should be one key at most.
+
+### See Also
+
+-   <span class="function">odbc\_tables</span>
+-   <span class="function">odbc\_primarykeys</span>
 
 odbc\_free\_result
 ==================
@@ -1605,7 +1735,10 @@ class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
 
-Enables handling of LONG and LONGVARBINARY columns.
+Enables handling of LONG and LONGVARBINARY columns. The default length
+can be set using the
+<a href="/book/uodbc.html#" class="link">uodbc.defaultlrl</a> `php.ini`
+directive.
 
 ### Parameters
 
@@ -1878,9 +2011,7 @@ $success = odbc_execute($stmt, array($a, $b, $c));
 If you need to call a stored procedure using INOUT or OUT parameters,
 the recommended workaround is to use a native extension for your
 database (for example,
-<a href="/book/mssql.html#Mssql%20Functions" class="link">mssql</a> for
-MS SQL Server, or
-<a href="/book/mssql.html#Mssql%20Functions" class="link">oci8</a> for
+<a href="/book/oci8.html#OCI8%20Functions" class="link">oci8</a> for
 Oracle).
 
 ### See Also
@@ -1898,8 +2029,8 @@ Gets the primary keys for a table
 class="methodname">odbc\_primarykeys</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table`</span> )
 
@@ -1912,9 +2043,11 @@ that comprise the primary key for a table.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
+`schema`  
+The schema ('owner' in ODBC 2 parlance).
 
 `table`  
 
@@ -1924,12 +2057,49 @@ Returns an ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_OWNER</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">COLUMN\_NAME</span>
--   <span class="simpara">KEY\_SEQ</span>
--   <span class="simpara">PK\_NAME</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*KEY\_SEQ*</span>
+-   <span class="simpara">*PK\_NAME*</span>
+
+Drivers can report additional columns.
+
+The result set is ordered by *TABLE\_CAT*, *TABLE\_SCHEM*, *TABLE\_NAME*
+and *KEY\_SEQ*.
+
+### Examples
+
+**Example \#1 List primary Keys of a Column**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$primarykeys = odbc_primarykeys($conn, 'TutorialDB', 'dbo', 'TEST');
+while (($row = odbc_fetch_array($primarykeys))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => TutorialDB
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => TEST
+        [COLUMN_NAME] => id
+        [KEY_SEQ] => 1
+        [PK_NAME] => PK__TEST__3213E83FE141F843
+    )
+
+### See Also
+
+-   <span class="function">odbc\_tables</span>
+-   <span class="function">odbc\_foreignkeys</span>
 
 odbc\_procedurecolumns
 ======================
@@ -1947,8 +2117,8 @@ class="methodparam"><span class="type">resource</span>
 class="methodname">odbc\_procedurecolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$proc`</span> , <span class="methodparam"><span
 class="type">string</span> `$column`</span> )
@@ -1961,20 +2131,21 @@ Retrieve information about parameters to procedures.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner. This parameter accepts the following search patterns: "%" to
-match zero or more characters, and "\_" to match a single character.
+`schema`  
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `proc`  
-The proc. This parameter accepts the following search patterns: "%" to
-match zero or more characters, and "\_" to match a single character.
+The proc. This parameter accepts the following search patterns: *%* to
+match zero or more characters, and *\_* to match a single character.
 
 `column`  
-The column. This parameter accepts the following search patterns: "%" to
-match zero or more characters, and "\_" to match a single character.
+The column. This parameter accepts the following search patterns: *%* to
+match zero or more characters, and *\_* to match a single character.
 
 ### Return Values
 
@@ -1984,22 +2155,74 @@ ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">PROCEDURE\_QUALIFIER</span>
--   <span class="simpara">PROCEDURE\_OWNER</span>
--   <span class="simpara">PROCEDURE\_NAME</span>
--   <span class="simpara">COLUMN\_NAME</span>
--   <span class="simpara">COLUMN\_TYPE</span>
--   <span class="simpara">DATA\_TYPE</span>
--   <span class="simpara">TYPE\_NAME</span>
--   <span class="simpara">PRECISION</span>
--   <span class="simpara">LENGTH</span>
--   <span class="simpara">SCALE</span>
--   <span class="simpara">RADIX</span>
--   <span class="simpara">NULLABLE</span>
--   <span class="simpara">REMARKS</span>
+-   <span class="simpara">*PROCEDURE\_CAT*</span>
+-   <span class="simpara">*PROCEDURE\_SCHEM*</span>
+-   <span class="simpara">*PROCEDURE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*COLUMN\_TYPE*</span>
+-   <span class="simpara">*DATA\_TYPE*</span>
+-   <span class="simpara">*TYPE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_SIZE*</span>
+-   <span class="simpara">*BUFFER\_LENGTH*</span>
+-   <span class="simpara">*DECIMAL\_DIGITS*</span>
+-   <span class="simpara">*NUM\_PREC\_RADIX*</span>
+-   <span class="simpara">*NULLABLE*</span>
+-   <span class="simpara">*REMARKS*</span>
+-   <span class="simpara">*COLUMN\_DEF*</span>
+-   <span class="simpara">*SQL\_DATA\_TYPE*</span>
+-   <span class="simpara">*SQL\_DATETIME\_SUB*</span>
+-   <span class="simpara">*CHAR\_OCTET\_LENGTH*</span>
+-   <span class="simpara">*ORDINAL\_POSITION*</span>
+-   <span class="simpara">*IS\_NULLABLE*</span>
 
-The result set is ordered by PROCEDURE\_QUALIFIER, PROCEDURE\_OWNER,
-PROCEDURE\_NAME and COLUMN\_TYPE.
+Drivers can report additional columns.
+
+The result set is ordered by *PROCEDURE\_CAT*, *PROCEDURE\_SCHEM*,
+*PROCEDURE\_NAME* and *COLUMN\_TYPE*.
+
+### Examples
+
+**Example \#1 List Columns of a stored Procedure**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$columns = odbc_procedurecolumns($conn, 'TutorialDB', 'dbo', 'GetEmployeeSalesYTD;1', '%');
+while (($row = odbc_fetch_array($columns))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [PROCEDURE_CAT] => TutorialDB
+        [PROCEDURE_SCHEM] => dbo
+        [PROCEDURE_NAME] => GetEmployeeSalesYTD;1
+        [COLUMN_NAME] => @SalesPerson
+        [COLUMN_TYPE] => 1
+        [DATA_TYPE] => -9
+        [TYPE_NAME] => nvarchar
+        [COLUMN_SIZE] => 50
+        [BUFFER_LENGTH] => 100
+        [DECIMAL_DIGITS] =>
+        [NUM_PREC_RADIX] =>
+        [NULLABLE] => 1
+        [REMARKS] =>
+        [COLUMN_DEF] =>
+        [SQL_DATA_TYPE] => -9
+        [SQL_DATETIME_SUB] =>
+        [CHAR_OCTET_LENGTH] => 100
+        [ORDINAL_POSITION] => 1
+        [IS_NULLABLE] => YES
+    )
+
+### See Also
+
+-   <span class="function">odbc\_columns</span>
 
 odbc\_procedures
 ================
@@ -2017,8 +2240,8 @@ class="methodparam"><span class="type">resource</span>
 class="methodname">odbc\_procedures</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
@@ -2030,16 +2253,17 @@ Lists all procedures in the requested range.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner. This parameter accepts the following search patterns: "%" to
-match zero or more characters, and "\_" to match a single character.
+`schema`  
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `name`  
-The name. This parameter accepts the following search patterns: "%" to
-match zero or more characters, and "\_" to match a single character.
+The name. This parameter accepts the following search patterns: *%* to
+match zero or more characters, and *\_* to match a single character.
 
 ### Return Values
 
@@ -2048,14 +2272,53 @@ Returns an ODBC result identifier containing the information or
 
 The result set has the following columns:
 
--   <span class="simpara">PROCEDURE\_QUALIFIER</span>
--   <span class="simpara">PROCEDURE\_OWNER</span>
--   <span class="simpara">PROCEDURE\_NAME</span>
--   <span class="simpara">NUM\_INPUT\_PARAMS</span>
--   <span class="simpara">NUM\_OUTPUT\_PARAMS</span>
--   <span class="simpara">NUM\_RESULT\_SETS</span>
--   <span class="simpara">REMARKS</span>
--   <span class="simpara">PROCEDURE\_TYPE</span>
+-   <span class="simpara">*PROCEDURE\_CAT*</span>
+-   <span class="simpara">*PROCEDURE\_SCHEM*</span>
+-   <span class="simpara">*PROCEDURE\_NAME*</span>
+-   <span class="simpara">*NUM\_INPUT\_PARAMS*</span>
+-   <span class="simpara">*NUM\_OUTPUT\_PARAMS*</span>
+-   <span class="simpara">*NUM\_RESULT\_SETS*</span>
+-   <span class="simpara">*REMARKS*</span>
+-   <span class="simpara">*PROCEDURE\_TYPE*</span>
+
+Drivers can report additional columns.
+
+The result set is ordered by *PROCEDURE\_CAT*, *PROCEDURE\_SCHEMA* and
+*PROCEDURE\_NAME*.
+
+### Examples
+
+**Example \#1 List stored Procedures of a Database**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$procedures = odbc_procedures($conn, $catalog, $schema, '%');
+while (($row = odbc_fetch_array($procedures))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [PROCEDURE_CAT] => TutorialDB
+        [PROCEDURE_SCHEM] => dbo
+        [PROCEDURE_NAME] => GetEmployeeSalesYTD;1
+        [NUM_INPUT_PARAMS] => -1
+        [NUM_OUTPUT_PARAMS] => -1
+        [NUM_RESULT_SETS] => -1
+        [REMARKS] =>
+        [PROCEDURE_TYPE] => 2
+    )
+
+### See Also
+
+-   <span class="function">odbc\_procedurecolumns</span>
+-   <span class="function">odbc\_tables</span>
 
 odbc\_result\_all
 =================
@@ -2252,11 +2515,12 @@ class="methodname">odbc\_specialcolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
 class="type">int</span> `$type`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$table`</span> ,
-<span class="methodparam"><span class="type">int</span> `$scope`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$nullable`</span> )
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$table`</span> , <span class="methodparam"><span
+class="type">int</span> `$scope`</span> , <span
+class="methodparam"><span class="type">int</span> `$nullable`</span> )
 
 Retrieves either the optimal set of columns that uniquely identifies a
 row in the table, or columns that are automatically updated when any
@@ -2278,17 +2542,22 @@ columns in the specified table, if any, that are automatically updated
 by the data source when any value in the row is updated by any
 transaction. </span>
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
+
+`schema`  
+The schema ('owner' in ODBC 2 parlance).
 
 `table`  
 The table.
 
 `scope`  
-The scope, which orders the result set.
+The scope, which orders the result set. One of **`SQL_SCOPE_CURROW`**,
+**`SQL_SCOPE_TRANSACTION`** or **`SQL_SCOPE_SESSION`**.
 
 `nullable`  
-The nullable option.
+Determines whether to return special columns that can have a NULL value.
+One of **`SQL_NO_NULLS`** or **`SQL_NULLABLE `**.
 
 ### Return Values
 
@@ -2296,14 +2565,22 @@ Returns an ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">SCOPE</span>
--   <span class="simpara">COLUMN\_NAME</span>
--   <span class="simpara">DATA\_TYPE</span>
--   <span class="simpara">TYPE\_NAME</span>
--   <span class="simpara">PRECISION</span>
--   <span class="simpara">LENGTH</span>
--   <span class="simpara">SCALE</span>
--   <span class="simpara">PSEUDO\_COLUMN</span>
+-   <span class="simpara">*SCOPE*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*DATA\_TYPE*</span>
+-   <span class="simpara">*TYPE\_NAME*</span>
+-   <span class="simpara">*COLUMN\_SIZE*</span>
+-   <span class="simpara">*BUFFER\_LENGTH*</span>
+-   <span class="simpara">*DECIMAL\_DIGITS*</span>
+-   <span class="simpara">*PSEUDO\_COLUMN*</span>
+
+Drivers can report additional columns.
+
+The result set is ordered by *SCOPE*.
+
+### See Also
+
+-   <span class="function">odbc\_tables</span>
 
 odbc\_statistics
 ================
@@ -2316,8 +2593,8 @@ Retrieve statistics about a table
 class="methodname">odbc\_statistics</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$table_name`</span> , <span class="methodparam"><span
 class="type">int</span> `$unique`</span> , <span
@@ -2331,20 +2608,23 @@ Get statistics about a table and its indexes.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner.
+`schema`  
+The schema ('owner' in ODBC 2 parlance).
 
 `table_name`  
 The table name.
 
 `unique`  
-The unique attribute.
+The type of the index. One of **`SQL_INDEX_UNIQUE`** or
+**`SQL_INDEX_ALL`**.
 
 `accuracy`  
-The accuracy.
+One of **`SQL_ENSURE`** or **`SQL_QUICK`**. The latter requests that the
+driver retrieve the *CARDINALITY* and *PAGES* only if they are readily
+available from the server.
 
 ### Return Values
 
@@ -2352,22 +2632,62 @@ Returns an ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_OWNER</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">NON\_UNIQUE</span>
--   <span class="simpara">INDEX\_QUALIFIER</span>
--   <span class="simpara">INDEX\_NAME</span>
--   <span class="simpara">TYPE</span>
--   <span class="simpara">SEQ\_IN\_INDEX</span>
--   <span class="simpara">COLUMN\_NAME</span>
--   <span class="simpara">COLLATION</span>
--   <span class="simpara">CARDINALITY</span>
--   <span class="simpara">PAGES</span>
--   <span class="simpara">FILTER\_CONDITION</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*NON\_UNIQUE*</span>
+-   <span class="simpara">*INDEX\_QUALIFIER*</span>
+-   <span class="simpara">*INDEX\_NAME*</span>
+-   <span class="simpara">*TYPE*</span>
+-   <span class="simpara">*ORDINAL\_POSITION*</span>
+-   <span class="simpara">*COLUMN\_NAME*</span>
+-   <span class="simpara">*ASC\_OR\_DESC*</span>
+-   <span class="simpara">*CARDINALITY*</span>
+-   <span class="simpara">*PAGES*</span>
+-   <span class="simpara">*FILTER\_CONDITION*</span>
 
-The result set is ordered by NON\_UNIQUE, TYPE, INDEX\_QUALIFIER,
-INDEX\_NAME and SEQ\_IN\_INDEX.
+Drivers can report additional columns.
+
+The result set is ordered by *NON\_UNIQUE*, *TYPE*, *INDEX\_QUALIFIER*,
+*INDEX\_NAME* and *ORDINAL\_POSITION*.
+
+### Examples
+
+**Example \#1 List Statistics of a Table**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$statistics = odbc_statistics($conn, 'TutorialDB', 'dbo', 'TEST', SQL_INDEX_UNIQUE, SQL_QUICK);
+while (($row = odbc_fetch_array($statistics))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => TutorialDB
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => TEST
+        [NON_UNIQUE] =>
+        [INDEX_QUALIFIER] =>
+        [INDEX_NAME] =>
+        [TYPE] => 0
+        [ORDINAL_POSITION] =>
+        [COLUMN_NAME] =>
+        [ASC_OR_DESC] =>
+        [CARDINALITY] => 15
+        [PAGES] => 3
+        [FILTER_CONDITION] =>
+    )
+
+### See Also
+
+-   <span class="function">odbc\_tables</span>
 
 odbc\_tableprivileges
 =====================
@@ -2380,8 +2700,8 @@ Lists tables and the privileges associated with each table
 class="methodname">odbc\_tableprivileges</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$qualifier`</span> , <span
-class="methodparam"><span class="type">string</span> `$owner`</span> ,
+class="type">string</span> `$catalog`</span> , <span
+class="methodparam"><span class="type">string</span> `$schema`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
@@ -2394,16 +2714,17 @@ each table.
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner. Accepts the following search patterns: ('%' to match zero or
-more characters and '\_' to match a single character)
+`schema`  
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `name`  
-The name. Accepts the following search patterns: ('%' to match zero or
-more characters and '\_' to match a single character)
+The name. This parameter accepts the following search patterns: *%* to
+match zero or more characters, and *\_* to match a single character.
 
 ### Return Values
 
@@ -2411,16 +2732,50 @@ An ODBC result identifier or **`FALSE`** on failure.
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_OWNER</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">GRANTOR</span>
--   <span class="simpara">GRANTEE</span>
--   <span class="simpara">PRIVILEGE</span>
--   <span class="simpara">IS\_GRANTABLE</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*GRANTOR*</span>
+-   <span class="simpara">*GRANTEE*</span>
+-   <span class="simpara">*PRIVILEGE*</span>
+-   <span class="simpara">*IS\_GRANTABLE*</span>
 
-The result set is ordered by TABLE\_QUALIFIER, TABLE\_OWNER and
-TABLE\_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by *TABLE\_CAT*, *TABLE\_SCHEM*,
+*TABLE\_NAME*, *PRIVILEGE* and *GRANTEE*.
+
+### Examples
+
+**Example \#1 List Privileges of a Table**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$privileges = odbc_tableprivileges($conn, 'SalesOrders', 'dbo', 'Orders');
+while (($row = odbc_fetch_array($privileges))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => SalesOrders
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => Orders
+        [GRANTOR] => dbo
+        [GRANTEE] => dbo
+        [PRIVILEGE] => DELETE
+        [IS_GRANTABLE] => YES
+    )
+
+### See Also
+
+-   <span class="function">odbc\_tables</span>
 
 odbc\_tables
 ============
@@ -2432,9 +2787,9 @@ Get the list of table names stored in a specific data source
 <span class="type">resource</span> <span
 class="methodname">odbc\_tables</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection_id`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$qualifier`</span>
+class="methodparam"><span class="type">string</span> `$catalog`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$owner`</span> \[, <span class="methodparam"><span
+`$schema`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$types`</span>
 \]\]\]\] )
@@ -2442,19 +2797,19 @@ class="methodparam"><span class="type">string</span> `$types`</span>
 Lists all tables in the requested range.
 
 To support enumeration of qualifiers, owners, and table types, the
-following special semantics for the `qualifier`, `owner`, `name`, and
+following special semantics for the `catalog`, `schema`, `name`, and
 `table_type` are available:
 
--   <span class="simpara"> If `qualifier` is a single percent character
-    (%) and `owner` and `name` are empty strings, then the result set
+-   <span class="simpara"> If `catalog` is a single percent character
+    (%) and `schema` and `name` are empty strings, then the result set
     contains a list of valid qualifiers for the data source. (All
     columns except the TABLE\_QUALIFIER column contain NULLs.) </span>
--   <span class="simpara"> If `owner` is a single percent character (%)
-    and `qualifier` and `name` are empty strings, then the result set
+-   <span class="simpara"> If `schema` is a single percent character (%)
+    and `catalog` and `name` are empty strings, then the result set
     contains a list of valid owners for the data source. (All columns
     except the TABLE\_OWNER column contain NULLs.) </span>
 -   <span class="simpara"> If `table_type` is a single percent character
-    (%) and `qualifier`, `owner` and `name` are empty strings, then the
+    (%) and `catalog`, `schema` and `name` are empty strings, then the
     result set contains a list of valid table types for the data source.
     (All columns except the TABLE\_TYPE column contain NULLs.) </span>
 
@@ -2464,24 +2819,25 @@ following special semantics for the `qualifier`, `owner`, `name`, and
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`qualifier`  
-The qualifier.
+`catalog`  
+The catalog ('qualifier' in ODBC 2 parlance).
 
-`owner`  
-The owner. Accepts search patterns ('%' to match zero or more characters
-and '\_' to match a single character).
+`schema`  
+The schema ('owner' in ODBC 2 parlance). This parameter accepts the
+following search patterns: *%* to match zero or more characters, and
+*\_* to match a single character.
 
 `name`  
-The name. Accepts search patterns ('%' to match zero or more characters
-and '\_' to match a single character).
+The name. This parameter accepts the following search patterns: *%* to
+match zero or more characters, and *\_* to match a single character.
 
 `types`  
 If `table_type` is not an empty string, it must contain a list of
 comma-separated values for the types of interest; each value may be
-enclosed in single quotes (') or unquoted. For example, "'TABLE','VIEW'"
-or "TABLE, VIEW". If the data source does not support a specified table
-type, <span class="function">odbc\_tables</span> does not return any
-results for that type.
+enclosed in single quotes (*'*) or unquoted. For example,
+*'TABLE','VIEW'* or *TABLE, VIEW*. If the data source does not support a
+specified table type, <span class="function">odbc\_tables</span> does
+not return any results for that type.
 
 ### Return Values
 
@@ -2490,18 +2846,50 @@ Returns an ODBC result identifier containing the information or
 
 The result set has the following columns:
 
--   <span class="simpara">TABLE\_QUALIFIER</span>
--   <span class="simpara">TABLE\_OWNER</span>
--   <span class="simpara">TABLE\_NAME</span>
--   <span class="simpara">TABLE\_TYPE</span>
--   <span class="simpara">REMARKS</span>
+-   <span class="simpara">*TABLE\_CAT*</span>
+-   <span class="simpara">*TABLE\_SCHEM*</span>
+-   <span class="simpara">*TABLE\_NAME*</span>
+-   <span class="simpara">*TABLE\_TYPE*</span>
+-   <span class="simpara">*REMARKS*</span>
 
-The result set is ordered by TABLE\_TYPE, TABLE\_QUALIFIER, TABLE\_OWNER
-and TABLE\_NAME.
+Drivers can report additional columns.
+
+The result set is ordered by *TABLE\_TYPE*, *TABLE\_CAT*, *TABLE\_SCHEM*
+and *TABLE\_NAME*.
+
+### Examples
+
+**Example \#1 List Tables in a Catalog**
+
+``` php
+<?php
+$conn = odbc_connect($dsn, $user, $pass);
+$tables = odbc_tables($conn, 'SalesOrders', 'dbo', '%', 'TABLE');
+while (($row = odbc_fetch_array($tables))) {
+    print_r($row);
+    break; // further rows omitted for brevity
+}
+?>
+```
+
+The above example will output something similar to:
+
+    Array
+    (
+        [TABLE_CAT] => SalesOrders
+        [TABLE_SCHEM] => dbo
+        [TABLE_NAME] => Orders
+        [TABLE_TYPE] => TABLE
+        [REMARKS] =>
+    )
 
 ### See Also
 
 -   <span class="function">odbc\_tableprivileges</span>
+-   <span class="function">odbc\_columns</span>
+-   <span class="function">odbc\_specialcolumns</span>
+-   <span class="function">odbc\_statistics</span>
+-   <span class="function">odbc\_procedures</span>
 
 **Table of Contents**
 
@@ -2523,7 +2911,7 @@ and TABLE\_NAME.
     datasource
 -   [odbc\_cursor](/book/uodbc.html#odbc_cursor) — Get cursorname
 -   [odbc\_data\_source](/book/uodbc.html#odbc_data_source) — Returns
-    information about a current connection
+    information about available DSNs
 -   [odbc\_do](/book/uodbc.html#odbc_do) — Alias of odbc\_exec
 -   [odbc\_error](/book/uodbc.html#odbc_error) — Get the last error code
 -   [odbc\_errormsg](/book/uodbc.html#odbc_errormsg) — Get the last

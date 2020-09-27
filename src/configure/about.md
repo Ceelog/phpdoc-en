@@ -150,9 +150,6 @@ system. For 64bit systems, its needed to specify this argument to the
 The following list contains the available SAPI&s (*Server Application
 Programming Interface*) for PHP.
 
-**--with-aolserver=DIR**  
-Specify path to the installed AOLserver.
-
 **--with-apxs\[=FILE\]**  
 Build shared Apache module. FILE is the optional pathname to the Apache
 apxs tool; defaults to apxs. Make sure you specify the version of apxs
@@ -170,10 +167,6 @@ Enable transfer tables for mod\_charset (Russian Apache).
 Build shared Apache 2.0 module. FILE is the optional pathname to the
 Apache apxs tool; defaults to apxs.
 
-**--with-caudium=DIR**  
-Build PHP as a Pike module for use with Caudium. DIR is the Caudium
-server dir, with the default value `/usr/local/caudium/server`.
-
 **--disable-cli**  
 Disable building the CLI version of PHP (this forces
 <a href="/configure/about.html#configure.without-pear" class="link">--without-pear</a>).
@@ -188,37 +181,12 @@ later.
 Enable building of the embedded SAPI library. TYPE is either *shared* or
 *static*, which defaults to *shared*.
 
-**--with-isapi=DIR**  
-Build PHP as an ISAPI module for use with Zeus.
-
 **--with-nsapi=DIR**  
 Specify path to the installed Netscape/iPlanet/SunONE Webserver.
-
-**--with-phttpd=DIR**  
-No information yet.
-
-**--with-pi3web=DIR**  
-Build PHP as a module for use with Pi3Web.
-
-**--with-roxen=DIR**  
-Build PHP as a Pike module. DIR is the base Roxen directory, normally
-`/usr/local/roxen/server`.
-
-**--enable-roxen-zts**  
-Build the Roxen module using Zend Thread Safety.
 
 **--with-servlet\[=DIR\]**  
 Include servlet support. DIR is the base install directory for the JSDK.
 This SAPI requires the java extension must be built as a shared dl.
-
-**--with-thttpd=SRCDIR**  
-Build PHP as thttpd module.
-
-**--with-tux=MODULEDIR**  
-Build PHP as a TUX module (Linux only).
-
-**--with-webjames=SRCDIR**  
-Build PHP as a WebJames module (RISC OS only)
 
 **--disable-cgi**  
 Disable building CGI version of PHP.

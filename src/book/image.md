@@ -189,20 +189,6 @@ Image Processing and GD
     -   [imagepng](/ref/image.html#imagepng) — Output a PNG image to
         either the browser or a file
     -   [imagepolygon](/ref/image.html#imagepolygon) — Draws a polygon
-    -   [imagepsbbox](/ref/image.html#imagepsbbox) — Give the bounding
-        box of a text rectangle using PostScript Type1 fonts
-    -   [imagepsencodefont](/ref/image.html#imagepsencodefont) — Change
-        the character encoding vector of a font
-    -   [imagepsextendfont](/ref/image.html#imagepsextendfont) — Extend
-        or condense a font
-    -   [imagepsfreefont](/ref/image.html#imagepsfreefont) — Free memory
-        used by a PostScript Type 1 font
-    -   [imagepsloadfont](/ref/image.html#imagepsloadfont) — Load a
-        PostScript Type 1 font from file
-    -   [imagepsslantfont](/ref/image.html#imagepsslantfont) — Slant a
-        font
-    -   [imagepstext](/ref/image.html#imagepstext) — Draws a text over
-        an image using PostScript Type1 fonts
     -   [imagerectangle](/ref/image.html#imagerectangle) — Draw a
         rectangle
     -   [imageresolution](/ref/image.html#imageresolution) — Get or set

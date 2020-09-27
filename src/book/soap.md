@@ -270,12 +270,6 @@ response is not expected.
 
 The XML SOAP response.
 
-### Changelog
-
-| Version | Description                        |
-|---------|------------------------------------|
-| 5.1.3   | The `one_way` parameter was added. |
-
 ### Examples
 
 **Example \#1 <span class="function">SoapClient::\_\_doRequest</span>
@@ -1033,13 +1027,6 @@ in non-WSDL mode.
 A <span class="classname">SoapFault</span> exception will be thrown if
 the `wsdl` URI cannot be loaded.
 
-### Changelog
-
-| Version | Description               |
-|---------|---------------------------|
-| 5.5.0   | New *ssl\_method* option. |
-| 5.4.0   | New *keep\_alive* option. |
-
 ### Examples
 
 **Example \#1 <span class="function">SoapClient::SoapClient</span>
@@ -1656,12 +1643,6 @@ $server = new SoapServer("books.wsdl", array('classmap' => array('book' => "MyBo
 
 ?>
 ```
-
-### Changelog
-
-| Version | Description                 |
-|---------|-----------------------------|
-| 5.2.0   | Added the *typemap* option. |
 
 ### See Also
 

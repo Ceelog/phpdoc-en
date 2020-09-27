@@ -602,12 +602,6 @@ msql_free_result($result);
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4   | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
-
 ### See Also
 
 -   <span class="function">msql\_fetch\_row</span>
@@ -729,12 +723,6 @@ msql_free_result($result);
 ?>
 ```
 
-### Changelog
-
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4   | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
-
 ### See Also
 
 -   <span class="function">msql\_fetch\_array</span>
@@ -802,12 +790,6 @@ while ($row = msql_fetch_row($result)) {
 msql_free_result($result);
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.0.4   | A bug was fixed when retrieving data from columns containing **`NULL`** values. Such columns were not placed into the resulting array. |
 
 ### See Also
 

@@ -16,13 +16,10 @@ hashing algorithms.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                               |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.4.0   | Support for crc32c has been added.                                                                                                                                                                                        |
-| 7.1.0   | Support for sha512/224, sha512/256, sha3-224, sha3-256, sha3-384 and sha3-512 has been added.                                                                                                                             |
-| 5.6.0   | Support for gost-crypto was added. This implements the GOST hash function using the CryptoPro S-box tables as specified by <a href="http://www.faqs.org/rfcs/rfc4357" class="link external">» RFC 4357, section 11.2</a>. |
-| 5.4.0   | Support for joaat, fnv132 and fnv164 was added. Support for Salsa10 and Salsa20 was removed.                                                                                                                              |
-| 5.3.0   | Support for md2, ripemd256, ripemd320, salsa10, salsa20, snefru256 and sha224 was added                                                                                                                                   |
+| Version | Description                                                                                   |
+|---------|-----------------------------------------------------------------------------------------------|
+| 7.4.0   | Support for crc32c has been added.                                                            |
+| 7.1.0   | Support for sha512/224, sha512/256, sha3-224, sha3-256, sha3-384 and sha3-512 has been added. |
 
 ### Examples
 
@@ -1016,12 +1013,6 @@ lowercase hexits.
 Returns a string containing the calculated message digest as lowercase
 hexits unless `raw_output` is set to true in which case the raw binary
 representation of the message digest is returned.
-
-### Changelog
-
-| Version | Description                                                                    |
-|---------|--------------------------------------------------------------------------------|
-| 5.4.0   | The tiger algorithm now uses big-endian byte ordering. See also example below. |
 
 ### Examples
 

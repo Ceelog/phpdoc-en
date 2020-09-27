@@ -1792,12 +1792,6 @@ inserted into a bytea column.
 
 A <span class="type">string</span> containing the escaped data.
 
-### Changelog
-
-| Version | Description        |
-|---------|--------------------|
-| 5.2.0   | `connection` added |
-
 ### Examples
 
 **Example \#1 <span class="function">pg\_escape\_bytea</span> example**
@@ -2004,12 +1998,6 @@ A <span class="type">string</span> containing text to be escaped.
 ### Return Values
 
 A <span class="type">string</span> containing the escaped data.
-
-### Changelog
-
-| Version | Description        |
-|---------|--------------------|
-| 5.2.0   | `connection` added |
 
 ### Examples
 
@@ -4084,12 +4072,6 @@ first appeared in PostgreSQL 8.1.
 
 A large object `OID` or **`FALSE`** on error.
 
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.3.0   | The optional `object_id` was added. |
-
 ### Examples
 
 **Example \#1 <span class="function">pg\_lo\_create</span> example**
@@ -4227,12 +4209,6 @@ first appeared in PostgreSQL 8.1.
 ### Return Values
 
 The `OID` of the newly created large object, or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.3.0   | The optional `object_id` was added. |
 
 ### Examples
 

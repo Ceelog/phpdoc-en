@@ -44,11 +44,11 @@ requesting SQL services can reuse the same established connection to the
 SQL server.
 
 The last method is to use PHP as a plug-in for a multithreaded web
-server. Currently PHP 4 has support for ISAPI, WSAPI, and NSAPI (on
-Windows), which all allow PHP to be used as a plug-in on multithreaded
-servers like Netscape FastTrack (iPlanet), Microsoft's Internet
-Information Server (IIS), and O'Reilly's WebSite Pro. The behavior is
-essentially the same as for the multiprocess model described before.
+server. Currently PHP has support for WSAPI, and NSAPI (on Windows),
+which all allow PHP to be used as a plug-in on multithreaded servers
+like Netscape FastTrack (iPlanet), Microsoft's Internet Information
+Server (IIS), and O'Reilly's WebSite Pro. The behavior is essentially
+the same as for the multiprocess model described before.
 
 If persistent connections don't have any added functionality, what are
 they good for?

@@ -158,8 +158,6 @@ external libraries will be needed.
 
 -   <a href="/book/msql.html" class="xref">mSQL</a>
 
--   <a href="/book/mssql.html" class="xref">Mssql</a>
-
 -   <a href="/set/mysqlinfo.html#MySQL%20(Original)" class="xref"></a>
 
 -   <a href="/set/mysqlinfo.html#MySQLi" class="xref"></a>
@@ -200,8 +198,6 @@ external libraries will be needed.
 
 -   <a href="/book/sodium.html" class="xref">Sodium</a>
 
--   <a href="/book/sybase.html" class="xref">Sybase</a>
-
 -   <a href="/book/tidy.html" class="xref">Tidy</a>
 
 -   <a href="/book/uodbc.html" class="xref">ODBC</a>
@@ -226,25 +222,9 @@ These extensions are available from
 may require external libraries. More PECL extensions exist but they are
 not documented in the PHP manual yet.
 
--   <a href="/book/apc.html" class="xref">APC</a>
-
--   <a href="/book/apd.html" class="xref">APD</a>
-
--   <a href="/book/bbcode.html" class="xref">BBCode</a>
-
--   <a href="/book/bcompiler.html" class="xref">bcompiler</a>
-
--   <a href="/book/cairo.html" class="xref">Cairo</a>
-
--   <a href="/book/chdb.html" class="xref">chdb</a>
-
 -   <a href="/book/classkit.html" class="xref">Classkit</a>
 
--   <a href="/book/crack.html" class="xref">Crack</a>
-
 -   <a href="/book/cubrid.html" class="xref">CUBRID</a>
-
--   <a href="/book/cyrus.html" class="xref">Cyrus</a>
 
 -   <a href="/book/dbplus.html" class="xref">DB++</a>
 
@@ -260,13 +240,9 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/expect.html" class="xref">Expect</a>
 
--   <a href="/book/fam.html" class="xref">FAM</a>
-
 -   <a href="/book/fdf.html" class="xref">FDF</a>
 
 -   <a href="/book/filepro.html" class="xref">filePro</a>
-
--   <a href="/book/fribidi.html" class="xref">FriBiDi</a>
 
 -   <a href="/book/gearman.html" class="xref">Gearman</a>
 
@@ -278,37 +254,17 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/gnupg.html" class="xref">GnuPG</a>
 
--   <a href="/book/gupnp.html" class="xref">Gupnp</a>
-
--   <a href="/book/haru.html" class="xref">haru</a>
-
--   <a href="/book/htscanner.html" class="xref">htscanner</a>
-
--   <a href="/book/hwapi.html" class="xref">Hyperwave API</a>
-
 -   <a href="/book/ibm-db2.html" class="xref">IBM DB2</a>
-
--   <a href="/book/id3.html" class="xref">ID3</a>
 
 -   <a href="/book/iisfunc.html" class="xref">IIS</a>
 
 -   <a href="/book/imagick.html" class="xref">ImageMagick</a>
-
--   <a href="/book/inclued.html" class="xref">inclued</a>
 
 -   <a href="/book/ingres.html" class="xref">Ingres</a>
 
 -   <a href="/book/inotify.html" class="xref">Inotify</a>
 
 -   <a href="/book/judy.html" class="xref">Judy</a>
-
--   <a href="/book/kadm5.html" class="xref">KADM5</a>
-
--   <a href="/book/ktaglib.html" class="xref">KTaglib</a>
-
--   <a href="/book/lapack.html" class="xref">Lapack</a>
-
--   <a href="/book/libevent.html" class="xref">Libevent</a>
 
 -   <a href="/book/lua.html" class="xref">Lua</a>
 
@@ -320,8 +276,6 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/maxdb.html" class="xref">MaxDB</a>
 
--   <a href="/book/mcve.html" class="xref">MCVE</a>
-
 -   <a href="/book/memcache.html" class="xref">Memcache</a>
 
 -   <a href="/book/memcached.html" class="xref">Memcached</a>
@@ -330,15 +284,9 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/mime-magic.html" class="xref">Mimetype</a>
 
--   <a href="/book/ming.html" class="xref">Ming</a>
-
--   <a href="/book/mnogosearch.html" class="xref">mnoGoSearch</a>
-
 -   <a href="/book/mongo.html" class="xref">Mongo</a>
 
 -   <a href="/book/mqseries.html" class="xref">mqseries</a>
-
--   <a href="/book/msession.html" class="xref">Msession</a>
 
 -   <a href="/set/mysqlinfo.html#mysqlnd_memcache" class="xref"></a>
 
@@ -352,21 +300,11 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/ncurses.html" class="xref">Ncurses</a>
 
--   <a href="/book/net-gopher.html" class="xref">Gopher</a>
-
--   <a href="/book/newt.html" class="xref">Newt</a>
-
--   <a href="/book/nis.html" class="xref">YP/NIS</a>
-
 -   <a href="/book/oauth.html" class="xref">OAuth</a>
-
--   <a href="/book/oggvorbis.html" class="xref">oggvorbis</a>
 
 -   <a href="/book/openal.html" class="xref">OpenAL</a>
 
 -   <a href="/book/paradox.html" class="xref">Paradox</a>
-
--   <a href="/book/parsekit.html" class="xref">Parsekit</a>
 
 -   <a href="/book/pdf.html" class="xref">PDF</a>
 
@@ -392,19 +330,11 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/rar.html" class="xref">Rar</a>
 
--   <a href="/book/rpmreader.html" class="xref">RPM Reader</a>
-
 -   <a href="/book/rrd.html" class="xref">RRD</a>
 
--   <a href="/book/runkit.html" class="xref">runkit</a>
-
--   <a href="/book/sam.html" class="xref">SAM</a>
-
--   <a href="/book/sca.html" class="xref">SCA</a>
+-   <a href="/book/runkit7.html" class="xref">runkit7</a>
 
 -   <a href="/book/scoutapm.html" class="xref">ScoutAPM</a>
-
--   <a href="/book/scream.html" class="xref">scream</a>
 
 -   <a href="/book/sdo.html" class="xref">SDO</a>
 
@@ -413,8 +343,6 @@ not documented in the PHP manual yet.
 -   <a href="/book/sdodasrel.html" class="xref">SDO-DAS-Relational</a>
 
 -   <a href="/book/seaslog.html" class="xref">Seaslog</a>
-
--   <a href="/book/session-pgsql.html" class="xref">Session PgSQL</a>
 
 -   <a href="/book/solr.html" class="xref">Solr</a>
 
@@ -430,8 +358,6 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/ssh2.html" class="xref">SSH2</a>
 
--   <a href="/book/stats.html" class="xref">Statistics</a>
-
 -   <a href="/book/stomp.html" class="xref">Stomp</a>
 
 -   <a href="/book/swoole.html" class="xref">Swoole</a>
@@ -439,8 +365,6 @@ not documented in the PHP manual yet.
 -   <a href="/book/svm.html" class="xref">SVM</a>
 
 -   <a href="/book/svn.html" class="xref">SVN</a>
-
--   <a href="/book/swish.html" class="xref">Swish</a>
 
 -   <a href="/book/taint.html" class="xref">Taint</a>
 
@@ -454,11 +378,7 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/varnish.html" class="xref">Varnish</a>
 
--   <a href="/book/vpopmail.html" class="xref">vpopmail</a>
-
 -   <a href="/book/weakref.html" class="xref">Weakref</a>
-
--   <a href="/book/win32ps.html" class="xref">win32ps</a>
 
 -   <a href="/book/win32service.html" class="xref">win32service</a>
 

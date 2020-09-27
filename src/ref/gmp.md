@@ -992,12 +992,6 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
 or a <span class="classname">GMP</span> object in PHP 5.6 and later.
 
-### Changelog
-
-| Version | Description                                                     |
-|---------|-----------------------------------------------------------------|
-| 5.3.2   | The `base` was extended from 2 to 36, to 2 to 62 and -2 to -36. |
-
 ### Notes
 
 > **Note**:
@@ -2546,12 +2540,6 @@ for the base are from 2 to 62 and -2 to -36.
 ### Return Values
 
 The number, as a <span class="type">string</span>.
-
-### Changelog
-
-| Version | Description                                                     |
-|---------|-----------------------------------------------------------------|
-| 5.3.2   | The `base` was extended from 2 to 36, to 2 to 62 and -2 to -36. |
 
 ### Notes
 

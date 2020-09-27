@@ -44,11 +44,10 @@ section.
 **Warning**
 
 The <a href="/book/imap.html" class="link">IMAP</a>,
-<a href="/book/recode.html" class="link">recode</a>,
-<a href="/book/yaz.html" class="link">YAZ</a> and
-<a href="/book/cyrus.html" class="link">Cyrus</a> extensions cannot be
-used in conjunction, because they share the same internal symbols. Note:
-Yaz 2.0 and above does not suffer from this problem.
+<a href="/book/recode.html" class="link">recode</a> and
+<a href="/book/yaz.html" class="link">YAZ</a> extensions cannot be used
+in conjunction, because they share the same internal symbols. Note: Yaz
+2.0 and above does not suffer from this problem.
 
 Runtime Configuration
 ---------------------

@@ -8237,10 +8237,10 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version                 | Description                                                                                                                                         |
-|-------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.2 (PECL OCI8 1.4)   | Before this release, `rows` must be \>= 1.                                                                                                          |
-| 5.3.0 (PECL OCI8 1.3.4) | Before this release, prefetching was limited to the lesser of `rows` rows and 1024 \* `rows` bytes. The byte size restriction has now been removed. |
+| Version         | Description                                                                                                                                         |
+|-----------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL OCI8 1.4   | Before this release, `rows` must be \>= 1.                                                                                                          |
+| PECL OCI8 1.3.4 | Before this release, prefetching was limited to the lesser of `rows` rows and 1024 \* `rows` bytes. The byte size restriction has now been removed. |
 
 ### Examples
 

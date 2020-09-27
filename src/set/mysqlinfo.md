@@ -5746,12 +5746,6 @@ Specifies the socket or named pipe that should be used.
 Returns an object which represents the connection to a MySQL Server, or
 **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                  |
-|---------|----------------------------------------------|
-| 5.3.0   | Added the ability of persistent connections. |
-
 ### Examples
 
 **Example \#1 <span class="methodname">mysqli::\_\_construct</span>
@@ -7844,13 +7838,6 @@ The value for the option.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                             |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.0   | The **`MYSQLI_SERVER_PUBLIC_KEY`** option was added.                                                                                                                                    |
-| 5.3.0   | The **`MYSQLI_OPT_INT_AND_FLOAT_NATIVE`**, **`MYSQLI_OPT_NET_CMD_BUFFER_SIZE`**, **`MYSQLI_OPT_NET_READ_BUFFER_SIZE`**, and **`MYSQLI_OPT_SSL_VERIFY_SERVER_CERT`** options were added. |
-
 ### Examples
 
 See <span class="function">mysqli\_real\_connect</span>.
@@ -8338,12 +8325,6 @@ or *EXPLAIN* queries <span class="function">mysqli\_query</span> will
 return a <span class="classname">mysqli\_result</span> object. For other
 successful queries <span class="function">mysqli\_query</span> will
 return **`TRUE`**.
-
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.3.0   | Added the ability of async queries. |
 
 ### Examples
 
@@ -15683,13 +15664,6 @@ calls or queries that don't use an index (or use a bad index).
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Changelog
-
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 5.3.4   | Changing the reporting mode is now be per-request, rather than per-process. |
-| 5.2.15  | Changing the reporting mode is now be per-request, rather than per-process. |
 
 ### Examples
 
@@ -30133,12 +30107,6 @@ Returns a positive MySQL result resource to the query result, or
 **`FALSE`** on error. The function also returns **`TRUE`**/**`FALSE`**
 for *INSERT*/*UPDATE*/*DELETE* queries to indicate success/failure.
 
-### Changelog
-
-| Version | Description                                       |
-|---------|---------------------------------------------------|
-| 5.3.0   | This function now throws an E\_DEPRECATED notice. |
-
 ### Examples
 
 **Example \#1 <span class="function">mysql\_db\_query</span> alternative
@@ -30487,13 +30455,6 @@ The string that is to be escaped.
 ### Return Values
 
 Returns the escaped string.
-
-### Changelog
-
-| Version | Description                                                                                                                        |
-|---------|------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | This function now throws an E\_DEPRECATED notice.                                                                                  |
-| 4.3.0   | This function became deprecated, do not use this function. Instead, use <span class="function">mysql\_real\_escape\_string</span>. |
 
 ### Examples
 
@@ -41544,7 +41505,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2346" class="example">
+<div id="example-2221" class="example">
 <p><strong>Example #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -41633,7 +41594,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2347" class="example">
+<div id="example-2222" class="example">
 <p><strong>Example #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -45316,7 +45277,7 @@ Key Features
 
     -   Default (Hash, process memory)
 
-    -   <a href="/ref/apc.html" class="link">APC</a>
+    -   APC
 
     -   MEMCACHE
 
@@ -46907,15 +46868,6 @@ To use you this plugin with a PHP MySQL extension, the extension
 or <a href="/book/pdo.html#MySQL%20(PDO)" class="link">PDO_MYSQL</a>)
 must enable the mysqlnd library.
 
-For using the <a href="/ref/apc.html" class="link">APC</a> storage
-handler with PECL/mysqlnd\_qc 1.0 *APC 3.1.3p1-beta* or newer.
-PECL/mysqlnd\_qc 1.2 has been tested with *APC 3.1.13-beta*. The APC
-storage handler cannot be used with a shared build. You cannot use the
-PHP configuration directive *extension* to load the APC and
-PECL/mysqlnd\_qc extensions if PECL/mysqlnd\_qc will use APC as a
-storage handler. For using the APC storage handler, you have to
-statically compile PHP with APC and PECL/mysqlnd\_qc support into PHP.
-
 For using *MEMCACHE* storage handler: Use *libmemcache 0.38* or newer.
 PECL/mysqlnd\_qc 1.2 has been tested with *libmemcache 1.4.0*.
 
@@ -46991,10 +46943,8 @@ of their result set, for example, *SELECT SLEEP(1)*, *SELECT NOW()*,
 
 `mysqlnd_qc.use_request_time` <span class="type">integer</span>  
 Use PHP global request time to avoid *gettimeofday()* system calls? If
-using *<a href="/ref/apc.html" class="link">APC</a>* storage handler it
-should be set to the value of
-*<a href="/apc/setup.html#Runtime%20Configuration" class="link">apc.use_request_time</a>*
-, if not warnings will be generated.
+using *APC* storage handler it should be set to the value of
+*apc.use\_request\_time*, if not warnings will be generated.
 
 `mysqlnd_qc.time_statistics` <span class="type">integer</span>  
 Collect run time and store time statistics using *gettimeofday()* system
@@ -47033,13 +46983,11 @@ Since 1.1.0.
 
 `mysqlnd_qc.slam_defense` <span class="type">integer</span>  
 Activates handler based slam defense (cache stampeding protection) if
-available. Supported by *Default* and
-*<a href="/ref/apc.html" class="link">APC</a>* storage handler
+available. Supported by *Default* and *APC* storage handler
 
 `mysqlnd_qc.slam_defense_ttl` <span class="type">integer</span>  
 *TTL* for stale cache entries which are served while another client
-updates the entries. Supported by
-*<a href="/ref/apc.html" class="link">APC</a>* storage handler.
+updates the entries. Supported by *APC* storage handler.
 
 `mysqlnd_qc.collect_normalized_query_trace` <span class="type">integer</span>  
 Collect aggregated normalized query traces? The setting has no effect by
@@ -47051,9 +46999,8 @@ Default storage handler: copy cached wire data? EXPERIMENTAL – use
 default setting!
 
 `mysqlnd_qc.apc_prefix` <span class="type">string</span>  
-The *<a href="/ref/apc.html" class="link">APC</a>* storage handler
-stores data in the *APC* user cache. The setting sets a prefix to be
-used for cache entries.
+The *APC* storage handler stores data in the *APC* user cache. The
+setting sets a prefix to be used for cache entries.
 
 `mysqlnd_qc.memc_server` <span class="type">string</span>  
 *MEMCACHE* storage handler: memcache server host.

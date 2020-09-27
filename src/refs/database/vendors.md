@@ -97,11 +97,6 @@ Vendor Specific Database Extensions
     -   [Predefined Constants](/book/msql.html#Predefined%20Constants)
     -   [Examples](/book/msql.html#Examples)
     -   [mSQL Functions](/book/msql.html#mSQL%20Functions)
--   [Mssql](/book/mssql.html) — Microsoft SQL Server
-    -   [Introduction](/book/mssql.html#Introduction)
-    -   [Installing/Configuring](/book/mssql.html#Installing/Configuring)
-    -   [Predefined Constants](/book/mssql.html#Predefined%20Constants)
-    -   [Mssql Functions](/book/mssql.html#Mssql%20Functions)
 -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [Overview of the MySQL PHP
         drivers](/set/mysqlinfo.html#Overview%20of%20the%20MySQL%20PHP%20drivers)
@@ -173,11 +168,6 @@ Vendor Specific Database Extensions
     -   [Installing/Configuring](/book/sqlsrv.html#Installing/Configuring)
     -   [Predefined Constants](/book/sqlsrv.html#Predefined%20Constants)
     -   [SQLSRV Functions](/book/sqlsrv.html#SQLSRV%20Functions)
--   [Sybase](/book/sybase.html)
-    -   [Introduction](/book/sybase.html#Introduction)
-    -   [Installing/Configuring](/book/sybase.html#Installing/Configuring)
-    -   [Predefined Constants](/book/sybase.html#Predefined%20Constants)
-    -   [Sybase Functions](/book/sybase.html#Sybase%20Functions)
 -   [tokyo\_tyrant](/book/tokyo-tyrant.html) — tokyo\_tyrant
     -   [Introduction](/book/tokyo-tyrant.html#Introduction)
     -   [Installing/Configuring](/book/tokyo-tyrant.html#Installing/Configuring)

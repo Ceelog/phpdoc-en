@@ -13,17 +13,14 @@ created according to user demand.
     maintained </span>
 -   <span class="simpara">
     <a href="/book/fdf.html" class="link">fdf</a> - Maintained </span>
--   <span class="simpara">
-    <a href="/book/ming.html" class="link">ming</a> - Maintained </span>
+-   <span class="simpara"> ming - Maintained </span>
 -   <span class="simpara">
     <a href="/book/msql.html" class="link">msql</a> - No longer
     maintained </span>
 -   <span class="simpara">
     <a href="/book/ncurses.html" class="link">ncurses</a> - Maintained
     </span>
--   <span class="simpara">
-    <a href="/book/sybase.html" class="link">sybase</a> - Discontinued;
-    use the <a href="/book/sybase.html" class="link">sybase_ct</a>
+-   <span class="simpara"> sybase - Discontinued; use the sybase\_ct
     extension instead </span>
 -   <span class="simpara">
     <a href="/book/mhash.html" class="link">mhash</a> - Discontinued;

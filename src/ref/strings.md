@@ -69,12 +69,6 @@ with these characters defined in `charlist`.
 
 Returns the escaped string.
 
-### Changelog
-
-| Version | Description                                  |
-|---------|----------------------------------------------|
-| 5.2.5   | The escape sequences \\v and \\f were added. |
-
 ### Examples
 
 `charlist` like "\\0..\\37", which would escape all characters with
@@ -787,18 +781,6 @@ vulnerable to timing attacks should be used to compare the output of
 5.6 onwards provides <span class="function">hash\_equals</span> for this
 purpose.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.5   | When the failure string "\*0" is given as the `salt`, "\*1" will now be returned for consistency with other crypt implementations. Prior to this version, PHP 5.6 would incorrectly return a DES hash.                        |
-| 5.6.0   | Raise E\_NOTICE security warning if `salt` is omitted.                                                                                                                                                                        |
-| 5.5.21  | When the failure string "\*0" is given as the `salt`, "\*1" will now be returned for consistency with other crypt implementations. Prior to this version, PHP 5.5 (and earlier branches) would incorrectly return a DES hash. |
-| 5.3.7   | Added *$2x$* and *$2y$* Blowfish modes to deal with potential high-bit attacks.                                                                                                                                               |
-| 5.3.2   | Added SHA-256 and SHA-512 crypt based on Ulrich Drepper's <a href="http://people.redhat.com/drepper/SHA-crypt.txt" class="link external">» implementation</a>.                                                                |
-| 5.3.2   | Fixed Blowfish behaviour on invalid rounds to return "failure" string ("\*0" or "\*1"), instead of falling back to DES.                                                                                                       |
-| 5.3.0   | PHP now contains its own implementation for the MD5 crypt, Standard DES, Extended DES and the Blowfish algorithms and will use that if the system lacks of support for one or more of the algorithms.                         |
-
 ### Examples
 
 **Example \#1 <span class="function">crypt</span> examples**
@@ -1045,12 +1027,6 @@ contains a value that is not contained in `string` and a negative
 `limit` is used, then an empty <span class="type">array</span> will be
 returned, otherwise an <span class="type">array</span> containing
 `string` will be returned.
-
-### Changelog
-
-| Version | Description                             |
-|---------|-----------------------------------------|
-| 5.1.0   | Support for negative `limit`s was added |
 
 ### Examples
 
@@ -1453,14 +1429,6 @@ The following character sets are supported:
 Returns the translation table as an array, with the original characters
 as keys and entities as values.
 
-### Changelog
-
-| Version | Description                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------|
-| 5.4.0   | The default value for the `encoding` parameter was changed to UTF-8.                             |
-| 5.4.0   | The constants **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added. |
-| 5.3.4   | The `encoding` parameter was added.                                                              |
-
 ### Examples
 
 **Example \#1 Translation Table Example**
@@ -1603,13 +1571,6 @@ failure.
 If the hexadecimal input string is of odd length or invalid hexadecimal
 string an **`E_WARNING`** level error is thrown.
 
-### Changelog
-
-| Version | Description                                                                                                                               |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.1   | A warning is thrown if the input string is invalid hexadecimal string.                                                                    |
-| 5.4.4   | A warning is thrown if the input string is of odd length. In PHP 5.4.0 the string was silently accepted, but the last byte was truncated. |
-
 ### Examples
 
 **Example \#1 <span class="function">hex2bin</span> example**
@@ -1721,14 +1682,6 @@ The following character sets are supported:
 ### Return Values
 
 Returns the decoded string.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | The default value for the `encoding` parameter was changed to be the value of the <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a> configuration option. |
-| 5.4.0   | Default encoding changed from ISO-8859-1 to UTF-8.                                                                                                                                    |
-| 5.4.0   | The constants **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added.                                                                                      |
 
 ### Examples
 
@@ -1866,16 +1819,6 @@ If the input `string` contains an invalid code unit sequence within the
 given `encoding` an empty string will be returned, unless either the
 **`ENT_IGNORE`** or **`ENT_SUBSTITUTE`** flags are set.
 
-### Changelog
-
-| Version | Description                                                                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | The default value for the `encoding` parameter was changed to be the value of the <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a> configuration option. |
-| 5.4.0   | The default value for the `encoding` parameter was changed to UTF-8.                                                                                                                  |
-| 5.4.0   | The constants **`ENT_SUBSTITUTE`**, **`ENT_DISALLOWED`**, **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added.                                          |
-| 5.3.0   | The constant **`ENT_IGNORE`** was added.                                                                                                                                              |
-| 5.2.3   | The `double_encode` parameter was added.                                                                                                                                              |
-
 ### Examples
 
 **Example \#1 A <span class="function">htmlentities</span> example**
@@ -1959,12 +1902,6 @@ handle quotes and which document type to use. The default is
 ### Return Values
 
 Returns the decoded string.
-
-### Changelog
-
-| Version | Description                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------|
-| 5.4.0   | The constants **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added. |
 
 ### Examples
 
@@ -2116,16 +2053,6 @@ The converted <span class="type">string</span>.
 If the input `string` contains an invalid code unit sequence within the
 given `encoding` an empty string will be returned, unless either the
 **`ENT_IGNORE`** or **`ENT_SUBSTITUTE`** flags are set.
-
-### Changelog
-
-| Version | Description                                                                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | The default value for the `encoding` parameter was changed to be the value of the <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a> configuration option. |
-| 5.4.0   | The default value for the `encoding` parameter was changed to UTF-8.                                                                                                                  |
-| 5.4.0   | The constants **`ENT_SUBSTITUTE`**, **`ENT_DISALLOWED`**, **`ENT_HTML401`**, **`ENT_XML1`**, **`ENT_XHTML`** and **`ENT_HTML5`** were added.                                          |
-| 5.3.0   | The constant **`ENT_IGNORE`** was added.                                                                                                                                              |
-| 5.2.3   | The `double_encode` parameter was added.                                                                                                                                              |
 
 ### Examples
 
@@ -2732,12 +2659,6 @@ of 16.
 
 Returns a string on success, **`FALSE`** otherwise.
 
-### Changelog
-
-| Version | Description                                                                                                                        |
-|---------|------------------------------------------------------------------------------------------------------------------------------------|
-| 5.1.0   | Changed the function to use the streams API. It means that you can use it with wrappers, like *md5\_file('http://example.com/..')* |
-
 ### Examples
 
 **Example \#1 Usage example of <span class="function">md5\_file</span>**
@@ -3207,12 +3128,6 @@ The above example will output:
     a<br />
     string<br />
 
-### Changelog
-
-| Version | Description                                                                                  |
-|---------|----------------------------------------------------------------------------------------------|
-| 5.3.0   | Added the optional `is_xhtml` parameter. Before this version '\<br /\>' was always inserted. |
-
 ### See Also
 
 -   <span class="function">htmlspecialchars</span>
@@ -3280,7 +3195,6 @@ A formatted version of `number`.
 | Version | Description                                                                                                                                                                  |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.2.0   | <span class="function">number\_format</span> was changed to not being able to return *-0*, previously *-0* could be returned for cases like where `number` would be *-0.01*. |
-| 5.4.0   | This function now supports multiple bytes in `dec_point` and `thousands_sep`. Only the first byte of each separator was used in older versions.                              |
 
 ### Examples
 
@@ -4135,13 +4049,6 @@ Different systems have different naming schemes for locales.
 > the system that PHP is running. It returns exactly what the system
 > *setlocale* function returns.
 
-### Changelog
-
-| Version | Description                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | Support for the `category` parameter passed as a string has been removed. Only *LC\_\** constants can be used as of this version.                 |
-| 5.3.0   | This function now throws an **`E_DEPRECATED`** notice if a string is passed to the `category` parameter instead of one of the *LC\_\** constants. |
-
 ### Examples
 
 **Example \#1 <span class="function">setlocale</span> Examples**
@@ -4234,12 +4141,6 @@ foreach(glob('/home/Kalle/myproject/*.php') as $ent)
 }
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                                                                                                         |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------|
-| 5.1.0   | Changed the function to use the streams API. It means that you can use it with wrappers, like *sha1\_file('http://example.com/..')* |
 
 ### See Also
 
@@ -5475,12 +5376,6 @@ A list of additional characters which will be considered as 'word'
 
 Returns an array or an integer, depending on the `format` chosen.
 
-### Changelog
-
-| Version | Description                    |
-|---------|--------------------------------|
-| 5.1.0   | Added the `charlist` parameter |
-
 ### Examples
 
 **Example \#1 A <span class="function">str\_word\_count</span> example**
@@ -5853,10 +5748,9 @@ Returns the stripped string.
 
 ### Changelog
 
-| Version | Description                                                                                    |
-|---------|------------------------------------------------------------------------------------------------|
-| 7.4.0   | The `allowable_tags` now alternatively accepts an <span class="type">array</span>.             |
-| 5.3.4   | <span class="function">strip\_tags</span> ignores self-closing XHTML tags in `allowable_tags`. |
+| Version | Description                                                                        |
+|---------|------------------------------------------------------------------------------------|
+| 7.4.0   | The `allowable_tags` now alternatively accepts an <span class="type">array</span>. |
 
 ### Examples
 
@@ -6001,9 +5895,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                    |
-|---------|------------------------------------------------|
-| 7.1.0   | Support for negative `offset`s has been added. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| 7.1.0   | Support for negative `offset`s has been added.                                |
 
 ### Examples
 
@@ -6057,12 +5952,6 @@ class="methodname">stripslashes</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> )
 
 Un-quotes a quoted string.
-
-> **Note**:
->
-> If <a href="/book/sybase.html#" class="link">magic_quotes_sybase</a>
-> is on, no backslashes are stripped off but two apostrophes are
-> replaced by one instead.
 
 An example use of <span class="function">stripslashes</span> is when the
 PHP directive
@@ -6187,9 +6076,9 @@ Returns the matched substring. If `needle` is not found, returns
 
 ### Changelog
 
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 5.3.0   | Added the optional parameter `before_needle`. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -6258,12 +6147,6 @@ The <span class="type">string</span> being measured for length.
 ### Return Values
 
 The length of the `string` on success, and *0* if the `string` is empty.
-
-### Changelog
-
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Prior versions treated arrays as the string *Array*, thus returning a string length of *5* and emitting an **`E_NOTICE`** level error. |
 
 ### Examples
 
@@ -6623,9 +6506,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                    |
-|---------|------------------------------------------------|
-| 7.1.0   | Support for negative `offset`s has been added. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| 7.1.0   | Support for negative `offset`s has been added.                                |
 
 ### Examples
 
@@ -6728,6 +6612,12 @@ be performed.
 
 This function returns the portion of string, or **`FALSE`** if `needle`
 is not found.
+
+### Changelog
+
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -6853,6 +6743,12 @@ more information. Use
 <a href="/language/operators/comparison.html" class="link">the === operator</a>
 for testing the return value of this function.
 
+### Changelog
+
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+
 ### Examples
 
 **Example \#1 A simple <span class="function">strripos</span> example**
@@ -6949,6 +6845,12 @@ section on
 more information. Use
 <a href="/language/operators/comparison.html" class="link">the === operator</a>
 for testing the return value of this function.
+
+### Changelog
+
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -7176,9 +7078,9 @@ Returns the portion of string, or **`FALSE`** if `needle` is not found.
 
 ### Changelog
 
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 5.3.0   | Added the optional parameter `before_needle`. |
+| Version | Description                                                                   |
+|---------|-------------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -7571,8 +7473,6 @@ prints a warning and returns **`FALSE`**.
 | Version       | Description                                            |
 |---------------|--------------------------------------------------------|
 | 7.2.18, 7.3.5 | `offset` may now be equal to the length of `main_str`. |
-| 5.5.11        | `length` may now be *0*.                               |
-| 5.1.0         | Added the possibility to use a negative `offset`.      |
 
 ### Examples
 
@@ -7646,7 +7546,6 @@ This function returns an <span class="type">integer</span>.
 | Version | Description                                                                                |
 |---------|--------------------------------------------------------------------------------------------|
 | 7.1.0   | Support for negative `offset`s and `length`s has been added. `length` may also be *0* now. |
-| 5.1.0   | Added the `offset` and the `length` parameters                                             |
 
 ### Examples
 
@@ -7874,13 +7773,6 @@ $rest = substr("abcdef", -3, -1); // returns "de"
 
 Returns the extracted part of `string`; or **`FALSE`** on failure, or an
 empty string.
-
-### Changelog
-
-| Version       | Description                                                                                                                                      |
-|---------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0         | If `string` is equal to `start` characters long, an empty string will be returned. Prior to this version, **`FALSE`** was returned in this case. |
-| 5.2.2 - 5.2.6 | If the `start` parameter indicates the position of a negative truncation or beyond, false is returned. Other versions get the string from start. |
 
 ### Examples
 
@@ -8191,12 +8083,6 @@ The optional `delimiters` contains the word separator characters.
 ### Return Values
 
 Returns the modified string.
-
-### Changelog
-
-| Version        | Description                       |
-|----------------|-----------------------------------|
-| 5.4.32, 5.5.16 | Added the `delimiters` parameter. |
 
 ### Examples
 
