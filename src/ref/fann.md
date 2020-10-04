@@ -159,6 +159,13 @@ Neural network <span class="type">resource</span>.
 Returns a copy of neural network resource on success, or **`FALSE`** on
 error
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_test</span>
@@ -531,6 +538,13 @@ if ($train_data) {
 ?>
 ```
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_read\_train\_from\_file</span>
@@ -569,6 +583,13 @@ The number of ouputs per training data
 
 Returns a train data <span class="type">resource</span> on success, or
 **`FALSE`** on error.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -1309,6 +1330,13 @@ Neural network <span class="type">resource</span>.
 
 The minimum candidate epochs, or **`FALSE`** on error.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_set\_cascade\_min\_cand\_epochs</span>
@@ -1337,6 +1365,13 @@ Neural network <span class="type">resource</span>.
 ### Return Values
 
 The minimum out epochs, or **`FALSE`** on error.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -2106,6 +2141,13 @@ Neural network <span class="type">resource</span>.
 
 The sarprop step error shift , or **`FALSE`** on error.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_set\_sarprop\_step\_error\_shift</span>
@@ -2134,6 +2176,13 @@ Neural network <span class="type">resource</span>.
 ### Return Values
 
 The sarprop step error threshold factor, or **`FALSE`** on error.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -2164,6 +2213,13 @@ Neural network <span class="type">resource</span>.
 
 The sarprop temperature, or **`FALSE`** on error.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_set\_sarprop\_temperature</span>
@@ -2192,6 +2248,13 @@ Neural network <span class="type">resource</span>.
 ### Return Values
 
 The sarprop weight decay shift, or **`FALSE`** on error.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -3751,6 +3814,13 @@ The minimum candidate epochs.
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_get\_cascade\_min\_cand\_epochs</span>
@@ -3781,6 +3851,13 @@ The minimum out epochs.
 ### Return Values
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -4348,6 +4425,13 @@ The sarprop step error shift.
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_get\_sarprop\_step\_error\_shift</span>
@@ -4379,6 +4463,13 @@ The sarprop step error threshold factor.
 ### Return Values
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 
@@ -4412,6 +4503,13 @@ The sarprop temperature.
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
 
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
+
 ### See Also
 
 -   <span class="function">fann\_get\_sarprop\_temperature</span>
@@ -4442,6 +4540,13 @@ The sarprop weight decay shift.
 ### Return Values
 
 Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+
+### Notes
+
+> **Note**:
+>
+> This function is only available if the fann extension has been build
+> against libfann \>= 2.2.
 
 ### See Also
 

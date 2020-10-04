@@ -852,11 +852,6 @@ if ($db) {
 ?>
 ```
 
-### Return Values
-
-Returns a database resource if the database is successfully opened, or
-**`FALSE`** if an error occurred.
-
 ### See Also
 
 -   <span class="function">dbase\_create</span>

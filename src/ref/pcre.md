@@ -296,10 +296,10 @@ The above example will output:
 
 **`PREG_OFFSET_CAPTURE`**  
 If this flag is passed, for every occurring match the appendant string
-offset will also be returned. Note that this changes the value of
-`matches` into an array of arrays where every element is an array
-consisting of the matched string at offset *0* and its string offset
-into `subject` at offset *1*.
+offset (in bytes) will also be returned. Note that this changes the
+value of `matches` into an array of arrays where every element is an
+array consisting of the matched string at offset *0* and its string
+offset into `subject` at offset *1*.
 
 ``` php
 <?php

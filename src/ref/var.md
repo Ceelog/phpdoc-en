@@ -1349,6 +1349,10 @@ Alias of <span class="function">is\_float</span>
 
 This function is an alias of: <span class="function">is\_float</span>.
 
+**Warning**
+
+This alias was *DEPRECATED* in PHP 7.4.0, and *REMOVED* as of PHP 8.0.0.
+
 is\_resource
 ============
 

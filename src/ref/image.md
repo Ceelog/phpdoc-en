@@ -8820,10 +8820,10 @@ Output an XBM image to browser or file
 
 <span class="type">bool</span> <span class="methodname">imagexbm</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$image`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$filename`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$foreground`</span> \]\] )
+`$image`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$foreground`</span>
+\] )
 
 Outputs or save an XBM version of the given `image`.
 
@@ -8839,8 +8839,8 @@ An image resource, returned by one of the image creation functions, such
 as <span class="function">imagecreatetruecolor</span>.
 
 `filename`  
-The path to save the file to. If not set or **`NULL`**, the raw image
-stream will be outputted directly.
+The path to save the file to, given as <span class="type">string</span>.
+If **`NULL`**, the raw image stream will be output directly.
 
 The `filename` (without the .xbm extension) is also used for the C
 identifiers of the XBM, whereby non alphanumeric characters of the
@@ -8861,6 +8861,12 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 However, if libgd fails to output the image, this function returns
 **`TRUE`**.
+
+### Changelog
+
+| Version | Description                                               |
+|---------|-----------------------------------------------------------|
+| 8.0.0   | The fourth parameter, which was unused, has been removed. |
 
 ### Examples
 

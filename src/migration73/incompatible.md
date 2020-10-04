@@ -216,3 +216,8 @@ now treat the text as an <span class="type">integer</span> or <span
 class="type">float</span>, whichever is more appropriate. Previously
 values were treated as <span class="type">integer</span>s
 unconditionally.
+
+### Incoming Cookies
+
+As of PHP 7.3.23, the *names* of incoming cookies are no longer
+url-decoded for security reasons.

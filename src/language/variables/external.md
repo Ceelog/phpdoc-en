@@ -127,6 +127,10 @@ available in the appropriate cookie data arrays, such as `$_COOKIE` as
 well as in `$_REQUEST`. See the <span class="function">setcookie</span>
 manual page for more details and examples.
 
+> **Note**: <span class="simpara"> As of PHP 7.2.34, 7.3.23 and 7.4.11,
+> respectively, the *names* of incoming cookies are no longer
+> url-decoded for security reasons. </span>
+
 If you wish to assign multiple values to a single cookie variable, you
 may assign it as an array. For example:
 
@@ -206,7 +210,7 @@ will contain the string "null" and `$_GET["var2"]`, the string "123".
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                          |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | <a href="/security/globals.html" class="link">Register Globals</a>, <a href="/security/magicquotes.html" class="link">Magic Quotes</a> and <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> has been removed  |
-| 5.3.0   | <a href="/security/globals.html" class="link">Register Globals</a>, <a href="/security/magicquotes.html" class="link">Magic Quotes</a> and <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> became deprecated |
+| Version                | Description                                                                                                                                                                                                                                          |
+|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.2.34, 7.3.23, 7.4.11 | The *names* of incoming cookies are no longer url-decoded for security reasons.                                                                                                                                                                      |
+| 5.3.0, 5.4.0           | <a href="/security/globals.html" class="link">Register Globals</a>, <a href="/security/magicquotes.html" class="link">Magic Quotes</a> and <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> became deprecated |

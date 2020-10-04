@@ -13,7 +13,10 @@ be expressed thus: `^[a-zA-Z_\x80-\xff][a-zA-Z0-9_\x80-\xff]*$`
 > a-z, A-Z, and the bytes from 128 through 255 (*0x80-0xff*). </span>
 
 > **Note**: <span class="simpara"> *$this* is a special variable that
-> can't be assigned. </span>
+> can't be assigned. Prior to PHP 7.1.0, indirect assignment (e.g. by
+> using
+> <a href="/language/variables/variable.html" class="link">variable variables</a>)
+> was possible. </span>
 
 **Tip**
 

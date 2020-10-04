@@ -7,7 +7,7 @@ Check for alphanumeric character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_alnum</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are alphanumeric.
@@ -16,6 +16,14 @@ class="type">string</span>, `text`, are alphanumeric.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -45,16 +53,6 @@ The above example will output:
     The string AbCd1zyZ9 consists of all letters or digits.
     The string foo!#$bar does not consist of all letters or digits.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_alpha</span>
@@ -70,7 +68,7 @@ Check for alphabetic character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_alpha</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are alphabetic. In the standard *C*
@@ -84,6 +82,14 @@ neither upper nor lower case.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -113,16 +119,6 @@ The above example will output:
     The string KjgWZC consists of all letters.
     The string arf12 does not consist of all letters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_upper</span>
@@ -138,7 +134,7 @@ Check for control character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_cntrl</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are control characters. Control
@@ -148,6 +144,14 @@ characters are e.g. line feed, tab, escape.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -176,16 +180,6 @@ The above example will output:
     The string 'string1' consists of all control characters.
     The string 'string2' does not consist of all control characters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_print</span>
@@ -199,7 +193,7 @@ Check for numeric character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_digit</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are numerical.
@@ -208,6 +202,14 @@ class="type">string</span>, `text`, are numerical.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -254,25 +256,6 @@ is_numeric($integer);          // true
 ?>
 ```
 
-### Notes
-
-> **Note**:
->
-> This function expects a <span class="type">string</span> to be useful,
-> so for example passing in an <span class="type">integer</span> may not
-> return the expected result. However, also note that HTML forms will
-> result in numeric strings and not integers. See also the
-> <a href="/language/types.html" class="link">types</a> section of the
-> manual.
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_alnum</span>
@@ -290,7 +273,7 @@ Check for any printable character(s) except space
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_graph</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, creates visible output.
@@ -299,6 +282,14 @@ class="type">string</span>, `text`, creates visible output.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -328,16 +319,6 @@ The above example will output:
     The string 'string2' consists of all (visibly) printable characters.
     The string 'string3' consists of all (visibly) printable characters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_alnum</span>
@@ -353,7 +334,7 @@ Check for lowercase character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_lower</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are lowercase letters.
@@ -362,6 +343,14 @@ class="type">string</span>, `text`, are lowercase letters.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -392,16 +381,6 @@ The above example will output:
     The string qiutoas consists of all lowercase letters.
     The string QASsdks does not consist of all lowercase letters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_alpha</span>
@@ -417,7 +396,7 @@ Check for printable character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_print</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are printable.
@@ -426,6 +405,14 @@ class="type">string</span>, `text`, are printable.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -457,16 +444,6 @@ The above example will output:
     The string 'string2' consists of all printable characters.
     The string 'string3' consists of all printable characters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_cntrl</span>
@@ -483,7 +460,7 @@ alphanumeric character
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_punct</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are punctuation character.
@@ -492,6 +469,14 @@ class="type">string</span>, `text`, are punctuation character.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -521,16 +506,6 @@ The above example will output:
     The string !@ # $ does not consist of all punctuation.
     The string *&$() consists of all punctuation.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_cntrl</span>
@@ -545,7 +520,7 @@ Check for whitespace character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_space</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, creates whitespace.
@@ -554,6 +529,14 @@ class="type">string</span>, `text`, creates whitespace.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -589,16 +572,6 @@ The above example will output:
     The string 'string2' contains non-whitespace characters.
     The string 'string3' contains non-whitespace characters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_cntrl</span>
@@ -614,7 +587,7 @@ Check for uppercase character(s)
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_upper</span> ( <span class="methodparam"><span
-class="type">string</span> `$text`</span> )
+class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are uppercase characters.
@@ -623,6 +596,14 @@ class="type">string</span>, `text`, are uppercase characters.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -653,16 +634,6 @@ The above example will output:
     The string LMNSDO consists of all uppercase letters.
     The string akwSKWsm does not consist of all uppercase letters.
 
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
-
 ### See Also
 
 -   <span class="function">ctype\_alpha</span>
@@ -678,7 +649,7 @@ Check for character(s) representing a hexadecimal digit
 
 <span class="type">bool</span> <span
 class="methodname">ctype\_xdigit</span> ( <span
-class="methodparam"><span class="type">string</span> `$text`</span> )
+class="methodparam"><span class="type">mixed</span> `$text`</span> )
 
 Checks if all of the characters in the provided <span
 class="type">string</span>, `text`, are hexadecimal 'digits'.
@@ -687,6 +658,14 @@ class="type">string</span>, `text`, are hexadecimal 'digits'.
 
 `text`  
 The tested string.
+
+> **Note**:
+>
+> If an <span class="type">integer</span> between -128 and 255 inclusive
+> is provided, it is interpreted as the ASCII value of a single
+> character (negative values have 256 added in order to allow characters
+> in the Extended ASCII range). Any other integer is interpreted as a
+> string containing the decimal digits of the integer.
 
 ### Return Values
 
@@ -716,16 +695,6 @@ The above example will output:
     The string AB10BC99 consists of all hexadecimal digits.
     The string AR1012 does not consist of all hexadecimal digits.
     The string ab12bc99 consists of all hexadecimal digits.
-
-### Notes
-
-> **Note**:
->
-> If an <span class="type">integer</span> between -128 and 255 inclusive
-> is provided, it is interpreted as the ASCII value of a single
-> character (negative values have 256 added in order to allow characters
-> in the Extended ASCII range). Any other integer is interpreted as a
-> string containing the decimal digits of the integer.
 
 ### See Also
 
