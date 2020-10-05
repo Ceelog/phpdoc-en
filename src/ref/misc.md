@@ -1016,7 +1016,7 @@ Currently implemented formats are:
 
 ### Return Values
 
-Returns a binary string containing data.
+Returns a binary string containing data, or **`FALSE`** on failure.
 
 ### Changelog
 
@@ -1886,7 +1886,7 @@ The offset to begin unpacking from.
 ### Return Values
 
 Returns an associative array containing unpacked elements of binary
-string.
+string, or **`FALSE`** on failure.
 
 ### Changelog
 
