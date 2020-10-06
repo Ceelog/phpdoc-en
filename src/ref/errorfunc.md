@@ -847,9 +847,6 @@ The above example will output something similar to:
 -   <span class="function">restore\_error\_handler</span>
 -   <span class="function">trigger\_error</span>
 -   <a href="/errorfunc/constants.html" class="link">error level constants</a>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 set\_exception\_handler
 =======================
@@ -934,9 +931,6 @@ echo "Not Executed\n";
 -   <span class="function">restore\_exception\_handler</span>
 -   <span class="function">restore\_error\_handler</span>
 -   <span class="function">error\_reporting</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 -   <a href="/language/exceptions.html" class="link">PHP 5 Exceptions</a>
 
 trigger\_error

@@ -2428,9 +2428,6 @@ The above example will output:
 -   <span class="function">array\_filter</span>
 -   <span class="function">array\_reduce</span>
 -   <span class="function">array\_walk</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 array\_merge\_recursive
 =======================
@@ -5050,9 +5047,6 @@ function.
 ### See Also
 
 -   <span class="function">array\_walk</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 array\_walk
 ===========
@@ -5173,9 +5167,6 @@ The above example will output:
 -   <span class="function">each</span>
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">array\_map</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 -   <a href="/control-structures/foreach.html" class="link">foreach</a>
 
 array

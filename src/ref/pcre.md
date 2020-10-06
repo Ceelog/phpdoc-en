@@ -912,7 +912,8 @@ are executed on a per-pattern basis.
 ### Parameters
 
 `patterns_and_callbacks`  
-An associative array mapping patterns (keys) to callbacks (values).
+An associative array mapping patterns (keys) to <span
+class="type">callable</span>s (values).
 
 `subject`  
 The string or an array with strings to search and replace.
@@ -982,9 +983,6 @@ The above example will output:
 -   <span class="function">preg\_replace</span>
 -   <span class="function">preg\_last\_error</span>
 -   <a href="/functions/anonymous.html" class="link">Anonymous functions</a>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 preg\_replace\_callback
 =======================
@@ -1154,9 +1152,6 @@ echo $output;
 -   <span class="function">preg\_replace</span>
 -   <span class="function">preg\_last\_error</span>
 -   <a href="/functions/anonymous.html" class="link">Anonymous functions</a>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 preg\_replace
 =============

@@ -394,7 +394,7 @@ keys will be converted to integers.
 >
 > If this parameter is not set or set to **`TRUE`**, duplicate keys will
 > be overwritten. The last value with a given key will be in the
-> returned <span class="type">array</span>. Set this paramater to
+> returned <span class="type">array</span>. Set this parameter to
 > **`FALSE`** to get all the values in any case.
 
 ### Return Values

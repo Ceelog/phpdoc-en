@@ -1095,9 +1095,6 @@ echo mb_ereg_replace_callback(
 -   <span class="function">mb\_regex\_encoding</span>
 -   <span class="function">mb\_ereg\_replace</span>
 -   <a href="/functions/anonymous.html" class="link">Anonymous functions</a>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 mb\_ereg\_replace
 =================

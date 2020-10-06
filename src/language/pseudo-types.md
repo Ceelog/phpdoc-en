@@ -20,12 +20,6 @@ types, while <span class="function">str\_replace</span> will accept
 *number* indicates that a parameter can be either <span
 class="type">integer</span> or <span class="type">float</span>.
 
-### callback
-
-<span class="type">callback</span> pseudo-types was used in this
-documentation before <span class="type">callable</span> type hint was
-introduced by PHP 5.4. It means exactly the same.
-
 ### array\|object
 
 *array\|object* indicates that a parameter can be either <span

@@ -154,9 +154,6 @@ The above example will output:
 ### See Also
 
 -   <span class="function">call\_user\_func</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 -   <span class="methodname">ReflectionFunction::invokeArgs</span>
 -   <span class="methodname">ReflectionMethod::invokeArgs</span>
 
@@ -322,9 +319,6 @@ The above example will output:
 
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">is\_callable</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 -   <span class="methodname">ReflectionFunction::invoke</span>
 -   <span class="methodname">ReflectionMethod::invoke</span>
 
@@ -617,9 +611,6 @@ The above example will output:
 -   <span class="function">call\_user\_func</span>
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">is\_callable</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 forward\_static\_call
 =====================
@@ -703,9 +694,6 @@ The above example will output:
 -   <span class="function">call\_user\_func\_array</span>
 -   <span class="function">call\_user\_func</span>
 -   <span class="function">is\_callable</span>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 func\_get\_arg
 ==============

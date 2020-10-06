@@ -535,9 +535,6 @@ The above example will output:
 -   <span class="function">filter\_input</span>
 -   <span class="function">filter\_input\_array</span>
 -   <a href="/filter/filters.html" class="xref">Types of filters</a>
--   information about the
-    <a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-    type
 
 **Table of Contents**
 

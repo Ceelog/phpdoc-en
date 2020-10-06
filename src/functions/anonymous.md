@@ -3,9 +3,8 @@ Anonymous functions
 
 Anonymous functions, also known as *closures*, allow the creation of
 functions which have no specified name. They are most useful as the
-value of
-<a href="/language/pseudo-types.html#language.types.callback" class="link">callback</a>
-parameters, but they have many other uses.
+value of <span class="type">callable</span> parameters, but they have
+many other uses.
 
 Anonymous functions are implemented using the
 <a href="/class/closure.html" class="link"><span class="classname">Closure</span></a>

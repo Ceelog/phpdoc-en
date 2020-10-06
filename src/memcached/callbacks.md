@@ -10,7 +10,7 @@ Callbacks
 Result callbacks
 ----------------
 
-Result <span class="type">callbacks</span> are invoked by <span
+Result <span class="type">callable</span>s are invoked by <span
 class="methodname">Memcached::getDelayed</span> or <span
 class="methodname">Memcached::getDelayedBykey</span> methods for each
 item in the result set. The callback is passed the Memcached object and

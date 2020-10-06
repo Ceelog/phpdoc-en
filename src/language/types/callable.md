@@ -1,9 +1,8 @@
 Callbacks / Callables
 ---------------------
 
-Callbacks can be denoted by <span class="type">callable</span> type hint
-as of PHP 5.4. This documentation used <span
-class="type">callback</span> type information for the same purpose.
+Callbacks can be denoted by <span class="type">callable</span> type
+hint.
 
 Some functions like <span class="function">call\_user\_func</span> or
 <span class="function">usort</span> accept user-defined callback
