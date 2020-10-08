@@ -1010,9 +1010,8 @@ tells the function to treat the `msg_number` argument as a *UID*.
 
 ### Return Values
 
-Returns an object includes the envelope, internal date, size, flags and
-body structure along with a similar object for each mime attachment. The
-structure of the returned objects is as follows:
+Returns an object with properties listed in the table below, or
+**`FALSE`** on failure.
 
 |               |                                                                                                                                                               |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -3053,8 +3052,8 @@ For example, to match all unanswered messages sent by Mom, you'd use:
 "UNANSWERED FROM mom". Searches appear to be case insensitive. This list
 of criteria is from a reading of the UW c-client source code and may be
 incomplete or inaccurate (see also
-<a href="http://www.faqs.org/rfcs/rfc2060" class="link external">» RFC2060</a>,
-section 6.4.4).
+<a href="http://www.faqs.org/rfcs/rfc1176" class="link external">» RFC1176</a>,
+section "tag SEARCH search\_criteria").
 
 ### Parameters
 
@@ -3870,7 +3869,9 @@ Converts MIME-encoded text to UTF-8
 class="methodname">imap\_utf8</span> ( <span class="methodparam"><span
 class="type">string</span> `$mime_encoded_text`</span> )
 
-Converts the given `mime_encoded_text` to UTF-8.
+Converts the given `mime_encoded_text` to UTF-8, if the declared charset
+is known to libc-client. Otherwise the given text is decoded, but not
+converted to UTF-8.
 
 ### Parameters
 
@@ -3884,7 +3885,21 @@ respectively.
 
 ### Return Values
 
-Returns an UTF-8 encoded string.
+Returns the decoded string, if possible converted to UTF-8.
+
+### Examples
+
+**Example \#1 Basic <span class="function">imap\_utf8</span> Usage**
+
+``` php
+<?php
+echo imap_utf8("Johannes =?ISO-8859-1?Q?Schl=FCter?=");
+?>
+```
+
+The above example will output something similar to:
+
+    Johannes Schlüter
 
 ### See Also
 

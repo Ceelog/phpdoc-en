@@ -2245,8 +2245,14 @@ there can only be set one mode but multiple options.
 
 ### Return Values
 
-The <span class="type">string</span> that describes the current options
-is returned.
+The previous options. If `options` is omitted, it returns the <span
+class="type">string</span> that describes the current options.
+
+### Changelog
+
+| Version | Description                                                                                                                   |
+|---------|-------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | If the parameter `options` is given, the *previous* options are returned. Formerly, the *current* options have been returned. |
 
 ### See Also
 

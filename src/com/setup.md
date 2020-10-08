@@ -31,14 +31,15 @@ Runtime Configuration
 
 The behaviour of these functions is affected by settings in `php.ini`.
 
-| Name                                                                       | Default | Changeable       | Changelog |
-|----------------------------------------------------------------------------|---------|------------------|-----------|
-| <a href="/com/setup.html#" class="link">com.allow_dcom</a>                 | "0"     | PHP\_INI\_SYSTEM |           |
-| <a href="/com/setup.html#" class="link">com.autoregister_typelib</a>       | "0"     | PHP\_INI\_ALL    |           |
-| <a href="/com/setup.html#" class="link">com.autoregister_verbose</a>       | "0"     | PHP\_INI\_ALL    |           |
-| <a href="/com/setup.html#" class="link">com.autoregister_casesensitive</a> | "1"     | PHP\_INI\_ALL    |           |
-| <a href="/com/setup.html#" class="link">com.code_page</a>                  | ""      | PHP\_INI\_ALL    |           |
-| <a href="/com/setup.html#" class="link">com.typelib_file</a>               | ""      | PHP\_INI\_SYSTEM |           |
+| Name                                                                       | Default | Changeable       | Changelog       |
+|----------------------------------------------------------------------------|---------|------------------|-----------------|
+| <a href="/com/setup.html#" class="link">com.allow_dcom</a>                 | "0"     | PHP\_INI\_SYSTEM |                 |
+| <a href="/com/setup.html#" class="link">com.autoregister_typelib</a>       | "0"     | PHP\_INI\_ALL    |                 |
+| <a href="/com/setup.html#" class="link">com.autoregister_verbose</a>       | "0"     | PHP\_INI\_ALL    |                 |
+| <a href="/com/setup.html#" class="link">com.autoregister_casesensitive</a> | "1"     | PHP\_INI\_ALL    |                 |
+| <a href="/com/setup.html#" class="link">com.code_page</a>                  | ""      | PHP\_INI\_ALL    |                 |
+| <a href="/com/setup.html#" class="link">com.dotnet_version</a>             | ""      | PHP\_INI\_SYSTEM | As of PHP 8.0.0 |
+| <a href="/com/setup.html#" class="link">com.typelib_file</a>               | ""      | PHP\_INI\_SYSTEM |                 |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.
@@ -83,6 +84,12 @@ from having to pass the code page as a parameter to the
 note that by using this directive (as with any PHP configuration
 directive), your PHP script becomes less portable; you should use the
 COM constructor parameter whenever possible.
+
+`com.dotnet_version`  
+The version of the .NET framework to use for <span
+class="classname">dotnet</span> objects. The value of the setting is the
+first three parts of the framework's version number, separated by dots,
+and prefixed with *v*, e.g. *v4.0.30319*.
 
 `com.typelib_file`  
 When set, this should hold the path to a file that contains a list of

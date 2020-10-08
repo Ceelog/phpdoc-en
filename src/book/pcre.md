@@ -28,6 +28,8 @@ Regular Expressions (Perl-Compatible)
         expression search and replace
     -   [preg\_grep](/ref/pcre.html#preg_grep) — Return array entries
         that match the pattern
+    -   [preg\_last\_error\_msg](/ref/pcre.html#preg_last_error_msg) —
+        Returns the error message of the last PCRE regex execution
     -   [preg\_last\_error](/ref/pcre.html#preg_last_error) — Returns
         the error code of the last PCRE regex execution
     -   [preg\_match\_all](/ref/pcre.html#preg_match_all) — Perform a

@@ -29,7 +29,7 @@ The behavior of timezones not listed here is undefined.
 > </span>
 
 > **Note**: <span class="simpara"> This list is based upon the timezone
-> database version 2020.1. </span>
+> database version 2020.2. </span>
 
 Africa
 ------
@@ -267,5 +267,5 @@ the above examples.
 | Universal             | US/Alaska           | US/Aleutian                      | US/Arizona            |
 | US/Central            | US/East-Indiana     | US/Eastern                       | US/Hawaii             |
 | US/Indiana-Starke     | US/Michigan         | US/Mountain                      | US/Pacific            |
-| US/Pacific-New        | US/Samoa            | UTC                              | W-SU                  |
-| WET                   | Zulu                |                                  |                       |
+| US/Samoa              | UTC                 | W-SU                             | WET                   |
+| Zulu                  |                     |                                  |                       |

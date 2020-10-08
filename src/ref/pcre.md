@@ -139,6 +139,53 @@ $fl_array = preg_grep("/^(\d+)?\.\d+$/", $array);
 -   <span class="function">preg\_filter</span>
 -   <span class="function">preg\_last\_error</span>
 
+preg\_last\_error\_msg
+======================
+
+Returns the error message of the last PCRE regex execution
+
+### Description
+
+<span class="type">string</span> <span
+class="methodname">preg\_last\_error\_msg</span> ( <span
+class="methodparam">void</span> )
+
+Returns the error message of the last PCRE regex execution.
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+Returns the error message on success, or *"No error"* if no error has
+occurred.
+
+### Examples
+
+**Example \#1 <span class="function">preg\_last\_error\_msg</span>
+example**
+
+``` php
+<?php
+
+preg_match('/(?:\D+|<\d+>)*[!?]/', 'foobar foobar foobar');
+
+if (preg_last_error() !== PREG_NO_ERROR) {
+    echo preg_last_error_msg();
+}
+
+?>
+```
+
+The above example will output:
+
+    Backtrack limit exhausted
+
+### See Also
+
+-   <span class="function">preg\_last\_error</span>
+
 preg\_last\_error
 =================
 
@@ -160,7 +207,7 @@ Returns the error code of the last PCRE regex execution.
 preg_match('/(?:\D+|<\d+>)*[!?]/', 'foobar foobar foobar');
 
 if (preg_last_error() == PREG_BACKTRACK_LIMIT_ERROR) {
-    print 'Backtrack limit was exhausted!';
+    echo 'Backtrack limit was exhausted!';
 }
 
 ?>
@@ -184,6 +231,10 @@ Returns one of the following constants
 -   **`PREG_BAD_UTF8_ERROR`**
 -   **`PREG_BAD_UTF8_OFFSET_ERROR`** (since PHP 5.3.0)
 -   **`PREG_JIT_STACKLIMIT_ERROR`** (since PHP 7.0.0)
+
+### See Also
+
+-   <span class="function">preg\_last\_error\_msg</span>
 
 preg\_match\_all
 ================
@@ -799,6 +850,7 @@ class="function">strpos</span> instead as it will be faster.
 -   <span class="function">preg\_replace</span>
 -   <span class="function">preg\_split</span>
 -   <span class="function">preg\_last\_error</span>
+-   <span class="function">preg\_last\_error\_msg</span>
 
 preg\_quote
 ===========
@@ -1531,6 +1583,8 @@ string will be returned.
     expression search and replace
 -   [preg\_grep](/ref/pcre.html#preg_grep) — Return array entries that
     match the pattern
+-   [preg\_last\_error\_msg](/ref/pcre.html#preg_last_error_msg) —
+    Returns the error message of the last PCRE regex execution
 -   [preg\_last\_error](/ref/pcre.html#preg_last_error) — Returns the
     error code of the last PCRE regex execution
 -   [preg\_match\_all](/ref/pcre.html#preg_match_all) — Perform a global

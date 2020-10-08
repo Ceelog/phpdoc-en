@@ -776,19 +776,25 @@ Convert Julian Day to Unix timestamp
 <span class="methodparam"><span class="type">int</span> `$jday`</span> )
 
 This function will return a Unix timestamp corresponding to the Julian
-Day given in `jday` or **`FALSE`** if `jday` is not inside the Unix
-epoch (Gregorian years between 1970 and 2037 or 2440588 \<= `jday` \<=
-2465342 ). The time returned is UTC.
+Day given in `jday` or **`FALSE`** if `jday` is outside of the allowed
+range. The time returned is UTC.
 
 ### Parameters
 
 `jday`  
-A julian day number between 2440588 and 2465342.
+A julian day number between *2440588* and *106751993607888* on 64bit
+systems, or between *2440588* and *2465443* on 32bit systems.
 
 ### Return Values
 
 The unix timestamp for the start (midnight, not noon) of the given
-Julian day.
+Julian day, or **`FALSE`** on failure.
+
+### Changelog
+
+| Version        | Description                                                                                               |
+|----------------|-----------------------------------------------------------------------------------------------------------|
+| 7.3.24, 7.4.12 | The upper limit of `jday` has been extended. Previously, it was *2465342* regardless of the architecture. |
 
 ### See Also
 

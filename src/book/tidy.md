@@ -71,7 +71,7 @@ Tidy
     -   [tidyNode::isComment](/class/tidynode.html#tidyNode::isComment)
         — Checks if a node represents a comment
     -   [tidyNode::isHtml](/class/tidynode.html#tidyNode::isHtml) —
-        Checks if a node is part of a HTML document
+        Checks if a node is an element node
     -   [tidyNode::isJste](/class/tidynode.html#tidyNode::isJste) —
         Checks if this node is JSTE
     -   [tidyNode::isPhp](/class/tidynode.html#tidyNode::isPhp) — Checks
@@ -2180,7 +2180,7 @@ The above example will output:
 tidyNode::isHtml
 ================
 
-Checks if a node is part of a HTML document
+Checks if a node is an element node
 
 ### Description
 
@@ -2188,12 +2188,19 @@ Checks if a node is part of a HTML document
 <span class="methodname">tidyNode::isHtml</span> ( <span
 class="methodparam">void</span> )
 
-Tells if the node is part of HTML document.
+Tells if the node is an element node, but not the root node of the
+document.
 
 ### Return Values
 
-Returns **`TRUE`** if the node is part of a HTML document, **`FALSE`**
-otherwise.
+Returns **`TRUE`** if the node is an element node, but not the root node
+of the document, **`FALSE`** otherwise.
+
+### Changelog
+
+| Version        | Description                                                                                                               |
+|----------------|---------------------------------------------------------------------------------------------------------------------------|
+| 7.3.24, 7.4.12 | This function has been fixed to have reasonable behavior. Previously, almost any node was reported as being an HTML node. |
 
 ### Examples
 
@@ -2257,9 +2264,9 @@ The above example will output:
     # html node #1
     <html>
     <head>
-    <?php echo '<title>title</title>'; ?><# 
+    <?php echo '<title>title</title>'; ?><#
       /* JSTE code */
-      alert('Hello World'); 
+      alert('Hello World');
     #>
     <title></title>
     </head>
@@ -2277,28 +2284,19 @@ The above example will output:
 
     # html node #2
     <head>
-    <?php echo '<title>title</title>'; ?><# 
+    <?php echo '<title>title</title>'; ?><#
       /* JSTE code */
-      alert('Hello World'); 
+      alert('Hello World');
     #>
     <title></title>
     </head>
 
 
     # html node #3
-    <?php echo '<title>title</title>'; ?>
-
-    # html node #4
-    <# 
-      /* JSTE code */
-      alert('Hello World'); 
-    #>
-
-    # html node #5
     <title></title>
 
 
-    # html node #6
+    # html node #4
     <body>
     <?php
       // PHP code
@@ -2309,29 +2307,6 @@ The above example will output:
     %><!-- Comments -->
     Hello WorldOutside HTML
     </body>
-
-
-    # html node #7
-    <?php
-      // PHP code
-      echo 'hello world!';
-    ?>
-
-    # html node #8
-    <%
-      /* ASP code */
-      response.write("Hello World!")
-    %>
-
-    # html node #9
-    <!-- Comments -->
-
-
-    # html node #10
-    Hello World
-
-    # html node #11
-    Outside HTML
 
 tidyNode::isJste
 ================
