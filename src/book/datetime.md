@@ -3505,8 +3505,16 @@ End timestamp.
 
 ### Return Values
 
-Returns numerically indexed array containing associative array with all
-transitions on success or **`FALSE`** on failure.
+Returns a numerically indexed array of transition arrays on success, or
+**`FALSE`** on failure.
+
+| Key      | Type                             | Description                                  |
+|----------|----------------------------------|----------------------------------------------|
+| *ts*     | <span class="type">int</span>    | Unix timestamp                               |
+| *time*   | <span class="type">string</span> | **`DateTimeInterface::ISO8601`** time string |
+| *offset* | <span class="type">int</span>    | Offset to UTC in seconds                     |
+| *isdst*  | <span class="type">bool</span>   | Whether daylight saving time is active       |
+| *abbr*   | <span class="type">string</span> | Timezone abbreviation                        |
 
 ### Examples
 

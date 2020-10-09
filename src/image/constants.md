@@ -6,24 +6,23 @@ available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
 **`GD_VERSION`** (<span class="type">string</span>)  
-<span class="simpara"> The GD version PHP was compiled against.
-(Available as of PHP 5.2.4) </span>
+<span class="simpara"> The GD version PHP was compiled against. </span>
 
 **`GD_MAJOR_VERSION`** (<span class="type">integer</span>)  
 <span class="simpara"> The GD major version PHP was compiled against.
-(Available as of PHP 5.2.4) </span>
+</span>
 
 **`GD_MINOR_VERSION`** (<span class="type">integer</span>)  
 <span class="simpara"> The GD minor version PHP was compiled against.
-(Available as of PHP 5.2.4) </span>
+</span>
 
 **`GD_RELEASE_VERSION`** (<span class="type">integer</span>)  
 <span class="simpara"> The GD release version PHP was compiled against.
-(Available as of PHP 5.2.4) </span>
+</span>
 
 **`GD_EXTRA_VERSION`** (<span class="type">string</span>)  
 <span class="simpara"> The GD "extra" version (beta/rc..) PHP was
-compiled against. (Available as of PHP 5.2.4) </span>
+compiled against. </span>
 
 **`GD_BUNDLED`** (<span class="type">integer</span>)  
 <span class="simpara"> When the bundled version of GD is used this is 1
@@ -64,7 +63,7 @@ class="function">imagetypes</span> </span>
 **`IMG_WEBP`** (<span class="type">integer</span>)  
 <span class="simpara"> Used as a return value by <span
 class="function">imagetypes</span> </span> <span class="simpara">
-Available as of PHP 5.6.25 and PHP 7.0.10, respectively. </span>
+Available as of PHP 7.0.10. </span>
 
 **`IMG_COLOR_TILED`** (<span class="type">integer</span>)  
 <span class="simpara"> Special color option which can be used instead of
@@ -209,8 +208,7 @@ class="function">imagefilter</span> function. </span>
 
 **`IMG_FILTER_PIXELATE`** (<span class="type">integer</span>)  
 <span class="simpara"> Special GD filter used by the <span
-class="function">imagefilter</span> function. </span> <span
-class="simpara"> (Available as of PHP 5.3.0) </span>
+class="function">imagefilter</span> function. </span>
 
 **`IMG_FILTER_SCATTER`** (<span class="type">integer</span>)  
 <span class="simpara"> Special GD filter used by the <span
@@ -306,7 +304,6 @@ class="function">image\_type\_to\_extension</span> functions. </span>
 <span class="simpara"> Image type constant used by the <span
 class="function">image\_type\_to\_mime\_type</span> and <span
 class="function">image\_type\_to\_extension</span> functions. </span>
-<span class="simpara"> (Available as of PHP 5.3.0) </span>
 
 **`IMAGETYPE_WEBP`** (<span class="type">integer</span>)  
 <span class="simpara"> Image type constant used by the <span

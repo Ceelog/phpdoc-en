@@ -20,7 +20,6 @@ Returns an associative array.
 | GD Version         | <span class="type">string</span> value describing the installed *libgd* version.                                                                                                                                                                               |
 | FreeType Support   | <span class="type">boolean</span> value. **`TRUE`** if FreeType Support is installed.                                                                                                                                                                          |
 | FreeType Linkage   | <span class="type">string</span> value describing the way in which FreeType was linked. Expected values are: 'with freetype', 'with TTF library', and 'with unknown library'. This element will only be defined if *FreeType Support* evaluated to **`TRUE`**. |
-| T1Lib Support      | <span class="type">boolean</span> value. **`TRUE`** if *T1Lib* support is included.                                                                                                                                                                            |
 | GIF Read Support   | <span class="type">boolean</span> value. **`TRUE`** if support for *reading* *GIF* images is included.                                                                                                                                                         |
 | GIF Create Support | <span class="type">boolean</span> value. **`TRUE`** if support for *creating* *GIF* images is included.                                                                                                                                                        |
 | JPEG Support       | <span class="type">boolean</span> value. **`TRUE`** if *JPEG* support is included.                                                                                                                                                                             |
@@ -28,11 +27,6 @@ Returns an associative array.
 | WBMP Support       | <span class="type">boolean</span> value. **`TRUE`** if *WBMP* support is included.                                                                                                                                                                             |
 | XBM Support        | <span class="type">boolean</span> value. **`TRUE`** if *XBM* support is included.                                                                                                                                                                              |
 | WebP Support       | <span class="type">boolean</span> value. **`TRUE`** if *WebP* support is included.                                                                                                                                                                             |
-
-> **Note**:
->
-> Previous to PHP 5.3.0, the *JPEG Support* attribute was named *JPG
-> Support*.
 
 ### Examples
 
@@ -50,8 +44,6 @@ The above example will output something similar to:
       ["GD Version"]=>
       string(24) "bundled (2.1.0 compatible)"
       ["FreeType Support"]=>
-      bool(false)
-      ["T1Lib Support"]=>
       bool(false)
       ["GIF Read Support"]=>
       bool(true)
@@ -2566,6 +2558,10 @@ The above example will output something similar to:
 
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagecopy.gif" width="80" height="40" alt="Output of example : Cropping the PHP.net logo" />
 
+### See Also
+
+-   <span class="function">imagecrop</span>
+
 imagecopymerge
 ==============
 
@@ -2911,8 +2907,9 @@ The above example will output something similar to:
 
 ### See Also
 
-<span class="function">imagecopyresized</span> <span
-class="function">imagescale</span>
+-   <span class="function">imagecopyresized</span>
+-   <span class="function">imagescale</span>
+-   <span class="function">imagecrop</span>
 
 imagecopyresized
 ================
@@ -3045,8 +3042,9 @@ obtained using <span class="function">imagecopyresampled</span>.
 
 ### See Also
 
-<span class="function">imagecopyresampled</span> <span
-class="function">imagescale</span>
+-   <span class="function">imagecopyresampled</span>
+-   <span class="function">imagescale</span>
+-   <span class="function">imagecrop</span>
 
 imagecreate
 ===========
@@ -3205,7 +3203,7 @@ Returns an image resource identifier on success, **`FALSE`** on errors.
 $im = imagecreatefromgd2('./test.gd2');
 
 // Apply an effect on the image, in this 
-// case negate the image if PHP 5+
+// case negate the image
 if(function_exists('imagefilter'))
 {
     imagefilter($im, IMG_FILTER_NEGATE);
@@ -3289,8 +3287,7 @@ $image = getimagesize('./test.gd2');
 // sizes
 $im = imagecreatefromgd2part('./test.gd2', 4, 4, ($image[0] / 2) - 6, ($image[1] / 2) - 6);
 
-// Do an image operation, in this case we emboss the 
-// image if PHP 5+
+// Do an image operation, in this case we emboss the image
 if(function_exists('imagefilter'))
 {
     imagefilter($im, IMG_FILTER_EMBOSS);
@@ -6548,11 +6545,6 @@ The above example will output something similar to:
 
 <img src="images/21009b70229598c6a80eef8b45bf282b-imagelayereffect.png" width="100" height="100" alt="Output of example : imagelayereffect()" />
 
-### Notes
-
-Before PHP 5.5.0, this function is only available if PHP is compiled
-with the bundled version of the GD library.
-
 imageline
 =========
 
@@ -7261,8 +7253,8 @@ class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">float</span> `$angle`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$bgd_color`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$ignore_transparent`<span class="initializer">
-= 0</span></span> \] )
+class="type">int</span> `$dummy`<span class="initializer"> =
+0</span></span> \] )
 
 Rotates the `image` image using the given `angle` in degrees.
 
@@ -7282,19 +7274,13 @@ number of degrees to rotate the image anticlockwise.
 `bgd_color`  
 Specifies the color of the uncovered zone after the rotation
 
-`ignore_transparent`  
-If set and non-zero, transparent colors are ignored (otherwise kept).
+`dummy`  
+This parameter is unused.
 
 ### Return Values
 
 Returns an image resource for the rotated image, or **`FALSE`** on
 failure.
-
-### Changelog
-
-| Version | Description                                       |
-|---------|---------------------------------------------------|
-| 5.5.0   | The `ignore_transparent` is now silently ignored. |
 
 ### Examples
 
@@ -7441,10 +7427,6 @@ The width to scale the image to.
 The height to scale the image to. If omitted or negative, the aspect
 ratio will be preserved.
 
-**Caution**
-You should always provide the height if using PHP 5.5.18 or earlier, or
-PHP 5.6.2 or earlier, as the aspect ratio calculation was incorrect.
-
 `mode`  
 One of **`IMG_NEAREST_NEIGHBOUR`**, **`IMG_BILINEAR_FIXED`**,
 **`IMG_BICUBIC`**, **`IMG_BICUBIC_FIXED`** or anything else (will use
@@ -7457,16 +7439,10 @@ two pass).
 
 Return the scaled image resource on success or **`FALSE`** on failure.
 
-### Changelog
-
-| Version      | Description                                                                                                                                              |
-|--------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.5.19/5.6.3 | The calculation of the height if `new_height` was negative or omitted was fixed; prior to these versions, the aspect ratio was not maintained correctly. |
-
 ### See Also
 
-<span class="function">imagecopyresized</span> <span
-class="function">imagecopyresampled</span>
+-   <span class="function">imagecopyresized</span>
+-   <span class="function">imagecopyresampled</span>
 
 imagesetbrush
 =============
@@ -8627,10 +8603,10 @@ if (imagetypes() & IMG_PNG) {
 
 ### Changelog
 
-| Version        | Description           |
-|----------------|-----------------------|
-| 7.2.0          | **`IMG_BMP`** added.  |
-| 5.6.25, 7.0.10 | **`IMG_WEBP`** added. |
+| Version | Description           |
+|---------|-----------------------|
+| 7.2.0   | **`IMG_BMP`** added.  |
+| 7.0.10  | **`IMG_WEBP`** added. |
 
 ### See Also
 
@@ -8830,7 +8806,7 @@ Outputs or save an XBM version of the given `image`.
 > **Note**: <span class="simpara"> <span
 > class="function">imagexbm</span> doesn't apply any padding, so the
 > image width has to be a multiple of 8. This restriction does no longer
-> apply as of PHP 5.6.24 and 7.0.9, respectively. </span>
+> apply as of PHP 7.0.9. </span>
 
 ### Parameters
 

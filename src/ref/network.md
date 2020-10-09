@@ -2053,7 +2053,7 @@ protocol. This means that the cookie won't be accessible by scripting
 languages, such as JavaScript. It has been suggested that this setting
 can effectively help to reduce identity theft through XSS attacks
 (although it is not supported by all browsers), but that claim is often
-disputed. Added in PHP 5.2.0. **`TRUE`** or **`FALSE`**
+disputed. **`TRUE`** or **`FALSE`**
 
 `options`  
 An associative <span class="type">array</span> which may have any of the
@@ -2094,9 +2094,8 @@ Note that the value portion of the cookie will automatically be
 urlencoded when you send the cookie, and when it is received, it is
 automatically decoded and assigned to a variable by the same name as the
 cookie name. If you don't want this, you can use <span
-class="function">setrawcookie</span> instead if you are using PHP 5. To
-see the contents of our test cookie in a script, simply use one of the
-following examples:
+class="function">setrawcookie</span> instead. To see the contents of our
+test cookie in a script, simply use one of the following examples:
 
 ``` php
 <?php
@@ -2152,6 +2151,11 @@ The above example will output:
     three : cookiethree
     two : cookietwo
     one : cookieone
+
+> **Note**: <span class="simpara"> Using separator characters such as
+> *\[* and *\]* as part of the cookie name is not compliant to RFC 6265,
+> section 4, but supposed to be supported by user agents according to
+> RFC 6265, section 5. </span>
 
 ### Changelog
 

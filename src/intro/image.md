@@ -34,16 +34,16 @@ does not apply.
 GD supports a varity of formats, below is a list of formats supported by
 GD and notes to their availability including read/write support.
 
-| Format | Read support | Write support | Notes                                               |
-|--------|--------------|---------------|-----------------------------------------------------|
-| JPEG   | **`TRUE`**   | **`TRUE`**    |                                                     |
-| PNG    | **`TRUE`**   | **`TRUE`**    |                                                     |
-| GIF    | **`TRUE`**   | **`TRUE`**    | Available as of GD 2.0.28 and PHP 5.0.1             |
-| XBM    | **`TRUE`**   | **`TRUE`**    |                                                     |
-| XPM    | **`TRUE`**   | **`FALSE`**   | Read support available on Windows as of PHP 5.3.19. |
-| WBMP   | **`TRUE`**   | **`TRUE`**    |                                                     |
-| WebP   | **`TRUE`**   | **`TRUE`**    | PHP 5.4+                                            |
-| BMP    | **`TRUE`**   | **`TRUE`**    | Available as of GD 2.1.0 and PHP 7.2.0              |
+| Format | Read support | Write support | Notes                                  |
+|--------|--------------|---------------|----------------------------------------|
+| JPEG   | **`TRUE`**   | **`TRUE`**    |                                        |
+| PNG    | **`TRUE`**   | **`TRUE`**    |                                        |
+| GIF    | **`TRUE`**   | **`TRUE`**    |                                        |
+| XBM    | **`TRUE`**   | **`TRUE`**    |                                        |
+| XPM    | **`TRUE`**   | **`FALSE`**   |                                        |
+| WBMP   | **`TRUE`**   | **`TRUE`**    |                                        |
+| WebP   | **`TRUE`**   | **`TRUE`**    |                                        |
+| BMP    | **`TRUE`**   | **`TRUE`**    | Available as of GD 2.1.0 and PHP 7.2.0 |
 
 Despite most formats being available for both reading and writing in the
 above table, doesn't mean that PHP was compiled with support for them.
