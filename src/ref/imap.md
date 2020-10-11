@@ -1917,18 +1917,19 @@ Create a MIME message based on the given `envelope` and `body` sections.
 ### Parameters
 
 `envelope`  
-An associative array of headers fields. Valid keys are: "remail",
-"return\_path", "date", "from", "reply\_to", "in\_reply\_to", "subject",
-"to", "cc", "bcc", "message\_id" and "custom\_headers" (which contains
-associative array of other headers).
+An associative array of headers fields. Valid keys are: *"remail"*,
+*"return\_path"*, *"date"*, *"from"*, *"reply\_to"*, *"in\_reply\_to"*,
+*"subject"*, *"to"*, *"cc"*, *"bcc"*, *"message\_id"* and
+*"custom\_headers"* (which contains an array of other headers, e.g.
+`["User-Agent: My Mail Client"]`).
 
 `body`  
 An indexed array of bodies
 
 A body is an associative array which can consist of the following keys:
-"type", "encoding", "charset", "type.parameters", "subtype", "id",
-"description", "disposition.type", "disposition", "contents.data",
-"lines", "bytes" and "md5".
+*"type"*, *"encoding"*, *"charset"*, *"type.parameters"*, *"subtype"*,
+*"id"*, *"description"*, *"disposition.type"*, *"disposition"*,
+*"contents.data"*, *"lines"*, *"bytes"* and *"md5"*.
 
 ### Return Values
 
