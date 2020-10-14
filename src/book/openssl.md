@@ -24,6 +24,7 @@ OpenSSL
     -   [Version constants](/openssl/constants.html#Version%20constants)
     -   [Server Name Indication
         constants](/openssl/constants.html#Server%20Name%20Indication%20constants)
+    -   [Other Constants](/openssl/constants.html#Other%20Constants)
 -   [Key/Certificate parameters](/openssl/certparams.html)
 -   [Certificate Verification](/openssl/cert/verification.html)
 -   [OpenSSL Functions](/ref/openssl.html)

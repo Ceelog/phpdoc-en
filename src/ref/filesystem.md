@@ -131,12 +131,6 @@ printf($format, $filename, date('r'), filegroup($filename));
 > the file to be examined must be accessible via the server's
 > filesystem.</span>
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 > **Note**: <span class="simpara"> On Windows, this function fails
 > silently when applied on a regular file. </span>
 
@@ -221,14 +215,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 > the file to be examined must be accessible via the server's
 > filesystem.</span>
 
-> **Note**:
->
-> When
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-> is enabled, PHP checks whether the files or directories you are about
-> to operate on have the same UID (owner) as the script that is being
-> executed. In addition, you cannot set the SUID, SGID and sticky bits.
-
 ### See Also
 
 -   <span class="function">chown</span>
@@ -304,12 +290,6 @@ The above example will output something similar to:
 > <a href="/features/remote-files.html" class="link">remote files</a> as
 > the file to be examined must be accessible via the server's
 > filesystem.</span>
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
 
 > **Note**: <span class="simpara"> On Windows, this function fails
 > silently when applied on a regular file. </span>
@@ -1270,15 +1250,6 @@ exists; **`FALSE`** otherwise.
 > This function will return **`FALSE`** for symlinks pointing to
 > non-existing files.
 
-**Warning**
-
-This function returns **`FALSE`** for files inaccessible due to
-<a href="/features/safe-mode.html" class="link">safe mode</a>
-restrictions. However these files still can be
-<a href="/function/include.html" class="link">included</a> if they are
-located in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode-include-dir" class="link">safe_mode_include_dir</a>.
-
 > **Note**:
 >
 > The check is done using the real UID/GID instead of the effective one.
@@ -1989,7 +1960,6 @@ family of functionality.
 
 -   <span class="function">fileowner</span>
 -   <span class="function">posix\_getgrgid</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 
 fileinode
 =========
@@ -2693,8 +2663,6 @@ If PHP has decided that `filename` specifies a local file, then it will
 try to open a stream on that file. The file must be accessible to PHP,
 so you need to ensure that the file access permissions allow this
 access. If you have enabled
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-or
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 further restrictions may apply.
 
@@ -2829,12 +2797,6 @@ detect buggy IIS server software when you open the stream using the
 *https://* wrapper and will suppress the warning. When using <span
 class="function">fsockopen</span> to create an *ssl://* socket, the
 developer is responsible for detecting and suppressing this warning.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the directory in which the script is
-> operating has the same UID (owner) as the script that is being
-> executed.</span>
 
 > **Note**:
 >
@@ -3962,8 +3924,6 @@ Path to the file. If `filename` is a relative filename, it will be
 checked relative to the current working directory. If `filename` is a
 symbolic or hard link then the link will be resolved and checked. If you
 have enabled
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>,
-or
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 further restrictions may apply.
 
@@ -4474,12 +4434,6 @@ lchgrp($link, 8);
 > the file to be examined must be accessible via the server's
 > filesystem.</span>
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 > **Note**: <span class="simpara">This function is not implemented on
 > Windows platforms.</span>
 
@@ -4538,12 +4492,6 @@ lchown($link, 8);
 > <a href="/features/remote-files.html" class="link">remote files</a> as
 > the file to be examined must be accessible via the server's
 > filesystem.</span>
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
 
 > **Note**: <span class="simpara">This function is not implemented on
 > Windows platforms.</span>
@@ -4821,14 +4769,6 @@ Emits an **`E_WARNING`** level error if the directory already exists.
 Emits an **`E_WARNING`** level error if the relevant permissions prevent
 creating the directory.
 
-### Notes
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the directory in which the script is
-> operating has the same UID (owner) as the script that is being
-> executed.</span>
-
 ### See Also
 
 -   <span class="function">is\_dir</span>
@@ -4900,9 +4840,7 @@ foreach ($_FILES["pictures"]["error"] as $key => $error) {
 
 > **Note**:
 >
-> <span class="function">move\_uploaded\_file</span> is both
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-> and
+> <span class="function">move\_uploaded\_file</span> is
 > <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 > aware. However, restrictions are placed only on the `destination` path
 > as to allow the moving of uploaded files in which `filename` may
@@ -4948,7 +4886,9 @@ The structure of the ini file is the same as the `php.ini`'s.
 ### Parameters
 
 `filename`  
-The filename of the ini file being parsed.
+The filename of the ini file being parsed. If a relative path is used,
+it is evaluated relative to the current working directory, then the
+<a href="/ini/core.html#ini.include-path" class="link">include_path</a>.
 
 `process_sections`  
 By setting the `process_sections` parameter to **`TRUE`**, you get a
@@ -4999,11 +4939,12 @@ class="type">array</span> on success, and **`FALSE`** on failure.
 
 **Example \#2 <span class="function">parse\_ini\_file</span> example**
 
-<a href="/language/constants.html" class="link">Constants</a> may also
-be parsed in the ini file so if you define a constant as an ini value
-before running <span class="function">parse\_ini\_file</span>, it will
-be integrated into the results. Only ini values are evaluated. For
-example:
+<a href="/language/constants.html" class="link">Constants</a> (but not
+"magic constants" like **`__FILE__`**) may also be parsed in the ini
+file so if you define a constant as an ini value before running <span
+class="function">parse\_ini\_file</span>, it will be integrated into the
+results. Only ini values are evaluated, and the value must be just the
+constant. For example:
 
 ``` php
 <?php
@@ -5110,6 +5051,39 @@ The above example will output something similar to:
     (parsed) magic_quotes_gpc = Yes
     (loaded) magic_quotes_gpc = Yes
 
+**Example \#4 value interpolation**
+
+In addition to evaluating constants, certain characters have special
+meaning in an ini value. Additionally, environment variables and
+previously defined values may be read using `${}` syntax.
+
+    ; | is used for bitwise OR
+    three = 2|3
+
+    ; & is used for bitwise AND
+    four = 6&5
+
+    ; ^ is used for bitwise XOR
+    five = 3^6
+
+    ; ~ is used for bitwise negate
+    negative_two = ~1
+
+    ; () is used for grouping
+    seven = (8|7)&(6|5)
+
+    ; \ is used to escape a value.
+    newline_is = "\\n" ; results in the string "\n", not a newline character.
+    with quotes = "She said \"Exactly my point\"." ; Results in a string with quote marks in it.
+
+    path = ${PATH}
+    also_five = ${five}
+
+The above example will output something similar to:
+
+    (parsed) magic_quotes_gpc = Yes
+    (loaded) magic_quotes_gpc = Yes
+
 ### Notes
 
 > **Note**:
@@ -5137,6 +5111,14 @@ The above example will output something similar to:
 > ignored whereas "bar =" is parsed and added with an empty value. For
 > example, MySQL has a "no-auto-rehash" setting in `my.cnf` that does
 > not take a value, so it is ignored.
+
+> **Note**:
+>
+> ini files are generally treated as plain text by web servers and thus
+> served to browsers if requested. That means for security you must
+> either keep your ini files outside of your docroot or reconfigure your
+> web server to not serve them. Failure to do either of those may
+> introduce a security risk.
 
 ### See Also
 
@@ -5465,20 +5447,6 @@ pclose($handle);
 >
 > If you're looking for bi-directional support (two-way), use <span
 > class="function">proc\_open</span>.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, you can only execute files within the
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
-> For practical reasons, it is currently not allowed to have *..*
-> components in the path to the executable.</span>
-
-**Warning**
-
-With <a href="/features/safe-mode.html" class="link">safe mode</a>
-enabled, the command string is escaped with <span
-class="function">escapeshellcmd</span>. Thus, *echo y \| echo x* becomes
-*echo y \\\| echo x*.
 
 ### See Also
 
@@ -5991,14 +5959,6 @@ if (!is_dir('examples')) {
 rmdir('examples');
 ?>
 ```
-
-### Notes
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the directory in which the script is
-> operating has the same UID (owner) as the script that is being
-> executed.</span>
 
 ### See Also
 

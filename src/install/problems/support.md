@@ -14,7 +14,5 @@ The mailing list address is
 If you want to get help on the mailing list, please try to be precise
 and give the necessary details about your environment (which operating
 system, what PHP version, what web server, if you are running PHP as CGI
-or a server module,
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>,
-etc.), and preferably enough code to make others able to reproduce and
-test your problem.
+or a server module, etc.), and preferably enough code to make others
+able to reproduce and test your problem.

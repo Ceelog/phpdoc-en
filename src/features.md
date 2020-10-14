@@ -18,10 +18,6 @@ Features
 -   [Connection handling](/features/connection-handling.html)
 -   [Persistent Database
     Connections](/features/persistent-connections.html)
--   [Safe Mode](/features/safe-mode.html)
-    -   [Security and Safe Mode](/ini/sect/safe-mode.html)
-    -   [Functions restricted/disabled by safe
-        mode](/features/safe-mode/functions.html)
 -   [Command line usage](/features/commandline.html) — Using PHP from
     the command line
     -   [Introduction](/features/commandline/introduction.html)

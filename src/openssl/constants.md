@@ -16,6 +16,7 @@ Predefined Constants
 -   [Version constants](/openssl/constants.html#Version%20constants)
 -   [Server Name Indication
     constants](/openssl/constants.html#Server%20Name%20Indication%20constants)
+-   [Other Constants](/openssl/constants.html#Other%20Constants)
 
 The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
@@ -180,3 +181,15 @@ Server Name Indication constants
 >
 > This constant was added in 5.3.2 and requires PHP to be built with
 > OpenSSL 0.9.8j or greater.
+
+Other Constants
+---------------
+
+**`OPENSSL_ZERO_PADDING`** (<span class="type">boolean</span>)  
+<span class="simpara"> By default encryption operations are padded using
+standard block padding and the padding is checked and removed when
+decrypting. If **`OPENSSL_ZERO_PADDING`** is set in the <span
+class="function">openssl\_encrypt</span> or <span
+class="function">openssl\_decrypt</span> `options` then no padding is
+performed, the total amount of data encrypted or decrypted must then be
+a multiple of the block size or an error will occur. </span>

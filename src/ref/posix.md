@@ -62,12 +62,6 @@ if (posix_access($file, POSIX_R_OK | POSIX_W_OK)) {
 
 ### Notes
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 ### See Also
 
 -   <span class="function">posix\_get\_last\_error</span>
@@ -399,7 +393,6 @@ The above example will output something similar to:
 -   <span class="function">posix\_getgrnam</span>
 -   <span class="function">filegroup</span>
 -   <span class="function">stat</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 -   POSIX man page GETGRNAM(3)
 
 posix\_getgrnam
@@ -466,7 +459,6 @@ The above example will output something similar to:
 -   <span class="function">posix\_getgrgid</span>
 -   <span class="function">filegroup</span>
 -   <span class="function">stat</span>
--   <a href="/ini/sect/safe-mode.html#ini.safe-mode-gid" class="link">safe_mode_gid</a>
 -   POSIX man page GETGRNAM(3)
 
 posix\_getgroups
@@ -1117,12 +1109,6 @@ permissions of the created file are (mode & \~umask).
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Notes
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
 
 posix\_mknod
 ============

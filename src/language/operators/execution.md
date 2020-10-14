@@ -17,9 +17,8 @@ echo "<pre>$output</pre>";
 
 > **Note**:
 >
-> The backtick operator is disabled when
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-> is enabled or <span class="function">shell\_exec</span> is disabled.
+> The backtick operator is disabled when <span
+> class="function">shell\_exec</span> is disabled.
 
 > **Note**:
 >

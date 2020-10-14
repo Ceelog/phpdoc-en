@@ -1335,12 +1335,6 @@ header("Expires: Sat, 26 Jul 1997 05:00:00 GMT"); // Date in the past
 > Internet Explorer 5.5 that interferes with this, which can be resolved
 > by upgrading to Service Pack 2 or later.
 
-> **Note**: <span class="simpara"> If
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-> is enabled the uid of the script is added to the *realm* part of the
-> *WWW-Authenticate* header if you set this header (used for HTTP
-> Authentication). </span>
-
 > **Note**:
 >
 > Most contemporary clients accept relative URIs as argument to

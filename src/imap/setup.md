@@ -47,15 +47,16 @@ This location depends on where you created this directory according to
 the description above. <span class="productname">Windows</span> users
 may include the `php_imap.dll` DLL in `php.ini`.
 
-IMAP is not supported on systems earlier than Windows 2000. This is
-because it uses encryption functions in order to enable SSL connections
-to the mail servers.
-
 > **Note**: <span class="simpara"> Depending on how the c-client was
 > configured, you might also need to add
 > **--with-imap-ssl=/path/to/openssl/** and/or
 > **--with-kerberos=/path/to/kerberos** to the PHP configure line.
 > </span>
+
+**Warning**
+
+The IMAP extension is not thread-safe; it should not be used with ZTS
+builds.
 
 **Warning**
 

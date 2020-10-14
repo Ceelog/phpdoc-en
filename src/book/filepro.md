@@ -191,12 +191,6 @@ class="methodparam"><span class="type">int</span> `$row_number`</span> ,
 
 Returns the data from the specified location in the database.
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 ### Parameters
 
 `row_number`  
@@ -225,12 +219,6 @@ class="methodparam">void</span> )
 
 Returns the number of rows in the opened filePro database.
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 ### Return Values
 
 Returns the number of rows in the opened filePro database, or
@@ -255,12 +243,6 @@ This reads and verifies the map file, storing the field count and info.
 
 No locking is done, so you should avoid modifying your filePro database
 while it may be opened in PHP.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
 
 ### Parameters
 

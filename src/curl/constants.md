@@ -109,9 +109,7 @@ class="function">curl\_getinfo</span> documentation.
 **`CURLOPT_FOLLOWLOCATION`** (<span class="type">integer</span>)  
 <span class="simpara"> This constant is not available when
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-or
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a>
-are enabled. </span>
+is enabled. </span>
 
 **`CURLOPT_FTPASCII`** (<span class="type">integer</span>)  
 <span class="simpara"> </span>

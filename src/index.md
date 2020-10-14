@@ -63,7 +63,6 @@ PHP Manual
     -   [Connection handling](/features/connection-handling.html)
     -   [Persistent Database
         Connections](/features/persistent-connections.html)
-    -   [Safe Mode](/features/safe-mode.html)
     -   [Command line usage](/features/commandline.html) — Using PHP
         from the command line
     -   [Garbage Collection](/features/gc.html)
@@ -195,7 +194,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">And several others</a>
 </span> </span>
 
-2020-10-12
+2020-10-15
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

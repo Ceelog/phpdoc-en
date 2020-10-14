@@ -2908,18 +2908,15 @@ server if no other socket name is specified.
 
 `mysqli.default_host` <span class="type">string</span>  
 The default server host to use when connecting to the database server if
-no other host is specified. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
+no other host is specified.
 
 `mysqli.default_user` <span class="type">string</span>  
 The default user name to use when connecting to the database server if
-no other name is specified. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
+no other name is specified.
 
 `mysqli.default_pw` <span class="type">string</span>  
 The default password to use when connecting to the database server if no
-other password is specified. Doesn't apply in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
+other password is specified.
 
 `mysqli.reconnect` <span class="type">integer</span>  
 Automatically reconnect if the connection was lost.

@@ -33,3 +33,4 @@ The return value from this method is ignored.
 ### See Also
 
 -   <a href="/language/oop5/magic.html#object.wakeup" class="link">__wakeup()</a>
+-   <a href="/language/oop5/magic.html#object.unserialize" class="link">__unserialize()</a>

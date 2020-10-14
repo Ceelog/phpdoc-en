@@ -21,9 +21,7 @@ at startup.
 -   <span class="simpara">
     <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a>
     </span>
--   <span class="simpara">
-    <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe_mode</a>
-    </span>
+-   <span class="simpara"> safe\_mode </span>
 -   <span class="simpara">
     <a href="/info/setup.html#" class="link">magic_quotes_gpc</a>
     </span>

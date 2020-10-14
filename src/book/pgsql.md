@@ -4177,12 +4177,6 @@ in the database using a file on the filesystem as its data source.
 To use the large object interface, it is necessary to enclose it within
 a transaction block.
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 > **Note**:
 >
 > This function used to be called <span

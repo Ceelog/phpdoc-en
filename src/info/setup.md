@@ -79,11 +79,7 @@ directory.
 The main reason for turning dynamic loading off is security. With
 dynamic loading, it's possible to ignore all
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-restrictions. The default is to allow dynamic loading, except when using
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
-In
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>,
-it's always impossible to use <span class="function">dl</span>.
+restrictions. The default is to allow dynamic loading.
 
 `max_execution_time` <span class="type">integer</span>  
 This sets the maximum time in seconds a script is allowed to run before
@@ -96,12 +92,6 @@ default setting is *0*.
 The maximum execution time is not affected by system calls, stream
 operations etc. Please see the <span
 class="function">set\_time\_limit</span> function for more details.
-
-You can not change this setting with <span
-class="function">ini\_set</span> when running in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
-The only workaround is to turn off safe mode or by changing the time
-limit in the `php.ini`.
 
 Your web server can have other timeout configurations that may also
 interrupt PHP execution. Apache has a *Timeout* directive and IIS has a

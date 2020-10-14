@@ -4,10 +4,9 @@ Backward Incompatible Changes
 Although most existing PHP 5 code should work without changes, please
 take note of some backward incompatible changes:
 
--   <span class="simpara">
-    <a href="/features/safe-mode.html" class="link">Safe mode</a> is no
-    longer supported. Any applications that rely on safe mode may need
-    adjustment, in terms of security. </span>
+-   <span class="simpara"> Safe mode is no longer supported. Any
+    applications that rely on safe mode may need adjustment, in terms of
+    security. </span>
 -   <span class="simpara">
     <a href="/security/magicquotes.html" class="link">Magic quotes</a>
     has been removed. Applications relying on this feature may need to

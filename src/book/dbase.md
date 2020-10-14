@@ -311,12 +311,6 @@ with the given definition. If the file already exists, it is not
 truncated. <span class="function">dbase\_pack</span> can be called to
 force truncation.
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
-
 > **Note**:
 >
 > This function is affected by
@@ -791,12 +785,6 @@ class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 <span class="function">dbase\_open</span> opens a dBase database with
 the given access mode.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the files or directories being operated
-> upon have the same UID (owner) as the script that is being
-> executed.</span>
 
 > **Note**:
 >

@@ -42,7 +42,7 @@ Serialize handlers (*php* and *php\_binary*) inherit register\_globals
 limitations. Therefore, numeric index or string index contains special
 characters (*\|* and *!*) cannot be used. Using these will end up with
 errors at script shutdown. *php\_serialize* does not have such
-limitations. *php\_serialize* is available from PHP 5.5.4.
+limitations.
 
 > **Note**:
 >
@@ -52,11 +52,3 @@ limitations. *php\_serialize* is available from PHP 5.5.4.
 > key to the `$_SESSION` superglobal array. This holds true regardless
 > of if a session has been started using the <span
 > class="function">session\_start</span> function.
-
-> **Note**:
->
-> PHP 5.2.2 introduced an undocumented feature to store session files in
-> "/tmp" even if
-> <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-> was enabled and "/tmp" is not explicitly added to the allowed paths
-> list. This feature has been removed from PHP as of PHP 5.3.0.

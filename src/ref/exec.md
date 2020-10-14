@@ -11,11 +11,6 @@ See Also
 
 These functions are also closely related to the
 <a href="/language/operators/execution.html" class="link">backtick operator</a>.
-Also, while in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-you must consider the
-<a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>
-directive.
 
 escapeshellarg
 ==============
@@ -212,20 +207,6 @@ the system into executing arbitrary commands.
 > without starting cmd.exe use <span class="function">proc\_open</span>
 > with the `bypass_shell` option set.
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, you can only execute files within the
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
-> For practical reasons, it is currently not allowed to have *..*
-> components in the path to the executable.</span>
-
-**Warning**
-
-With <a href="/features/safe-mode.html" class="link">safe mode</a>
-enabled, the command string is escaped with <span
-class="function">escapeshellcmd</span>. Thus, *echo y \| echo x* becomes
-*echo y \\\| echo x*.
-
 ### See Also
 
 -   <span class="function">system</span>
@@ -285,20 +266,6 @@ the system into executing arbitrary commands.
 > continue running in the background, the output of the program must be
 > redirected to a file or another output stream. Failing to do so will
 > cause PHP to hang until the execution of the program ends.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, you can only execute files within the
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
-> For practical reasons, it is currently not allowed to have *..*
-> components in the path to the executable.</span>
-
-**Warning**
-
-With <a href="/features/safe-mode.html" class="link">safe mode</a>
-enabled, the command string is escaped with <span
-class="function">escapeshellcmd</span>. Thus, *echo y \| echo x* becomes
-*echo y \\\| echo x*.
 
 ### See Also
 
@@ -777,13 +744,6 @@ echo "<pre>$output</pre>";
 ?>
 ```
 
-### Notes
-
-> **Note**:
->
-> This function is disabled when PHP is running in
-> <a href="/features/safe-mode.html" class="link">safe mode</a>.
-
 ### See Also
 
 -   <span class="function">exec</span>
@@ -862,20 +822,6 @@ the system into executing arbitrary commands.
 > continue running in the background, the output of the program must be
 > redirected to a file or another output stream. Failing to do so will
 > cause PHP to hang until the execution of the program ends.
-
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, you can only execute files within the
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode-exec-dir" class="link">safe_mode_exec_dir</a>.
-> For practical reasons, it is currently not allowed to have *..*
-> components in the path to the executable.</span>
-
-**Warning**
-
-With <a href="/features/safe-mode.html" class="link">safe mode</a>
-enabled, the command string is escaped with <span
-class="function">escapeshellcmd</span>. Thus, *echo y \| echo x* becomes
-*echo y \\\| echo x*.
 
 ### See Also
 

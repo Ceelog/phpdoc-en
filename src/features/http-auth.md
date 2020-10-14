@@ -112,15 +112,6 @@ Watch out for buggy Internet Explorer browsers out there. They seem very
 picky about the order of the headers. Sending the *WWW-Authenticate*
 header before the *HTTP/1.0 401* header seems to do the trick for now.
 
-In order to prevent someone from writing a script which reveals the
-password for a page that was authenticated through a traditional
-external mechanism, the PHP\_AUTH variables will not be set if external
-authentication is enabled for that particular page and
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-is enabled. Regardless, `REMOTE_USER` can be used to identify the
-externally-authenticated user. So, you can use
-`$_SERVER['REMOTE_USER']`.
-
 > **Note**: **Configuration Note**  
 >
 > PHP uses the presence of an *AuthType* directive to determine whether
@@ -180,10 +171,3 @@ other fields should be left unchecked.
 > PHP directive
 > <a href="/ini/core.html#ini.cgi.rfc2616-headers" class="link">cgi.rfc2616_headers</a>
 > must be set to *0* (the default value). </span>
-
-> **Note**:
->
-> If
-> <a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-> is enabled, the uid of the script is added to the *realm* part of the
-> *WWW-Authenticate* header.

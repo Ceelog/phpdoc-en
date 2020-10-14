@@ -436,12 +436,6 @@ This function requires Apache 1.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Notes
-
-> **Note**: <span class="simpara">This function is disabled when PHP is
-> running in
-> <a href="/features/safe-mode.html" class="link">safe mode</a>.</span>
-
 ### See Also
 
 -   <span class="function">set\_time\_limit</span>

@@ -567,13 +567,11 @@ Taking into account the above, the directory then defaults to
 Returns **`TRUE`** on success or **`FALSE`** on failure. If the
 functionality of loading modules is not available or has been disabled
 (either by setting
-<a href="/info/setup.html#" class="link">enable_dl</a> off or by
-enabling
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>
-in `php.ini`) an **`E_ERROR`** is emitted and execution is stopped. If
-<span class="function">dl</span> fails because the specified library
-couldn't be loaded, in addition to **`FALSE`** an **`E_WARNING`**
-message is emitted.
+<a href="/info/setup.html#" class="link">enable_dl</a> off in `php.ini`)
+an **`E_ERROR`** is emitted and execution is stopped. If <span
+class="function">dl</span> fails because the specified library couldn't
+be loaded, in addition to **`FALSE`** an **`E_WARNING`** message is
+emitted.
 
 ### Examples
 
@@ -610,10 +608,6 @@ if (!extension_loaded('sqlite')) {
 > **Note**:
 >
 > <span class="function">dl</span> is case sensitive on Unix platforms.
-
-> **Note**: <span class="simpara">This function is disabled when PHP is
-> running in
-> <a href="/features/safe-mode.html" class="link">safe mode</a>.</span>
 
 ### See Also
 
@@ -3071,21 +3065,6 @@ Adds `setting` to the server environment. The environment variable will
 only exist for the duration of the current request. At the end of the
 request the environment is restored to its original state.
 
-Setting certain environment variables may be a potential security
-breach. The *safe\_mode\_allowed\_env\_vars* directive contains a
-comma-delimited list of prefixes. In Safe Mode, the user may only alter
-environment variables whose names begin with the prefixes supplied by
-this directive. By default, users will only be able to set environment
-variables that begin with *PHP\_* (e.g. *PHP\_FOO=BAR*). Note: if this
-directive is empty, PHP will let the user modify ANY environment
-variable!
-
-The *safe\_mode\_protected\_env\_vars* directive contains a
-comma-delimited list of environment variables, that the end user won't
-be able to change using <span class="function">putenv</span>. These
-variables will be protected even if *safe\_mode\_allowed\_env\_vars* is
-set to allow to change them.
-
 ### Parameters
 
 `setting`  
@@ -3104,15 +3083,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 putenv("UNIQID=$uniqid");
 ?>
 ```
-
-### Notes
-
-**Warning**
-
-The *safe\_mode\_allowed\_env\_vars* and
-*safe\_mode\_protected\_env\_vars* directives only take effect when
-<a href="/features/safe-mode.html" class="link">safe_mode</a> is
-enabled.
 
 ### See Also
 
@@ -3266,13 +3236,6 @@ imposed.
 Returns **`TRUE`** on success, or **`FALSE`** on failure.
 
 ### Notes
-
-**Warning**
-
-This function has no effect when PHP is running in
-<a href="/ini/sect/safe-mode.html#ini.safe-mode" class="link">safe mode</a>.
-There is no workaround other than turning off safe mode or changing the
-time limit in the `php.ini`.
 
 > **Note**:
 >

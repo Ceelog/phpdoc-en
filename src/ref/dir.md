@@ -55,12 +55,6 @@ The above example will output something similar to:
 
 ### Notes
 
-> **Note**: <span class="simpara">When
-> <a href="/features/safe-mode.html" class="link">safe mode</a> is
-> enabled, PHP checks whether the directory in which the script is
-> operating has the same UID (owner) as the script that is being
-> executed.</span>
-
 **Caution**
 
 If the PHP interpreter has been built with ZTS (Zend Thread Safety)
