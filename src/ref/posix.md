@@ -1108,8 +1108,6 @@ permissions of the created file are (mode & \~umask).
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-### Notes
-
 posix\_mknod
 ============
 

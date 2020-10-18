@@ -1,7 +1,7 @@
 Internet Domain: TCP, UDP, SSL, and TLS
 ---------------------------------------
 
-*sslv2://* & *sslv3://* as of PHP 5.0.2
+*ssl://*, *tls://*, *sslv2://* & *sslv3://*.
 
 > **Note**: <span class="simpara"> If no transport is specified,
 > *tcp://* will be assumed. </span>

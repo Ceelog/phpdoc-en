@@ -566,12 +566,11 @@ Taking into account the above, the directory then defaults to
 
 Returns **`TRUE`** on success or **`FALSE`** on failure. If the
 functionality of loading modules is not available or has been disabled
-(either by setting
-<a href="/info/setup.html#" class="link">enable_dl</a> off in `php.ini`)
-an **`E_ERROR`** is emitted and execution is stopped. If <span
-class="function">dl</span> fails because the specified library couldn't
-be loaded, in addition to **`FALSE`** an **`E_WARNING`** message is
-emitted.
+(by setting <a href="/info/setup.html#" class="link">enable_dl</a> off
+in `php.ini`) an **`E_ERROR`** is emitted and execution is stopped. If
+<span class="function">dl</span> fails because the specified library
+couldn't be loaded, in addition to **`FALSE`** an **`E_WARNING`**
+message is emitted.
 
 ### Examples
 

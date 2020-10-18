@@ -460,7 +460,7 @@ Returns the postions of terminating neuron
 class="methodname">FANNConnection::getToNeuron</span> ( <span
 class="methodparam">void</span> )
 
-Returns the postions of terminating neuron.
+Returns the positions of terminating neuron.
 
 ### Parameters
 

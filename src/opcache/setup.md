@@ -141,7 +141,7 @@ Here's a short explanation of the configuration directives.
 Enables the opcode cache. When disabled, code is not optimised or
 cached. The setting *opcache.enable* can not be enabled at runtime
 through <span class="function">ini\_set</span>, it can only be disabled.
-Trying to enable it at in a script will generate a warning.
+Trying to enable it in a script will generate a warning.
 
 `opcache.enable_cli` <span class="type">boolean</span>  
 Enables the opcode cache for the CLI version of PHP.

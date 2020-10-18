@@ -35,7 +35,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 session\_cache\_expire
 ======================
 
-Return current cache expire
+Get and/or set current cache expire
 
 ### Description
 
@@ -2001,7 +2001,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 -   [session\_abort](/ref/session.html#session_abort) — Discard session
     array changes and finish session
 -   [session\_cache\_expire](/ref/session.html#session_cache_expire) —
-    Return current cache expire
+    Get and/or set current cache expire
 -   [session\_cache\_limiter](/ref/session.html#session_cache_limiter) —
     Get and/or set the current cache limiter
 -   [session\_commit](/ref/session.html#session_commit) — Alias of
