@@ -3173,9 +3173,11 @@ Specifies how many entries should be picked.
 When picking only one entry, <span class="function">array\_rand</span>
 returns the key for a random entry. Otherwise, an array of keys for the
 random entries is returned. This is done so that random keys can be
-picked from the array as well as random values. Trying to pick more
-elements than there are in the array will result in an **`E_WARNING`**
-level error, and NULL will be returned.
+picked from the array as well as random values. If multiple keys are
+returned, they will be returned in the order they were present in the
+original array. Trying to pick more elements than there are in the array
+will result in an **`E_WARNING`** level error, and NULL will be
+returned.
 
 ### Changelog
 

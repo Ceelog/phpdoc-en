@@ -29,7 +29,7 @@ The behavior of timezones not listed here is undefined.
 > </span>
 
 > **Note**: <span class="simpara"> This list is based upon the timezone
-> database version 2020.2. </span>
+> database version 2020.3. </span>
 
 Africa
 ------
