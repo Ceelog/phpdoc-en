@@ -6935,16 +6935,6 @@ PDO\_SQLITE is a driver that implements the
 <a href="/book/pdo.html#Introduction" class="link">PHP Data Objects (PDO) interface</a>
 to enable access to SQLite 3 databases.
 
-In PHP 5.1, the
-<a href="/book/sqlite.html#SQLite%20Functions" class="link">SQLite</a>
-extension also provides a driver for SQLite 2 databases; while it is not
-technically a part of the PDO\_SQLITE driver, it behaves similarly, so
-it is documented alongside it. The SQLite 2 driver for PDO is provided
-primarily to make it easier to import legacy SQLite 2 database files
-into an application that uses the faster, more efficient SQLite 3
-driver. As a result, the SQLite 2 driver is not as feature-rich as the
-SQLite 3 driver.
-
 > **Note**:
 >
 > PDO\_SQLITE allows using strings apart from streams together with
@@ -6984,31 +6974,14 @@ elements:
 DSN prefix (SQLite 3)  
 The DSN prefix is **`sqlite:`**.
 
--   To access a database on disk, append the absolute path to the DSN
-    prefix.
+-   To access a database on disk, the absolute path has to be appended
+    to the DSN prefix.
 
--   To create a database in memory, append *:memory:* to the DSN prefix.
+-   To create a database in memory, *:memory:* has to be appended to the
+    DSN prefix.
 
-DSN prefix (SQLite 2)  
-The
-<a href="/book/sqlite.html#SQLite%20Functions" class="link">SQLite</a>
-extension in PHP 5.1 provides a PDO driver that supports accessing and
-creating SQLite 2 databases. This enables you to access databases you
-may have created with the
-<a href="/book/sqlite.html#SQLite%20Functions" class="link">SQLite</a>
-extension in previous versions of PHP.
-
-> **Note**:
->
-> The sqlite2 driver is only available in PHP 5.1.x if you have enabled
-> both PDO and ext/sqlite. It is not currently available via PECL.
-
-The DSN prefix for connecting to SQLite 2 databases is **`sqlite2:`**.
-
--   To access a database on disk, append the absolute path to the DSN
-    prefix.
-
--   To create a database in memory, append *:memory:* to the DSN prefix.
+-   If the DSN consists of the DSN prefix only, a temporary database is
+    used, which is deleted when the connection is closed.
 
 ### Examples
 
@@ -7019,8 +6992,7 @@ databases:
 
     sqlite:/opt/databases/mydb.sq3
     sqlite::memory:
-    sqlite2:/opt/databases/mydb.sq2
-    sqlite2::memory:
+    sqlite:
 
 PDO::sqliteCreateAggregate
 ==========================
@@ -7199,11 +7171,6 @@ You can use
 <a href="/book/pdo.html#PDO::sqliteCreateAggregate" class="xref"></a> to
 override SQLite native SQL functions.
 
-> **Note**:
->
-> This method is not available with the SQLite2 driver. Use the old
-> style sqlite API for that instead.
-
 ### See Also
 
 -   <a href="/book/pdo.html#PDO::sqliteCreateFunction" class="xref"></a>
@@ -7287,13 +7254,6 @@ The above example will output:
     a1
     a2
     a10
-
-### Notes
-
-> **Note**:
->
-> This method is not available with the SQLite2 driver. Use the old
-> style sqlite API for that instead.
 
 PDO::sqliteCreateFunction
 =========================
@@ -7406,11 +7366,6 @@ You can use
 <a href="/book/pdo.html#PDO::sqliteCreateFunction" class="xref"></a> and
 <a href="/book/pdo.html#PDO::sqliteCreateAggregate" class="xref"></a> to
 override SQLite native SQL functions.
-
-> **Note**:
->
-> This method is not available with the SQLite2 driver. Use the old
-> style sqlite API for that instead.
 
 ### See Also
 

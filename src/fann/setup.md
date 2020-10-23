@@ -81,7 +81,7 @@ Make the following changes to php.ini:
         Installing '/usr/lib/php/extensions/no-debug-non-zts-20060613/fann.so'
 
     Make sure that it is the same as the PHP extension directory by
-    runnning:
+    running:
 
 
         $ php -i | grep extension_dir
