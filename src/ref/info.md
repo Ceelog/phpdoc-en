@@ -3093,6 +3093,11 @@ restore\_include\_path
 
 Restores the value of the include\_path configuration option
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="type">void</span> <span

@@ -645,9 +645,9 @@ None.
 
 ### Changelog
 
-| Version | Description                                                                                            |
-|---------|--------------------------------------------------------------------------------------------------------|
-| 0.5.2   | Optional parameters `many`, `readOnly`, and `containment` deprecated in favour of the `options` array. |
+| Version        | Description                                                                                            |
+|----------------|--------------------------------------------------------------------------------------------------------|
+| PECL sdo 0.5.2 | Optional parameters `many`, `readOnly`, and `containment` deprecated in favour of the `options` array. |
 
 ### Examples
 

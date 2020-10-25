@@ -31,9 +31,9 @@ on failure.
 
 ### Changelog
 
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 0.3.0   | This function does not longer require an administrator account if ACL is set for another account. |
+| Version                 | Description                                                                                       |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### See Also
 
@@ -262,9 +262,9 @@ debug_zval_dump($x);
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 0.4.0   | The `dependencies`, `recovery_delay`, `recovery_action_1`, `recovery_action_2`, `recovery_action_3`, `recovery_reset_period`, `recovery_enabled`, `recovery_reboot_msg` and `recovery_command` parameters have been added. |
+| Version                 | Description                                                                                                                                                                                                                |
+|-------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL win32service 0.4.0 | The `dependencies`, `recovery_delay`, `recovery_action_1`, `recovery_action_2`, `recovery_action_3`, `recovery_reset_period`, `recovery_enabled`, `recovery_reboot_msg` and `recovery_command` parameters have been added. |
 
 ### See Also
 
@@ -365,9 +365,9 @@ error.
 
 ### Changelog
 
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 0.2.0   | This function works only in the *"cli"* SAPI. |
+| Version                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### See Also
 
@@ -411,9 +411,9 @@ on failure.
 
 ### Changelog
 
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 0.3.0   | This function does not longer require an administrator account if ACL is set for another account. |
+| Version                 | Description                                                                                       |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### See Also
 
@@ -691,9 +691,9 @@ error.
 
 ### Changelog
 
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 0.2.0   | This function works only in the *"cli"* SAPI. |
+| Version                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### See Also
 
@@ -794,10 +794,10 @@ while (WIN32_SERVICE_CONTROL_STOP != win32_get_last_control_message()) {
 
 ### Changelog
 
-| Version | Description                                   |
-|---------|-----------------------------------------------|
-| 0.4.0   | The parameter `gracefulMode` has been added.  |
-| 0.2.0   | This function works only in the *"cli"* SAPI. |
+| Version                 | Description                                   |
+|-------------------------|-----------------------------------------------|
+| PECL win32service 0.4.0 | The parameter `gracefulMode` has been added.  |
+| PECL win32service 0.2.0 | This function works only in the *"cli"* SAPI. |
 
 ### See Also
 
@@ -840,9 +840,9 @@ on failure.
 
 ### Changelog
 
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 0.3.0   | This function does not longer require an administrator account if ACL is set for another account. |
+| Version                 | Description                                                                                       |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### See Also
 
@@ -885,9 +885,9 @@ on failure.
 
 ### Changelog
 
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 0.3.0   | This function does not longer require an administrator account if ACL is set for another account. |
+| Version                 | Description                                                                                       |
+|-------------------------|---------------------------------------------------------------------------------------------------|
+| PECL win32service 0.3.0 | This function does not longer require an administrator account if ACL is set for another account. |
 
 ### See Also
 

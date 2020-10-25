@@ -1586,9 +1586,9 @@ if (!($ip = $m->get('ip_block'))) {
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 3.0.0   | The `&cas_token` parameter was removed. Instead `flags` was added and when it is given the value of **`Memcached::GET_EXTENDED`** it will ensure the CAS token to be fetched. |
+| Version              | Description                                                                                                                                                                   |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL memcached 3.0.0 | The `&cas_token` parameter was removed. Instead `flags` was added and when it is given the value of **`Memcached::GET_EXTENDED`** it will ensure the CAS token to be fetched. |
 
 ### See Also
 
@@ -1671,9 +1671,9 @@ Returns the value stored in the cache or **`FALSE`** otherwise. The
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 3.0.0   | The `&cas_token` parameter was removed. Instead `flags` was added and when it is given the value of **`Memcached::GET_EXTENDED`** it will ensure the CAS token to be fetched. |
+| Version              | Description                                                                                                                                                                   |
+|----------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL memcached 3.0.0 | The `&cas_token` parameter was removed. Instead `flags` was added and when it is given the value of **`Memcached::GET_EXTENDED`** it will ensure the CAS token to be fetched. |
 
 ### See Also
 
@@ -2021,9 +2021,9 @@ The above example will output something similar to:
 
 ### Changelog
 
-| Version | Description                                                                                                                                             |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 3.0.0   | The `&cas_tokens` parameter was removed. The **`Memcached::GET_EXTENDED`** was added and when passed as a flag it ensures the CAS tokens to be fetched. |
+| Version              | Description                                                                                                                                             |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL memcached 3.0.0 | The `&cas_tokens` parameter was removed. The **`Memcached::GET_EXTENDED`** was added and when passed as a flag it ensures the CAS tokens to be fetched. |
 
 ### See Also
 
@@ -2072,9 +2072,9 @@ class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Changelog
 
-| Version | Description                                                                                                                                             |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 3.0.0   | The `&cas_tokens` parameter was removed. The **`Memcached::GET_EXTENDED`** was added and when passed as a flag it ensures the CAS tokens to be fetched. |
+| Version              | Description                                                                                                                                             |
+|----------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL memcached 3.0.0 | The `&cas_tokens` parameter was removed. The **`Memcached::GET_EXTENDED`** was added and when passed as a flag it ensures the CAS tokens to be fetched. |
 
 ### See Also
 

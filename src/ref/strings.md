@@ -362,6 +362,11 @@ convert\_cyr\_string
 
 Convert from one Cyrillic character set to another
 
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
+
 ### Description
 
 <span class="type">string</span> <span
@@ -1506,6 +1511,11 @@ hebrevc
 =======
 
 Convert logical Hebrew text to visual text with newline conversion
+
+**Warning**
+
+This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
+function is highly discouraged.
 
 ### Description
 

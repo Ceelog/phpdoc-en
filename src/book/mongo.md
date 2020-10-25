@@ -2249,9 +2249,9 @@ picked.
 
 ### Changelog
 
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 1.5.0   | Only available when connected to MongoDB 2.6.0+ |
+| Version          | Description                                     |
+|------------------|-------------------------------------------------|
+| PECL mongo 1.5.0 | Only available when connected to MongoDB 2.6.0+ |
 
 log\_cmd\_insert
 ================
@@ -2316,9 +2316,9 @@ The document that has been prepared to be inserted
 
 ### Changelog
 
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 1.5.0   | Only available when connected to MongoDB 2.6.0+ |
+| Version          | Description                                     |
+|------------------|-------------------------------------------------|
+| PECL mongo 1.5.0 | Only available when connected to MongoDB 2.6.0+ |
 
 log\_cmd\_update
 ================
@@ -2388,9 +2388,9 @@ picked.
 
 ### Changelog
 
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 1.5.0   | Only available when connected to MongoDB 2.6.0+ |
+| Version          | Description                                     |
+|------------------|-------------------------------------------------|
+| PECL mongo 1.5.0 | Only available when connected to MongoDB 2.6.0+ |
 
 log\_getmore
 ============
@@ -2594,9 +2594,9 @@ Array, the actual batch operation.
 
 ### Changelog
 
-| Version | Description                                     |
-|---------|-------------------------------------------------|
-| 1.5.0   | Only available when connected to MongoDB 2.6.0+ |
+| Version          | Description                                     |
+|------------------|-------------------------------------------------|
+| PECL mongo 1.5.0 | Only available when connected to MongoDB 2.6.0+ |
 
 **Table of Contents**
 
@@ -3794,10 +3794,10 @@ The above example will output:
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.0   | The `connection` parameter to this function was added in 1.3.0. Before that, only the write connection would be closed by this method.                                                                                                                                                                                                 |
-| 1.2.0   | Before version 1.2.0 the driver would not use persistent connections by default, and all connections would be closed as soon as a MongoDB connection went out if scope. Since version 1.2.0 this is no longer the case and it is a bad idea to call close as you might end up overloading the server with connections under high load. |
+| Version          | Description                                                                                                                                                                                                                                                                                                                            |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.0 | The `connection` parameter to this function was added in 1.3.0. Before that, only the write connection would be closed by this method.                                                                                                                                                                                                 |
+| PECL mongo 1.2.0 | Before version 1.2.0 the driver would not use persistent connections by default, and all connections would be closed as soon as a MongoDB connection went out if scope. Since version 1.2.0 this is no longer the case and it is a bad idea to call close as you might end up overloading the server with connections under high load. |
 
 ### See Also
 
@@ -4310,33 +4310,33 @@ section of this manual for further information.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.6.0</td>
+<td>PECL mongo 1.6.0</td>
 <td><p>Added support for <em>"SCRAM-SHA-1"</em> in <em>"authMechanism"</em> option.</p></td>
 </tr>
 <tr class="even">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added <em>"authMechanism"</em>, <em>"gssapiServiceName"</em>, and <em>"secondaryAcceptableLatencyMS"</em>.</p></td>
 </tr>
 <tr class="odd">
-<td>1.4.0</td>
+<td>PECL mongo 1.4.0</td>
 <td><p>Added <em>"ssl"</em> option and support for <a href="/book/mongo.html#Connecting%20over%20SSL" class="link">connecting over SSL</a>.</p>
 <p>Added <em>"wTimeoutMS"</em> option, which replaces <em>"wTimeout"</em>.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"slaveOkay"</em> or <em>"timeout"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added <em>"authSource"</em>.</p></td>
 </tr>
 <tr class="odd">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td><p>Added <em>"connectTimeoutMS"</em> and <em>"socketTimeoutMS"</em> options.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td><p>Added <em>"readPreference"</em>, <em>"readPreferenceTags"</em>, <em>"w"</em>, and <em>"wTimeout"</em> options.</p></td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td><p>Added <em>"username"</em> and <em>"password"</em> options.</p>
 <p>Removed <em>"persist"</em> option, as all connections are now persistent. It can still be used, but it doesn't affect anything.</p>
 <dl>
@@ -4347,11 +4347,11 @@ section of this manual for further information.
 <p>The <em>"replicaSet"</em> option now takes a string, not a boolean.</p></td>
 </tr>
 <tr class="even">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td>Added <em>"replicaSet"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.0.2</td>
+<td>PECL mongo 1.0.2</td>
 <td><p>Changed constructor to take an array of options. Pre-1.0.2, the constructor took the following parameters:</p>
 <dl>
 <dt><code class="parameter">server</code></dt>
@@ -4634,7 +4634,7 @@ array(3) {
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.2.10</td>
+<td>PECL mongo 1.2.10</td>
 <td><p>Support for non-replicasets was added.</p>
 <p>The returned array elements now also include the <em>hostname</em> and <em>port</em>.</p></td>
 </tr>
@@ -4674,9 +4674,9 @@ no tag sets were specified, *tagsets* will not be present in the array.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                    |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.3   | The return value has changed to be consistent with <span class="methodname">MongoClient::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
+| Version          | Description                                                                                                                                                                                                                                                                                    |
+|------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.3 | The return value has changed to be consistent with <span class="methodname">MongoClient::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
 
 ### Examples
 
@@ -5542,9 +5542,9 @@ MongoDB core docs on
 
 ### Changelog
 
-| Version | Description                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. Please pass in the authentication details to the constructor. |
+| Version           | Description                                                                                       |
+|-------------------|---------------------------------------------------------------------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. Please pass in the authentication details to the constructor. |
 
 MongoDB::command
 ================
@@ -5628,12 +5628,12 @@ class="function">MongoClient::getConnections</span>.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Renamed the <em>"timeout"</em> option to <em>"socketTimeoutMS"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Added <em>hash</em> by-reference parameter.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>options</em> parameter with a single option: <em>"timeout"</em>.</td>
 </tr>
 </tbody>
@@ -6011,7 +6011,7 @@ sample log message \#99
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.4.0</td>
+<td>PECL mongo 1.4.0</td>
 <td><p>In versions before 1.4.0, the options were all arguments to the method. The function synopsis in those older versions is:</p>
 <div class="methodsynopsis dc-description">
 <span class="modifier">public</span> <span class="type">MongoCollection</span> <span class="methodname">MongoDB::createCollection</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$name</code></span> [, <span class="methodparam"><span class="type">bool</span> <code class="parameter">$capped</code><span class="initializer"> = <strong><code>FALSE</code></strong></span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$size</code><span class="initializer"> = 0</span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$max</code><span class="initializer"> = 0</span></span> ]]] )
@@ -6376,9 +6376,9 @@ Goodbye, Joe, says Fred
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                 |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.7.0   | This method has been deprecated as a result of the underlaying <a href="https://docs.mongodb.com/manual/reference/command/eval/" class="link external">» eval</a> command being deprecated in MongoDB 3.0+. |
+| Version          | Description                                                                                                                                                                                                 |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.7.0 | This method has been deprecated as a result of the underlaying <a href="https://docs.mongodb.com/manual/reference/command/eval/" class="link external">» eval</a> command being deprecated in MongoDB 3.0+. |
 
 MongoDB::forceError
 ===================
@@ -6418,9 +6418,9 @@ Returns the database response.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 MongoDB::\_\_get
 ================
@@ -6648,9 +6648,9 @@ value was specified for the *"filter"* option's *"name"* criteria.
 
 ### Changelog
 
-| Version | Description                                                                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0   | Changed first parameter to be an array of options. Pre-1.6.0, the first parameter was a boolean indicating the *"includeSystemCollections"* option. |
+| Version          | Description                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.6.0 | Changed first parameter to be an array of options. Pre-1.6.0, the first parameter was a boolean indicating the *"includeSystemCollections"* option. |
 
 ### Examples
 
@@ -6838,9 +6838,9 @@ no tag sets were specified, *tagsets* will not be present in the array.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.3   | The return value has changed to be consistent with <span class="methodname">MongoDB::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
+| Version          | Description                                                                                                                                                                                                                                                                                |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.3 | The return value has changed to be consistent with <span class="methodname">MongoDB::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
 
 ### Examples
 
@@ -6918,9 +6918,9 @@ Returns the value of slaveOkay for this instance.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -7141,10 +7141,10 @@ value was specified for the *"filter"* option's *"name"* criteria.
 
 ### Changelog
 
-| Version | Description                                                                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0   | Changed first parameter to be an array of options. Pre-1.6.0, the first parameter was a boolean indicating the *"includeSystemCollections"* option. |
-| 1.3.0   | Added the `includeSystemCollections` parameter.                                                                                                     |
+| Version          | Description                                                                                                                                         |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.6.0 | Changed first parameter to be an array of options. Pre-1.6.0, the first parameter was a boolean indicating the *"includeSystemCollections"* option. |
+| PECL mongo 1.3.0 | Added the `includeSystemCollections` parameter.                                                                                                     |
 
 ### Examples
 
@@ -7207,9 +7207,9 @@ Returns the error and the number of operations ago it occurred.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 MongoDB::repair
 ===============
@@ -7322,9 +7322,9 @@ Returns the database response.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 MongoDB::selectCollection
 =========================
@@ -7501,9 +7501,9 @@ Returns the former value of slaveOkay for this instance.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -7950,9 +7950,9 @@ When an error occurs an array with the following keys will be returned:
 
 ### Changelog
 
-| Version | Description                       |
-|---------|-----------------------------------|
-| 1.5.0   | Added optional `options` argument |
+| Version          | Description                       |
+|------------------|-----------------------------------|
+| PECL mongo 1.5.0 | Added optional `options` argument |
 
 ### Examples
 
@@ -8673,30 +8673,30 @@ operation in `MongoCollection::$wtimeout` is milliseconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added the <em>"wTimeoutMS"</em> option, which replaces <em>"wtimeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Added the <em>"socketTimeoutMS"</em> option, which replaces <em>"timeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td>Added <em>"wtimeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td>Added <em>"w"</em> option.</td>
 </tr>
 <tr class="even">
-<td>1.2.7</td>
+<td>PECL mongo 1.2.7</td>
 <td>Added <em>"continueOnError"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td><p>Added ability to pass integers to the <em>"safe"</em> option, which previously only accepted booleans.</p>
 <p>Added <em>"fsync"</em> option.</p></td>
 </tr>
 <tr class="even">
-<td>1.0.5</td>
+<td>PECL mongo 1.0.5</td>
 <td>Added <code class="parameter">options</code> parameter.</td>
 </tr>
 </tbody>
@@ -8912,10 +8912,10 @@ command execution was terminated due to `maxTimeMS`.
 
 ### Changelog
 
-| Version | Description                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0   | The second parameter is now an `options` array. Passing `limit` and `skip` as the second and third parameters, respectively, is deprecated. |
-| 1.0.7   | Added `limit` and `skip` as second and third parameters, respectively.                                                                      |
+| Version          | Description                                                                                                                                 |
+|------------------|---------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.6.0 | The second parameter is now an `options` array. Passing `limit` and `skip` as the second and third parameters, respectively, is deprecated. |
+| PECL mongo 1.0.7 | Added `limit` and `skip` as second and third parameters, respectively.                                                                      |
 
 ### Examples
 
@@ -9814,39 +9814,39 @@ class="function">MongoCollection::insert</span>.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Renamed the <em>"wtimeout"</em> option to <em>"wTimeoutMS"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Renamed the <em>"timeout"</em> option to <em>"socketTimeoutMS"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td>Added <em>"wtimeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td><p>Added <em>"w"</em> option.</p>
 <p>The <code class="parameter">options</code> parameter no longer accepts a boolean to signify a unique index. Instead, this now has to be done with <em>array('unique' =&gt; true)</em>.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.11</td>
+<td>PECL mongo 1.2.11</td>
 <td>Emits <strong><code>E_DEPRECATED</code></strong> when <code class="parameter">options</code> is <span class="type">scalar</span>.</td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>"timeout"</em> option.</td>
 </tr>
 <tr class="even">
-<td>1.0.11</td>
+<td>PECL mongo 1.0.11</td>
 <td><p>The <em>"safe"</em> option will trigger a primary failover, if necessary.</p>
 <p><span class="classname">MongoException</span> will be thrown if the index name (either generated or set) is longer than 128 bytes.</p></td>
 </tr>
 <tr class="odd">
-<td>1.0.5</td>
+<td>PECL mongo 1.0.5</td>
 <td>Added the <em>"name"</em> option to override index name creation.</td>
 </tr>
 <tr class="even">
-<td>1.0.2</td>
+<td>PECL mongo 1.0.2</td>
 <td>Changed <code class="parameter">options</code> parameter from boolean to array. Pre-1.0.2, the second parameter was an optional boolean value specifying a unique index.</td>
 </tr>
 </tbody>
@@ -10508,9 +10508,9 @@ cannot reach the database.
 
 ### Changelog
 
-| Version | Description                        |
-|---------|------------------------------------|
-| 1.5.0   | Added optional `options` argument. |
+| Version          | Description                        |
+|------------------|------------------------------------|
+| PECL mongo 1.5.0 | Added optional `options` argument. |
 
 ### Examples
 
@@ -10844,9 +10844,9 @@ no tag sets were specified, *tagsets* will not be present in the array.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                        |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.3   | The return value has changed to be consistent with <span class="methodname">MongoCollection::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
+| Version          | Description                                                                                                                                                                                                                                                                                        |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.3 | The return value has changed to be consistent with <span class="methodname">MongoCollection::setReadPreference</span>. The *type* value was changed from a number to a string, *type\_string* was removed, and *tagsets* now expresses tags as key/value pairs instead of colon-delimited strings. |
 
 ### Examples
 
@@ -10925,9 +10925,9 @@ Returns the value of slaveOkay for this instance.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -11056,10 +11056,10 @@ Returns an array containing the result.
 
 ### Changelog
 
-| Version | Description                                                                  |
-|---------|------------------------------------------------------------------------------|
-| 1.5.0   | Added *"maxTimeMS"* option.                                                  |
-| 1.2.11  | Emits **`E_DEPRECATED`** when `options` is <span class="type">scalar</span>. |
+| Version           | Description                                                                  |
+|-------------------|------------------------------------------------------------------------------|
+| PECL mongo 1.5.0  | Added *"maxTimeMS"* option.                                                  |
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when `options` is <span class="type">scalar</span>. |
 
 ### Examples
 
@@ -11358,40 +11358,40 @@ operation in `MongoCollection::$wtimeout` is milliseconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added the <em>"wTimeoutMS"</em> option, which replaces <em>"wtimeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Added the <em>"socketTimeoutMS"</em> option, which replaces <em>"timeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td>Added <em>"wtimeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td><p>Added <em>"w"</em> option.</p>
 <p>The <code class="parameter">options</code> parameter no longer accepts a boolean to signify an acknowledged write. Instead, this now has to be done with <em>array('w' =&gt; 1)</em> (the default behaviour of <span class="classname">MongoClient</span>).</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>"timeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.0.11</td>
+<td>PECL mongo 1.0.11</td>
 <td>Disconnects on "not master" errors if <em>"safe"</em> is set.</td>
 </tr>
 <tr class="even">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td><p>Added ability to pass integers to the <em>"safe"</em> option, which previously only accepted booleans.</p>
 <p>Added <em>"fsync"</em> option.</p>
 <p>The return type was changed to be an array containing error information if the <em>"safe"</em> option is used. Otherwise, a boolean is returned as before.</p></td>
 </tr>
 <tr class="odd">
-<td>1.0.2</td>
+<td>PECL mongo 1.0.2</td>
 <td>Changed second parameter to be an array of options. Pre-1.0.2, the second parameter was a boolean indicating the <em>"safe"</em> option.</td>
 </tr>
 <tr class="even">
-<td>1.0.1</td>
+<td>PECL mongo 1.0.1</td>
 <td>Throw a <span class="classname">MongoCursorException</span> if the <em>"safe"</em> option is set and the insert fails.</td>
 </tr>
 </tbody>
@@ -11725,40 +11725,40 @@ operation in `MongoCollection::$wtimeout` is milliseconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added <em>"wTimeoutMS"</em> option, which replaces <em>"wtimeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Added <em>"socketTimeoutMS"</em> option, which replaces <em>"timeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td>Added <em>"wtimeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td><p>Added <em>"w"</em> option.</p>
 <p>The <code class="parameter">options</code> parameter no longer accepts a boolean to signify <em>"justOne"</em>. Instead, this now has to be done with <em>array('justOne' =&gt; true)</em>.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.11</td>
+<td>PECL mongo 1.2.11</td>
 <td>Emits <strong><code>E_DEPRECATED</code></strong> when <code class="parameter">options</code> is <span class="type">scalar</span>.</td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>"timeout"</em> option.</td>
 </tr>
 <tr class="even">
-<td>1.0.11</td>
+<td>PECL mongo 1.0.11</td>
 <td>Disconnects on "not master" errors if <em>"safe"</em> is set.</td>
 </tr>
 <tr class="odd">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td><p>Added ability to pass integers to the <em>"safe"</em> option, which previously only accepted booleans.</p>
 <p>Added <em>"fsync"</em> option.</p>
 <p>The return type was changed to be an array containing error information if the <em>"safe"</em> option is used. Otherwise, a boolean is returned as before.</p></td>
 </tr>
 <tr class="even">
-<td>1.0.5</td>
+<td>PECL mongo 1.0.5</td>
 <td>Changed second parameter to be an array of options. Pre-1.0.5, the second parameter was a boolean indicating the <em>"safe"</em> option.</td>
 </tr>
 </tbody>
@@ -11933,25 +11933,25 @@ operation in `MongoCollection::$wtimeout` is milliseconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added <em>"wTimeoutMS"</em> option, which replaces <em>"wtimeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Added <em>"socketTimeoutMS"</em> option, which replaces <em>"timeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>"timeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.0.11</td>
+<td>PECL mongo 1.0.11</td>
 <td>Disconnects on "not master" errors if <em>"safe"</em> is set.</td>
 </tr>
 <tr class="even">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td><p>Added <em>"fsync"</em> option.</p></td>
 </tr>
 <tr class="odd">
-<td>1.0.5</td>
+<td>PECL mongo 1.0.5</td>
 <td>Added <code class="parameter">options</code> parameter.</td>
 </tr>
 </tbody>
@@ -12088,9 +12088,9 @@ Returns the former value of slaveOkay for this instance.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -12213,9 +12213,9 @@ MongoDB core docs on
 
 ### Changelog
 
-| Version | Description                      |
-|---------|----------------------------------|
-| 1.5.0   | This method has been deprecated. |
+| Version          | Description                      |
+|------------------|----------------------------------|
+| PECL mongo 1.5.0 | This method has been deprecated. |
 
 MongoCollection::\_\_toString
 =============================
@@ -12416,44 +12416,44 @@ operation in `MongoCollection::$wtimeout` is milliseconds.
 </thead>
 <tbody>
 <tr class="odd">
-<td>1.5.0</td>
+<td>PECL mongo 1.5.0</td>
 <td><p>Added the <em>"wTimeoutMS"</em> option, which replaces <em>"wtimeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"wtimeout"</em> is used.</p>
 <p>Added the <em>"socketTimeoutMS"</em> option, which replaces <em>"timeout"</em>. Emits <strong><code>E_DEPRECATED</code></strong> when <em>"timeout"</em> is used.</p>
 <p>Emits <strong><code>E_DEPRECATED</code></strong> when <em>"safe"</em> is used.</p></td>
 </tr>
 <tr class="even">
-<td>1.3.4</td>
+<td>PECL mongo 1.3.4</td>
 <td>Added <em>"wtimeout"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.3.0</td>
+<td>PECL mongo 1.3.0</td>
 <td><p>Added <em>"w"</em> option.</p>
 <p>The <code class="parameter">options</code> parameter no longer accepts a boolean to signify an upsert. Instead, this now has to be done with <em>array('upsert' =&gt; true)</em>.</p></td>
 </tr>
 <tr class="even">
-<td>1.2.11</td>
+<td>PECL mongo 1.2.11</td>
 <td>Emits <strong><code>E_DEPRECATED</code></strong> when <code class="parameter">options</code> is <span class="type">scalar</span>.</td>
 </tr>
 <tr class="odd">
-<td>1.2.0</td>
+<td>PECL mongo 1.2.0</td>
 <td>Added <em>"timeout"</em> option.</td>
 </tr>
 <tr class="even">
-<td>1.0.11</td>
+<td>PECL mongo 1.0.11</td>
 <td>Disconnects on "not master" errors if <em>"safe"</em> is set.</td>
 </tr>
 <tr class="odd">
-<td>1.0.9</td>
+<td>PECL mongo 1.0.9</td>
 <td><p>Added ability to pass integers to the <em>"safe"</em> option, which previously only accepted booleans.</p>
 <p>Added <em>"fsync"</em> option.</p>
 <p>The return type was changed to be an array containing error information if the <em>"safe"</em> option is used. Otherwise, a boolean is returned as before.</p></td>
 </tr>
 <tr class="even">
-<td>1.0.5</td>
+<td>PECL mongo 1.0.5</td>
 <td>Added <em>"safe"</em> option.</td>
 </tr>
 <tr class="odd">
-<td>1.0.1</td>
+<td>PECL mongo 1.0.1</td>
 <td>Changed <code class="parameter">options</code> parameter from boolean to array. Pre-1.0.1, the second parameter was an optional boolean value specifying an upsert.</td>
 </tr>
 </tbody>
@@ -13212,9 +13212,9 @@ MongoDB core docs on
 
 ### Changelog
 
-| Version | Description                                                                                                                               |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.5   | Before 1.4.5, this method would throw an <span class="classname">MongoCursorException</span> if the cursor had already started iterating. |
+| Version          | Description                                                                                                                               |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.4.5 | Before 1.4.5, this method would throw an <span class="classname">MongoCursorException</span> if the cursor had already started iterating. |
 
 MongoCursor::\_\_construct
 ==========================
@@ -13415,9 +13415,9 @@ cannot reach the database.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### Examples
 
@@ -13750,9 +13750,9 @@ cursor has started iterating.
 
 ### Changelog
 
-| Version | Description                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.0   | The `index` argument now supports index names as string values. In versions before 1.4.0, only array or object values were accepted. |
+| Version          | Description                                                                                                                          |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.4.0 | The `index` argument now supports index names as string values. In versions before 1.4.0, only array or object values were accepted. |
 
 MongoCursor::immortal
 =====================
@@ -13822,10 +13822,10 @@ included.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                                                                                    |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.1.0   | Added a number of other fields, including *id* (the cursor id), *at* (the driver's counter of which document is current), *numReturned* (the number returned by the server in the current batch), and *server* (which server the query was sent to—useful in conjunction with <a href="/book/mongo.html#Read%20Preferences" class="xref"></a>. |
-| 1.0.10  | Added *started\_iterating* field, a boolean indicating if cursor is pre- or post-query.                                                                                                                                                                                                                                                        |
+| Version           | Description                                                                                                                                                                                                                                                                                                                                    |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.1.0  | Added a number of other fields, including *id* (the cursor id), *at* (the driver's counter of which document is current), *numReturned* (the number returned by the server in the current batch), and *server* (which server the query was sent to—useful in conjunction with <a href="/book/mongo.html#Read%20Preferences" class="xref"></a>. |
+| PECL mongo 1.0.10 | Added *started\_iterating* field, a boolean indicating if cursor is pre- or post-query.                                                                                                                                                                                                                                                        |
 
 ### Examples
 
@@ -14226,9 +14226,9 @@ Shows a warning when an unsupport flag is attempted to be set.
 
 ### Changelog
 
-| Version | Description                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------|
-| 1.4.0   | Support for flag 3 (OPLOG\_REPLAY) is added. Versions before 1.4.0 would throw a warning saying that the flag is unsupported. |
+| Version          | Description                                                                                                                   |
+|------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.4.0 | Support for flag 3 (OPLOG\_REPLAY) is added. Versions before 1.4.0 would throw a warning saying that the flag is unsupported. |
 
 ### Examples
 
@@ -14445,9 +14445,9 @@ $cursor = $collection->find()->slaveOkay(false);
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                      |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.5.0   | This method has been deprecated in favour of <span class="methodname">MongoCursor::setReadPreference</span> and <a href="/book/mongo.html#Read%20Preferences" class="xref"></a>. |
+| Version          | Description                                                                                                                                                                      |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.5.0 | This method has been deprecated in favour of <span class="methodname">MongoCursor::setReadPreference</span> and <a href="/book/mongo.html#Read%20Preferences" class="xref"></a>. |
 
 MongoCursor::snapshot
 =====================
@@ -16451,9 +16451,9 @@ Returns a new id.
 
 ### Changelog
 
-| Version | Description                                       |
-|---------|---------------------------------------------------|
-| 1.4.0   | An exception is thrown when passed invalid string |
+| Version          | Description                                       |
+|------------------|---------------------------------------------------|
+| PECL mongo 1.4.0 | An exception is thrown when passed invalid string |
 
 ### Examples
 
@@ -17507,10 +17507,10 @@ Returns a new binary data object.
 
 ### Changelog
 
-| Version | Description                                                                                                                |
-|---------|----------------------------------------------------------------------------------------------------------------------------|
-| 1.5.0   | The default changed from *2* (**`MongoBinData::BYTE_ARRAY`**) to *0* (**`MongoBinData::GENERIC`**).                        |
-| 1.2.11  | Emits **`E_DEPRECATED`** when the second argument is not used. The default value for `type` may change in the near future. |
+| Version           | Description                                                                                                                |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.5.0  | The default changed from *2* (**`MongoBinData::BYTE_ARRAY`**) to *0* (**`MongoBinData::GENERIC`**).                        |
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when the second argument is not used. The default value for `type` may change in the near future. |
 
 MongoBinData::\_\_toString
 ==========================
@@ -19184,9 +19184,9 @@ an error reading the uploaded file(s) or inserting into the *chunks* or
 
 ### Changelog
 
-| Version | Description                                                                                                                       |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------|
-| 1.2.5   | Changed second parameter to an array of metadata. Pre-1.2.5, the second parameter was an optional string overriding the filename. |
+| Version          | Description                                                                                                                       |
+|------------------|-----------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.2.5 | Changed second parameter to an array of metadata. Pre-1.2.5, the second parameter was an optional string overriding the filename. |
 
 ### Examples
 
@@ -19611,9 +19611,9 @@ The current result's \_id as a string.
 
 ### Changelog
 
-| Version | Description                                                                                                              |
-|---------|--------------------------------------------------------------------------------------------------------------------------|
-| 1.3.0   | The document's *\_id* is returned as a string value, since the key should be unique. Pre-1.3.0, *filename* was returned. |
+| Version          | Description                                                                                                              |
+|------------------|--------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.0 | The document's *\_id* is returned as a string value, since the key should be unique. Pre-1.3.0, *filename* was returned. |
 
 Batch Classes
 =============
@@ -20652,9 +20652,9 @@ This option is deprecated in favor of **`MongoLog::RS`**. </span>
 Changelog
 ---------
 
-| Version | Description                                                                               |
-|---------|-------------------------------------------------------------------------------------------|
-| 1.3.0   | Added **`MongoLog::CON`** and deprecated **`MongoLog::POOL`** and **`MongoLog::SERVER`**. |
+| Version          | Description                                                                               |
+|------------------|-------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.0 | Added **`MongoLog::CON`** and deprecated **`MongoLog::POOL`** and **`MongoLog::SERVER`**. |
 
 MongoLog::getCallback
 =====================
@@ -21030,10 +21030,10 @@ class="type">int</span> `$size`</span> )
 Changelog
 ---------
 
-| Version | Description                                                                                                                                                                                              |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.3.0   | This functionality has been removed and no longer does anything other than emit deprecation warnings. This class is only kept around for backwards compatibility and will be removed in the near future. |
-| 1.2.11  | Emits **`E_DEPRECATED`** when used.                                                                                                                                                                      |
+| Version           | Description                                                                                                                                                                                              |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL mongo 1.3.0  | This functionality has been removed and no longer does anything other than emit deprecation warnings. This class is only kept around for backwards compatibility and will be removed in the near future. |
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used.                                                                                                                                                                      |
 
 MongoPool::getSize
 ==================
@@ -21057,9 +21057,9 @@ Returns the current pool size.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### Examples
 
@@ -21165,9 +21165,9 @@ to your pool.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 MongoPool::setSize
 ==================
@@ -21196,9 +21196,9 @@ Returns the former value of pool size.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### Examples
 
@@ -21463,9 +21463,9 @@ Returns the current pool size.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### Examples
 
@@ -21554,9 +21554,9 @@ process is done on each query and database command execution.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -21591,9 +21591,9 @@ Issues **`E_DEPRECATED`** warning
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -21657,9 +21657,9 @@ giving up.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 Mongo::setPoolSize
 ==================
@@ -21761,9 +21761,9 @@ Returns the former value of slaveOkay for this instance.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 
@@ -21818,9 +21818,9 @@ if it is called on a non-replica-set connection. It will also throw
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.2.11  | Emits **`E_DEPRECATED`** when used. |
+| Version           | Description                         |
+|-------------------|-------------------------------------|
+| PECL mongo 1.2.11 | Emits **`E_DEPRECATED`** when used. |
 
 ### See Also
 

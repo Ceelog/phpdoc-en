@@ -841,10 +841,10 @@ cannot be found in the database.
 
 ### Changelog
 
-| Version | Description                                                       |
-|---------|-------------------------------------------------------------------|
-| 1.0.4   | Adding the continent\_code with GeoIP Library 1.4.3 or newer only |
-| 1.0.3   | Adding country\_code3 and country\_name                           |
+| Version          | Description                                                       |
+|------------------|-------------------------------------------------------------------|
+| PECL geoip 1.0.4 | Adding the continent\_code with GeoIP Library 1.4.3 or newer only |
+| PECL geoip 1.0.3 | Adding country\_code3 and country\_name                           |
 
 ### Examples
 

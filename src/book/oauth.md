@@ -371,9 +371,9 @@ This function has no parameters.
 
 ### Changelog
 
-| Version | Description                                                                         |
-|---------|-------------------------------------------------------------------------------------|
-| 0.99.8  | The related <a href="/class/oauth.html#" class="link">debug</a> property was added. |
+| Version           | Description                                                                         |
+|-------------------|-------------------------------------------------------------------------------------|
+| PECL oauth 0.99.8 | The related <a href="/class/oauth.html#" class="link">debug</a> property was added. |
 
 ### See Also
 
@@ -435,9 +435,9 @@ This function has no parameters.
 
 ### Changelog
 
-| Version | Description                      |
-|---------|----------------------------------|
-| 0.99.8  | The `sslChecks` member was added |
+| Version           | Description                      |
+|-------------------|----------------------------------|
+| PECL oauth 0.99.8 | The `sslChecks` member was added |
 
 ### See Also
 
@@ -468,9 +468,9 @@ This function has no parameters.
 
 ### Changelog
 
-| Version | Description                                    |
-|---------|------------------------------------------------|
-| 0.99.8  | The `debug` and `debugInfo` members were added |
+| Version           | Description                                    |
+|-------------------|------------------------------------------------|
+| PECL oauth 0.99.8 | The `debug` and `debugInfo` members were added |
 
 ### See Also
 
@@ -531,9 +531,9 @@ This function has no parameters.
 
 ### Changelog
 
-| Version | Description                      |
-|---------|----------------------------------|
-| 0.99.8  | The `sslChecks` member was added |
+| Version           | Description                      |
+|-------------------|----------------------------------|
+| PECL oauth 0.99.8 | The `sslChecks` member was added |
 
 ### See Also
 
@@ -583,11 +583,11 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
-| 0.99.5  | The `http_method` parameter was added                              |
-| 0.99.8  | The `http_headers` parameter was added                             |
+| Version           | Description                                                        |
+|-------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 0.99.5 | The `http_method` parameter was added                              |
+| PECL oauth 0.99.8 | The `http_headers` parameter was added                             |
 
 ### Examples
 
@@ -700,10 +700,10 @@ Returns an array containing the parsed OAuth response on success or
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
-| 0.99.9  | The `verifier_token` parameter was added                           |
+| Version           | Description                                                        |
+|-------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 0.99.9 | The `verifier_token` parameter was added                           |
 
 ### Examples
 
@@ -922,10 +922,10 @@ Returns an array containing the parsed OAuth response on success or
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
-| 0.99.9  | The `callback_url` parameter was added                             |
+| Version           | Description                                                        |
+|-------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 0.99.9 | The `callback_url` parameter was added                             |
 
 ### Examples
 
@@ -1002,9 +1002,9 @@ Returns **`TRUE`** if a parameter is correctly set, otherwise
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| Version          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
 
 OAuth::setCAPath
 ================
@@ -1041,9 +1041,9 @@ Returns **`TRUE`** on success, or **`FALSE`** if either `ca_path` or
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| Version          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
 
 ### See Also
 
@@ -1074,9 +1074,9 @@ considered invalid.
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| Version          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
 
 ### See Also
 
@@ -1167,9 +1167,9 @@ certificate cannot be parsed.)
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| Version          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
 
 ### Examples
 
@@ -1245,9 +1245,9 @@ Returns **`TRUE`**, unless the `timestamp` is invalid, in which case
 
 ### Changelog
 
-| Version | Description                                                        |
-|---------|--------------------------------------------------------------------|
-| 1.0.0   | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| Version          | Description                                                        |
+|------------------|--------------------------------------------------------------------|
+| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
 
 ### See Also
 

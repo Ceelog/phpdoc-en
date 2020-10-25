@@ -173,9 +173,9 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0   | The RAR entries returned by <span class="methodname">RarArchive::getEntry</span> and <span class="methodname">RarArchive::getEntries</span> are now invalidated when calling this method. This means that all instance methods called for such entries and not guaranteed to succeed. |
+| Version        | Description                                                                                                                                                                                                                                                                           |
+|----------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | The RAR entries returned by <span class="methodname">RarArchive::getEntry</span> and <span class="methodname">RarArchive::getEntries</span> are now invalidated when calling this method. This means that all instance methods called for such entries and not guaranteed to succeed. |
 
 ### Examples
 
@@ -323,9 +323,9 @@ class="type">RarEntry</span> objects or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                |
-|---------|----------------------------------------------------------------------------|
-| 3.0.0   | Support for RAR archives with repeated entry names is no longer defective. |
+| Version        | Description                                                                |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### Examples
 
@@ -695,9 +695,9 @@ Returns the requested <span class="type">RarArchive</span> instance or
 
 ### Changelog
 
-| Version | Description                  |
-|---------|------------------------------|
-| 3.0.0   | `volume_callback` was added. |
+| Version        | Description                  |
+|----------------|------------------------------|
+| PECL rar 3.0.0 | `volume_callback` was added. |
 
 ### Examples
 
@@ -1466,10 +1466,10 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                |
-|---------|----------------------------------------------------------------------------|
-| 3.0.0   | `extended_data` was added.                                                 |
-| 3.0.0   | Support for RAR archives with repeated entry names is no longer defective. |
+| Version        | Description                                                                |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | `extended_data` was added.                                                 |
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### Examples
 
@@ -1625,9 +1625,9 @@ Returns the CRC of the archive entry or **`FALSE`** on error.
 
 ### Changelog
 
-| Version | Description                                                          |
-|---------|----------------------------------------------------------------------|
-| 2.0.0   | This method now returns correct values for multiple volume archives. |
+| Version        | Description                                                          |
+|----------------|----------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values for multiple volume archives. |
 
 RarEntry::getFileTime
 =====================
@@ -1808,9 +1808,9 @@ Returns the entry name as a string, or **`FALSE`** on error.
 
 ### Changelog
 
-| Version | Description                                                           |
-|---------|-----------------------------------------------------------------------|
-| 2.0.0   | As of version 2.0.0, the returned string is encoded in Unicode/UTF-8. |
+| Version        | Description                                                           |
+|----------------|-----------------------------------------------------------------------|
+| PECL rar 2.0.0 | As of version 2.0.0, the returned string is encoded in Unicode/UTF-8. |
 
 ### Examples
 
@@ -1869,9 +1869,9 @@ Returns the packed size, or **`FALSE`** on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0   | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| Version        | Description                                                                                                                                                                                |
+|----------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of packed sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
 
 ### Examples
 
@@ -1934,9 +1934,9 @@ The file handler or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                |
-|---------|----------------------------------------------------------------------------|
-| 3.0.0   | Support for RAR archives with repeated entry names is no longer defective. |
+| Version        | Description                                                                |
+|----------------|----------------------------------------------------------------------------|
+| PECL rar 3.0.0 | Support for RAR archives with repeated entry names is no longer defective. |
 
 ### Examples
 
@@ -2007,9 +2007,9 @@ Returns the unpacked size, or **`FALSE`** on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                  |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0   | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
+| Version        | Description                                                                                                                                                                                  |
+|----------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL rar 2.0.0 | This method now returns correct values of unpacked sizes bigger than 2 GiB on platforms with 64-bit <span class="type">integer</span>s and never returns negative values on other platforms. |
 
 ### Return Values
 

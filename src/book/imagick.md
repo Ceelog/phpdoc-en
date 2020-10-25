@@ -3186,10 +3186,10 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                            |
-|---------|--------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Added optional fit parameter.                                                                          |
-| 2.1.0   | This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
+| Version            | Description                                                                                            |
+|--------------------|--------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Added optional fit parameter.                                                                          |
+| PECL imagick 2.1.0 | This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
 
 ### Examples
 
@@ -3733,9 +3733,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                     |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -3890,9 +3890,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -4235,9 +4235,9 @@ A copy of the Imagick object is returned.
 
 ### Changelog
 
-| Version | Description                                                                                                      |
-|---------|------------------------------------------------------------------------------------------------------------------|
-| 3.1.0   | The method was deprecated in favour of the <a href="/language/oop5/cloning.html" class="link">clone</a> keyword. |
+| Version            | Description                                                                                                      |
+|--------------------|------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 3.1.0 | The method was deprecated in favour of the <a href="/language/oop5/cloning.html" class="link">clone</a> keyword. |
 
 Imagick::clutImage
 ==================
@@ -4373,9 +4373,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as first and third parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                                   |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as first and third parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::colorizeImage
 ======================
@@ -4413,9 +4413,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter and a float representing the opacity value as the second parameter. Previous versions allow only an ImagickPixel objects. |
+| Version            | Description                                                                                                                                                                                 |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter and a float representing the opacity value as the second parameter. Previous versions allow only an ImagickPixel objects. |
 
 ### Examples
 
@@ -6368,9 +6368,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -9930,9 +9930,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                            |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the third parameter. Previous versions allow only an <span class="classname">ImagickPixel</span> object. |
+| Version            | Description                                                                                                                                            |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the third parameter. Previous versions allow only an <span class="classname">ImagickPixel</span> object. |
 
 Imagick::medianFilterImage
 ==========================
@@ -10819,9 +10819,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the third parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the third parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -11286,9 +11286,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                    |
-|---------|--------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as first and second parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                                    |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as first and second parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::paintTransparentImage
 ==============================
@@ -11334,9 +11334,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::pingImage
 ==================
@@ -12533,9 +12533,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Added optional fit parameter. This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
+| Version            | Description                                                                                                                          |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Added optional fit parameter. This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
 
 ### Examples
 
@@ -12650,9 +12650,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -12861,9 +12861,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                          |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Added optional fit parameter. This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
+| Version            | Description                                                                                                                          |
+|--------------------|--------------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Added optional fit parameter. This method now supports proportional scaling. Pass zero as either parameter for proportional scaling. |
 
 ### Examples
 
@@ -13111,9 +13111,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                     |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::setColorspace
 ======================
@@ -13577,9 +13577,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                       |
-|---------|-------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                       |
+|--------------------|-------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::setImageBias
 =====================
@@ -13723,9 +13723,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                     |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::setImageChannelDepth
 =============================
@@ -14435,9 +14435,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                       |
-|---------|-------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                       |
+|--------------------|-------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the parameter. Previous versions allow only an ImagickPixel object. |
 
 Imagick::setImageOpacity
 ========================
@@ -15757,9 +15757,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                             |
+|--------------------|-------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 
@@ -16714,9 +16714,9 @@ Throws ImagickException on error.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as the first parameter and a float representing the opacity value as the second parameter. Previous versions allow only an ImagickPixel objects. |
+| Version            | Description                                                                                                                                                                                 |
+|--------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as the first parameter and a float representing the opacity value as the second parameter. Previous versions allow only an ImagickPixel objects. |
 
 ### Examples
 
@@ -17351,9 +17351,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                                                                                                     |
-|---------|-----------------------------------------------------------------------------------------------------------------|
-| 2.1.0   | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
+| Version            | Description                                                                                                     |
+|--------------------|-----------------------------------------------------------------------------------------------------------------|
+| PECL imagick 2.1.0 | Now allows a string representing the color as a parameter. Previous versions allow only an ImagickPixel object. |
 
 ### Examples
 

@@ -3883,11 +3883,11 @@ Server had failed to process the request.
 
 ### Changelog
 
-| Version      | Description                                                                                                                                                                          |
-|--------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.1.0, 2.0.0 | $maxSegments removed                                                                                                                                                                 |
-| 2.0.0b       | API Changed: SolrClient::commit (\[ int $maxSegments = 0 \[, bool $softCommit = false \[, bool $waitSearcher = true\[, bool $expungeDeletes = false \]\]\] )                         |
-| 0.9.2        | Signature: SolrClient::commit (\[ int $maxSegments = 1 \[, bool $waitFlush = true \[, bool $waitSearcher = true \]\]\] ). $waitFlush: Block until index changes are flushed to disk. |
+| Version                | Description                                                                                                                                                                          |
+|------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL solr 1.1.0, 2.0.0 | $maxSegments removed                                                                                                                                                                 |
+| PECL solr 2.0.0b       | API Changed: SolrClient::commit (\[ int $maxSegments = 0 \[, bool $softCommit = false \[, bool $waitSearcher = true\[, bool $expungeDeletes = false \]\]\] )                         |
+| PECL solr 0.9.2        | Signature: SolrClient::commit (\[ int $maxSegments = 1 \[, bool $waitFlush = true \[, bool $waitSearcher = true \]\]\] ). $waitFlush: Block until index changes are flushed to disk. |
 
 ### Notes
 
@@ -8571,9 +8571,9 @@ case of an invalid parameter was passed.
 
 ### Changelog
 
-| Version | Description                                                                                                                            |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------|
-| 2.0.0   | If `q` was invalid, then a <span class="classname">SolrIllegalArgumentException</span> is now thrown. Previously an error was emitted. |
+| Version         | Description                                                                                                                            |
+|-----------------|----------------------------------------------------------------------------------------------------------------------------------------|
+| PECL solr 2.0.0 | If `q` was invalid, then a <span class="classname">SolrIllegalArgumentException</span> is now thrown. Previously an error was emitted. |
 
 SolrQuery::\_\_destruct
 =======================

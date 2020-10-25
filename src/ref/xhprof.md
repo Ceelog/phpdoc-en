@@ -94,9 +94,9 @@ profiling.
 
 ### Changelog
 
-| Version | Description                                 |
-|---------|---------------------------------------------|
-| 0.9.2   | The optional `options` parameter was added. |
+| Version           | Description                                 |
+|-------------------|---------------------------------------------|
+| PECL xhprof 0.9.2 | The optional `options` parameter was added. |
 
 ### Examples
 

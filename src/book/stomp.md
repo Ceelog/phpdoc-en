@@ -640,9 +640,9 @@ Associative array containing the additional headers (example: receipt).
 
 ### Changelog
 
-| Version | Description                       |
-|---------|-----------------------------------|
-| 1.0.1   | The `headers` parameter was added |
+| Version          | Description                       |
+|------------------|-----------------------------------|
+| PECL stomp 1.0.1 | The `headers` parameter was added |
 
 ### Examples
 

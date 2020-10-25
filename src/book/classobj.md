@@ -15,10 +15,6 @@ Class/Object Information
 -   [Classes/Object Functions](/ref/classobj.html)
     -   [\_\_autoload](/ref/classobj.html#__autoload) — Attempt to load
         undefined class
-    -   [call\_user\_method\_array](/ref/classobj.html#call_user_method_array)
-        — Call a user method given with an array of parameters
-    -   [call\_user\_method](/ref/classobj.html#call_user_method) — Call
-        a user method on an specific object
     -   [class\_alias](/ref/classobj.html#class_alias) — Creates an
         alias for a class
     -   [class\_exists](/ref/classobj.html#class_exists) — Checks if the

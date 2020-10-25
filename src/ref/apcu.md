@@ -115,10 +115,10 @@ Array of cached data (and meta-data) or **`FALSE`** on failure
 
 ### Changelog
 
-| Version | Description                                                            |
-|---------|------------------------------------------------------------------------|
-| 3.0.11  | The `limited` parameter was introduced.                                |
-| 3.0.16  | The "*filehits*" option for the `cache_type` parameter was introduced. |
+| Version          | Description                                                            |
+|------------------|------------------------------------------------------------------------|
+| PECL apcu 3.0.11 | The `limited` parameter was introduced.                                |
+| PECL apcu 3.0.16 | The "*filehits*" option for the `cache_type` parameter was introduced. |
 
 ### Examples
 
@@ -659,9 +659,9 @@ The above example will output:
 
 ### Changelog
 
-| Version | Description                        |
-|---------|------------------------------------|
-| 3.0.17  | The `success` parameter was added. |
+| Version          | Description                        |
+|------------------|------------------------------------|
+| PECL apcu 3.0.17 | The `success` parameter was added. |
 
 ### See Also
 

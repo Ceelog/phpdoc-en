@@ -439,7 +439,7 @@ This function has no parameters.
 
 | PECL/sphinx Version | Description                                                                             |
 |---------------------|-----------------------------------------------------------------------------------------|
-| 1.0.3               | Added SphinxClient::close(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL sphinx 1.0.3   | Added SphinxClient::close(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### Return Values
 
@@ -567,7 +567,7 @@ This function has no parameters.
 
 | PECL/sphinx Version | Description                                                                            |
 |---------------------|----------------------------------------------------------------------------------------|
-| 1.0.3               | Added SphinxClient::open(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL sphinx 1.0.3   | Added SphinxClient::open(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### Return Values
 
@@ -1230,7 +1230,7 @@ values.
 
 | PECL/sphinx Version | Description                                                                                   |
 |---------------------|-----------------------------------------------------------------------------------------------|
-| 1.0.3               | Added SphinxClient::setOverride(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL sphinx 1.0.3   | Added SphinxClient::setOverride(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### Return Values
 
@@ -1326,7 +1326,7 @@ SQL-like clause.
 
 | PECL/sphinx Version | Description                                                                                 |
 |---------------------|---------------------------------------------------------------------------------------------|
-| 1.0.1               | Added SphinxClient::setSelect(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL sphinx 1.0.1   | Added SphinxClient::setSelect(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### Return Values
 
@@ -1422,7 +1422,7 @@ This function has no parameters.
 
 | PECL/sphinx Version | Description                                                                              |
 |---------------------|------------------------------------------------------------------------------------------|
-| 1.0.3               | Added SphinxClient::status(), available only if compiled with libsphinxclient \>= 0.9.9. |
+| PECL sphinx 1.0.3   | Added SphinxClient::status(), available only if compiled with libsphinxclient \>= 0.9.9. |
 
 ### Return Values
 

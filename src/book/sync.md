@@ -591,9 +591,9 @@ $event->wait();
 
 ### Changelog
 
-| Version | Description      |
-|---------|------------------|
-| 1.1.0   | Added `prefire`. |
+| Version         | Description      |
+|-----------------|------------------|
+| PECL sync 1.1.0 | Added `prefire`. |
 
 ### See Also
 

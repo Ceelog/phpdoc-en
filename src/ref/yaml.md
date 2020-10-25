@@ -50,9 +50,9 @@ Returns **`TRUE`** on success.
 
 ### Changelog
 
-| Version | Description                          |
-|---------|--------------------------------------|
-| 1.1.0   | The `callbacks` parameter was added. |
+| Version         | Description                          |
+|-----------------|--------------------------------------|
+| PECL yaml 1.1.0 | The `callbacks` parameter was added. |
 
 ### See Also
 
@@ -106,9 +106,9 @@ Returns a YAML encoded <span class="type">string</span> on success.
 
 ### Changelog
 
-| Version | Description                          |
-|---------|--------------------------------------|
-| 1.1.0   | The `callbacks` parameter was added. |
+| Version         | Description                          |
+|-----------------|--------------------------------------|
+| PECL yaml 1.1.0 | The `callbacks` parameter was added. |
 
 ### Examples
 

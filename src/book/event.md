@@ -1921,9 +1921,9 @@ Returns the number of bytes read.
 
 ### Changelog
 
-| Version | Description                                                                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0   | Renamed <span class="methodname">EventBuffer::appendFrom</span>(the old method name) to <span class="methodname">EventBuffer::appendFrom</span>. |
+| Version          | Description                                                                                                                                      |
+|------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL event 1.6.0 | Renamed <span class="methodname">EventBuffer::appendFrom</span>(the old method name) to <span class="methodname">EventBuffer::appendFrom</span>. |
 
 ### See Also
 
@@ -2253,9 +2253,9 @@ Returns string read, or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                    |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 1.6.0   | Renamed <span class="methodname">EventBuffer::read</span>(the old method name) to <span class="methodname">EventBuffer::read</span>. <span class="methodname">EventBuffer::read</span> now takes only `max_bytes` argument; returns string instead of integer. |
+| Version          | Description                                                                                                                                                                                                                                                    |
+|------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| PECL event 1.6.0 | Renamed <span class="methodname">EventBuffer::read</span>(the old method name) to <span class="methodname">EventBuffer::read</span>. <span class="methodname">EventBuffer::read</span> now takes only `max_bytes` argument; returns string instead of integer. |
 
 ### See Also
 
@@ -3427,9 +3427,9 @@ objects connected to each other.
 
 ### Changelog
 
-| Version | Description         |
-|---------|---------------------|
-| 1.9.0   | Method made static. |
+| Version          | Description         |
+|------------------|---------------------|
+| PECL event 1.9.0 | Method made static. |
 
 EventBufferEvent::disable
 =========================
@@ -5334,9 +5334,9 @@ Returns <span class="classname">EventHttp</span> object.
 
 ### Changelog
 
-| Version | Description                    |
-|---------|--------------------------------|
-| 1.9.0   | OpenSSL support (`ctx`) added. |
+| Version          | Description                    |
+|------------------|--------------------------------|
+| PECL event 1.9.0 | OpenSSL support (`ctx`) added. |
 
 ### Examples
 
@@ -5957,9 +5957,9 @@ Returns <span class="classname">EventHttpConnection</span> object.
 
 ### Changelog
 
-| Version | Description                    |
-|---------|--------------------------------|
-| 1.9.0   | OpenSSL support (`ctx`) added. |
+| Version          | Description                    |
+|------------------|--------------------------------|
+| PECL event 1.9.0 | OpenSSL support (`ctx`) added. |
 
 EventHttpConnection::getBase
 ============================
@@ -7530,9 +7530,9 @@ the event connection listener.
 
 ### Changelog
 
-| Version | Description                         |
-|---------|-------------------------------------|
-| 1.5.0   | UNIX domain sockets' support added. |
+| Version          | Description                         |
+|------------------|-------------------------------------|
+| PECL event 1.5.0 | UNIX domain sockets' support added. |
 
 ### Examples
 

@@ -925,12 +925,6 @@ MySQL Improved Extension
     The mysqli\_sql\_exception class
 -   [Aliases and deprecated Mysqli
     Functions](/set/mysqlinfo.html#Aliases%20and%20deprecated%20Mysqli%20Functions)
-    -   [mysqli\_bind\_param](/set/mysqlinfo.html#mysqli_bind_param) —
-        Alias for mysqli\_stmt\_bind\_param
-    -   [mysqli\_bind\_result](/set/mysqlinfo.html#mysqli_bind_result) —
-        Alias for mysqli\_stmt\_bind\_result
-    -   [mysqli\_client\_encoding](/set/mysqlinfo.html#mysqli_client_encoding)
-        — Alias of mysqli\_character\_set\_name
     -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — Alias of
         mysqli::\_\_construct
     -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
@@ -945,29 +939,21 @@ MySQL Improved Extension
         — Alias of mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias
         for mysqli\_stmt\_execute
-    -   [mysqli\_fetch](/set/mysqlinfo.html#mysqli_fetch) — Alias for
-        mysqli\_stmt\_fetch
     -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
         — Returns client Zval cache statistics
     -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
         — Returns client per-process statistics
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
         — Return information about open and cached links
-    -   [mysqli\_get\_metadata](/set/mysqlinfo.html#mysqli_get_metadata)
-        — Alias for mysqli\_stmt\_result\_metadata
     -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query)
         — Enforce execution of a query on the master in a master/slave
         setup
-    -   [mysqli\_param\_count](/set/mysqlinfo.html#mysqli_param_count) —
-        Alias for mysqli\_stmt\_param\_count
     -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — Alias of
         mysqli\_driver-\>report\_mode
     -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
         — Check if RPL parse is enabled
     -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
         probe
-    -   [mysqli\_send\_long\_data](/set/mysqlinfo.html#mysqli_send_long_data)
-        — Alias for mysqli\_stmt\_send\_long\_data
     -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias
         of mysqli\_options
     -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
@@ -15868,63 +15854,6 @@ Properties
 `sqlstate`  
 The sql state with the error.
 
-mysqli\_bind\_param
-===================
-
-Alias for <span class="function">mysqli\_stmt\_bind\_param</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_bind\_param</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_bind\_param</span>
-
-mysqli\_bind\_result
-====================
-
-Alias for <span class="function">mysqli\_stmt\_bind\_result</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_bind\_result</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_bind\_result</span>
-
-mysqli\_client\_encoding
-========================
-
-Alias of <span class="function">mysqli\_character\_set\_name</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_character\_set\_name</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_real\_escape\_string</span>
-
 mysqli\_connect
 ===============
 
@@ -16088,25 +16017,6 @@ class="function">mysqli\_stmt\_execute</span>.
 ### See Also
 
 -   <span class="function">mysqli\_stmt\_execute</span>
-
-mysqli\_fetch
-=============
-
-Alias for <span class="function">mysqli\_stmt\_fetch</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_fetch</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_fetch</span>
 
 mysqli\_get\_cache\_stats
 =========================
@@ -16335,25 +16245,6 @@ persistent connections.
 An <span class="type">integer</span> representing the number of inactive
 persistent connections.
 
-mysqli\_get\_metadata
-=====================
-
-Alias for <span class="function">mysqli\_stmt\_result\_metadata</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_result\_metadata</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_result\_metadata</span>
-
 mysqli\_master\_query
 =====================
 
@@ -16375,25 +16266,6 @@ available.
 **Warning**
 
 This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
-mysqli\_param\_count
-====================
-
-Alias for <span class="function">mysqli\_stmt\_param\_count</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_param\_count</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_param\_count</span>
 
 mysqli\_report
 ==============
@@ -16446,25 +16318,6 @@ available.
 
 This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
-mysqli\_send\_long\_data
-========================
-
-Alias for <span class="function">mysqli\_stmt\_send\_long\_data</span>
-
-### Description
-
-This function is an alias of: <span
-class="function">mysqli\_stmt\_send\_long\_data</span>.
-
-**Warning**
-
-This function has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
-PHP 5.4.0.
-
-### See Also
-
--   <span class="function">mysqli\_stmt\_send\_long\_data</span>
-
 mysqli::set\_opt
 ================
 
@@ -16502,12 +16355,6 @@ This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
 **Table of Contents**
 
--   [mysqli\_bind\_param](/set/mysqlinfo.html#mysqli_bind_param) — Alias
-    for mysqli\_stmt\_bind\_param
--   [mysqli\_bind\_result](/set/mysqlinfo.html#mysqli_bind_result) —
-    Alias for mysqli\_stmt\_bind\_result
--   [mysqli\_client\_encoding](/set/mysqlinfo.html#mysqli_client_encoding)
-    — Alias of mysqli\_character\_set\_name
 -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — Alias of
     mysqli::\_\_construct
 -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
@@ -16522,28 +16369,20 @@ This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
     Alias of mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias for
     mysqli\_stmt\_execute
--   [mysqli\_fetch](/set/mysqlinfo.html#mysqli_fetch) — Alias for
-    mysqli\_stmt\_fetch
 -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
     — Returns client Zval cache statistics
 -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
     — Returns client per-process statistics
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
     — Return information about open and cached links
--   [mysqli\_get\_metadata](/set/mysqlinfo.html#mysqli_get_metadata) —
-    Alias for mysqli\_stmt\_result\_metadata
 -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query) —
     Enforce execution of a query on the master in a master/slave setup
--   [mysqli\_param\_count](/set/mysqlinfo.html#mysqli_param_count) —
-    Alias for mysqli\_stmt\_param\_count
 -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — Alias of
     mysqli\_driver-\>report\_mode
 -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
     — Check if RPL parse is enabled
 -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
     probe
--   [mysqli\_send\_long\_data](/set/mysqlinfo.html#mysqli_send_long_data)
-    — Alias for mysqli\_stmt\_send\_long\_data
 -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias of
     mysqli\_options
 -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —

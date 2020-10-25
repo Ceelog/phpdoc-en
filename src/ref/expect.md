@@ -50,9 +50,9 @@ or
 
 ### Changelog
 
-| Version | Description                                                                                                 |
-|---------|-------------------------------------------------------------------------------------------------------------|
-| 0.2.1   | Prior to version 0.2.1, in `match` parameter a match string was returned, not an array of match substrings. |
+| Version           | Description                                                                                                 |
+|-------------------|-------------------------------------------------------------------------------------------------------------|
+| PECL expect 0.2.1 | Prior to version 0.2.1, in `match` parameter a match string was returned, not an array of match substrings. |
 
 ### Examples
 
