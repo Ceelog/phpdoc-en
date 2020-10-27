@@ -706,22 +706,6 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 >
 > The indent is reset when an xmlwriter is opened.
 
-> **Note**: <span class="simpara">Because this is a language construct
-> and not a function, it cannot be called using
-> <a href="/functions/variable-functions.html" class="link">variable functions</a>.</span>
-
-**Warning**
-
-This function is not (yet) binary safe!
-
-> **Note**: **register\_globals: important note**  
->
-> As of PHP 4.2.0, the default value for the PHP directive
-> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
-> is *off*. The PHP community discourages developers from relying on
-> this directive, and encourages the use of other means, such as the
-> <a href="/language/variables/predefined.html" class="link">superglobals</a>.
-
 ### See Also
 
 -   <span class="methodname">XMLWriter::setIndent</span>
@@ -767,27 +751,41 @@ Whether indentation is enabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Examples
+
+**Example \#1 <span class="methodname">XMLWriter::setIndent</span> and
+mixed Content**
+
+Enabling indentation is not suitable for mixed content, because the
+indent string is also inserted before inline elements.
+
+``` php
+<?php
+$writer = new XMLWriter();
+$writer->openMemory();
+$writer->setIndent(2);
+$writer->startDocument();
+$writer->startElement('p');
+$writer->text('before');
+$writer->writeElement('a', 'element');
+$writer->text('after');
+$writer->endElement();
+$writer->endDocument();
+echo $writer->outputMemory();
+?>
+```
+
+The above example will output:
+
+    <?xml version="1.0"?>
+    <p>before <a>element</a>
+    after</p>
+
 ### Notes
 
 > **Note**:
 >
 > The indent is reset when an xmlwriter is opened.
-
-> **Note**: <span class="simpara">Because this is a language construct
-> and not a function, it cannot be called using
-> <a href="/functions/variable-functions.html" class="link">variable functions</a>.</span>
-
-**Warning**
-
-This function is not (yet) binary safe!
-
-> **Note**: **register\_globals: important note**  
->
-> As of PHP 4.2.0, the default value for the PHP directive
-> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
-> is *off*. The PHP community discourages developers from relying on
-> this directive, and encourages the use of other means, such as the
-> <a href="/language/variables/predefined.html" class="link">superglobals</a>.
 
 ### See Also
 

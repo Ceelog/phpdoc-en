@@ -110,6 +110,9 @@ take note of some backward incompatible changes:
     5.4: please follow
     <a href="/ref/outcontrol.html#Creating%20an%20uneraseable%20output%20buffer%20in%20a%20way%20compatible%20with%20both%20PHP%205.3%20and%205.4" class="link">this example</a>
     to write code that is compatible with PHP 5.3 and 5.4. </span>
+-   <span class="simpara"> <span class="function">stream\_select</span>
+    now preserves the keys of the `read`, `write` and `except` <span
+    class="type">array</span>s. </span>
 
 The following keywords are now
 <a href="/reserved.html" class="link">reserved</a>, and may not be used
