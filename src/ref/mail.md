@@ -125,7 +125,7 @@ names and its values are the respective header values.
 > Failing to do this will result in an error message similar to
 > *Warning: mail(): "sendmail\_from" not set in php.ini or custom
 > "From:" header missing*. The *From* header sets also *Return-Path*
-> under Windows.
+> when sending directly via SMTP (Windows only).
 
 > **Note**:
 >
@@ -309,11 +309,12 @@ mail($to, $subject, $message, implode("\r\n", $headers));
 
 > **Note**:
 >
-> The Windows implementation of <span class="function">mail</span>
-> differs in many ways from the Unix implementation. First, it doesn't
-> use a local binary for composing messages but only operates on direct
-> sockets which means a *MTA* is needed listening on a network socket
-> (which can either on the localhost or a remote machine).
+> The SMTP implementation (Windows only) of <span
+> class="function">mail</span> differs in many ways from the sendmail
+> implementation. First, it doesn't use a local binary for composing
+> messages but only operates on direct sockets which means a *MTA* is
+> needed listening on a network socket (which can either on the
+> localhost or a remote machine).
 >
 > Second, the custom headers like *From:*, *Cc:*, *Bcc:* and *Date:* are
 > *not* interpreted by the *MTA* in the first place, but are parsed by

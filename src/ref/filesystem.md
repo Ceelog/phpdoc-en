@@ -5397,7 +5397,12 @@ Opens a pipe to a process executed by forking the command given by
 The command
 
 `mode`  
-The mode
+The mode. Either *'r'* for reading, or *'w'* for writing.
+
+On Windows, <span class="function">popen</span> defaults to text mode,
+i.e. any *\\n* characters written to or read from the pipe will be
+translated to *\\r\\n*. If this is not desired, binary mode can be
+enforced by setting `mode` to *'rb'* and *'wb'*, respectively.
 
 ### Return Values
 

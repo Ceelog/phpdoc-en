@@ -73,8 +73,9 @@ specified with the *SMTP* setting when sending mail with <span
 class="function">mail</span>; defaults to 25.
 
 `sendmail_from` <span class="type">string</span>  
-Which *"From:"* mail address should be used in mail sent from PHP under
-Windows. This directive also sets the *"Return-Path:"* header.
+Which *"From:"* mail address should be used in mail sent directly via
+SMTP (Windows only). This directive also sets the *"Return-Path:"*
+header.
 
 `sendmail_path` <span class="type">string</span>  
 Where the **sendmail** program can be found, usually
