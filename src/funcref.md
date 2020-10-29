@@ -93,7 +93,6 @@ Function Reference
 -   [Non-Text MIME Output](/refs/utilspec/nontext.html)
     -   [FDF](/book/fdf.html) — Forms Data Format
     -   [GnuPG](/book/gnupg.html) — GNU Privacy Guard
-    -   [PDF](/book/pdf.html)
     -   [wkhtmltox](/book/wkhtmltox.html) — wkhtmltox
     -   [PS](/book/ps.html) — PostScript document creation
     -   [RpmInfo](/book/rpminfo.html) — RpmInfo

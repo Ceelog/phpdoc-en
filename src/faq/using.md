@@ -318,7 +318,7 @@ HTML form, a Cookie, and the URL.
 
 <!-- -->
 
-**How can I generate PDF files without using the non-free and commercial libraries like <a href="/ref/pdf.html" class="link">PDFLib</a>? I'd like something that's free and doesn't require external PDF libraries.**  
+**How can I generate PDF files without using the non-free and commercial libraries like PDFLib? I'd like something that's free and doesn't require external PDF libraries.**  
 There are a few alternatives written in PHP such as
 <a href="http://www.fpdf.org/" class="link external">» FPDF</a> and
 <a href="http://www.tcpdf.org/" class="link external">» TCPDF</a>.

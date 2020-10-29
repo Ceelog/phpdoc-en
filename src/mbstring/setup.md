@@ -29,7 +29,7 @@ The following configure options are related to the *mbstring* module.
 
     <span class="productname">libmbfl</span> is necessary for
     *mbstring*. <span class="productname">libmbfl</span> is bundled with
-    *mbstring*. Before PHP 7.3.0, if <span
+    *mbstring*. Prior to PHP 7.3.0, if <span
     class="productname">libmbfl</span> is already installed on the
     system, **--with-libmbfl\[=DIR\]** can be specified to use the
     installed library.
@@ -38,16 +38,14 @@ The following configure options are related to the *mbstring* module.
     multibyte character support.
 
     <span class="productname">Oniguruma</span> is necessary for the
-    regular expression functions with multibyte character support. <span
-    class="productname">Oniguruma</span> is bundled with *mbstring*. As
-    of PHP 5.4.0, if <span class="productname">Oniguruma</span> is
-    already installed on the system, **--with-onig\[=DIR\]** can be
-    specified to use the installed library. As of PHP 7.4.0
-    **--with-onig** has been removed and pkg-config is now used to
-    detect the libonig library.
+    regular expression functions with multibyte character support. As of
+    PHP 7.4.0, pkg-config is used to detect the libonig library. Prior
+    to PHP 7.4.0, <span class="productname">Oniguruma</span> was bundled
+    with *mbstring*, but it was possible to build against an already
+    installed libonig by passing **--with-onig\[=DIR\]**.
 
-    As of PHP 5.4.0 it is possible to disable the multibyte regex
-    backtrack check by specifying **--disable-mbregex-backtrack**.
+    It is possible to disable the multibyte regex backtrack check by
+    specifying **--disable-mbregex-backtrack**.
 
 Runtime Configuration
 ---------------------

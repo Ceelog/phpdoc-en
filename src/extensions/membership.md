@@ -306,8 +306,6 @@ not documented in the PHP manual yet.
 
 -   <a href="/book/paradox.html" class="xref">Paradox</a>
 
--   <a href="/book/pdf.html" class="xref">PDF</a>
-
 -   <a href="/book/pdo.html#CUBRID%20(PDO)" class="xref"></a>
 
 -   <a href="/book/pdo.html#IBM%20(PDO)" class="xref"></a>

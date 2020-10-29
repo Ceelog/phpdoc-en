@@ -779,14 +779,10 @@ MySQL Improved Extension
         current transaction
     -   [mysqli::rollback](/set/mysqlinfo.html#mysqli::rollback) — Rolls
         back current transaction
-    -   [mysqli::rpl\_query\_type](/set/mysqlinfo.html#mysqli::rpl_query_type)
-        — Returns RPL query type
     -   [mysqli::savepoint](/set/mysqlinfo.html#mysqli::savepoint) — Set
         a named transaction savepoint
     -   [mysqli::select\_db](/set/mysqlinfo.html#mysqli::select_db) —
         Selects the default database for database queries
-    -   [mysqli::send\_query](/set/mysqlinfo.html#mysqli::send_query) —
-        Send the query and return
     -   [mysqli::set\_charset](/set/mysqlinfo.html#mysqli::set_charset)
         — Sets the default client character set
     -   [mysqli::set\_local\_infile\_default](/set/mysqlinfo.html#mysqli::set_local_infile_default)
@@ -927,14 +923,6 @@ MySQL Improved Extension
     Functions](/set/mysqlinfo.html#Aliases%20and%20deprecated%20Mysqli%20Functions)
     -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — Alias of
         mysqli::\_\_construct
-    -   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
-        — Disable reads from master
-    -   [mysqli\_disable\_rpl\_parse](/set/mysqlinfo.html#mysqli_disable_rpl_parse)
-        — Disable RPL parse
-    -   [mysqli\_enable\_reads\_from\_master](/set/mysqlinfo.html#mysqli_enable_reads_from_master)
-        — Enable reads from master
-    -   [mysqli\_enable\_rpl\_parse](/set/mysqlinfo.html#mysqli_enable_rpl_parse)
-        — Enable RPL parse
     -   [mysqli\_escape\_string](/set/mysqlinfo.html#mysqli_escape_string)
         — Alias of mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias
@@ -945,19 +933,10 @@ MySQL Improved Extension
         — Returns client per-process statistics
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
         — Return information about open and cached links
-    -   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query)
-        — Enforce execution of a query on the master in a master/slave
-        setup
     -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — Alias of
         mysqli\_driver-\>report\_mode
-    -   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
-        — Check if RPL parse is enabled
-    -   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
-        probe
     -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias
         of mysqli\_options
-    -   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
-        Force execution of a query on a slave in a master/slave setup
 -   [Changelog](/set/mysqlinfo.html#Changelog)
 
 The *mysqli* extension allows you to access the functionality provided
@@ -4580,10 +4559,6 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$name`</span> \]\]
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">savepoint</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
@@ -4591,10 +4566,6 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">select\_db</span> ( <span
 class="methodparam"><span class="type">string</span> `$dbname`</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">send\_query</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">set\_charset</span> ( <span
@@ -9173,44 +9144,6 @@ The above examples will output:
 -   <span class="function">mysqli\_autocommit</span>
 -   <span class="function">mysqli\_release\_savepoint</span>
 
-mysqli::rpl\_query\_type
-========================
-
-mysqli\_rpl\_query\_type
-========================
-
-Returns RPL query type
-
-### Description
-
-Object oriented style
-
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">mysqli::rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
-Procedural style
-
-<span class="type">int</span> <span
-class="methodname">mysqli\_rpl\_query\_type</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-Returns **`MYSQLI_RPL_MASTER`**, **`MYSQLI_RPL_SLAVE`** or
-**`MYSQLI_RPL_ADMIN`** depending on a query type. *INSERT*, *UPDATE* and
-similar are *master* queries, *SELECT* is *slave*, and *FLUSH*, *REPAIR*
-and similar are *admin*.
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
 mysqli::savepoint
 =================
 
@@ -9384,39 +9317,6 @@ The above examples will output:
 
 -   <span class="function">mysqli\_connect</span>
 -   <span class="function">mysqli\_real\_connect</span>
-
-mysqli::send\_query
-===================
-
-mysqli\_send\_query
-===================
-
-Send the query and return
-
-### Description
-
-Object oriented style
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">mysqli::send\_query</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
-
-Procedural style
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_send\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
 mysqli::set\_charset
 ====================
@@ -15896,97 +15796,6 @@ The above examples will output something similar to:
     Success: A proper connection to MySQL was made! The my_db database is great.
     Host information: localhost via TCP/IP
 
-mysqli::disable\_reads\_from\_master
-====================================
-
-mysqli\_disable\_reads\_from\_master
-====================================
-
-Disable reads from master
-
-### Description
-
-Object oriented style
-
-<span class="type">void</span> <span
-class="methodname">mysqli::disable\_reads\_from\_master</span> ( <span
-class="methodparam">void</span> )
-
-Procedural style
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_disable\_reads\_from\_master</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
-mysqli\_disable\_rpl\_parse
-===========================
-
-Disable RPL parse
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_disable\_rpl\_parse</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
-mysqli\_enable\_reads\_from\_master
-===================================
-
-Enable reads from master
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_enable\_reads\_from\_master</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
-mysqli\_enable\_rpl\_parse
-==========================
-
-Enable RPL parse
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_enable\_rpl\_parse</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
 mysqli\_escape\_string
 ======================
 
@@ -16245,28 +16054,6 @@ persistent connections.
 An <span class="type">integer</span> representing the number of inactive
 persistent connections.
 
-mysqli\_master\_query
-=====================
-
-Enforce execution of a query on the master in a master/slave setup
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_master\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
 mysqli\_report
 ==============
 
@@ -16277,46 +16064,6 @@ Alias of
 
 This function is an alias of:
 <a href="/set/mysqlinfo.html#mysqli_driver::$report_mode" class="link">mysqli_driver-&gt;report_mode</a>
-
-mysqli\_rpl\_parse\_enabled
-===========================
-
-Check if RPL parse is enabled
-
-### Description
-
-<span class="type">int</span> <span
-class="methodname">mysqli\_rpl\_parse\_enabled</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
-mysqli\_rpl\_probe
-==================
-
-RPL probe
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_rpl\_probe</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
 mysqli::set\_opt
 ================
@@ -16331,40 +16078,10 @@ Alias of <span class="function">mysqli\_options</span>
 This function is an alias of: <span
 class="function">mysqli\_options</span>.
 
-mysqli\_slave\_query
-====================
-
-Force execution of a query on a slave in a master/slave setup
-
-### Description
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_slave\_query</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$query`</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-**Warning**
-
-This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
-
 **Table of Contents**
 
 -   [mysqli\_connect](/set/mysqlinfo.html#mysqli_connect) — Alias of
     mysqli::\_\_construct
--   [mysqli::disable\_reads\_from\_master](/set/mysqlinfo.html#mysqli::disable_reads_from_master)
-    — Disable reads from master
--   [mysqli\_disable\_rpl\_parse](/set/mysqlinfo.html#mysqli_disable_rpl_parse)
-    — Disable RPL parse
--   [mysqli\_enable\_reads\_from\_master](/set/mysqlinfo.html#mysqli_enable_reads_from_master)
-    — Enable reads from master
--   [mysqli\_enable\_rpl\_parse](/set/mysqlinfo.html#mysqli_enable_rpl_parse)
-    — Enable RPL parse
 -   [mysqli\_escape\_string](/set/mysqlinfo.html#mysqli_escape_string) —
     Alias of mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias for
@@ -16375,18 +16092,10 @@ This function has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
     — Returns client per-process statistics
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
     — Return information about open and cached links
--   [mysqli\_master\_query](/set/mysqlinfo.html#mysqli_master_query) —
-    Enforce execution of a query on the master in a master/slave setup
 -   [mysqli\_report](/set/mysqlinfo.html#mysqli_report) — Alias of
     mysqli\_driver-\>report\_mode
--   [mysqli\_rpl\_parse\_enabled](/set/mysqlinfo.html#mysqli_rpl_parse_enabled)
-    — Check if RPL parse is enabled
--   [mysqli\_rpl\_probe](/set/mysqlinfo.html#mysqli_rpl_probe) — RPL
-    probe
 -   [mysqli::set\_opt](/set/mysqlinfo.html#mysqli::set_opt) — Alias of
     mysqli\_options
--   [mysqli\_slave\_query](/set/mysqlinfo.html#mysqli_slave_query) —
-    Force execution of a query on a slave in a master/slave setup
 
 Changelog
 =========
