@@ -30,8 +30,6 @@ readability reasons:
 
 -   <span class="simpara"> <span class="type">mixed</span> </span>
 -   <span class="simpara"> <span class="type">number</span> </span>
--   <span class="simpara"> <span class="type">array\|object</span>
-    </span>
 -   <span class="simpara"> <span class="type">void</span> </span>
 
 And the pseudo-variable `$...`.

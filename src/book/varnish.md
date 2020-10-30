@@ -137,7 +137,8 @@ class="methodparam"><span class="type">string</span> `$ident`</span> )
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">setParam</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> , <span
-class="methodparam"><span class="type">string\|integer</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -445,7 +446,8 @@ Set configuration param on the current varnish instance
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">VarnishAdmin::setParam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string\|integer</span>
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$value`</span> )
 
 ### Parameters

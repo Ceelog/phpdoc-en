@@ -2346,12 +2346,12 @@ parameter.
 </tr>
 <tr class="even">
 <td>w</td>
-<td><span class="type">integer|string</span></td>
+<td><span class="type"><span class="type">int</span><span class="type">string</span></span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">w</code> parameter. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p></td>
 </tr>
 <tr class="odd">
 <td>wTimeoutMS</td>
-<td><span class="type">integer|string</span></td>
+<td><span class="type"><span class="type">int</span><span class="type">string</span></span></td>
 <td><p>Corresponds to the default write concern's <code class="parameter">wtimeout</code> parameter. Specifies a time limit, in milliseconds, for the write concern. For details, see <span class="classname">MongoDB\Driver\WriteConcern</span>.</p>
 <p>If specified, <em>wTimeoutMS</em> must be a signed 32-bit integer greater than or equal to zero.</p></td>
 </tr>
@@ -4240,7 +4240,8 @@ Class synopsis
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$document`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$commandOptions`</span> \] )
 
@@ -4375,7 +4376,8 @@ Create a new Command
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">MongoDB\\Driver\\Command::\_\_construct</span>
-( <span class="methodparam"><span class="type">array\|object</span>
+( <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$document`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$commandOptions`</span> \] )
 
@@ -4545,7 +4547,8 @@ Class synopsis
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$queryOptions`</span> \] )
 
@@ -4560,7 +4563,8 @@ Create a new Query
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">MongoDB\\Driver\\Query::\_\_construct</span> (
-<span class="methodparam"><span class="type">array\|object</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$queryOptions`</span> \] )
 
@@ -4571,7 +4575,7 @@ class="methodname">MongoDB\\Driver\\Manager::executeQuery</span>.
 
 ### Parameters
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -4630,7 +4634,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
@@ -4656,7 +4660,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>hint</td>
-<td><span class="type">string|array|object</span></td>
+<td><span class="type"><span class="type">string</span><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p>
 <p>Falls back to the deprecated <em>"hint"</em> option if not specified.</p></td>
 </tr>
@@ -4668,7 +4672,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>max</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>The <em>exclusive</em> upper bound for a specific index.</p>
 <p>Falls back to the deprecated <em>"$max"</em> modifier if not specified.</p></td>
 </tr>
@@ -4695,7 +4699,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>min</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>The <em>inclusive</em> lower bound for a specific index.</p>
 <p>Falls back to the deprecated <em>"$min"</em> modifier if not specified.</p></td>
 </tr>
@@ -4724,7 +4728,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>projection</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>The <a href="https://docs.mongodb.com/manual/tutorial/project-fields-from-query-results/" class="link external">» projection specification</a> to determine which fields to include in the returned documents.</p>
 <p>If you are using the <a href="/set/mongodb.html#Deserialization%20from%20BSON" class="link">ODM functionality</a> to deserialise documents as their original PHP class, make sure that you include the <span class="property">__pclass</span> field in the projection. This is required for the deserialization to work and without it, the driver will return (by default) a <span class="classname">stdClass</span> object instead.</p></td>
 </tr>
@@ -4773,7 +4777,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="odd">
 <td>sort</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>The sort specification for the ordering of the results.</p>
 <p>Falls back to the deprecated <em>"$orderby"</em> modifier if not specified.</p></td>
 </tr>
@@ -4916,18 +4920,22 @@ class="methodname">count</span> ( <span class="methodparam">void</span>
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">delete</span> ( <span class="methodparam"><span
-class="type">array\|object</span> `$filter`</span> \[, <span
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$filter`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$deleteOptions`</span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">insert</span> ( <span class="methodparam"><span
-class="type">array\|object</span> `$document`</span> )
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$document`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">update</span> ( <span class="methodparam"><span
-class="type">array\|object</span> `$filter`</span> , <span
-class="methodparam"><span class="type">array\|object</span>
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$filter`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$newObj`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$updateOptions`</span> \] )
 
@@ -5265,7 +5273,8 @@ Add a delete operation to the bulk
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">MongoDB\\Driver\\BulkWrite::delete</span> (
-<span class="methodparam"><span class="type">array\|object</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$filter`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$deleteOptions`</span> \] )
 
@@ -5274,7 +5283,7 @@ class="classname">MongoDB\\Driver\\BulkWrite</span>.
 
 ### Parameters
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -5313,7 +5322,7 @@ An empty predicate will match all documents in the collection.
 <tbody>
 <tr class="odd">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
@@ -5321,7 +5330,7 @@ An empty predicate will match all documents in the collection.
 </tr>
 <tr class="even">
 <td>hint</td>
-<td><span class="type">string|array|object</span></td>
+<td><span class="type"><span class="type">string</span><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p>
 <p>This option is available in MongoDB 4.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
 <td></td>
@@ -5385,7 +5394,8 @@ Add an insert operation to the bulk
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">MongoDB\\Driver\\BulkWrite::insert</span> (
-<span class="methodparam"><span class="type">array\|object</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$document`</span> )
 
 Adds an insert operation to the <span
@@ -5393,7 +5403,7 @@ class="classname">MongoDB\\Driver\\BulkWrite</span>.
 
 ### Parameters
 
-`document` (<span class="type">array\|object</span>)  
+`document` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 A document to insert.
 
 ### Return Values
@@ -5467,18 +5477,19 @@ Add an update operation to the bulk
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">MongoDB\\Driver\\BulkWrite::update</span> (
-<span class="methodparam"><span class="type">array\|object</span>
-`$filter`</span> , <span class="methodparam"><span
-class="type">array\|object</span> `$newObj`</span> \[, <span
-class="methodparam"><span class="type">array</span>
-`$updateOptions`</span> \] )
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
+`$filter`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
+`$newObj`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$updateOptions`</span> \] )
 
 Adds an update operation to the <span
 class="classname">MongoDB\\Driver\\BulkWrite</span>.
 
 ### Parameters
 
-`filter` (<span class="type">array\|object</span>)  
+`filter` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 The
 <a href="https://docs.mongodb.com/manual/tutorial/query-documents/" class="link external">» query predicate</a>.
 An empty predicate will match all documents in the collection.
@@ -5497,7 +5508,7 @@ An empty predicate will match all documents in the collection.
 > <a href="https://docs.mongodb.com/manual/reference/object-id/" class="link external">» ObjectId</a>).
 > </span>
 
-`newObj` (<span class="type">array\|object</span>)  
+`newObj` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 A document containing either update operators (e.g. *$set*), a
 replacement document (i.e. *only* *field:value* expressions), or an
 <a href="https://docs.mongodb.com/manual/reference/command/update/#update-with-an-aggregation-pipeline" class="link external">» aggregation pipeline</a>.
@@ -5529,7 +5540,7 @@ replacement document (i.e. *only* *field:value* expressions), or an
 </tr>
 <tr class="even">
 <td>collation</td>
-<td><span class="type">array|object</span></td>
+<td><span class="type"><span class="type">array</span><span class="type">object</span></span></td>
 <td><p><a href="https://docs.mongodb.com/master/reference/collation/" class="link external">» Collation</a> allows users to specify language-specific rules for string comparison, such as rules for lettercase and accent marks. When specifying collation, the <em>"locale"</em> field is mandatory; all other collation fields are optional. For descriptions of the fields, see <a href="https://docs.mongodb.com/master/reference/collation/#collation-document" class="link external">» Collation Document</a>.</p>
 <p>If the collation is unspecified but the collection has a default collation, the operation uses the collation specified for the collection. If no collation is specified for the collection or for the operation, MongoDB uses the simple binary comparison used in prior versions for string comparisons.</p>
 <p>This option is available in MongoDB 3.4+ and will result in an exception at execution time if specified for an older server version.</p></td>
@@ -5537,7 +5548,7 @@ replacement document (i.e. *only* *field:value* expressions), or an
 </tr>
 <tr class="odd">
 <td>hint</td>
-<td><span class="type">string|array|object</span></td>
+<td><span class="type"><span class="type">string</span><span class="type">array</span><span class="type">object</span></span></td>
 <td><p>Index specification. Specify either the index name as a string or the index key pattern. If specified, then the query system will only consider plans using the hinted index.</p>
 <p>This option is available in MongoDB 4.2+ and will result in an exception at execution time if specified for an older server version.</p></td>
 <td></td>
@@ -5653,7 +5664,8 @@ class="methodparam">void</span> )
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
 class="methodname">advanceClusterTime</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$clusterTime`</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
@@ -5679,7 +5691,8 @@ class="methodname">endSession</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">getClusterTime</span> ( <span
 class="methodparam">void</span> )
 
@@ -5689,17 +5702,22 @@ class="methodname">getLogicalSessionId</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\BSON\\Timestamp\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\BSON\\Timestamp</span><span
+class="type">null</span></span> <span
 class="methodname">getOperationTime</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\Driver\\Server\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\Driver\\Server</span><span
+class="type">null</span></span> <span
 class="methodname">getServer</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">array\|null</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">getTransactionOptions</span> ( <span
 class="methodparam">void</span> )
 
@@ -5794,7 +5812,8 @@ Advances the cluster time for this session
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
 class="methodname">MongoDB\\Driver\\Session::advanceClusterTime</span> (
-<span class="methodparam"><span class="type">array\|object</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$clusterTime`</span> )
 
 Advances the cluster time for this session. If the cluster time is less
@@ -6016,7 +6035,8 @@ Returns the cluster time for this session
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\Session::getClusterTime</span> (
 <span class="methodparam">void</span> )
 
@@ -6082,7 +6102,9 @@ Returns the operation time for this session
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\BSON\\Timestamp\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\BSON\\Timestamp</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\Session::getOperationTime</span> (
 <span class="methodparam">void</span> )
 
@@ -6119,7 +6141,9 @@ Returns the server to which this session is pinned
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\Driver\\Server\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\Driver\\Server</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\Session::getServer</span> ( <span
 class="methodparam">void</span> )
 
@@ -6157,7 +6181,8 @@ Returns options for the currently running transaction
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">array\|null</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\Session::getTransactionOptions</span>
 ( <span class="methodparam">void</span> )
 
@@ -6650,22 +6675,26 @@ class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">string\|integer</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$w`</span> \[, <span class="methodparam"><span class="type">int</span>
 `$wtimeout`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$journal`</span> \]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">boolean\|null</span> <span
+<span class="type"><span class="type">boolean</span><span
+class="type">null</span></span> <span
 class="methodname">getJournal</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">string\|integer\|null</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">integer</span><span class="type">null</span></span> <span
 class="methodname">getW</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int\|MongoDB\\BSON\\Int64</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">MongoDB\\BSON\\Int64</span></span> <span
 class="methodname">getWtimeout</span> ( <span
 class="methodparam">void</span> )
 
@@ -6797,7 +6826,8 @@ Create a new WriteConcern
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span
 class="methodname">MongoDB\\Driver\\WriteConcern::\_\_construct</span> (
-<span class="methodparam"><span class="type">string\|integer</span>
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$w`</span> \[, <span class="methodparam"><span class="type">int</span>
 `$wtimeout`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$journal`</span> \]\] )
@@ -6913,7 +6943,8 @@ Returns the WriteConcern's "journal" option
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">boolean\|null</span> <span
+<span class="type"><span class="type">boolean</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcern::getJournal</span> (
 <span class="methodparam">void</span> )
 
@@ -6970,7 +7001,8 @@ Returns the WriteConcern's "w" option
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">string\|integer\|null</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">integer</span><span class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcern::getW</span> ( <span
 class="methodparam">void</span> )
 
@@ -7022,7 +7054,8 @@ Returns the WriteConcern's "wtimeout" option
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">int\|MongoDB\\BSON\\Int64</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">MongoDB\\BSON\\Int64</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcern::getWtimeout</span> (
 <span class="methodparam">void</span> )
 
@@ -7306,7 +7339,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">string\|integer</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$tagSets`<span class="initializer"> =
 **`NULL`**</span></span> \[, <span class="methodparam"><span
@@ -7314,9 +7348,9 @@ class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \]\] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
-class="methodname">getHedge</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span class="methodname">getHedge</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">int</span> <span
@@ -7578,7 +7612,8 @@ Create a new ReadPreference
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span
 class="methodname">MongoDB\\Driver\\ReadPreference::\_\_construct</span>
-( <span class="methodparam"><span class="type">string\|integer</span>
+( <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$tagSets`<span class="initializer"> =
 **`NULL`**</span></span> \[, <span class="methodparam"><span
@@ -7634,7 +7669,7 @@ lowest network latency. This member may be a primary or secondary.
 <tbody>
 <tr class="odd">
 <td>hedge</td>
-<td><span class="type">object|array</span></td>
+<td><span class="type"><span class="type">object</span><span class="type">array</span></span></td>
 <td><p>Specifies whether to use <a href="https://docs.mongodb.com/manual/core/sharded-cluster-query-router/#mongos-hedged-reads" class="link external">» hedged reads</a>, which are supported by MongoDB 4.4+ for sharded queries.</p>
 <p>Server hedged reads are available for all non-primary read preferences and are enabled by default when using the <em>"nearest"</em> mode. This option allows explicitly enabling server hedged reads for non-primary read preferences by specifying <em>['enabled' =&gt; true]</em>, or explicitly disabling server hedged reads for the <em>"nearest"</em> read preference by specifying <em>['enabled' =&gt; false]</em>.</p></td>
 </tr>
@@ -7744,7 +7779,8 @@ Returns the ReadPreference's "hedge" option
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\ReadPreference::getHedge</span> (
 <span class="methodparam">void</span> )
 
@@ -8196,9 +8232,9 @@ class="methodparam"><span class="type">string</span> `$level`</span> \]
 )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">string\|null</span> <span
-class="methodname">getLevel</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span class="methodname">getLevel</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">bool</span> <span class="methodname">isDefault</span>
@@ -8460,7 +8496,8 @@ Returns the ReadConcern's "level" option
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">string\|null</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\ReadConcern::getLevel</span> ( <span
 class="methodparam">void</span> )
 
@@ -11286,9 +11323,9 @@ Class synopsis
 <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
-class="methodname">getInfo</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span class="methodname">getInfo</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -11364,7 +11401,8 @@ Returns metadata document for the WriteConcernError
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteConcernError::getInfo</span> (
 <span class="methodparam">void</span> )
 
@@ -11505,9 +11543,9 @@ Class synopsis
 <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
-class="methodname">getInfo</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span class="methodname">getInfo</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">string</span> <span
@@ -11637,7 +11675,8 @@ Returns metadata document for the WriteError
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteError::getInfo</span> ( <span
 class="methodparam">void</span> )
 
@@ -11730,22 +11769,26 @@ Class synopsis
 /\* Methods \*/
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">getDeletedCount</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">getInsertedCount</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">getMatchedCount</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">getModifiedCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -11755,7 +11798,8 @@ class="methodname">getServer</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">getUpsertedCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -11765,7 +11809,9 @@ class="methodname">getUpsertedIds</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\Driver\\WriteConcernError\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\Driver\\WriteConcernError</span><span
+class="type">null</span></span> <span
 class="methodname">getWriteConcernError</span> ( <span
 class="methodparam">void</span> )
 
@@ -11789,7 +11835,8 @@ Returns the number of documents deleted
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getDeletedCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -11850,7 +11897,8 @@ Returns the number of documents inserted (excluding upserts)
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getInsertedCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -11911,7 +11959,8 @@ Returns the number of documents selected for update
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getMatchedCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -11979,7 +12028,8 @@ Returns the number of existing documents updated
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getModifiedCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -12112,7 +12162,8 @@ Returns the number of documents inserted by an upsert
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">integer\|null</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getUpsertedCount</span>
 ( <span class="methodparam">void</span> )
 
@@ -12251,7 +12302,9 @@ Returns any write concern error that occurred
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">MongoDB\\Driver\\WriteConcernError\|null</span> <span
+<span class="type"><span
+class="type">MongoDB\\Driver\\WriteConcernError</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\Driver\\WriteResult::getWriteConcernError</span>
 ( <span class="methodparam">void</span> )
 
@@ -12866,7 +12919,8 @@ Returns the BSON representation of a PHP value
 
 <span class="type">string</span> <span
 class="methodname">MongoDB\\BSON\\fromPHP</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$value`</span> )
 
 Serializes a PHP array or object (e.g. document) to its
@@ -12876,7 +12930,7 @@ document.
 
 ### Parameters
 
-`value` (<span class="type">array\|object</span>)  
+`value` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 PHP value to be serialized.
 
 ### Return Values
@@ -13167,7 +13221,8 @@ Returns the PHP representation of a BSON value
 
 ### Description
 
-<span class="type">array\|object</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">object</span></span> <span
 class="methodname">MongoDB\\BSON\\toPHP</span> ( <span
 class="methodparam"><span class="type">string</span> `$bson`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -14193,7 +14248,8 @@ class="interfacename">JsonSerializable</span> </span> {
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$code`</span> \[,
-<span class="methodparam"><span class="type">array\|object</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$scope`</span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
@@ -14201,9 +14257,9 @@ class="methodparam"><span class="type">string</span> `$code`</span> \[,
 ( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
-class="methodname">getScope</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span class="methodname">getScope</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">mixed</span> <span
@@ -14245,15 +14301,16 @@ Construct a new Javascript
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">MongoDB\\BSON\\Javascript::\_\_construct</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$code`</span> \[, <span class="methodparam"><span
-class="type">array\|object</span> `$scope`</span> \] )
+`$code`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
+`$scope`</span> \] )
 
 ### Parameters
 
 `code` (<span class="type">string</span>)  
 Javascript code.
 
-`scope` (<span class="type">array\|object</span>)  
+`scope` (<span class="type"><span class="type">array</span><span class="type">object</span></span>)  
 Javascript scope.
 
 ### Errors/Exceptions
@@ -14368,7 +14425,8 @@ Returns the Javascript's scope document
 ### Description
 
 <span class="modifier">final</span> <span class="modifier">public</span>
-<span class="type">object\|null</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">null</span></span> <span
 class="methodname">MongoDB\\BSON\\Javascript::getScope</span> ( <span
 class="methodparam">void</span> )
 
@@ -16254,10 +16312,11 @@ class="interfacename">JsonSerializable</span> </span> {
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span
-class="type">integer\|float\|string\|DateTimeInterface</span>
-`$milliseconds`<span class="initializer"> = **`NULL`**</span></span> \]
-)
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span><span
+class="type">string</span><span
+class="type">DateTimeInterface</span></span> `$milliseconds`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">mixed</span> <span
@@ -16304,14 +16363,15 @@ Construct a new UTCDateTime
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span
 class="methodname">MongoDB\\BSON\\UTCDateTime::\_\_construct</span> (\[
-<span class="methodparam"><span
-class="type">integer\|float\|string\|DateTimeInterface</span>
-`$milliseconds`<span class="initializer"> = **`NULL`**</span></span> \]
-)
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span><span
+class="type">string</span><span
+class="type">DateTimeInterface</span></span> `$milliseconds`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 ### Parameters
 
-`milliseconds` (<span class="type">integer\|float\|string\|DateTimeInterface</span>)  
+`milliseconds` (<span class="type"><span class="type">int</span><span class="type">float</span><span class="type">string</span><span class="type">DateTimeInterface</span></span>)  
 Number of milliseconds since the Unix epoch (Jan 1, 1970). Negative
 values represent dates before 1970. This value may be provided as a
 64-bit <span class="type">integer</span>. For compatibility on 32-bit
@@ -16664,8 +16724,8 @@ class="interfacename">MongoDB\\BSON\\Serializable</span> </span> {
 /\* Inherited methods \*/
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">array\|object</span>
-<span
+class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">object</span></span> <span
 class="methodname">MongoDB\\BSON\\Serializable::bsonSerialize</span> (
 <span class="methodparam">void</span> )
 
@@ -16695,8 +16755,9 @@ class="interfacename">MongoDB\\BSON\\Type</span> </span> {
 /\* Methods \*/
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">array\|object</span>
-<span class="methodname">bsonSerialize</span> ( <span
+class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">object</span></span> <span
+class="methodname">bsonSerialize</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -16709,8 +16770,8 @@ Provides an array or document to serialize as BSON
 ### Description
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">array\|object</span>
-<span
+class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">object</span></span> <span
 class="methodname">MongoDB\\BSON\\Serializable::bsonSerialize</span> (
 <span class="methodparam">void</span> )
 
@@ -17145,8 +17206,9 @@ class="methodname">getCode</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">object\|null</span>
-<span class="methodname">getScope</span> ( <span
+class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">getScope</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
@@ -17188,8 +17250,8 @@ Returns the JavascriptInterface's scope document
 ### Description
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">object\|null</span>
-<span
+class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
 class="methodname">MongoDB\\BSON\\JavascriptInterface::getScope</span> (
 <span class="methodparam">void</span> )
 
@@ -19825,8 +19887,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -19917,8 +19980,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 <span class="modifier">protected</span> <span
 class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20016,8 +20080,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20146,8 +20211,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20239,8 +20305,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20328,8 +20395,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20435,8 +20503,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20692,8 +20761,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 /\* Inherited properties \*/
 
@@ -20842,8 +20912,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -20937,8 +21008,9 @@ class="interfacename">MongoDB\\Driver\\Exception\\Exception</span>
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;
@@ -21114,8 +21186,9 @@ class="type">MongoDB\\Driver\\WriteResult</span> `$writeResult` ;
 
 /\* Inherited properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">array\|null</span> `$errorLabels` ;
+<span class="modifier">protected</span> <span class="type"><span
+class="type">array</span><span class="type">null</span></span>
+`$errorLabels` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$message` ;

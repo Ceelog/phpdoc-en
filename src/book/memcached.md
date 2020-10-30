@@ -330,8 +330,9 @@ class="methodparam"><span class="type">string</span>
 <span class="methodname">getServerList</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getStats</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getStats</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -2362,8 +2363,9 @@ Get server pool statistics
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::getStats</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::getStats</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">Memcached::getStats</span> returns an array
@@ -2377,7 +2379,8 @@ This function has no parameters.
 
 ### Return Values
 
-Array of server statistics, one entry per server.
+Array of server statistics, one entry per server, or **`FALSE`** on
+failure.
 
 ### Examples
 

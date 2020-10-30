@@ -3575,7 +3575,8 @@ class="type">array</span> `$driver_options`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">close</span> (\[ <span
-class="methodparam"><span class="type">boolean\|string</span>
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">string</span></span>
 `$connection`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -3611,7 +3612,8 @@ class="methodparam">void</span> )
 <span class="methodname">killCursor</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_hash`</span> , <span class="methodparam"><span
-class="type">int\|MongoInt64</span> `$id`</span> )
+class="type"><span class="type">int</span><span
+class="type">MongoInt64</span></span> `$id`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">listDBs</span> ( <span
@@ -3730,7 +3732,8 @@ Closes this connection
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoClient::close</span> (\[ <span
-class="methodparam"><span class="type">boolean\|string</span>
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">string</span></span>
 `$connection`</span> \] )
 
 The <span class="function">MongoClient::close</span> method forcefully
@@ -4809,7 +4812,8 @@ used. There is no equivalent for this method in the new extension.
 <span class="methodname">MongoClient::killCursor</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_hash`</span> , <span class="methodparam"><span
-class="type">int\|MongoInt64</span> `$id`</span> )
+class="type"><span class="type">int</span><span
+class="type">MongoInt64</span></span> `$id`</span> )
 
 In certain situations it might be needed to kill a cursor on the server.
 Usually cursors time out after 10 minutes of inactivity, but it is
@@ -7672,7 +7676,8 @@ class="methodparam"><span class="type">array</span> `$keys`</span> \[,
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">deleteIndex</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$keys`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -7691,7 +7696,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ensureIndex</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$key|keys`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \] )
@@ -7759,12 +7765,13 @@ class="methodparam"><span class="type">array</span> `$initial`</span> ,
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \] )
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span class="methodname">insert</span> (
-<span class="methodparam"><span class="type">array\|object</span>
-`$document`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$options`<span class="initializer"> =
-array()</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
+class="methodname">insert</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$document`</span> \[, <span
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = array()</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">array\[MongoCommandCursor\]</span> <span
@@ -7772,16 +7779,18 @@ class="methodname">parallelCollectionScan</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_cursors`</span>
 )
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span class="methodname">remove</span>
-(\[ <span class="methodparam"><span class="type">array</span>
-`$criteria`<span class="initializer"> = array()</span></span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`<span
-class="initializer"> = array()</span></span> \]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
+class="methodname">remove</span> (\[ <span class="methodparam"><span
+class="type">array</span> `$criteria`<span class="initializer"> =
+array()</span></span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+array()</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">save</span> ( <span class="methodparam"><span
-class="type">array\|object</span> `$document`</span> \[, <span
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$document`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`<span
 class="initializer"> = array()</span></span> \] )
 
@@ -7811,13 +7820,13 @@ class="type">string</span> <span class="methodname">toIndexString</span>
 <span class="methodname">\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span class="methodname">update</span> (
-<span class="methodparam"><span class="type">array</span>
-`$criteria`</span> , <span class="methodparam"><span
-class="type">array</span> `$new_object`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`<span
-class="initializer"> = array()</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
+class="methodname">update</span> ( <span class="methodparam"><span
+class="type">array</span> `$criteria`</span> , <span
+class="methodparam"><span class="type">array</span> `$new_object`</span>
+\[, <span class="methodparam"><span class="type">array</span>
+`$options`<span class="initializer"> = array()</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">validate</span> (\[ <span
@@ -9289,7 +9298,8 @@ Deletes an index from this collection
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">MongoCollection::deleteIndex</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$keys`</span> )
 
 This method is identical to:
@@ -9606,7 +9616,8 @@ Creates an index on the specified field(s) if it does not already exist
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoCollection::ensureIndex</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$key|keys`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \] )
@@ -11174,10 +11185,11 @@ Inserts a document into the collection
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
 class="methodname">MongoCollection::insert</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$document`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \] )
@@ -11591,8 +11603,8 @@ Remove records from this collection
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
 class="methodname">MongoCollection::remove</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$criteria`<span
 class="initializer"> = array()</span></span> \[, <span
@@ -11804,7 +11816,8 @@ Saves a document to this collection
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">MongoCollection::save</span> ( <span
-class="methodparam"><span class="type">array\|object</span>
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$document`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \] )
@@ -12267,8 +12280,8 @@ Update records based on a given criteria
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
 class="methodname">MongoCollection::update</span> ( <span
 class="methodparam"><span class="type">array</span> `$criteria`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -12799,9 +12812,9 @@ class="type">MongoCursor</span> <span class="methodname">immortal</span>
 <span class="methodname">info</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">string\|int</span> <span class="methodname">key</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">int</span></span> <span
+class="methodname">key</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">limit</span> (
@@ -13926,8 +13939,8 @@ Returns the current result's \_id, or its index within the result set
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">string\|int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">int</span></span> <span
 class="methodname">MongoCursor::key</span> ( <span
 class="methodparam">void</span> )
 
@@ -16364,8 +16377,9 @@ Class synopsis
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string\|MongoId</span> `$id`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">MongoId</span></span>
+`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -16436,8 +16450,9 @@ Creates a new id
 
 <span class="modifier">public</span> <span
 class="methodname">MongoId::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string\|MongoId</span> `$id`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">MongoId</span></span>
+`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 ### Parameters
 
@@ -18525,9 +18540,10 @@ class="methodparam"><span class="type">MongoDB</span> `$db`</span> \[,
 class="methodparam"><span class="type">mixed</span> `$chunks`<span
 class="initializer"> = "fs"</span></span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span class="methodname">delete</span> (
-<span class="methodparam"><span class="type">mixed</span> `$id`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
+class="methodname">delete</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$id`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">drop</span> ( <span
@@ -18562,12 +18578,13 @@ class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`<span
 class="initializer"> = array()</span></span> \]\] )
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span class="methodname">remove</span>
-(\[ <span class="methodparam"><span class="type">array</span>
-`$criteria`<span class="initializer"> = array()</span></span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`<span
-class="initializer"> = array()</span></span> \]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
+class="methodname">remove</span> (\[ <span class="methodparam"><span
+class="type">array</span> `$criteria`<span class="initializer"> =
+array()</span></span> \[, <span class="methodparam"><span
+class="type">array</span> `$options`<span class="initializer"> =
+array()</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">storeBytes</span> ( <span
@@ -18579,7 +18596,8 @@ class="initializer"> = array()</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">storeFile</span> ( <span
-class="methodparam"><span class="type">string\|resource</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">resource</span></span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$metadata`<span class="initializer"> =
 array()</span></span> \[, <span class="methodparam"><span
@@ -18646,8 +18664,8 @@ Remove a file and its chunks from the database
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
 class="methodname">MongoGridFS::delete</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$id`</span> )
 
@@ -18900,8 +18918,8 @@ Remove files and their chunks from the database
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">bool\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">bool</span><span class="type">array</span></span> <span
 class="methodname">MongoGridFS::remove</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$criteria`<span
 class="initializer"> = array()</span></span> \[, <span
@@ -19039,7 +19057,8 @@ Stores a file in the database
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">MongoGridFS::storeFile</span> ( <span
-class="methodparam"><span class="type">string\|resource</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">resource</span></span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$metadata`<span class="initializer"> =
 array()</span></span> \[, <span class="methodparam"><span
@@ -21308,7 +21327,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoClient::close</span> (\[ <span
-class="methodparam"><span class="type">boolean\|string</span>
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">string</span></span>
 `$connection`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -21344,7 +21364,8 @@ class="methodparam">void</span> )
 <span class="methodname">MongoClient::killCursor</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_hash`</span> , <span class="methodparam"><span
-class="type">int\|MongoInt64</span> `$id`</span> )
+class="type"><span class="type">int</span><span
+class="type">MongoInt64</span></span> `$id`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">MongoClient::listDBs</span> ( <span

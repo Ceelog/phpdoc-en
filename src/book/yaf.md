@@ -5535,7 +5535,8 @@ class="methodparam"><span class="type">mixed</span> `$prefix`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">registerNamespace</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$namespaces`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$path`</span> \] )
 
@@ -5879,7 +5880,8 @@ Register namespace with searching path
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Yaf\_Loader::registerNamespace</span> ( <span
-class="methodparam"><span class="type">string\|array</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$namespaces`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$path`</span> \] )
 

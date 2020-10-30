@@ -57,8 +57,9 @@ class="methodparam"><span class="type">array</span> `$settings`</span>
 <span class="methodname">add</span> ( <span class="methodparam"><span
 class="type">wkhtmltox\\PDF\\Object</span> `$object`</span> )
 
-<span class="modifier">public</span> <span class="type">?string</span>
-<span class="methodname">convert</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">convert</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -285,9 +286,10 @@ Perform PDF conversion
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">?string</span>
-<span class="methodname">wkhtmltox\\PDF\\Converter::convert</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">wkhtmltox\\PDF\\Converter::convert</span> ( <span
+class="methodparam">void</span> )
 
 Performs conversion of all previously added Objects
 
@@ -733,8 +735,9 @@ class="methodparam"><span class="type">string</span> `$buffer`</span>
 
 /\* Methods \*/
 
-<span class="modifier">public</span> <span class="type">?string</span>
-<span class="methodname">convert</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">convert</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1033,9 +1036,10 @@ Perform Image conversion
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">?string</span>
-<span class="methodname">wkhtmltox\\Image\\Converter::convert</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">wkhtmltox\\Image\\Converter::convert</span> ( <span
+class="methodparam">void</span> )
 
 Performs conversion of the input buffer
 

@@ -14981,7 +14981,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">get</span> ( <span class="methodparam"><span
-class="type">string\|int</span> `$index`</span> \[, <span
+class="type"><span class="type">string</span><span
+class="type">int</span></span> `$index`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$fallback`<span
 class="initializer"> = **`TRUE`**</span></span> \] )
 
@@ -15300,7 +15301,8 @@ Object oriented style
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">ResourceBundle::get</span> ( <span
-class="methodparam"><span class="type">string\|int</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$index`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$fallback`<span class="initializer"> =
 **`TRUE`**</span></span> \] )
@@ -15310,7 +15312,8 @@ Procedural style
 <span class="type">mixed</span> <span
 class="methodname">resourcebundle\_get</span> ( <span
 class="methodparam"><span class="type">ResourceBundle</span> `$r`</span>
-, <span class="methodparam"><span class="type">string\|int</span>
+, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
 `$index`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$fallback`<span class="initializer"> =
 **`TRUE`**</span></span> \] )

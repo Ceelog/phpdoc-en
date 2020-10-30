@@ -400,7 +400,8 @@ Installs a signal handler
 <span class="type">bool</span> <span
 class="methodname">pcntl\_signal</span> ( <span
 class="methodparam"><span class="type">int</span> `$signo`</span> ,
-<span class="methodparam"><span class="type">callable\|int</span>
+<span class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">int</span></span>
 `$handler`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$restart_syscalls`<span class="initializer"> =
 **`TRUE`**</span></span> \] )

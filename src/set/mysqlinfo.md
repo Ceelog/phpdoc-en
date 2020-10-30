@@ -4805,7 +4805,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 > **Note**:
 >
-> This function doesn't work with non transactional table types (like
+> This function does not work with non transactional table types (like
 > MyISAM or ISAM).
 
 ### Examples
@@ -4817,55 +4817,138 @@ Object oriented style
 
 ``` php
 <?php
+
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
 $mysqli = new mysqli("localhost", "my_user", "my_password", "world");
 
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
+/* The table engine has to support transactions */
+$mysqli->query("CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
 
-/* turn autocommit on */
-$mysqli->autocommit(TRUE);
+/* Turn autocommit off */
+$mysqli->autocommit(false);
 
-if ($result = $mysqli->query("SELECT @@autocommit")) {
+$result = $mysqli->query("SELECT @@autocommit");
+$row = $result->fetch_row();
+printf("Autocommit is %s\n", $row[0]);
+
+try {
+    /* Prepare insert statement */
+    $stmt = $mysqli->prepare('INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    $stmt->bind_param('ss', $language_code, $native_speakers);
+
+    /* Insert some values */
+    $language_code = 'DE';
+    $native_speakers = 50_123_456;
+    $stmt->execute();
+    $language_code = 'FR';
+    $native_speakers = 40_546_321;
+    $stmt->execute();
+
+    /* Commit the data in the database. This doesn't set autocommit=true */
+    $mysqli->commit();
+    print "Committed 2 rows in the database\n";
+
+    $result = $mysqli->query("SELECT @@autocommit");
     $row = $result->fetch_row();
     printf("Autocommit is %s\n", $row[0]);
-    $result->free();
-}
 
-/* close connection */
-$mysqli->close();
-?>
+    /* Try to insert more values */
+    $language_code = 'PL';
+    $native_speakers = 30_555_444;
+    $stmt->execute();
+    $language_code = 'DK';
+    $native_speakers = 5_222_444;
+    $stmt->execute();
+
+    /* Setting autocommit=true will trigger a commit */
+    $mysqli->autocommit(true);
+
+    print "Committed 2 row in the database\n";
+} catch (mysqli_sql_exception $exception) {
+    $mysqli->rollback();
+
+    throw $exception;
+}
 ```
 
 Procedural style
 
 ``` php
 <?php
-$link = mysqli_connect("localhost", "my_user", "my_password", "world");
 
-if (!$link) {
-    printf("Can't connect to localhost. Error: %s\n", mysqli_connect_error());
-    exit();
-}
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 
-/* turn autocommit on */
-mysqli_autocommit($link, TRUE);
+$mysqli = mysqli_connect("localhost", "my_user", "my_password", "world");
 
-if ($result = mysqli_query($link, "SELECT @@autocommit")) {
+/* The table engine has to support transactions */
+mysqli_query($mysqli, "CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+/* Turn autocommit off */
+mysqli_autocommit($mysqli, false);
+
+$result = mysqli_query($mysqli, "SELECT @@autocommit");
+$row = mysqli_fetch_row($result);
+printf("Autocommit is %s\n", $row[0]);
+
+try {
+    /* Prepare insert statement */
+    $stmt = mysqli_prepare($mysqli, 'INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    mysqli_stmt_bind_param($stmt, 'ss', $language_code, $native_speakers);
+
+    /* Insert some values */
+    $language_code = 'DE';
+    $native_speakers = 50_123_456;
+    mysqli_stmt_execute($stmt);
+    $language_code = 'FR';
+    $native_speakers = 40_546_321;
+    mysqli_stmt_execute($stmt);
+
+    /* Commit the data in the database. This doesn't set autocommit=true */
+    mysqli_commit($mysqli);
+    print "Committed 2 rows in the database\n";
+
+    $result = mysqli_query($mysqli, "SELECT @@autocommit");
     $row = mysqli_fetch_row($result);
     printf("Autocommit is %s\n", $row[0]);
-    mysqli_free_result($result);
-}
 
-/* close connection */
-mysqli_close($link);
-?>
+    /* Try to insert more values */
+    $language_code = 'PL';
+    $native_speakers = 30_555_444;
+    mysqli_stmt_execute($stmt);
+    $language_code = 'DK';
+    $native_speakers = 5_222_444;
+    mysqli_stmt_execute($stmt);
+
+    /* Setting autocommit=true will trigger a commit */
+    mysqli_autocommit($mysqli, true);
+
+    print "Committed 2 row in the database\n";
+} catch (mysqli_sql_exception $exception) {
+    mysqli_rollback($mysqli);
+
+    throw $exception;
+}
 ```
 
 The above examples will output:
 
-    Autocommit is 1
+    Autocommit is 0
+    Committed 2 rows in the database
+    Autocommit is 0
+    Committed 2 row in the database
+    Autocommit is 0
+    Committed 2 rows in the database
+    Autocommit is 0
+    Committed 2 row in the database
 
 ### See Also
 
@@ -4932,49 +5015,94 @@ Savepoint name for the transaction.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Notes
+
+> **Note**:
+>
+> This function does not work with non transactional table types (like
+> MyISAM or ISAM).
+
 ### Examples
 
-**Example \#1 <span
-class="methodname">$mysqli-\>begin\_transaction</span> example**
+**Example \#1 <span class="methodname">mysqli::begin\_transaction</span>
+example**
 
 Object oriented style
 
 ``` php
 <?php
-$mysqli = new mysqli("127.0.0.1", "my_user", "my_password", "sakila");
 
-if ($mysqli->connect_errno) {
-    printf("Connect failed: %s\n", $mysqli->connect_error);
-    exit();
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
+
+/* The table engine has to support transactions */
+$mysqli->query("CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+/* Start transaction */
+$mysqli->begin_transaction();
+
+try {
+    /* Insert some values */
+    $mysqli->query("INSERT INTO language(Code, Speakers) VALUES ('DE', 42000123)");
+
+    /* Try to insert invalid values */
+    $language_code = 'FR';
+    $native_speakers = 'Unknown';
+    $stmt = $mysqli->prepare('INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    $stmt->bind_param('ss', $language_code, $native_speakers);
+    $stmt->execute();
+
+    /* If code reaches this point without errors then commit the data in the database */
+    $mysqli->commit();
+} catch (mysqli_sql_exception $exception) {
+    $mysqli->rollback();
+
+    throw $exception;
 }
-
-$mysqli->begin_transaction(MYSQLI_TRANS_START_READ_ONLY);
-
-$mysqli->query("SELECT first_name, last_name FROM actor");
-$mysqli->commit();
-
-$mysqli->close();
-?>
 ```
 
 Procedural style
 
 ``` php
 <?php
-$link = mysqli_connect("127.0.0.1", "my_user", "my_password", "sakila");
 
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
+/* Tell mysqli to throw an exception if an error occurs */
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
+
+$mysqli = mysqli_connect("localhost", "my_user", "my_password", "world");
+
+/* The table engine has to support transactions */
+mysqli_query($mysqli, "CREATE TABLE IF NOT EXISTS language (
+    Code text NOT NULL,
+    Speakers int(11) NOT NULL
+    ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;");
+
+/* Start transaction */
+mysqli_begin_transaction($mysqli);
+
+try {
+    /* Insert some values */
+    mysqli_query($mysqli, "INSERT INTO language(Code, Speakers) VALUES ('DE', 42000123)");
+
+    /* Try to insert invalid values */
+    $language_code = 'FR';
+    $native_speakers = 'Unknown';
+    $stmt = mysqli_prepare($mysqli, 'INSERT INTO language(Code, Speakers) VALUES (?,?)');
+    mysqli_stmt_bind_param($stmt, 'ss', $language_code, $native_speakers);
+    mysqli_stmt_execute($stmt);
+
+    /* If code reaches this point without errors then commit the data in the database */
+    mysqli_commit($mysqli);
+} catch (mysqli_sql_exception $exception) {
+    mysqli_rollback($mysqli);
+
+    throw $exception;
 }
-
-mysqli_begin_transaction($link, MYSQLI_TRANS_START_READ_ONLY);
-
-mysqli_query($link, "SELECT first_name, last_name FROM actor LIMIT 1");
-mysqli_commit($link);
-
-mysqli_close($link);
-?>
 ```
 
 ### See Also
@@ -5350,6 +5478,13 @@ If provided then *COMMIT/\*name\*/* is executed.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Notes
+
+> **Note**:
+>
+> This function does not work with non transactional table types (like
+> MyISAM or ISAM).
+
 ### Changelog
 
 | Version | Description                          |
@@ -5358,74 +5493,8 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Examples
 
-**Example \#1 <span class="methodname">mysqli::commit</span> example**
-
-Object oriented style
-
-``` php
-<?php
-$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
-
-/* check connection */
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
-$mysqli->query("CREATE TABLE Language LIKE CountryLanguage");
-
-/* set autocommit to off */
-$mysqli->autocommit(FALSE);
-
-/* Insert some values */
-$mysqli->query("INSERT INTO Language VALUES ('DEU', 'Bavarian', 'F', 11.2)");
-$mysqli->query("INSERT INTO Language VALUES ('DEU', 'Swabian', 'F', 9.4)");
-
-/* commit transaction */
-if (!$mysqli->commit()) {
-    print("Transaction commit failed\n");
-    exit();
-}
-
-/* drop table */
-$mysqli->query("DROP TABLE Language");
-
-/* close connection */
-$mysqli->close();
-?>
-```
-
-Procedural style
-
-``` php
-<?php
-$link = mysqli_connect("localhost", "my_user", "my_password", "test");
-
-/* check connection */
-if (!$link) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
-/* set autocommit to off */
-mysqli_autocommit($link, FALSE);
-
-mysqli_query($link, "CREATE TABLE Language LIKE CountryLanguage");
-
-/* Insert some values */
-mysqli_query($link, "INSERT INTO Language VALUES ('DEU', 'Bavarian', 'F', 11.2)");
-mysqli_query($link, "INSERT INTO Language VALUES ('DEU', 'Swabian', 'F', 9.4)");
-
-/* commit transaction */
-if (!mysqli_commit($link)) {
-    print("Transaction commit failed\n");
-    exit();
-}
-
-/* close connection */
-mysqli_close($link);
-?>
-```
+See the
+<a href="/set/mysqlinfo.html#mysqli::begin_transaction%20example" class="link"><span class="methodname">mysqli::begin_transaction</span> example</a>.
 
 ### See Also
 
@@ -8954,10 +9023,9 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+This function is identical to executing
+`` $mysqli->query("RELEASE SAVEPOINT `$name`"); ``. This function does
+not trigger commit or rollback.
 
 ### Parameters
 
@@ -8967,6 +9035,7 @@ class="function">mysqli\_connect</span> or <span
 class="function">mysqli\_init</span>
 
 `name`  
+The identifier of the savepoint.
 
 ### Return Values
 
@@ -8974,7 +9043,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### See Also
 
--   <span class="function">mysqli\_rollback</span>
+-   <span class="function">mysqli\_savepoint</span>
 
 mysqli::rollback
 ================
@@ -9024,6 +9093,13 @@ If provided then *ROLLBACK/\*name\*/* is executed.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Notes
+
+> **Note**:
+>
+> This function does not work with non transactional table types (like
+> MyISAM or ISAM).
+
 ### Changelog
 
 | Version | Description                          |
@@ -9032,110 +9108,8 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Examples
 
-**Example \#1 <span class="methodname">mysqli::rollback</span> example**
-
-Object oriented style
-
-``` php
-<?php
-$mysqli = new mysqli("localhost", "my_user", "my_password", "world");
-
-/* check connection */
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
-/* disable autocommit */
-$mysqli->autocommit(FALSE);
-
-$mysqli->query("CREATE TABLE myCity LIKE City");
-$mysqli->query("ALTER TABLE myCity Type=InnoDB");
-$mysqli->query("INSERT INTO myCity SELECT * FROM City LIMIT 50");
-
-/* commit insert */
-$mysqli->commit();
-
-/* delete all rows */
-$mysqli->query("DELETE FROM myCity");
-
-if ($result = $mysqli->query("SELECT COUNT(*) FROM myCity")) {
-    $row = $result->fetch_row();
-    printf("%d rows in table myCity.\n", $row[0]);
-    /* Free result */
-    $result->close();
-}
-
-/* Rollback */
-$mysqli->rollback();
-
-if ($result = $mysqli->query("SELECT COUNT(*) FROM myCity")) {
-    $row = $result->fetch_row();
-    printf("%d rows in table myCity (after rollback).\n", $row[0]);
-    /* Free result */
-    $result->close();
-}
-
-/* Drop table myCity */
-$mysqli->query("DROP TABLE myCity");
-
-$mysqli->close();
-?>
-```
-
-Procedural style
-
-``` php
-<?php
-$link = mysqli_connect("localhost", "my_user", "my_password", "world");
-
-/* check connection */
-if (mysqli_connect_errno()) {
-    printf("Connect failed: %s\n", mysqli_connect_error());
-    exit();
-}
-
-/* disable autocommit */
-mysqli_autocommit($link, FALSE);
-
-mysqli_query($link, "CREATE TABLE myCity LIKE City");
-mysqli_query($link, "ALTER TABLE myCity Type=InnoDB");
-mysqli_query($link, "INSERT INTO myCity SELECT * FROM City LIMIT 50");
-
-/* commit insert */
-mysqli_commit($link);
-
-/* delete all rows */
-mysqli_query($link, "DELETE FROM myCity");
-
-if ($result = mysqli_query($link, "SELECT COUNT(*) FROM myCity")) {
-    $row = mysqli_fetch_row($result);
-    printf("%d rows in table myCity.\n", $row[0]);
-    /* Free result */
-    mysqli_free_result($result);
-}
-
-/* Rollback */
-mysqli_rollback($link);
-
-if ($result = mysqli_query($link, "SELECT COUNT(*) FROM myCity")) {
-    $row = mysqli_fetch_row($result);
-    printf("%d rows in table myCity (after rollback).\n", $row[0]);
-    /* Free result */
-    mysqli_free_result($result);
-}
-
-/* Drop table myCity */
-mysqli_query($link, "DROP TABLE myCity");
-
-mysqli_close($link);
-?>
-```
-
-The above examples will output:
-
-    0 rows in table myCity.
-    50 rows in table myCity (after rollback).
+See the
+<a href="/set/mysqlinfo.html#mysqli::begin_transaction%20example" class="link"><span class="methodname">mysqli::begin_transaction</span> example</a>.
 
 ### See Also
 
@@ -9168,10 +9142,8 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
+This function is identical to executing
+`` $mysqli->query("SAVEPOINT `$name`"); ``
 
 ### Parameters
 
@@ -9181,6 +9153,7 @@ class="function">mysqli\_connect</span> or <span
 class="function">mysqli\_init</span>
 
 `name`  
+The identifier of the savepoint.
 
 ### Return Values
 
@@ -9188,7 +9161,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### See Also
 
--   <span class="function">mysqli\_commit</span>
+-   <span class="function">mysqli\_release\_savepoint</span>
 
 mysqli::select\_db
 ==================
@@ -41055,7 +41028,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2218" class="example">
+<div id="example-2216" class="example">
 <p><strong>Example #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -41144,7 +41117,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2219" class="example">
+<div id="example-2217" class="example">
 <p><strong>Example #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">

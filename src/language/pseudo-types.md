@@ -20,11 +20,6 @@ types, while <span class="function">str\_replace</span> will accept
 *number* indicates that a parameter can be either <span
 class="type">integer</span> or <span class="type">float</span>.
 
-### array\|object
-
-*array\|object* indicates that a parameter can be either <span
-class="type">array</span> or <span class="type">object</span>.
-
 ### void
 
 *void* as a return type means that the return value is useless. *void*

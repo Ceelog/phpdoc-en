@@ -1620,8 +1620,8 @@ class="methodparam"><span class="type">bool</span>
 **`FALSE`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
@@ -2013,8 +2013,8 @@ Retrieve current line of file
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">SplFileObject::current</span> ( <span
 class="methodparam">void</span> )
 
@@ -3933,8 +3933,8 @@ class="methodparam"><span class="type">int</span> `$max_memory`</span>
 
 /\* Inherited methods \*/
 
-<span class="modifier">public</span> <span
-class="type">string\|array</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">SplFileObject::current</span> ( <span
 class="methodparam">void</span> )
 

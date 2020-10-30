@@ -727,9 +727,9 @@ class="modifier">static</span> <span class="type">WeakReference</span>
 <span class="methodname">create</span> ( <span class="methodparam"><span
 class="type">object</span> `$referent`</span> )
 
-<span class="modifier">public</span> <span class="type">?object</span>
-<span class="methodname">get</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">null</span></span> <span
+class="methodname">get</span> ( <span class="methodparam">void</span> )
 
 }
 

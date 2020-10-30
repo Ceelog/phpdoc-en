@@ -6892,9 +6892,10 @@ class="interfacename">Reflector</span> </span> {
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$class`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">object</span></span>
+`$class`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -7142,9 +7143,10 @@ Constructs a ReflectionMethod
 
 <span class="modifier">public</span> <span
 class="methodname">ReflectionMethod::\_\_construct</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$class`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">object</span></span>
+`$class`</span> , <span class="methodparam"><span
+class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span
 class="methodname">ReflectionMethod::\_\_construct</span> ( <span
@@ -9517,9 +9519,9 @@ class="methodparam">void</span> )
 <span class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">?ReflectionType</span> <span
-class="methodname">getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">getType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -9985,9 +9987,9 @@ Gets a property's type
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">?ReflectionType</span> <span
-class="methodname">ReflectionProperty::getType</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">ReflectionType</span><span class="type">null</span></span>
+<span class="methodname">ReflectionProperty::getType</span> ( <span
 class="methodparam">void</span> )
 
 Gets the associated type of a property.

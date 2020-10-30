@@ -2775,12 +2775,13 @@ Find position of first occurrence of string in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_strpos</span>
-( <span class="methodparam"><span class="type">string</span>
-`$haystack`</span> , <span class="methodparam"><span
-class="type">string</span> `$needle`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$offset`<span
-class="initializer"> = 0</span></span> \[, <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">mb\_strpos</span> ( <span class="methodparam"><span
+class="type">string</span> `$haystack`</span> , <span
+class="methodparam"><span class="type">string</span> `$needle`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`<span
 class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 

@@ -97,8 +97,8 @@ Class synopsis
 
 /\* Methods \*/
 
-<span class="modifier">public</span> <span
-class="type">array\|bool</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
 class="methodname">callFunction</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
@@ -160,7 +160,8 @@ class="methodparam"><span class="type">string</span> `$libname`</span> ,
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setCPULimit</span> ( <span
-class="methodparam"><span class="type">float\|bool</span>
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">bool</span></span>
 `$limit`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -204,8 +205,8 @@ Call a function in a Lua global variable
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">array\|bool</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
 class="methodname">LuaSandbox::callFunction</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">mixed</span> `$...`</span>
@@ -768,7 +769,8 @@ Set the CPU time limit for the Lua environment
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">LuaSandbox::setCPULimit</span> ( <span
-class="methodparam"><span class="type">float\|bool</span>
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">bool</span></span>
 `$limit`</span> )
 
 Sets the CPU time limit for the Lua environment.
@@ -970,10 +972,10 @@ Class synopsis
 
 /\* Methods \*/
 
-<span class="modifier">public</span> <span
-class="type">array\|bool</span> <span class="methodname">call</span> (\[
-<span class="methodparam"><span class="type">string</span> `$...`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">call</span> (\[ <span class="methodparam"><span
+class="type">string</span> `$...`</span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">dump</span> ( <span
@@ -988,8 +990,8 @@ Call a Lua function
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">array\|bool</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
 class="methodname">LuaSandboxFunction::call</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$...`</span> \] )
 

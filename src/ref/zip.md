@@ -313,7 +313,8 @@ Open a ZIP file archive
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">zip\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -328,8 +329,8 @@ The file name of the ZIP archive to open.
 
 Returns a resource handle for later use with <span
 class="function">zip\_read</span> and <span
-class="function">zip\_close</span> or returns the number of error if
-`filename` does not exist or in case of other error.
+class="function">zip\_close</span> or returns either **`FALSE`** or the
+number of error if `filename` does not exist or in case of other error.
 
 ### Changelog
 

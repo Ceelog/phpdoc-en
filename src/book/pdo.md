@@ -4375,7 +4375,7 @@ print("Deleted $count rows.\n");
 ?>
 ```
 
-The above example will output:
+The above example will output something similar to:
 
     Return number of rows that were deleted:
     Deleted 9 rows.
@@ -4388,41 +4388,20 @@ Instead, use <span class="function">PDO::query</span> to issue a SELECT
 COUNT(\*) statement with the same predicates as your intended SELECT
 statement, then use <span
 class="function">PDOStatement::fetchColumn</span> to retrieve the number
-of rows that will be returned. Your application can then perform the
-correct action.
+of matching rows.
 
 ``` php
 <?php
 $sql = "SELECT COUNT(*) FROM fruit WHERE calories > 100";
-if ($res = $conn->query($sql)) {
+$res = $conn->query($sql);
+$count = $res->fetchColumn();
 
-    /* Check the number of rows that match the SELECT statement */
-    if ($res->fetchColumn() > 0) {
-
-        /* Issue the real SELECT statement and work with the results */
-        $sql = "SELECT name FROM fruit WHERE calories > 100";
-
-        foreach ($conn->query($sql) as $row) {
-            print "Name: " .  $row['NAME'] . "\n";
-        }
-    }
-    /* No rows matched -- do something else */
-    else {
-        print "No rows matched the query.";
-    }
-}
-
-$res = null;
-$conn = null;
-?>
+print "There are " .  $count . " matching records.";
 ```
 
-The above example will output:
+The above example will output something similar to:
 
-    apple
-    banana
-    orange
-    pear
+    There are 2 matching records.
 
 ### See Also
 
