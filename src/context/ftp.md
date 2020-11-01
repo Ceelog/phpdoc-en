@@ -25,12 +25,6 @@ Defaults to *0* (Beginning of File).
 Proxy FTP request via http proxy server. Applies to file read operations
 only. Ex: *tcp://squid.example.com:8000*.
 
-### Changelog
-
-| Version | Description    |
-|---------|----------------|
-| 5.1.0   | Added `proxy`. |
-
 ### Notes
 
 > **Note**: **Underlying socket stream context options**  

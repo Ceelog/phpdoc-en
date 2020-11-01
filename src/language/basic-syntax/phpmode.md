@@ -41,25 +41,12 @@ For outputting large blocks of text, dropping out of PHP parsing mode is
 generally more efficient than sending all of the text through <span
 class="function">echo</span> or <span class="function">print</span>.
 
-In PHP 5, there are up to five different pairs of opening and closing
-tags available in PHP, depending on how PHP is configured. Two of these,
-`<?php ?>` and `<script language="php"> </script>`, are always
-available. There is also the short echo tag `<?= ?>`, which is always
-available in PHP 5.4.0 and later.
-
-The other two are short tags and <span class="productname">ASP</span>
-style tags. As such, while some people find short tags and <span
-class="productname">ASP</span> style tags convenient, they are less
-portable, and generally not recommended.
+There is also the short echo tag `<?= ?>`.
 
 > **Note**:
 >
 > Also note that if you are embedding PHP within XML or XHTML you will
 > need to use the \<?php ?\> tags to remain compliant with standards.
-
-PHP 7 removes support for <span class="productname">ASP</span> tags and
-`<script language="php">` tags. As such, we recommend only using
-`<?php ?>` and `<?= ?>` when writing PHP code to maximise compatibility.
 
 **Example \#2 PHP Opening and Closing Tags**
 
@@ -68,53 +55,19 @@ PHP 7 removes support for <span class="productname">ASP</span> tags and
                 use these tags'; ?>
 
 2.  You can use the short echo tag to <?= 'print this string' ?>.
-    It's always enabled in PHP 5.4.0 and later, and is equivalent to
-    <?php echo 'print this string' ?>.
+    It's equivalent to <?php echo 'print this string' ?>.
 
 3.  <? echo 'this code is within short tags, but will only work '.
             'if short_open_tag is enabled'; ?>
-
-4.  <script language="php">
-        echo 'some editors (like FrontPage) don\'t
-              like processing instructions within these tags';
-    </script>
-    This syntax is removed in PHP 7.0.0.
-
-5.  <% echo 'You may optionally use ASP-style tags'; %>
-    Code within these tags <%= $variable; %> is a shortcut for this code <% echo $variable; %>
-    Both of these syntaxes are removed in PHP 7.0.0.
 ```
 
-Short tags (example three) are only available when they are enabled via
-the
+Short tags (example three) are available by default but can be disabled
+either via the
 <a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>
-`php.ini` configuration file directive, or if PHP was configured with
-the **--enable-short-tags** option.
-
-<span class="productname">ASP</span> style tags (example five) are only
-available when they are enabled via the
-<a href="/ini/core.html#ini.asp-tags" class="link">asp_tags</a>
-`php.ini` configuration file directive, and have been removed in PHP
-7.0.0.
+`php.ini` configuration file directive, or are disabled by default if
+PHP is built with the **--disable-short-tags** configuration.
 
 > **Note**:
 >
-> Using short tags should be avoided when developing applications or
-> libraries that are meant for redistribution, or deployment on PHP
-> servers which are not under your control, because short tags may not
-> be supported on the target server. For portable, redistributable code,
-> be sure not to use short tags.
-
-> **Note**:
->
-> In PHP 5.2 and earlier, the parser does not allow the *\<?php* opening
-> tag to be the only thing in a file. This is allowed as of PHP 5.3
-> provided there are one or more whitespace characters after the opening
-> tag.
-
-> **Note**:
->
-> Starting with PHP 5.4, short echo tag *\<?=* is always recognized and
-> valid, regardless of the
-> <a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>
-> setting.
+> As short tags can be disabled it is recommened to only use the normal
+> tags (`<?php ?>` and `<?= ?>`) to maximise compatibility.

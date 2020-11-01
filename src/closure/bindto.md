@@ -57,12 +57,6 @@ internal class as this parameter.
 Returns the newly created <span class="classname">Closure</span> object
 or **`FALSE`** on failure
 
-### Changelog
-
-| Version | Description                                                                                              |
-|---------|----------------------------------------------------------------------------------------------------------|
-| 7.0.0   | `newscope` can not be (an object of) an internal class anymore, what was possible prior to this version. |
-
 ### Examples
 
 **Example \#1 <span class="function">Closure::bindTo</span> example**

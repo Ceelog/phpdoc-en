@@ -27,9 +27,9 @@ class="type">object</span> at index 0 and the method name at index 1.
 Accessing protected and private methods from within a class is allowed.
 
 Static class methods can also be passed without instantiating an <span
-class="type">object</span> of that class by passing the class name
-instead of an <span class="type">object</span> at index 0. As of PHP
-5.2.3, it is also possible to pass *'ClassName::methodName'*.
+class="type">object</span> of that class by either, passing the class
+name instead of an <span class="type">object</span> at index 0, or
+passing *'ClassName::methodName'*.
 
 Apart from common user-defined function,
 <a href="/functions/anonymous.html" class="link">anonymous functions</a>
@@ -67,10 +67,10 @@ call_user_func(array('MyClass', 'myCallbackMethod'));
 $obj = new MyClass();
 call_user_func(array($obj, 'myCallbackMethod'));
 
-// Type 4: Static class method call (As of PHP 5.2.3)
+// Type 4: Static class method call
 call_user_func('MyClass::myCallbackMethod');
 
-// Type 5: Relative static class method call (As of PHP 5.3.0)
+// Type 5: Relative static class method call
 class A {
     public static function who() {
         echo "A\n";
@@ -85,7 +85,7 @@ class B extends A {
 
 call_user_func(array('B', 'parent::who')); // A
 
-// Type 6: Objects implementing __invoke can be used as callables (since PHP 5.3)
+// Type 6: Objects implementing __invoke can be used as callables
 class C {
     public function __invoke($name) {
         echo 'Hello ', $name, "\n";

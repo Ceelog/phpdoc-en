@@ -1,29 +1,27 @@
 Syntax
 ------
 
-You can define a constant by using the <span
-class="function">define</span>-function or by using the *const* keyword
-outside a class definition as of PHP 5.3.0. While <span
+Constants can be defined using the *const* keyword, or by using the
+<span class="function">define</span>-function. While <span
 class="function">define</span> allows a constant to be defined to an
 arbitrary expression, the *const* keyword has restrictions as outlined
 in the next paragraph. Once a constant is defined, it can never be
 changed or undefined.
 
-When using the *const* keyword, only scalar data (<span
+When using the *const* keyword, only scalar (<span
 class="type">boolean</span>, <span class="type">integer</span>, <span
-class="type">float</span> and <span class="type">string</span>) can be
-contained in constants prior to PHP 5.6. From PHP 5.6 onwards, it is
-possible to define a constant as a scalar expression, and it is also
-possible to define an <span class="type">array</span> constant. It is
-possible to define constants as a <span class="type">resource</span>,
-but it should be avoided, as it can cause unexpected results.
+class="type">float</span> and <span class="type">string</span>)
+expressions and constant <span class="type">array</span>s containing
+only scalar expressions are accepted. It is possible to define constants
+as a <span class="type">resource</span>, but it should be avoided, as it
+can cause unexpected results.
 
-You can get the value of a constant by simply specifying its name.
-Unlike with variables, you should *not* prepend a constant with a *$*.
-You can also use the function <span class="function">constant</span> to
-read a constant's value if you wish to obtain the constant's name
-dynamically. Use <span class="function">get\_defined\_constants</span>
-to get a list of all defined constants.
+The value of a constant is accessed simply by specifying its name.
+Unlike variables, a constant is *not* prepended with a *$*. It is also
+possible to use the <span class="function">constant</span> function to
+read a constant's value if the constant's name is obtainned dynamically.
+Use <span class="function">get\_defined\_constants</span> to get a list
+of all defined constants.
 
 > **Note**: <span class="simpara"> Constants and (global) variables are
 > in a different namespace. This implies that for example **`TRUE`** and
@@ -48,19 +46,12 @@ These are the differences between constants and variables:
 
 -   <span class="simpara"> Constants do not have a dollar sign (*$*)
     before them; </span>
--   <span class="simpara"> Prior to PHP 5.3, Constants may only be
-    defined using the <span class="function">define</span> function, not
-    by simple assignment; </span>
 -   <span class="simpara"> Constants may be defined and accessed
     anywhere without regard to variable scoping rules; </span>
 -   <span class="simpara"> Constants may not be redefined or undefined
     once they have been set; and </span>
--   <span class="simpara"> Constants may only evaluate to scalar values.
-    As of PHP 5.6 it is possible to define array constant using *const*
-    keywords and as of PHP 7 array constants can also be defined using
-    <span class="function">define</span> You may use arrays in constant
-    scalar expressions (for example, *const FOO = array(1,2,3)\[0\];*),
-    but the end result must be a value of allowed type. </span>
+-   <span class="simpara"> Constants may only evaluate to scalar values
+    or arrays. </span>
 
 **Example \#1 Defining Constants**
 
@@ -76,19 +67,19 @@ echo Constant; // outputs "Constant" and issues a notice.
 
 ``` php
 <?php
-// Works as of PHP 5.3.0
+// Simple scalar value
 const CONSTANT = 'Hello World';
 
 echo CONSTANT;
 
-// Works as of PHP 5.6.0
+// Scalar expression
 const ANOTHER_CONST = CONSTANT.'; Goodbye World';
 echo ANOTHER_CONST;
 
 const ANIMALS = array('dog', 'cat', 'bird');
 echo ANIMALS[1]; // outputs "cat"
 
-// Works as of PHP 7
+// Constant arrays
 define('ANIMALS', array(
     'dog',
     'cat',
@@ -108,9 +99,8 @@ echo ANIMALS[1]; // outputs "cat"
 
 > **Note**:
 >
-> Constants defined using the *const* keyword are always case-sensitive,
-> while constants defined using <span class="function">define</span> may
-> be case-insensitive.
+> Prior to PHP 8.0.0, constants defined using <span
+> class="function">define</span> may be case-insensitive.
 
 See also
 <a href="/language/oop5/constants.html" class="link">Class Constants</a>.

@@ -5,7 +5,7 @@ Find pathnames matching pattern
 
 ### Description
 
-The `glob:` stream wrapper is available since PHP 5.3.0.
+The `glob:` stream wrapper.
 
 ### Usage
 

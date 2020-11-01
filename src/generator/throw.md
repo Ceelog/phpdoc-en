@@ -27,12 +27,6 @@ Exception to throw into the generator.
 
 Returns the yielded value.
 
-### Changelog
-
-| Version | Description                                                                          |
-|---------|--------------------------------------------------------------------------------------|
-| 7.0.0   | The `exception` parameter also accepts <span class="classname">Throwable</span> now. |
-
 ### Examples
 
 **Example \#1 Throwing an exception into a generator**

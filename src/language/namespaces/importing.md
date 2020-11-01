@@ -128,8 +128,7 @@ function toGreenlandic()
 
 ### Group *use* declarations
 
-From PHP 7.0 onwards, classes, functions and constants being imported
-from the same
+Classes, functions and constants being imported from the same
 <a href="/language/namespaces/definition.html" class="link"><em>namespace</em></a>
 can be grouped together in a single
 <a href="/language/namespaces/importing.html" class="link"><em>use</em></a>
@@ -138,7 +137,6 @@ statement.
 ``` php
 <?php
 
-// Pre PHP 7 code
 use some\namespace\ClassA;
 use some\namespace\ClassB;
 use some\namespace\ClassC as C;
@@ -151,7 +149,7 @@ use const some\namespace\ConstA;
 use const some\namespace\ConstB;
 use const some\namespace\ConstC;
 
-// PHP 7+ code
+// is equivalent to the following groupped use declaration
 use some\namespace\{ClassA, ClassB, ClassC as C};
 use function some\namespace\{fn_a, fn_b, fn_c};
 use const some\namespace\{ConstA, ConstB, ConstC};

@@ -63,7 +63,7 @@ For more information on references, please check out
 
 ### Return type declarations
 
-PHP 7 adds support for return type declarations. Similarly to
+Similarly to
 <a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">argument type declarations</a>,
 return type declarations specify the type of the value that will be
 returned from a function. The same

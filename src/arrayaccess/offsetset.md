@@ -58,5 +58,4 @@ No value is returned.
 > sub-dimension or sub-property or assigning the array dimension by
 > reference to another variable). Instead, <span
 > class="function">ArrayAccess::offsetGet</span> is called. The
-> operation will only be successful if that method returns by reference,
-> which is only possible since PHP 5.3.4.
+> operation will only be successful if that method returns by reference.

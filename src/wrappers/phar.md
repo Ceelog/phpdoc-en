@@ -5,9 +5,9 @@ PHP Archive
 
 ### Description
 
-The `phar://` stream wrapper is available since PHP 5.3.0. See
+The `phar://` stream wrapper. See
 <a href="/phar/using.html#Using%20Phar%20Archives:%20the%20phar%20stream%20wrapper" class="link">Phar stream wrapper</a>
-for detailed description.
+for a detailed description.
 
 ### Usage
 

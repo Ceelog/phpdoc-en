@@ -21,10 +21,7 @@ out of values.
 
 > **Note**:
 >
-> In PHP 5, a generator could not return a value: doing so would result
-> in a compile error. An empty **return** statement was valid syntax
-> within a generator and it would terminate the generator. Since PHP
-> 7.0, a generator can return values, which can be retrieved using <span
+> A generator can return values, which can be retrieved using <span
 > class="methodname">Generator::getReturn</span>.
 
 ### **yield** keyword
@@ -65,22 +62,6 @@ The above example will output:
 > values, just as with a non-associative array.
 
 **Caution**
-
-If you use yield in an expression context (for example, on the right
-hand side of an assignment), you must surround the yield statement with
-parentheses in PHP 5. For example, this is valid:
-
-``` php
-$data = (yield $value);
-```
-
-But this is not, and will result in a parse error in PHP 5:
-
-``` php
-$data = yield $value;
-```
-
-The parenthetical restrictions do not apply in PHP 7.
 
 The value that will be assigned to `$data` is the value passed to <span
 class="methodname">Generator::send</span>, or **`NULL`** if <span
@@ -215,8 +196,8 @@ The above example will output:
 
 #### Generator delegation via **yield from**
 
-In PHP 7, generator delegation allows you to yield values from another
-generator, <span class="classname">Traversable</span> object, or <span
+Generator delegation allows you to yield values from another generator,
+<span class="classname">Traversable</span> object, or <span
 class="type">array</span> by using the **yield from** keyword. The outer
 generator will then yield all values from the inner generator, object,
 or array until that is no longer valid, after which execution will

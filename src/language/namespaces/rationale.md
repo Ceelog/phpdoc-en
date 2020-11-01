@@ -13,10 +13,6 @@ directory name to the file name using the directory separator to get
 */home/greg/foo.txt*. This same principle extends to namespaces in the
 programming world.
 
-| Version | Description                   |
-|---------|-------------------------------|
-| 7.0.0   | Added Group use Declarations. |
-
 In the PHP world, namespaces are designed to solve two problems that
 authors of libraries and applications encounter when creating re-usable
 code elements such as classes or functions:

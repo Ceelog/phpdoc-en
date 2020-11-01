@@ -51,8 +51,6 @@ do {
 ?>
 ```
 
-Don't worry if you don't understand this right away or at all. You can
-code scripts and even powerful scripts without using this 'feature'.
-Since PHP 5.3.0, it is possible to use
+It is possible to use the
 <a href="/control-structures/goto.html" class="link"><em>goto</em></a>
 operator instead of this hack.

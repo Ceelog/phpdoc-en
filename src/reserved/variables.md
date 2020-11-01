@@ -40,17 +40,6 @@ These superglobal variables are:
 > refer to the documentation for
 > <a href="/ini/core.html#ini.variables-order" class="link">variables_order</a>.
 
-> **Note**: **Dealing with register\_globals**  
->
-> If the deprecated
-> <a href="/ini/core.html#ini.register-globals" class="link">register_globals</a>
-> directive is set to *on* then the variables within will also be made
-> available in the global scope of the script. For example,
-> `$_POST['foo']` would also exist as `$foo`.
->
-> For related information, see the FAQ titled
-> "<a href="/faq/using.html#faq.register-globals" class="link">How does register_globals affect me?</a>"
-
 > **Note**: **Variable variables**  
 >
 > Superglobals cannot be used as
@@ -117,9 +106,6 @@ The above example will output something similar to:
 $\_SERVER
 =========
 
-$HTTP\_SERVER\_VARS \[removed\]
-===============================
-
 Server and execution environment information
 
 ### Description
@@ -131,13 +117,6 @@ these; servers may omit some, or provide others not listed here. That
 said, a large number of these variables are accounted for in the
 <a href="http://www.faqs.org/rfcs/rfc3875" class="link external">» CGI/1.1 specification</a>,
 so you should be able to expect those.
-
-> **Note**: <span class="simpara"> Prior to PHP 5.4.0,
-> `$HTTP_SERVER_VARS` contained the same initial information, but was
-> not a
-> <a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-> (Note that `$HTTP_SERVER_VARS` and `$_SERVER` were different variables
-> and that PHP handled them as such.) </span>
 
 ### Indices
 
@@ -154,8 +133,7 @@ script at the address `http://example.com/foo/bar.php` would be
 <a href="/language/constants/predefined.html" class="link">__FILE__</a>
 constant contains the full path and filename of the current (i.e.
 included) file. </span> <span class="simpara"> If PHP is running as a
-command-line processor this variable contains the script name since PHP
-4.3.0. Previously it was not available. </span>
+command-line processor this variable contains the script name. </span>
 
 '<a href="/reserved/variables/argv.html" class="link">argv</a>'  
 <span class="simpara"> Array of arguments passed to the script. When the
@@ -206,11 +184,11 @@ e.g. '*GET*', '*HEAD*', '*POST*', '*PUT*'. </span>
 
 '`REQUEST_TIME`'  
 <span class="simpara"> The timestamp of the start of the request.
-Available since PHP 5.1.0. </span>
+</span>
 
 '`REQUEST_TIME_FLOAT`'  
 <span class="simpara"> The timestamp of the start of the request, with
-microsecond precision. Available since PHP 5.4.0. </span>
+microsecond precision. </span>
 
 '`QUERY_STRING`'  
 <span class="simpara"> The query string, if any, via which the page was
@@ -327,14 +305,9 @@ host name which are added to server-generated pages, if enabled. </span>
 the current script, after the server has done any virtual-to-real
 mapping. </span>
 
-> **Note**: <span class="simpara"> As of PHP 4.3.2, `PATH_TRANSLATED` is
-> no longer set implicitly under the Apache 2 SAPI in contrast to the
-> situation in Apache 1, where it's set to the same value as the
-> `SCRIPT_FILENAME` server variable when it's not populated by Apache.
-> This change was made to comply with the CGI specification that
-> `PATH_TRANSLATED` should only exist if `PATH_INFO` is defined. </span>
-> <span class="simpara"> Apache 2 users may use *AcceptPathInfo = On*
-> inside `httpd.conf` to define `PATH_INFO`. </span>
+> **Note**: <span class="simpara"> Apache 2 users may use
+> *AcceptPathInfo = On* inside `httpd.conf` to define `PATH_INFO`.
+> </span>
 
 '`SCRIPT_NAME`'  
 <span class="simpara"> Contains the current script's path. This is
@@ -375,13 +348,6 @@ available. For instance, if the current script was accessed via the URL
 <span class="simpara"> Original version of '`PATH_INFO`' before
 processed by PHP. </span>
 
-### Changelog
-
-| Version | Description                                                                                                                                                             |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.4.0   | `$HTTP_SERVER_VARS` isn't available anymore due to the removal of long arrays registering.                                                                              |
-| 5.3.0   | Directive <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> which caused `$HTTP_SERVER_VARS` to be available has been deprecated. |
-
 ### Examples
 
 **Example \#2 `$_SERVER` example**
@@ -412,9 +378,6 @@ The above example will output something similar to:
 $\_GET
 ======
 
-$HTTP\_GET\_VARS \[deprecated\]
-===============================
-
 HTTP GET variables
 
 ### Description
@@ -423,11 +386,6 @@ An associative array of variables passed to the current script via the
 URL parameters (aka. query string). Note that the array is not only
 populated for GET requests, but rather for all requests with a query
 string.
-
-`$HTTP_GET_VARS` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_GET_VARS` and `$_GET` are different variables and that
-PHP handles them as such)
 
 ### Examples
 
@@ -467,9 +425,6 @@ The above example will output something similar to:
 $\_POST
 =======
 
-$HTTP\_POST\_VARS \[deprecated\]
-================================
-
 HTTP POST variables
 
 ### Description
@@ -477,11 +432,6 @@ HTTP POST variables
 An associative array of variables passed to the current script via the
 HTTP POST method when using *application/x-www-form-urlencoded* or
 *multipart/form-data* as the HTTP Content-Type in the request.
-
-`$HTTP_POST_VARS` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_POST_VARS` and `$_POST` are different variables and
-that PHP handles them as such)
 
 ### Examples
 
@@ -516,9 +466,6 @@ The above example will output something similar to:
 $\_FILES
 ========
 
-$HTTP\_POST\_FILES \[deprecated\]
-=================================
-
 HTTP File Upload variables
 
 ### Description
@@ -528,11 +475,6 @@ current script via the HTTP POST method. The structure of this array is
 outlined in the
 <a href="/features/file-upload/post-method.html" class="link">POST method uploads</a>
 section.
-
-`$HTTP_POST_FILES` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_POST_FILES` and `$_FILES` are different variables and
-that PHP handles them as such)
 
 ### Notes
 
@@ -558,12 +500,6 @@ HTTP Request variables
 An associative <span class="type">array</span> that by default contains
 the contents of `$_GET`, `$_POST` and `$_COOKIE`.
 
-### Changelog
-
-| Version | Description                                                                                                                               |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.3.0   | Introduced <a href="/ini/core.html#ini.request-order" class="link">request_order</a>. This directive affects the contents of `$_REQUEST`. |
-
 ### Notes
 
 > **Note**:
@@ -588,20 +524,18 @@ the contents of `$_GET`, `$_POST` and `$_COOKIE`.
 > POST, and COOKIE input mechanisms and therefore could be modified by
 > the remote user and cannot be trusted. The presence and order of
 > variables listed in this array is defined according to the PHP
+> <a href="/ini/core.html#ini.request-order" class="link">request_order</a>,
+> and
 > <a href="/ini/core.html#ini.variables-order" class="link">variables_order</a>
-> configuration directive.
+> configuration directives.
 
 ### See Also
 
--   <span class="function">import\_request\_variables</span>
 -   <a href="/language/variables/external.html" class="link">Handling external variables</a>
 -   <a href="/book/filter.html" class="link">The filter extension</a>
 
 $\_SESSION
 ==========
-
-$HTTP\_SESSION\_VARS \[deprecated\]
-===================================
 
 Session variables
 
@@ -611,11 +545,6 @@ An associative array containing session variables available to the
 current script. See the
 <a href="/ref/session.html" class="link">Session functions</a>
 documentation for more information on how this is used.
-
-`$HTTP_SESSION_VARS` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_SESSION_VARS` and `$_SESSION` are different variables
-and that PHP handles them as such)
 
 ### Notes
 
@@ -632,9 +561,6 @@ and that PHP handles them as such)
 
 $\_ENV
 ======
-
-$HTTP\_ENV\_VARS \[deprecated\]
-===============================
 
 Environment variables
 
@@ -653,11 +579,6 @@ variables.
 Other environment variables include the CGI variables, placed there
 regardless of whether PHP is running as a server module or CGI
 processor.
-
-`$HTTP_ENV_VARS` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_ENV_VARS` and `$_ENV` are different variables and that
-PHP handles them as such)
 
 ### Examples
 
@@ -692,20 +613,12 @@ The above example will output something similar to:
 $\_COOKIE
 =========
 
-$HTTP\_COOKIE\_VARS \[deprecated\]
-==================================
-
 HTTP Cookies
 
 ### Description
 
 An associative <span class="type">array</span> of variables passed to
 the current script via HTTP Cookies.
-
-`$HTTP_COOKIE_VARS` contains the same initial information, but is not a
-<a href="/language/variables/superglobals.html" class="link">superglobal</a>.
-(Note that `$HTTP_COOKIE_VARS` and `$_COOKIE` are different variables
-and that PHP handles them as such)
 
 ### Examples
 
@@ -764,6 +677,13 @@ If a user defined error handler (<span
 class="function">set\_error\_handler</span>) is set `$php_errormsg` is
 only set if the error handler returns **`FALSE`**.
 
+### Changelog
+
+| Version | Description                                                                                                                                |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | Directive <a href="/errorfunc/setup.html#" class="link">track_errors</a> which caused `$php_errormsg` to be available has been removed.    |
+| 7.2.0   | Directive <a href="/errorfunc/setup.html#" class="link">track_errors</a> which caused `$php_errormsg` to be available has been deprecated. |
+
 ### Examples
 
 **Example \#7 `$php_errormsg` example**
@@ -782,25 +702,6 @@ The above example will output something similar to:
 ### See Also
 
 -   <span class="function">error\_get\_last</span>
-
-$HTTP\_RAW\_POST\_DATA
-======================
-
-Raw POST data
-
-### Description
-
-**Warning**
-
-This feature was *DEPRECATED* in PHP 5.6.0, and *REMOVED* as of PHP
-7.0.0.
-
-`$HTTP_RAW_POST_DATA` contains the raw POST data. See
-<a href="/ini/core.html#ini.always-populate-raw-post-data" class="link">always_populate_raw_post_data</a>.
-
-In general,
-<a href="/wrappers/php.html#wrappers.php.input" class="link"><em>php://input</em></a>
-should be used instead of `$HTTP_RAW_POST_DATA`.
 
 $http\_response\_header
 =======================
@@ -975,8 +876,6 @@ The above example will output something similar to:
 -   [$\_COOKIE](/reserved/variables/cookies.html) — HTTP Cookies
 -   [$php\_errormsg](/reserved/variables/phperrormsg.html) — The
     previous error message
--   [$HTTP\_RAW\_POST\_DATA](/reserved/variables/httprawpostdata.html) —
-    Raw POST data
 -   [$http\_response\_header](/reserved/variables/httpresponseheader.html)
     — HTTP response headers
 -   [$argc](/reserved/variables/argc.html) — The number of arguments

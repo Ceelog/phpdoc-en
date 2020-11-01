@@ -38,15 +38,12 @@ that are helpful to understand.
     <a href="/language/namespaces/faq.html#language.namespaces.faq.nested" class="link">Nested namespaces are not allowed.</a>
     </span>
 3.  <span class="simpara">
-    <a href="/language/namespaces/faq.html#language.namespaces.faq.nofuncconstantuse" class="link">Before PHP 5.6 neither functions nor constants can be imported via the <em>use</em> statement.</a>
-    </span>
-4.  <span class="simpara">
     <a href="/language/namespaces/faq.html#language.namespaces.faq.quote" class="link">Dynamic namespace names (quoted identifiers) should escape backslash.</a>
     </span>
-5.  <span class="simpara">
+4.  <span class="simpara">
     <a href="/language/namespaces/faq.html#language.namespaces.faq.constants" class="link">Undefined Constants referenced using any backslash die with fatal error</a>
     </span>
-6.  <span class="simpara">
+5.  <span class="simpara">
     <a href="/language/namespaces/faq.html#language.namespaces.faq.builtinconst" class="link">Cannot override special constants NULL, TRUE, FALSE, ZEND_THREAD_SAFE or ZEND_DEBUG_BUILD</a>
     </span>
 
@@ -294,25 +291,6 @@ namespace my\stuff\nested {
 }
 ?>
 ```
-
-### Before PHP 5.6 neither functions nor constants can be imported via the *use* statement.
-
-Before PHP 5.6 the only elements that are affected by *use* statements
-are namespaces and class names. In order to shorten a long constant or
-function, import its containing namespace.
-
-``` php
-<?php
-namespace mine;
-use ultra\long\ns\name;
-
-$a = name\CONSTANT;
-name\func();
-?>
-```
-
-As of PHP 5.6 aliasing or importing function and constant names is
-allowed.
 
 ### Dynamic namespace names (quoted identifiers) should escape backslash
 

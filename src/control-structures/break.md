@@ -35,9 +35,3 @@ while (++$i) {
 }
 ?>
 ```
-
-| Version | Description                                                                                                                                                   |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | *break* outside of a loop or *switch* control structure is now detected at compile-time instead of run-time as before, and triggers an **`E_COMPILE_ERROR`**. |
-| 5.4.0   | *break 0;* is no longer valid. In previous versions it was interpreted the same as *break 1;*.                                                                |
-| 5.4.0   | Removed the ability to pass in variables (e.g., *$num = 2; break $num;*) as the numerical argument.                                                           |

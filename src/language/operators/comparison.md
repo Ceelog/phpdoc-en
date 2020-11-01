@@ -6,18 +6,18 @@ values. You may also be interested in viewing
 <a href="/types/comparisons.html" class="link">the type comparison tables</a>,
 as they show examples of various type related comparisons.
 
-| Example     | Name                     | Result                                                                                                                                                                      |
-|-------------|--------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| $a == $b    | Equal                    | **`TRUE`** if `$a` is equal to `$b` after type juggling.                                                                                                                    |
-| $a === $b   | Identical                | **`TRUE`** if `$a` is equal to `$b`, and they are of the same type.                                                                                                         |
-| $a != $b    | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                                                |
-| $a \<\> $b  | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                                                |
-| $a !== $b   | Not identical            | **`TRUE`** if `$a` is not equal to `$b`, or they are not of the same type.                                                                                                  |
-| $a \< $b    | Less than                | **`TRUE`** if `$a` is strictly less than `$b`.                                                                                                                              |
-| $a \> $b    | Greater than             | **`TRUE`** if `$a` is strictly greater than `$b`.                                                                                                                           |
-| $a \<= $b   | Less than or equal to    | **`TRUE`** if `$a` is less than or equal to `$b`.                                                                                                                           |
-| $a \>= $b   | Greater than or equal to | **`TRUE`** if `$a` is greater than or equal to `$b`.                                                                                                                        |
-| $a \<=\> $b | Spaceship                | An <span class="type">integer</span> less than, equal to, or greater than zero when `$a` is less than, equal to, or greater than `$b`, respectively. Available as of PHP 7. |
+| Example     | Name                     | Result                                                                                                                                               |
+|-------------|--------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| $a == $b    | Equal                    | **`TRUE`** if `$a` is equal to `$b` after type juggling.                                                                                             |
+| $a === $b   | Identical                | **`TRUE`** if `$a` is equal to `$b`, and they are of the same type.                                                                                  |
+| $a != $b    | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                         |
+| $a \<\> $b  | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                         |
+| $a !== $b   | Not identical            | **`TRUE`** if `$a` is not equal to `$b`, or they are not of the same type.                                                                           |
+| $a \< $b    | Less than                | **`TRUE`** if `$a` is strictly less than `$b`.                                                                                                       |
+| $a \> $b    | Greater than             | **`TRUE`** if `$a` is strictly greater than `$b`.                                                                                                    |
+| $a \<= $b   | Less than or equal to    | **`TRUE`** if `$a` is less than or equal to `$b`.                                                                                                    |
+| $a \>= $b   | Greater than or equal to | **`TRUE`** if `$a` is greater than or equal to `$b`.                                                                                                 |
+| $a \<=\> $b | Spaceship                | An <span class="type">integer</span> less than, equal to, or greater than zero when `$a` is less than, equal to, or greater than `$b`, respectively. |
 
 If you compare a number with a string or the comparison involves
 numerical strings, then each string is
@@ -202,9 +202,11 @@ class="replaceable">expr3</span> otherwise.
 
 > **Note**:
 >
-> It is recommended that you avoid "stacking" ternary expressions. PHP's
+> It is recommended to avoid "stacking" ternary expressions. PHP's
 > behaviour when using more than one ternary operator within a single
-> statement is non-obvious:
+> statement is non-obvious compared to other languages. Indeed prior to
+> PHP 8.0.0, ternary expressions were evaluated from left to right,
+> instead of right to left like most other programming languages.
 >
 > **Example \#4 Non-obvious Ternary Behaviour**
 >
@@ -213,13 +215,13 @@ class="replaceable">expr3</span> otherwise.
 > // on first glance, the following appears to output 'true'
 > echo (true?'true':false?'t':'f');
 >
-> // however, the actual output of the above is 't'
+> // however, the actual output of the above is 't' prior to PHP 8.0.0
 > // this is because ternary expressions are evaluated from left to right
 >
 > // the following is a more obvious version of the same code as above
 > echo ((true ? 'true' : false) ? 't' : 'f');
 >
-> // here, you can see that the first expression is evaluated to 'true', which
+> // here, one can see that the first expression is evaluated to 'true', which
 > // in turn evaluates to (bool)true, thus returning the true branch of the
 > // second ternary expression.
 > ?>
@@ -227,8 +229,7 @@ class="replaceable">expr3</span> otherwise.
 
 ### Null Coalescing Operator
 
-Further exists the "??" (or null coalescing) operator, available as of
-PHP 7.
+Further exists the "??" (or null coalescing) operator.
 
 **Example \#5 Assigning a default value**
 

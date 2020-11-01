@@ -6,11 +6,9 @@ character is the same as a byte. This means that PHP only supports a
 256-character set, and hence does not offer native Unicode support. See
 <a href="/language/types/string.html#language.types.string.details" class="link">details of the string type</a>.
 
-> **Note**: <span class="simpara"> As of PHP 7.0.0, there are no
-> particular restrictions regarding the length of a <span
-> class="type">string</span> on 64-bit builds. On 32-bit builds and in
-> earlier versions, a <span class="type">string</span> can be as large
-> as up to 2GB (2147483647 bytes maximum) </span>
+> **Note**: <span class="simpara"> On 32-bit builds, a <span
+> class="type">string</span> can be as large as up to 2GB (2147483647
+> bytes maximum) </span>
 
 ### Syntax
 
@@ -28,7 +26,7 @@ different ways:
     </span>
 -   <span class="simpara">
     <a href="/language/types/string.html#language.types.string.syntax.nowdoc" class="link">nowdoc syntax</a>
-    (since PHP 5.3.0) </span>
+    </span>
 
 #### Single quoted
 
@@ -82,24 +80,23 @@ If the <span class="type">string</span> is enclosed in double-quotes
 ("), PHP will interpret the following escape sequences for special
 characters:
 
-| Sequence                | Meaning                                                                                                                                                                             |
-|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *\\n*                   | linefeed (LF or 0x0A (10) in ASCII)                                                                                                                                                 |
-| *\\r*                   | carriage return (CR or 0x0D (13) in ASCII)                                                                                                                                          |
-| *\\t*                   | horizontal tab (HT or 0x09 (9) in ASCII)                                                                                                                                            |
-| *\\v*                   | vertical tab (VT or 0x0B (11) in ASCII) (since PHP 5.2.5)                                                                                                                           |
-| *\\e*                   | escape (ESC or 0x1B (27) in ASCII) (since PHP 5.4.4)                                                                                                                                |
-| *\\f*                   | form feed (FF or 0x0C (12) in ASCII) (since PHP 5.2.5)                                                                                                                              |
-| *\\\\*                  | backslash                                                                                                                                                                           |
-| *\\$*                   | dollar sign                                                                                                                                                                         |
-| *\\"*                   | double-quote                                                                                                                                                                        |
-| *\\\[0-7\]{1,3}*        | the sequence of characters matching the regular expression is a character in octal notation, which silently overflows to fit in a byte (e.g. "\\400" === "\\000")                   |
-| *\\x\[0-9A-Fa-f\]{1,2}* | the sequence of characters matching the regular expression is a character in hexadecimal notation                                                                                   |
-| *\\u{\[0-9A-Fa-f\]+}*   | the sequence of characters matching the regular expression is a Unicode codepoint, which will be output to the string as that codepoint's UTF-8 representation (added in PHP 7.0.0) |
+| Sequence                | Meaning                                                                                                                                                           |
+|-------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| *\\n*                   | linefeed (LF or 0x0A (10) in ASCII)                                                                                                                               |
+| *\\r*                   | carriage return (CR or 0x0D (13) in ASCII)                                                                                                                        |
+| *\\t*                   | horizontal tab (HT or 0x09 (9) in ASCII)                                                                                                                          |
+| *\\v*                   | vertical tab (VT or 0x0B (11) in ASCII)                                                                                                                           |
+| *\\e*                   | escape (ESC or 0x1B (27) in ASCII)                                                                                                                                |
+| *\\f*                   | form feed (FF or 0x0C (12) in ASCII)                                                                                                                              |
+| *\\\\*                  | backslash                                                                                                                                                         |
+| *\\$*                   | dollar sign                                                                                                                                                       |
+| *\\"*                   | double-quote                                                                                                                                                      |
+| *\\\[0-7\]{1,3}*        | the sequence of characters matching the regular expression is a character in octal notation, which silently overflows to fit in a byte (e.g. "\\400" === "\\000") |
+| *\\x\[0-9A-Fa-f\]{1,2}* | the sequence of characters matching the regular expression is a character in hexadecimal notation                                                                 |
+| *\\u{\[0-9A-Fa-f\]+}*   | the sequence of characters matching the regular expression is a Unicode codepoint, which will be output to the string as that codepoint's UTF-8 representation    |
 
 As in single quoted <span class="type">string</span>s, escaping any
-other character will result in the backslash being printed too. Before
-PHP 5.1.1, the backslash in *\\{$var}* had not been printed.
+other character will result in the backslash being printed too.
 
 The most important feature of double-quoted <span
 class="type">string</span>s is the fact that variable names will be
@@ -160,8 +157,8 @@ EOT;
 ?>
 ```
 
-Heredocs can not be used for initializing class properties. Since PHP
-5.3, this limitation is valid only for heredocs containing variables.
+Heredocs containing variables can not be used for initializing class
+properties.
 
 Heredoc text behaves just like a double-quoted <span
 class="type">string</span>, without the double quotes. This means that
@@ -224,7 +221,7 @@ EOD
 ?>
 ```
 
-As of PHP 5.3.0, it's possible to initialize static variables and class
+It's possible to initialize static variables and class
 properties/constants using the Heredoc syntax:
 
 **Example \#5 Using Heredoc to initialize static values**
@@ -253,8 +250,8 @@ FOOBAR;
 ?>
 ```
 
-Starting with PHP 5.3.0, the opening Heredoc identifier may optionally
-be enclosed in double quotes:
+The opening Heredoc identifier may optionally be enclosed in double
+quotes:
 
 **Example \#6 Using double quotes in Heredoc**
 
@@ -342,10 +339,6 @@ EOT;
 }
 ?>
 ```
-
-> **Note**:
->
-> Nowdoc support was added in PHP 5.3.0.
 
 #### Variable parsing
 
@@ -539,12 +532,12 @@ The above example will output:
 
 > **Note**:
 >
-> Functions, method calls, static class variables, and class constants
-> inside *{$}* work since PHP 5. However, the value accessed will be
-> interpreted as the name of a variable in the scope in which the string
-> is defined. Using single curly braces (*{}*) will not work for
-> accessing the return values of functions or methods or the values of
-> class constants or static class variables.
+> The value accessed from functions, method calls, static class
+> variables, and class constants inside *{$}* will be interpreted as the
+> name of a variable in the scope in which the string is defined. Using
+> single curly braces (*{}*) will not work for accessing the return
+> values of functions or methods or the values of class constants or
+> static class variables.
 
 ``` php
 <?php
@@ -630,11 +623,10 @@ $str[strlen($str)-1] = 'e';
 ?>
 ```
 
-As of PHP 5.4 string offsets have to either be integers or integer-like
-strings, otherwise a warning will be thrown. Previously an offset like
-*"foo"* was silently cast to *0*.
+String offsets have to either be integers or integer-like strings,
+otherwise a warning will be thrown.
 
-**Example \#13 Differences between PHP 5.3 and PHP 5.4**
+**Example \#13 Example of Illegal String Offsets**
 
 ``` php
 <?php
@@ -654,18 +646,7 @@ var_dump(isset($str['1x']));
 ?>
 ```
 
-Output of the above example in PHP 5.3:
-
-    string(1) "b"
-    bool(true)
-    string(1) "b"
-    bool(true)
-    string(1) "a"
-    bool(true)
-    string(1) "b"
-    bool(true)
-
-Output of the above example in PHP 5.4:
+The above example will output:
 
     string(1) "b"
     bool(true)
@@ -688,8 +669,13 @@ Output of the above example in PHP 5.4:
 
 > **Note**:
 >
-> PHP 5.5 added support for accessing characters within string literals
-> using *\[\]* or *{}*.
+> Characters within string literals can be accessed using *\[\]* or
+> *{}*.
+
+> **Note**:
+>
+> Accessing characters within string literals using the *{}* syntax has
+> been deprecated in PHP 7.4. This has been removed in PHP 8.0.
 
 ### Useful functions and operators
 

@@ -6773,7 +6773,7 @@ Checks if the function is variadic
 <span class="methodparam">void</span> )
 
 Checks if the function is
-<a href="/functions/arguments.html#functions.variable-arg-list.new" class="link">variadic</a>.
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link">variadic</a>.
 
 ### Parameters
 
@@ -9408,7 +9408,7 @@ Checks if the parameter is variadic
 class="methodparam">void</span> )
 
 Checks if the parameter was declared as a
-<a href="/functions/arguments.html#functions.variable-arg-list.new" class="link">variadic parameter</a>.
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link">variadic parameter</a>.
 
 ### Parameters
 

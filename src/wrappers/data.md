@@ -7,7 +7,7 @@ Data (RFC 2397)
 
 The `data:`
 (<a href="http://www.faqs.org/rfcs/rfc2397" class="link external">» RFC 2397</a>)
-stream wrapper is available since PHP 5.2.0.
+stream wrapper.
 
 ### Usage
 

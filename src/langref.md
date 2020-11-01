@@ -164,8 +164,6 @@ Language Reference
     -   [$\_COOKIE](/reserved/variables/cookies.html) — HTTP Cookies
     -   [$php\_errormsg](/reserved/variables/phperrormsg.html) — The
         previous error message
-    -   [$HTTP\_RAW\_POST\_DATA](/reserved/variables/httprawpostdata.html)
-        — Raw POST data
     -   [$http\_response\_header](/reserved/variables/httpresponseheader.html)
         — HTTP response headers
     -   [$argc](/reserved/variables/argc.html) — The number of arguments

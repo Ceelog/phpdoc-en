@@ -180,27 +180,24 @@ function test()
 ?>
 ```
 
-> **Note**:
->
-> Static variables may be declared as seen in the examples above. From
-> PHP 5.6 you can assign values to these variables which are the result
-> of expressions, but you can't use any function here, what will cause a
-> parse error.
->
-> **Example \#7 Declaring static variables**
->
-> ``` php
-> <?php
-> function foo(){
->     static $int = 0;          // correct 
->     static $int = 1+2;        // correct (as of PHP 5.6)
->     static $int = sqrt(121);  // wrong  (as it is a function)
->
->     $int++;
->     echo $int;
-> }
-> ?>
-> ```
+Static variables can be assigned values which are the, result of
+constant expressions, but dynamic expressions, such as function calls,
+will cause a parse error.
+
+**Example \#7 Declaring static variables**
+
+``` php
+<?php
+function foo(){
+    static $int = 0;          // correct 
+    static $int = 1+2;        // correct
+    static $int = sqrt(121);  // wrong  (as it is a function)
+
+    $int++;
+    echo $int;
+}
+?>
+```
 
 > **Note**:
 >

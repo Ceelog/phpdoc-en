@@ -21,15 +21,6 @@ however, for a listing of their contents and further discussion on PHP
 predefined variables and their natures, please see the section
 <a href="/reserved/variables.html" class="link">Reserved Predefined Variables</a>.
 
-> **Note**:
->
-> Prior to PHP 5.4, the old way of retrieving information related to the
-> HTTP request with the *HTTP\_\*\_VARS* variables instead of
-> superglobals was still possible. This feature could be disabled as of
-> PHP 5.0.0 with the
-> <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a>
-> directive.
-
 > **Note**: **Variable variables**  
 >
 > Superglobals cannot be used as

@@ -64,14 +64,10 @@ appropriately, thus disabling the TCP Nagle algorithm.
 
 ### Changelog
 
-| Version | Description           |
-|---------|-----------------------|
-| 7.1.0   | Added `tcp_nodelay`.  |
-| 7.0.1   | Added `ipv6_v6only`.  |
-| 7.0.0   | Added `so_broadcast`. |
-| 7.0.0   | Added `so_reuseport`. |
-| 5.3.3   | Added `backlog`.      |
-| 5.1.0   | Added `bindto`.       |
+| Version | Description          |
+|---------|----------------------|
+| 7.1.0   | Added `tcp_nodelay`. |
+| 7.0.1   | Added `ipv6_v6only`. |
 
 ### Examples
 

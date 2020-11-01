@@ -53,7 +53,7 @@ presented as a string.
 > <a href="/language/oop5/cloning.html" class="link">clone</a> an
 > Exception will result in a fatal **`E_ERROR`** error.
 
-**Example \#2 Extending the Exception class (PHP 5.3.0+)**
+**Example \#2 Extending the Exception class**
 
 ``` php
 <?php
@@ -168,36 +168,3 @@ var_dump($o); // TestException
 echo "\n\n";
 ?>
 ```
-
-> **Note**:
->
-> Versions of PHP 5, prior to PHP 5.3.0 do not support nesting of
-> exceptions. The following code fragment can be used as a replacement
-> MyException class if you wish to run this example.
->
-> ``` php
-> <?php
-> /**
->  * Define a custom exception class
->  */
-> class MyException extends Exception
-> {
->     // Redefine the exception so message isn't optional
->     public function __construct($message, $code = 0) {
->         // some code
->     
->         // make sure everything is assigned properly
->         parent::__construct($message, $code);
->     }
->
->     // custom string representation of object
->     public function __toString() {
->         return __CLASS__ . ": [{$this->code}]: {$this->message}\n";
->     }
->
->     public function customFunction() {
->         echo "A custom function for this type of exception\n";
->     }
-> }
-> ?>
-> ```

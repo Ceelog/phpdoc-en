@@ -18,11 +18,7 @@ The "one-line" comment styles only comment to the end of the line or the
 current block of PHP code, whichever comes first. This means that HTML
 code after *// ... ?\>* or *\# ... ?\>* WILL be printed: ?\> breaks out
 of PHP mode and returns to HTML mode, and *//* or *\#* cannot influence
-that. If the
-<a href="/ini/core.html#ini.asp-tags" class="link">asp_tags</a>
-configuration directive is enabled, it behaves the same with *// %\>*
-and *\# %\>*. However, the *\</script\>* tag doesn't break out of PHP
-mode in a one-line comment.
+that.
 
 ``` php
 <h1>This is an <?php # echo 'simple';?> example</h1>

@@ -19,10 +19,6 @@ exactly what the *switch* statement is for.
 > Note that switch/case does
 > <a href="/types/comparisons.html#types.comparisions-loose" class="link">loose comparison</a>.
 
-| Version | Description                                                      |
-|---------|------------------------------------------------------------------|
-| 7.0.0   | Multiple default cases will raise a **`E_COMPILE_ERROR`** error. |
-
 The following two examples are two different ways to write the same
 thing, one using a series of *if* and *elseif* statements, and the other
 using the *switch* statement:
@@ -146,6 +142,9 @@ switch ($i) {
 }
 ?>
 ```
+
+> **Note**: <span class="simpara"> Multiple default cases will raise a
+> **`E_COMPILE_ERROR`** error. </span>
 
 The alternative syntax for control structures is supported with
 switches. For more information, see

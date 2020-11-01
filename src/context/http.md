@@ -60,12 +60,6 @@ HTTP protocol version.
 
 Defaults to *1.0*.
 
-> **Note**:
->
-> PHP prior to 5.3.0 does not implement chunked transfer decoding. If
-> this value is set to *1.1* it is your responsibility to be *1.1*
-> compliant.
-
 `timeout` <span class="type">float</span>  
 Read timeout in seconds, specified by a <span class="type">float</span>
 (e.g. *10.5*).
@@ -78,19 +72,6 @@ By default the
 Fetch the content even on failure status codes.
 
 Defaults to **`FALSE`**.
-
-### Changelog
-
-| Version | Description                                                                     |
-|---------|---------------------------------------------------------------------------------|
-| 5.3.4   | Added `follow_location`.                                                        |
-| 5.3.0   | The `protocol_version` supports chunked transfer decoding when set to *1.1*.    |
-| 5.2.10  | Added `ignore_errors`.                                                          |
-| 5.2.10  | The `header` can now be an numerically indexed <span class="type">array</span>. |
-| 5.2.1   | Added `timeout`.                                                                |
-| 5.1.0   | Added HTTPS proxying through HTTP proxies.                                      |
-| 5.1.0   | Added `max_redirects`.                                                          |
-| 5.1.0   | Added `protocol_version`.                                                       |
 
 ### Examples
 

@@ -72,13 +72,10 @@ print "$b\n"; // prints 4 as well, since $b is a reference to $a, which has
 
 The
 <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
-operator returns a reference automatically, so assigning the result of
+operator returns a reference automatically, as such assigning the result
+of
 <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
-by reference is not allowed as of PHP 7.0.0, results in an
-**`E_DEPRECATED`** message as of PHP 5.3.0, and an **`E_STRICT`**
-message in earlier versions.
-
-For example, this code will result in an error or warning:
+by reference is an error.
 
 ``` php
 <?php
@@ -88,17 +85,9 @@ $o = &new C;
 ?>
 ```
 
-Output of the above example in PHP 7:
+The above example will output:
 
     Parse error: syntax error, unexpected 'new' (T_NEW) in …
-
-Output of the above example in PHP 5.3:
-
-    Deprecated: Assigning the return value of new by reference is deprecated in …
-
-Output of the above example in PHP 5:
-
-    Strict Standards: Assigning the return value of new by reference is deprecated in …
 
 More information on references and their potential uses can be found in
 the

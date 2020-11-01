@@ -115,7 +115,7 @@ $ php -c /custom/directory/custom-file.ini my_script.php</code></pre>
  </code></pre>
 </div>
 </div>
-<div id="example-403" class="example">
+<div id="example-402" class="example">
 <div class="example-contents screen">
 <div class="cdata">
 <pre><code># Omitting the value part will set the given configuration directive to &quot;1&quot;
@@ -177,7 +177,7 @@ string(15) &quot;doesntmakesense&quot;</code></pre>
 <tr class="even">
 <td>-m</td>
 <td>--modules</td>
-<td><div id="example-404" class="example">
+<td><div id="example-403" class="example">
 <p><strong>Example #1 Printing built in (and loaded) PHP and Zend modules</strong></p>
 <div class="example-contents screen">
 <div class="cdata">
@@ -206,7 +206,7 @@ ctype
 <blockquote>
 <p><strong>Note</strong>:</p>
 <p>Care must be taken when using this form of PHP not to collide with command line variable substitution done by the shell.</p>
-<div id="example-405" class="example">
+<div id="example-404" class="example">
 <p><strong>Example #2 Getting a syntax error when using double quotes</strong></p>
 <div class="example-contents screen">
 <div class="cdata">
@@ -226,7 +226,7 @@ Parse error: syntax error, unexpected &#39;=&#39; in Command line code on line 1
 </div>
 </div>
 <p>The correct way would be to use single quotes <em>'</em>. Variables in single-quoted strings are not expanded by sh/bash.</p>
-<div id="example-406" class="example">
+<div id="example-405" class="example">
 <p><strong>Example #3 Using single quotes to prevent the shell's variable substitution</strong></p>
 <div class="example-contents screen">
 <div class="cdata">
@@ -276,7 +276,7 @@ array(370) {
 <td>-E</td>
 <td>--process-end</td>
 <td><p>PHP code to execute after processing the input. Added in PHP 5.</p>
-<div id="example-407" class="example">
+<div id="example-406" class="example">
 <p><strong>Example #4 Using the <strong>-B</strong>, <strong>-R</strong> and <strong>-E</strong> options to count the number of lines of a project.</strong></p>
 <div class="example-contents screen">
 <div class="cdata">
@@ -309,7 +309,7 @@ Total Lines: 37328</code></pre>
 <tr class="odd">
 <td>-v</td>
 <td>--version</td>
-<td><div id="example-408" class="example">
+<td><div id="example-407" class="example">
 <p><strong>Example #5 Using <strong>-v</strong> to get the SAPI name and the version of PHP and Zend</strong></p>
 <div class="example-contents screen">
 <div class="cdata">
@@ -339,7 +339,7 @@ Zend Engine v2.3.0, Copyright (c) 1998-2009 Zend Technologies</code></pre>
 <td> </td>
 <td>--ini</td>
 <td><p>Show configuration file names and scanned directories. Available as of PHP 5.2.3.</p>
-<div id="example-409" class="example">
+<div id="example-408" class="example">
 <p><strong>Example #6 <em>--ini</em> example</strong></p>
 <div class="example-contents">
 <div class="shellcode">
@@ -357,7 +357,7 @@ Additional .ini files parsed:      (none)</code></pre>
 <td>--rfunction</td>
 <td><p>Show information about the given function or class method (e.g. number and name of the parameters). Available as of PHP 5.1.2.</p>
 <p>This option is only available if PHP was compiled with <a href="/book/reflection.html" class="link">Reflection</a> support.</p>
-<div id="example-410" class="example">
+<div id="example-409" class="example">
 <p><strong>Example #7 basic <em>--rf</em> usage</strong></p>
 <div class="example-contents">
 <div class="shellcode">
@@ -378,7 +378,7 @@ Function [ &lt;internal&gt; public function var_dump ] {
 <td>--rclass</td>
 <td><p>Show information about the given class (list of constants, properties and methods). Available as of PHP 5.1.2.</p>
 <p>This option is only available if PHP was compiled with <a href="/book/reflection.html" class="link">Reflection</a> support.</p>
-<div id="example-411" class="example">
+<div id="example-410" class="example">
 <p><strong>Example #8 <em>--rc</em> example</strong></p>
 <div class="example-contents">
 <div class="shellcode">
@@ -417,7 +417,7 @@ Class [ &lt;internal:standard&gt; class Directory ] {
 <td>--rextension</td>
 <td><p>Show information about the given extension (list of <var class="filename">php.ini</var> options, defined functions, constants and classes). Available as of PHP 5.1.2.</p>
 <p>This option is only available if PHP was compiled with <a href="/book/reflection.html" class="link">Reflection</a> support.</p>
-<div id="example-412" class="example">
+<div id="example-411" class="example">
 <p><strong>Example #9 <em>--re</em> example</strong></p>
 <div class="example-contents">
 <div class="shellcode">
@@ -444,7 +444,7 @@ Extension [ &lt;persistent&gt; extension #19 json version 1.2.1 ] {
 <td>--ri</td>
 <td>--rextinfo</td>
 <td><p>Show the configuration information for the given extension (the same information that is returned by <span class="function">phpinfo</span>). Available as of PHP 5.2.2. The core configuration information is available using "main" as extension name.</p>
-<div id="example-413" class="example">
+<div id="example-412" class="example">
 <p><strong>Example #10 <em>--ri</em> example</strong></p>
 <div class="example-contents">
 <div class="shellcode">

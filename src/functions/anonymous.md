@@ -192,23 +192,18 @@ The above example will output:
     object(Test)#1 (0) {
     }
 
-Output of the above example in PHP 5.3:
-
-    Notice: Undefined variable: this in script.php on line 8
-    NULL
-
-As of PHP 5.4.0, when declared in the context of a class, the current
-class is automatically bound to it, making *$this* available inside of
-the function's scope. If this automatic binding of the current class is
-not wanted, then
+When declared in the context of a class, the current class is
+automatically bound to it, making *$this* available inside of the
+function's scope. If this automatic binding of the current class is not
+wanted, then
 <a href="/functions/anonymous.html#functions.anonymous-functions.static" class="link">static anonymous functions</a>
 may be used instead.
 
 ### Static anonymous functions
 
-As of PHP 5.4, anonymous functions may be declared statically. This
-prevents them from having the current class automatically bound to them.
-Objects may also not be bound to them at runtime.
+Anonymous functions may be declared statically. This prevents them from
+having the current class automatically bound to them. Objects may also
+not be bound to them at runtime.
 
 **Example \#6 Attempting to use *$this* inside a static anonymous
 function**
@@ -260,8 +255,6 @@ The above example will output:
 | Version | Description                                                                                                                                                                     |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.1.0   | Anonymous functions may not close over <a href="/language/variables/predefined.html" class="link">superglobals</a>, `$this`, or any variable with the same name as a parameter. |
-| 5.4.0   | Anonymous functions may use `$this`, as well as be declared statically.                                                                                                         |
-| 5.3.0   | Anonymous functions become available.                                                                                                                                           |
 
 ### Notes
 

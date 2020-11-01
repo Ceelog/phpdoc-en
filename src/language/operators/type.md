@@ -184,7 +184,7 @@ a fatal error would occur. This can be worked around by using a dynamic
 class reference, or a string variable containing the class name:
 
 **Example \#8 Avoiding classname lookups and fatal errors with
-*instanceof* in PHP 5.0**
+*instanceof***
 
 ``` php
 <?php
@@ -197,11 +197,10 @@ The above example will output:
 
     bool(false)
 
-The *instanceof* operator was introduced in PHP 5. Before this time
-<span class="function">is\_a</span> was used but <span
-class="function">is\_a</span> has since been deprecated in favor of
-*instanceof*. Note that as of PHP 5.3.0, <span
-class="function">is\_a</span> is no longer deprecated.
+The *instanceof* operator has a functional variant with the <span
+class="function">is\_a</span> function.
 
-See also <span class="function">get\_class</span> and <span
-class="function">is\_a</span>.
+### See Also
+
+-   <span class="function">get\_class</span>
+-   <span class="function">is\_a</span>

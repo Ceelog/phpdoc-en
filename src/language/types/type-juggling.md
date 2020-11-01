@@ -92,14 +92,14 @@ The casts allowed are:
 -   <span class="simpara">(unset) - cast to <span
     class="type">NULL</span></span>
 
-(binary) casting and b prefix forward support was added in PHP 5.2.1.
-Note that the (binary) cast is essential the same as (string), but it
-should not be relied upon.
+(binary) casting and b prefix exists for forward support. Note that the
+(binary) cast is essential the same as (string), but it should not be
+relied upon.
 
 The (unset) cast has been deprecated as of PHP 7.2.0. Note that the
 (unset) cast is the same as assigning the value <span
-class="type">NULL</span> to the variable or call. The (unset) cast will
-be removed as of PHP 8.0.0.
+class="type">NULL</span> to the variable or call. The (unset) cast is
+removed as of PHP 8.0.0.
 
 Note that tabs and spaces are allowed inside the parentheses, so the
 following are functionally equivalent:

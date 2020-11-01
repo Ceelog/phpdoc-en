@@ -63,9 +63,12 @@ For values of other types, the conversion is performed by converting the
 value to <span class="type">integer</span> first and then to <span
 class="type">float</span>. See
 <a href="/language/types/integer.html#language.types.integer.casting" class="link">Converting to integer</a>
-for more information. As of PHP 5, a notice is thrown if an <span
-class="type">object</span> is converted to <span
-class="type">float</span>.
+for more information.
+
+> **Note**:
+>
+> A notice is thrown if an <span class="type">object</span> is converted
+> to <span class="type">float</span>.
 
 ### Comparing floats
 

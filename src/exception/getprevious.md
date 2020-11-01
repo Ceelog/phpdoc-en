@@ -22,12 +22,6 @@ This function has no parameters.
 Returns the previous <span class="classname">Throwable</span> if
 available or **`NULL`** otherwise.
 
-### Changelog
-
-| Version | Description                                                                      |
-|---------|----------------------------------------------------------------------------------|
-| 7.0.0   | The return type declaration changed to <span class="classname">Throwable</span>. |
-
 ### Examples
 
 **Example \#1 <span class="methodname">Exception::getPrevious</span>

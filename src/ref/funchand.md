@@ -845,7 +845,7 @@ After change : 'baz'
 
 ### See Also
 
--   <a href="/functions/arguments.html#functions.variable-arg-list.new" class="link"><em>...</em> syntax in PHP 5.6+</a>
+-   <a href="/functions/arguments.html#functions.variable-arg-list" class="link"><em>...</em> syntax in PHP 5.6+</a>
 -   <span class="function">func\_get\_args</span>
 -   <span class="function">func\_num\_args</span>
 
@@ -1019,7 +1019,7 @@ After change : array (
 
 ### See Also
 
--   <a href="/functions/arguments.html#functions.variable-arg-list.new" class="link"><em>...</em> syntax in PHP 5.6+</a>
+-   <a href="/functions/arguments.html#functions.variable-arg-list" class="link"><em>...</em> syntax in PHP 5.6+</a>
 -   <span class="function">func\_get\_arg</span>
 -   <span class="function">func\_num\_args</span>
 -   <span
@@ -1115,7 +1115,7 @@ Output in PHP 5.3 and later will be something similar to:
 
 ### See Also
 
--   <a href="/functions/arguments.html#functions.variable-arg-list.new" class="link"><em>...</em> syntax in PHP 5.6+</a>
+-   <a href="/functions/arguments.html#functions.variable-arg-list" class="link"><em>...</em> syntax in PHP 5.6+</a>
 -   <span class="function">func\_get\_arg</span>
 -   <span class="function">func\_get\_args</span>
 -   <span

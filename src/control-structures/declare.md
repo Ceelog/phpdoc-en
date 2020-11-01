@@ -20,12 +20,6 @@ the
 <a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">strict</a>
 section on the Function arguments page)
 
-| Version | Description                                                                 |
-|---------|-----------------------------------------------------------------------------|
-| 7.0.0   | Added *strict\_types* directive                                             |
-| 7.0.0   | The *ticks* directive does no longer leak into different compilation units. |
-| 5.3.0   | Added *encoding* directive                                                  |
-
 As directives are handled as the file is being compiled, only literals
 may be given as directive values. Variables and constants cannot be
 used. To illustrate:
@@ -150,12 +144,6 @@ When combined with namespaces, the only legal syntax for declare is
 *declare(encoding='...');* where *...* is the encoding value.
 *declare(encoding='...') {}* will result in a parse error when combined
 with namespaces.
-
-The encoding declare value is ignored in PHP 5.3 unless php is compiled
-with *--enable-zend-multibyte*.
-
-Note that PHP does not expose whether *--enable-zend-multibyte* was used
-to compile PHP other than by <span class="function">phpinfo</span>.
 
 See also
 <a href="/ini/core.html#ini.zend.script-encoding" class="link">zend.script_encoding</a>.

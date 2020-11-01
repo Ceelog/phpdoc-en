@@ -55,14 +55,6 @@ call is made. For instance, if you have an expression such as
 value will be used as the name of the property of `$foo`. This is also
 true if `$bar` is an array access.
 
-**Caution**
-
-Further dereferencing a variable property that is an array has different
-semantics between PHP 5 and PHP 7. The
-<a href="/migration70/incompatible.html#migration70.incompatible.variable-handling.indirect" class="link">PHP 7.0 migration guide</a>
-includes further details on the types of expressions that have changed,
-and how to place curly braces to avoid ambiguity.
-
 Curly braces may also be used, to clearly delimit the property name.
 They are most useful when accessing values within a property that
 contains an array, when the property name is made of multiple parts, or

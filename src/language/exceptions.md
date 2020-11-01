@@ -51,7 +51,7 @@ block may specify multiple exceptions using the pipe (*\|*) character.
 This is useful for when different exceptions from different class
 hierarchies are handled the same.
 
-In PHP 5.5 and later, a
+A
 <a href="/language/exceptions.html#language.exceptions.finally" class="link"><em>finally</em></a>
 block may also be specified after or instead of
 <a href="/language/exceptions.html#language.exceptions.catch" class="link"><em>catch</em></a>

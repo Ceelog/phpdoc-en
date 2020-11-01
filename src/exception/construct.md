@@ -31,13 +31,6 @@ The previous exception used for the exception chaining.
 > Exception from a subclass ignores the default arguments, if the
 > properties $code and $message are already set. </span>
 
-### Changelog
-
-| Version | Description                                                                  |
-|---------|------------------------------------------------------------------------------|
-| 7.0.0   | The `previous` parameter is now of type <span class="type">Throwable</span>. |
-| 5.3.0   | The `previous` parameter was added.                                          |
-
 ### Notes
 
 > **Note**:

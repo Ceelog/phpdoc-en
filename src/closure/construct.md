@@ -19,11 +19,6 @@ page.
 
 This function has no parameters.
 
-### Return Values
-
-This method has no return value; it simply emits an error (of type
-**`E_RECOVERABLE_ERROR`**).
-
 ### See Also
 
 -   <a href="/functions/anonymous.html" class="link">Anonymous functions</a>

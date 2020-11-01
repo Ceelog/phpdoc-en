@@ -36,14 +36,6 @@ less memory intensive alternative to activating
 <a href="/ini/core.html#ini.always-populate-raw-post-data" class="link">always_populate_raw_post_data</a>.
 `php://input` is not available with *enctype="multipart/form-data"*.
 
-> **Note**: <span class="simpara"> Prior to PHP 5.6, a stream opened
-> with `php://input` could only be read once; the stream did not support
-> seek operations. However, depending on the SAPI implementation, it may
-> be possible to open another `php://input` stream and restart reading.
-> This is only possible if the request body data has been saved.
-> Typically, this is the case for POST requests, but not other request
-> methods, such as PUT or PROPFIND. </span>
-
 #### php://output
 
 `php://output` is a write-only stream that allows you to write to the
@@ -107,14 +99,6 @@ to the examples for specifics on using these parameters.
 | Supports <span class="function">mkdir</span>                                       | No                                                                                                                        |
 | Supports <span class="function">rmdir</span>                                       | No                                                                                                                        |
 | Supports <span class="function">stream\_select</span>                              | *php://stdin*, *php://stdout*, *php://stderr*, *php://fd* and *php://temp* only.                                          |
-
-### Changelog
-
-| Version | Description                                 |
-|---------|---------------------------------------------|
-| 5.6.0   | `php://input` was made reusable.            |
-| 5.3.6   | `php://fd` was added.                       |
-| 5.1.0   | `php://memory` and `php://temp` were added. |
 
 ### Examples
 

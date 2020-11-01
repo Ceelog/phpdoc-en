@@ -134,20 +134,19 @@ The above example will output:
 
     Making a bowl of acidophilus raspberry.
 
-> **Note**: <span class="simpara"> As of PHP 5, arguments that are
-> passed by reference may have a default value. </span>
+> **Note**: <span class="simpara"> Arguments that are passed by
+> reference may have a default value. </span>
 
 ### Type declarations
 
 > **Note**:
 >
-> Type declarations were also known as type hints in PHP 5.
+> Type declarations were also known as type hints in previous versions
+> of PHP.
 
 Type declarations allow functions to require that parameters are of a
 certain type at call time. If the given value is of the incorrect type,
-then an error is generated: in PHP 5, this will be a recoverable fatal
-error, while PHP 7 will throw a <span class="classname">TypeError</span>
-exception.
+then a <span class="classname">TypeError</span> will be thrown.
 
 To specify a type declaration, the type name should be added before the
 parameter name. The declaration can be made to accept **`NULL`** values
@@ -157,14 +156,14 @@ if the default value of the parameter is set to **`NULL`**.
 
 | Type                               | Description                                                                                                                                                                                                    | Minimum PHP version |
 |------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Class/interface name               | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the given class or interface name.                                                                       | PHP 5.0.0           |
-| *self*                             | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. This can only be used on class and instance methods. | PHP 5.0.0           |
-| <span class="type">array</span>    | The parameter must be an <span class="type">array</span>.                                                                                                                                                      | PHP 5.1.0           |
-| <span class="type">callable</span> | The parameter must be a valid <span class="type">callable</span>.                                                                                                                                              | PHP 5.4.0           |
-| <span class="type">bool</span>     | The parameter must be a <span class="type">boolean</span> value.                                                                                                                                               | PHP 7.0.0           |
-| <span class="type">float</span>    | The parameter must be a <span class="type">float</span>ing point number.                                                                                                                                       | PHP 7.0.0           |
-| <span class="type">int</span>      | The parameter must be an <span class="type">integer</span>.                                                                                                                                                    | PHP 7.0.0           |
-| <span class="type">string</span>   | The parameter must be a <span class="type">string</span>.                                                                                                                                                      | PHP 7.0.0           |
+| Class/interface name               | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the given class or interface name.                                                                       |                     |
+| *self*                             | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. This can only be used on class and instance methods. |                     |
+| <span class="type">array</span>    | The parameter must be an <span class="type">array</span>.                                                                                                                                                      |                     |
+| <span class="type">callable</span> | The parameter must be a valid <span class="type">callable</span>.                                                                                                                                              |                     |
+| <span class="type">bool</span>     | The parameter must be a <span class="type">boolean</span> value.                                                                                                                                               |                     |
+| <span class="type">float</span>    | The parameter must be a <span class="type">float</span>ing point number.                                                                                                                                       |                     |
+| <span class="type">int</span>      | The parameter must be an <span class="type">integer</span>.                                                                                                                                                    |                     |
+| <span class="type">string</span>   | The parameter must be a <span class="type">string</span>.                                                                                                                                                      |                     |
 | *iterable*                         | The parameter must be either an <span class="type">array</span> or an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>.                 | PHP 7.1.0           |
 | *object*                           | The parameter must be an <span class="type">object</span>.                                                                                                                                                     | PHP 7.2.0           |
 
@@ -334,9 +333,7 @@ Enabling strict mode will also affect
 
 > **Note**:
 >
-> Strict typing is only defined for scalar type declarations, and as
-> such, requires PHP 7.0.0 or later, as scalar type declarations were
-> added in that version.
+> Strict typing is only defined for scalar type declarations.
 
 **Example \#11 Strict typing**
 
@@ -410,18 +407,19 @@ The above example will output:
 ### Variable-length argument lists
 
 PHP has support for variable-length argument lists in user-defined
-functions. This is implemented using the *...* token in PHP 5.6 and
-later, and using the <span class="function">func\_num\_args</span>,
-<span class="function">func\_get\_arg</span>, and <span
-class="function">func\_get\_args</span> functions in PHP 5.5 and
-earlier.
+functions by using the *...* token.
 
-#### *...* in PHP 5.6+
+> **Note**: <span class="simpara"> It is also possible to achieve
+> variable-length arguments by using <span
+> class="function">func\_num\_args</span>, <span
+> class="function">func\_get\_arg</span>, and <span
+> class="function">func\_get\_args</span> functions. This technique is
+> not recommended as it was used prior to the introduction of the *...*
+> token. </span>
 
-In PHP 5.6 and later, argument lists may include the *...* token to
-denote that the function accepts a variable number of arguments. The
-arguments will be passed into the given variable as an array; for
-example:
+Argument lists may include the *...* token to denote that the function
+accepts a variable number of arguments. The arguments will be passed
+into the given variable as an array; for example:
 
 **Example \#14 Using *...* to access variable arguments**
 
@@ -443,7 +441,7 @@ The above example will output:
 
     10
 
-You can also use *...* when calling functions to unpack an <span
+*...* can also be used when calling functions to unpack an <span
 class="type">array</span> or <span class="classname">Traversable</span>
 variable or literal into the argument list:
 
@@ -472,11 +470,11 @@ this case, only the trailing arguments that don't match a positional
 argument will be added to the array generated by *...*.
 
 It is also possible to add a
-<a href="/language/oop5/typehinting.html" class="link">type hint</a>
+<a href="/language/oop5/typehinting.html" class="link">type declaration</a>
 before the *...* token. If this is present, then all arguments captured
 by *...* must be objects of the hinted class.
 
-**Example \#16 Type hinted variable arguments**
+**Example \#16 Type declared variable arguments**
 
 ``` php
 <?php
@@ -502,7 +500,7 @@ The above example will output:
     3 days
     Catchable fatal error: Argument 2 passed to total_intervals() must be an instance of DateInterval, null given, called in - on line 14 and defined in - on line 2
 
-Finally, you may also pass variable arguments
+Finally, variable arguments can also be passed
 <a href="/functions/arguments.html#functions.arguments.by-reference" class="link">by reference</a>
 by prefixing the *...* with an ampersand (*&*).
 
@@ -514,10 +512,10 @@ class="function">func\_num\_args</span>, <span
 class="function">func\_get\_arg</span> and <span
 class="function">func\_get\_args</span>.
 
-The first example above would be implemented as follows in PHP 5.5 and
-earlier:
+The first example above would be implemented as follows in old versions
+of PHP:
 
-**Example \#17 Accessing variable arguments in PHP 5.5 and earlier**
+**Example \#17 Accessing variable arguments in old PHP versions**
 
 ``` php
 <?php

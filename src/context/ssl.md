@@ -57,9 +57,6 @@ Common Name we are expecting. PHP will perform limited wildcard
 matching. If the Common Name does not match this, the connection attempt
 will fail.
 
-> **Note**: <span class="simpara"> This option is deprecated, in favour
-> of `peer_name`, as of PHP 5.6.0. </span>
-
 `verify_depth` <span class="type">integer</span>  
 Abort if the certificate chain is too deep.
 
@@ -117,12 +114,9 @@ Available as of PHP 7.2.0 and OpenSSL 1.1.0.
 
 ### Changelog
 
-| Version | Description                                                                                   |
-|---------|-----------------------------------------------------------------------------------------------|
-| 7.2.0   | Added `security_levels`. Requires OpenSSL \>= 1.1.0.                                          |
-| 5.6.0   | Added `peer_fingerprint` and `verify_peer_name`. `verify_peer` default changed to **`TRUE`**. |
-| 5.4.13  | Added `disable_compression`. Requires OpenSSL \>= 1.0.0.                                      |
-| 5.3.2   | Added `SNI_enabled` and `SNI_server_name`.                                                    |
+| Version | Description                                          |
+|---------|------------------------------------------------------|
+| 7.2.0   | Added `security_levels`. Requires OpenSSL \>= 1.1.0. |
 
 ### Notes
 

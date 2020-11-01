@@ -463,7 +463,7 @@ class="function">call\_user\_func\_array</span>. You may also want to
 consider using
 <a href="/functions/variable-functions.html" class="link">variable functions</a>
 and/or the
-<a href="/functions/arguments.html#functions.variable-arg-list.new" class="link"><em>...</em></a>
+<a href="/functions/arguments.html#functions.variable-arg-list" class="link"><em>...</em></a>
 operator.
 
 #### All ereg\* functions

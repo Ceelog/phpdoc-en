@@ -39,8 +39,9 @@ preferred over *array(1, 2, )*. For multi-line arrays on the other hand
 the trailing comma is commonly used, as it allows easier addition of new
 elements at the end.
 
-As of PHP 5.4 you can also use the short array syntax, which replaces
-*array()* with *\[\]*.
+> **Note**:
+>
+> A short array syntax exists which replaces *array()* with *\[\]*.
 
 **Example \#1 A simple array**
 
@@ -51,7 +52,7 @@ $array = array(
     "bar" => "foo",
 );
 
-// as of PHP 5.4
+// Using the short array syntax
 $array = [
     "foo" => "bar",
     "bar" => "foo",
@@ -241,12 +242,6 @@ The above example will output:
 > accessing array elements (e.g. *$array\[42\]* and *$array{42}* will
 > both do the same thing in the example above).
 
-As of PHP 5.4 it is possible to array dereference the result of a
-function or method call directly. Before it was only possible using a
-temporary variable.
-
-As of PHP 5.5 it is possible to array dereference an array literal.
-
 **Example \#7 Array dereferencing**
 
 ``` php
@@ -255,12 +250,7 @@ function getArray() {
     return array(1, 2, 3);
 }
 
-// on PHP 5.4
 $secondElement = getArray()[1];
-
-// previously
-$tmp = getArray();
-$secondElement = $tmp[1];
 
 // or
 list(, $secondElement) = getArray();

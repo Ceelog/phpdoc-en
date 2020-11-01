@@ -64,11 +64,7 @@ Introduction
 ------------
 
 <span class="ooclass">**Exception**</span> is the base class for all
-Exceptions in PHP 5, and the base class for all user exceptions in PHP
-7.
-
-Before PHP 7, <span class="classname">Exception</span> did not implement
-the <span class="classname">Throwable</span> interface.
+user exceptions.
 
 Class synopsis
 --------------
@@ -478,11 +474,10 @@ Introduction
 ------------
 
 <span class="ooclass">**ArithmeticError**</span> is thrown when an error
-occurs while performing mathematical operations. In PHP 7.0, these
-errors include attempting to perform a bitshift by a negative amount,
-and any call to <span class="function">intdiv</span> that would result
-in a value outside the possible bounds of an <span
-class="type">integer</span>.
+occurs while performing mathematical operations. These errors include
+attempting to perform a bitshift by a negative amount, and any call to
+<span class="function">intdiv</span> that would result in a value
+outside the possible bounds of an <span class="type">integer</span>.
 
 Class synopsis
 --------------

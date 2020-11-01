@@ -48,9 +48,3 @@ The line number where the exception is thrown.
 
 `previous`  
 The previous exception used for the exception chaining.
-
-### Changelog
-
-| Version | Description                         |
-|---------|-------------------------------------|
-| 5.3.0   | The `previous` parameter was added. |

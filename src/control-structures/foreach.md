@@ -6,33 +6,20 @@ The *foreach* construct provides an easy way to iterate over arrays.
 you try to use it on a variable with a different data type or an
 uninitialized variable. There are two syntaxes:
 
-    foreach (array_expression as $value)
+    foreach (iterable_expression as $value)
         statement
-    foreach (array_expression as $key => $value)
+    foreach (iterable_expression as $key => $value)
         statement
 
-The first form loops over the array given by *array\_expression*. On
-each iteration, the value of the current element is assigned to *$value*
-and the internal array pointer is advanced by one (so on the next
-iteration, you'll be looking at the next element).
+The first form traverses the iterable given by *iterable\_expression*.
+On each iteration, the value of the current element is assigned to
+*$value*.
 
 The second form will additionally assign the current element's key to
 the *$key* variable on each iteration.
 
 It is possible to
 <a href="/language/oop5/iterations.html" class="link">customize object iteration</a>.
-
-> **Note**:
->
-> In PHP 5, when *foreach* first starts executing, the internal array
-> pointer is automatically reset to the first element of the array. This
-> means that you do not need to call <span class="function">reset</span>
-> before a *foreach* loop.
->
-> As *foreach* relies on the internal array pointer in PHP 5, changing
-> it within the loop may lead to unexpected behavior.
->
-> In PHP 7, *foreach* does not use the internal array pointer.
 
 In order to be able to directly modify array elements within the loop
 precede *$value* with &. In that case the value will be assigned by
@@ -81,9 +68,7 @@ foreach ($arr as $key => $value) {
 ?>
 ```
 
-Before PHP 5.5.0, referencing *$value* is only possible if the iterated
-array can be referenced (i.e. if it is a variable). The following code
-works only as of PHP 5.5.0:
+It is possible to iterate a constant array's value by reference:
 
 ``` php
 <?php
@@ -96,7 +81,7 @@ foreach (array(1, 2, 3, 4) as &$value) {
 > **Note**:
 >
 > *foreach* does not support the ability to suppress error messages
-> using '@'.
+> using *@*.
 
 Some more examples to demonstrate usage:
 
@@ -157,8 +142,8 @@ foreach (array(1, 2, 3, 4, 5) as $v) {
 
 ### Unpacking nested arrays with list()
 
-PHP 5.5 added the ability to iterate over an array of arrays and unpack
-the nested array into loop variables by providing a <span
+It is possible to iterate over an array of arrays and unpack the nested
+array into loop variables by providing a <span
 class="function">list</span> as the value.
 
 For example:
@@ -230,11 +215,3 @@ The above example will output:
 
     Notice: Undefined offset: 2 in example.php on line 7
     A: 3; B: 4; C: 
-
-### Changelog
-
-| Version | Description                                                                                         |
-|---------|-----------------------------------------------------------------------------------------------------|
-| 7.0.0   | *foreach* does not use the internal array pointer anymore.                                          |
-| 5.5.0   | Referencing of *$value* is supported for expressions. Formerly, only variables have been supported. |
-| 5.5.0   | Unpacking nested arrays with <span class="function">list</span> is supported.                       |

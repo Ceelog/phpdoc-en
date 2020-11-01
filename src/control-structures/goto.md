@@ -68,7 +68,3 @@ The above example will output:
 
     Fatal error: 'goto' into loop or switch statement is disallowed in
     script on line 2
-
-> **Note**:
->
-> The *goto* operator is available as of PHP 5.3.

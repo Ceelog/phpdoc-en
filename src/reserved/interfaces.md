@@ -337,8 +337,8 @@ Introduction
 <span class="classname">Throwable</span> is the base interface for any
 object that can be thrown via a
 <a href="/language/exceptions.html" class="link"><em>throw</em></a>
-statement in PHP 7, including <span class="classname">Error</span> and
-<span class="classname">Exception</span>.
+statement, including <span class="classname">Error</span> and <span
+class="classname">Exception</span>.
 
 > **Note**:
 >
@@ -584,10 +584,9 @@ Introduction
 Class used to represent
 <a href="/functions/anonymous.html" class="link">anonymous functions</a>.
 
-Anonymous functions, implemented in PHP 5.3, yield objects of this type.
-This fact used to be considered an implementation detail, but it can now
-be relied upon. Starting with PHP 5.4, this class has methods that allow
-further control of the anonymous function after it has been created.
+Anonymous functions yield objects of this type. This class has methods
+that allow further control of the anonymous function after it has been
+created.
 
 Besides the methods listed here, this class also has an *\_\_invoke*
 method. This is for consistency with other classes that implement

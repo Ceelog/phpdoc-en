@@ -17,8 +17,8 @@ access this information, for example:
 </form>
 ```
 
-As of PHP 5.4.0, there are only two ways to access data from your HTML
-forms. Currently available methods are listed below:
+There are only two ways to access data from your HTML forms. Currently
+available methods are listed below:
 
 **Example \#2 Accessing data from a simple POST HTML form**
 
@@ -26,29 +26,6 @@ forms. Currently available methods are listed below:
 <?php
 echo $_POST['username'];
 echo $_REQUEST['username'];
-?>
-```
-
-There were some other ways of accessing user input in old PHP versions.
-These are listed below. See changelog at the bottom of the page for more
-details.
-
-**Example \#3 Old methods of accessing user input**
-
-``` php
-<?php
-// WATCH OUT: these methods ARE NOT supported anymore.
-// Valid ones were described above.
-
-// Using import_request_variables() - this function has been removed in PHP 5.4.0
-   import_request_variables('p', 'p_');
-   echo $p_username;
-
-// These long predefined variables were removed in PHP 5.4.0
-   echo $HTTP_POST_VARS['username'];
-
-// Using register_globals. This feature was removed in PHP 5.4.0
-   echo $username;
 ?>
 ```
 
@@ -69,7 +46,7 @@ example, group related variables together, or use this feature to
 retrieve values from a multiple select input. For example, let's post a
 form to itself and upon submission display the data:
 
-**Example \#4 More complex form variables**
+**Example \#3 More complex form variables**
 
 ``` php
 <?php
@@ -151,7 +128,7 @@ your browser unless the path or domain is different. So, for a shopping
 cart application you may want to keep a counter and pass this along.
 i.e.
 
-**Example \#5 A <span class="function">setcookie</span> example**
+**Example \#4 A <span class="function">setcookie</span> example**
 
 ``` php
 <?php
@@ -210,7 +187,6 @@ will contain the string "null" and `$_GET["var2"]`, the string "123".
 
 ### Changelog
 
-| Version                | Description                                                                                                                                                                                                                                          |
-|------------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.34, 7.3.23, 7.4.11 | The *names* of incoming cookies are no longer url-decoded for security reasons.                                                                                                                                                                      |
-| 5.3.0, 5.4.0           | <a href="/security/globals.html" class="link">Register Globals</a>, <a href="/security/magicquotes.html" class="link">Magic Quotes</a> and <a href="/ini/core.html#ini.register-long-arrays" class="link">register_long_arrays</a> became deprecated |
+| Version                | Description                                                                     |
+|------------------------|---------------------------------------------------------------------------------|
+| 7.2.34, 7.3.23, 7.4.11 | The *names* of incoming cookies are no longer url-decoded for security reasons. |

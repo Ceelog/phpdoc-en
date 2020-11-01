@@ -12,7 +12,7 @@ Remember basic arithmetic from school? These work just like those.
 | $a \* $b   | Multiplication | Product of `$a` and `$b`.                                                                              |
 | $a / $b    | Division       | Quotient of `$a` and `$b`.                                                                             |
 | $a % $b    | Modulo         | Remainder of `$a` divided by `$b`.                                                                     |
-| $a \*\* $b | Exponentiation | Result of raising `$a` to the `$b`'th power. Introduced in PHP 5.6.                                    |
+| $a \*\* $b | Exponentiation | Result of raising `$a` to the `$b`'th power.                                                           |
 
 The division operator ("/") returns a float value unless the two
 operands are integers (or strings that get converted to integers) and

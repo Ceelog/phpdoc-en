@@ -24,10 +24,10 @@ The offset to retrieve.
 
 > **Note**:
 >
-> Starting with PHP 5.3.4, the prototype checks were relaxed and it's
-> possible for implementations of this method to return by reference.
-> This makes indirect modifications to the overloaded array dimensions
-> of <span class="classname">ArrayAccess</span> objects possible.
+> It's possible for implementations of this method to return by
+> reference. This makes indirect modifications to the overloaded array
+> dimensions of <span class="classname">ArrayAccess</span> objects
+> possible.
 >
 > A direct modification is one that replaces completely the value of the
 > array dimension, as in *$obj\[6\] = 7*. An indirect modification, on

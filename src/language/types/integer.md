@@ -24,9 +24,6 @@ The
 <a href="/language/operators/arithmetic.html" class="link">negation operator</a>
 can be used to denote a negative <span class="type">integer</span>.
 
-Binary <span class="type">integer</span> literals are available since
-PHP 5.4.0.
-
 To use octal notation, precede the number with a *0* (zero). To use
 hexadecimal notation precede the number with *0x*. To use binary
 notation precede the number with *0b*.
@@ -67,18 +64,11 @@ is as of PHP 7.4.0 (previously, underscores have not been allowed):
 The size of an <span class="type">integer</span> is platform-dependent,
 although a maximum value of about two billion is the usual value (that's
 32 bits signed). 64-bit platforms usually have a maximum value of about
-9E18, except on Windows prior to PHP 7, where it was always 32 bit. PHP
-does not support unsigned <span class="type">integer</span>s. <span
-class="type">Integer</span> size can be determined using the constant
-**`PHP_INT_SIZE`**, maximum value using the constant **`PHP_INT_MAX`**
-since PHP 5.0.5, and minimum value using the constant **`PHP_INT_MIN`**
-since PHP 7.0.0.
-
-**Warning**
-
-Prior to PHP 7, if an invalid digit was given in an octal <span
-class="type">integer</span> (i.e. 8 or 9), the rest of the number was
-ignored. Since PHP 7, a parse error is emitted.
+9E18. PHP does not support unsigned <span class="type">integer</span>s.
+<span class="type">Integer</span> size can be determined using the
+constant **`PHP_INT_SIZE`**, maximum value using the constant
+**`PHP_INT_MAX`**, and minimum value using the constant
+**`PHP_INT_MIN`**.
 
 ### Integer overflow
 
@@ -120,15 +110,12 @@ var_dump($large_number);                     // float(5.0E+19)
 ?>
 ```
 
-There is no <span class="type">integer</span> division operator in PHP.
+There is no <span class="type">integer</span> division operator in PHP,
+to achieve this use the <span class="function">intdiv</span> function.
 *1/2* yields the <span class="type">float</span> *0.5*. The value can be
 cast to an <span class="type">integer</span> to round it towards zero,
 or the <span class="function">round</span> function provides finer
 control over rounding.
-
-> **Note**: <span class="simpara"> As of PHP 7.0.0, the function <span
-> class="function">intdiv</span> is available for integer division.
-> </span>
 
 ``` php
 <?php
@@ -167,15 +154,13 @@ class="type">integer</span>, the number will be rounded *towards zero*.
 
 If the float is beyond the boundaries of <span
 class="type">integer</span> (usually *+/- 2.15e+9 = 2^31* on 32-bit
-platforms and *+/- 9.22e+18 = 2^63* on 64-bit platforms other than
-Windows prior to PHP 7), the result is undefined, since the <span
-class="type">float</span> doesn't have enough precision to give an exact
-<span class="type">integer</span> result. No warning, not even a notice
-will be issued when this happens!
+platforms and *+/- 9.22e+18 = 2^63* on 64-bit platforms), the result is
+undefined, since the <span class="type">float</span> doesn't have enough
+precision to give an exact <span class="type">integer</span> result. No
+warning, not even a notice will be issued when this happens!
 
 > **Note**:
 >
-> As of PHP 7.0.0, instead of being undefined and platform-dependent,
 > NaN and Infinity will always be zero when cast to <span
 > class="type">integer</span>.
 

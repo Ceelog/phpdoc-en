@@ -564,18 +564,15 @@ Output of the above example on 64 bit machines:
 
 **Warning**
 
-Prior to PHP 7.0, shifting integers by values greater than or equal to
-the system long integer width, or by negative numbers, results in
-undefined behavior. In other words, if you're using PHP 5.x, don't shift
-more than 31 bits on a 32-bit system, and don't shift more than 63 bits
-on 64-bit system.
-
 Use functions from the <a href="/book/gmp.html" class="link">gmp</a>
 extension for bitwise manipulation on numbers beyond *PHP\_INT\_MAX*.
 
-See also <span class="function">pack</span>, <span
-class="function">unpack</span>, <span class="function">gmp\_and</span>,
-<span class="function">gmp\_or</span>, <span
-class="function">gmp\_xor</span>, <span
-class="function">gmp\_testbit</span>, <span
-class="function">gmp\_clrbit</span>
+### See Also
+
+-   <span class="function">pack</span>
+-   <span class="function">unpack</span>
+-   <span class="function">gmp\_and</span>
+-   <span class="function">gmp\_or</span>
+-   <span class="function">gmp\_xor</span>
+-   <span class="function">gmp\_testbit</span>
+-   <span class="function">gmp\_clrbit</span>
