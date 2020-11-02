@@ -34,7 +34,7 @@ first example:
 | strlen             | The function name.                                                                                                                         |
 | (PHP 4, PHP 5)     | strlen() has been around in all versions of PHP 4 and PHP 5                                                                                |
 | ( string $string ) | The first (and in this case the only) parameter/argument for this function is named `string`, and it's a <span class="type">string</span>. |
-| int                | Type of value this function returns, which is an <span class="type">integer</span> (i.e. the length of a string is measured in numbers).   |
+| int                | Type of value this function returns, which is an <span class="type">int</span> (i.e. the length of a string is measured in numbers).       |
 
 We could rewrite the above function definition in a generic way:
 

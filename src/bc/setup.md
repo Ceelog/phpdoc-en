@@ -37,7 +37,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`bcmath.scale` <span class="type">integer</span>  
+`bcmath.scale` <span class="type">int</span>  
 Number of decimal digits for all bcmath functions. See also <span
 class="function">bcscale</span>.
 

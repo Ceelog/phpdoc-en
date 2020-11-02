@@ -44,17 +44,17 @@ of the missing constants.
 
 Some other mode and random device constants:
 
-**`MCRYPT_ENCRYPT`** (<span class="type">integer</span>)  
+**`MCRYPT_ENCRYPT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MCRYPT_DECRYPT`** (<span class="type">integer</span>)  
+**`MCRYPT_DECRYPT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MCRYPT_DEV_RANDOM`** (<span class="type">integer</span>)  
+**`MCRYPT_DEV_RANDOM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MCRYPT_DEV_URANDOM`** (<span class="type">integer</span>)  
+**`MCRYPT_DEV_URANDOM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MCRYPT_RAND`** (<span class="type">integer</span>)  
+**`MCRYPT_RAND`** (<span class="type">int</span>)  
 <span class="simpara"> </span>

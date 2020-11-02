@@ -38,10 +38,10 @@ compute something.
 
 Of course, values in PHP don't have to be integers, and very often they
 aren't. PHP supports four scalar value types: <span
-class="type">integer</span> values, floating point values (<span
+class="type">int</span> values, floating point values (<span
 class="type">float</span>), <span class="type">string</span> values and
-<span class="type">boolean</span> values (scalar values are values that
-you can't 'break' into smaller pieces, unlike arrays, for instance). PHP
+<span class="type">bool</span> values (scalar values are values that you
+can't 'break' into smaller pieces, unlike arrays, for instance). PHP
 also supports two composite (non-scalar) types: arrays and objects. Each
 of these value types can be assigned into variables or returned from
 functions.

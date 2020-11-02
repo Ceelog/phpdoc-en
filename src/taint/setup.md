@@ -42,10 +42,10 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`taint.enable` <span class="type">integer</span>  
+`taint.enable` <span class="type">int</span>  
 Whether enable the taint.
 
-`taint.error_level` <span class="type">integer</span>  
+`taint.error_level` <span class="type">int</span>  
 the error type which taint will report as when taint find a tainted
 string.
 

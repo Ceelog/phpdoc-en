@@ -76,7 +76,7 @@ also has an effect on return type declarations. In the default weak
 mode, returned values will be coerced to the correct type if they are
 not already of that type. If this type conversion is not allowed (e.g.
 when returning an <span class="type">array</span> from a function with
-return type <span class="type">integer</span>), a <span
+return type <span class="type">int</span>), a <span
 class="classname">TypeError</span> will be thrown. In strict mode, the
 returned value must be of the correct type, otherwise a <span
 class="classname">TypeError</span> will be thrown.

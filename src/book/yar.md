@@ -218,11 +218,11 @@ class="methodparam"><span class="type">string</span> `$url`</span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`</span> \] )
 
-<span class="modifier">public</span> <span
-class="type">Yar\_Client</span> <span class="methodname">setOpt</span> (
-<span class="methodparam"><span class="type">int</span> `$name`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`$value`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">Yar\_Client</span><span class="type">false</span></span>
+<span class="methodname">setOpt</span> ( <span class="methodparam"><span
+class="type">int</span> `$name`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$value`</span> )
 
 }
 
@@ -333,9 +333,9 @@ Set calling contexts
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">Yar\_Client</span> <span
-class="methodname">Yar\_Client::setOpt</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Yar\_Client</span><span class="type">false</span></span>
+<span class="methodname">Yar\_Client::setOpt</span> ( <span
 class="methodparam"><span class="type">int</span> `$name`</span> , <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 

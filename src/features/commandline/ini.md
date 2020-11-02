@@ -7,6 +7,6 @@ INI settings
 
 Here's a short explanation of the configuration directives.
 
-`cli_server.color` <span class="type">boolean</span>  
+`cli_server.color` <span class="type">bool</span>  
 Enable the built-in development web server to use ANSI color coding in
 terminal output.

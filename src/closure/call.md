@@ -7,9 +7,9 @@ Binds and calls the closure
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Closure::call</span> ( <span
-class="methodparam"><span class="type">object</span> `$newthis`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">object</span> `$newthis`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
 Temporarily binds the closure to `newthis`, and calls it with any given
 parameters.
@@ -20,7 +20,7 @@ parameters.
 The <span class="type">object</span> to bind the closure to for the
 duration of the call.
 
-`...`  
+`values`  
 Zero or more parameters, which will be given as parameters to the
 closure.
 

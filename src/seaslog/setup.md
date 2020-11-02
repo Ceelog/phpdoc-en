@@ -55,7 +55,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`seaslog.appender` <span class="type">integer</span>  
+`seaslog.appender` <span class="type">int</span>  
 Switch the Record Log Data Store. 1File 2TCP 3UDP (Switch default 1)
 
 SeasLog will send log to tcp://remote\_host:remote\_port or
@@ -71,10 +71,10 @@ When *SeasLog* send log to TCP/UDP，style follow RFC5424. The
     <13>1 2017-08-27T01:24:59+08:00 vagrant-ubuntu-trusty test/logger[27171]: 2016-06-25 00:59:43 | NOTICE | 21423 | 599157af4e937 | 1466787583.324 | this is a notice log
         
 
-`seaslog.appender_retry` <span class="type">integer</span>  
+`seaslog.appender_retry` <span class="type">int</span>  
 Record Log Retry Count. Default 0 (Do Not Retry)
 
-`seaslog.buffer_disabled_in_cli` <span class="type">integer</span>  
+`seaslog.buffer_disabled_in_cli` <span class="type">int</span>  
 Disable buffer in cli. 1-Y 0-N(Default)
 
 Switch the configure buffer\_disabled\_in\_cli on. The
@@ -82,7 +82,7 @@ buffer\_disabled\_in\_cli switch default off. If switch
 buffer\_disabled\_in\_cli on, and running in cli, seaslog.use\_buffer
 setting will be discarded, Seaslog write to the Data Store IMMEDIATELY.
 
-`seaslog.buffer_size` <span class="type">integer</span>  
+`seaslog.buffer_size` <span class="type">int</span>  
 Configure the buffer\_size with 100. The buffer\_size default 0, it’s
 meaning don’t use buffer. If buffer\_size \> 0,SeasLog will rewritten
 down into the Data Store when the prerecorded log in memory count \>=
@@ -97,7 +97,7 @@ The DateTime Style. Default "Y-m-d H:i:s".
 `seaslog.default_logger` <span class="type">string</span>  
 Default Logger Path. Default "default".
 
-`seaslog.disting_by_hour` <span class="type">integer</span>  
+`seaslog.disting_by_hour` <span class="type">int</span>  
 Switch use the logger with hour. 1-Y 0-N(Default)
 
 > **Note**:
@@ -105,7 +105,7 @@ Switch use the logger with hour. 1-Y 0-N(Default)
 > *seaslog.disting\_by\_hour = 1* Switch use Logger DisTing by hour.
 > It’s meaning SeasLog will create the file each one hour.
 
-`seaslog.disting_folder` <span class="type">integer</span>  
+`seaslog.disting_folder` <span class="type">int</span>  
 Switch use the logger with folder. 1-Y(Default) 0-N
 
 > **Note**:
@@ -115,7 +115,7 @@ Switch use the logger with folder. 1-Y(Default) 0-N
 > this configure close SeasLog will create file use underline connect
 > Logger and Time like default\_20180211.log.
 
-`seaslog.disting_type` <span class="type">integer</span>  
+`seaslog.disting_type` <span class="type">int</span>  
 Switch use the logger with type. 1-Y 0-N(Default)
 
 > **Note**:
@@ -124,7 +124,7 @@ Switch use the logger with type. 1-Y 0-N(Default)
 > meaning SeasLog will create the file deistic info\\warn\\error and the
 > other type.
 
-`seaslog.ignore_warning` <span class="type">integer</span>  
+`seaslog.ignore_warning` <span class="type">int</span>  
 Switch ignore SeasLog warning. 1-On(Default) 0-Off
 
 > **Note**:
@@ -133,7 +133,7 @@ Switch ignore SeasLog warning. 1-On(Default) 0-Off
 > When directory permissions or receive server ports are blocked, they
 > are ignored; when closed, a warning is thrown.
 
-`seaslog.level` <span class="type">integer</span>  
+`seaslog.level` <span class="type">int</span>  
 Record logger level. Default 8 (All of them). 0-EMERGENCY 1-ALERT
 2-CRITICAL 3-ERROR 4-WARNING 5-NOTICE 6-INFO 7-DEBUG 8-ALL
 
@@ -145,7 +145,7 @@ Record logger level. Default 8 (All of them). 0-EMERGENCY 1-ALERT
 > 5-error 6-critical 7-alert 8-emergency Before the 1.7.0 version,
 > Default 0 (All of them).
 
-`seaslog.recall_depth` <span class="type">integer</span>  
+`seaslog.recall_depth` <span class="type">int</span>  
 Log function recall depth.Will affected variable \`LineNo\` in \`%F\`.
 Default 0
 
@@ -153,14 +153,14 @@ Default 0
 If you use Record TCP or UDP, configure this remote ip. Default
 "127.0.0.1"
 
-`seaslog.remote_port` <span class="type">integer</span>  
+`seaslog.remote_port` <span class="type">int</span>  
 If you use Record TCP or UDP, configure this remote port. Default 514
 
-`seaslog.remote_timeout` <span class="type">integer</span>  
+`seaslog.remote_timeout` <span class="type">int</span>  
 If you use Record TCP or UDP, configure this remote timeout. Default 1
 second
 
-`seaslog.throw_exception` <span class="type">integer</span>  
+`seaslog.throw_exception` <span class="type">int</span>  
 Switch throw SeasLog exception. 1-On(Default) 0-Off
 
 > **Note**:
@@ -170,22 +170,22 @@ Switch throw SeasLog exception. 1-On(Default) 0-Off
 > server port is blocked, throw an exception; do not throw an exception
 > when closed.
 
-`seaslog.trace_error` <span class="type">integer</span>  
+`seaslog.trace_error` <span class="type">int</span>  
 Automatic Record final error with default logger. 1-Y(Default) 0-N
 
-`seaslog.trace_exception` <span class="type">integer</span>  
+`seaslog.trace_exception` <span class="type">int</span>  
 Automatic Record exception with default logger. 1-Y 0-N(Default)
 
-`seaslog.trace_notice` <span class="type">integer</span>  
+`seaslog.trace_notice` <span class="type">int</span>  
 Automatic Record notice with default logger. 1-Y 0-N(Default)
 
-`seaslog.trace_warning` <span class="type">integer</span>  
+`seaslog.trace_warning` <span class="type">int</span>  
 Automatic Record warning with default logger. 1-Y 0-N(Default)
 
-`seaslog.trim_wrap` <span class="type">integer</span>  
+`seaslog.trim_wrap` <span class="type">int</span>  
 Trim the \\n and \\r in log message. 1-On 0-Off(Default)
 
-`seaslog.use_buffer` <span class="type">integer</span>  
+`seaslog.use_buffer` <span class="type">int</span>  
 Switch use the log buffer with memory. 1-Y 0-N(Default)
 
 > **Note**:

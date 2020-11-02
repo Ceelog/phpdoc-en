@@ -161,7 +161,7 @@ which is used as cookie name. It should only contain alphanumeric
 characters. Defaults to *PHPSESSID*. See also <span
 class="function">session\_name</span>. </span>
 
-`session.auto_start` <span class="type">boolean</span>  
+`session.auto_start` <span class="type">bool</span>  
 <span class="simpara"> *session.auto\_start* specifies whether the
 session module starts a session automatically on request startup.
 Defaults to *0* (disabled). </span>
@@ -180,14 +180,14 @@ numeric index nor string index contains special characters (*\|* and
 *!*) in $\_SESSION. Use *php\_serialize* to avoid numeric index or
 special character errors at script shutdown. Defaults to *php*. </span>
 
-`session.gc_probability` <span class="type">integer</span>  
+`session.gc_probability` <span class="type">int</span>  
 <span class="simpara"> *session.gc\_probability* in conjunction with
 *session.gc\_divisor* is used to manage probability that the gc (garbage
 collection) routine is started. Defaults to *1*. See
 <a href="/session/setup.html#" class="link">session.gc_divisor</a> for
 details. </span>
 
-`session.gc_divisor` <span class="type">integer</span>  
+`session.gc_divisor` <span class="type">int</span>  
 <span class="simpara"> *session.gc\_divisor* coupled with
 *session.gc\_probability* defines the probability that the gc (garbage
 collection) process is started on every session initialization. The
@@ -195,7 +195,7 @@ probability is calculated by using gc\_probability/gc\_divisor, e.g.
 1/100 means there is a 1% chance that the GC process starts on each
 request. *session.gc\_divisor* defaults to *100*. </span>
 
-`session.gc_maxlifetime` <span class="type">integer</span>  
+`session.gc_maxlifetime` <span class="type">int</span>  
 <span class="simpara"> *session.gc\_maxlifetime* specifies the number of
 seconds after which data will be seen as 'garbage' and potentially
 cleaned up. Garbage collection may occur during session start (depending
@@ -231,12 +231,12 @@ the Windows Random API as entropy source. </span>
 > */dev/urandom* or */dev/arandom* if it is available. In PHP 5.3.0 this
 > directive is left empty by default. </span>
 
-`session.entropy_length` <span class="type">integer</span>  
+`session.entropy_length` <span class="type">int</span>  
 <span class="simpara"> *session.entropy\_length* specifies the number of
 bytes which will be read from the file specified above. Defaults to
 *32*. </span> <span class="simpara"> Removed in PHP 7.1.0. </span>
 
-`session.use_strict_mode` <span class="type">boolean</span>  
+`session.use_strict_mode` <span class="type">bool</span>  
 <span class="simpara"> *session.use\_strict\_mode* specifies whether the
 module will use strict session id mode. If this mode is enabled, the
 module does not accept uninitialized session IDs. If an uninitialized
@@ -260,18 +260,18 @@ directive. Particularly note that <span
 class="classname">SessionHandler</span> does *not* implement <span
 class="methodname">SessionHandler::validateId</span>.
 
-`session.use_cookies` <span class="type">boolean</span>  
+`session.use_cookies` <span class="type">bool</span>  
 <span class="simpara"> *session.use\_cookies* specifies whether the
 module will use cookies to store the session id on the client side.
 Defaults to *1* (enabled). </span>
 
-`session.use_only_cookies` <span class="type">boolean</span>  
+`session.use_only_cookies` <span class="type">bool</span>  
 <span class="simpara"> *session.use\_only\_cookies* specifies whether
 the module will *only* use cookies to store the session id on the client
 side. Enabling this setting prevents attacks involved passing session
 ids in URLs. Defaults to *1* (enabled) since PHP 5.3.0. </span>
 
-`session.cookie_lifetime` <span class="type">integer</span>  
+`session.cookie_lifetime` <span class="type">int</span>  
 <span class="simpara"> *session.cookie\_lifetime* specifies the lifetime
 of the cookie in seconds which is sent to the browser. The value 0 means
 "until the browser is closed." Defaults to *0*. See also <span
@@ -296,13 +296,13 @@ specification. See also <span
 class="function">session\_get\_cookie\_params</span> and <span
 class="function">session\_set\_cookie\_params</span>. </span>
 
-`session.cookie_secure` <span class="type">boolean</span>  
+`session.cookie_secure` <span class="type">bool</span>  
 <span class="simpara"> *session.cookie\_secure* specifies whether
 cookies should only be sent over secure connections. Defaults to *off*.
 See also <span class="function">session\_get\_cookie\_params</span> and
 <span class="function">session\_set\_cookie\_params</span>. </span>
 
-`session.cookie_httponly` <span class="type">boolean</span>  
+`session.cookie_httponly` <span class="type">bool</span>  
 <span class="simpara"> Marks the cookie as accessible only through the
 HTTP protocol. This means that the cookie won't be accessible by
 scripting languages, such as JavaScript. This setting can effectively
@@ -328,13 +328,13 @@ Defaults to *nocache*. See also the <span
 class="function">session\_cache\_limiter</span> documentation for
 information about what these values mean. </span>
 
-`session.cache_expire` <span class="type">integer</span>  
+`session.cache_expire` <span class="type">int</span>  
 <span class="simpara"> *session.cache\_expire* specifies time-to-live
 for cached session pages in minutes, this has no effect for nocache
 limiter. Defaults to *180*. See also <span
 class="function">session\_cache\_expire</span>. </span>
 
-`session.use_trans_sid` <span class="type">boolean</span>  
+`session.use_trans_sid` <span class="type">bool</span>  
 <span class="simpara"> *session.use\_trans\_sid* whether transparent sid
 support is enabled or not. Defaults to *0* (disabled). </span>
 
@@ -370,7 +370,7 @@ enabled. Defaults to *$\_SERVER\['HTTP\_HOST'\]* Multiple hosts can be
 specified by ",", no space is allowed between hosts. e.g.
 *php.net,wiki.php.net,bugs.php.net* </span>
 
-`session.bug_compat_42` <span class="type">boolean</span>  
+`session.bug_compat_42` <span class="type">bool</span>  
 <span class="simpara"> PHP versions 4.2.3 and lower have an undocumented
 feature/bug that allows you to initialize a session variable in the
 global scope, albeit
@@ -383,7 +383,7 @@ directive. </span>
 
 > **Note**: <span class="simpara"> Removed in PHP 5.4.0. </span>
 
-`session.bug_compat_warn` <span class="type">boolean</span>  
+`session.bug_compat_warn` <span class="type">bool</span>  
 <span class="simpara"> PHP versions 4.2.3 and lower have an undocumented
 feature/bug that allows you to initialize a session variable in the
 global scope, albeit
@@ -397,7 +397,7 @@ and
 
 > **Note**: <span class="simpara"> Removed in PHP 5.4.0. </span>
 
-`session.sid_length` <span class="type">integer</span>  
+`session.sid_length` <span class="type">int</span>  
 <span class="simpara"> *session.sid\_length* allows you to specify the
 length of session ID string. Session ID length can be between 22 to 256.
 </span> <span class="simpara"> The default is 32. If you need
@@ -419,7 +419,7 @@ will have weaker session ID.
 > **Note**: <span class="simpara"> This setting is introduced in PHP
 > 7.1.0. </span>
 
-`session.sid_bits_per_character` <span class="type">integer</span>  
+`session.sid_bits_per_character` <span class="type">int</span>  
 <span class="simpara"> *session.sid\_per\_character* allows you to
 specify the number of bits in encoded session ID character. The possible
 values are '4' (0-9, a-f), '5' (0-9, a-v), and '6' (0-9, a-z, A-Z, "-",
@@ -444,7 +444,7 @@ class="function">hash\_algos</span> function.
 > **Note**: <span class="simpara"> This setting was introduced in PHP 5.
 > Removed in PHP 7.1.0. </span>
 
-`session.hash_bits_per_character` <span class="type">integer</span>  
+`session.hash_bits_per_character` <span class="type">int</span>  
 <span class="simpara"> *session.hash\_bits\_per\_character* allows you
 to define how many bits are stored in each character when converting the
 binary hash data to something readable. The possible values are '4'
@@ -452,11 +452,11 @@ binary hash data to something readable. The possible values are '4'
 
 > **Note**: <span class="simpara"> Removed in PHP 7.1.0. </span>
 
-`session.upload_progress.enabled` <span class="type">boolean</span>  
+`session.upload_progress.enabled` <span class="type">bool</span>  
 <span class="simpara"> Enables upload progress tracking, populating the
 `$_SESSION` variable. Defaults to 1, enabled. </span>
 
-`session.upload_progress.cleanup` <span class="type">boolean</span>  
+`session.upload_progress.cleanup` <span class="type">bool</span>  
 <span class="simpara"> Cleanup the progress information as soon as all
 POST data has been read (i.e. upload completed). Defaults to 1, enabled.
 </span>
@@ -487,11 +487,11 @@ information after every 100 bytes"), or in percentages (i.e. "update
 progress information after receiving every 1% of the whole filesize").
 </span> <span class="simpara"> Defaults to "1%". </span>
 
-`session.upload_progress.min_freq` <span class="type">integer</span>  
+`session.upload_progress.min_freq` <span class="type">int</span>  
 <span class="simpara"> The minimum delay between updates, in seconds.
 Defaults to "1" (one second). </span>
 
-`session.lazy_write` <span class="type">boolean</span>  
+`session.lazy_write` <span class="type">bool</span>  
 <span class="simpara"> *session.lazy\_write*, when set to 1, means that
 session data is only rewritten if it changes. Defaults to 1, enabled.
 </span>

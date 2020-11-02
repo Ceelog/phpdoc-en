@@ -77,7 +77,7 @@ this option automagically defines *mbstring.internal\_encoding* and
 *mbstring.internal\_encoding* should be placed after *mbstring.language*
 in `php.ini`
 
-`mbstring.encoding_translation` <span class="type">boolean</span>  
+`mbstring.encoding_translation` <span class="type">bool</span>  
 Enables the transparent character encoding filter for the incoming HTTP
 queries, which performs detection and conversion of the input encoding
 to the internal character encoding.
@@ -140,7 +140,7 @@ This setting can only be changed from the `php.ini` file.
 
 `mbstring.http_output_conv_mimetypes` <span class="type">string</span>  
 
-`mbstring.strict_detection` <span class="type">boolean</span>  
+`mbstring.strict_detection` <span class="type">bool</span>  
 Enables the strict encoding detection.
 
 According to the

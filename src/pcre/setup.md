@@ -85,16 +85,16 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`pcre.backtrack_limit` <span class="type">integer</span>  
+`pcre.backtrack_limit` <span class="type">int</span>  
 PCRE's backtracking limit. Defaults to 100000 for PHP \< 5.3.7.
 
-`pcre.recursion_limit` <span class="type">integer</span>  
+`pcre.recursion_limit` <span class="type">int</span>  
 PCRE's recursion limit. Please note that if you set this value to a high
 number you may consume all the available process stack and eventually
 crash PHP (due to reaching the stack size limit imposed by the Operating
 System).
 
-`pcre.jit` <span class="type">boolean</span>  
+`pcre.jit` <span class="type">bool</span>  
 Whether PCRE's just-in-time compilation is going to be used.
 
 Resource Types

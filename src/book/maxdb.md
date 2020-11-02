@@ -343,7 +343,7 @@ no other name is specified.
 The default password to use when connecting to the database server if no
 other password is specified.
 
-`maxdb.long_readlen` <span class="type">integer</span>  
+`maxdb.long_readlen` <span class="type">int</span>  
 The default maximum length of bytes that is transferred to the client if
 long data is retrieved from the MaxDB database server.
 
@@ -1541,7 +1541,8 @@ Open a new connection to the MaxDB server
 
 Procedural style
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">maxdb\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -2804,7 +2805,8 @@ Returns the lengths of the columns of the current row in the result set
 
 Procedural style
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">maxdb\_fetch\_lengths</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -8492,13 +8494,15 @@ Initiate a result set retrieval
 
 Procedural style
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">maxdb\_use\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$link`</span> )
 
 Object oriented style
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">maxdb::use\_result</span> ( <span
 class="methodparam">void</span> )
 

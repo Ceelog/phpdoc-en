@@ -575,7 +575,8 @@ Start a new pattern
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_begin\_pattern</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">float</span>
@@ -824,7 +825,8 @@ Closes image and frees memory
 
 ### Description
 
-<span class="type">void</span> <span
+<span class="type"><span class="type">void</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_close\_image</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -1335,7 +1337,8 @@ Gets certain parameters
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_get\_parameter</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1553,7 +1556,8 @@ Hyphenates a word
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_hyphenate</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1830,9 +1834,9 @@ Creates a new PostScript document object
 
 ### Description
 
-<span class="type">resource</span> <span
-class="methodname">ps\_new</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">ps\_new</span>
+( <span class="methodparam">void</span> )
 
 Creates a new document instance. It does not create the file on disk or
 in memory, it just sets up everything. <span
@@ -3117,7 +3121,8 @@ Creates a pattern based on a shading
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_shading\_pattern</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -3157,7 +3162,8 @@ Creates a shading for later use
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ps\_shading</span> ( <span class="methodparam"><span
 class="type">resource</span> `$psdoc`</span> , <span
 class="methodparam"><span class="type">string</span> `$type`</span> ,

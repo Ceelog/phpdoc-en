@@ -240,7 +240,8 @@ Returns the subject of a CSR
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_csr\_get\_subject</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$csr`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -359,17 +360,17 @@ of the *config* key to the path of the file you want to use. The
 following keys, if present in `configargs` behave as their equivalents
 in the *openssl.conf*, as listed in the table below.
 
-| `configargs` key     | type                              | *openssl.conf* equivalent | description                                                                                                                                                                                                                 |
-|----------------------|-----------------------------------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| digest\_alg          | <span class="type">string</span>  | default\_md               | Digest method or signature hash, usually one of <span class="function">openssl\_get\_md\_methods</span>                                                                                                                     |
-| x509\_extensions     | <span class="type">string</span>  | x509\_extensions          | Selects which extensions should be used when creating an x509 certificate                                                                                                                                                   |
-| req\_extensions      | <span class="type">string</span>  | req\_extensions           | Selects which extensions should be used when creating a CSR                                                                                                                                                                 |
-| private\_key\_bits   | <span class="type">integer</span> | default\_bits             | Specifies how many bits should be used to generate a private key                                                                                                                                                            |
-| private\_key\_type   | <span class="type">integer</span> | none                      | Specifies the type of private key to create. This can be one of **`OPENSSL_KEYTYPE_DSA`**, **`OPENSSL_KEYTYPE_DH`**, **`OPENSSL_KEYTYPE_RSA`** or **`OPENSSL_KEYTYPE_EC`**. The default value is **`OPENSSL_KEYTYPE_RSA`**. |
-| encrypt\_key         | <span class="type">boolean</span> | encrypt\_key              | Should an exported key (with passphrase) be encrypted?                                                                                                                                                                      |
-| encrypt\_key\_cipher | <span class="type">integer</span> | none                      | One of <a href="/openssl/constants.html#Ciphers" class="link">cipher constants</a>.                                                                                                                                         |
-| curve\_name          | <span class="type">string</span>  | none                      | One of <span class="function">openssl\_get\_curve\_names</span>.                                                                                                                                                            |
-| config               | <span class="type">string</span>  | N/A                       | Path to your own alternative openssl.conf file.                                                                                                                                                                             |
+| `configargs` key     | type                             | *openssl.conf* equivalent | description                                                                                                                                                                                                                 |
+|----------------------|----------------------------------|---------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| digest\_alg          | <span class="type">string</span> | default\_md               | Digest method or signature hash, usually one of <span class="function">openssl\_get\_md\_methods</span>                                                                                                                     |
+| x509\_extensions     | <span class="type">string</span> | x509\_extensions          | Selects which extensions should be used when creating an x509 certificate                                                                                                                                                   |
+| req\_extensions      | <span class="type">string</span> | req\_extensions           | Selects which extensions should be used when creating a CSR                                                                                                                                                                 |
+| private\_key\_bits   | <span class="type">int</span>    | default\_bits             | Specifies how many bits should be used to generate a private key                                                                                                                                                            |
+| private\_key\_type   | <span class="type">int</span>    | none                      | Specifies the type of private key to create. This can be one of **`OPENSSL_KEYTYPE_DSA`**, **`OPENSSL_KEYTYPE_DH`**, **`OPENSSL_KEYTYPE_RSA`** or **`OPENSSL_KEYTYPE_EC`**. The default value is **`OPENSSL_KEYTYPE_RSA`**. |
+| encrypt\_key         | <span class="type">bool</span>   | encrypt\_key              | Should an exported key (with passphrase) be encrypted?                                                                                                                                                                      |
+| encrypt\_key\_cipher | <span class="type">int</span>    | none                      | One of <a href="/openssl/constants.html#Ciphers" class="link">cipher constants</a>.                                                                                                                                         |
+| curve\_name          | <span class="type">string</span> | none                      | One of <span class="function">openssl\_get\_curve\_names</span>.                                                                                                                                                            |
+| config               | <span class="type">string</span> | N/A                       | Path to your own alternative openssl.conf file.                                                                                                                                                                             |
 
 `extraattribs`  
 `extraattribs` is used to specify additional configuration options for
@@ -560,7 +561,8 @@ Decrypts data
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_decrypt</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -642,7 +644,8 @@ local DH key
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_dh\_compute\_key</span> ( <span
 class="methodparam"><span class="type">string</span> `$pub_key`</span> ,
 <span class="methodparam"><span class="type">resource</span>
@@ -797,7 +800,8 @@ Computes a digest
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_digest</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -842,7 +846,8 @@ Encrypts data
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_encrypt</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1558,7 +1563,8 @@ Generates a PKCS5 v2 PBKDF2 string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_pbkdf2</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -2601,7 +2607,8 @@ Generate a pseudo-random string of bytes
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_random\_pseudo\_bytes</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -2623,9 +2630,9 @@ PHP will try to cast this parameter to a non-null integer to use it.
 
 `crypto_strong`  
 If passed into the function, this will hold a <span
-class="type">boolean</span> value that determines if the algorithm used
-was "cryptographically strong", e.g., safe for usage with GPG,
-passwords, etc. **`TRUE`** if it did, otherwise **`FALSE`**
+class="type">bool</span> value that determines if the algorithm used was
+"cryptographically strong", e.g., safe for usage with GPG, passwords,
+etc. **`TRUE`** if it did, otherwise **`FALSE`**
 
 ### Return Values
 
@@ -3544,7 +3551,8 @@ Parse an X.509 certificate and return a resource identifier for it
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">openssl\_x509\_read</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$x509certdata`</span> )

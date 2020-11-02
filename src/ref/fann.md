@@ -248,8 +248,9 @@ class="methodname">fann\_create\_shortcut</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$num_neurons1`</span> , <span class="methodparam"><span
-class="type">int</span> `$num_neurons2`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$...`</span> \] )
+class="type">int</span> `$num_neurons2`</span> , <span
+class="methodparam"><span class="type">int</span> `$num_neuronsN`</span>
+)
 
 Creates a standard backpropagation neural network, which is not fully
 connected and which also has shortcut connections.
@@ -270,7 +271,7 @@ Number of neurons in the first layer.
 `num_neurons2`  
 Number of neurons in the second layer.
 
-`...`  
+`num_neuronsN`  
 Number of neurons in other layers.
 
 ### Return Values
@@ -341,8 +342,8 @@ class="methodparam"><span class="type">float</span>
 class="type">int</span> `$num_layers`</span> , <span
 class="methodparam"><span class="type">int</span> `$num_neurons1`</span>
 , <span class="methodparam"><span class="type">int</span>
-`$num_neurons2`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$...`</span> \] )
+`$num_neurons2`</span> , <span class="methodparam"><span
+class="type">int</span> `$num_neuronsN`</span> )
 
 Creates a standard backpropagation neural network, which is not fully
 connected.
@@ -365,7 +366,7 @@ Number of neurons in the first layer.
 `num_neurons2`  
 Number of neurons in the second layer.
 
-`...`  
+`num_neuronsN`  
 Number of neurons in other layers.
 
 ### Return Values
@@ -431,8 +432,9 @@ class="methodname">fann\_create\_standard</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$num_neurons1`</span> , <span class="methodparam"><span
-class="type">int</span> `$num_neurons2`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$...`</span> \] )
+class="type">int</span> `$num_neurons2`</span> , <span
+class="methodparam"><span class="type">int</span> `$num_neuronsN`</span>
+)
 
 Creates a standard fully connected backpropagation neural network.
 
@@ -454,7 +456,7 @@ Number of neurons in the first layer.
 `num_neurons2`  
 Number of neurons in the second layer.
 
-`...`  
+`num_neuronsN`  
 Number of neurons in other layers.
 
 ### Return Values

@@ -36,7 +36,7 @@ or PUT requests.
 URI specifying address of proxy server. (e.g.
 *tcp://proxy.example.com:5100*).
 
-`request_fulluri` <span class="type">boolean</span>  
+`request_fulluri` <span class="type">bool</span>  
 When set to **`TRUE`**, the entire URI will be used when constructing
 the request. (i.e. *GET http://www.example.com/path/to/file.html
 HTTP/1.0*). While this is a non-standard request format, some proxy
@@ -44,12 +44,12 @@ servers require it.
 
 Defaults to **`FALSE`**.
 
-`follow_location` <span class="type">integer</span>  
+`follow_location` <span class="type">int</span>  
 Follow *Location* header redirects. Set to *0* to disable.
 
 Defaults to *1*.
 
-`max_redirects` <span class="type">integer</span>  
+`max_redirects` <span class="type">int</span>  
 The max number of redirects to follow. Value *1* or less means that no
 redirects are followed.
 
@@ -68,7 +68,7 @@ By default the
 <a href="/filesystem/setup.html#" class="link">default_socket_timeout</a>
 `php.ini` setting is used.
 
-`ignore_errors` <span class="type">boolean</span>  
+`ignore_errors` <span class="type">bool</span>  
 Fetch the content even on failure status codes.
 
 Defaults to **`FALSE`**.

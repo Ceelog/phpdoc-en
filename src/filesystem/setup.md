@@ -37,7 +37,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`allow_url_fopen` <span class="type">boolean</span>  
+`allow_url_fopen` <span class="type">bool</span>  
 This option enables the URL-aware fopen wrappers that enable accessing
 URL object like files. Default wrappers are provided for the access of
 <a href="/features/remote-files.html" class="link">remote files</a>
@@ -45,7 +45,7 @@ using the ftp or http protocol, some extensions like
 <a href="/ref/zlib.html" class="link">zlib</a> may register additional
 wrappers.
 
-`allow_url_include` <span class="type">boolean</span>  
+`allow_url_include` <span class="type">bool</span>  
 This option allows the use of URL-aware fopen wrappers with the
 following functions: <span class="function">include</span>, <span
 class="function">include\_once</span>, <span
@@ -59,7 +59,7 @@ class="function">require\_once</span>.
 `user_agent` <span class="type">string</span>  
 Define the user agent for PHP to send.
 
-`default_socket_timeout` <span class="type">integer</span>  
+`default_socket_timeout` <span class="type">int</span>  
 Default timeout (in seconds) for socket based streams. Specifying a
 negative value means an infinite timeout.
 
@@ -68,7 +68,7 @@ The email address to be used on unauthenticated FTP connections and as
 the value of From header for HTTP connections, when using the ftp and
 http wrappers, respectively.
 
-`auto_detect_line_endings` <span class="type">boolean</span>  
+`auto_detect_line_endings` <span class="type">bool</span>  
 When turned on, PHP will examine the data read by <span
 class="function">fgets</span> and <span class="function">file</span> to
 see if it is using Unix, MS-Dos or Macintosh line-ending conventions.

@@ -137,25 +137,25 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`opcache.enable` <span class="type">boolean</span>  
+`opcache.enable` <span class="type">bool</span>  
 Enables the opcode cache. When disabled, code is not optimised or
 cached. The setting *opcache.enable* can not be enabled at runtime
 through <span class="function">ini\_set</span>, it can only be disabled.
 Trying to enable it in a script will generate a warning.
 
-`opcache.enable_cli` <span class="type">boolean</span>  
+`opcache.enable_cli` <span class="type">bool</span>  
 Enables the opcode cache for the CLI version of PHP.
 
-`opcache.memory_consumption` <span class="type">integer</span>  
+`opcache.memory_consumption` <span class="type">int</span>  
 The size of the shared memory storage used by OPcache, in megabytes. The
 minimum permissible value is *"8"*, which is enforced if a smaller value
 is set.
 
-`opcache.interned_strings_buffer` <span class="type">integer</span>  
+`opcache.interned_strings_buffer` <span class="type">int</span>  
 The amount of memory used to store interned strings, in megabytes. This
 configuration directive is ignored in PHP \< 5.3.0.
 
-`opcache.max_accelerated_files` <span class="type">integer</span>  
+`opcache.max_accelerated_files` <span class="type">int</span>  
 The maximum number of keys (and therefore scripts) in the OPcache hash
 table. The actual value used will be the first number in the set of
 prime numbers *{ 223, 463, 983, 1979, 3907, 7963, 16229, 32531, 65407,
@@ -164,18 +164,18 @@ configured value. The minimum value is 200. The maximum value is 100000
 in PHP \< 5.5.6, and 1000000 in later versions. Values outside of this
 range are clamped to the permissible range.
 
-`opcache.max_wasted_percentage` <span class="type">integer</span>  
+`opcache.max_wasted_percentage` <span class="type">int</span>  
 The maximum percentage of wasted memory that is allowed before a restart
 is scheduled. The maximum permissible value is *"50"*, which is enforced
 if a larger value is set.
 
-`opcache.use_cwd` <span class="type">boolean</span>  
+`opcache.use_cwd` <span class="type">bool</span>  
 If enabled, OPcache appends the current working directory to the script
 key, thereby eliminating possible collisions between files with the same
 base name. Disabling this directive improves performance, but may break
 existing applications.
 
-`opcache.validate_timestamps` <span class="type">boolean</span>  
+`opcache.validate_timestamps` <span class="type">bool</span>  
 If enabled, OPcache will check for updated scripts every
 <a href="/opcache/setup.html#" class="link">opcache.revalidate_freq</a>
 seconds. When this directive is disabled, you must reset OPcache
@@ -183,7 +183,7 @@ manually via <span class="function">opcache\_reset</span>, <span
 class="function">opcache\_invalidate</span> or by restarting the Web
 server for changes to the filesystem to take effect.
 
-`opcache.revalidate_freq` <span class="type">integer</span>  
+`opcache.revalidate_freq` <span class="type">int</span>  
 How often to check script timestamps for updates, in seconds. *0* will
 result in OPcache checking for updates on every request.
 
@@ -191,26 +191,26 @@ This configuration directive is ignored if
 <a href="/opcache/setup.html#" class="link">opcache.validate_timestamps</a>
 is disabled.
 
-`opcache.revalidate_path` <span class="type">boolean</span>  
+`opcache.revalidate_path` <span class="type">bool</span>  
 If disabled, existing cached files using the same
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 will be reused. Thus, if a file with the same name is elsewhere in the
 include\_path, it won't be found.
 
-`opcache.save_comments` <span class="type">boolean</span>  
+`opcache.save_comments` <span class="type">bool</span>  
 If disabled, all documentation comments will be discarded from the
 opcode cache to reduce the size of the optimised code. Disabling this
 configuration directive may break applications and frameworks that rely
 on comment parsing for annotations, including Doctrine, Zend Framework 2
 and PHPUnit.
 
-`opcache.load_comments` <span class="type">boolean</span>  
+`opcache.load_comments` <span class="type">bool</span>  
 If disabled, documentation comments won't be loaded from the opcode
 cache even if they exist. This can be used with
 <a href="/opcache/setup.html#" class="link">opcache.save_comments</a> to
 only load comments for applications that require them.
 
-`opcache.fast_shutdown` <span class="type">boolean</span>  
+`opcache.fast_shutdown` <span class="type">bool</span>  
 If enabled, a fast shutdown sequence is used that doesn't free each
 allocated block, but relies on the Zend Engine memory manager to
 deallocate the entire set of request variables en masse.
@@ -219,7 +219,7 @@ This directive has been removed in PHP 7.2.0. A variant of the fast
 shutdown sequence has been integrated into PHP and will be automatically
 used if possible.
 
-`opcache.enable_file_override` <span class="type">boolean</span>  
+`opcache.enable_file_override` <span class="type">bool</span>  
 When enabled, the opcode cache will be checked for whether a file has
 already been cached when <span class="function">file\_exists</span>,
 <span class="function">is\_file</span> and <span
@@ -229,10 +229,10 @@ PHP scripts, but risks returning stale data if
 <a href="/opcache/setup.html#" class="link">opcache.validate_timestamps</a>
 is disabled.
 
-`opcache.optimization_level` <span class="type">integer</span>  
+`opcache.optimization_level` <span class="type">int</span>  
 A bitmask that controls which optimisation passes are executed.
 
-`opcache.inherited_hack` <span class="type">boolean</span>  
+`opcache.inherited_hack` <span class="type">bool</span>  
 In PHP \< 5.3, OPcache stores the places where
 <a href="/internals2/opcodes/declare-class.html" class="link">DECLARE_CLASS</a>
 opcodes used inheritance; when the file is loaded, OPcache then tries to
@@ -243,7 +243,7 @@ run.
 
 This configuration directive is ignored in PHP 5.3 and later.
 
-`opcache.dups_fix` <span class="type">boolean</span>  
+`opcache.dups_fix` <span class="type">bool</span>  
 This hack should only be enabled to work around "Cannot redeclare class"
 errors.
 
@@ -262,16 +262,16 @@ A simple blacklist file might look as follows:
     ; A wildcard match.
     /var/www/*-broken.php
 
-`opcache.max_file_size` <span class="type">integer</span>  
+`opcache.max_file_size` <span class="type">int</span>  
 The maximum file size that will be cached, in bytes. If this is *0*, all
 files will be cached.
 
-`opcache.consistency_checks` <span class="type">integer</span>  
+`opcache.consistency_checks` <span class="type">int</span>  
 If non-zero, OPcache will verify the cache checksum every N requests,
 where N is the value of this configuration directive. This should only
 be enabled when debugging, as it will impair performance.
 
-`opcache.force_restart_timeout` <span class="type">integer</span>  
+`opcache.force_restart_timeout` <span class="type">int</span>  
 The length of time to wait for a scheduled restart to begin if the cache
 isn't active, in seconds. If the timeout is hit, then OPcache assumes
 that something is wrong and will kill the processes holding locks on the
@@ -287,7 +287,7 @@ The error log for OPcache errors. An empty string is treated the same as
 *stderr*, and will result in logs being sent to standard error (which
 will be the Web server error log in most cases).
 
-`opcache.log_verbosity_level` <span class="type">integer</span>  
+`opcache.log_verbosity_level` <span class="type">int</span>  
 The log verbosity level. By default, only fatal errors (level 0) and
 errors (level 1) are logged. Other levels available are warnings (level
 2), information messages (level 3) and debug messages (level 4).
@@ -299,7 +299,7 @@ in virtually all cases.
 
 Possible values include *mmap*, *shm*, *posix* and *win32*.
 
-`opcache.protect_memory` <span class="type">boolean</span>  
+`opcache.protect_memory` <span class="type">bool</span>  
 Protects shared memory from unexpected writes while executing scripts.
 This is useful for internal debugging only.
 
@@ -319,7 +319,7 @@ protects from caching of incompletely updated files. In case all file
 updates on your site are atomic, you may increase performance by setting
 it to "0".
 
-`opcache.huge_code_pages` <span class="type">boolean</span>  
+`opcache.huge_code_pages` <span class="type">bool</span>  
 Enables or disables copying of PHP code (text segment) into HUGE PAGES.
 This should improve performance, but requires appropriate OS
 configuration. Available on Linux as of PHP 7.0.0, and on FreeBSD as of
@@ -338,14 +338,14 @@ Enables and sets the second level cache directory. It should improve
 performance when SHM memory is full, at server restart or SHM reset. The
 default "" disables file based caching.
 
-`opcache.file_cache_only` <span class="type">boolean</span>  
+`opcache.file_cache_only` <span class="type">bool</span>  
 Enables or disables opcode caching in shared memory.
 
-`opcache.file_cache_consistency_checks` <span class="type">boolean</span>  
+`opcache.file_cache_consistency_checks` <span class="type">bool</span>  
 Enables or disables checksum validation when script loaded from file
 cache.
 
-`opcache.file_cache_fallback` <span class="type">boolean</span>  
+`opcache.file_cache_fallback` <span class="type">bool</span>  
 Implies opcache.file\_cache\_only=1 for a certain process that failed to
 reattach to the shared memory (for Windows only). Explicitly enabled
 file cache is required.
@@ -354,10 +354,10 @@ file cache is required.
 Disabling this configuration option may prevent processes to start, and
 is therefore discouraged.
 
-`opcache.validate_permission` <span class="type">boolean</span>  
+`opcache.validate_permission` <span class="type">bool</span>  
 Validates the cached file permissions against the current user.
 
-`opcache.validate_root` <span class="type">boolean</span>  
+`opcache.validate_root` <span class="type">bool</span>  
 Prevents name collisions in chroot'ed environments. This should be
 enabled in all chroot'ed environments to prevent access to files outside
 the chroot.

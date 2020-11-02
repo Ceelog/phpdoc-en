@@ -1427,7 +1427,8 @@ Split string by a regular expression
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">preg\_split</span> ( <span class="methodparam"><span
 class="type">string</span> `$pattern`</span> , <span
 class="methodparam"><span class="type">string</span> `$subject`</span>

@@ -255,24 +255,24 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`pgsql.allow_persistent` <span class="type">boolean</span>  
+`pgsql.allow_persistent` <span class="type">bool</span>  
 Whether to allow persistent Postgres connections.
 
-`pgsql.max_persistent` <span class="type">integer</span>  
+`pgsql.max_persistent` <span class="type">int</span>  
 The maximum number of persistent Postgres connections per process.
 
-`pgsql.max_links` <span class="type">integer</span>  
+`pgsql.max_links` <span class="type">int</span>  
 The maximum number of Postgres connections per process, including
 persistent connections.
 
-`pgsql.auto_reset_persistent` <span class="type">integer</span>  
+`pgsql.auto_reset_persistent` <span class="type">int</span>  
 Detect broken persistent links with <span
 class="function">pg\_pconnect</span>. Needs a little overhead.
 
-`pgsql.ignore_notice` <span class="type">integer</span>  
+`pgsql.ignore_notice` <span class="type">int</span>  
 Whether or not to ignore PostgreSQL backend notices.
 
-`pgsql.log_notice` <span class="type">integer</span>  
+`pgsql.log_notice` <span class="type">int</span>  
 Whether or not to log PostgreSQL backends notice messages. The PHP
 directive
 <a href="/book/pgsql.html#" class="link">pgsql.ignore_notice</a> must be
@@ -300,150 +300,150 @@ and dots. </span>
 <span class="simpara"> Long libpq version that includes compiler
 information. </span>
 
-**`PGSQL_ASSOC`** (<span class="type">integer</span>)  
+**`PGSQL_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_fetch\_array</span>. Return an associative array of
 field names and values. </span>
 
-**`PGSQL_NUM`** (<span class="type">integer</span>)  
+**`PGSQL_NUM`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_fetch\_array</span>. Return a numerically indexed
 array of field numbers and values. </span>
 
-**`PGSQL_BOTH`** (<span class="type">integer</span>)  
+**`PGSQL_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_fetch\_array</span>. Return an array of field
 values that is both numerically indexed (by field number) and associated
 (by field name). </span>
 
-**`PGSQL_CONNECT_FORCE_NEW`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECT_FORCE_NEW`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_connect</span> to force the creation of a new
 connection, rather than re-using an existing identical connection.
 </span>
 
-**`PGSQL_CONNECT_ASYNC`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECT_ASYNC`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_connect</span> to create an asynchronous
 connection. Added in PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_AUTH_OK`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_AUTH_OK`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_AWAITING_RESPONSE`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_AWAITING_RESPONSE`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_BAD`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_BAD`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connection\_status</span> indicating that the
 database connection is in an invalid state. </span>
 
-**`PGSQL_CONNECTION_MADE`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_MADE`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_OK`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_OK`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connection\_status</span> indicating that the
 database connection is in a valid state. </span>
 
-**`PGSQL_CONNECTION_SETENV`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_SETENV`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_SSL_STARTUP`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_SSL_STARTUP`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_CONNECTION_STARTED`** (<span class="type">integer</span>)  
+**`PGSQL_CONNECTION_STARTED`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.6.0. </span>
 
-**`PGSQL_SEEK_SET`** (<span class="type">integer</span>)  
+**`PGSQL_SEEK_SET`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_lo\_seek</span>. Seek operation is to begin from
 the start of the object. </span>
 
-**`PGSQL_SEEK_CUR`** (<span class="type">integer</span>)  
+**`PGSQL_SEEK_CUR`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_lo\_seek</span>. Seek operation is to begin from
 the current position. </span>
 
-**`PGSQL_SEEK_END`** (<span class="type">integer</span>)  
+**`PGSQL_SEEK_END`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_lo\_seek</span>. Seek operation is to begin from
 the end of the object. </span>
 
-**`PGSQL_EMPTY_QUERY`** (<span class="type">integer</span>)  
+**`PGSQL_EMPTY_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. The string sent to the
 server was empty. </span>
 
-**`PGSQL_COMMAND_OK`** (<span class="type">integer</span>)  
+**`PGSQL_COMMAND_OK`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. Successful completion of a
 command returning no data. </span>
 
-**`PGSQL_TUPLES_OK`** (<span class="type">integer</span>)  
+**`PGSQL_TUPLES_OK`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. Successful completion of a
 command returning data (such as a *SELECT* or *SHOW*). </span>
 
-**`PGSQL_COPY_OUT`** (<span class="type">integer</span>)  
+**`PGSQL_COPY_OUT`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. Copy Out (from server) data
 transfer started. </span>
 
-**`PGSQL_COPY_IN`** (<span class="type">integer</span>)  
+**`PGSQL_COPY_IN`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. Copy In (to server) data
 transfer started. </span>
 
-**`PGSQL_BAD_RESPONSE`** (<span class="type">integer</span>)  
+**`PGSQL_BAD_RESPONSE`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. The server's response was
 not understood. </span>
 
-**`PGSQL_NONFATAL_ERROR`** (<span class="type">integer</span>)  
+**`PGSQL_NONFATAL_ERROR`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. A nonfatal error (a notice
 or warning) occurred. </span>
 
-**`PGSQL_FATAL_ERROR`** (<span class="type">integer</span>)  
+**`PGSQL_FATAL_ERROR`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_result\_status</span>. A fatal error occurred.
 </span>
 
-**`PGSQL_TRANSACTION_IDLE`** (<span class="type">integer</span>)  
+**`PGSQL_TRANSACTION_IDLE`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_transaction\_status</span>. Connection is currently
 idle, not in a transaction. </span>
 
-**`PGSQL_TRANSACTION_ACTIVE`** (<span class="type">integer</span>)  
+**`PGSQL_TRANSACTION_ACTIVE`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_transaction\_status</span>. A command is in
 progress on the connection. A query has been sent via the connection and
 not yet completed. </span>
 
-**`PGSQL_TRANSACTION_INTRANS`** (<span class="type">integer</span>)  
+**`PGSQL_TRANSACTION_INTRANS`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_transaction\_status</span>. The connection is idle,
 in a transaction block. </span>
 
-**`PGSQL_TRANSACTION_INERROR`** (<span class="type">integer</span>)  
+**`PGSQL_TRANSACTION_INERROR`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_transaction\_status</span>. The connection is idle,
 in a failed transaction block. </span>
 
-**`PGSQL_TRANSACTION_UNKNOWN`** (<span class="type">integer</span>)  
+**`PGSQL_TRANSACTION_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_transaction\_status</span>. The connection is bad.
 </span>
 
-**`PGSQL_DIAG_SEVERITY`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SEVERITY`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The severity; the
 field contents are *ERROR*, *FATAL*, or *PANIC* (in an error message),
 or *WARNING*, *NOTICE*, *DEBUG*, *INFO*, or *LOG* (in a notice message),
 or a localized translation of one of these. Always present. </span>
 
-**`PGSQL_DIAG_SQLSTATE`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SQLSTATE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The SQLSTATE code for
 the error. The SQLSTATE code identifies the type of error that has
@@ -451,33 +451,33 @@ occurred; it can be used by front-end applications to perform specific
 operations (such as error handling) in response to a particular database
 error. This field is not localizable, and is always present. </span>
 
-**`PGSQL_DIAG_MESSAGE_PRIMARY`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_MESSAGE_PRIMARY`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The primary
 human-readable error message (typically one line). Always present.
 </span>
 
-**`PGSQL_DIAG_MESSAGE_DETAIL`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_MESSAGE_DETAIL`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. Detail: an optional
 secondary error message carrying more detail about the problem. May run
 to multiple lines. </span>
 
-**`PGSQL_DIAG_MESSAGE_HINT`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_MESSAGE_HINT`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. Hint: an optional
 suggestion what to do about the problem. This is intended to differ from
 detail in that it offers advice (potentially inappropriate) rather than
 hard facts. May run to multiple lines. </span>
 
-**`PGSQL_DIAG_STATEMENT_POSITION`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_STATEMENT_POSITION`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. A string containing a
 decimal integer indicating an error cursor position as an index into the
 original statement string. The first character has index 1, and
 positions are measured in characters not bytes. </span>
 
-**`PGSQL_DIAG_INTERNAL_POSITION`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_INTERNAL_POSITION`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. This is defined the
 same as the **`PG_DIAG_STATEMENT_POSITION`** field, but it is used when
@@ -485,13 +485,13 @@ the cursor position refers to an internally generated command rather
 than the one submitted by the client. The **`PG_DIAG_INTERNAL_QUERY`**
 field will always appear when this field appears. </span>
 
-**`PGSQL_DIAG_INTERNAL_QUERY`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_INTERNAL_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The text of a failed
 internally-generated command. This could be, for example, a SQL query
 issued by a PL/pgSQL function. </span>
 
-**`PGSQL_DIAG_CONTEXT`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_CONTEXT`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. An indication of the
 context in which the error occurred. Presently this includes a call
@@ -499,17 +499,17 @@ stack traceback of active procedural language functions and
 internally-generated queries. The trace is one entry per line, most
 recent first. </span>
 
-**`PGSQL_DIAG_SOURCE_FILE`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SOURCE_FILE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The file name of the
 PostgreSQL source-code location where the error was reported. </span>
 
-**`PGSQL_DIAG_SOURCE_LINE`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SOURCE_LINE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The line number of the
 PostgreSQL source-code location where the error was reported. </span>
 
-**`PGSQL_DIAG_SOURCE_FUNCTION`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SOURCE_FUNCTION`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_error\_field</span>. The name of the
 PostgreSQL source-code function reporting the error. </span>
@@ -529,64 +529,64 @@ PostgreSQL source-code function reporting the error. </span>
 **`PGSQL_DIAG_CONSTRAINT_NAME`** (<span class="type">string</span>)  
 <span class="simpara"> Available since PHP 7.3.0. </span>
 
-**`PGSQL_ERRORS_TERSE`** (<span class="type">integer</span>)  
+**`PGSQL_ERRORS_TERSE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_set\_error\_verbosity</span>. Specified that
 returned messages include severity, primary text, and position only;
 this will normally fit on a single line. </span>
 
-**`PGSQL_ERRORS_DEFAULT`** (<span class="type">integer</span>)  
+**`PGSQL_ERRORS_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_set\_error\_verbosity</span>. The default mode
 produces messages that include the above plus any detail, hint, or
 context fields (these may span multiple lines). </span>
 
-**`PGSQL_ERRORS_VERBOSE`** (<span class="type">integer</span>)  
+**`PGSQL_ERRORS_VERBOSE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_set\_error\_verbosity</span>. The verbose mode
 includes all available fields. </span>
 
-**`PGSQL_NOTICE_LAST`** (<span class="type">integer</span>)  
+**`PGSQL_NOTICE_LAST`** (<span class="type">int</span>)  
 <span class="simpara"> Used by <span
 class="function">pg\_last\_notice</span>. Available since PHP 7.1.0.
 </span>
 
-**`PGSQL_NOTICE_ALL`** (<span class="type">integer</span>)  
+**`PGSQL_NOTICE_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> Used by <span
 class="function">pg\_last\_notice</span>. Available since PHP 7.1.0.
 </span>
 
-**`PGSQL_NOTICE_CLEAR`** (<span class="type">integer</span>)  
+**`PGSQL_NOTICE_CLEAR`** (<span class="type">int</span>)  
 <span class="simpara"> Used by <span
 class="function">pg\_last\_notice</span>. Available since PHP 7.1.0.
 </span>
 
-**`PGSQL_STATUS_LONG`** (<span class="type">integer</span>)  
+**`PGSQL_STATUS_LONG`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_status</span>. Indicates that numerical
 result code is desired. </span>
 
-**`PGSQL_STATUS_STRING`** (<span class="type">integer</span>)  
+**`PGSQL_STATUS_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_result\_status</span>. Indicates that textual
 result command tag is desired. </span>
 
-**`PGSQL_CONV_IGNORE_DEFAULT`** (<span class="type">integer</span>)  
+**`PGSQL_CONV_IGNORE_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_convert</span>. Ignore default values in the table
 during conversion. </span>
 
-**`PGSQL_CONV_FORCE_NULL`** (<span class="type">integer</span>)  
+**`PGSQL_CONV_FORCE_NULL`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_convert</span>. Use SQL *NULL* in place of an empty
 <span class="type">string</span>. </span>
 
-**`PGSQL_CONV_IGNORE_NOT_NULL`** (<span class="type">integer</span>)  
+**`PGSQL_CONV_IGNORE_NOT_NULL`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_convert</span>. Ignore conversion of **`NULL`**
 into SQL *NOT NULL* columns. </span>
 
-**`PGSQL_DML_NO_CONV`** (<span class="type">integer</span>)  
+**`PGSQL_DML_NO_CONV`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_insert</span>, <span
 class="function">pg\_select</span>, <span
@@ -595,7 +595,7 @@ class="function">pg\_delete</span>. All parameters passed as is. Manual
 escape is required if parameters contain user supplied data. Use <span
 class="function">pg\_escape\_string</span> for it. </span>
 
-**`PGSQL_DML_EXEC`** (<span class="type">integer</span>)  
+**`PGSQL_DML_EXEC`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_insert</span>, <span
 class="function">pg\_select</span>, <span
@@ -603,7 +603,7 @@ class="function">pg\_update</span> and <span
 class="function">pg\_delete</span>. Execute query by these functions.
 </span>
 
-**`PGSQL_DML_ASYNC`** (<span class="type">integer</span>)  
+**`PGSQL_DML_ASYNC`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_insert</span>, <span
 class="function">pg\_select</span>, <span
@@ -611,7 +611,7 @@ class="function">pg\_update</span> and <span
 class="function">pg\_delete</span>. Execute asynchronous query by these
 functions. </span>
 
-**`PGSQL_DML_STRING`** (<span class="type">integer</span>)  
+**`PGSQL_DML_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_insert</span>, <span
 class="function">pg\_select</span>, <span
@@ -619,7 +619,7 @@ class="function">pg\_update</span> and <span
 class="function">pg\_delete</span>. Return executed query string.
 </span>
 
-**`PGSQL_DML_ESCAPE`** (<span class="type">integer</span>)  
+**`PGSQL_DML_ESCAPE`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
 class="function">pg\_insert</span>, <span
 class="function">pg\_select</span>, <span
@@ -631,34 +631,34 @@ class="function">pg\_query</span> and <span
 class="function">pg\_send\_query</span>. Available since PHP 5.6.0.
 </span>
 
-**`PGSQL_POLLING_FAILED`** (<span class="type">integer</span>)  
+**`PGSQL_POLLING_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
 connection attempt failed. Available since PHP 5.6.0. </span>
 
-**`PGSQL_POLLING_READING`** (<span class="type">integer</span>)  
+**`PGSQL_POLLING_READING`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
 connection is waiting for the PostgreSQL socket to be readable.
 Available since PHP 5.6.0. </span>
 
-**`PGSQL_POLLING_WRITING`** (<span class="type">integer</span>)  
+**`PGSQL_POLLING_WRITING`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
 connection is waiting for the PostgreSQL socket to be writable.
 Available since PHP 5.6.0. </span>
 
-**`PGSQL_POLLING_OK`** (<span class="type">integer</span>)  
+**`PGSQL_POLLING_OK`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
 connection is ready to be used. Available since PHP 5.6.0. </span>
 
-**`PGSQL_POLLING_ACTIVE`** (<span class="type">integer</span>)  
+**`PGSQL_POLLING_ACTIVE`** (<span class="type">int</span>)  
 <span class="simpara"> Returned by <span
 class="function">pg\_connect\_poll</span> to indicate that the
 connection is currently active. Available since PHP 5.6.0. </span>
 
-**`PGSQL_DIAG_SEVERITY_NONLOCALIZED`** (<span class="type">integer</span>)  
+**`PGSQL_DIAG_SEVERITY_NONLOCALIZED`** (<span class="type">int</span>)  
 <span class="simpara"> The severity; the field contents are ERROR,
 FATAL, or PANIC (in an error message), or WARNING, NOTICE, DEBUG, INFO,
 or LOG (in a notice message). This is identical to the
@@ -2031,7 +2031,8 @@ and waits for the result
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_execute</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -2765,8 +2766,8 @@ Row number in result to fetch. Rows are numbered from 0 upwards. If
 omitted, current row is fetched.
 
 `field`  
-Field number (starting from 0) as an <span class="type">integer</span>
-or the field name as a <span class="type">string</span>.
+Field number (starting from 0) as an <span class="type">int</span> or
+the field name as a <span class="type">string</span>.
 
 ### Return Values
 
@@ -2961,9 +2962,9 @@ PostgreSQL `result`. Row numbering starts at 0. This function will
 return **`FALSE`** on an error.
 
 `field_name_or_number` can be passed either as an <span
-class="type">integer</span> or as a <span class="type">string</span>. If
-it is passed as an <span class="type">integer</span>, PHP recognises it
-as the field number, otherwise as field name.
+class="type">int</span> or as a <span class="type">string</span>. If it
+is passed as an <span class="type">int</span>, PHP recognises it as the
+field number, otherwise as field name.
 
 See the example given at the <span
 class="function">pg\_field\_name</span> page.
@@ -3852,8 +3853,8 @@ One of **`PGSQL_NOTICE_LAST`** (to return last notice),
 A <span class="type">string</span> containing the last notice on the
 given `connection` with **`PGSQL_NOTICE_LAST`**, an <span
 class="type">array</span> with **`PGSQL_NOTICE_ALL`**, a <span
-class="type">boolean</span> with **`PGSQL_NOTICE_CLEAR`**, or
-**`FALSE`** on error.
+class="type">bool</span> with **`PGSQL_NOTICE_CLEAR`**, or **`FALSE`**
+on error.
 
 ### Examples
 
@@ -5243,7 +5244,8 @@ parameters, and waits for completion
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_prepare</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -5404,7 +5406,8 @@ ability to pass parameters separately from the SQL command text
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_query\_params</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -5501,7 +5504,8 @@ Execute a query
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_query</span> (\[ <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> \], <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
@@ -6469,7 +6473,8 @@ Get a read only handle to the socket underlying a PostgreSQL connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_socket</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> )
 

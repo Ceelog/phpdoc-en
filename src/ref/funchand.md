@@ -167,8 +167,8 @@ Call the callback given by the first parameter
 <span class="type">mixed</span> <span
 class="methodname">call\_user\_func</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$callback`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Calls the `callback` given by the first parameter and passes the
 remaining parameters as arguments.
@@ -178,7 +178,7 @@ remaining parameters as arguments.
 `callback`  
 The <span class="type">callable</span> to be called.
 
-`...`  
+`args`  
 Zero or more parameters to be passed to the callback.
 
 > **Note**:
@@ -622,8 +622,8 @@ Call a static method
 <span class="type">mixed</span> <span
 class="methodname">forward\_static\_call</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$function`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Calls a user defined function or method given by the `function`
 parameter, with the following arguments. This function must be called
@@ -637,7 +637,7 @@ The function or method to be called. This parameter may be an array,
 with the name of the class, and the method, or a string, with a function
 name.
 
-`...`  
+`args`  
 Zero or more parameters to be passed to the function.
 
 ### Return Values
@@ -1276,8 +1276,8 @@ Register a function for execution on shutdown
 <span class="type">void</span> <span
 class="methodname">register\_shutdown\_function</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$callback`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Registers a `callback` to be executed after script execution finishes or
 <span class="function">exit</span> is called.
@@ -1297,7 +1297,7 @@ The shutdown callback to register.
 The shutdown callbacks are executed as the part of the request, so it's
 possible to send output from them and access output buffers.
 
-`...`  
+`args`  
 It is possible to pass parameters to the shutdown function by passing
 additional parameters.
 
@@ -1362,8 +1362,8 @@ Register a function for execution on each tick
 <span class="type">bool</span> <span
 class="methodname">register\_tick\_function</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$function`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 Registers the given `function` to be executed when a
 <a href="/control-structures/declare.html#control-structures.declare.ticks" class="link">tick</a>
@@ -1374,7 +1374,7 @@ is called.
 `function`  
 The function to register.
 
-`...`  
+`args`  
 
 ### Return Values
 

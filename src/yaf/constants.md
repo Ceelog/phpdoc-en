@@ -11,32 +11,32 @@ dynamically loaded at runtime.
 **`YAF_ENVIRON`** (<span class="type">string</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_STARTUP_FAILED`** (<span class="type">integer</span>)  
+**`YAF_ERR_STARTUP_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_ROUTE_FAILED`** (<span class="type">integer</span>)  
+**`YAF_ERR_ROUTE_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_DISPATCH_FAILED`** (<span class="type">integer</span>)  
+**`YAF_ERR_DISPATCH_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_AUTOLOAD_FAILED`** (<span class="type">integer</span>)  
+**`YAF_ERR_AUTOLOAD_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_NOTFOUND_MODULE`** (<span class="type">integer</span>)  
+**`YAF_ERR_NOTFOUND_MODULE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_NOTFOUND_CONTROLLER`** (<span class="type">integer</span>)  
+**`YAF_ERR_NOTFOUND_CONTROLLER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_NOTFOUND_ACTION`** (<span class="type">integer</span>)  
+**`YAF_ERR_NOTFOUND_ACTION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_NOTFOUND_VIEW`** (<span class="type">integer</span>)  
+**`YAF_ERR_NOTFOUND_VIEW`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_CALL_FAILED`** (<span class="type">integer</span>)  
+**`YAF_ERR_CALL_FAILED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAF_ERR_TYPE_ERROR`** (<span class="type">integer</span>)  
+**`YAF_ERR_TYPE_ERROR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>

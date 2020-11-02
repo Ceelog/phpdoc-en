@@ -248,7 +248,8 @@ Returns the JSON representation of a value
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">json\_encode</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
@@ -512,11 +513,10 @@ The above example will output:
 > Like the reference JSON encoder, <span
 > class="function">json\_encode</span> will generate JSON that is a
 > simple value (that is, neither an object nor an array) if given a
-> <span class="type">string</span>, <span class="type">integer</span>,
-> <span class="type">float</span> or <span class="type">boolean</span>
-> as an input `value`. While most decoders will accept these values as
-> valid JSON, some may not, as the specification is ambiguous on this
-> point.
+> <span class="type">string</span>, <span class="type">int</span>, <span
+> class="type">float</span> or <span class="type">bool</span> as an
+> input `value`. While most decoders will accept these values as valid
+> JSON, some may not, as the specification is ambiguous on this point.
 >
 > To summarise, always test that your JSON decoder can handle the output
 > you generate from <span class="function">json\_encode</span>.
@@ -536,7 +536,8 @@ call
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">json\_last\_error\_msg</span> ( <span
 class="methodparam">void</span> )
 

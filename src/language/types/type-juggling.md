@@ -5,19 +5,18 @@ PHP does not require (or support) explicit type definition in variable
 declaration; a variable's type is determined by the context in which the
 variable is used. That is to say, if a <span class="type">string</span>
 value is assigned to variable `$var`, `$var` becomes a <span
-class="type">string</span>. If an <span class="type">integer</span>
-value is then assigned to `$var`, it becomes an <span
-class="type">integer</span>.
+class="type">string</span>. If an <span class="type">int</span> value is
+then assigned to `$var`, it becomes an <span class="type">int</span>.
 
 An example of PHP's automatic type conversion is the multiplication
 operator '\*'. If either operand is a <span class="type">float</span>,
 then both operands are evaluated as <span class="type">float</span>s,
 and the result will be a <span class="type">float</span>. Otherwise, the
-operands will be interpreted as <span class="type">integer</span>s, and
-the result will also be an <span class="type">integer</span>. Note that
-this does *not* change the types of the operands themselves; the only
-change is in how the operands are evaluated and what the type of the
-expression itself is.
+operands will be interpreted as <span class="type">int</span>s, and the
+result will also be an <span class="type">int</span>. Note that this
+does *not* change the types of the operands themselves; the only change
+is in how the operands are evaluated and what the type of the expression
+itself is.
 
 ``` php
 <?php
@@ -78,9 +77,9 @@ $bar = (boolean) $foo;   // $bar is a boolean
 The casts allowed are:
 
 -   <span class="simpara">(int), (integer) - cast to <span
-    class="type">integer</span></span>
+    class="type">int</span></span>
 -   <span class="simpara">(bool), (boolean) - cast to <span
-    class="type">boolean</span></span>
+    class="type">bool</span></span>
 -   <span class="simpara">(float), (double), (real) - cast to <span
     class="type">float</span></span>
 -   <span class="simpara">(string) - cast to <span

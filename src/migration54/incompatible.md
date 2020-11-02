@@ -104,10 +104,9 @@ take note of some backward incompatible changes:
     **`E_STRICT`** level error is emitted. </span>
 -   <span class="simpara"> The third parameter of <span
     class="function">ob\_start</span> has changed from <span
-    class="type">boolean</span> `erase` to <span
-    class="type">integer</span> `flags`. Note that code that explicitly
-    set `erase` to **`FALSE`** will no longer behave as expected in PHP
-    5.4: please follow
+    class="type">bool</span> `erase` to <span class="type">int</span>
+    `flags`. Note that code that explicitly set `erase` to **`FALSE`**
+    will no longer behave as expected in PHP 5.4: please follow
     <a href="/ref/outcontrol.html#Creating%20an%20uneraseable%20output%20buffer%20in%20a%20way%20compatible%20with%20both%20PHP%205.3%20and%205.4" class="link">this example</a>
     to write code that is compatible with PHP 5.3 and 5.4. </span>
 -   <span class="simpara"> <span class="function">stream\_select</span>

@@ -17,7 +17,7 @@ class User {
 ```
 
 The above example will enforce that *$user-\>id* can only be assigned
-<span class="type">integer</span> values and *$user-\>name* can only be
+<span class="type">int</span> values and *$user-\>name* can only be
 assigned <span class="type">string</span> values.
 
 #### Arrow functions

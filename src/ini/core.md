@@ -39,7 +39,7 @@ Language Options
 
 Here's a short explanation of the configuration directives.
 
-`short_open_tag` <span class="type">boolean</span>  
+`short_open_tag` <span class="type">bool</span>  
 Tells PHP whether the short form (**`<? ?>`**) of PHP's open tag should
 be allowed. If you want to use PHP in combination with XML, you can
 disable this option in order to use **`<?xml ?>`** inline. Otherwise,
@@ -54,7 +54,7 @@ you must use the long form of the PHP open tag (**`<?php ?>`**).
 > `short_open_tag` to be on. Since PHP 5.4.0, **`<?=`** is always
 > available.
 
-`asp_tags` <span class="type">boolean</span>  
+`asp_tags` <span class="type">bool</span>  
 <span class="simpara"> Enables the use of ASP-like \<% %\> tags in
 addition to the usual \<?php ?\> tags. This includes the variable-value
 printing shorthand of \<%= $value %\>. For more information, see
@@ -65,21 +65,21 @@ printing shorthand of \<%= $value %\>. For more information, see
 |---------|-------------------|
 | 7.0.0   | Removed from PHP. |
 
-`precision` <span class="type">integer</span>  
+`precision` <span class="type">int</span>  
 <span class="simpara"> The number of significant digits displayed in
 floating point numbers. *-1* means that an enhanced algorithm for
 rounding such numbers will be used. </span>
 
-`serialize_precision` <span class="type">integer</span>  
+`serialize_precision` <span class="type">int</span>  
 <span class="simpara"> The number of significant digits stored while
 serializing floating point numbers. *-1* means that an enhanced
 algorithm for rounding such numbers will be used. </span>
 
-`y2k_compliance` <span class="type">boolean</span>  
+`y2k_compliance` <span class="type">bool</span>  
 <span class="simpara"> Enforce year 2000 compliance (will cause problems
 with non-compliant browsers) </span>
 
-`allow_call_time_pass_reference` <span class="type">boolean</span>  
+`allow_call_time_pass_reference` <span class="type">bool</span>  
 Whether to warn when arguments are passed by reference at function call
 time. The encouraged method of specifying which arguments should be
 passed by reference is in the function declaration. You're encouraged to
@@ -102,7 +102,7 @@ See also
 | 5.3.0   | Emits an **`E_DEPRECATED`** level error.                          |
 | 5.0.0   | Deprecated, and generates an **`E_COMPILE_WARNING`** level error. |
 
-`expose_php` <span class="type">boolean</span>  
+`expose_php` <span class="type">bool</span>  
 Exposes to the world that PHP is installed on the server, which includes
 the PHP version within the HTTP header (e.g., X-Powered-By: PHP/5.3.7).
 Prior to PHP 5.5.0 the PHP logo guids are also exposed, thus appending
@@ -144,7 +144,7 @@ classes. It takes on a comma-delimited list of class names. </span>
 <span class="simpara"> This directive must be set in `php.ini` For
 example, you cannot set this in `httpd.conf`. </span>
 
-`zend.assertions` <span class="type">integer</span>  
+`zend.assertions` <span class="type">int</span>  
 <span class="simpara"> When set to *1*, assertion code will be generated
 and executed (development mode). When set to *0*, assertion code will be
 generated but it will be skipped (not executed) at runtime. When set to
@@ -162,7 +162,7 @@ zero-cost (production mode). </span>
 > <a href="/ini/core.html#ini.zend.assertions" class="link">zend.assertions</a>
 > cannot be set to *-1* at runtime.
 
-`zend.ze1_compatibility_mode` <span class="type">boolean</span>  
+`zend.ze1_compatibility_mode` <span class="type">bool</span>  
 Enable compatibility mode with Zend Engine 1 (PHP 4). It affects the
 cloning, casting (objects with no properties cast to **`FALSE`** or 0),
 and
@@ -176,12 +176,12 @@ See also the section titled
 **Warning**
 This feature has been *DEPRECATED* and *REMOVED* as of PHP 5.3.0.
 
-`hard_timeout` <span class="type">integer</span>  
+`hard_timeout` <span class="type">int</span>  
 
-`zend.exception_ignore_args` <span class="type">boolean</span>  
+`zend.exception_ignore_args` <span class="type">bool</span>  
 Excludes arguments from stack traces generated from exceptions.
 
-`zend.multibyte` <span class="type">boolean</span>  
+`zend.multibyte` <span class="type">bool</span>  
 Enables parsing of source files in multibyte encodings. Enabling
 zend.multibyte is required to use character encodings like SJIS, BIG5,
 etc that contain special characters in multibyte string data. ISO-8859-1
@@ -200,16 +200,16 @@ Literal strings will be transliterated from zend.script\_enconding to
 mbstring.internal\_encoding, as if <span
 class="function">mb\_convert\_encoding</span> would have been called.
 
-`zend.detect_unicode` <span class="type">boolean</span>  
+`zend.detect_unicode` <span class="type">bool</span>  
 Check for BOM (Byte Order Mark) and see if the file contains valid
 multibyte characters. This detection is performed before processing of
 <span class="function">\_\_halt\_compiler</span>. Available only in Zend
 Multibyte mode.
 
-`zend.signal_check` <span class="type">boolean</span>  
+`zend.signal_check` <span class="type">bool</span>  
 To check for replaced signal handlers on shutdown.
 
-`exit_on_timeout` <span class="type">boolean</span>  
+`exit_on_timeout` <span class="type">bool</span>  
 This is an Apache1 mod\_php-only directive that forces an Apache child
 to exit if a PHP execution timeout occurred. Such a timeout causes an
 internal longjmp() call in Apache1 which can leave some extensions in an
@@ -225,7 +225,7 @@ Resource Limits
 
 Here's a short explanation of the configuration directives.
 
-`memory_limit` <span class="type">integer</span>  
+`memory_limit` <span class="type">int</span>  
 This sets the maximum amount of memory in bytes that a script is allowed
 to allocate. This helps prevent poorly written scripts for eating up all
 available memory on a server. Note that to have no memory limit, set
@@ -237,8 +237,8 @@ line. This compile-time flag was also required to define the functions
 <span class="function">memory\_get\_usage</span> and <span
 class="function">memory\_get\_peak\_usage</span> prior to 5.2.1.
 
-<span class="simpara">When an <span class="type">integer</span> is used,
-the value is measured in bytes. Shorthand notation, as described in
+<span class="simpara">When an <span class="type">int</span> is used, the
+value is measured in bytes. Shorthand notation, as described in
 <a href="/faq/using.html#faq.using.shorthandbytes" class="link">this FAQ</a>,
 may also be used. </span>
 
@@ -261,7 +261,7 @@ Performance Tuning
 
 Here's a short explanation of the configuration directives.
 
-`realpath_cache_size` <span class="type">integer</span>  
+`realpath_cache_size` <span class="type">int</span>  
 Determines the size of the realpath cache to be used by PHP. This value
 should be increased on systems where PHP opens many files, to reflect
 the quantity of the file operations performed.
@@ -274,7 +274,7 @@ distinct paths that can be cached.
 
 The size required for the cache entry data is system dependent.
 
-`realpath_cache_ttl` <span class="type">integer</span>  
+`realpath_cache_ttl` <span class="type">int</span>  
 Duration of time (in seconds) for which to cache realpath information
 for a given file or directory. For systems with rarely changing files,
 consider increasing the value.
@@ -354,7 +354,7 @@ is used for `$_REQUEST` contents.
 Note that the default distribution `php.ini` files does not contain the
 *'C'* for cookies, due to security concerns.
 
-`auto_globals_jit` <span class="type">boolean</span>  
+`auto_globals_jit` <span class="type">bool</span>  
 When enabled, the SERVER, REQUEST, and ENV variables are created when
 they're first used (Just In Time) instead of when the script starts. If
 these variables are not used within a script, having this directive on
@@ -376,7 +376,7 @@ compile time so using them through e.g.
 <a href="/language/variables/variable.html" class="link">variable variables</a>
 will not cause their initialization.
 
-`register_globals` <span class="type">boolean</span>  
+`register_globals` <span class="type">bool</span>  
 Whether or not to register the EGPCS (Environment, GET, POST, Cookie,
 Server) variables as global variables.
 
@@ -403,14 +403,14 @@ your host allows it as described above. An example `.htaccess` entry:
 This feature has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
 PHP 5.4.0.
 
-`register_argc_argv` <span class="type">boolean</span>  
+`register_argc_argv` <span class="type">bool</span>  
 <span class="simpara"> Tells PHP whether to declare the argv & argc
 variables (that would contain the GET information). </span> <span
 class="simpara"> See also
 <a href="/features/commandline.html" class="link">command line</a>.
 </span>
 
-`register_long_arrays` <span class="type">boolean</span>  
+`register_long_arrays` <span class="type">bool</span>  
 <span class="simpara"> Tells PHP whether or not to register the
 deprecated long `$HTTP_*_VARS` type
 <a href="/language/variables/predefined.html" class="link">predefined variables</a>.
@@ -424,14 +424,14 @@ in PHP 5.0.0. </span>
 This feature has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
 PHP 5.4.0.
 
-`enable_post_data_reading` <span class="type">boolean</span>  
+`enable_post_data_reading` <span class="type">bool</span>  
 <span class="simpara"> Disabling this option causes `$_POST` and
 `$_FILES` *not* to be populated. The only way to read postdata will then
 be through the <a href="/wrappers/php.html" class="link">php://input</a>
 stream wrapper. This can be useful to proxy requests or to process the
 POST data in a memory efficient fashion. </span>
 
-`post_max_size` <span class="type">integer</span>  
+`post_max_size` <span class="type">int</span>  
 <span class="simpara"> Sets max size of post data allowed. This setting
 also affects file upload. To upload large files, this value must be
 larger than
@@ -439,8 +439,8 @@ larger than
 </span> <span class="simpara"> Generally speaking,
 <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a>
 should be larger than `post_max_size`. </span> <span
-class="simpara">When an <span class="type">integer</span> is used, the
-value is measured in bytes. Shorthand notation, as described in
+class="simpara">When an <span class="type">int</span> is used, the value
+is measured in bytes. Shorthand notation, as described in
 <a href="/faq/using.html#faq.using.shorthandbytes" class="link">this FAQ</a>,
 may also be used. </span> <span class="simpara"> If the size of post
 data is greater than post\_max\_size, the `$_POST` and `$_FILES`
@@ -696,7 +696,7 @@ alternative is to use the
 <a href="/ini/core.html#ini.cgi.force-redirect" class="link">cgi.force_redirect</a>
 configuration below.
 
-`user_ini.cache_ttl` <span class="type">integer</span>  
+`user_ini.cache_ttl` <span class="type">int</span>  
 
 `user_ini.filename` <span class="type">string</span>  
 
@@ -732,19 +732,19 @@ Variant of
 <a href="/ini/core.html#ini.zend-extension" class="link">zend_extension</a>
 for extensions compiled with thread safety prior to PHP 5.3.0.
 
-`cgi.check_shebang_line` <span class="type">boolean</span>  
+`cgi.check_shebang_line` <span class="type">bool</span>  
 Controls whether CGI PHP checks for line starting with *\#!* (shebang)
 at the top of the running script. This line might be needed if the
 script support running both as stand-alone script and via PHP CGI. PHP
 in CGI mode skips this line and ignores its content if this directive is
 turned on.
 
-`cgi.discard_path` <span class="type">boolean</span>  
+`cgi.discard_path` <span class="type">bool</span>  
 If this is enabled, the PHP CGI binary can safely be placed outside of
 the web tree and people will not be able to circumvent .htaccess
 security.
 
-`cgi.fix_pathinfo` <span class="type">boolean</span>  
+`cgi.fix_pathinfo` <span class="type">bool</span>  
 Provides *real* *PATH\_INFO*/ *PATH\_TRANSLATED* support for CGI. PHP's
 previous behaviour was to set *PATH\_TRANSLATED* to *SCRIPT\_FILENAME*,
 and to not grok what *PATH\_INFO* is. For more information on
@@ -753,7 +753,7 @@ to fix its paths to conform to the spec. A setting of zero causes PHP to
 behave as before. It is turned on by default. You should fix your
 scripts to use *SCRIPT\_FILENAME* rather than *PATH\_TRANSLATED*.
 
-`cgi.force_redirect` <span class="type">boolean</span>  
+`cgi.force_redirect` <span class="type">bool</span>  
 cgi.force\_redirect is necessary to provide security running PHP as a
 CGI under most web servers. Left undefined, PHP turns this on by
 default. You can turn it off *at your own risk*.
@@ -763,7 +763,7 @@ default. You can turn it off *at your own risk*.
 > Windows Users: When using IIS this option *must* be turned off. For
 > OmniHTTPD or Xitami the same applies.
 
-`cgi.nph` <span class="type">boolean</span>  
+`cgi.nph` <span class="type">bool</span>  
 If cgi.nph is enabled it will force cgi to always sent Status: 200 with
 every request.
 
@@ -802,7 +802,7 @@ define the security context that the request runs under. mod\_fastcgi
 under Apache does not currently support this feature (03/17/2002) Set to
 1 if running under IIS. Default is zero.
 
-`fastcgi.logging` <span class="type">boolean</span>  
+`fastcgi.logging` <span class="type">bool</span>  
 Turns on SAPI logging when using FastCGI. Default is to enable logging.
 
 File Uploads
@@ -819,7 +819,7 @@ File Uploads
 
 Here's a short explanation of the configuration directives.
 
-`file_uploads` <span class="type">boolean</span>  
+`file_uploads` <span class="type">bool</span>  
 Whether or not to allow HTTP
 <a href="/features/file-upload.html" class="link">file uploads</a>. See
 also the
@@ -840,15 +840,15 @@ system default temporary directory. If
 is on, then the system default directory must be allowed for an upload
 to succeed.
 
-`upload_max_filesize` <span class="type">integer</span>  
+`upload_max_filesize` <span class="type">int</span>  
 The maximum size of an uploaded file.
 
-<span class="simpara">When an <span class="type">integer</span> is used,
-the value is measured in bytes. Shorthand notation, as described in
+<span class="simpara">When an <span class="type">int</span> is used, the
+value is measured in bytes. Shorthand notation, as described in
 <a href="/faq/using.html#faq.using.shorthandbytes" class="link">this FAQ</a>,
 may also be used. </span>
 
-`max_file_uploads` <span class="type">integer</span>  
+`max_file_uploads` <span class="type">int</span>  
 The maximum number of files allowed to be uploaded simultaneously.
 Starting with PHP 5.3.4, upload fields left blank on submission do not
 count towards this limit.
@@ -862,7 +862,7 @@ General SQL
 
 Here's a short explanation of the configuration directives.
 
-`sql.safe_mode` <span class="type">boolean</span>  
+`sql.safe_mode` <span class="type">bool</span>  
 If turned on, database connection functions that specify default values
 will use those values in place of any user-supplied arguments. For
 details on the default values, see the documentation for the relevant
@@ -880,6 +880,6 @@ Windows Specific
 
 Here's a short explanation of the configuration directives.
 
-`windows.show_crt_warning` <span class="type">boolean</span>  
+`windows.show_crt_warning` <span class="type">bool</span>  
 This directive shows the Windows CRT warnings when enabled. These
 warnings were displayed by default until PHP 5.4.0.

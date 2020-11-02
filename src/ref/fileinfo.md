@@ -182,7 +182,8 @@ Create a new fileinfo resource
 
 Procedural style
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">finfo\_open</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
@@ -328,7 +329,8 @@ Detect MIME Content-type for a file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mime\_content\_type</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )

@@ -477,7 +477,7 @@ Introduction
 occurs while performing mathematical operations. These errors include
 attempting to perform a bitshift by a negative amount, and any call to
 <span class="function">intdiv</span> that would result in a value
-outside the possible bounds of an <span class="type">integer</span>.
+outside the possible bounds of an <span class="type">int</span>.
 
 Class synopsis
 --------------

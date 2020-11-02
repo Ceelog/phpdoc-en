@@ -149,9 +149,9 @@ The name of the constant.
 
 `value`  
 The value of the constant. In PHP 5, `value` must be a <span
-class="type">scalar</span> value (<span class="type">integer</span>,
-<span class="type">float</span>, <span class="type">string</span>, <span
-class="type">boolean</span>, or **`NULL`**). In PHP 7, <span
+class="type">scalar</span> value (<span class="type">int</span>, <span
+class="type">float</span>, <span class="type">string</span>, <span
+class="type">bool</span>, or **`NULL`**). In PHP 7, <span
 class="type">array</span> values are also accepted.
 
 **Warning**
@@ -434,10 +434,10 @@ if no `status` is passed.
 If `status` is a string, this function prints the `status` just before
 exiting.
 
-If `status` is an <span class="type">integer</span>, that value will be
-used as the exit status and not printed. Exit statuses should be in the
-range 0 to 254, the exit status 255 is reserved by PHP and shall not be
-used. The status 0 is used to terminate the program successfully.
+If `status` is an <span class="type">int</span>, that value will be used
+as the exit status and not printed. Exit statuses should be in the range
+0 to 254, the exit status 255 is reserved by PHP and shall not be used.
+The status 0 is used to terminate the program successfully.
 
 ### Return Values
 
@@ -831,7 +831,7 @@ class="type">array</span> or number.
 
 Returns an array of integers in the form \[seconds, nanoseconds\], if
 the parameter `get_as_number` is false. Otherwise the nanoseconds are
-returned as <span class="type">integer</span> (64bit platforms) or <span
+returned as <span class="type">int</span> (64bit platforms) or <span
 class="type">float</span> (32bit platforms).
 
 ### Examples
@@ -950,10 +950,11 @@ Pack data into binary string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">pack</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">pack</span> (
 <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$format`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 Pack given arguments into a binary string according to `format`.
 
@@ -1012,7 +1013,7 @@ Currently implemented formats are:
 | Z    | NUL-padded string (new in PHP 5.5)                           |
 | @    | NUL-fill to absolute position                                |
 
-`...`  
+`values`  
 
 ### Return Values
 
@@ -1044,27 +1045,27 @@ sequence 0x12, 0x34, 0x78, 0x56, 0x41, 0x42.
 
 **Caution**
 
-Note that PHP internally stores <span class="type">integer</span> values
-as signed values of a machine-dependent size (C type *long*). Integer
+Note that PHP internally stores <span class="type">int</span> values as
+signed values of a machine-dependent size (C type *long*). Integer
 literals and operations that yield numbers outside the bounds of the
-<span class="type">integer</span> type will be stored as <span
+<span class="type">int</span> type will be stored as <span
 class="type">float</span>. When packing these floats as integers, they
 are first cast into the integer type. This may or may not result in the
 desired byte pattern.
 
 The most relevant case is when packing unsigned numbers that would be
-representable with the <span class="type">integer</span> type if it were
-unsigned. In systems where the <span class="type">integer</span> type
-has a 32-bit size, the cast usually results in the same byte pattern as
-if the <span class="type">integer</span> were unsigned (although this
-relies on implementation-defined unsigned to signed conversions, as per
-the C standard). In systems where the <span class="type">integer</span>
-type has 64-bit size, the <span class="type">float</span> most likely
-does not have a mantissa large enough to hold the value without loss of
+representable with the <span class="type">int</span> type if it were
+unsigned. In systems where the <span class="type">int</span> type has a
+32-bit size, the cast usually results in the same byte pattern as if the
+<span class="type">int</span> were unsigned (although this relies on
+implementation-defined unsigned to signed conversions, as per the C
+standard). In systems where the <span class="type">int</span> type has
+64-bit size, the <span class="type">float</span> most likely does not
+have a mantissa large enough to hold the value without loss of
 precision. If those systems also have a native 64-bit C *int* type (most
 UNIX-like systems don't), the only way to use the *I* pack format in the
-upper range is to create <span class="type">integer</span> negative
-values with the same byte representation as the desired unsigned value.
+upper range is to create <span class="type">int</span> negative values
+with the same byte representation as the desired unsigned value.
 
 ### See Also
 
@@ -1858,8 +1859,9 @@ Unpack data from binary string
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">unpack</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">unpack</span>
+( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span

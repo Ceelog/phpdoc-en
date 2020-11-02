@@ -1299,7 +1299,8 @@ Splits DN into its component parts
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ldap\_explode\_dn</span> ( <span
 class="methodparam"><span class="type">string</span> `$dn`</span> ,
 <span class="methodparam"><span class="type">int</span>

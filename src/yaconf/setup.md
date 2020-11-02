@@ -41,7 +41,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`yaconf.check_delay` <span class="type">integer</span>  
+`yaconf.check_delay` <span class="type">int</span>  
 In which interval Yaconf will detect ini file's change(by directory's
 mtime), if it is set to zero, you have to restart php to reloading
 configurations.

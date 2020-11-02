@@ -115,8 +115,9 @@ class="methodparam">void</span> )
 <span class="methodname">getReadTimeout</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getSessionId</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getSessionId</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -923,13 +924,15 @@ Gets the current stomp session ID
 
 Object oriented style (method):
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Stomp::getSessionId</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">Stomp::getSessionId</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style:
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">stomp\_get\_session\_id</span> ( <span
 class="methodparam"><span class="type">resource</span> `$link`</span> )
 

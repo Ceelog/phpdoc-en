@@ -408,8 +408,8 @@ Class synopsis
 /\* Methods \*/
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">\_\_invoke</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+<span class="methodname">\_\_invoke</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$args`</span> )
 
 }
 
@@ -421,8 +421,8 @@ Invoke luaclosure
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">LuaClosure::\_\_invoke</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+<span class="methodname">LuaClosure::\_\_invoke</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$args`</span> )
 
 **Warning**
 
@@ -431,7 +431,7 @@ available.
 
 ### Parameters
 
-`...`  
+`args`  
 
 ### Return Values
 

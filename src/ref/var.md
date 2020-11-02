@@ -9,16 +9,16 @@ Get the boolean value of a variable
 <span class="methodparam"><span class="type">mixed</span> `$var`</span>
 )
 
-Returns the <span class="type">boolean</span> value of `var`.
+Returns the <span class="type">bool</span> value of `var`.
 
 ### Parameters
 
 `var`  
-The scalar value being converted to a <span class="type">boolean</span>.
+The scalar value being converted to a <span class="type">bool</span>.
 
 ### Return Values
 
-The <span class="type">boolean</span> value of `var`.
+The <span class="type">bool</span> value of `var`.
 
 ### Examples
 
@@ -72,16 +72,19 @@ Dumps a string representation of an internal zend value to output
 
 <span class="type">void</span> <span
 class="methodname">debug\_zval\_dump</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$variable`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">mixed</span> `$variable`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$variables`</span> )
 
 Dumps a string representation of an internal zend value to output.
 
 ### Parameters
 
 `variable`  
-The variable being evaluated.
+The variable to dump.
+
+`variables`  
+Further variables to dump.
 
 ### Return Values
 
@@ -498,8 +501,8 @@ The variable being type checked.
 
 Possible values for the returned string are:
 
--   <span class="simpara"> "<span class="type">boolean</span>" </span>
--   <span class="simpara"> "<span class="type">integer</span>" </span>
+-   <span class="simpara"> "<span class="type">bool</span>" </span>
+-   <span class="simpara"> "<span class="type">int</span>" </span>
 -   <span class="simpara"> "<span class="type">double</span>" (for
     historical reasons "double" is returned in case of a <span
     class="type">float</span>, and not simply "float") </span>
@@ -571,7 +574,7 @@ Get the integer value of a variable
 \[, <span class="methodparam"><span class="type">int</span> `$base`<span
 class="initializer"> = 10</span></span> \] )
 
-Returns the <span class="type">integer</span> value of `var`, using the
+Returns the <span class="type">int</span> value of `var`, using the
 specified `base` for the conversion (the default is base 10). <span
 class="function">intval</span> should not be used on objects, as doing
 so will emit an **`E_NOTICE`** level error and return 1.
@@ -728,7 +731,7 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a <span class="type">boolean</span>,
+Returns **`TRUE`** if `var` is a <span class="type">bool</span>,
 **`FALSE`** otherwise.
 
 ### Examples
@@ -1024,7 +1027,7 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is an <span class="type">integer</span>,
+Returns **`TRUE`** if `var` is an <span class="type">int</span>,
 **`FALSE`** otherwise.
 
 ### Examples
@@ -1418,11 +1421,11 @@ class="type">mixed</span> `$var`</span> )
 
 Finds whether the given variable is a scalar.
 
-Scalar variables are those containing an <span
-class="type">integer</span>, <span class="type">float</span>, <span
-class="type">string</span> or <span class="type">boolean</span>. Types
-<span class="type">array</span>, <span class="type">object</span> and
-<span class="type">resource</span> are not scalar.
+Scalar variables are those containing an <span class="type">int</span>,
+<span class="type">float</span>, <span class="type">string</span> or
+<span class="type">bool</span>. Types <span class="type">array</span>,
+<span class="type">object</span> and <span class="type">resource</span>
+are not scalar.
 
 > **Note**:
 >
@@ -1562,8 +1565,8 @@ Determine if a variable is declared and is different than **`NULL`**
 
 <span class="type">bool</span> <span class="methodname">isset</span> (
 <span class="methodparam"><span class="type">mixed</span> `$var`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$vars`</span> )
 
 Determine if a variable is considered set, this means if a variable is
 declared and is different than **`NULL`**.
@@ -1587,8 +1590,8 @@ stops as soon as an unset variable is encountered.
 `var`  
 The variable to be checked.
 
-`...`  
-Another variable ...
+`vars`  
+Further variables.
 
 ### Return Values
 
@@ -1755,11 +1758,10 @@ will return the information rather than print it.
 ### Return Values
 
 If given a <span class="type">string</span>, <span
-class="type">integer</span> or <span class="type">float</span>, the
-value itself will be printed. If given an <span
-class="type">array</span>, values will be presented in a format that
-shows keys and elements. Similar notation is used for <span
-class="type">object</span>s.
+class="type">int</span> or <span class="type">float</span>, the value
+itself will be printed. If given an <span class="type">array</span>,
+values will be presented in a format that shows keys and elements.
+Similar notation is used for <span class="type">object</span>s.
 
 When the `return` parameter is **`TRUE`**, this function will return a
 <span class="type">string</span>. Otherwise, the return value is
@@ -2127,7 +2129,7 @@ as an associative array.
 ### Return Values
 
 The converted value is returned, and can be a <span
-class="type">boolean</span>, <span class="type">integer</span>, <span
+class="type">bool</span>, <span class="type">int</span>, <span
 class="type">float</span>, <span class="type">string</span>, <span
 class="type">array</span> or <span class="type">object</span>.
 
@@ -2136,11 +2138,11 @@ returned and **`E_NOTICE`** is issued.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                                      |
-|---------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | The *allowed\_classes* element of `options`) is now strictly typed, i.e. if anything other than an <span class="type">array</span> or a <span class="type">boolean</span> is given, <span class="function">unserialize</span> returns **`FALSE`** and issues an **`E_WARNING`**. |
-| 7.0.0   | The `options` parameter has been added.                                                                                                                                                                                                                                          |
-| 5.6.0   | Manipulating the serialised data by replacing *C:* with *O:* to force object instantiation without calling the constructor will now fail.                                                                                                                                        |
+| Version | Description                                                                                                                                                                                                                                                                   |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.1.0   | The *allowed\_classes* element of `options`) is now strictly typed, i.e. if anything other than an <span class="type">array</span> or a <span class="type">bool</span> is given, <span class="function">unserialize</span> returns **`FALSE`** and issues an **`E_WARNING`**. |
+| 7.0.0   | The `options` parameter has been added.                                                                                                                                                                                                                                       |
+| 5.6.0   | Manipulating the serialised data by replacing *C:* with *O:* to force object instantiation without calling the constructor will now fail.                                                                                                                                     |
 
 ### Examples
 
@@ -2215,8 +2217,8 @@ Unset a given variable
 
 <span class="type">void</span> <span class="methodname">unset</span> (
 <span class="methodparam"><span class="type">mixed</span> `$var`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+, <span class="methodparam"><span class="type">mixed</span>
+`$vars`</span> )
 
 <span class="function">unset</span> destroys the specified variables.
 
@@ -2323,8 +2325,8 @@ The above example will output:
 `var`  
 The variable to be unset.
 
-`...`  
-Another variable ...
+`vars`  
+Further variables.
 
 ### Return Values
 
@@ -2408,8 +2410,8 @@ Dumps information about a variable
 
 <span class="type">void</span> <span class="methodname">var\_dump</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$expression`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$expression`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$expressions`</span> )
 
 This function displays structured information about one or more
 expressions that includes its type and value. Arrays and objects are
@@ -2430,7 +2432,10 @@ can be used to capture the output of this function, and save it in a
 ### Parameters
 
 `expression`  
-The variable you want to dump.
+The expression to dump.
+
+`expressions`  
+Further expressions to dump.
 
 ### Return Values
 

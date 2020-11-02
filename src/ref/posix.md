@@ -214,7 +214,7 @@ Return the numeric effective group ID of the current process.
 
 ### Return Values
 
-Returns an <span class="type">integer</span> of the effective group ID.
+Returns an <span class="type">int</span> of the effective group ID.
 
 ### Examples
 
@@ -262,7 +262,7 @@ convert this into a useable username.
 
 ### Return Values
 
-Returns the user id, as an <span class="type">integer</span>
+Returns the user id, as an <span class="type">int</span>
 
 ### Examples
 
@@ -304,7 +304,7 @@ Return the numeric real group ID of the current process.
 
 ### Return Values
 
-Returns the real group id, as an <span class="type">integer</span>.
+Returns the real group id, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -402,7 +402,8 @@ Return info about a group by name
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getgrnam</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -557,7 +558,8 @@ Get process group id for job control
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getpgid</span> ( <span
 class="methodparam"><span class="type">int</span> `$pid`</span> )
 
@@ -571,7 +573,7 @@ The process id.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -614,7 +616,7 @@ Return the process group identifier of the current process.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### See Also
 
@@ -636,7 +638,7 @@ Return the process identifier of the current process.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -670,7 +672,7 @@ process.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -924,7 +926,7 @@ class="function">posix\_get\_last\_error</span>.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">integer</span>.
+Returns the identifier, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -959,7 +961,7 @@ Return the numeric real user ID of the current process.
 
 ### Return Values
 
-Returns the user id, as an <span class="type">integer</span>
+Returns the user id, as an <span class="type">int</span>
 
 ### Examples
 
@@ -1026,9 +1028,9 @@ device.
 
 `fd`  
 The file descriptor, which is expected to be either a file <span
-class="type">resource</span> or an <span class="type">integer</span>. An
-<span class="type">integer</span> will be assumed to be a file
-descriptor that can be passed directly to the underlying system call.
+class="type">resource</span> or an <span class="type">int</span>. An
+<span class="type">int</span> will be assumed to be a file descriptor
+that can be passed directly to the underlying system call.
 
 In almost all cases, you will want to provide a file <span
 class="type">resource</span>.
@@ -1573,9 +1575,9 @@ current terminal device that is open on the file descriptor `fd`.
 
 `fd`  
 The file descriptor, which is expected to be either a file <span
-class="type">resource</span> or an <span class="type">integer</span>. An
-<span class="type">integer</span> will be assumed to be a file
-descriptor that can be passed directly to the underlying system call.
+class="type">resource</span> or an <span class="type">int</span>. An
+<span class="type">int</span> will be assumed to be a file descriptor
+that can be passed directly to the underlying system call.
 
 In almost all cases, you will want to provide a file <span
 class="type">resource</span>.

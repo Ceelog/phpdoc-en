@@ -385,10 +385,9 @@ In PHP 5.5 and later, if a key is an <span class="type">array</span> or
 <span class="type">object</span>, a warning will be generated.
 **`NULL`** keys will be converted to an empty string, <span
 class="type">float</span> keys will be truncated to their <span
-class="type">integer</span> counterpart, <span
-class="type">resource</span> keys will generate a warning and be
-converted to their resource ID, and <span class="type">boolean</span>
-keys will be converted to integers.
+class="type">int</span> counterpart, <span class="type">resource</span>
+keys will generate a warning and be converted to their resource ID, and
+<span class="type">bool</span> keys will be converted to integers.
 
 > **Note**:
 >

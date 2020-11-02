@@ -40,15 +40,15 @@ frames returned. By default (`limit`=*0*) it returns all stack frames.
 Returns an array of associative <span class="type">array</span>s. The
 possible returned elements are as follows:
 
-| Name     | Type                              | Description                                                                                                                                              |
-|----------|-----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
-| function | <span class="type">string</span>  | The current function name. See also <a href="/language/constants/predefined.html" class="link">__FUNCTION__</a>.                                         |
-| line     | <span class="type">integer</span> | The current line number. See also <a href="/language/constants/predefined.html" class="link">__LINE__</a>.                                               |
-| file     | <span class="type">string</span>  | The current file name. See also <a href="/language/constants/predefined.html" class="link">__FILE__</a>.                                                 |
-| class    | <span class="type">string</span>  | The current <a href="/language/oop5.html" class="link">class</a> name. See also <a href="/language/constants/predefined.html" class="link">__CLASS__</a> |
-| object   | <span class="type">object</span>  | The current <a href="/language/oop5.html" class="link">object</a>.                                                                                       |
-| type     | <span class="type">string</span>  | The current call type. If a method call, "-\>" is returned. If a static method call, "::" is returned. If a function call, nothing is returned.          |
-| args     | <span class="type">array</span>   | If inside a function, this lists the functions arguments. If inside an included file, this lists the included file name(s).                              |
+| Name     | Type                             | Description                                                                                                                                              |
+|----------|----------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------|
+| function | <span class="type">string</span> | The current function name. See also <a href="/language/constants/predefined.html" class="link">__FUNCTION__</a>.                                         |
+| line     | <span class="type">int</span>    | The current line number. See also <a href="/language/constants/predefined.html" class="link">__LINE__</a>.                                               |
+| file     | <span class="type">string</span> | The current file name. See also <a href="/language/constants/predefined.html" class="link">__FILE__</a>.                                                 |
+| class    | <span class="type">string</span> | The current <a href="/language/oop5.html" class="link">class</a> name. See also <a href="/language/constants/predefined.html" class="link">__CLASS__</a> |
+| object   | <span class="type">object</span> | The current <a href="/language/oop5.html" class="link">object</a>.                                                                                       |
+| type     | <span class="type">string</span> | The current call type. If a method call, "-\>" is returned. If a static method call, "::" is returned. If a function call, nothing is returned.          |
+| args     | <span class="type">array</span>  | If inside a function, this lists the functions arguments. If inside an included file, this lists the included file name(s).                              |
 
 ### Examples
 

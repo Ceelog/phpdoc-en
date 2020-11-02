@@ -213,9 +213,9 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">synchronized</span> ( <span
-class="methodparam"><span class="type">Closure</span> `$block`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">Closure</span> `$block`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">unlock</span> ( <span
@@ -982,9 +982,9 @@ Synchronization
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Threaded::synchronized</span> ( <span
-class="methodparam"><span class="type">Closure</span> `$block`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">Closure</span> `$block`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 Executes the block while retaining the referenced objects
 synchronization lock for the calling context
@@ -994,7 +994,7 @@ synchronization lock for the calling context
 `block`  
 The block of code to execute
 
-`...`  
+`args`  
 Variable length list of arguments to use as function arguments to the
 block
 
@@ -1281,9 +1281,9 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Threaded::synchronized</span> ( <span
-class="methodparam"><span class="type">Closure</span> `$block`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">Closure</span> `$block`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Threaded::unlock</span> ( <span
@@ -3404,9 +3404,9 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">Threaded::synchronized</span> ( <span
-class="methodparam"><span class="type">Closure</span> `$block`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">Closure</span> `$block`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Threaded::unlock</span> ( <span

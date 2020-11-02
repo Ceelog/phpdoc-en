@@ -439,7 +439,8 @@ Execute a command on a remote server
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ssh2\_exec</span> ( <span class="methodparam"><span
 class="type">resource</span> `$session`</span> , <span
 class="methodparam"><span class="type">string</span> `$command`</span>
@@ -740,7 +741,8 @@ Initialize Publickey subsystem
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ssh2\_publickey\_init</span> ( <span
 class="methodparam"><span class="type">resource</span> `$session`</span>
 )
@@ -1555,7 +1557,8 @@ Initialize SFTP subsystem
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ssh2\_sftp</span> ( <span class="methodparam"><span
 class="type">resource</span> `$session`</span> )
 

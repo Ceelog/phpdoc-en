@@ -986,7 +986,8 @@ Read the structure of a particular message
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_fetchstructure</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$imap_stream`</span> , <span class="methodparam"><span
@@ -1906,7 +1907,8 @@ Create a MIME message based on given envelope and body sections
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_mail\_compose</span> ( <span
 class="methodparam"><span class="type">array</span> `$envelope`</span> ,
 <span class="methodparam"><span class="type">array</span> `$body`</span>
@@ -2333,7 +2335,8 @@ Decode a modified UTF-7 string to UTF-8
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_mutf7\_to\_utf8</span> ( <span
 class="methodparam"><span class="type">string</span> `$in`</span> )
 
@@ -3378,7 +3381,8 @@ Gets and sort messages
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_sort</span> ( <span class="methodparam"><span
 class="type">resource</span> `$imap_stream`</span> , <span
 class="methodparam"><span class="type">int</span> `$criteria`</span> ,
@@ -3851,7 +3855,8 @@ Encode a UTF-8 string to modified UTF-7
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">imap\_utf8\_to\_mutf7</span> ( <span
 class="methodparam"><span class="type">string</span> `$in`</span> )
 

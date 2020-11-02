@@ -16,7 +16,7 @@ adopted by this extension.
 
 The following constants are also available:
 
-| Name                                      | Type                              | Description                                                          |
-|-------------------------------------------|-----------------------------------|----------------------------------------------------------------------|
-| **`ICONV_MIME_DECODE_STRICT`**            | <span class="type">integer</span> | A bitmask used for <span class="function">iconv\_mime\_decode</span> |
-| **`ICONV_MIME_DECODE_CONTINUE_ON_ERROR`** | <span class="type">integer</span> | A bitmask used for <span class="function">iconv\_mime\_decode</span> |
+| Name                                      | Type                          | Description                                                          |
+|-------------------------------------------|-------------------------------|----------------------------------------------------------------------|
+| **`ICONV_MIME_DECODE_STRICT`**            | <span class="type">int</span> | A bitmask used for <span class="function">iconv\_mime\_decode</span> |
+| **`ICONV_MIME_DECODE_CONTINUE_ON_ERROR`** | <span class="type">int</span> | A bitmask used for <span class="function">iconv\_mime\_decode</span> |

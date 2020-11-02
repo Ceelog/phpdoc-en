@@ -5,37 +5,37 @@ The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
-**`VARNISH_STATUS_SYNTAX`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_SYNTAX`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_UNKNOWN`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_UNKNOWN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_UNIMPL`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_UNIMPL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_TOOFEW`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_TOOFEW`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_TOOMANY`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_TOOMANY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_PARAM`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_PARAM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_AUTH`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_AUTH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_OK`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_OK`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_CANT`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_CANT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_COMMS`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_COMMS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_STATUS_CLOSE`** (<span class="type">integer</span>)  
+**`VARNISH_STATUS_CLOSE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 **`VARNISH_CONFIG_IDENT`** (<span class="type">string</span>)  
@@ -56,8 +56,8 @@ dynamically loaded at runtime.
 **`VARNISH_CONFIG_COMPAT`** (<span class="type">string</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_COMPAT_2`** (<span class="type">integer</span>)  
+**`VARNISH_COMPAT_2`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`VARNISH_COMPAT_3`** (<span class="type">integer</span>)  
+**`VARNISH_COMPAT_3`** (<span class="type">int</span>)  
 <span class="simpara"> </span>

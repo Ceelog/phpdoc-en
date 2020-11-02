@@ -717,15 +717,15 @@ compared to a <span class="type">string</span>. The sections on
 will make the following clearer. See also the <span
 class="function">settype</span> function.
 
-A <span class="type">boolean</span> **`TRUE`** value is converted to the
-<span class="type">string</span> *"1"*. <span
-class="type">Boolean</span> **`FALSE`** is converted to *""* (the empty
-string). This allows conversion back and forth between <span
-class="type">boolean</span> and <span class="type">string</span> values.
+A <span class="type">bool</span> **`TRUE`** value is converted to the
+<span class="type">string</span> *"1"*. <span class="type">bool</span>
+**`FALSE`** is converted to *""* (the empty string). This allows
+conversion back and forth between <span class="type">bool</span> and
+<span class="type">string</span> values.
 
-An <span class="type">integer</span> or <span class="type">float</span>
-is converted to a <span class="type">string</span> representing the
-number textually (including the exponent part for <span
+An <span class="type">int</span> or <span class="type">float</span> is
+converted to a <span class="type">string</span> representing the number
+textually (including the exponent part for <span
 class="type">float</span>s). Floating point numbers can be converted
 using exponential notation (*4.1E+6*).
 
@@ -782,8 +782,8 @@ If the <span class="type">string</span> does not contain any of the
 characters '.', 'e', or 'E' and the numeric value fits into integer type
 limits (as defined by **`PHP_INT_MAX`**), the <span
 class="type">string</span> will be evaluated as an <span
-class="type">integer</span>. In all other cases it will be evaluated as
-a <span class="type">float</span>.
+class="type">int</span>. In all other cases it will be evaluated as a
+<span class="type">float</span>.
 
 The value is given by the initial portion of the <span
 class="type">string</span>. If the <span class="type">string</span>

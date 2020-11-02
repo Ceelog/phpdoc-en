@@ -560,7 +560,8 @@ Gets a parameter
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">px\_get\_parameter</span> ( <span
 class="methodparam"><span class="type">resource</span> `$pxdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -690,7 +691,8 @@ Gets a value
 
 ### Description
 
-<span class="type">float</span> <span
+<span class="type"><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">px\_get\_value</span> ( <span
 class="methodparam"><span class="type">resource</span> `$pxdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1164,7 +1166,8 @@ Sets the name of a table (deprecated)
 
 ### Description
 
-<span class="type">void</span> <span
+<span class="type"><span class="type">void</span><span
+class="type">false</span></span> <span
 class="methodname">px\_set\_tablename</span> ( <span
 class="methodparam"><span class="type">resource</span> `$pxdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>

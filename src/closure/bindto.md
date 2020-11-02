@@ -5,8 +5,9 @@ Duplicates the closure with a new bound object and class scope
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">Closure</span>
-<span class="methodname">Closure::bindTo</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Closure</span><span class="type">false</span></span> <span
+class="methodname">Closure::bindTo</span> ( <span
 class="methodparam"><span class="type">object</span> `$newthis`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
 `$newscope` <span class="initializer"> = "static"</span></span> \] )

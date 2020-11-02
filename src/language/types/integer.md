@@ -1,8 +1,8 @@
 Integers
 --------
 
-An <span class="type">integer</span> is a number of the set ℤ = {...,
--2, -1, 0, 1, 2, ...}.
+An <span class="type">int</span> is a number of the set ℤ = {..., -2,
+-1, 0, 1, 2, ...}.
 
 See also:
 
@@ -18,11 +18,10 @@ See also:
 
 ### Syntax
 
-<span class="type">Integer</span>s can be specified in decimal (base
-10), hexadecimal (base 16), octal (base 8) or binary (base 2) notation.
-The
+<span class="type">int</span>s can be specified in decimal (base 10),
+hexadecimal (base 16), octal (base 8) or binary (base 2) notation. The
 <a href="/language/operators/arithmetic.html" class="link">negation operator</a>
-can be used to denote a negative <span class="type">integer</span>.
+can be used to denote a negative <span class="type">int</span>.
 
 To use octal notation, precede the number with a *0* (zero). To use
 hexadecimal notation precede the number with *0x*. To use binary
@@ -44,8 +43,8 @@ $a = 1_234_567; // decimal number (as of PHP 7.4.0)
 ?>
 ```
 
-Formally, the structure for <span class="type">integer</span> literals
-is as of PHP 7.4.0 (previously, underscores have not been allowed):
+Formally, the structure for <span class="type">int</span> literals is as
+of PHP 7.4.0 (previously, underscores have not been allowed):
 
     decimal     : [1-9][0-9]*(_[0-9]+)*
                 | 0
@@ -61,22 +60,21 @@ is as of PHP 7.4.0 (previously, underscores have not been allowed):
                 | octal
                 | binary
 
-The size of an <span class="type">integer</span> is platform-dependent,
+The size of an <span class="type">int</span> is platform-dependent,
 although a maximum value of about two billion is the usual value (that's
 32 bits signed). 64-bit platforms usually have a maximum value of about
-9E18. PHP does not support unsigned <span class="type">integer</span>s.
-<span class="type">Integer</span> size can be determined using the
-constant **`PHP_INT_SIZE`**, maximum value using the constant
-**`PHP_INT_MAX`**, and minimum value using the constant
-**`PHP_INT_MIN`**.
+9E18. PHP does not support unsigned <span class="type">int</span>s.
+<span class="type">int</span> size can be determined using the constant
+**`PHP_INT_SIZE`**, maximum value using the constant **`PHP_INT_MAX`**,
+and minimum value using the constant **`PHP_INT_MIN`**.
 
 ### Integer overflow
 
 If PHP encounters a number beyond the bounds of the <span
-class="type">integer</span> type, it will be interpreted as a <span
+class="type">int</span> type, it will be interpreted as a <span
 class="type">float</span> instead. Also, an operation which results in a
-number beyond the bounds of the <span class="type">integer</span> type
-will return a <span class="type">float</span> instead.
+number beyond the bounds of the <span class="type">int</span> type will
+return a <span class="type">float</span> instead.
 
 **Example \#2 Integer overflow on a 32-bit system**
 
@@ -110,12 +108,12 @@ var_dump($large_number);                     // float(5.0E+19)
 ?>
 ```
 
-There is no <span class="type">integer</span> division operator in PHP,
-to achieve this use the <span class="function">intdiv</span> function.
+There is no <span class="type">int</span> division operator in PHP, to
+achieve this use the <span class="function">intdiv</span> function.
 *1/2* yields the <span class="type">float</span> *0.5*. The value can be
-cast to an <span class="type">integer</span> to round it towards zero,
-or the <span class="function">round</span> function provides finer
-control over rounding.
+cast to an <span class="type">int</span> to round it towards zero, or
+the <span class="function">round</span> function provides finer control
+over rounding.
 
 ``` php
 <?php
@@ -127,16 +125,16 @@ var_dump(round(25/7));  // float(4)
 
 ### Converting to integer
 
-To explicitly convert a value to <span class="type">integer</span>, use
+To explicitly convert a value to <span class="type">int</span>, use
 either the *(int)* or *(integer)* casts. However, in most cases the cast
 is not needed, since a value will be automatically converted if an
 operator, function or control structure requires an <span
-class="type">integer</span> argument. A value can also be converted to
-<span class="type">integer</span> with the <span
-class="function">intval</span> function.
+class="type">int</span> argument. A value can also be converted to <span
+class="type">int</span> with the <span class="function">intval</span>
+function.
 
 If a <span class="type">resource</span> is converted to an <span
-class="type">integer</span>, then the result will be the unique resource
+class="type">int</span>, then the result will be the unique resource
 number assigned to the <span class="type">resource</span> by PHP at
 runtime.
 
@@ -150,24 +148,24 @@ See also
 #### From <a href="/language/types/float.html" class="link">floating point numbers</a>
 
 When converting from <span class="type">float</span> to <span
-class="type">integer</span>, the number will be rounded *towards zero*.
+class="type">int</span>, the number will be rounded *towards zero*.
 
-If the float is beyond the boundaries of <span
-class="type">integer</span> (usually *+/- 2.15e+9 = 2^31* on 32-bit
-platforms and *+/- 9.22e+18 = 2^63* on 64-bit platforms), the result is
-undefined, since the <span class="type">float</span> doesn't have enough
-precision to give an exact <span class="type">integer</span> result. No
-warning, not even a notice will be issued when this happens!
+If the float is beyond the boundaries of <span class="type">int</span>
+(usually *+/- 2.15e+9 = 2^31* on 32-bit platforms and *+/- 9.22e+18 =
+2^63* on 64-bit platforms), the result is undefined, since the <span
+class="type">float</span> doesn't have enough precision to give an exact
+<span class="type">int</span> result. No warning, not even a notice will
+be issued when this happens!
 
 > **Note**:
 >
 > NaN and Infinity will always be zero when cast to <span
-> class="type">integer</span>.
+> class="type">int</span>.
 
 **Warning**
 
-Never cast an unknown fraction to <span class="type">integer</span>, as
-this can sometimes lead to unexpected results.
+Never cast an unknown fraction to <span class="type">int</span>, as this
+can sometimes lead to unexpected results.
 
 ``` php
 <?php
@@ -191,6 +189,6 @@ See
 
 **Caution**
 
-The behaviour of converting to <span class="type">integer</span> is
+The behaviour of converting to <span class="type">int</span> is
 undefined for other types. Do *not* rely on any observed behaviour, as
 it can change without notice.

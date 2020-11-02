@@ -6,7 +6,8 @@ Duplicates a closure with a specific bound object and class scope
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Closure</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Closure</span><span class="type">false</span></span> <span
 class="methodname">Closure::bind</span> ( <span
 class="methodparam"><span class="type">Closure</span> `$closure`</span>
 , <span class="methodparam"><span class="type">object</span>

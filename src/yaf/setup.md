@@ -53,16 +53,16 @@ Here's a short explanation of the configuration directives.
 The global library path, Yaf\_loader will search global library in this
 directory.
 
-`yaf.action_prefer` <span class="type">integer</span>  
+`yaf.action_prefer` <span class="type">int</span>  
 If there is only one part in PATH\_INFO, should it consider as a
 controller or action.
 
 If this configure On, it will be considered as a Action name.
 
-`yaf.lowcase_path` <span class="type">integer</span>  
+`yaf.lowcase_path` <span class="type">int</span>  
 Whether lowercase all the path during the class autoloading.
 
-`yaf.use_spl_autoload` <span class="type">integer</span>  
+`yaf.use_spl_autoload` <span class="type">int</span>  
 When this value is On, if <span class="classname">Yaf\_Loader</span> can
 not find a class, it will return **`FALSE`**, then give chance to other
 auto load function to be called.
@@ -82,14 +82,14 @@ When this value is Off(default), <span
 class="methodname">Yaf\_Loader::autoload</span> will always return
 **`TRUE`**.
 
-`yaf.forward_limit` <span class="type">integer</span>  
+`yaf.forward_limit` <span class="type">int</span>  
 The max forward count, default is 5. that means you can have a max value
 of 5 in the forward stack.
 
 This is a protection for prevent recursive <span
 class="methodname">Yaf\_Controller\_Abstract::forward</span>.
 
-`yaf.name_suffix` <span class="type">integer</span>  
+`yaf.name_suffix` <span class="type">int</span>  
 When this On, Yaf\_Loader will identify a class by it's suffix to decide
 whether it is a MVC Class.
 
@@ -103,7 +103,7 @@ For example, when this value is "\_", Yaf\_Loader will take
 Index\_Controller as a Controller Class, IndexController as a normal
 class.
 
-`yaf.cache_config` <span class="type">integer</span>  
+`yaf.cache_config` <span class="type">int</span>  
 If this is On, and in the meantime you are using ini config file as the
 parameter of <span class="methodname">Yaf\_Application</span>, the
 compiling result of the ini config file will be cached in the PHP
@@ -128,7 +128,7 @@ That is, if this value is "product", Yaf will use the section named
 class="classname">Yaf\_Application</span>) as the final config of the
 <span class="classname">Yaf\_Application</span>.
 
-`yaf.use_namespace` <span class="type">integer</span>  
+`yaf.use_namespace` <span class="type">int</span>  
 Only works as of PHP 5.3, if this value is On, All classes of Yaf will
 named in namespace style.
 

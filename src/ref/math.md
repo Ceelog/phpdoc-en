@@ -5,7 +5,8 @@ Absolute value
 
 ### Description
 
-<span class="type">number</span> <span class="methodname">abs</span> (
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span class="methodname">abs</span> (
 <span class="methodparam"><span class="type">mixed</span>
 `$number`</span> )
 
@@ -20,9 +21,9 @@ The numeric value to process
 
 The absolute value of `number`. If the argument `number` is of type
 <span class="type">float</span>, the return type is also <span
-class="type">float</span>, otherwise it is <span
-class="type">integer</span> (as <span class="type">float</span> usually
-has a bigger value range than <span class="type">integer</span>).
+class="type">float</span>, otherwise it is <span class="type">int</span>
+(as <span class="type">float</span> usually has a bigger value range
+than <span class="type">int</span>).
 
 ### Examples
 
@@ -343,7 +344,8 @@ Binary to decimal
 
 ### Description
 
-<span class="type">number</span> <span class="methodname">bindec</span>
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span class="methodname">bindec</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$binary_string`</span> )
 
@@ -351,7 +353,7 @@ Returns the decimal equivalent of the binary number represented by the
 `binary_string` argument.
 
 <span class="function">bindec</span> converts a binary number to an
-<span class="type">integer</span> or, if needed for size reasons, <span
+<span class="type">int</span> or, if needed for size reasons, <span
 class="type">float</span>.
 
 <span class="function">bindec</span> interprets all `binary_string`
@@ -504,7 +506,7 @@ Output of the above example on 64 bit machines:
 > **Note**:
 >
 > The function can convert numbers that are too large to fit into the
-> platforms <span class="type">integer</span> type, larger values are
+> platforms <span class="type">int</span> type, larger values are
 > returned as <span class="type">float</span> in that case.
 
 ### See Also
@@ -539,7 +541,7 @@ The value to round
 <span class="function">ceil</span> is still of type <span
 class="type">float</span> as the value range of <span
 class="type">float</span> is usually bigger than that of <span
-class="type">integer</span>.
+class="type">int</span>.
 
 ### Examples
 
@@ -708,7 +710,7 @@ which results in <span class="function">dechex</span> returning
 `number`  
 The decimal value to convert.
 
-As PHP's <span class="type">integer</span> type is signed, but <span
+As PHP's <span class="type">int</span> type is signed, but <span
 class="function">dechex</span> deals with unsigned integers, negative
 integers will be treated as though they were unsigned.
 
@@ -951,8 +953,8 @@ The numeric value to round
 class="function">floor</span> is still of type <span
 class="type">float</span> because the value range of <span
 class="type">float</span> is usually bigger than that of <span
-class="type">integer</span>. This function returns **`FALSE`** in case
-of an error (e.g. passing an array).
+class="type">int</span>. This function returns **`FALSE`** in case of an
+error (e.g. passing an array).
 
 ### Examples
 
@@ -1052,7 +1054,8 @@ Hexadecimal to decimal
 
 ### Description
 
-<span class="type">number</span> <span class="methodname">hexdec</span>
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span class="methodname">hexdec</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$hex_string`</span> )
 
@@ -1099,7 +1102,7 @@ var_dump(hexdec("a0")); // print "int(160)"
 > **Note**:
 >
 > The function can convert numbers that are too large to fit into the
-> platforms <span class="type">integer</span> type, larger values are
+> platforms <span class="type">int</span> type, larger values are
 > returned as <span class="type">float</span> in that case.
 
 ### See Also
@@ -1445,12 +1448,12 @@ Find highest value
 
 <span class="type">mixed</span> <span class="methodname">max</span> (
 <span class="methodparam"><span class="type">array</span>
-`$values`</span> )
+`$value_array`</span> )
 
 <span class="type">mixed</span> <span class="methodname">max</span> (
 <span class="methodparam"><span class="type">mixed</span>
-`$value1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$value`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 If the first and only parameter is an array, <span
 class="function">max</span> returns the highest value in that array. If
@@ -1462,10 +1465,10 @@ returns the biggest of these values.
 > Values of different types will be compared using the
 > <a href="/language/operators/comparison.html" class="link">standard comparison rules</a>.
 > For instance, a non-numeric <span class="type">string</span> will be
-> compared to an <span class="type">integer</span> as though it were
-> *0*, but multiple non-numeric <span class="type">string</span> values
-> will be compared alphanumerically. The actual value returned will be
-> of the original type with no conversion applied.
+> compared to an <span class="type">int</span> as though it were *0*,
+> but multiple non-numeric <span class="type">string</span> values will
+> be compared alphanumerically. The actual value returned will be of the
+> original type with no conversion applied.
 
 **Caution**
 
@@ -1474,18 +1477,18 @@ class="function">max</span> can produce unpredictable results.
 
 ### Parameters
 
-`values`  
+`value_array`  
 An array containing the values.
 
-`value1`  
+`value`  
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
 value.
 
-`...`  
+`values`  
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
-value.
+values.
 
 ### Return Values
 
@@ -1549,12 +1552,12 @@ Find lowest value
 
 <span class="type">mixed</span> <span class="methodname">min</span> (
 <span class="methodparam"><span class="type">array</span>
-`$values`</span> )
+`$value_array`</span> )
 
 <span class="type">mixed</span> <span class="methodname">min</span> (
 <span class="methodparam"><span class="type">mixed</span>
-`$value1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$value`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 If the first and only parameter is an array, <span
 class="function">min</span> returns the lowest value in that array. If
@@ -1566,10 +1569,10 @@ returns the smallest of these values.
 > Values of different types will be compared using the
 > <a href="/language/operators/comparison.html" class="link">standard comparison rules</a>.
 > For instance, a non-numeric <span class="type">string</span> will be
-> compared to an <span class="type">integer</span> as though it were
-> *0*, but multiple non-numeric <span class="type">string</span> values
-> will be compared alphanumerically. The actual value returned will be
-> of the original type with no conversion applied.
+> compared to an <span class="type">int</span> as though it were *0*,
+> but multiple non-numeric <span class="type">string</span> values will
+> be compared alphanumerically. The actual value returned will be of the
+> original type with no conversion applied.
 
 **Caution**
 
@@ -1578,18 +1581,18 @@ class="function">min</span> can produce unpredictable results.
 
 ### Parameters
 
-`values`  
+`value_array`  
 An array containing the values.
 
-`value1`  
+`value`  
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
 value.
 
-`...`  
+`values`  
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
-value.
+values.
 
 ### Return Values
 
@@ -1815,7 +1818,7 @@ no `seed` is given.
 ### Parameters
 
 `seed`  
-An arbitrary <span class="type">integer</span> seed value.
+An arbitrary <span class="type">int</span> seed value.
 
 `mode`  
 Use one of the following constants to specify the implementation of the
@@ -1867,7 +1870,8 @@ Octal to decimal
 
 ### Description
 
-<span class="type">number</span> <span class="methodname">octdec</span>
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span class="methodname">octdec</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$octal_string`</span> )
 
@@ -1912,7 +1916,7 @@ The above example will output:
 > **Note**:
 >
 > The function can convert numbers that are too large to fit into the
-> platforms <span class="type">integer</span> type, larger values are
+> platforms <span class="type">int</span> type, larger values are
 > returned as <span class="type">float</span> in that case.
 
 ### See Also
@@ -1958,10 +1962,13 @@ Exponential expression
 
 ### Description
 
-<span class="type">number</span> <span class="methodname">pow</span> (
-<span class="methodparam"><span class="type">number</span>
-`$base`</span> , <span class="methodparam"><span
-class="type">number</span> `$exp`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span class="methodname">pow</span> (
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$base`</span> , <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$exp`</span> )
 
 Returns `base` raised to the power of `exp`.
 
@@ -1983,8 +1990,8 @@ The exponent
 
 `base` raised to the power of `exp`. If both arguments are non-negative
 integers and the result can be represented as an integer, the result
-will be returned with <span class="type">integer</span> type, otherwise
-it will be returned as a <span class="type">float</span>.
+will be returned with <span class="type">int</span> type, otherwise it
+will be returned as a <span class="type">float</span>.
 
 ### Examples
 
@@ -2489,7 +2496,7 @@ no `seed` is given.
 ### Parameters
 
 `seed`  
-An arbitrary <span class="type">integer</span> seed value.
+An arbitrary <span class="type">int</span> seed value.
 
 ### Return Values
 

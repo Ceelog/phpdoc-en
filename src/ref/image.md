@@ -18,15 +18,15 @@ Returns an associative array.
 | Attribute          | Meaning                                                                                                                                                                                                                                                        |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GD Version         | <span class="type">string</span> value describing the installed *libgd* version.                                                                                                                                                                               |
-| FreeType Support   | <span class="type">boolean</span> value. **`TRUE`** if FreeType Support is installed.                                                                                                                                                                          |
+| FreeType Support   | <span class="type">bool</span> value. **`TRUE`** if FreeType Support is installed.                                                                                                                                                                             |
 | FreeType Linkage   | <span class="type">string</span> value describing the way in which FreeType was linked. Expected values are: 'with freetype', 'with TTF library', and 'with unknown library'. This element will only be defined if *FreeType Support* evaluated to **`TRUE`**. |
-| GIF Read Support   | <span class="type">boolean</span> value. **`TRUE`** if support for *reading* *GIF* images is included.                                                                                                                                                         |
-| GIF Create Support | <span class="type">boolean</span> value. **`TRUE`** if support for *creating* *GIF* images is included.                                                                                                                                                        |
-| JPEG Support       | <span class="type">boolean</span> value. **`TRUE`** if *JPEG* support is included.                                                                                                                                                                             |
-| PNG Support        | <span class="type">boolean</span> value. **`TRUE`** if *PNG* support is included.                                                                                                                                                                              |
-| WBMP Support       | <span class="type">boolean</span> value. **`TRUE`** if *WBMP* support is included.                                                                                                                                                                             |
-| XBM Support        | <span class="type">boolean</span> value. **`TRUE`** if *XBM* support is included.                                                                                                                                                                              |
-| WebP Support       | <span class="type">boolean</span> value. **`TRUE`** if *WebP* support is included.                                                                                                                                                                             |
+| GIF Read Support   | <span class="type">bool</span> value. **`TRUE`** if support for *reading* *GIF* images is included.                                                                                                                                                            |
+| GIF Create Support | <span class="type">bool</span> value. **`TRUE`** if support for *creating* *GIF* images is included.                                                                                                                                                           |
+| JPEG Support       | <span class="type">bool</span> value. **`TRUE`** if *JPEG* support is included.                                                                                                                                                                                |
+| PNG Support        | <span class="type">bool</span> value. **`TRUE`** if *PNG* support is included.                                                                                                                                                                                 |
+| WBMP Support       | <span class="type">bool</span> value. **`TRUE`** if *WBMP* support is included.                                                                                                                                                                                |
+| XBM Support        | <span class="type">bool</span> value. **`TRUE`** if *XBM* support is included.                                                                                                                                                                                 |
+| WebP Support       | <span class="type">bool</span> value. **`TRUE`** if *WebP* support is included.                                                                                                                                                                                |
 
 ### Examples
 
@@ -506,7 +506,8 @@ optional clipping area
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imageaffine</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">array</span> `$affine`</span> \[,
@@ -541,7 +542,8 @@ Concatenate two affine transformation matrices
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imageaffinematrixconcat</span> ( <span
 class="methodparam"><span class="type">array</span> `$m1`</span> , <span
 class="methodparam"><span class="type">array</span> `$m2`</span> )
@@ -603,7 +605,8 @@ Get an affine transformation matrix
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">imageaffinematrixget</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">mixed</span>
@@ -1355,7 +1358,8 @@ Get the index of the color of a pixel
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">imagecolorat</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">int</span> `$x`</span> , <span
@@ -3981,7 +3985,8 @@ Crop an image to the given rectangle
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagecrop</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">array</span> `$rect`</span> )
@@ -4033,7 +4038,8 @@ Crop an image automatically using one of the available modes
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagecropauto</span> ( <span
 class="methodparam"><span class="type">resource</span> `$image`</span>
 \[, <span class="methodparam"><span class="type">int</span> `$mode`<span
@@ -7247,7 +7253,8 @@ Rotate an image with a given angle
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagerotate</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">float</span> `$angle`</span> ,
@@ -7396,7 +7403,8 @@ Scale an image using the given new width and height
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">imagescale</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">int</span> `$new_width`</span>

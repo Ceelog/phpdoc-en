@@ -14,9 +14,8 @@ at
 Before utilizing these tables, it's important to understand types and
 their meanings. For example, *"42"* is a <span
 class="type">string</span> while *42* is an <span
-class="type">integer</span>. **`FALSE`** is a <span
-class="type">boolean</span> while *"false"* is a <span
-class="type">string</span>.
+class="type">int</span>. **`FALSE`** is a <span class="type">bool</span>
+while *"false"* is a <span class="type">string</span>.
 
 > **Note**:
 >
@@ -40,26 +39,26 @@ class="type">string</span>.
 > Examples of operations that produce **`NAN`** include *sqrt(-1)*,
 > *asin(2)*, and *acosh(0)*.
 
-| Expression              | <span class="function">gettype</span> | <span class="function">empty</span> | <span class="function">is\_null</span> | <span class="function">isset</span> | <span class="type">boolean</span> : *if($x)* |
-|-------------------------|---------------------------------------|-------------------------------------|----------------------------------------|-------------------------------------|----------------------------------------------|
-| *$x = "";*              | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = null;*            | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| *var $x;*               | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| `$x` is undefined       | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                                  |
-| *$x = array();*         | <span class="type">array</span>       | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = array('a', 'b');* | <span class="type">array</span>       | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = false;*           | <span class="type">boolean</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = true;*            | <span class="type">boolean</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 1;*               | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 42;*              | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = 0;*               | <span class="type">integer</span>     | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = -1;*              | <span class="type">integer</span>     | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "1";*             | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "0";*             | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                                  |
-| *$x = "-1";*            | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "php";*           | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "true";*          | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
-| *$x = "false";*         | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                   |
+| Expression              | <span class="function">gettype</span> | <span class="function">empty</span> | <span class="function">is\_null</span> | <span class="function">isset</span> | <span class="type">bool</span> : *if($x)* |
+|-------------------------|---------------------------------------|-------------------------------------|----------------------------------------|-------------------------------------|-------------------------------------------|
+| *$x = "";*              | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                               |
+| *$x = null;*            | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                               |
+| *var $x;*               | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                               |
+| `$x` is undefined       | <span class="type">NULL</span>        | **`TRUE`**                          | **`TRUE`**                             | **`FALSE`**                         | **`FALSE`**                               |
+| *$x = array();*         | <span class="type">array</span>       | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                               |
+| *$x = array('a', 'b');* | <span class="type">array</span>       | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = false;*           | <span class="type">bool</span>        | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                               |
+| *$x = true;*            | <span class="type">bool</span>        | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = 1;*               | <span class="type">int</span>         | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = 42;*              | <span class="type">int</span>         | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = 0;*               | <span class="type">int</span>         | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                               |
+| *$x = -1;*              | <span class="type">int</span>         | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = "1";*             | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = "0";*             | <span class="type">string</span>      | **`TRUE`**                          | **`FALSE`**                            | **`TRUE`**                          | **`FALSE`**                               |
+| *$x = "-1";*            | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = "php";*           | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = "true";*          | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
+| *$x = "false";*         | <span class="type">string</span>      | **`FALSE`**                         | **`FALSE`**                            | **`TRUE`**                          | **`TRUE`**                                |
 
 |             | **`TRUE`**  | **`FALSE`** | *1*         | *0*         | *-1*        | *"1"*       | *"0"*       | *"-1"*      | **`NULL`**  | *array()*   | *"php"*     | *""*        |
 |-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|-------------|

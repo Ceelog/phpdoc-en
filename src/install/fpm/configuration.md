@@ -18,12 +18,12 @@ sent to syslogd instead of being written in a local file.
 Error log level. Possible values: alert, error, warning, notice, debug.
 Default value: notice.
 
-`log_limit` <span class="type">integer</span>  
+`log_limit` <span class="type">int</span>  
 Log limit for the logged lines which allows to log messages longer than
 1024 characters without wrapping. Default value: 1024. Available as of
 PHP 7.3.0.
 
-`log_buffering` <span class="type">boolean</span>  
+`log_buffering` <span class="type">bool</span>  
 Experimental logging without extra buffering. Default value: yes.
 Available as of PHP 7.3.0.
 
@@ -63,7 +63,7 @@ Specify the nice(2) priority to apply to the master process (only if
 set). The value can vary from -19 (highest priority) to 20 (lower
 priority). Default value: not set.
 
-`daemonize` <span class="type">boolean</span>  
+`daemonize` <span class="type">bool</span>  
 Send FPM to background. Set to 'no' to keep FPM in foreground for
 debugging. Default value: yes.
 
@@ -204,7 +204,7 @@ Specify the nice(2) priority to apply to the worker process (only if
 set). The value can vary from -19 (highest priority) to 20 (lower
 priority). Default value: not set.
 
-`process.dumpable` <span class="type">boolean</span>  
+`process.dumpable` <span class="type">bool</span>  
 Set the process dumpable flag (PR\_SET\_DUMPABLE prctl) even if the
 process user or group is different than the master process user. It
 allows to create process core dump and ptrace the process for the pool
@@ -247,17 +247,17 @@ absolute path. When this value is not set, chroot is not used.
 Chdir to this directory at the start. This value must be an absolute
 path. Default value: current directory or / when chroot.
 
-`catch_workers_output` <span class="type">boolean</span>  
+`catch_workers_output` <span class="type">bool</span>  
 Redirect worker stdout and stderr into main error log. If not set,
 stdout and stderr will be redirected to /dev/null according to FastCGI
 specs. Default value: no.
 
-`decorate_workers_output` <span class="type">boolean</span>  
+`decorate_workers_output` <span class="type">bool</span>  
 Enable the output decoration for workers output when
 <a href="/install/fpm/configuration.html#catch-workers-output" class="link">catch_workers_output</a>
 is enabled. Default value: yes. Available as of PHP 7.3.0.
 
-`clear_env` <span class="type">boolean</span>  
+`clear_env` <span class="type">bool</span>  
 Clear environment in FPM workers. Prevents arbitrary environment
 variables from reaching FPM worker processes by clearing the environment
 in workers before env vars specified in this pool configuration are

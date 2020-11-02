@@ -13,17 +13,17 @@ Context options for *ssl://* and *tls://* transports.
 Peer name to be used. If this value is not set, then the name is guessed
 based on the hostname used when opening the stream.
 
-`verify_peer` <span class="type">boolean</span>  
+`verify_peer` <span class="type">bool</span>  
 Require verification of SSL certificate used.
 
 Defaults to **`TRUE`**.
 
-`verify_peer_name` <span class="type">boolean</span>  
+`verify_peer_name` <span class="type">bool</span>  
 Require verification of peer name.
 
 Defaults to **`TRUE`**.
 
-`allow_self_signed` <span class="type">boolean</span>  
+`allow_self_signed` <span class="type">bool</span>  
 Allow self-signed certificates. Requires
 <a href="/context/ssl.html#context.ssl.verify-peer" class="link"><code class="parameter">verify_peer</code></a>.
 
@@ -52,12 +52,7 @@ for certificate (*local\_cert*) and private key.
 `passphrase` <span class="type">string</span>  
 Passphrase with which your *local\_cert* file was encoded.
 
-`CN_match` <span class="type">string</span>  
-Common Name we are expecting. PHP will perform limited wildcard
-matching. If the Common Name does not match this, the connection attempt
-will fail.
-
-`verify_depth` <span class="type">integer</span>  
+`verify_depth` <span class="type">int</span>  
 Abort if the certificate chain is too deep.
 
 Defaults to no verification.
@@ -69,27 +64,19 @@ described in
 
 Defaults to *DEFAULT*.
 
-`capture_peer_cert` <span class="type">boolean</span>  
+`capture_peer_cert` <span class="type">bool</span>  
 If set to **`TRUE`** a *peer\_certificate* context option will be
 created containing the peer certificate.
 
-`capture_peer_cert_chain` <span class="type">boolean</span>  
+`capture_peer_cert_chain` <span class="type">bool</span>  
 If set to **`TRUE`** a *peer\_certificate\_chain* context option will be
 created containing the certificate chain.
 
-`SNI_enabled` <span class="type">boolean</span>  
+`SNI_enabled` <span class="type">bool</span>  
 If set to **`TRUE`** server name indication will be enabled. Enabling
 SNI allows multiple certificates on the same IP address.
 
-`SNI_server_name` <span class="type">string</span>  
-If set, then this value will be used as server name for server name
-indication. If this value is not set, then the server name is guessed
-based on the hostname used when opening the stream.
-
-> **Note**: <span class="simpara"> This option is deprecated, in favour
-> of `peer_name`, as of PHP 5.6.0. </span>
-
-`disable_compression` <span class="type">boolean</span>  
+`disable_compression` <span class="type">bool</span>  
 If set, disable TLS compression. This can help mitigate the CRIME attack
 vector.
 
@@ -105,7 +92,7 @@ When an <span class="type">array</span> is used, the keys indicate the
 hashing algorithm name and each corresponding value is the expected
 digest.
 
-`security_level` <span class="type">integer</span>  
+`security_level` <span class="type">int</span>  
 Sets the security level. If not specified the library default security
 level is used. The security levels are described in
 <a href="https://www.openssl.org/docs/man1.1.0/man3/SSL_CTX_get_security_level.html" class="link external">» SSL_CTX_get_security_level(3)</a>.

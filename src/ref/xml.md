@@ -567,7 +567,8 @@ Create an XML parser with namespace support
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">xml\_parser\_create\_ns</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -608,7 +609,8 @@ Create an XML parser
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">xml\_parser\_create</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 \] )

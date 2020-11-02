@@ -5,22 +5,22 @@ The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
-**`YAML_ANY_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_ANY_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAML_PLAIN_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_PLAIN_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAML_SINGLE_QUOTED_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_SINGLE_QUOTED_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAML_DOUBLE_QUOTED_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_DOUBLE_QUOTED_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAML_LITERAL_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_LITERAL_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAML_FOLDED_SCALAR_STYLE`** (<span class="type">integer</span>)  
+**`YAML_FOLDED_SCALAR_STYLE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 <!-- -->
@@ -54,30 +54,30 @@ dynamically loaded at runtime.
 
 <!-- -->
 
-**`YAML_ANY_ENCODING`** (<span class="type">integer</span>)  
+**`YAML_ANY_ENCODING`** (<span class="type">int</span>)  
 <span class="simpara"> Let the emitter choose an encoding. </span>
 
-**`YAML_UTF8_ENCODING`** (<span class="type">integer</span>)  
+**`YAML_UTF8_ENCODING`** (<span class="type">int</span>)  
 <span class="simpara"> Encode as UTF8. </span>
 
-**`YAML_UTF16LE_ENCODING`** (<span class="type">integer</span>)  
+**`YAML_UTF16LE_ENCODING`** (<span class="type">int</span>)  
 <span class="simpara"> Encode as UTF16LE. </span>
 
-**`YAML_UTF16BE_ENCODING`** (<span class="type">integer</span>)  
+**`YAML_UTF16BE_ENCODING`** (<span class="type">int</span>)  
 <span class="simpara"> Encode as UTF16BE. </span>
 
 <!-- -->
 
-**`YAML_ANY_BREAK`** (<span class="type">integer</span>)  
+**`YAML_ANY_BREAK`** (<span class="type">int</span>)  
 <span class="simpara"> Let emitter choose linebreak character. </span>
 
-**`YAML_CR_BREAK`** (<span class="type">integer</span>)  
+**`YAML_CR_BREAK`** (<span class="type">int</span>)  
 <span class="simpara"> Use *\\r* as break character (Mac style). </span>
 
-**`YAML_LN_BREAK`** (<span class="type">integer</span>)  
+**`YAML_LN_BREAK`** (<span class="type">int</span>)  
 <span class="simpara"> Use *\\n* as break character (Unix style).
 </span>
 
-**`YAML_CRLN_BREAK`** (<span class="type">integer</span>)  
+**`YAML_CRLN_BREAK`** (<span class="type">int</span>)  
 <span class="simpara"> Use *\\r\\n* as break character (DOS style).
 </span>

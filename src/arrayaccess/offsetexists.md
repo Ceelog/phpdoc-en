@@ -34,8 +34,8 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 > **Note**:
 >
-> The return value will be casted to <span class="type">boolean</span>
-> if non-boolean was returned.
+> The return value will be casted to <span class="type">bool</span> if
+> non-boolean was returned.
 
 ### Examples
 

@@ -43,7 +43,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`trader.real_precision` <span class="type">integer</span>  
+`trader.real_precision` <span class="type">int</span>  
 All the values in the returned arrays will be rounded to this precision.
 However the calculations inside TA-Lib happen with unrounded values.
 

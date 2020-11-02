@@ -42,7 +42,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`memtrack.enabled` <span class="type">boolean</span>  
+`memtrack.enabled` <span class="type">bool</span>  
 Disables or enables the extension. Default value is 0, i.e. disabled.
 
 `memtrack.soft_limit` <span class="type">int</span>  

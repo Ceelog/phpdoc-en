@@ -151,13 +151,13 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`msql.allow_persistent` <span class="type">boolean</span>  
+`msql.allow_persistent` <span class="type">bool</span>  
 Whether to allow persistent mSQL connections.
 
-`msql.max_persistent` <span class="type">integer</span>  
+`msql.max_persistent` <span class="type">int</span>  
 The maximum number of persistent mSQL connections per process.
 
-`msql.max_links` <span class="type">integer</span>  
+`msql.max_links` <span class="type">int</span>  
 The maximum number of mSQL connections per process, including persistent
 connections.
 
@@ -175,13 +175,13 @@ The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
-**`MSQL_ASSOC`** (<span class="type">integer</span>)  
+**`MSQL_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MSQL_NUM`** (<span class="type">integer</span>)  
+**`MSQL_NUM`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MSQL_BOTH`** (<span class="type">integer</span>)  
+**`MSQL_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Examples
@@ -867,7 +867,8 @@ Get the name of the specified field in a result
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">msql\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -936,7 +937,8 @@ Get table name for field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">msql\_field\_table</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>

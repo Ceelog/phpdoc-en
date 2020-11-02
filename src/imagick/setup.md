@@ -62,13 +62,13 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`imagick.locale_fix` <span class="type">boolean</span>  
+`imagick.locale_fix` <span class="type">bool</span>  
 Fixes a drawing bug with locales that use '*,*' as float separators.
 
-`imagick.progress_monitor` <span class="type">boolean</span>  
+`imagick.progress_monitor` <span class="type">bool</span>  
 Used to enable the image progress monitor.
 
-`imagick.skip_version_check` <span class="type">boolean</span>  
+`imagick.skip_version_check` <span class="type">bool</span>  
 When Imagick is loaded, it checks the version number of ImageMagick that
 it was compiled against, with the version number that is currently being
 used and will give a warning if they don't match. This warning can be

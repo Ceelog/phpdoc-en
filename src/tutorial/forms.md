@@ -39,8 +39,8 @@ are special in html are properly encoded so people can't inject HTML
 tags or Javascript into your page. For the age field, since we know it
 is a number, we can just
 <a href="/language/types/type-juggling.html#language.types.typecasting" class="link">convert</a>
-it to an <span class="type">integer</span> which will automatically get
-rid of any stray characters. You can also have PHP do this for you
+it to an <span class="type">int</span> which will automatically get rid
+of any stray characters. You can also have PHP do this for you
 automatically by using the
 <a href="/ref/filter.html" class="link">filter</a> extension. The
 `$_POST['name']` and `$_POST['age']` variables are automatically set for

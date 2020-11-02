@@ -418,7 +418,8 @@ Decode a uuencoded string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">convert\_uudecode</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -463,7 +464,8 @@ Uuencode a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">convert\_uuencode</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -880,9 +882,9 @@ Output one or more strings
 ### Description
 
 <span class="type">void</span> <span class="methodname">echo</span> (
-<span class="methodparam"><span class="type">string</span>
-`$arg1`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+<span class="methodparam"><span class="type">string</span> `$arg`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$args`</span> )
 
 Outputs all parameters. No additional newline is appended.
 
@@ -908,10 +910,10 @@ list and doesn't have a return value.
 
 ### Parameters
 
-`arg1`  
+`arg`  
 The parameter to output.
 
-`...`  
+`args`  
 
 ### Return Values
 
@@ -1140,8 +1142,8 @@ Write a formatted string to a stream
 <span class="type">int</span> <span class="methodname">fprintf</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
-class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">string</span> `$format`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Write a string produced according to `format` to the stream resource
 specified by `handle`.
@@ -1293,7 +1295,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`values`  
 
 ### Return Values
 
@@ -1554,7 +1556,8 @@ Decodes a hexadecimally encoded binary string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">hex2bin</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">hex2bin</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$data`</span> )
 
@@ -2754,7 +2757,8 @@ Calculate the metaphone key of a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">metaphone</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$phonemes`<span
@@ -3524,8 +3528,8 @@ Output a formatted string
 
 <span class="type">int</span> <span class="methodname">printf</span> (
 <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$format`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 Produces output according to `format`.
 
@@ -3672,7 +3676,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`values`  
 
 ### Return Values
 
@@ -3974,9 +3978,9 @@ Set locale information
 <span class="type">string</span> <span
 class="methodname">setlocale</span> ( <span class="methodparam"><span
 class="type">int</span> `$category`</span> , <span
-class="methodparam"><span class="type">string</span> `$locale`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$...`</span> \] )
+class="methodparam"><span class="type">string</span> `$locale`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$locales`</span> )
 
 <span class="type">string</span> <span
 class="methodname">setlocale</span> ( <span class="methodparam"><span
@@ -4031,7 +4035,7 @@ success. This is useful if a locale is known under different names on
 different systems or for providing a fallback for a possibly not
 available locale.
 
-`...`  
+`locales`  
 (Optional string or array parameters to try as locale settings until
 success.)
 
@@ -4300,7 +4304,8 @@ Calculate the soundex key of a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">soundex</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">soundex</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$str`</span> )
 
@@ -4354,10 +4359,11 @@ Return a formatted string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">sprintf</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">sprintf</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$format`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 Returns a string produced according to the formatting string `format`.
 
@@ -4504,7 +4510,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`values`  
 
 ### Return Values
 
@@ -4663,8 +4669,8 @@ Parses input from a string according to a format
 <span class="type">mixed</span> <span class="methodname">sscanf</span> (
 <span class="methodparam"><span class="type">string</span> `$str`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `&$...`</span> \] )
+`$format`</span> , <span class="methodparam"><span
+class="type">mixed</span> `&$vars`</span> )
 
 The function <span class="function">sscanf</span> is the input analog of
 <span class="function">printf</span>. <span
@@ -4693,7 +4699,7 @@ differences:
 -   *n* stands for number of characters processed so far.
 -   *s* stops reading at any whitespace character.
 
-`...`  
+`vars`  
 Optionally pass in variables by reference that will contain the parsed
 values.
 
@@ -5905,10 +5911,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
-| 7.1.0   | Support for negative `offset`s has been added.                                |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| 7.1.0   | Support for negative `offset`s has been added.                            |
 
 ### Examples
 
@@ -6086,9 +6092,9 @@ Returns the matched substring. If `needle` is not found, returns
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -6516,10 +6522,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
-| 7.1.0   | Support for negative `offset`s has been added.                                |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| 7.1.0   | Support for negative `offset`s has been added.                            |
 
 ### Examples
 
@@ -6625,9 +6631,9 @@ is not found.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -6755,9 +6761,9 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -6858,9 +6864,9 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -7088,9 +7094,9 @@ Returns the portion of string, or **`FALSE`** if `needle` is not found.
 
 ### Changelog
 
-| Version | Description                                                                   |
-|---------|-------------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">integer</span> as `needle` has been deprecated. |
+| Version | Description                                                               |
+|---------|---------------------------------------------------------------------------|
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
 
 ### Examples
 
@@ -7549,7 +7555,7 @@ than the `haystack` length. A negative length counts from the end of
 
 ### Return Values
 
-This function returns an <span class="type">integer</span>.
+This function returns an <span class="type">int</span>.
 
 ### Changelog
 
@@ -7716,7 +7722,8 @@ Return part of a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">substr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">substr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$string`</span> , <span class="methodparam"><span
 class="type">int</span> `$start`</span> \[, <span
@@ -8551,7 +8558,8 @@ Return a formatted string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">vsprintf</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> , <span
 class="methodparam"><span class="type">array</span> `$args`</span> )

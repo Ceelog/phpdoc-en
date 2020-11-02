@@ -84,8 +84,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">integer</span> indicating the timer
-frequency.
+Returns <span class="type">int</span> indicating the timer frequency.
 
 HRTime\\PerformanceCounter::getTicks
 ====================================
@@ -107,7 +106,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">integer</span> indicating the ticks count.
+Returns <span class="type">int</span> indicating the ticks count.
 
 HRTime\\PerformanceCounter::getTicksSince
 =========================================
@@ -131,7 +130,7 @@ Starting ticks value.
 
 ### Return Values
 
-Returns <span class="type">integer</span> indicating the ticks count.
+Returns <span class="type">int</span> indicating the ticks count.
 
 Introduction
 ------------
@@ -214,7 +213,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">integer</span> indicating elapsed ticks.
+Returns <span class="type">int</span> indicating elapsed ticks.
 
 HRTime\\StopWatch::getElapsedTime
 =================================
@@ -259,7 +258,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">integer</span> indicating elapsed ticks.
+Returns <span class="type">int</span> indicating elapsed ticks.
 
 HRTime\\StopWatch::getLastElapsedTime
 =====================================
@@ -304,7 +303,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">boolean</span> indicating whetehr the
+Returns <span class="type">bool</span> indicating whetehr the
 measurement is running.
 
 HRTime\\StopWatch::start
@@ -363,16 +362,16 @@ Class synopsis
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `HRTime\Unit::SECOND` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `HRTime\Unit::MILLISECOND` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `HRTime\Unit::MICROSECOND` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `HRTime\Unit::NANOSECOND` <span class="initializer"> = 3</span> ;
 
 /\* Methods \*/

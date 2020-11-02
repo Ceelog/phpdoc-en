@@ -10,22 +10,22 @@ engine, and SAPI modules.
 <span class="simpara"> The current PHP version as a string in
 "major.minor.release\[extra\]" notation. </span>
 
-**`PHP_MAJOR_VERSION`** (<span class="type">integer</span>)  
+**`PHP_MAJOR_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> The current PHP "major" version as an integer
 (e.g., int(5) from version "5.2.7-extra"). Available since PHP 5.2.7.
 </span>
 
-**`PHP_MINOR_VERSION`** (<span class="type">integer</span>)  
+**`PHP_MINOR_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> The current PHP "minor" version as an integer
 (e.g., int(2) from version "5.2.7-extra"). Available since PHP 5.2.7.
 </span>
 
-**`PHP_RELEASE_VERSION`** (<span class="type">integer</span>)  
+**`PHP_RELEASE_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> The current PHP "release" version as an integer
 (e.g., int(7) from version "5.2.7-extra"). Available since PHP 5.2.7.
 </span>
 
-**`PHP_VERSION_ID`** (<span class="type">integer</span>)  
+**`PHP_VERSION_ID`** (<span class="type">int</span>)  
 <span class="simpara"> The current PHP version as an integer, useful for
 version comparisons (e.g., int(50207) from version "5.2.7-extra").
 Available since PHP 5.2.7. </span>
@@ -36,13 +36,13 @@ Available since PHP 5.2.7. </span>
 vendors to indicate a package version. Available since PHP 5.2.7.
 </span>
 
-**`PHP_ZTS`** (<span class="type">integer</span>)  
+**`PHP_ZTS`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.2.7. </span>
 
-**`PHP_DEBUG`** (<span class="type">integer</span>)  
+**`PHP_DEBUG`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.2.7. </span>
 
-**`PHP_MAXPATHLEN`** (<span class="type">integer</span>)  
+**`PHP_MAXPATHLEN`** (<span class="type">int</span>)  
 <span class="simpara"> The maximum length of filenames (including path)
 supported by this build of PHP. Available since PHP 5.3.0. </span>
 
@@ -62,23 +62,23 @@ One of *'Windows'*, *'BSD'*, *'Darwin'*, *'Solaris'*, *'Linux'* or
 <span class="simpara"> The correct 'End Of Line' symbol for this
 platform. Available since PHP 5.0.2 </span>
 
-**`PHP_INT_MAX`** (<span class="type">integer</span>)  
+**`PHP_INT_MAX`** (<span class="type">int</span>)  
 <span class="simpara"> The largest integer supported in this build of
 PHP. Usually int(2147483647) in 32 bit systems and
 int(9223372036854775807) in 64 bit systems. Available since PHP 5.0.5
 </span>
 
-**`PHP_INT_MIN`** (<span class="type">integer</span>)  
+**`PHP_INT_MIN`** (<span class="type">int</span>)  
 <span class="simpara"> The smallest integer supported in this build of
 PHP. Usually int(-2147483648) in 32 bit systems and
 int(-9223372036854775808) in 64 bit systems. Available since PHP 7.0.0.
 Usually, PHP\_INT\_MIN === \~PHP\_INT\_MAX. </span>
 
-**`PHP_INT_SIZE`** (<span class="type">integer</span>)  
+**`PHP_INT_SIZE`** (<span class="type">int</span>)  
 <span class="simpara"> The size of an integer in bytes in this build of
 PHP. Available since PHP 5.0.5 </span>
 
-**`PHP_FLOAT_DIG`** (<span class="type">integer</span>)  
+**`PHP_FLOAT_DIG`** (<span class="type">int</span>)  
 <span class="simpara"> Number of decimal digits that can be rounded into
 a float and back without precision loss. Available as of PHP 7.2.0.
 </span>
@@ -150,95 +150,95 @@ as "so" (most Unixes) or "dll" (Windows). </span>
 <span class="simpara"> The maximum number of file descriptors for select
 system calls. Available as of PHP 7.1.0. </span>
 
-**`E_ERROR`** (<span class="type">integer</span>)  
+**`E_ERROR`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_WARNING`** (<span class="type">integer</span>)  
+**`E_WARNING`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_PARSE`** (<span class="type">integer</span>)  
+**`E_PARSE`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_NOTICE`** (<span class="type">integer</span>)  
+**`E_NOTICE`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_CORE_ERROR`** (<span class="type">integer</span>)  
+**`E_CORE_ERROR`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_CORE_WARNING`** (<span class="type">integer</span>)  
+**`E_CORE_WARNING`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_COMPILE_ERROR`** (<span class="type">integer</span>)  
+**`E_COMPILE_ERROR`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_COMPILE_WARNING`** (<span class="type">integer</span>)  
+**`E_COMPILE_WARNING`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_USER_ERROR`** (<span class="type">integer</span>)  
+**`E_USER_ERROR`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_USER_WARNING`** (<span class="type">integer</span>)  
+**`E_USER_WARNING`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_USER_NOTICE`** (<span class="type">integer</span>)  
+**`E_USER_NOTICE`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_RECOVERABLE_ERROR`** (<span class="type">integer</span>)  
+**`E_RECOVERABLE_ERROR`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>.
 Available since PHP 5.2.0 </span>
 
-**`E_DEPRECATED`** (<span class="type">integer</span>)  
+**`E_DEPRECATED`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>.
 Available since PHP 5.3.0 </span>
 
-**`E_USER_DEPRECATED`** (<span class="type">integer</span>)  
+**`E_USER_DEPRECATED`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>.
 Available since PHP 5.3.0 </span>
 
-**`E_ALL`** (<span class="type">integer</span>)  
+**`E_ALL`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`E_STRICT`** (<span class="type">integer</span>)  
+**`E_STRICT`** (<span class="type">int</span>)  
 <span class="simpara">
 <a href="/errorfunc/constants.html" class="link">Error reporting constant</a>
 </span>
 
-**`__COMPILER_HALT_OFFSET__`** (<span class="type">integer</span>)  
+**`__COMPILER_HALT_OFFSET__`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.1.0 </span>
 
-**`TRUE`** (<span class="type">boolean</span>)  
+**`TRUE`** (<span class="type">bool</span>)  
 <span class="simpara"> See
 <a href="/language/types/boolean.html" class="link">Booleans</a>.
 </span>
 
-**`FALSE`** (<span class="type">boolean</span>)  
+**`FALSE`** (<span class="type">bool</span>)  
 <span class="simpara"> See
 <a href="/language/types/boolean.html" class="link">Booleans</a>.
 </span>
@@ -247,11 +247,11 @@ Available since PHP 5.3.0 </span>
 <span class="simpara"> See
 <a href="/language/types/null.html" class="link">Null</a>. </span>
 
-**`PHP_WINDOWS_EVENT_CTRL_C`** (<span class="type">integer</span>)  
+**`PHP_WINDOWS_EVENT_CTRL_C`** (<span class="type">int</span>)  
 <span class="simpara"> A Windows *CTRL+C* event. Available as of PHP
 7.4.0 (Windows only). </span>
 
-**`PHP_WINDOWS_EVENT_CTRL_BREAK`** (<span class="type">integer</span>)  
+**`PHP_WINDOWS_EVENT_CTRL_BREAK`** (<span class="type">int</span>)  
 <span class="simpara"> A Windows *CTRL+BREAK* event. Available as of PHP
 7.4.0 (Windows only). </span>
 

@@ -35,7 +35,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`define_syslog_variables` <span class="type">boolean</span>  
+`define_syslog_variables` <span class="type">bool</span>  
 Whether or not to define the various syslog variables (e.g. $LOG\_PID,
 $LOG\_CRON, etc.). Turning it off is a good idea performance-wise. At
 runtime, you can define these variables by calling <span

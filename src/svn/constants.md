@@ -5,7 +5,7 @@ The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
-**`SVN_REVISION_HEAD`** (<span class="type">integer</span>)  
+**`SVN_REVISION_HEAD`** (<span class="type">int</span>)  
 <span class="simpara"> Magic number (-1) specifying the HEAD revision
 </span>
 

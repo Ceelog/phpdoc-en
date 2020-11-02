@@ -37,13 +37,13 @@ for **`GET`** or **`HEAD`** requests.
 URI specifying address of proxy server. (e.g.
 *tcp://proxy.example.com:5100*).
 
-`max_redirects` <span class="type">integer</span>  
+`max_redirects` <span class="type">int</span>  
 The max number of redirects to follow. Value *1* or less means that no
 redirects are followed.
 
 Defaults to *20*.
 
-`curl_verify_ssl_host` <span class="type">boolean</span>  
+`curl_verify_ssl_host` <span class="type">bool</span>  
 Verify the host.
 
 Defaults to **`FALSE`**
@@ -52,7 +52,7 @@ Defaults to **`FALSE`**
 >
 > This option is available for both the http and ftp protocol wrappers.
 
-`curl_verify_ssl_peer` <span class="type">boolean</span>  
+`curl_verify_ssl_peer` <span class="type">bool</span>  
 Require verification of SSL certificate used.
 
 Defaults to **`FALSE`**

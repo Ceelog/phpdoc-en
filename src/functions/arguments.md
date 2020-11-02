@@ -160,9 +160,9 @@ if the default value of the parameter is set to **`NULL`**.
 | *self*                             | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. This can only be used on class and instance methods. |                     |
 | <span class="type">array</span>    | The parameter must be an <span class="type">array</span>.                                                                                                                                                      |                     |
 | <span class="type">callable</span> | The parameter must be a valid <span class="type">callable</span>.                                                                                                                                              |                     |
-| <span class="type">bool</span>     | The parameter must be a <span class="type">boolean</span> value.                                                                                                                                               |                     |
+| <span class="type">bool</span>     | The parameter must be a <span class="type">bool</span> value.                                                                                                                                                  |                     |
 | <span class="type">float</span>    | The parameter must be a <span class="type">float</span>ing point number.                                                                                                                                       |                     |
-| <span class="type">int</span>      | The parameter must be an <span class="type">integer</span>.                                                                                                                                                    |                     |
+| <span class="type">int</span>      | The parameter must be an <span class="type">int</span>.                                                                                                                                                        |                     |
 | <span class="type">string</span>   | The parameter must be a <span class="type">string</span>.                                                                                                                                                      |                     |
 | *iterable*                         | The parameter must be either an <span class="type">array</span> or an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>.                 | PHP 7.1.0           |
 | *object*                           | The parameter must be an <span class="type">object</span>.                                                                                                                                                     | PHP 7.2.0           |
@@ -301,17 +301,17 @@ The above example will output:
 
 By default, PHP will coerce values of the wrong type into the expected
 scalar type if possible. For example, a function that is given an <span
-class="type">integer</span> for a parameter that expects a <span
+class="type">int</span> for a parameter that expects a <span
 class="type">string</span> will get a variable of type <span
 class="type">string</span>.
 
 It is possible to enable strict mode on a per-file basis. In strict
 mode, only a variable of exact type of the type declaration will be
 accepted, or a <span class="classname">TypeError</span> will be thrown.
-The only exception to this rule is that an <span
-class="type">integer</span> may be given to a function expecting a <span
-class="type">float</span>. Function calls from within internal functions
-will not be affected by the *strict\_types* declaration.
+The only exception to this rule is that an <span class="type">int</span>
+may be given to a function expecting a <span class="type">float</span>.
+Function calls from within internal functions will not be affected by
+the *strict\_types* declaration.
 
 To enable strict mode, the
 <a href="/control-structures/declare.html" class="link"><em>declare</em></a>

@@ -48,35 +48,35 @@ for emergency repairs. </span>
 **`SEASLOG_EMERGENCY`** (<span class="type">string</span>)  
 <span class="simpara"> "EMERGENCY" - System is unusable. </span>
 
-**`SEASLOG_DETAIL_ORDER_ASC`** (<span class="type">integer</span>)  
+**`SEASLOG_DETAIL_ORDER_ASC`** (<span class="type">int</span>)  
 <span class="simpara"> 1 </span>
 
-**`SEASLOG_DETAIL_ORDER_DESC`** (<span class="type">integer</span>)  
+**`SEASLOG_DETAIL_ORDER_DESC`** (<span class="type">int</span>)  
 <span class="simpara"> 2 </span>
 
-**`SEASLOG_APPENDER_FILE`** (<span class="type">integer</span>)  
+**`SEASLOG_APPENDER_FILE`** (<span class="type">int</span>)  
 <span class="simpara"> 1 </span>
 
-**`SEASLOG_APPENDER_TCP`** (<span class="type">integer</span>)  
+**`SEASLOG_APPENDER_TCP`** (<span class="type">int</span>)  
 <span class="simpara"> 2 </span>
 
-**`SEASLOG_APPENDER_UDP`** (<span class="type">integer</span>)  
+**`SEASLOG_APPENDER_UDP`** (<span class="type">int</span>)  
 <span class="simpara"> 3 </span>
 
-**`SEASLOG_CLOSE_LOGGER_STREAM_MOD_ALL`** (<span class="type">integer</span>)  
+**`SEASLOG_CLOSE_LOGGER_STREAM_MOD_ALL`** (<span class="type">int</span>)  
 <span class="simpara"> 1 </span>
 
-**`SEASLOG_CLOSE_LOGGER_STREAM_MOD_ASSIGN`** (<span class="type">integer</span>)  
+**`SEASLOG_CLOSE_LOGGER_STREAM_MOD_ASSIGN`** (<span class="type">int</span>)  
 <span class="simpara"> 2 </span>
 
-**`SEASLOG_REQUEST_VARIABLE_DOMAIN_PORT`** (<span class="type">integer</span>)  
+**`SEASLOG_REQUEST_VARIABLE_DOMAIN_PORT`** (<span class="type">int</span>)  
 <span class="simpara"> 1 </span>
 
-**`SEASLOG_REQUEST_VARIABLE_REQUEST_URI`** (<span class="type">integer</span>)  
+**`SEASLOG_REQUEST_VARIABLE_REQUEST_URI`** (<span class="type">int</span>)  
 <span class="simpara"> 2 </span>
 
-**`SEASLOG_REQUEST_VARIABLE_REQUEST_METHOD`** (<span class="type">integer</span>)  
+**`SEASLOG_REQUEST_VARIABLE_REQUEST_METHOD`** (<span class="type">int</span>)  
 <span class="simpara"> 3 </span>
 
-**`SEASLOG_REQUEST_VARIABLE_CLIENT_IP`** (<span class="type">integer</span>)  
+**`SEASLOG_REQUEST_VARIABLE_CLIENT_IP`** (<span class="type">int</span>)  
 <span class="simpara"> 4 </span>

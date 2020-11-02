@@ -18,7 +18,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the exception code as <span class="type">integer</span> in <span
+Returns the exception code as <span class="type">int</span> in <span
 class="classname">Exception</span> but possibly as other type in <span
 class="classname">Exception</span> descendants (for example as <span
 class="type">string</span> in <span

@@ -57,7 +57,8 @@ Get a specific character
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">mb\_chr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">mb\_chr</span>
 ( <span class="methodparam"><span class="type">int</span> `$cp`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \] )
@@ -329,11 +330,11 @@ class="methodname">mb\_convert\_variables</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$to_encoding`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$from_encoding`</span> , <span
-class="methodparam"><span class="type">mixed</span> `&$vars`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `&$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `&$var`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
-Converts character encoding of variables `vars` in encoding
+Converts character encoding of variables `var` and `vars` in encoding
 `from_encoding` to encoding `to_encoding`.
 
 <span class="function">mb\_convert\_variables</span> join strings in
@@ -353,14 +354,14 @@ comma separated <span class="type">string</span>, it tries to detect
 encoding from `from-coding`. When `from_encoding` is omitted,
 *detect\_order* is used.
 
-`vars`  
-`vars` is the reference to the variable being converted. String, Array
+`var`  
+`var` is the reference to the variable being converted. String, Array
 and Object are accepted. <span
 class="function">mb\_convert\_variables</span> assumes all parameters
 have the same encoding.
 
-`...`  
-Additional `vars`.
+`vars`  
+Additional `var`s.
 
 ### Return Values
 
@@ -862,7 +863,8 @@ Get aliases of a known encoding type
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_encoding\_aliases</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
@@ -1993,10 +1995,11 @@ Get code point of character
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_ord</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">mb\_ord</span>
+( <span class="methodparam"><span class="type">string</span>
+`$str`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$encoding`</span> \] )
 
 **Warning**
 
@@ -2397,7 +2400,8 @@ Split multibyte string using regular expression
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_split</span> ( <span class="methodparam"><span
 class="type">string</span> `$pattern`</span> , <span
 class="methodparam"><span class="type">string</span> `$string`</span>
@@ -2444,7 +2448,8 @@ Given a multibyte string, return an array of its characters
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_str\_split</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -3289,7 +3294,7 @@ class="initializer"> = mb\_substitute\_character()</span></span> \] )
 Specifies a substitution character when input character encoding is
 invalid or character code does not exist in output character encoding.
 Invalid characters may be substituted **`NULL`** (no output), <span
-class="type">string</span> or <span class="type">integer</span> value
+class="type">string</span> or <span class="type">int</span> value
 (Unicode character code value).
 
 This setting affects <span
@@ -3301,8 +3306,8 @@ class="function">mb\_send\_mail</span>.
 ### Parameters
 
 `substchar`  
-Specify the Unicode value as an <span class="type">integer</span>, or as
-one of the following <span class="type">string</span>s:
+Specify the Unicode value as an <span class="type">int</span>, or as one
+of the following <span class="type">string</span>s:
 
 -   <span class="simpara"> *"none"*: no output </span>
 -   <span class="simpara"> *"long"*: Output character code value

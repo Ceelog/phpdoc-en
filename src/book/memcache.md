@@ -99,11 +99,12 @@ class="type">int</span> `$port`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$timeout`</span> \]\]
 )
 
-<span class="type">int</span> <span class="methodname">decrement</span>
-( <span class="methodparam"><span class="type">string</span>
-`$key`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$value`<span class="initializer"> =
-1</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">decrement</span> ( <span class="methodparam"><span
+class="type">string</span> `$key`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$value`<span
+class="initializer"> = 1</span></span> \] )
 
 <span class="type">bool</span> <span class="methodname">delete</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
@@ -131,22 +132,25 @@ class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$port`<span
 class="initializer"> = 11211</span></span> \] )
 
-<span class="type">array</span> <span class="methodname">getStats</span>
-(\[ <span class="methodparam"><span class="type">string</span>
-`$type`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$slabid`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$limit`<span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
+class="methodname">getStats</span> (\[ <span class="methodparam"><span
+class="type">string</span> `$type`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$slabid`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = 100</span></span> \]\]\] )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">getVersion</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">increment</span>
-( <span class="methodparam"><span class="type">string</span>
-`$key`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$value`<span class="initializer"> =
-1</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">increment</span> ( <span class="methodparam"><span
+class="type">string</span> `$key`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$value`<span
+class="initializer"> = 1</span></span> \] )
 
 <span class="type">mixed</span> <span class="methodname">pconnect</span>
 ( <span class="methodparam"><span class="type">string</span>
@@ -544,7 +548,8 @@ Decrement item's value
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">Memcache::decrement</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$value`<span
@@ -959,7 +964,8 @@ Get statistics of the server
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">Memcache::getStats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$slabid`</span>
@@ -1005,7 +1011,8 @@ Return version of the server
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">Memcache::getVersion</span> ( <span
 class="methodparam">void</span> )
 
@@ -1049,7 +1056,8 @@ Increment item's value
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">Memcache::increment</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$value`<span

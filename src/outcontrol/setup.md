@@ -38,7 +38,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`output_buffering` <span class="type">boolean</span>/<span class="type">integer</span>  
+`output_buffering` <span class="type">bool</span>/<span class="type">int</span>  
 You can enable output buffering for all files by setting this directive
 to 'On'. If you wish to limit the size of the buffer to a certain size -
 you can use a maximum number of bytes instead of 'On', as a value for
@@ -64,7 +64,7 @@ handler automatically turns on output buffering.
 > Only built-in functions can be used with this directive. For user
 > defined functions, use <span class="function">ob\_start</span>.
 
-`implicit_flush` <span class="type">boolean</span>  
+`implicit_flush` <span class="type">bool</span>  
 **`FALSE`** by default. Changing this to **`TRUE`** tells PHP to tell
 the output layer to flush itself automatically after every output block.
 This is equivalent to calling the PHP function <span

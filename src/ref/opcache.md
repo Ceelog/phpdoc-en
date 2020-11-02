@@ -69,7 +69,8 @@ Get status information about the cache
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">opcache\_get\_status</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$get_scripts`<span
 class="initializer"> = **`TRUE`**</span></span> \] )

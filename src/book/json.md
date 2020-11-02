@@ -216,7 +216,7 @@ The above example will output:
 
 **Example \#3 <span
 class="methodname">JsonSerializable::jsonSerialize</span> example
-returning an <span class="type">integer</span>**
+returning an <span class="type">int</span>**
 
 ``` php
 <?php

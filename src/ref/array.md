@@ -469,7 +469,7 @@ count as value.
 ### Errors/Exceptions
 
 Throws **`E_WARNING`** for every element which is not <span
-class="type">string</span> or <span class="type">integer</span>.
+class="type">string</span> or <span class="type">int</span>.
 
 ### Examples
 
@@ -508,30 +508,26 @@ Computes the difference of arrays with additional index check
 
 <span class="type">array</span> <span
 class="methodname">array\_diff\_assoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \] )
+`$arrays`</span> )
 
-Compares `array1` against `array2` and returns the difference. Unlike
+Compares `array` against `arrays` and returns the difference. Unlike
 <span class="function">array\_diff</span> the array keys are also used
 in the comparison.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array to compare from
 
-`array2`  
-An array to compare against
-
-`...`  
-More arrays to compare against
+`arrays`  
+Arrays to compare against
 
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the values
-from `array1` that are not present in any of the other arrays.
+from `array` that are not present in any of the other arrays.
 
 ### Examples
 
@@ -612,31 +608,27 @@ Computes the difference of arrays using keys for comparison
 
 <span class="type">array</span> <span
 class="methodname">array\_diff\_key</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \] )
+`$arrays`</span> )
 
-Compares the keys from `array1` against the keys from `array2` and
+Compares the keys from `array` against the keys from `arrays` and
 returns the difference. This function is like <span
 class="function">array\_diff</span> except the comparison is done on the
 keys instead of the values.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array to compare from
 
-`array2`  
-An array to compare against
-
-`...`  
-More arrays to compare against
+`arrays`  
+Arrays to compare against
 
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the entries
-from `array1` whose keys are absent from all of the other arrays.
+from `array` whose keys are absent from all of the other arrays.
 
 ### Examples
 
@@ -718,14 +710,12 @@ performed by a user supplied callback function
 
 <span class="type">array</span> <span
 class="methodname">array\_diff\_uassoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$key_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$key_compare_func`</span> )
 
-Compares `array1` against `array2` and returns the difference. Unlike
+Compares `array` against `arrays` and returns the difference. Unlike
 <span class="function">array\_diff</span> the array keys are used in the
 comparison.
 
@@ -735,14 +725,11 @@ function.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array to compare from
 
-`array2`  
-An array to compare against
-
-`...`  
-More arrays to compare against
+`arrays`  
+Arrays to compare against
 
 `key_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -759,7 +746,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the entries
-from `array1` that are not present in any of the other arrays.
+from `array` that are not present in any of the other arrays.
 
 ### Examples
 
@@ -832,14 +819,12 @@ for comparison
 
 <span class="type">array</span> <span
 class="methodname">array\_diff\_ukey</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$key_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$key_compare_func`</span> )
 
-Compares the keys from `array1` against the keys from `array2` and
+Compares the keys from `array` against the keys from `arrays` and
 returns the difference. This function is like <span
 class="function">array\_diff</span> except the comparison is done on the
 keys instead of the values.
@@ -850,14 +835,11 @@ function.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array to compare from
 
-`array2`  
-An array to compare against
-
-`...`  
-More arrays to compare against
+`arrays`  
+Arrays to compare against
 
 `key_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -874,7 +856,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the entries
-from `array1` that are not present in any of the other arrays.
+from `array` that are not present in any of the other arrays.
 
 ### Examples
 
@@ -940,30 +922,25 @@ Computes the difference of arrays
 
 <span class="type">array</span> <span
 class="methodname">array\_diff</span> ( <span class="methodparam"><span
-class="type">array</span> `$array1`</span> , <span
-class="methodparam"><span class="type">array</span> `$array2`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="type">array</span> `$array`</span> , <span
+class="methodparam"><span class="type">array</span> `$arrays`</span> )
 
-Compares `array1` against one or more other arrays and returns the
-values in `array1` that are not present in any of the other arrays.
+Compares `array` against one or more other arrays and returns the values
+in `array` that are not present in any of the other arrays.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array to compare from
 
-`array2`  
-An array to compare against
-
-`...`  
-More arrays to compare against
+`arrays`  
+Arrays to compare against
 
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the entries
-from `array1` that are not present in any of the other arrays. Keys in
-the `array1` array are preserved.
+from `array` that are not present in any of the other arrays. Keys in
+the `array` array are preserved.
 
 ### Examples
 
@@ -1377,7 +1354,7 @@ class="type">array</span> in flip order, i.e. keys from `array` become
 values and values from `array` become keys.
 
 Note that the values of `array` need to be valid keys, i.e. they need to
-be either <span class="type">integer</span> or <span
+be either <span class="type">int</span> or <span
 class="type">string</span>. A warning will be emitted if a value has the
 wrong type, and the key/value pair in question *will not be included in
 the result*.
@@ -1451,30 +1428,26 @@ Computes the intersection of arrays with additional index check
 
 <span class="type">array</span> <span
 class="methodname">array\_intersect\_assoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \] )
+`$arrays`</span> )
 
 <span class="function">array\_intersect\_assoc</span> returns an array
-containing all the values of `array1` that are present in all the
+containing all the values of `array` that are present in all the
 arguments. Note that the keys are also used in the comparison unlike in
 <span class="function">array\_intersect</span>.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array with master values to check.
 
-`array2`  
-An array to compare values against.
-
-`...`  
-A variable list of arrays to compare.
+`arrays`  
+Arrays to compare values against.
 
 ### Return Values
 
-Returns an associative array containing all the values in `array1` that
+Returns an associative array containing all the values in `array` that
 are present in all of the arguments.
 
 ### Examples
@@ -1526,30 +1499,26 @@ Computes the intersection of arrays using keys for comparison
 
 <span class="type">array</span> <span
 class="methodname">array\_intersect\_key</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \] )
+`$arrays`</span> )
 
 <span class="function">array\_intersect\_key</span> returns an array
-containing all the entries of `array1` which have keys that are present
+containing all the entries of `array` which have keys that are present
 in all the arguments.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array with master keys to check.
 
-`array2`  
-An array to compare keys against.
-
-`...`  
-A variable list of arrays to compare.
+`arrays`  
+Arrays to compare keys against.
 
 ### Return Values
 
-Returns an associative array containing all the entries of `array1`
-which have keys that are present in all arguments.
+Returns an associative array containing all the entries of `array` which
+have keys that are present in all arguments.
 
 ### Examples
 
@@ -1578,7 +1547,7 @@ In our example you see that only the keys *'blue'* and *'green'* are
 present in both arrays and thus returned. Also notice that the values
 for the keys *'blue'* and *'green'* differ between the two arrays. A
 match still occurs because only the keys are checked. The values
-returned are those of `array1`.
+returned are those of `array`.
 
 The two keys from the *key =\> value* pairs are considered equal only if
 *(string) $key1 === (string) $key2* . In other words a strict type check
@@ -1609,28 +1578,23 @@ compares indexes by a callback function
 
 <span class="type">array</span> <span
 class="methodname">array\_intersect\_uassoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$key_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$key_compare_func`</span> )
 
 <span class="function">array\_intersect\_uassoc</span> returns an array
-containing all the values of `array1` that are present in all the
+containing all the values of `array` that are present in all the
 arguments. Note that the keys are used in the comparison unlike in <span
 class="function">array\_intersect</span>.
 
 ### Parameters
 
-`array1`  
+`array`  
 Initial array for comparison of the arrays.
 
-`array2`  
-First array to compare keys against.
-
-`...`  
-Variable list of array arguments to compare values against.
+`arrays`  
+Arrays to compare keys against.
 
 `key_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -1646,7 +1610,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns the values of `array1` whose values exist in all of the
+Returns the values of `array` whose values exist in all of the
 arguments.
 
 ### Examples
@@ -1689,27 +1653,22 @@ keys for comparison
 
 <span class="type">array</span> <span
 class="methodname">array\_intersect\_ukey</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$key_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$key_compare_func`</span> )
 
 <span class="function">array\_intersect\_ukey</span> returns an array
-containing all the values of `array1` which have matching keys that are
+containing all the values of `array` which have matching keys that are
 present in all the arguments.
 
 ### Parameters
 
-`array1`  
+`array`  
 Initial array for comparison of the arrays.
 
-`array2`  
-First array to compare keys against.
-
-`...`  
-Variable list of array arguments to compare keys against.
+`arrays`  
+Arrays to compare keys against.
 
 `key_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -1725,7 +1684,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns the values of `array1` whose keys exist in all the arguments.
+Returns the values of `array` whose keys exist in all the arguments.
 
 ### Examples
 
@@ -1764,7 +1723,7 @@ In our example you see that only the keys *'blue'* and *'green'* are
 present in both arrays and thus returned. Also notice that the values
 for the keys *'blue'* and *'green'* differ between the two arrays. A
 match still occurs because only the keys are checked. The values
-returned are those of `array1`.
+returned are those of `array`.
 
 ### See Also
 
@@ -1790,29 +1749,25 @@ Computes the intersection of arrays
 
 <span class="type">array</span> <span
 class="methodname">array\_intersect</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \] )
+`$arrays`</span> )
 
 <span class="function">array\_intersect</span> returns an array
-containing all the values of `array1` that are present in all the
+containing all the values of `array` that are present in all the
 arguments. Note that keys are preserved.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array with master values to check.
 
-`array2`  
-An array to compare values against.
-
-`...`  
-A variable list of arrays to compare.
+`arrays`  
+Arrays to compare values against.
 
 ### Return Values
 
-Returns an array containing all of the values in `array1` whose values
+Returns an array containing all of the values in `array` whose values
 exist in all of the parameters.
 
 ### Examples
@@ -2132,13 +2087,13 @@ Applies the callback to the elements of the given arrays
 <span class="type">array</span> <span
 class="methodname">array\_map</span> ( <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> , <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `$array`</span> ,
+<span class="methodparam"><span class="type">array</span>
+`$arrays`</span> )
 
 <span class="function">array\_map</span> returns an <span
 class="type">array</span> containing the results of applying the
-`callback` to the corresponding index of `array1` (and `...` if more
+`callback` to the corresponding index of `array` (and `arrays` if more
 arrays are provided) used as arguments for the callback. The number of
 parameters that the `callback` function accepts should match the number
 of arrays passed to <span class="function">array\_map</span>.
@@ -2150,20 +2105,20 @@ A <span class="type">callable</span> to run for each element in each
 array.
 
 **`NULL`** can be passed as a value to `callback` to perform a zip
-operation on multiple arrays. If only `array1` is provided, <span
+operation on multiple arrays. If only `array` is provided, <span
 class="methodname">array\_map</span> will return the input array.
 
-`array1`  
+`array`  
 An array to run through the `callback` function.
 
-`...`  
+`arrays`  
 Supplementary variable list of array arguments to run through the
 `callback` function.
 
 ### Return Values
 
 Returns an array containing the results of applying the `callback`
-function to the corresponding index of `array1` (and `...` if more
+function to the corresponding index of `array` (and `arrays` if more
 arrays are provided) used as arguments for the callback.
 
 The returned array will preserve the keys of the array argument if and
@@ -2352,7 +2307,7 @@ The above example will output:
 
     )
 
-**Example \#5 **`NULL`** `callback` with only `array1`**
+**Example \#5 **`NULL`** `callback` with only `array`**
 
 ``` php
 <?php
@@ -2437,8 +2392,8 @@ Merge one or more arrays recursively
 ### Description
 
 <span class="type">array</span> <span
-class="methodname">array\_merge\_recursive</span> (\[ <span
-class="methodparam"><span class="type">array</span> `$...`</span> \] )
+class="methodname">array\_merge\_recursive</span> ( <span
+class="methodparam"><span class="type">array</span> `$arrays`</span> )
 
 <span class="function">array\_merge\_recursive</span> merges the
 elements of one or more arrays together so that the values of one are
@@ -2453,7 +2408,7 @@ original value, but will be appended.
 
 ### Parameters
 
-`...`  
+`arrays`  
 Variable list of arrays to recursively merge.
 
 ### Return Values
@@ -2514,8 +2469,8 @@ Merge one or more arrays
 ### Description
 
 <span class="type">array</span> <span
-class="methodname">array\_merge</span> (\[ <span
-class="methodparam"><span class="type">array</span> `$...`</span> \] )
+class="methodname">array\_merge</span> ( <span class="methodparam"><span
+class="type">array</span> `$arrays`</span> )
 
 Merges the elements of one or more arrays together so that the values of
 one are appended to the end of the previous one. It returns the
@@ -2531,7 +2486,7 @@ incrementing keys starting from zero in the result array.
 
 ### Parameters
 
-`...`  
+`arrays`  
 Variable list of arrays to merge.
 
 ### Return Values
@@ -2660,8 +2615,8 @@ class="methodparam"><span class="type">array</span> `&$array1`</span>
 `$array1_sort_order`<span class="initializer"> = SORT\_ASC</span></span>
 \[, <span class="methodparam"><span class="type">mixed</span>
 `$array1_sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \]\]\] )
+SORT\_REGULAR</span></span> \]\], <span class="methodparam"><span
+class="type">mixed</span> `$rest`</span> )
 
 <span class="function">array\_multisort</span> can be used to sort
 several arrays at once, or a multi-dimensional array by one or more
@@ -2712,7 +2667,7 @@ Sorting type flags:
 This argument can be swapped with `array1_sort_order` or omitted
 entirely, in which case **`SORT_REGULAR`** is assumed.
 
-`...`  
+`rest`  
 More arrays, optionally followed by sort order and flags. Only elements
 corresponding to equivalent elements in previous arrays are compared. In
 other words, the sort is lexicographical.
@@ -3027,7 +2982,8 @@ Calculate the product of values in an array
 
 ### Description
 
-<span class="type">number</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span
 class="methodname">array\_product</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> )
 
@@ -3071,8 +3027,8 @@ Push one or more elements onto the end of array
 
 <span class="type">int</span> <span
 class="methodname">array\_push</span> ( <span class="methodparam"><span
-class="type">array</span> `&$array`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">array</span> `&$array`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="function">array\_push</span> treats `array` as a stack, and
 pushes the passed variables onto the end of `array`. The length of
@@ -3102,7 +3058,7 @@ repeated for each passed value.
 `array`  
 The input array.
 
-`...`  
+`values`  
 The values to push onto the end of the `array`.
 
 ### Return Values
@@ -3294,14 +3250,14 @@ Replaces elements from passed arrays into the first array recursively
 
 <span class="type">array</span> <span
 class="methodname">array\_replace\_recursive</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `$array`</span> \[,
+<span class="methodparam"><span class="type">array</span>
+`$replacements`</span> \] )
 
 <span class="function">array\_replace\_recursive</span> replaces the
-values of `array1` with the same values from all the following arrays.
-If a key from the first array exists in the second array, its value will
-be replaced by the value from the second array. If the key exists in the
+values of `array` with the same values from all the following arrays. If
+a key from the first array exists in the second array, its value will be
+replaced by the value from the second array. If the key exists in the
 second array, and not the first, it will be created in the first array.
 If a key only exists in the first array, it will be left as is. If
 several arrays are passed for replacement, they will be processed in
@@ -3319,11 +3275,11 @@ respective value recursively.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array in which elements are replaced.
 
-`...`  
-Optional. Arrays from which elements will be extracted.
+`replacements`  
+Arrays from which elements will be extracted.
 
 ### Return Values
 
@@ -3425,12 +3381,12 @@ Replaces elements from passed arrays into the first array
 
 <span class="type">array</span> <span
 class="methodname">array\_replace</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `$array`</span> \[,
+<span class="methodparam"><span class="type">array</span>
+`$replacements`</span> \] )
 
 <span class="function">array\_replace</span> replaces the values of
-`array1` with values having the same keys in each of the following
+`array` with values having the same keys in each of the following
 arrays. If a key from the first array exists in the second array, its
 value will be replaced by the value from the second array. If the key
 exists in the second array, and not the first, it will be created in the
@@ -3444,10 +3400,10 @@ array.
 
 ### Parameters
 
-`array1`  
+`array`  
 The array in which elements are replaced.
 
-`...`  
+`replacements`  
 Arrays from which elements will be extracted. Values from later arrays
 overwrite the previous values.
 
@@ -4033,7 +3989,8 @@ Calculate the sum of values in an array
 
 ### Description
 
-<span class="type">number</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">float</span></span> <span
 class="methodname">array\_sum</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> )
 
@@ -4079,12 +4036,10 @@ data by a callback function
 
 <span class="type">array</span> <span
 class="methodname">array\_udiff\_assoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$value_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$value_compare_func`</span> )
 
 Computes the difference of arrays with additional index check, compares
 data by a callback function.
@@ -4097,11 +4052,11 @@ data by a callback function.
 
 ### Parameters
 
-`array1`  
+`array`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Arrays to compare against.
 
 `value_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -4118,7 +4073,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 ### Return Values
 
 <span class="function">array\_udiff\_assoc</span> returns an <span
-class="type">array</span> containing all the values from `array1` that
+class="type">array</span> containing all the values from `array` that
 are not present in any of the other arguments. Note that the keys are
 used in the comparison unlike <span class="function">array\_diff</span>
 and <span class="function">array\_udiff</span>. The comparison of
@@ -4202,13 +4157,12 @@ data and indexes by a callback function
 
 <span class="type">array</span> <span
 class="methodname">array\_udiff\_uassoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$value_compare_func`</span> , <span
 class="methodparam"><span class="type">callable</span>
-`$value_compare_func`</span> , <span class="methodparam"><span
-class="type">callable</span> `$key_compare_func`</span> )
+`$key_compare_func`</span> )
 
 Computes the difference of arrays with additional index check, compares
 data and indexes by a callback function.
@@ -4219,11 +4173,11 @@ class="function">array\_udiff</span>.
 
 ### Parameters
 
-`array1`  
+`array`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Arrays to compare against.
 
 `value_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -4246,7 +4200,7 @@ compares the indices by using an internal function.
 ### Return Values
 
 Returns an <span class="type">array</span> containing all the values
-from `array1` that are not present in any of the other arguments.
+from `array` that are not present in any of the other arguments.
 
 ### Examples
 
@@ -4336,10 +4290,9 @@ comparison
 
 <span class="type">array</span> <span
 class="methodname">array\_udiff</span> ( <span class="methodparam"><span
-class="type">array</span> `$array1`</span> , <span
-class="methodparam"><span class="type">array</span> `$array2`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$...`</span>
-\], <span class="methodparam"><span class="type">callable</span>
+class="type">array</span> `$array`</span> , <span
+class="methodparam"><span class="type">array</span> `$arrays`</span> ,
+<span class="methodparam"><span class="type">callable</span>
 `$value_compare_func`</span> )
 
 Computes the difference of arrays by using a callback function for data
@@ -4348,11 +4301,11 @@ which uses an internal function for comparing the data.
 
 ### Parameters
 
-`array1`  
+`array`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Arrays to compare against.
 
 `value_compare_func`  
 The callback comparison function.
@@ -4370,7 +4323,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns an array containing all the values of `array1` that are not
+Returns an array containing all the values of `array` that are not
 present in any of the other arguments.
 
 ### Examples
@@ -4541,12 +4494,10 @@ compares data by a callback function
 
 <span class="type">array</span> <span
 class="methodname">array\_uintersect\_assoc</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$value_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$value_compare_func`</span> )
 
 Computes the intersection of arrays with additional index check,
 compares data by a callback function.
@@ -4557,11 +4508,11 @@ a callback function.
 
 ### Parameters
 
-`array1`  
+`array`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Arrays to compare against.
 
 `value_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -4577,7 +4528,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns an array containing all the values of `array1` that are present
+Returns an array containing all the values of `array` that are present
 in all the arguments.
 
 ### Examples
@@ -4620,11 +4571,10 @@ compares data and indexes by separate callback functions
 class="methodname">array\_uintersect\_uassoc</span> ( <span
 class="methodparam"><span class="type">array</span> `$array1`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$value_compare_func`</span> , <span
 class="methodparam"><span class="type">callable</span>
-`$value_compare_func`</span> , <span class="methodparam"><span
-class="type">callable</span> `$key_compare_func`</span> )
+`$key_compare_func`</span> )
 
 Computes the intersection of arrays with additional index check,
 compares data and indexes by separate callback functions.
@@ -4634,8 +4584,8 @@ compares data and indexes by separate callback functions.
 `array1`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Further arrays.
 
 `value_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -4696,23 +4646,21 @@ function
 
 <span class="type">array</span> <span
 class="methodname">array\_uintersect</span> ( <span
-class="methodparam"><span class="type">array</span> `$array1`</span> ,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$array2`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$...`</span> \], <span
-class="methodparam"><span class="type">callable</span>
-`$value_compare_func`</span> )
+`$arrays`</span> , <span class="methodparam"><span
+class="type">callable</span> `$value_compare_func`</span> )
 
 Computes the intersection of arrays, compares data by a callback
 function.
 
 ### Parameters
 
-`array1`  
+`array`  
 The first array.
 
-`array2`  
-The second array.
+`arrays`  
+Arrays to compare against.
 
 `value_compare_func`  
 The comparison function must return an integer less than, equal to, or
@@ -4728,7 +4676,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns an array containing all the values of `array1` that are present
+Returns an array containing all the values of `array` that are present
 in all the arguments.
 
 ### Examples
@@ -4871,9 +4819,9 @@ Prepend one or more elements to the beginning of an array
 
 <span class="type">int</span> <span
 class="methodname">array\_unshift</span> ( <span
-class="methodparam"><span class="type">array</span> `&$array`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">array</span> `&$array`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
 <span class="function">array\_unshift</span> prepends passed elements to
 the front of the `array`. Note that the list of elements is prepended as
@@ -4886,7 +4834,7 @@ literal keys won't be changed.
 `array`  
 The input array.
 
-`...`  
+`values`  
 The values to prepend.
 
 ### Return Values
@@ -5178,9 +5126,9 @@ Create an array
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">array</span>
-(\[ <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+<span class="type">array</span> <span class="methodname">array</span> (
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
 Creates an array. Read the section on the
 <a href="/language/types/array.html" class="link">array type</a> for
@@ -5188,7 +5136,7 @@ more information on what an array is.
 
 ### Parameters
 
-`...`  
+`values`  
 Syntax "index =\> values", separated by commas, define index and values.
 index may be of type string or integer. When index is omitted, an
 integer index is automatically generated, starting at 0. If index is an
@@ -5443,8 +5391,8 @@ Create array containing variables and their values
 
 <span class="type">array</span> <span class="methodname">compact</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$varname1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$var_name`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$var_names`</span> )
 
 Creates an array containing variables and their values.
 
@@ -5460,7 +5408,8 @@ does the opposite of <span class="function">extract</span>.
 
 ### Parameters
 
-`varname1`  
+`var_name`  
+`var_names`  
 <span class="function">compact</span> takes a variable number of
 parameters. Each parameter can be either a string containing the name of
 the variable, or an array of variable names. The array can contain other
@@ -5709,7 +5658,7 @@ var_dump(current($arr)); // array(0) { }
 > **Note**: <span class="simpara"> The results of calling <span
 > class="function">current</span> on an empty array and on an array,
 > whose internal pointer points beyond the end of the elements, are
-> indistinguishable from a <span class="type">boolean</span> **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`FALSE`**
 > element. To properly traverse an array which may contain **`FALSE`**
 > elements, see the <span class="function">foreach</span> function.
 > </span> <span class="simpara"> To still use <span
@@ -6434,9 +6383,9 @@ Assign variables as if they were an array
 ### Description
 
 <span class="type">array</span> <span class="methodname">list</span> (
-<span class="methodparam"><span class="type">mixed</span> `$var1`</span>
+<span class="methodparam"><span class="type">mixed</span> `$var`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
-`$...`</span> \] )
+`$vars`</span> \] )
 
 Like <span class="function">array</span>, this is not really a function,
 but a language construct. <span class="function">list</span> is used to
@@ -6464,8 +6413,13 @@ of operation, as this may change again in the future.
 
 ### Parameters
 
-`var1`  
+`var`  
 A variable.
+
+<!-- -->
+
+`vars`  
+Further variables.
 
 ### Return Values
 
@@ -6942,7 +6896,7 @@ $mode = end($transport);     // $mode = 'plane';
 ### Notes
 
 > **Note**: <span class="simpara"> The end of an array is
-> indistinguishable from a <span class="type">boolean</span> **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`FALSE`**
 > element. To properly traverse an array which may contain **`FALSE`**
 > elements, see the <span class="function">foreach</span> function.
 > </span> <span class="simpara"> To still use <span
@@ -7023,7 +6977,7 @@ $mode = end($transport);     // $mode = 'plane';
 ### Notes
 
 > **Note**: <span class="simpara"> The beginning of an array is
-> indistinguishable from a <span class="type">boolean</span> **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`FALSE`**
 > element. To make the distinction, check that the <span
 > class="function">key</span> of the <span class="function">prev</span>
 > element is not **`NULL`**. </span>
@@ -7047,8 +7001,9 @@ Create an array containing a range of elements
 <span class="methodparam"><span class="type">mixed</span>
 `$start`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$end`</span> \[, <span
-class="methodparam"><span class="type">number</span> `$step`<span
-class="initializer"> = 1</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">float</span></span>
+`$step`<span class="initializer"> = 1</span></span> \] )
 
 Create an array containing a range of elements.
 
@@ -7173,7 +7128,7 @@ echo current($array) . "<br />\n"; // "step one"
 
 > **Note**: <span class="simpara"> The return value for an empty array
 > is indistinguishable from the return value in case of an array which
-> has a <span class="type">boolean</span> **`FALSE`** first element. To
+> has a <span class="type">bool</span> **`FALSE`** first element. To
 > properly check the value of the first element of an array which may
 > contain **`FALSE`** elements, first check the <span
 > class="function">count</span> of the array, or check that <span
@@ -7673,9 +7628,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 

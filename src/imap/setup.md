@@ -80,7 +80,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`imap.enable_insecure_rsh` <span class="type">boolean</span>  
+`imap.enable_insecure_rsh` <span class="type">bool</span>  
 Establishing a connection to a server may invoke **rsh** or **ssh**
 commands, unless this `php.ini` option is disabled.
 

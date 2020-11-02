@@ -185,7 +185,8 @@ Fetch DNS Resource Records associated with a hostname
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">dns\_get\_record</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 \[, <span class="methodparam"><span class="type">int</span> `$type`<span
@@ -866,7 +867,8 @@ Get protocol number associated with protocol name
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">getprotobyname</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -909,7 +911,8 @@ Get protocol name associated with protocol number
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">getprotobynumber</span> ( <span
 class="methodparam"><span class="type">int</span> `$number`</span> )
 
@@ -1615,7 +1618,8 @@ Converts a packed internet address to a human readable representation
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inet\_ntop</span> ( <span class="methodparam"><span
 class="type">string</span> `$in_addr`</span> )
 
@@ -1771,9 +1775,9 @@ if ($long == -1 || $long === FALSE) {
 
 > **Note**:
 >
-> Because PHP's <span class="type">integer</span> type is signed, and
-> many IP addresses will result in negative integers on 32-bit
-> architectures, you need to use the "%u" formatter of <span
+> Because PHP's <span class="type">int</span> type is signed, and many
+> IP addresses will result in negative integers on 32-bit architectures,
+> you need to use the "%u" formatter of <span
 > class="function">sprintf</span> or <span
 > class="function">printf</span> to get the string representation of the
 > unsigned IP address.
@@ -1818,9 +1822,9 @@ Returns the Internet IP address as a string.
 
 ### Changelog
 
-| Version | Description                                                                                                                         |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | The parameter type of `proper_address` has been changed from <span class="type">string</span> to <span class="type">integer</span>. |
+| Version | Description                                                                                                                     |
+|---------|---------------------------------------------------------------------------------------------------------------------------------|
+| 7.1.0   | The parameter type of `proper_address` has been changed from <span class="type">string</span> to <span class="type">int</span>. |
 
 ### Notes
 
@@ -1828,7 +1832,7 @@ Returns the Internet IP address as a string.
 >
 > On 32-bit architectures, casting integer representations of IP
 > addresses from <span class="type">string</span> to <span
-> class="type">integer</span> will not give correct results for numbers
+> class="type">int</span> will not give correct results for numbers
 > which exceed **`PHP_INT_MAX`**.
 
 ### See Also

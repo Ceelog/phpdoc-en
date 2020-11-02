@@ -46,19 +46,19 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`assert.active` <span class="type">boolean</span>  
+`assert.active` <span class="type">bool</span>  
 Enable <span class="function">assert</span> evaluation.
 
-`assert.bail` <span class="type">boolean</span>  
+`assert.bail` <span class="type">bool</span>  
 Terminate script execution on failed assertions.
 
-`assert.warning` <span class="type">boolean</span>  
+`assert.warning` <span class="type">bool</span>  
 Issue a PHP warning for each failed assertion.
 
 `assert.callback` <span class="type">string</span>  
 User function to call on failed assertions.
 
-`assert.quiet_eval` <span class="type">boolean</span>  
+`assert.quiet_eval` <span class="type">bool</span>  
 Use the current setting of <span
 class="function">error\_reporting</span> during assertion expression
 evaluation. If enabled, no errors are shown (implicit
@@ -66,11 +66,11 @@ error\_reporting(0)) while evaluation. If disabled, errors are shown
 according to the settings of <span
 class="function">error\_reporting</span>
 
-`assert.exception` <span class="type">boolean</span>  
+`assert.exception` <span class="type">bool</span>  
 Issue an <span class="classname">AssertionError</span> exception for the
 failed assertion.
 
-`enable_dl` <span class="type">boolean</span>  
+`enable_dl` <span class="type">bool</span>  
 This directive is really only useful in the Apache module version of
 PHP. You can turn dynamic loading of PHP extensions with <span
 class="function">dl</span> on and off per virtual server or per
@@ -81,7 +81,7 @@ dynamic loading, it's possible to ignore all
 <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
 restrictions. The default is to allow dynamic loading.
 
-`max_execution_time` <span class="type">integer</span>  
+`max_execution_time` <span class="type">int</span>  
 This sets the maximum time in seconds a script is allowed to run before
 it is terminated by the parser. This helps prevent poorly written
 scripts from tying up the server. The default setting is *30*. When
@@ -98,7 +98,7 @@ interrupt PHP execution. Apache has a *Timeout* directive and IIS has a
 CGI timeout function. Both default to 300 seconds. See your web server
 documentation for specific details.
 
-`max_input_time` <span class="type">integer</span>  
+`max_input_time` <span class="type">int</span>  
 This sets the maximum time in seconds a script is allowed to parse input
 data, like POST and GET. Timing begins at the moment PHP is invoked at
 the server and ends when execution begins. The default setting is *-1*,
@@ -106,12 +106,12 @@ which means that
 <a href="/info/setup.html#" class="link">max_execution_time</a> is used
 instead. Set to *0* to allow unlimited time.
 
-`max_input_nesting_level` <span class="type">integer</span>  
+`max_input_nesting_level` <span class="type">int</span>  
 Sets the max nesting depth of
 <a href="/language/variables/external.html" class="link">input variables</a>
 (i.e. `$_GET`, `$_POST`.)
 
-`max_input_vars` <span class="type">integer</span>  
+`max_input_vars` <span class="type">int</span>  
 How many
 <a href="/language/variables/external.html" class="link">input variables</a>
 may be accepted (limit is applied to $\_GET, $\_POST and $\_COOKIE
@@ -121,7 +121,7 @@ more input variables than specified by this directive, an
 **`E_WARNING`** is issued, and further input variables are truncated
 from the request.
 
-`magic_quotes_gpc` <span class="type">boolean</span>  
+`magic_quotes_gpc` <span class="type">bool</span>  
 **Warning**
 This feature has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
 PHP 5.4.0.
@@ -132,7 +132,7 @@ magic\_quotes are on, all ' (single-quote), " (double quote), \\
 
 See also <span class="function">get\_magic\_quotes\_gpc</span>
 
-`magic_quotes_runtime` <span class="type">boolean</span>  
+`magic_quotes_runtime` <span class="type">bool</span>  
 **Warning**
 This feature has been *DEPRECATED* as of PHP 5.3.0 and *REMOVED* as of
 PHP 5.4.0.
@@ -189,7 +189,7 @@ from PECL):
 -   <span class="function">SplFileObject::fgetcsv</span>
 -   <span class="function">SplFileObject::fwrite</span>
 
-`zend.enable_gc` <span class="type">boolean</span>  
+`zend.enable_gc` <span class="type">bool</span>  
 Enables or disables the circular reference collector.
 
 Resource Types

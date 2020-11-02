@@ -323,7 +323,7 @@ This results in the
 also being applied when properties are added to or removed from the
 object.
 
-### Changes to <span class="type">integer</span> handling
+### Changes to <span class="type">int</span> handling
 
 #### Invalid octal literals
 
@@ -356,7 +356,7 @@ Output of the above example in PHP 7:
 #### Out of range bitshifts
 
 Bitwise shifts (in either direction) beyond the bit width of an <span
-class="type">integer</span> will always result in 0. Previously, the
+class="type">int</span> will always result in 0. Previously, the
 behaviour of such shifts was architecture dependent.
 
 #### Changes to Division By Zero
@@ -431,8 +431,7 @@ Output of the above example in PHP 7:
 
 <span class="function">filter\_var</span> can be used to check if a
 <span class="type">string</span> contains a hexadecimal number, and also
-to convert a string of that type to an <span
-class="type">integer</span>:
+to convert a string of that type to an <span class="type">int</span>:
 
 ``` php
 <?php

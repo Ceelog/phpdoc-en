@@ -867,7 +867,8 @@ class="type">int</span> `$parse_mode`<span class="initializer"> =
 0</span></span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">escapeQueryChars</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> )
 
@@ -927,7 +928,8 @@ Escapes a lucene query string
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">string</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">SolrUtils::escapeQueryChars</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> )
 
@@ -1012,25 +1014,25 @@ Class synopsis
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_DEFAULT` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_ASC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_DESC` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_FIELD_NAME` <span class="initializer"> =
 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_FIELD_VALUE_COUNT` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrInputDocument::SORT_FIELD_BOOST_VALUE` <span class="initializer"> =
 4</span> ;
 
@@ -1101,7 +1103,8 @@ class="type">string</span> `$fieldName`</span> )
 class="methodparam"><span class="type">string</span> `$fieldName`</span>
 )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getFieldCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -1685,7 +1688,8 @@ Returns the number of fields in the document
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">SolrInputDocument::getFieldCount</span> ( <span
 class="methodparam">void</span> )
 
@@ -1931,23 +1935,23 @@ class="interfacename">Serializable</span> </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_DEFAULT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_ASC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_DESC` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_FIELD_NAME` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_FIELD_VALUE_COUNT` <span class="initializer"> =
 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrDocument::SORT_FIELD_BOOST_VALUE` <span class="initializer"> =
 4</span> ;
 
@@ -3351,26 +3355,26 @@ Class synopsis
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::SEARCH_SERVLET_TYPE` <span class="initializer"> = 1</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::UPDATE_SERVLET_TYPE` <span class="initializer"> = 2</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::THREADS_SERVLET_TYPE` <span class="initializer"> = 4</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::PING_SERVLET_TYPE` <span class="initializer"> = 8</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::TERMS_SERVLET_TYPE` <span class="initializer"> = 16</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrClient::SYSTEM_SERVLET_TYPE` <span class="initializer"> = 32</span>
 ;
 
@@ -5016,19 +5020,19 @@ Class synopsis
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_OBJ` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_DOC` <span class="initializer"> = 1</span> ;
 
 /\* Properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$http_status` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$http_status` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$parser_mode` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$parser_mode` ;
 
 <span class="modifier">protected</span> <span class="type">bool</span>
 `$success` ;
@@ -5402,27 +5406,27 @@ class="modifier">extends</span> **SolrResponse** </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQueryResponse::PARSE_SOLR_OBJ` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQueryResponse::PARSE_SOLR_DOC` <span class="initializer"> =
 1</span> ;
 
 /\* Inherited properties \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_OBJ` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_DOC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$http_status` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$http_status` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$parser_mode` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$parser_mode` ;
 
 <span class="modifier">protected</span> <span class="type">bool</span>
 `$success` ;
@@ -5578,27 +5582,27 @@ class="modifier">extends</span> **SolrResponse** </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrUpdateResponse::PARSE_SOLR_OBJ` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrUpdateResponse::PARSE_SOLR_DOC` <span class="initializer"> =
 1</span> ;
 
 /\* Inherited properties \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_OBJ` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_DOC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$http_status` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$http_status` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$parser_mode` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$parser_mode` ;
 
 <span class="modifier">protected</span> <span class="type">bool</span>
 `$success` ;
@@ -5754,11 +5758,11 @@ class="modifier">extends</span> **SolrResponse** </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrPingResponse::PARSE_SOLR_OBJ` <span class="initializer"> = 0</span>
 ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrPingResponse::PARSE_SOLR_DOC` <span class="initializer"> = 1</span>
 ;
 
@@ -5954,27 +5958,27 @@ class="modifier">extends</span> **SolrResponse** </span> {
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrGenericResponse::PARSE_SOLR_OBJ` <span class="initializer"> =
 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrGenericResponse::PARSE_SOLR_DOC` <span class="initializer"> =
 1</span> ;
 
 /\* Inherited properties \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_OBJ` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrResponse::PARSE_SOLR_DOC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$http_status` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$http_status` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$parser_mode` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$parser_mode` ;
 
 <span class="modifier">protected</span> <span class="type">bool</span>
 `$success` ;
@@ -6644,22 +6648,22 @@ class="ooclass"> <span class="modifier">extends</span>
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::ORDER_ASC` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::ORDER_DESC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::FACET_SORT_INDEX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::FACET_SORT_COUNT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::TERMS_SORT_INDEX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::TERMS_SORT_COUNT` <span class="initializer"> = 1</span> ;
 
 /\* Properties \*/
@@ -12806,22 +12810,22 @@ class="interfacename">Serializable</span> </span> {
 
 /\* Inherited properties \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::ORDER_ASC` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::ORDER_DESC` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::FACET_SORT_INDEX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::FACET_SORT_COUNT` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::TERMS_SORT_INDEX` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `SolrQuery::TERMS_SORT_COUNT` <span class="initializer"> = 1</span> ;
 
 /\* Methods \*/
@@ -15868,8 +15872,8 @@ class="ooclass"> <span class="modifier">extends</span> **Exception**
 
 /\* Properties \*/
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;
@@ -16008,8 +16012,8 @@ class="ooclass"> <span class="modifier">extends</span> **SolrException**
 <span class="modifier">protected</span> <span class="type">int</span>
 `$line` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;
@@ -16126,8 +16130,8 @@ class="ooclass"> <span class="modifier">extends</span> **SolrException**
 <span class="modifier">protected</span> <span class="type">int</span>
 `$line` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;
@@ -16244,8 +16248,8 @@ Class synopsis
 <span class="modifier">protected</span> <span class="type">int</span>
 `$line` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;
@@ -16368,8 +16372,8 @@ Class synopsis
 <span class="modifier">protected</span> <span class="type">int</span>
 `$line` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;
@@ -16489,8 +16493,8 @@ Class synopsis
 <span class="modifier">protected</span> <span class="type">int</span>
 `$line` ;
 
-<span class="modifier">protected</span> <span
-class="type">integer</span> `$sourceline` ;
+<span class="modifier">protected</span> <span class="type">int</span>
+`$sourceline` ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
 `$sourcefile` ;

@@ -37,7 +37,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`nsapi.read_timeout` <span class="type">integer</span>  
+`nsapi.read_timeout` <span class="type">int</span>  
 Sets the time in seconds the plugin is waiting for POST data from the
 client.
 

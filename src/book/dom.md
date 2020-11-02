@@ -373,8 +373,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -382,7 +383,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -731,8 +733,9 @@ class="methodparam"><span class="type">int</span> `$offset`</span> ,
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -740,7 +743,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -997,8 +1001,9 @@ class="methodparam"><span class="type">int</span> `$offset`</span> ,
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -1006,7 +1011,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -1432,8 +1438,9 @@ class="methodparam"><span class="type">int</span> `$offset`</span> ,
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -1441,7 +1448,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -1902,8 +1910,9 @@ class="type">int</span> `$options`<span class="initializer"> =
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -1911,7 +1920,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -4117,8 +4127,9 @@ class="methodparam"><span class="type">string</span> `$data`</span> )
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -4126,7 +4137,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -4374,8 +4386,9 @@ class="type">string</span><span class="type">null</span></span>
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -4383,7 +4396,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -4691,8 +4705,9 @@ class="methodparam"><span class="type">bool</span> `$isId`</span> )
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -4700,7 +4715,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -5644,8 +5660,9 @@ class="type">string</span><span class="type">null</span></span>
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -5653,7 +5670,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -5855,8 +5873,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -5864,7 +5883,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -6593,8 +6613,9 @@ class="type">string</span><span class="type">null</span></span>
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">C14N</span> (\[ <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">C14N</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$exclusive`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -6602,7 +6623,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">C14NFile</span> ( <span class="methodparam"><span
 class="type">string</span> `$uri`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$exclusive`<span
@@ -6863,8 +6885,9 @@ Canonicalize nodes to a string
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -6904,7 +6927,8 @@ Canonicalize nodes to a file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -7710,8 +7734,9 @@ class="type">string</span><span class="type">null</span></span>
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -7719,7 +7744,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -7909,8 +7935,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -7918,7 +7945,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -8215,8 +8243,9 @@ class="methodparam"><span class="type">int</span> `$offset`</span> ,
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::C14N</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::C14N</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$exclusive`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$with_comments`</span> \[, <span class="methodparam"><span
@@ -8224,7 +8253,8 @@ class="type">array</span> `$xpath`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>

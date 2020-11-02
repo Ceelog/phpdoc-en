@@ -574,7 +574,8 @@ Returns available space on filesystem or disk partition
 
 ### Description
 
-<span class="type">float</span> <span
+<span class="type"><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">disk\_free\_space</span> ( <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 )
@@ -632,7 +633,8 @@ Returns the total size of a filesystem or disk partition
 
 ### Description
 
-<span class="type">float</span> <span
+<span class="type"><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">disk\_total\_space</span> ( <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 )
@@ -1306,7 +1308,8 @@ Reads entire file into a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">file\_get\_contents</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -1747,9 +1750,10 @@ Gets last access time of file
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">fileatime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">fileatime</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the last access time of the given file.
 
@@ -1826,9 +1830,10 @@ Gets inode change time of file
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">filectime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">filectime</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the inode change time of a file.
 
@@ -1968,9 +1973,10 @@ Gets file inode
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">fileinode</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">fileinode</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the file inode.
 
@@ -2026,9 +2032,10 @@ Gets file modification time
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">filemtime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">filemtime</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 This function returns the time when the data blocks of a file were being
 written to, that is, the time when the content of the file was changed.
@@ -2095,9 +2102,10 @@ Gets file owner
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">fileowner</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">fileowner</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the file owner.
 
@@ -2917,8 +2925,9 @@ Format line as CSV and write to file pointer
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">fputcsv</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">fputcsv</span>
+( <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
 class="type">array</span> `$fields`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$delimiter`<span
@@ -3030,7 +3039,8 @@ Binary-safe file read
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">fread</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">fread</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
@@ -3171,8 +3181,8 @@ Parses input from a file according to a format
 <span class="type">mixed</span> <span class="methodname">fscanf</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
-class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `&$...`</span> \] )
+class="type">string</span> `$format`</span> , <span
+class="methodparam"><span class="type">mixed</span> `&$vars`</span> )
 
 The function <span class="function">fscanf</span> is similar to <span
 class="function">sscanf</span>, but it takes its input from a file
@@ -3334,7 +3344,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`...`  
+`vars`  
 The optional assigned values.
 
 ### Return Values
@@ -5466,10 +5476,12 @@ Outputs a file
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">readfile</span> (
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$use_include_path`<span class="initializer"> =
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">readfile</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
+`$use_include_path`<span class="initializer"> =
 **`FALSE`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\] )
 
@@ -6279,9 +6291,9 @@ Creates a temporary file
 
 ### Description
 
-<span class="type">resource</span> <span
-class="methodname">tmpfile</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">tmpfile</span>
+( <span class="methodparam">void</span> )
 
 Creates a temporary file with a unique name in read-write (w+) mode and
 returns a file handle.

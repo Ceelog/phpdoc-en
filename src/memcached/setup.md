@@ -70,20 +70,20 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`memcached.sess_locking` <span class="type">integer</span>  
+`memcached.sess_locking` <span class="type">int</span>  
 Use session locking. Valid values: On, Off, the default is On.
 
-`memcached.sess_consistent_hash` <span class="type">integer</span>  
+`memcached.sess_consistent_hash` <span class="type">int</span>  
 Memcached session consistent hash mode. If set to On, consistent hashing
 is used for session handling. When consistent hashing is used, one can
 add or remove cache node(s) without messing up too much with existing
 keys. The default is Off.
 
-`memcached.sess_binary` <span class="type">integer</span>  
+`memcached.sess_binary` <span class="type">int</span>  
 Use memcached session binary mode. Libmemcached replicas only work if
 binary mode is enabled. The default is Off.
 
-`memcached.sess_lock_wait` <span class="type">integer</span>  
+`memcached.sess_lock_wait` <span class="type">int</span>  
 Session spin lock retry wait time in microseconds. Be careful when
 setting this value. Valid values are integers, where 0 is interpreted as
 the default value. Negative values result in a reduces locking to a try
@@ -93,13 +93,13 @@ lock. The default is 150000.
 Memcached session key prefix. Valid values are strings less than 219
 bytes long. The default value is "memc.sess.key."
 
-`memcached.sess_number_of_replicas` <span class="type">integer</span>  
+`memcached.sess_number_of_replicas` <span class="type">int</span>  
 The memcached session number of replicas.
 
-`memcached.sess_randomize_replica_read` <span class="type">integer</span>  
+`memcached.sess_randomize_replica_read` <span class="type">int</span>  
 Memcached session replica read randomize.
 
-`memcached.sess_remove_failed` <span class="type">integer</span>  
+`memcached.sess_remove_failed` <span class="type">int</span>  
 Allow failed memcached server to automatically be removed.
 
 `memcached.compression_type` <span class="type">string</span>  
@@ -112,7 +112,7 @@ factor (saving) exceeds the set limit. Store compressed if:
 *plain\_len \> comp\_len \* factor*. The default value is 1.3 (23% space
 saving).
 
-`memcached.compression_threshold` <span class="type">integer</span>  
+`memcached.compression_threshold` <span class="type">int</span>  
 The compression threshold. Do not compress serialized values below this
 threshold. The default is 2000 bytes.
 
@@ -136,7 +136,7 @@ A binary serializer
 
 The default is igbinary if available and php otherwise.
 
-`memcached.use_sasl` <span class="type">integer</span>  
+`memcached.use_sasl` <span class="type">int</span>  
 Use SASL authentication for connections. Valid values: On, Off. The
 default is Off.
 

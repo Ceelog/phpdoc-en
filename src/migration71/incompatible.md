@@ -215,8 +215,8 @@ The error message for E\_RECOVERABLE errors has been changed from
 The *allowed\_classes* element of the $options parameter of <span
 class="function">unserialize</span> is now strictly typed, i.e. if
 anything other than an <span class="type">array</span> or a <span
-class="type">boolean</span> is given, unserialize() returns **`FALSE`**
-and issues an **`E_WARNING`**.
+class="type">bool</span> is given, unserialize() returns **`FALSE`** and
+issues an **`E_WARNING`**.
 
 ### DateTime constructor incorporates microseconds
 

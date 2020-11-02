@@ -21,5 +21,5 @@ This function has no parameters.
 
 ### Return Values
 
-The return value will be casted to <span class="type">boolean</span> and
+The return value will be casted to <span class="type">bool</span> and
 then evaluated. Returns **`TRUE`** on success or **`FALSE`** on failure.

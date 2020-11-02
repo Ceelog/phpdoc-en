@@ -721,7 +721,8 @@ socket
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_export\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 )
@@ -1825,7 +1826,8 @@ Send a message
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_sendmsg</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">array</span>
@@ -2246,7 +2248,8 @@ Write to a socket
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_write</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -2309,7 +2312,8 @@ Exports the WSAPROTOCOL\_INFO Structure
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_wsaprotocol\_info\_export</span> ( <span
 class="methodparam"><span class="type">resource </span> `$socket`</span>
 , <span class="methodparam"><span class="type">int </span>
@@ -2348,7 +2352,8 @@ Imports a Socket from another Process
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_wsaprotocol\_info\_import</span> ( <span
 class="methodparam"><span class="type">string</span> `$info_id`</span> )
 

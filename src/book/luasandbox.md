@@ -86,13 +86,13 @@ Class synopsis
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandbox::SAMPLES` <span class="initializer"> = 0</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandbox::SECONDS` <span class="initializer"> = 1</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandbox::PERCENT` <span class="initializer"> = 2</span> ;
 
 /\* Methods \*/
@@ -100,8 +100,8 @@ Class synopsis
 <span class="modifier">public</span> <span class="type"><span
 class="type">array</span><span class="type">bool</span></span> <span
 class="methodname">callFunction</span> ( <span class="methodparam"><span
-class="type">string</span> `$name`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$args`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">disableProfiler</span> ( <span
@@ -208,9 +208,9 @@ Call a function in a Lua global variable
 <span class="modifier">public</span> <span class="type"><span
 class="type">array</span><span class="type">bool</span></span> <span
 class="methodname">LuaSandbox::callFunction</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">mixed</span> `$args`</span>
+)
 
 Calls a function in a Lua global variable.
 
@@ -228,7 +228,7 @@ see <span class="methodname">LuaSandboxFunction::call</span>.
 `name`  
 Lua variable name.
 
-`...`  
+`args`  
 Arguments to the function.
 
 ### Return Values
@@ -442,7 +442,7 @@ Measurement unit constant.
 Returns profiler measurements, sorted in descending order, as an
 associative <span class="type">array</span>. Keys are the Lua function
 names (with source file and line defined in angle brackets), values are
-the measurements as <span class="type">integer</span> or <span
+the measurements as <span class="type">int</span> or <span
 class="type">float</span>.
 
 > **Note**:
@@ -629,8 +629,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a <span class="type">boolean</span> indicating whether the timer
-is now paused.
+Returns a <span class="type">bool</span> indicating whether the timer is
+now paused.
 
 ### Examples
 
@@ -974,8 +974,8 @@ Class synopsis
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">array</span><span class="type">bool</span></span> <span
-class="methodname">call</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$...`</span> \] )
+class="methodname">call</span> ( <span class="methodparam"><span
+class="type">string</span> `$args`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">dump</span> ( <span
@@ -992,8 +992,8 @@ Call a Lua function
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">array</span><span class="type">bool</span></span> <span
-class="methodname">LuaSandboxFunction::call</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$...`</span> \] )
+class="methodname">LuaSandboxFunction::call</span> ( <span
+class="methodparam"><span class="type">string</span> `$args`</span> )
 
 Calls a Lua function.
 
@@ -1007,16 +1007,16 @@ PHP and Lua types are converted as follows:
 
 -   PHP **`NULL`** is Lua *nil*, and vice versa.
 
--   PHP <span class="type">integer</span>s and <span
+-   PHP <span class="type">int</span>s and <span
     class="type">float</span>s are converted to Lua numbers. Infinity
     and **`NAN`** are supported.
 
 -   Lua numbers without a fractional part between approximately
     *-2\*\*53* and *2\*\*53* are converted to PHP <span
-    class="type">integer</span>s, with others being converted to PHP
-    <span class="type">float</span>s.
+    class="type">int</span>s, with others being converted to PHP <span
+    class="type">float</span>s.
 
--   PHP <span class="type">boolean</span>s are Lua booleans, and vice
+-   PHP <span class="type">bool</span>s are Lua booleans, and vice
     versa.
 
 -   PHP <span class="type">string</span>s are Lua strings, and vice
@@ -1055,13 +1055,13 @@ PHP and Lua types are converted as follows:
 
 Lua functions inherently return a list of results. So on success, this
 method returns an <span class="type">array</span> containing all of the
-values returned by Lua, with <span class="type">integer</span> keys
-starting from zero. Lua may return no results, in which case an empty
-array is returned.
+values returned by Lua, with <span class="type">int</span> keys starting
+from zero. Lua may return no results, in which case an empty array is
+returned.
 
 ### Parameters
 
-`...`  
+`args`  
 Arguments passed to the function.
 
 ### Return Values
@@ -1130,16 +1130,16 @@ class="ooclass"> <span class="modifier">extends</span> **Exception**
 
 /\* Constants \*/
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandboxError::RUN` <span class="initializer"> = 2</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandboxError::SYNTAX` <span class="initializer"> = 3</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandboxError::MEM` <span class="initializer"> = 4</span> ;
 
-<span class="modifier">const</span> <span class="type">integer</span>
+<span class="modifier">const</span> <span class="type">int</span>
 `LuaSandboxError::ERR` <span class="initializer"> = 5</span> ;
 
 /\* Inherited properties \*/

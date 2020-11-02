@@ -45,7 +45,7 @@ PHP scripts.
     $DOCUMENT\_ROOT or $HTTP\_REFERER) in a user-defined function, and
     it can't seem to find it. What's wrong?](#faq.using.cgi-vars)
 16. [A few PHP directives may also take on shorthand byte values, as
-    opposed to only integer byte values. What are all the available
+    opposed to only int byte values. What are all the available
     shorthand byte options?](#faq.using.shorthandbytes)
 17. [Windows: I keep getting connection timeouts when using localhost,
     whereas "127.0.0.1" works?](#faq.using.windowslocalhostissue)
@@ -343,14 +343,14 @@ It's preferred to code with register\_globals = off.
 
 <!-- -->
 
-**A few PHP directives may also take on shorthand byte values, as opposed to only <span class="type">integer</span> byte values. What are all the available shorthand byte options?**  
+**A few PHP directives may also take on shorthand byte values, as opposed to only <span class="type">int</span> byte values. What are all the available shorthand byte options?**  
 The available options are K (for Kilobytes), M (for Megabytes) and G
 (for Gigabytes; available since PHP 5.1.0), and are all
 case-insensitive. Anything else assumes bytes. *1M* equals one Megabyte
 or *1048576* bytes. *1K* equals one Kilobyte or *1024* bytes. These
 shorthand notations may be used in `php.ini` and in the <span
 class="function">ini\_set</span> function. Note that the numeric value
-is cast to <span class="type">integer</span>; for instance, *0.5M* is
+is cast to <span class="type">int</span>; for instance, *0.5M* is
 interpreted as *0*.
 
 > **Note**: **kilobyte versus kibibyte**  

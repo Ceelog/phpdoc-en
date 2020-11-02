@@ -178,8 +178,9 @@ class="type">string</span> `$http_method`</span> \[, <span
 class="methodparam"><span class="type">array</span>
 `$http_headers`</span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">generateSignature</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">generateSignature</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$http_method`</span> , <span class="methodparam"><span
 class="type">string</span> `$url`</span> \[, <span
@@ -203,16 +204,18 @@ class="methodparam">void</span> )
 <span class="methodname">getLastResponse</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getLastResponseHeaders</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getLastResponseHeaders</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getLastResponseInfo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getRequestHeader</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getRequestHeader</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$http_method`</span> , <span class="methodparam"><span
 class="type">string</span> `$url`</span> \[, <span
@@ -624,8 +627,9 @@ Generate a signature
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">OAuth::generateSignature</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">OAuth::generateSignature</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$http_method`</span> , <span class="methodparam"><span
 class="type">string</span> `$url`</span> \[, <span
@@ -808,8 +812,9 @@ Get headers for last response
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">OAuth::getLastResponseHeaders</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">OAuth::getLastResponseHeaders</span> ( <span
 class="methodparam">void</span> )
 
 Get headers for last response.
@@ -858,8 +863,9 @@ Generate OAuth header string signature
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">OAuth::getRequestHeader</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">OAuth::getRequestHeader</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$http_method`</span> , <span class="methodparam"><span
 class="type">string</span> `$url`</span> \[, <span

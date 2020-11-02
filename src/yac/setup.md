@@ -44,13 +44,13 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`yac.compress_threshold` <span class="type">integer</span>  
+`yac.compress_threshold` <span class="type">int</span>  
 
-`yac.debug` <span class="type">integer</span>  
+`yac.debug` <span class="type">int</span>  
 
-`yac.enable` <span class="type">integer</span>  
+`yac.enable` <span class="type">int</span>  
 
-`yac.enable_cli` <span class="type">integer</span>  
+`yac.enable_cli` <span class="type">int</span>  
 
 `yac.keys_memory_size` <span class="type">string</span>  
 

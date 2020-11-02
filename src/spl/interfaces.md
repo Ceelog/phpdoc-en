@@ -81,11 +81,11 @@ This function has no parameters.
 
 ### Return Values
 
-The custom count as an <span class="type">integer</span>.
+The custom count as an <span class="type">int</span>.
 
 > **Note**:
 >
-> The return value is cast to an <span class="type">integer</span>.
+> The return value is cast to an <span class="type">int</span>.
 
 ### Examples
 

@@ -289,7 +289,7 @@ While the old API continues to be maintained for compatibility, <span
 class="function">assert</span> is now a language construct, allowing the
 first parameter to be an expression rather than just a <span
 class="type">string</span> to be evaluated or a <span
-class="type">boolean</span> value to be tested.
+class="type">bool</span> value to be tested.
 
 ``` php
 <?php

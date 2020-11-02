@@ -712,7 +712,8 @@ Retrieve the system error message associated with the given errno
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pcntl\_strerror</span> ( <span
 class="methodparam"><span class="type">int</span> `$errno`</span> )
 

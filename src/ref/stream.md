@@ -527,7 +527,8 @@ Copies data from one stream to another
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_copy\_to\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$source`</span>
 , <span class="methodparam"><span class="type">resource</span>
@@ -1007,7 +1008,8 @@ Reads remainder of a stream into a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_get\_contents</span> ( <span
 class="methodparam"><span class="type">resource</span> `$handle`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1026,11 +1028,11 @@ string, up to `maxlength` bytes and starting at the specified `offset`.
 A stream resource (e.g. returned from <span
 class="function">fopen</span>)
 
-`maxlength` (<span class="type">integer</span>)  
+`maxlength` (<span class="type">int</span>)  
 The maximum bytes to read. Defaults to -1 (read all the remaining
 buffer).
 
-`offset` (<span class="type">integer</span>)  
+`offset` (<span class="type">int</span>)  
 Seek to the specified offset before reading. If this number is negative,
 no seeking will occur and reading will start from the current position.
 
@@ -1715,7 +1717,8 @@ Resolve filename against the include path
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_resolve\_include\_path</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
@@ -2191,7 +2194,8 @@ class="function">stream\_socket\_server</span>
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">stream\_socket\_accept</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$server_socket`</span> \[, <span class="methodparam"><span

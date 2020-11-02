@@ -25,55 +25,55 @@ dynamically loaded at runtime.
 Purpose checking flags
 ----------------------
 
-**`X509_PURPOSE_SSL_CLIENT`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_SSL_CLIENT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_SSL_SERVER`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_SSL_SERVER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_NS_SSL_SERVER`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_NS_SSL_SERVER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_SMIME_SIGN`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_SMIME_SIGN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_SMIME_ENCRYPT`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_SMIME_ENCRYPT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_CRL_SIGN`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_CRL_SIGN`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`X509_PURPOSE_ANY`** (<span class="type">integer</span>)  
+**`X509_PURPOSE_ANY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Padding flags for asymmetric encryption
 ---------------------------------------
 
-**`OPENSSL_PKCS1_PADDING`** (<span class="type">integer</span>)  
+**`OPENSSL_PKCS1_PADDING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_SSLV23_PADDING`** (<span class="type">integer</span>)  
+**`OPENSSL_SSLV23_PADDING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_NO_PADDING`** (<span class="type">integer</span>)  
+**`OPENSSL_NO_PADDING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_PKCS1_OAEP_PADDING`** (<span class="type">integer</span>)  
+**`OPENSSL_PKCS1_OAEP_PADDING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Key types
 ---------
 
-**`OPENSSL_KEYTYPE_RSA`** (<span class="type">integer</span>)  
+**`OPENSSL_KEYTYPE_RSA`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_KEYTYPE_DSA`** (<span class="type">integer</span>)  
+**`OPENSSL_KEYTYPE_DSA`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_KEYTYPE_DH`** (<span class="type">integer</span>)  
+**`OPENSSL_KEYTYPE_DH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_KEYTYPE_EC`** (<span class="type">integer</span>)  
+**`OPENSSL_KEYTYPE_EC`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is only available when PHP is
 compiled with OpenSSL 0.9.8+. Added in PHP 5.2.0. </span>
 
@@ -98,36 +98,36 @@ bitfield which can include one or more of the following values:
 Signature Algorithms
 --------------------
 
-**`OPENSSL_ALGO_DSS1`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_DSS1`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_ALGO_SHA1`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_SHA1`** (<span class="type">int</span>)  
 <span class="simpara"> Used as default algorithm by <span
 class="function">openssl\_sign</span> and <span
 class="function">openssl\_verify</span>. </span>
 
-**`OPENSSL_ALGO_SHA224`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_SHA224`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.8. </span>
 
-**`OPENSSL_ALGO_SHA256`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_SHA256`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.8. </span>
 
-**`OPENSSL_ALGO_SHA384`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_SHA384`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.8. </span>
 
-**`OPENSSL_ALGO_SHA512`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_SHA512`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.8. </span>
 
-**`OPENSSL_ALGO_RMD160`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_RMD160`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.8. </span>
 
-**`OPENSSL_ALGO_MD5`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_MD5`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_ALGO_MD4`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_MD4`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_ALGO_MD2`** (<span class="type">integer</span>)  
+**`OPENSSL_ALGO_MD2`** (<span class="type">int</span>)  
 <span class="simpara"> As of PHP 5.2.13 and PHP 5.3.2, this constant is
 only available if PHP is compiled with MD2 support. This requires
 passing in the -DHAVE\_OPENSSL\_MD2\_H CFLAG when compiling PHP, and
@@ -136,30 +136,30 @@ enable-md2 when compiling OpenSSL 1.0.0+. </span>
 Ciphers
 -------
 
-**`OPENSSL_CIPHER_RC2_40`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_RC2_40`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_CIPHER_RC2_128`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_RC2_128`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_CIPHER_RC2_64`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_RC2_64`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_CIPHER_DES`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_DES`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`OPENSSL_CIPHER_3DES`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_3DES`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 <!-- -->
 
-**`OPENSSL_CIPHER_AES_128_CBC`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_AES_128_CBC`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.0. </span>
 
-**`OPENSSL_CIPHER_AES_192_CBC`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_AES_192_CBC`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.0. </span>
 
-**`OPENSSL_CIPHER_AES_256_CBC`** (<span class="type">integer</span>)  
+**`OPENSSL_CIPHER_AES_256_CBC`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.4.0. </span>
 
 Version constants
@@ -168,7 +168,7 @@ Version constants
 **`OPENSSL_VERSION_TEXT`** (<span class="type">string</span>)  
 <span class="simpara"> Added in PHP 5.2.0. </span>
 
-**`OPENSSL_VERSION_NUMBER`** (<span class="type">integer</span>)  
+**`OPENSSL_VERSION_NUMBER`** (<span class="type">int</span>)  
 <span class="simpara"> Added in PHP 5.2.0. </span>
 
 Server Name Indication constants
@@ -185,7 +185,7 @@ Server Name Indication constants
 Other Constants
 ---------------
 
-**`OPENSSL_ZERO_PADDING`** (<span class="type">boolean</span>)  
+**`OPENSSL_ZERO_PADDING`** (<span class="type">bool</span>)  
 <span class="simpara"> By default encryption operations are padded using
 standard block padding and the padding is checked and removed when
 decrypting. If **`OPENSSL_ZERO_PADDING`** is set in the <span

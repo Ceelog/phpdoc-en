@@ -61,24 +61,24 @@ $array = [
 ```
 
 The <span class="replaceable">key</span> can either be an <span
-class="type">integer</span> or a <span class="type">string</span>. The
-<span class="replaceable">value</span> can be of any type.
+class="type">int</span> or a <span class="type">string</span>. The <span
+class="replaceable">value</span> can be of any type.
 
 Additionally the following <span class="replaceable">key</span> casts
 will occur:
 
 -   <span class="simpara"> <span class="type">String</span>s containing
-    valid decimal <span class="type">integer</span>s, unless the number
-    is preceded by a *+* sign, will be cast to the <span
-    class="type">integer</span> type. E.g. the key *"8"* will actually
-    be stored under *8*. On the other hand *"08"* will not be cast, as
-    it isn't a valid decimal integer. </span>
+    valid decimal <span class="type">int</span>s, unless the number is
+    preceded by a *+* sign, will be cast to the <span
+    class="type">int</span> type. E.g. the key *"8"* will actually be
+    stored under *8*. On the other hand *"08"* will not be cast, as it
+    isn't a valid decimal integer. </span>
 -   <span class="simpara"> <span class="type">Float</span>s are also
-    cast to <span class="type">integer</span>s, which means that the
+    cast to <span class="type">int</span>s, which means that the
     fractional part will be truncated. E.g. the key *8.7* will actually
     be stored under *8*. </span>
 -   <span class="simpara"> <span class="type">Bool</span>s are cast to
-    <span class="type">integer</span>s, too, i.e. the key *true* will
+    <span class="type">int</span>s, too, i.e. the key *true* will
     actually be stored under *1* and the key *false* under *0*. </span>
 -   <span class="simpara"> <span class="type">Null</span> will be cast
     to the empty string, i.e. the key *null* will actually be stored
@@ -115,11 +115,11 @@ As all the keys in the above example are cast to *1*, the value will be
 overwritten on every new element and the last assigned value *"d"* is
 the only one left over.
 
-PHP arrays can contain <span class="type">integer</span> and <span
+PHP arrays can contain <span class="type">int</span> and <span
 class="type">string</span> keys at the same time as PHP does not
 distinguish between indexed and associative arrays.
 
-**Example \#3 Mixed <span class="type">integer</span> and <span
+**Example \#3 Mixed <span class="type">int</span> and <span
 class="type">string</span> keys**
 
 ``` php
@@ -149,7 +149,7 @@ The above example will output:
 
 The <span class="replaceable">key</span> is optional. If it is not
 specified, PHP will use the increment of the largest previously used
-<span class="type">integer</span> key.
+<span class="type">int</span> key.
 
 **Example \#4 Indexed arrays without key**
 
@@ -282,7 +282,7 @@ in an empty pair of brackets (*\[\]*).
 ``` synopsis
 $arr[key] = value;
 $arr[] = value;
-// key may be an integer or string
+// key may be an int or string
 // value may be any value of any type
 ```
 
@@ -321,10 +321,9 @@ unset($arr);    // This deletes the whole array
 > **Note**:
 >
 > As mentioned above, if no key is specified, the maximum of the
-> existing <span class="type">integer</span> indices is taken, and the
-> new key will be that maximum value plus 1 (but at least 0). If no
-> <span class="type">integer</span> indices exist yet, the key will be
-> *0* (zero).
+> existing <span class="type">int</span> indices is taken, and the new
+> key will be that maximum value plus 1 (but at least 0). If no <span
+> class="type">int</span> indices exist yet, the key will be *0* (zero).
 >
 > Note that the maximum integer key used for this *need not currently
 > exist in the <span class="type">array</span>*. It need only have
@@ -592,9 +591,9 @@ way, since they are
 
 ### Converting to array
 
-For any of the types <span class="type">integer</span>, <span
+For any of the types <span class="type">int</span>, <span
 class="type">float</span>, <span class="type">string</span>, <span
-class="type">boolean</span> and <span class="type">resource</span>,
+class="type">bool</span> and <span class="type">resource</span>,
 converting a value to an <span class="type">array</span> results in an
 array with a single element with index zero and the value of the scalar
 which was converted. In other words, *(array)$scalarValue* is exactly

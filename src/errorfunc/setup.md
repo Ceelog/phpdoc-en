@@ -53,7 +53,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`error_reporting` <span class="type">integer</span>  
+`error_reporting` <span class="type">int</span>  
 Set the error reporting level. The parameter is either an integer
 representing a bit field, or named constants. The error\_reporting
 levels and constants are described in
@@ -96,7 +96,7 @@ default value is **`E_ALL`** & \~**`E_NOTICE`** & \~**`E_STRICT`**.
 > **Note**: **PHP Constants outside of PHP**  
 >
 > Using PHP Constants outside of PHP, like in `httpd.conf`, will have no
-> useful meaning so in such cases the <span class="type">integer</span>
+> useful meaning so in such cases the <span class="type">int</span>
 > values are required. And since error levels will be added over time,
 > the maximum value (for **`E_ALL`**) will likely change. So in place of
 > **`E_ALL`** consider using a larger value to cover all bit fields from
@@ -109,7 +109,7 @@ of the output or if they should be hidden from the user.
 
 Value *"stderr"* sends the errors to *stderr* instead of *stdout*. The
 value is available as of PHP 5.2.4. In earlier versions, this directive
-was of type <span class="type">boolean</span>.
+was of type <span class="type">bool</span>.
 
 > **Note**:
 >
@@ -123,12 +123,12 @@ was of type <span class="type">boolean</span>.
 > script has fatal errors. This is because the desired runtime action
 > does not get executed.
 
-`display_startup_errors` <span class="type">boolean</span>  
+`display_startup_errors` <span class="type">bool</span>  
 Even when display\_errors is on, errors that occur during PHP's startup
 sequence are not displayed. It's strongly recommended to keep
 display\_startup\_errors off, except for debugging.
 
-`log_errors` <span class="type">boolean</span>  
+`log_errors` <span class="type">bool</span>  
 Tells whether script error messages should be logged to the server's
 error log or
 <a href="/errorfunc/setup.html#" class="link">error_log</a>. This option
@@ -139,7 +139,7 @@ is thus server-specific.
 > You're strongly advised to use error logging in place of error
 > displaying on production web sites.
 
-`log_errors_max_len` <span class="type">integer</span>  
+`log_errors_max_len` <span class="type">int</span>  
 Set the maximum length of log\_errors in bytes. In
 <a href="/errorfunc/setup.html#" class="link">error_log</a> information
 about the source is added. The default is 1024 and 0 allows to not apply
@@ -147,23 +147,23 @@ any maximum length at all. This length is applied to logged errors,
 displayed errors and also to `$php_errormsg`, but not to explicitly
 called functions such as <span class="function">error\_log</span>.
 
-<span class="simpara">When an <span class="type">integer</span> is used,
-the value is measured in bytes. Shorthand notation, as described in
+<span class="simpara">When an <span class="type">int</span> is used, the
+value is measured in bytes. Shorthand notation, as described in
 <a href="/faq/using.html#faq.using.shorthandbytes" class="link">this FAQ</a>,
 may also be used. </span>
 
-`ignore_repeated_errors` <span class="type">boolean</span>  
+`ignore_repeated_errors` <span class="type">bool</span>  
 Do not log repeated messages. Repeated errors must occur in the same
 file on the same line unless
 <a href="/errorfunc/setup.html#" class="link">ignore_repeated_source</a>
 is set true.
 
-`ignore_repeated_source` <span class="type">boolean</span>  
+`ignore_repeated_source` <span class="type">bool</span>  
 Ignore source of message when ignoring repeated messages. When this
 setting is On you will not log errors with repeated messages from
 different files or sourcelines.
 
-`report_memleaks` <span class="type">boolean</span>  
+`report_memleaks` <span class="type">bool</span>  
 If this parameter is set to On (the default), this parameter will show a
 report of memory leaks detected by the Zend memory manager. This report
 will be sent to stderr on Posix platforms. On Windows, it will be sent
@@ -173,11 +173,11 @@ like
 This parameter only has effect in a debug build and if error\_reporting
 includes **`E_WARNING`** in the allowed list.
 
-`track_errors` <span class="type">boolean</span>  
+`track_errors` <span class="type">bool</span>  
 If enabled, the last error message will always be present in the
 variable `$php_errormsg`.
 
-`html_errors` <span class="type">boolean</span>  
+`html_errors` <span class="type">bool</span>  
 If enabled, error messages will include HTML tags. The format for HTML
 errors produces clickable messages that direct the user to a page
 describing the error or function in causing the error. These references
@@ -187,11 +187,11 @@ are affected by
 
 If disabled, error message will be solely plain text.
 
-`xmlrpc_errors` <span class="type">boolean</span>  
+`xmlrpc_errors` <span class="type">bool</span>  
 If enabled, turns off normal error reporting and formats errors as
 XML-RPC error message.
 
-`xmlrpc_error_number` <span class="type">integer</span>  
+`xmlrpc_error_number` <span class="type">int</span>  
 Used as the value of the XML-RPC faultCode element.
 
 `docref_root` <span class="type">string</span>  

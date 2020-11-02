@@ -1,13 +1,13 @@
 Booleans
 --------
 
-This is the simplest type. A <span class="type">boolean</span> expresses
-a truth value. It can be either **`TRUE`** or **`FALSE`**.
+This is the simplest type. A <span class="type">bool</span> expresses a
+truth value. It can be either **`TRUE`** or **`FALSE`**.
 
 ### Syntax
 
-To specify a <span class="type">boolean</span> literal, use the
-constants **`TRUE`** or **`FALSE`**. Both are case-insensitive.
+To specify a <span class="type">bool</span> literal, use the constants
+**`TRUE`** or **`FALSE`**. Both are case-insensitive.
 
 ``` php
 <?php
@@ -17,7 +17,7 @@ $foo = True; // assign the value TRUE to $foo
 
 Typically, the result of an
 <a href="/language/operators.html" class="link">operator</a> which
-returns a <span class="type">boolean</span> value is passed on to a
+returns a <span class="type">bool</span> value is passed on to a
 <a href="/language/control-structures.html" class="link">control structure</a>.
 
 ``` php
@@ -42,17 +42,17 @@ if ($show_separators) {
 
 ### Converting to boolean
 
-To explicitly convert a value to <span class="type">boolean</span>, use
-the *(bool)* or *(boolean)* casts. However, in most cases the cast is
+To explicitly convert a value to <span class="type">bool</span>, use the
+*(bool)* or *(boolean)* casts. However, in most cases the cast is
 unnecessary, since a value will be automatically converted if an
 operator, function or control structure requires a <span
-class="type">boolean</span> argument.
+class="type">bool</span> argument.
 
 See also
 <a href="/language/types/type-juggling.html" class="link">Type Juggling</a>.
 
-When converting to <span class="type">boolean</span>, the following
-values are considered **`FALSE`**:
+When converting to <span class="type">bool</span>, the following values
+are considered **`FALSE`**:
 
 -   <span class="simpara"> the
     <a href="/language/types/boolean.html" class="link">boolean</a>

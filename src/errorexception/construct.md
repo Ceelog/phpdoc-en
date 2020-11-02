@@ -35,8 +35,8 @@ The severity level of the exception.
 
 > **Note**:
 >
-> While the severity can be any <span class="type">integer</span> value,
-> it is intended that the
+> While the severity can be any <span class="type">int</span> value, it
+> is intended that the
 > <a href="/errorfunc/constants.html" class="link">error constants</a>
 > be used.
 

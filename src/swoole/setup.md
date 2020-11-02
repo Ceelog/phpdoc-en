@@ -40,7 +40,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`swoole.aio_thread_num` <span class="type">integer</span>  
+`swoole.aio_thread_num` <span class="type">int</span>  
 POSIX asynchronous I/O thread number
 
 `swoole.display_errors` <span class="type">string</span>  
@@ -49,7 +49,7 @@ This determines whether Swoole errors should be printed to the screen.
 `swoole.fast_serialize` <span class="type">string</span>  
 Whether to enable Swoole fast\_serialize.
 
-`swoole.unixsock_buffer_size` <span class="type">integer</span>  
+`swoole.unixsock_buffer_size` <span class="type">int</span>  
 Buffer size of Unix socket.
 
 `swoole.use_namespace` <span class="type">string</span>  

@@ -227,7 +227,7 @@ call <span class="function">assert\_options</span>.
 `assertion`  
 The assertion. In PHP 5, this must be either a <span
 class="type">string</span> to be evaluated or a <span
-class="type">boolean</span> to be tested. In PHP 7, this may also be any
+class="type">bool</span> to be tested. In PHP 7, this may also be any
 expression that returns a value, which will be executed and the result
 used to indicate whether the assertion succeeded or failed.
 
@@ -1752,8 +1752,9 @@ Gets options from the command line argument list
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">getopt</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">getopt</span>
+( <span class="methodparam"><span class="type">string</span>
 `$options`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$longopts`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$optind`</span> \]\]
@@ -2267,7 +2268,7 @@ The above example will output something similar to:
 > <a href="/ini/core.html#ini.upload-max-filesize" class="link">upload_max_filesize</a>,
 > are stored in the `php.ini` file in shorthand notation. <span
 > class="function">ini\_get</span> will return the exact string stored
-> in the `php.ini` file and *NOT* its <span class="type">integer</span>
+> in the `php.ini` file and *NOT* its <span class="type">int</span>
 > equivalent. Attempting normal arithmetic functions on these values
 > will not have otherwise expected results. The example above shows one
 > way to convert shorthand notation into bytes, much like how the PHP
@@ -3151,7 +3152,8 @@ Sets the include\_path configuration option
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">set\_include\_path</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$new_include_path`</span> )

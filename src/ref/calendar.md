@@ -772,8 +772,10 @@ Convert Julian Day to Unix timestamp
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">jdtounix</span> (
-<span class="methodparam"><span class="type">int</span> `$jday`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">jdtounix</span> ( <span class="methodparam"><span
+class="type">int</span> `$jday`</span> )
 
 This function will return a Unix timestamp corresponding to the Julian
 Day given in `jday` or **`FALSE`** if `jday` is outside of the allowed

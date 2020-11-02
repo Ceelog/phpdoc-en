@@ -9,7 +9,7 @@ in the next paragraph. Once a constant is defined, it can never be
 changed or undefined.
 
 When using the *const* keyword, only scalar (<span
-class="type">boolean</span>, <span class="type">integer</span>, <span
+class="type">bool</span>, <span class="type">int</span>, <span
 class="type">float</span> and <span class="type">string</span>)
 expressions and constant <span class="type">array</span>s containing
 only scalar expressions are accepted. It is possible to define constants

@@ -301,11 +301,11 @@ Open directory handle
 
 ### Description
 
-<span class="type">resource</span> <span
-class="methodname">opendir</span> ( <span class="methodparam"><span
-class="type">string</span> `$path`</span> \[, <span
-class="methodparam"><span class="type">resource</span> `$context`</span>
-\] )
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">opendir</span>
+( <span class="methodparam"><span class="type">string</span>
+`$path`</span> \[, <span class="methodparam"><span
+class="type">resource</span> `$context`</span> \] )
 
 Opens up a directory handle to be used in subsequent <span
 class="function">closedir</span>, <span class="function">readdir</span>,
@@ -375,7 +375,8 @@ Read entry from directory handle
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">readdir</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">readdir</span>
 (\[ <span class="methodparam"><span class="type">resource</span>
 `$dir_handle`</span> \] )
 

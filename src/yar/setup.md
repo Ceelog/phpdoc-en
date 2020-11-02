@@ -51,10 +51,10 @@ it could be php, json, and msgpack(require built with msgpack support)
 
 `yar.debug` <span class="type">string</span>  
 
-`yar.connect_timeout` <span class="type">integer</span>  
+`yar.connect_timeout` <span class="type">int</span>  
 timeout in ms
 
-`yar.timeout` <span class="type">integer</span>  
+`yar.timeout` <span class="type">int</span>  
 timeout in ms
 
 `yar.expose_info` <span class="type">bool</span>  

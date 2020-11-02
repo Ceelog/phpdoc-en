@@ -12,10 +12,9 @@ packages.
 > very quickly.
 
 The manual can be read online at the
-<a href="https://www.php.net/" class="link external">» PHP.net website</a>,
-and on the numerous mirror sites. For best performance, choose the
-closest mirror. The online version of the PHP manual has currently two
-CSS stylesheets, web friendly and a printer-friendly stylesheet.
+<a href="https://www.php.net/" class="link external">» PHP.net website</a>.
+The online version of the PHP manual has currently two CSS stylesheets,
+web friendly and a printer-friendly stylesheet.
 
 Two notable advantages of the online manual over most of the offline
 formats is the integration of

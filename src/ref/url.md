@@ -5,7 +5,8 @@ Decodes data encoded with MIME base64
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">base64\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$strict`<span
@@ -513,8 +514,7 @@ Specify one of **`PHP_URL_SCHEME`**, **`PHP_URL_HOST`**,
 **`PHP_URL_PATH`**, **`PHP_URL_QUERY`** or **`PHP_URL_FRAGMENT`** to
 retrieve just a specific URL component as a <span
 class="type">string</span> (except when **`PHP_URL_PORT`** is given, in
-which case the return value will be an <span
-class="type">integer</span>).
+which case the return value will be an <span class="type">int</span>).
 
 ### Return Values
 
@@ -536,8 +536,8 @@ present within the array. Potential keys within this array are:
 
 If the `component` parameter is specified, <span
 class="function">parse\_url</span> returns a <span
-class="type">string</span> (or an <span class="type">integer</span>, in
-the case of **`PHP_URL_PORT`**) instead of an <span
+class="type">string</span> (or an <span class="type">int</span>, in the
+case of **`PHP_URL_PORT`**) instead of an <span
 class="type">array</span>. If the requested component doesn't exist
 within the given URL, **`NULL`** will be returned.
 

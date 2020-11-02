@@ -4,10 +4,9 @@ Constructors and Destructors
 ### Constructor
 
 <span class="type">void</span> <span
-class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$args`<span
-class="initializer"> = ""</span></span> \[, <span class="methodparam">
-`$...`</span> \]\] )
+class="methodname">\_\_construct</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`<span
+class="initializer"> = ""</span></span> )
 
 PHP 5 allows developers to declare constructor methods for classes.
 Classes which have a constructor method call this method on each

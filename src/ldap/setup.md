@@ -58,7 +58,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`ldap.max_links` <span class="type">integer</span>  
+`ldap.max_links` <span class="type">int</span>  
 The maximum number of LDAP connections per process.
 
 Resource Types

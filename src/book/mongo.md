@@ -456,89 +456,89 @@ The constants below are defined by this extension, and will only be
 available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
-**`MONGO_STREAMS`** (<span class="type">integer</span>)  
+**`MONGO_STREAMS`** (<span class="type">int</span>)  
 <span class="simpara"> Alias of **`MONGO_SUPPORTS_STREAMS`** </span>
 
-**`MONGO_SUPPORTS_STREAMS`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_STREAMS`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when compiled against PHP Streams (default
 since 1.4.0). </span>
 
-**`MONGO_SUPPORTS_SSL`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_SSL`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when
 <a href="/book/openssl.html" class="xref">OpenSSL</a> is enabled and
 available. </span>
 
-**`MONGO_SUPPORTS_AUTH_MECHANISM_MONGODB_CR`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_AUTH_MECHANISM_MONGODB_CR`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when MongoDB-Challenge/Reponse authentication
 is compiled in. </span>
 
-**`MONGO_SUPPORTS_AUTH_MECHANISM_MONGODB_X509`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_AUTH_MECHANISM_MONGODB_X509`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when x.509 authentication is compiled in.
 </span>
 
-**`MONGO_SUPPORTS_AUTH_MECHANISM_GSSAPI`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_AUTH_MECHANISM_GSSAPI`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when GSSAPI authentication is compiled in.
 </span>
 
-**`MONGO_SUPPORTS_AUTH_MECHANISM_PLAIN`** (<span class="type">integer</span>)  
+**`MONGO_SUPPORTS_AUTH_MECHANISM_PLAIN`** (<span class="type">int</span>)  
 <span class="simpara"> 1 when PLAIN authentication is compiled in.
 </span>
 
-**`MONGO_STREAM_NOTIFY_TYPE_IO_INIT`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_TYPE_IO_INIT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_TYPE_LOG`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_TYPE_LOG`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_IO_READ`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_IO_READ`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_IO_WRITE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_IO_WRITE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_IO_PROGRESS`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_IO_PROGRESS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_IO_COMPLETED`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_IO_COMPLETED`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_INSERT`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_INSERT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_QUERY`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_UPDATE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_UPDATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_DELETE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_DELETE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_GETMORE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_GETMORE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_KILLCURSOR`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_KILLCURSOR`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_BATCHINSERT`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_BATCHINSERT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_RESPONSE_HEADER`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_RESPONSE_HEADER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_WRITE_REPLY`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_WRITE_REPLY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_CMD_INSERT`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_CMD_INSERT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_CMD_UPDATE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_CMD_UPDATE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_CMD_DELETE`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_CMD_DELETE`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`MONGO_STREAM_NOTIFY_LOG_WRITE_BATCH`** (<span class="type">integer</span>)  
+**`MONGO_STREAM_NOTIFY_LOG_WRITE_BATCH`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 Manual
@@ -3549,7 +3549,7 @@ Class synopsis
 
 /\* Properties \*/
 
-<span class="modifier">public</span> <span class="type">boolean</span>
+<span class="modifier">public</span> <span class="type">bool</span>
 `$connected` <span class="initializer"> = **`FALSE`**</span> ;
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -3558,9 +3558,8 @@ Class synopsis
 <span class="modifier">protected</span> <span class="type">string</span>
 `$server` <span class="initializer"> = **`NULL`**</span> ;
 
-<span class="modifier">protected</span> <span
-class="type">boolean</span> `$persistent` <span class="initializer"> =
-**`NULL`**</span> ;
+<span class="modifier">protected</span> <span class="type">bool</span>
+`$persistent` <span class="initializer"> = **`NULL`**</span> ;
 
 /\* Methods \*/
 
@@ -5224,10 +5223,10 @@ Class synopsis
 
 /\* Fields \*/
 
-<span class="modifier">public</span> <span class="type">integer</span>
-`$w` <span class="initializer"> = 1</span> ;
+<span class="modifier">public</span> <span class="type">int</span> `$w`
+<span class="initializer"> = 1</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$wtimeout` <span class="initializer"> = 10000</span> ;
 
 /\* Methods \*/
@@ -7623,10 +7622,10 @@ Class synopsis
 <span class="modifier">public</span> <span class="type">MongoDB</span>
 `$db` <span class="initializer"> = **`NULL`**</span> ;
 
-<span class="modifier">public</span> <span class="type">integer</span>
-`$w` ;
+<span class="modifier">public</span> <span class="type">int</span> `$w`
+;
 
-<span class="modifier">public</span> <span class="type">integer</span>
+<span class="modifier">public</span> <span class="type">int</span>
 `$wtimeout` ;
 
 /\* Methods \*/
@@ -7684,11 +7683,11 @@ class="type">string</span><span class="type">array</span></span>
 <span class="methodname">deleteIndexes</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">distinct</span> ( <span
-class="methodparam"><span class="type">string</span> `$key`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$query`</span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">distinct</span> ( <span class="methodparam"><span
+class="type">string</span> `$key`</span> \[, <span
+class="methodparam"><span class="type">array</span> `$query`</span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">drop</span> ( <span
@@ -7885,10 +7884,8 @@ class="methodparam"><span class="type">array</span> `$pipeline`</span>
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">MongoCollection::aggregate</span> ( <span
-class="methodparam"><span class="type">array</span> `$op`</span> \[,
-<span class="methodparam"><span class="type">array</span> `$op`</span>
-\[, <span class="methodparam"><span class="type">array</span>
-`$...`</span> \]\] )
+class="methodparam"><span class="type">array</span> `$op`</span> , <span
+class="methodparam"><span class="type">array</span> `$ops`</span> )
 
 The MongoDB
 <a href="https://docs.mongodb.com/manual/core/aggregation-pipeline/" class="link external">» aggregation framework</a>
@@ -7937,10 +7934,7 @@ Or
 `op`  
 First pipeline operator.
 
-`op`  
-The second pipeline operator.
-
-`...`  
+`ops`  
 Additional pipeline operators.
 
 ### Return Values
@@ -8890,18 +8884,18 @@ include:
 </tr>
 <tr class="even">
 <td><var class="varname">limit</var></td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td>The maximum number of matching documents to return.</td>
 </tr>
 <tr class="odd">
 <td><var class="varname">maxTimeMS</var></td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td><p>Specifies a cumulative time limit in milliseconds for processing the operation (does not include idle time). If the operation is not completed within the timeout period, a <span class="classname">MongoExecutionTimeoutException</span> will be thrown.</p>
 <span class="simpara">This option is only supported in MongoDB 2.6+.</span></td>
 </tr>
 <tr class="even">
 <td><var class="varname">skip</var></td>
-<td><span class="type">integer</span></td>
+<td><span class="type">int</span></td>
 <td>The number of matching documents to skip before returning results.</td>
 </tr>
 </tbody>
@@ -9462,8 +9456,9 @@ Retrieve a list of distinct values for the given key across a collection
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">MongoCollection::distinct</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">MongoCollection::distinct</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$query`</span> \] )
@@ -10319,14 +10314,14 @@ Optionally only return these fields.
 An array of options to apply, such as remove the match document from the
 DB and return it.
 
-| Option                                     | Description                                                                                                                                                                                                                                                               |
-|--------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| `sort` <span class="type">array</span>     | Determines which document the operation will modify if the query selects multiple documents. findAndModify will modify the first document in the sort order specified by this argument.                                                                                   |
-| `remove` <span class="type">boolean</span> | Optional if `update` field exists. When **`TRUE`**, removes the selected document. The default is **`FALSE`**.                                                                                                                                                            |
-| `update` <span class="type">array</span>   | Optional if `remove` field exists. Performs an update of the selected document.                                                                                                                                                                                           |
-| `new` <span class="type">boolean</span>    | Optional. When **`TRUE`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`FALSE`**.                                                                                   |
-| `upsert` <span class="type">boolean</span> | Optional. Used in conjunction with the `update` field. When **`TRUE`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`NULL`** when upsert is **`TRUE`**. |
-| ``                                         |                                                                                                                                                                                                                                                                           |
+| Option                                   | Description                                                                                                                                                                                                                                                               |
+|------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| `sort` <span class="type">array</span>   | Determines which document the operation will modify if the query selects multiple documents. findAndModify will modify the first document in the sort order specified by this argument.                                                                                   |
+| `remove` <span class="type">bool</span>  | Optional if `update` field exists. When **`TRUE`**, removes the selected document. The default is **`FALSE`**.                                                                                                                                                            |
+| `update` <span class="type">array</span> | Optional if `remove` field exists. Performs an update of the selected document.                                                                                                                                                                                           |
+| `new` <span class="type">bool</span>     | Optional. When **`TRUE`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`FALSE`**.                                                                                   |
+| `upsert` <span class="type">bool</span>  | Optional. Used in conjunction with the `update` field. When **`TRUE`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`NULL`** when upsert is **`TRUE`**. |
+| ``                                       |                                                                                                                                                                                                                                                                           |
 
 ### Return Values
 
@@ -12726,10 +12721,10 @@ class="oointerface">, <span class="interfacename">Iterator</span>
 
 /\* Static Fields \*/
 
-<span class="modifier">static</span> <span class="type">boolean</span>
+<span class="modifier">static</span> <span class="type">bool</span>
 `$slaveOkay` <span class="initializer"> = **`FALSE`**</span> ;
 
-<span class="modifier">static</span> <span class="type">integer</span>
+<span class="modifier">static</span> <span class="type">int</span>
 `$timeout` <span class="initializer"> = 30000</span> ;
 
 /\* Methods \*/
@@ -19852,7 +19847,7 @@ depends on the batch's operation type.
 <td><strong><code>MongoWriteBatch::COMMAND_DELETE</code></strong></td>
 <td><p>Raw delete operation.</p>
 <p>Required keys are: <em>"q"</em> and <em>"limit"</em>, which correspond to the <a href="/book/mongo.html#" class="link"><code class="parameter">$criteria</code></a> parameter and <a href="/book/mongo.html#" class="link"><em>"justOne"</em></a> option of <span class="function">MongoCollection::remove</span>, respectively.</p>
-<p>The <em>"limit"</em> option is an <span class="type">integer</span>; however, MongoDB only supports <em>0</em> (i.e. remove all matching documents) and <em>1</em> (i.e. remove at most one matching document) at this time.</p></td>
+<p>The <em>"limit"</em> option is an <span class="type">int</span>; however, MongoDB only supports <em>0</em> (i.e. remove all matching documents) and <em>1</em> (i.e. remove at most one matching document) at this time.</p></td>
 </tr>
 </tbody>
 </table>

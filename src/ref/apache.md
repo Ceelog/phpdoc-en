@@ -85,7 +85,8 @@ Fetch Apache version
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_get\_version</span> ( <span
 class="methodparam">void</span> )
 
@@ -448,7 +449,8 @@ Fetch all HTTP response headers
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_response\_headers</span> ( <span
 class="methodparam">void</span> )
 

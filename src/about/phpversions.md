@@ -4,7 +4,7 @@ PHP versions documented in this manual
 The manual contains information about past, current, and future versions
 of PHP. Changes in behaviour are documented as notes, changelogs, and
 inline text within the manual pages. The earliest documented version is
-PHP 5.0.0.
+PHP 7.0.0.
 
 When documentation exists for the latest (unreleased) developmental
 versions of PHP, it will be labeled as either "available in Git" or
@@ -17,7 +17,7 @@ within the
 page.
 
 And to clarify, the manual will refer to major, minor and point PHP
-releases. Using PHP *5.3.1* as an example, the *5* refers to the major
+releases. Using PHP *7.3.1* as an example, the *7* refers to the major
 version, *3* to minor, and *1* is the point release. Typically PHP only
 adds new features to major and minor releases, and fixes bugs in point
 releases. However, this convention is not always true.

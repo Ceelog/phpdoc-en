@@ -424,7 +424,8 @@ Returns associative array with detailed info about given date/time
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$datetime`</span> )
 
@@ -548,7 +549,8 @@ begin/end
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">date\_sun\_info</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
@@ -735,11 +737,11 @@ a given day (specified as a `timestamp`) and location.
 The `timestamp` of the day from which the sunrise time is taken.
 
 `returnFormat`  
-| constant                 | description                                                         | example     |
-|--------------------------|---------------------------------------------------------------------|-------------|
-| SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>              | 16:46       |
-| SUNFUNCS\_RET\_DOUBLE    | returns the result as <span class="type">float</span>               | 16.78243132 |
-| SUNFUNCS\_RET\_TIMESTAMP | returns the result as <span class="type">integer</span> (timestamp) | 1095034606  |
+| constant                 | description                                                     | example     |
+|--------------------------|-----------------------------------------------------------------|-------------|
+| SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>          | 16:46       |
+| SUNFUNCS\_RET\_DOUBLE    | returns the result as <span class="type">float</span>           | 16.78243132 |
+| SUNFUNCS\_RET\_TIMESTAMP | returns the result as <span class="type">int</span> (timestamp) | 1095034606  |
 
 `latitude`  
 Defaults to North, pass in a negative value for South. See also:
@@ -851,11 +853,11 @@ given day (specified as a `timestamp`) and location.
 The `timestamp` of the day from which the sunset time is taken.
 
 `returnFormat`  
-| constant                 | description                                                         | example     |
-|--------------------------|---------------------------------------------------------------------|-------------|
-| SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>              | 16:46       |
-| SUNFUNCS\_RET\_DOUBLE    | returns the result as <span class="type">float</span>               | 16.78243132 |
-| SUNFUNCS\_RET\_TIMESTAMP | returns the result as <span class="type">integer</span> (timestamp) | 1095034606  |
+| constant                 | description                                                     | example     |
+|--------------------------|-----------------------------------------------------------------|-------------|
+| SUNFUNCS\_RET\_STRING    | returns the result as <span class="type">string</span>          | 16:46       |
+| SUNFUNCS\_RET\_DOUBLE    | returns the result as <span class="type">float</span>           | 16.78243132 |
+| SUNFUNCS\_RET\_TIMESTAMP | returns the result as <span class="type">int</span> (timestamp) | 1095034606  |
 
 `latitude`  
 Defaults to North, pass in a negative value for South. See also:
@@ -1011,10 +1013,10 @@ Format accepted by <span
 class="function">DateTimeInterface::format</span>.
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
@@ -1171,10 +1173,10 @@ date information of the `timestamp`, or the current local time if no
 ### Parameters
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
@@ -1314,10 +1316,10 @@ the formatting options for the <span class="function">date</span>
 function.
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
@@ -1426,7 +1428,7 @@ result.
 
 ### Return Values
 
-Returns a <span class="type">integer</span> Unix timestamp.
+Returns a <span class="type">int</span> Unix timestamp.
 
 ### Examples
 
@@ -1469,10 +1471,10 @@ Eastern Standard Time (GMT -0500), the first line below prints "Dec 31
 See description in <span class="function">strftime</span>.
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
@@ -1544,17 +1546,17 @@ parameter.
 | *Z*                | Timezone offset in seconds                                                                                          |
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
-Returns an <span class="type">integer</span>.
+Returns an <span class="type">int</span>.
 
 As <span class="function">idate</span> always returns an <span
-class="type">integer</span> and as they can't start with a "0", <span
+class="type">int</span> and as they can't start with a "0", <span
 class="function">idate</span> may return fewer digits than you would
 expect. See the example below.
 
@@ -1606,10 +1608,10 @@ identical to that of the structure returned by the C function call.
 ### Parameters
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 `associative`  
 If set to **`FALSE`** or not supplied then the array is returned as a
@@ -2076,10 +2078,10 @@ the offset or abbreviation.
 implementation of this function.
 
 `timestamp`  
-The optional `timestamp` parameter is an <span
-class="type">integer</span> Unix timestamp that defaults to the current
-local time if a `timestamp` is not given. In other words, it defaults to
-the value of <span class="function">time</span>.
+The optional `timestamp` parameter is an <span class="type">int</span>
+Unix timestamp that defaults to the current local time if a `timestamp`
+is not given. In other words, it defaults to the value of <span
+class="function">time</span>.
 
 ### Return Values
 
@@ -2357,10 +2359,11 @@ Parse a time/date generated with <span class="function">strftime</span>
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">strptime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$date`</span> , <span class="methodparam"><span
-class="type">string</span> `$format`</span> )
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
+class="methodname">strptime</span> ( <span class="methodparam"><span
+class="type">string</span> `$date`</span> , <span
+class="methodparam"><span class="type">string</span> `$format`</span> )
 
 <span class="function">strptime</span> returns an array with the `date`
 parsed, or **`FALSE`** on error.
@@ -2688,7 +2691,8 @@ Returns the timezone name from abbreviation
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">timezone\_name\_from\_abbr</span> ( <span
 class="methodparam"><span class="type">string</span> `$abbr`</span> \[,
 <span class="methodparam"><span class="type">int</span>

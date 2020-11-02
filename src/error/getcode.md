@@ -18,7 +18,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the error code as <span class="type">integer</span>
+Returns the error code as <span class="type">int</span>
 
 ### Examples
 

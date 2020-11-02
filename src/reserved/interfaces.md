@@ -607,23 +607,25 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">Closure</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">Closure</span><span class="type">false</span></span> <span
 class="methodname">bind</span> ( <span class="methodparam"><span
 class="type">Closure</span> `$closure`</span> , <span
 class="methodparam"><span class="type">object</span> `$newthis`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
 `$newscope` <span class="initializer"> = "static"</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">Closure</span>
-<span class="methodname">bindTo</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">Closure</span><span class="type">false</span></span> <span
+class="methodname">bindTo</span> ( <span class="methodparam"><span
 class="type">object</span> `$newthis`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$newscope` <span
 class="initializer"> = "static"</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">call</span> ( <span class="methodparam"><span
-class="type">object</span> `$newthis`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \] )
+class="type">object</span> `$newthis`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">Closure</span> <span

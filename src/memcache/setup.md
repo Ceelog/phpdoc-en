@@ -61,14 +61,14 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`memcache.allow_failover` <span class="type">boolean</span>  
+`memcache.allow_failover` <span class="type">bool</span>  
 Whether to transparently failover to other servers on errors.
 
-`memcache.max_failover_attempts` <span class="type">integer</span>  
+`memcache.max_failover_attempts` <span class="type">int</span>  
 Defines how many servers to try when setting and getting data. Used only
 in conjunction with memcache.allow\_failover.
 
-`memcache.chunk_size` <span class="type">integer</span>  
+`memcache.chunk_size` <span class="type">int</span>  
 Data will be transferred in chunks of this size, setting the value lower
 requires more network writes. Try increasing this value to 32768 if
 noticing otherwise inexplicable slowdowns.
@@ -102,13 +102,13 @@ class="function">Memcache::addServer</span> method. For example
 
 `memcache.protocol` <span class="type">string</span>  
 
-`memcache.redundancy` <span class="type">integer</span>  
+`memcache.redundancy` <span class="type">int</span>  
 
-`memcache.session_redundancy` <span class="type">integer</span>  
+`memcache.session_redundancy` <span class="type">int</span>  
 
-`memcache.compress_threshold` <span class="type">integer</span>  
+`memcache.compress_threshold` <span class="type">int</span>  
 
-`memcache.lock_timeout` <span class="type">integer</span>  
+`memcache.lock_timeout` <span class="type">int</span>  
 
 Resource Types
 --------------

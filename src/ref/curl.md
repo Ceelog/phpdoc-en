@@ -204,7 +204,8 @@ URL encodes the given string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_escape</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ch`</span> , <span
 class="methodparam"><span class="type">string</span> `$str`</span> )
@@ -837,7 +838,8 @@ Return the last multi curl error number
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_multi\_errno</span> ( <span
 class="methodparam"><span class="type">resource</span> `$mh`</span> )
 
@@ -1910,7 +1912,7 @@ values of the `option` parameter:
 </tbody>
 </table>
 
-`value` should be an <span class="type">integer</span> for the following
+`value` should be an <span class="type">int</span> for the following
 values of the `option` parameter:
 
 <table>
@@ -2755,7 +2757,8 @@ Return the last share curl error number
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_share\_errno</span> ( <span
 class="methodparam"><span class="type">resource</span> `$sh`</span> )
 
@@ -3010,7 +3013,8 @@ Decodes the given URL encoded string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_unescape</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ch`</span> ,
 <span class="methodparam"><span class="type">string</span> `$str`</span>

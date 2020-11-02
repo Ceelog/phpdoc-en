@@ -645,8 +645,8 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">execute</span> ( <span
 class="methodparam"><span class="type">callable</span> `$entry`</span> ,
-<span class="methodparam"><span class="type">string</span> `$...`</span>
-)
+<span class="methodparam"><span class="type">string</span>
+`$args`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Yaf\_Application</span> <span
@@ -1027,8 +1027,8 @@ Execute a callback
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Yaf\_Application::execute</span> ( <span
 class="methodparam"><span class="type">callable</span> `$entry`</span> ,
-<span class="methodparam"><span class="type">string</span> `$...`</span>
-)
+<span class="methodparam"><span class="type">string</span>
+`$args`</span> )
 
 This method is typically used to run Yaf\_Application in a crontab work.
 Make the crontab work can also use the autoloader and Bootstrap
@@ -1039,7 +1039,7 @@ mechanism.
 `entry`  
 a valid callback
 
-`...`  
+`args`  
 parameters will pass to the callback
 
 ### Return Values
@@ -4365,9 +4365,8 @@ class="ooclass"> <span class="modifier">extends</span>
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span><span class="type">mixed</span> <span
-class="methodname">execute</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$arg`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...`</span> \]\] )
+class="methodname">execute</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$args`</span> )
 
 <span class="modifier">public</span><span
 class="type">Yaf\_Controller\_Abstract</span> <span
@@ -4486,10 +4485,8 @@ Action entry point
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span><span class="type">mixed</span> <span
-class="methodname">Yaf\_Action\_Abstract::execute</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$arg`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\]\] )
+class="methodname">Yaf\_Action\_Abstract::execute</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$args`</span> )
 
 user should always define this method for a action, this is the entry
 point of an action. <span
@@ -4503,7 +4500,7 @@ agruments.
 
 ### Parameters
 
-This function has no parameters.
+`args`  
 
 ### Return Values
 
@@ -6741,7 +6738,7 @@ This function has no parameters.
 
 ### Return Values
 
-<span class="type">boolean</span>
+<span class="type">bool</span>
 
 ### See Also
 

@@ -42,7 +42,7 @@ Here's a short explanation of the configuration directives.
 `tidy.default_config` <span class="type">string</span>  
 Default path for tidy config file.
 
-`tidy.clean_output` <span class="type">boolean</span>  
+`tidy.clean_output` <span class="type">bool</span>  
 Turns on/off the output repairing by Tidy.
 
 **Warning**

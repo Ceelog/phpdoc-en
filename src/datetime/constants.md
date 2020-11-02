@@ -11,12 +11,12 @@ Following constants exists since PHP 5.1.2 and specify a format returned
 by functions <span class="function">date\_sunrise</span> and <span
 class="function">date\_sunset</span>.
 
-**`SUNFUNCS_RET_TIMESTAMP`** (<span class="type">integer</span>)  
+**`SUNFUNCS_RET_TIMESTAMP`** (<span class="type">int</span>)  
 <span class="simpara"> Timestamp </span>
 
-**`SUNFUNCS_RET_STRING`** (<span class="type">integer</span>)  
+**`SUNFUNCS_RET_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> Hours:minutes (example: 08:02) </span>
 
-**`SUNFUNCS_RET_DOUBLE`** (<span class="type">integer</span>)  
+**`SUNFUNCS_RET_DOUBLE`** (<span class="type">int</span>)  
 <span class="simpara"> Hours as floating point number (example 8.75)
 </span>

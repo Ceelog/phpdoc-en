@@ -60,7 +60,7 @@ For information on converting <span class="type">string</span>s to <span
 class="type">float</span>, see
 <a href="/language/types/string.html#language.types.string.conversion" class="link">String conversion to numbers</a>.
 For values of other types, the conversion is performed by converting the
-value to <span class="type">integer</span> first and then to <span
+value to <span class="type">int</span> first and then to <span
 class="type">float</span>. See
 <a href="/language/types/integer.html#language.types.integer.casting" class="link">Converting to integer</a>
 for more information.

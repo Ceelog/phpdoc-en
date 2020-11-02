@@ -901,8 +901,8 @@ class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
-class="methodname">contains</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+class="methodname">contains</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">Ds\\Sequence</span>
@@ -928,9 +928,8 @@ class="type">int</span> `$index`</span> )
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">void</span> <span
 class="methodname">insert</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="type">int</span> `$index`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">string</span> <span
@@ -957,8 +956,8 @@ class="methodname">pop</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">void</span> <span
-class="methodname">push</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+class="methodname">push</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">mixed</span> <span
@@ -1016,7 +1015,8 @@ class="methodparam"><span class="type">callable</span>
 `$comparator`</span> \] )
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">number</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
 class="methodname">sum</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">abstract</span> <span
@@ -1192,9 +1192,8 @@ Determines if the sequence contains given values
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">bool</span> <span
-class="methodname">Ds\\Sequence::contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="methodname">Ds\\Sequence::contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Determines if the sequence contains all values.
 
@@ -1492,9 +1491,9 @@ Inserts values at a given index
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">void</span> <span
 class="methodname">Ds\\Sequence::insert</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
+class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$...values`</span> \] )
+`$values`</span> )
 
 Inserts values into the sequence at a given index.
 
@@ -1842,9 +1841,8 @@ Adds values to the end of the sequence
 
 <span class="modifier">abstract</span> <span
 class="modifier">public</span> <span class="type">void</span> <span
-class="methodname">Ds\\Sequence::push</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="methodname">Ds\\Sequence::push</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Adds values to the end of the sequence.
 
@@ -2438,9 +2436,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -2528,9 +2526,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -2594,7 +2592,8 @@ Returns the sum of all values in the sequence
 ### Description
 
 <span class="modifier">abstract</span> <span
-class="modifier">public</span> <span class="type">number</span> <span
+class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
 class="methodname">Ds\\Sequence::sum</span> ( <span
 class="methodparam">void</span> )
 
@@ -2765,9 +2764,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span
 class="type">Ds\\Vector</span> <span class="methodname">copy</span> (
@@ -2792,9 +2790,8 @@ class="type">int</span> `$index`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">insert</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="type">int</span> `$index`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isEmpty</span> ( <span
@@ -2823,8 +2820,8 @@ class="type">Ds\\Vector</span> <span class="methodname">merge</span> (
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">push</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+<span class="methodname">push</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">reduce</span> ( <span class="methodparam"><span
@@ -2872,9 +2869,9 @@ class="type">Ds\\Vector</span> <span class="methodname">sorted</span>
 (\[ <span class="methodparam"><span class="type">callable</span>
 `$comparator`</span> \] )
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">sum</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">sum</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -3151,9 +3148,8 @@ Determines if the vector contains given values
 ### Description
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Ds\\Vector::contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Vector::contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Determines if the vector contains all values.
 
@@ -3508,9 +3504,9 @@ Inserts values at a given index
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Ds\\Vector::insert</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
+class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$...values`</span> \] )
+`$values`</span> )
 
 Inserts values into the vector at a given index.
 
@@ -3903,9 +3899,8 @@ Adds values to the end of the vector
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Vector::push</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Vector::push</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Adds values to the end of the vector.
 
@@ -4488,9 +4483,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -4578,9 +4573,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -4642,8 +4637,9 @@ Returns the sum of all values in the vector
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">Ds\\Vector::sum</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">Ds\\Vector::sum</span> ( <span
 class="methodparam">void</span> )
 
 Returns the sum of all values in the vector.
@@ -4872,9 +4868,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">Ds\\Deque</span>
 <span class="methodname">copy</span> ( <span
@@ -4899,9 +4894,8 @@ class="type">int</span> `$index`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">insert</span> ( <span class="methodparam"><span
-class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="type">int</span> `$index`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isEmpty</span> ( <span
@@ -4928,8 +4922,8 @@ class="type">mixed</span> `$values`</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">push</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+<span class="methodname">push</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">reduce</span> ( <span class="methodparam"><span
@@ -4976,9 +4970,9 @@ class="type">callable</span> `$comparator`</span> \] )
 class="methodparam"><span class="type">callable</span>
 `$comparator`</span> \] )
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">sum</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">sum</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -5254,9 +5248,8 @@ Determines if the deque contains given values
 ### Description
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Ds\\Deque::contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Deque::contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Determines if the deque contains all values.
 
@@ -5608,9 +5601,9 @@ Inserts values at a given index
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">Ds\\Deque::insert</span> ( <span
-class="methodparam"><span class="type">int</span> `$index`</span> \[,
+class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$...values`</span> \] )
+`$values`</span> )
 
 Inserts values into the deque at a given index.
 
@@ -6000,9 +5993,8 @@ Adds values to the end of the deque
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Deque::push</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Deque::push</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Adds values to the end of the deque.
 
@@ -6581,9 +6573,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -6670,9 +6662,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -6734,8 +6726,9 @@ Returns the sum of all values in the deque
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">Ds\\Deque::sum</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">Ds\\Deque::sum</span> ( <span
 class="methodparam">void</span> )
 
 Returns the sum of all values in the deque.
@@ -7062,9 +7055,9 @@ class="type">callable</span> `$comparator`</span> \] )
 class="methodparam"><span class="type">callable</span>
 `$comparator`</span> \] )
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">sum</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">sum</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -7325,9 +7318,8 @@ Creates a new instance
 ### Description
 
 <span class="modifier">public</span> <span
-class="methodname">Ds\\Map::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="methodname">Ds\\Map::\_\_construct</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Creates a new instance, using either a <span
 class="classname">traversable</span> object or an <span
@@ -8015,9 +8007,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -8132,9 +8124,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -9231,9 +9223,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -9346,9 +9338,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -9437,8 +9429,9 @@ Returns the sum of all values in the map
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">Ds\\Map::sum</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">Ds\\Map::sum</span> ( <span
 class="methodparam">void</span> )
 
 Returns the sum of all values in the map.
@@ -10045,8 +10038,8 @@ class="oointerface">, <span class="interfacename">ArrayAccess</span>
 /\* Methods \*/
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">add</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+<span class="methodname">add</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">allocate</span> ( <span
@@ -10061,9 +10054,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">Ds\\Set</span>
 <span class="methodname">copy</span> ( <span
@@ -10113,9 +10105,8 @@ class="methodparam"><span class="type">mixed</span> `$initial`</span> \]
 )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">remove</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">remove</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">reverse</span> ( <span
@@ -10139,9 +10130,9 @@ class="type">callable</span> `$comparator`</span> \] )
 class="methodparam"><span class="type">callable</span>
 `$comparator`</span> \] )
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">sum</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">sum</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -10177,9 +10168,8 @@ Adds values to the set
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Set::add</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Set::add</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Adds all given values to the set that haven't already been added.
 
@@ -10464,9 +10454,8 @@ Creates a new instance
 ### Description
 
 <span class="modifier">public</span> <span
-class="methodname">Ds\\Set::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+class="methodname">Ds\\Set::\_\_construct</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Creates a new instance, using either a <span
 class="classname">traversable</span> object or an <span
@@ -10514,9 +10503,8 @@ Determines if the set contains all values
 ### Description
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Ds\\Set::contains</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Set::contains</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Determines if the set contains all values.
 
@@ -11232,9 +11220,8 @@ Removes all given values from the set
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Set::remove</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Set::remove</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Removes all given `values` from the set, ignoring any that are not in
 the set.
@@ -11491,9 +11478,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -11580,9 +11567,9 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 **Caution**
 Returning *non-integer* values from the comparison function, such as
 <span class="type">float</span>, will result in an internal cast to
-<span class="type">integer</span> of the callback's return value. So
-values such as 0.99 and 0.1 will both be cast to an integer value of 0,
-which will compare such values as equal.
+<span class="type">int</span> of the callback's return value. So values
+such as 0.99 and 0.1 will both be cast to an integer value of 0, which
+will compare such values as equal.
 
 ### Return Values
 
@@ -11644,8 +11631,9 @@ Returns the sum of all values in the set
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">number</span>
-<span class="methodname">Ds\\Set::sum</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">float</span></span> <span
+class="methodname">Ds\\Set::sum</span> ( <span
 class="methodparam">void</span> )
 
 Returns the sum of all values in the set.
@@ -11911,8 +11899,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">push</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+<span class="methodname">push</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -12286,9 +12274,8 @@ Pushes values onto the stack
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Stack::push</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Stack::push</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Pushes `values` onto the stack.
 
@@ -12433,8 +12420,8 @@ class="methodparam">void</span> )
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">push</span> (\[ <span class="methodparam"><span
-class="type">mixed</span> `$...values`</span> \] )
+<span class="methodname">push</span> ( <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">toArray</span> ( <span
@@ -12863,9 +12850,8 @@ Pushes values into the queue
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Ds\\Queue::push</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$...values`</span>
-\] )
+<span class="methodname">Ds\\Queue::push</span> ( <span
+class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Pushes `values` into the queue.
 

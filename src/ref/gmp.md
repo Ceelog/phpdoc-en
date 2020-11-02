@@ -154,7 +154,8 @@ Calculates binomial coefficient
 
 ### Description
 
-<span class="type">GMP</span> <span
+<span class="type"><span class="type">GMP</span><span
+class="type">false</span></span> <span
 class="methodname">gmp\_binomial</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$n`</span> , <span
 class="methodparam"><span class="type">int</span> `$k`</span> )
@@ -626,7 +627,8 @@ Export to a binary string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gmp\_export</span> ( <span class="methodparam"><span
 class="type">GMP</span> `$gmpnumber`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$word_size`<span
@@ -908,7 +910,8 @@ Import from a binary string
 
 ### Description
 
-<span class="type">GMP</span> <span
+<span class="type"><span class="type">GMP</span><span
+class="type">false</span></span> <span
 class="methodname">gmp\_import</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$word_size`<span
@@ -1033,7 +1036,7 @@ class="methodname">gmp\_intval</span> ( <span class="methodparam"><span
 class="type">GMP</span> `$gmpnumber`</span> )
 
 This function converts GMP number into native PHP <span
-class="type">integer</span>s.
+class="type">int</span>s.
 
 ### Parameters
 
@@ -1045,7 +1048,7 @@ latter to a number.
 
 ### Return Values
 
-The <span class="type">integer</span> value of `gmpnumber`.
+The <span class="type">int</span> value of `gmpnumber`.
 
 ### Examples
 
@@ -1668,7 +1671,7 @@ latter to a number.
 
 ### Return Values
 
-The population count of `a`, as an <span class="type">integer</span>.
+The population count of `a`, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -2173,8 +2176,8 @@ The starting bit.
 
 ### Return Values
 
-Returns the index of the found bit, as an <span
-class="type">integer</span>. The index starts from 0.
+Returns the index of the found bit, as an <span class="type">int</span>.
+The index starts from 0.
 
 ### Examples
 
@@ -2227,8 +2230,8 @@ The starting bit.
 
 ### Return Values
 
-Returns the index of the found bit, as an <span
-class="type">integer</span>. If no set bit is found, -1 is returned.
+Returns the index of the found bit, as an <span class="type">int</span>.
+If no set bit is found, -1 is returned.
 
 ### Examples
 
@@ -2375,7 +2378,7 @@ Checks the sign of a number.
 Either a GMP number <span class="type">resource</span> in PHP 5.5 and
 earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
 later, or a numeric string provided that it is possible to convert the
-latter to an <span class="type">integer</span>.
+latter to an <span class="type">int</span>.
 
 ### Return Values
 

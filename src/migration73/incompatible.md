@@ -212,10 +212,9 @@ autoloaders were executed and exceptions were chained.
 
 Mathematic operations involving
 <a href="/book/simplexml.html" class="link">SimpleXML</a> objects will
-now treat the text as an <span class="type">integer</span> or <span
+now treat the text as an <span class="type">int</span> or <span
 class="type">float</span>, whichever is more appropriate. Previously
-values were treated as <span class="type">integer</span>s
-unconditionally.
+values were treated as <span class="type">int</span>s unconditionally.
 
 ### Incoming Cookies
 

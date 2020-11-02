@@ -280,8 +280,8 @@ method to string would cause **`E_RECOVERABLE_ERROR`**.
 ### <a href="/language/oop5/magic.html#object.invoke" class="link">__invoke()</a>
 
 <span class="type">mixed</span> <span
-class="methodname">\_\_invoke</span> (\[ <span class="methodparam">
-`$...`</span> \] )
+class="methodname">\_\_invoke</span> ( <span class="methodparam">
+`$values`</span> )
 
 The
 <a href="/language/oop5/magic.html#object.invoke" class="link">__invoke()</a>

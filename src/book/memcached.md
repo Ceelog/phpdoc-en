@@ -197,7 +197,8 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$expiration`</span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">decrement</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -207,7 +208,8 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$expiry`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">decrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -251,8 +253,9 @@ class="initializer"> = 0</span></span> \] )
 <span class="methodname">fetch</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">fetchAll</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">fetchAll</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -267,8 +270,9 @@ class="methodparam"><span class="type">callable</span>
 `$cache_cb`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$$flags`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getAllKeys</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getAllKeys</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -302,8 +306,9 @@ class="methodparam"><span class="type">array</span> `$keys`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getMultiByKey</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getMultiByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
 class="type">array</span> `$keys`</span> \[, <span
@@ -339,7 +344,8 @@ class="methodparam">void</span> )
 <span class="methodname">getVersion</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">increment</span> ( <span class="methodparam"><span
 class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -349,7 +355,8 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$expiry`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">incrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -986,7 +993,8 @@ Decrement numeric item's value
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::decrement</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$offset`<span
@@ -1067,7 +1075,8 @@ Decrement numeric item's value, stored on a specific server
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::decrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
@@ -1394,8 +1403,9 @@ Fetch all the remaining results
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::fetchAll</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::fetchAll</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">Memcached::fetchAll</span> retrieves all the
@@ -1604,8 +1614,9 @@ Gets the keys stored on all the servers
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::getAllKeys</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::getAllKeys</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">Memcached::getAllKeys</span> queries each
@@ -2039,8 +2050,9 @@ Retrieve multiple items from a specific server
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::getMultiByKey</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::getMultiByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span
 class="type">array</span> `$keys`</span> \[, <span
@@ -2480,7 +2492,8 @@ Increment numeric item's value
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::increment</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$offset`<span
@@ -2554,7 +2567,8 @@ Increment numeric item's value, stored on a specific server
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">Memcached::incrementByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> , <span class="methodparam"><span

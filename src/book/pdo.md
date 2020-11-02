@@ -247,90 +247,90 @@ dynamically loaded at runtime.
 PDO uses class constants since PHP 5.1. Prior releases use global
 constants in the form **`PDO_PARAM_BOOL`**.
 
-**`PDO::PARAM_BOOL`** (<span class="type">integer</span>)  
+**`PDO::PARAM_BOOL`** (<span class="type">int</span>)  
 <span class="simpara"> Represents a boolean data type. </span>
 
-**`PDO::PARAM_NULL`** (<span class="type">integer</span>)  
+**`PDO::PARAM_NULL`** (<span class="type">int</span>)  
 <span class="simpara"> Represents the SQL NULL data type. </span>
 
-**`PDO::PARAM_INT`** (<span class="type">integer</span>)  
+**`PDO::PARAM_INT`** (<span class="type">int</span>)  
 <span class="simpara"> Represents the SQL INTEGER data type. </span>
 
-**`PDO::PARAM_STR`** (<span class="type">integer</span>)  
+**`PDO::PARAM_STR`** (<span class="type">int</span>)  
 <span class="simpara"> Represents the SQL CHAR, VARCHAR, or other string
 data type. </span>
 
-**`PDO::PARAM_STR_NATL`** (<span class="type">integer</span>)  
+**`PDO::PARAM_STR_NATL`** (<span class="type">int</span>)  
 <span class="simpara"> Flag to denote a string uses the national
 character set. </span> <span class="simpara"> Available since PHP 7.2.0
 </span>
 
-**`PDO::PARAM_STR_CHAR`** (<span class="type">integer</span>)  
+**`PDO::PARAM_STR_CHAR`** (<span class="type">int</span>)  
 <span class="simpara"> Flag to denote a string uses the regular
 character set. </span> <span class="simpara"> Available since PHP 7.2.0
 </span>
 
-**`PDO::PARAM_LOB`** (<span class="type">integer</span>)  
+**`PDO::PARAM_LOB`** (<span class="type">int</span>)  
 <span class="simpara"> Represents the SQL large object data type.
 </span>
 
-**`PDO::PARAM_STMT`** (<span class="type">integer</span>)  
+**`PDO::PARAM_STMT`** (<span class="type">int</span>)  
 <span class="simpara"> Represents a recordset type. Not currently
 supported by any drivers. </span>
 
-**`PDO::PARAM_INPUT_OUTPUT`** (<span class="type">integer</span>)  
+**`PDO::PARAM_INPUT_OUTPUT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the parameter is an INOUT
 parameter for a stored procedure. You must bitwise-OR this value with an
 explicit PDO::PARAM\_\* data type. </span>
 
-**`PDO::FETCH_LAZY`** (<span class="type">integer</span>)  
+**`PDO::FETCH_LAZY`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an object with variable names that correspond to the column names
 returned in the result set. **`PDO::FETCH_LAZY`** creates the object
 variable names as they are accessed. Not valid inside <span
 class="function">PDOStatement::fetchAll</span>. </span>
 
-**`PDO::FETCH_ASSOC`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ASSOC`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an array indexed by column name as returned in the corresponding
 result set. If the result set contains multiple columns with the same
 name, **`PDO::FETCH_ASSOC`** returns only a single value per column
 name. </span>
 
-**`PDO::FETCH_NAMED`** (<span class="type">integer</span>)  
+**`PDO::FETCH_NAMED`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an array indexed by column name as returned in the corresponding
 result set. If the result set contains multiple columns with the same
 name, **`PDO::FETCH_NAMED`** returns an array of values per column name.
 </span>
 
-**`PDO::FETCH_NUM`** (<span class="type">integer</span>)  
+**`PDO::FETCH_NUM`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an array indexed by column number as returned in the
 corresponding result set, starting at column 0. </span>
 
-**`PDO::FETCH_BOTH`** (<span class="type">integer</span>)  
+**`PDO::FETCH_BOTH`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an array indexed by both column name and number as returned in
 the corresponding result set, starting at column 0. </span>
 
-**`PDO::FETCH_OBJ`** (<span class="type">integer</span>)  
+**`PDO::FETCH_OBJ`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return each
 row as an object with property names that correspond to the column names
 returned in the result set. </span>
 
-**`PDO::FETCH_BOUND`** (<span class="type">integer</span>)  
+**`PDO::FETCH_BOUND`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return TRUE
 and assign the values of the columns in the result set to the PHP
 variables to which they were bound with the <span
 class="function">PDOStatement::bindParam</span> or <span
 class="function">PDOStatement::bindColumn</span> methods. </span>
 
-**`PDO::FETCH_COLUMN`** (<span class="type">integer</span>)  
+**`PDO::FETCH_COLUMN`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return only
 a single requested column from the next row in the result set. </span>
 
-**`PDO::FETCH_CLASS`** (<span class="type">integer</span>)  
+**`PDO::FETCH_CLASS`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall return a
 new instance of the requested class, mapping the columns to named
 properties in the class. </span>
@@ -340,88 +340,88 @@ properties in the class. </span>
 > method is called if the property doesn't exist in the requested class
 > </span>
 
-**`PDO::FETCH_INTO`** (<span class="type">integer</span>)  
+**`PDO::FETCH_INTO`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that the fetch method shall update an
 existing instance of the requested class, mapping the columns to named
 properties in the class. </span>
 
-**`PDO::FETCH_FUNC`** (<span class="type">integer</span>)  
+**`PDO::FETCH_FUNC`** (<span class="type">int</span>)  
 <span class="simpara"> Allows completely customize the way data is
 treated on the fly (only valid inside <span
 class="function">PDOStatement::fetchAll</span>). </span>
 
-**`PDO::FETCH_GROUP`** (<span class="type">integer</span>)  
+**`PDO::FETCH_GROUP`** (<span class="type">int</span>)  
 <span class="simpara"> Group return by values. Usually combined with
 **`PDO::FETCH_COLUMN`** or **`PDO::FETCH_KEY_PAIR`**. </span>
 
-**`PDO::FETCH_UNIQUE`** (<span class="type">integer</span>)  
+**`PDO::FETCH_UNIQUE`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch only the unique values. </span>
 
-**`PDO::FETCH_KEY_PAIR`** (<span class="type">integer</span>)  
+**`PDO::FETCH_KEY_PAIR`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch a two-column result into an array where the
 first column is a key and the second column is the value. Available
 since PHP 5.2.3. </span>
 
-**`PDO::FETCH_CLASSTYPE`** (<span class="type">integer</span>)  
+**`PDO::FETCH_CLASSTYPE`** (<span class="type">int</span>)  
 <span class="simpara"> Determine the class name from the value of first
 column. </span>
 
-**`PDO::FETCH_SERIALIZE`** (<span class="type">integer</span>)  
+**`PDO::FETCH_SERIALIZE`** (<span class="type">int</span>)  
 <span class="simpara"> As **`PDO::FETCH_INTO`** but object is provided
 as a serialized string. Available since PHP 5.1.0. Since PHP 5.3.0 the
 class constructor is never called if this flag is set. </span>
 
-**`PDO::FETCH_PROPS_LATE`** (<span class="type">integer</span>)  
+**`PDO::FETCH_PROPS_LATE`** (<span class="type">int</span>)  
 <span class="simpara"> Call the constructor before setting properties.
 Available since PHP 5.2.0. </span>
 
-**`PDO::ATTR_AUTOCOMMIT`** (<span class="type">integer</span>)  
+**`PDO::ATTR_AUTOCOMMIT`** (<span class="type">int</span>)  
 <span class="simpara"> If this value is **`FALSE`**, PDO attempts to
 disable autocommit so that the connection begins a transaction. </span>
 
-**`PDO::ATTR_PREFETCH`** (<span class="type">integer</span>)  
+**`PDO::ATTR_PREFETCH`** (<span class="type">int</span>)  
 <span class="simpara"> Setting the prefetch size allows you to balance
 speed against memory usage for your application. Not all database/driver
 combinations support setting of the prefetch size. A larger prefetch
 size results in increased performance at the cost of higher memory
 usage. </span>
 
-**`PDO::ATTR_TIMEOUT`** (<span class="type">integer</span>)  
+**`PDO::ATTR_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> Sets the timeout value in seconds for
 communications with the database. </span>
 
-**`PDO::ATTR_ERRMODE`** (<span class="type">integer</span>)  
+**`PDO::ATTR_ERRMODE`** (<span class="type">int</span>)  
 <span class="simpara"> See the
 <a href="/book/pdo.html#Errors%20and%20error%20handling" class="link">Errors and error handling</a>
 section for more information about this attribute. </span>
 
-**`PDO::ATTR_SERVER_VERSION`** (<span class="type">integer</span>)  
+**`PDO::ATTR_SERVER_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> This is a read only attribute; it will return
 information about the version of the database server to which PDO is
 connected. </span>
 
-**`PDO::ATTR_CLIENT_VERSION`** (<span class="type">integer</span>)  
+**`PDO::ATTR_CLIENT_VERSION`** (<span class="type">int</span>)  
 <span class="simpara"> This is a read only attribute; it will return
 information about the version of the client libraries that the PDO
 driver is using. </span>
 
-**`PDO::ATTR_SERVER_INFO`** (<span class="type">integer</span>)  
+**`PDO::ATTR_SERVER_INFO`** (<span class="type">int</span>)  
 <span class="simpara"> This is a read only attribute; it will return
 some meta information about the database server to which PDO is
 connected. </span>
 
-**`PDO::ATTR_CONNECTION_STATUS`** (<span class="type">integer</span>)  
+**`PDO::ATTR_CONNECTION_STATUS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PDO::ATTR_CASE`** (<span class="type">integer</span>)  
+**`PDO::ATTR_CASE`** (<span class="type">int</span>)  
 <span class="simpara"> Force column names to a specific case specified
 by the *PDO::CASE\_\** constants. </span>
 
-**`PDO::ATTR_CURSOR_NAME`** (<span class="type">integer</span>)  
+**`PDO::ATTR_CURSOR_NAME`** (<span class="type">int</span>)  
 <span class="simpara"> Get or set the name to use for a cursor. Most
 useful when using scrollable cursors and positioned updates. </span>
 
-**`PDO::ATTR_CURSOR`** (<span class="type">integer</span>)  
+**`PDO::ATTR_CURSOR`** (<span class="type">int</span>)  
 <span class="simpara"> Selects the cursor type. PDO currently supports
 either **`PDO::CURSOR_FWDONLY`** and **`PDO::CURSOR_SCROLL`**. Stick
 with **`PDO::CURSOR_FWDONLY`** unless you know that you need a
@@ -440,7 +440,7 @@ if ($db->getAttribute(PDO::ATTR_DRIVER_NAME) == 'mysql') {
 ?>
 ```
 
-**`PDO::ATTR_ORACLE_NULLS`** (<span class="type">integer</span>)  
+**`PDO::ATTR_ORACLE_NULLS`** (<span class="type">int</span>)  
 <span class="simpara"> Convert empty strings to SQL NULL values on data
 fetches. </span>
 
@@ -450,110 +450,110 @@ creating a new connection. See
 <a href="/book/pdo.html#Connections%20and%20Connection%20management" class="link">Connections and Connection management</a>
 for more information on this attribute. </span>
 
-**`PDO::ATTR_STATEMENT_CLASS`** (<span class="type">integer</span>)  
+**`PDO::ATTR_STATEMENT_CLASS`** (<span class="type">int</span>)  
 <span class="simpara"> Sets the class name of which statements are
 returned as. </span>
 
-**`PDO::ATTR_FETCH_CATALOG_NAMES`** (<span class="type">integer</span>)  
+**`PDO::ATTR_FETCH_CATALOG_NAMES`** (<span class="type">int</span>)  
 <span class="simpara"> Prepend the containing catalog name to each
 column name returned in the result set. The catalog name and column name
 are separated by a decimal (.) character. Support of this attribute is
 at the driver level; it may not be supported by your driver. </span>
 
-**`PDO::ATTR_FETCH_TABLE_NAMES`** (<span class="type">integer</span>)  
+**`PDO::ATTR_FETCH_TABLE_NAMES`** (<span class="type">int</span>)  
 <span class="simpara"> Prepend the containing table name to each column
 name returned in the result set. The table name and column name are
 separated by a decimal (.) character. Support of this attribute is at
 the driver level; it may not be supported by your driver. </span>
 
-**`PDO::ATTR_STRINGIFY_FETCHES`** (<span class="type">integer</span>)  
+**`PDO::ATTR_STRINGIFY_FETCHES`** (<span class="type">int</span>)  
 <span class="simpara"> Forces all values fetched to be treated as
 strings. </span>
 
-**`PDO::ATTR_MAX_COLUMN_LEN`** (<span class="type">integer</span>)  
+**`PDO::ATTR_MAX_COLUMN_LEN`** (<span class="type">int</span>)  
 <span class="simpara"> Sets the maximum column name length. </span>
 
-**`PDO::ATTR_DEFAULT_FETCH_MODE`** (<span class="type">integer</span>)  
+**`PDO::ATTR_DEFAULT_FETCH_MODE`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.2.0 </span>
 
-**`PDO::ATTR_EMULATE_PREPARES`** (<span class="type">integer</span>)  
+**`PDO::ATTR_EMULATE_PREPARES`** (<span class="type">int</span>)  
 <span class="simpara"> Available since PHP 5.1.3. </span>
 
-**`PDO::ATTR_DEFAULT_STR_PARAM`** (<span class="type">integer</span>)  
+**`PDO::ATTR_DEFAULT_STR_PARAM`** (<span class="type">int</span>)  
 <span class="simpara"> Sets the default string parameter type, this can
 be one of **`PDO::PARAM_STR_NATL`** and **`PDO::PARAM_STR_CHAR`**.
 </span> <span class="simpara"> Available since PHP 7.2.0. </span>
 
-**`PDO::ERRMODE_SILENT`** (<span class="type">integer</span>)  
+**`PDO::ERRMODE_SILENT`** (<span class="type">int</span>)  
 <span class="simpara"> Do not raise an error or exception if an error
 occurs. The developer is expected to explicitly check for errors. This
 is the default mode. See
 <a href="/book/pdo.html#Errors%20and%20error%20handling" class="link">Errors and error handling</a>
 for more information about this attribute. </span>
 
-**`PDO::ERRMODE_WARNING`** (<span class="type">integer</span>)  
+**`PDO::ERRMODE_WARNING`** (<span class="type">int</span>)  
 <span class="simpara"> Issue a PHP **`E_WARNING`** message if an error
 occurs. See
 <a href="/book/pdo.html#Errors%20and%20error%20handling" class="link">Errors and error handling</a>
 for more information about this attribute. </span>
 
-**`PDO::ERRMODE_EXCEPTION`** (<span class="type">integer</span>)  
+**`PDO::ERRMODE_EXCEPTION`** (<span class="type">int</span>)  
 <span class="simpara"> Throw a <span
 class="classname">PDOException</span> if an error occurs. See
 <a href="/book/pdo.html#Errors%20and%20error%20handling" class="link">Errors and error handling</a>
 for more information about this attribute. </span>
 
-**`PDO::CASE_NATURAL`** (<span class="type">integer</span>)  
+**`PDO::CASE_NATURAL`** (<span class="type">int</span>)  
 <span class="simpara"> Leave column names as returned by the database
 driver. </span>
 
-**`PDO::CASE_LOWER`** (<span class="type">integer</span>)  
+**`PDO::CASE_LOWER`** (<span class="type">int</span>)  
 <span class="simpara"> Force column names to lower case. </span>
 
-**`PDO::CASE_UPPER`** (<span class="type">integer</span>)  
+**`PDO::CASE_UPPER`** (<span class="type">int</span>)  
 <span class="simpara"> Force column names to upper case. </span>
 
-**`PDO::NULL_NATURAL`** (<span class="type">integer</span>)  
+**`PDO::NULL_NATURAL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PDO::NULL_EMPTY_STRING`** (<span class="type">integer</span>)  
+**`PDO::NULL_EMPTY_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PDO::NULL_TO_STRING`** (<span class="type">integer</span>)  
+**`PDO::NULL_TO_STRING`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`PDO::FETCH_ORI_NEXT`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_NEXT`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the next row in the result set. Valid only
 for scrollable cursors. </span>
 
-**`PDO::FETCH_ORI_PRIOR`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_PRIOR`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the previous row in the result set. Valid
 only for scrollable cursors. </span>
 
-**`PDO::FETCH_ORI_FIRST`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_FIRST`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the first row in the result set. Valid only
 for scrollable cursors. </span>
 
-**`PDO::FETCH_ORI_LAST`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_LAST`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the last row in the result set. Valid only
 for scrollable cursors. </span>
 
-**`PDO::FETCH_ORI_ABS`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_ABS`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the requested row by row number from the
 result set. Valid only for scrollable cursors. </span>
 
-**`PDO::FETCH_ORI_REL`** (<span class="type">integer</span>)  
+**`PDO::FETCH_ORI_REL`** (<span class="type">int</span>)  
 <span class="simpara"> Fetch the requested row by relative position from
 the current position of the cursor in the result set. Valid only for
 scrollable cursors. </span>
 
-**`PDO::CURSOR_FWDONLY`** (<span class="type">integer</span>)  
+**`PDO::CURSOR_FWDONLY`** (<span class="type">int</span>)  
 <span class="simpara"> Create a <span
 class="classname">PDOStatement</span> object with a forward-only cursor.
 This is the default cursor choice, as it is the fastest and most common
 data access pattern in PHP. </span>
 
-**`PDO::CURSOR_SCROLL`** (<span class="type">integer</span>)  
+**`PDO::CURSOR_SCROLL`** (<span class="type">int</span>)  
 <span class="simpara"> Create a <span
 class="classname">PDOStatement</span> object with a scrollable cursor.
 Pass the *PDO::FETCH\_ORI\_\** constants to control the rows fetched
@@ -569,34 +569,34 @@ occurred. You will usually know if this is the case by examining the
 return code from the method that raised the error condition anyway.
 </span>
 
-**`PDO::PARAM_EVT_ALLOC`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_ALLOC`** (<span class="type">int</span>)  
 <span class="simpara"> Allocation event </span>
 
-**`PDO::PARAM_EVT_FREE`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_FREE`** (<span class="type">int</span>)  
 <span class="simpara"> Deallocation event </span>
 
-**`PDO::PARAM_EVT_EXEC_PRE`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_EXEC_PRE`** (<span class="type">int</span>)  
 <span class="simpara"> Event triggered prior to execution of a prepared
 statement. </span>
 
-**`PDO::PARAM_EVT_EXEC_POST`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_EXEC_POST`** (<span class="type">int</span>)  
 <span class="simpara"> Event triggered subsequent to execution of a
 prepared statement. </span>
 
-**`PDO::PARAM_EVT_FETCH_PRE`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_FETCH_PRE`** (<span class="type">int</span>)  
 <span class="simpara"> Event triggered prior to fetching a result from a
 resultset. </span>
 
-**`PDO::PARAM_EVT_FETCH_POST`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_FETCH_POST`** (<span class="type">int</span>)  
 <span class="simpara"> Event triggered subsequent to fetching a result
 from a resultset. </span>
 
-**`PDO::PARAM_EVT_NORMALIZE`** (<span class="type">integer</span>)  
+**`PDO::PARAM_EVT_NORMALIZE`** (<span class="type">int</span>)  
 <span class="simpara"> Event triggered during bound parameter
 registration allowing the driver to normalize the parameter name.
 </span>
 
-**`PDO::SQLITE_DETERMINISTIC`** (<span class="type">integer</span>)  
+**`PDO::SQLITE_DETERMINISTIC`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that a function created with <span
 class="function">PDO::sqliteCreateFunction</span> is deterministic, i.e.
 it always returns the same result given the same inputs within a single
@@ -699,11 +699,11 @@ $dbh = new PDO('mysql:host=localhost;dbname=test', $user, $pass, array(
 ```
 
 The value of the **`PDO::ATTR_PERSISTENT`** option is converted to <span
-class="type">boolean</span> (enable/disable persistent connections),
-unless it is a non-numeric <span class="type">string</span>, in which
-case it allows to use multiple persistent connection pools. This is
-useful if different connections use incompatible settings, for instance,
-different values of **`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`**.
+class="type">bool</span> (enable/disable persistent connections), unless
+it is a non-numeric <span class="type">string</span>, in which case it
+allows to use multiple persistent connection pools. This is useful if
+different connections use incompatible settings, for instance, different
+values of **`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`**.
 
 > **Note**:
 >
@@ -5297,17 +5297,17 @@ behaviour. <span class="function">PDO::getAttribute</span> may be used
 to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
-**`PDO::FB_ATTR_DATE_FORMAT`** (<span class="type">integer</span>)  
+**`PDO::FB_ATTR_DATE_FORMAT`** (<span class="type">int</span>)  
 Available since PHP 5.3.0.
 
 Sets the date format.
 
-**`PDO::FB_ATTR_TIME_FORMAT`** (<span class="type">integer</span>)  
+**`PDO::FB_ATTR_TIME_FORMAT`** (<span class="type">int</span>)  
 Sets the time format.
 
 Available since PHP 5.3.0.
 
-**`PDO::FB_ATTR_TIMESTAMP_FORMAT`** (<span class="type">integer</span>)  
+**`PDO::FB_ATTR_TIMESTAMP_FORMAT`** (<span class="type">int</span>)  
 Sets the timestamp format.
 
 Available since PHP 5.3.0.
@@ -5673,7 +5673,7 @@ behaviour. <span class="function">PDO::getAttribute</span> may be used
 to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
-**`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> If this attribute is set to **`TRUE`** on a <span
 class="classname">PDOStatement</span>, the MySQL driver will use the
 buffered versions of the MySQL API. If you're writing portable code, you
@@ -5693,7 +5693,7 @@ if ($db->getAttribute(PDO::ATTR_DRIVER_NAME) == 'mysql') {
 ?>
 ```
 
-**`PDO::MYSQL_ATTR_LOCAL_INFILE`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_LOCAL_INFILE`** (<span class="type">int</span>)  
 Enable *LOAD LOCAL INFILE*.
 
 Note, this constant can only be used in the `driver_options` array when
@@ -5706,77 +5706,77 @@ designated directory.
 Note, this constant can only be used in the `driver_options` array when
 constructing a new database handle.
 
-**`PDO::MYSQL_ATTR_INIT_COMMAND`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_INIT_COMMAND`** (<span class="type">int</span>)  
 Command to execute when connecting to the MySQL server. Will
 automatically be re-executed when reconnecting.
 
 Note, this constant can only be used in the `driver_options` array when
 constructing a new database handle.
 
-**`PDO::MYSQL_ATTR_READ_DEFAULT_FILE`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_READ_DEFAULT_FILE`** (<span class="type">int</span>)  
 Read options from the named option file instead of from `my.cnf`. This
 option is not available if mysqlnd is used, because mysqlnd does not
 read the mysql configuration files.
 
-**`PDO::MYSQL_ATTR_READ_DEFAULT_GROUP`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_READ_DEFAULT_GROUP`** (<span class="type">int</span>)  
 Read options from the named group from `my.cnf` or the file specified
 with **`MYSQL_READ_DEFAULT_FILE`**. This option is not available if
 mysqlnd is used, because mysqlnd does not read the mysql configuration
 files.
 
-**`PDO::MYSQL_ATTR_MAX_BUFFER_SIZE`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_MAX_BUFFER_SIZE`** (<span class="type">int</span>)  
 Maximum buffer size. Defaults to 1 MiB. This constant is not supported
 when compiled against mysqlnd.
 
-**`PDO::MYSQL_ATTR_DIRECT_QUERY`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_DIRECT_QUERY`** (<span class="type">int</span>)  
 Perform direct queries, don't use prepared statements.
 
-**`PDO::MYSQL_ATTR_FOUND_ROWS`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_FOUND_ROWS`** (<span class="type">int</span>)  
 Return the number of found (matched) rows, not the number of changed
 rows.
 
-**`PDO::MYSQL_ATTR_IGNORE_SPACE`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_IGNORE_SPACE`** (<span class="type">int</span>)  
 Permit spaces after function names. Makes all functions names reserved
 words.
 
-**`PDO::MYSQL_ATTR_COMPRESS`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_COMPRESS`** (<span class="type">int</span>)  
 Enable network communication compression. This is also supported when
 compiled against mysqlnd as of PHP 5.3.11.
 
-**`PDO::MYSQL_ATTR_SSL_CA`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_CA`** (<span class="type">int</span>)  
 The file path to the SSL certificate authority.
 
 This exists as of PHP 5.3.7.
 
-**`PDO::MYSQL_ATTR_SSL_CAPATH`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_CAPATH`** (<span class="type">int</span>)  
 The file path to the directory that contains the trusted SSL CA
 certificates, which are stored in PEM format.
 
 This exists as of PHP 5.3.7.
 
-**`PDO::MYSQL_ATTR_SSL_CERT`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_CERT`** (<span class="type">int</span>)  
 The file path to the SSL certificate.
 
 This exists as of PHP 5.3.7.
 
-**`PDO::MYSQL_ATTR_SSL_CIPHER`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_CIPHER`** (<span class="type">int</span>)  
 A list of one or more permissible ciphers to use for SSL encryption, in
 a format understood by OpenSSL. For example:
 *DHE-RSA-AES256-SHA:AES128-SHA*
 
 This exists as of PHP 5.3.7.
 
-**`PDO::MYSQL_ATTR_SSL_KEY`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_KEY`** (<span class="type">int</span>)  
 The file path to the SSL key.
 
 This exists as of PHP 5.3.7.
 
-**`PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_SSL_VERIFY_SERVER_CERT`** (<span class="type">int</span>)  
 Provides a way to disable verification of the server SSL certificate.
 
 This exists as of PHP 7.0.18 and PHP 7.1.4.
 
-**`PDO::MYSQL_ATTR_MULTI_STATEMENTS`** (<span class="type">integer</span>)  
+**`PDO::MYSQL_ATTR_MULTI_STATEMENTS`** (<span class="type">int</span>)  
 Disables multi query execution in both <span
 class="function">PDO::prepare</span> and <span
 class="function">PDO::query</span> when set to **`FALSE`**.
@@ -5805,7 +5805,7 @@ Here's a short explanation of the configuration directives.
 Sets a Unix domain socket. This value can either be set at compile time
 if a domain socket is found at configure. This ini setting is Unix only.
 
-`pdo_mysql.debug` <span class="type">boolean</span>  
+`pdo_mysql.debug` <span class="type">bool</span>  
 Enables debugging for PDO\_MYSQL. This setting is only available when
 PDO\_MYSQL is compiled against mysqlnd and in PDO debug mode.
 
@@ -5949,39 +5949,39 @@ behaviour. <span class="function">PDO::getAttribute</span> may be used
 to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
-**`PDO::SQLSRV_TXN_READ_UNCOMMITTED`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_TXN_READ_UNCOMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is an acceptable value for the
 SQLSRV DSN key TransactionIsolation. This constant sets the transaction
 isolation level for the connection to Read Uncommitted. </span>
 
-**`PDO::SQLSRV_TXN_READ_COMMITTED`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_TXN_READ_COMMITTED`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is an acceptable value for the
 SQLSRV DSN key TransactionIsolation. This constant sets the transaction
 isolation level for the connection to Read Committed. </span>
 
-**`PDO::SQLSRV_TXN_REPEATABLE_READ`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_TXN_REPEATABLE_READ`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is an acceptable value for the
 SQLSRV DSN key TransactionIsolation. This constant sets the transaction
 isolation level for the connection to Repeateable Read. </span>
 
-**`PDO::SQLSRV_TXN_SNAPSHOT`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_TXN_SNAPSHOT`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is an acceptable value for the
 SQLSRV DSN key TransactionIsolation. This constant sets the transaction
 isolation level for the connection to Snapshot. </span>
 
-**`PDO::SQLSRV_TXN_SERIALIZABLE`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_TXN_SERIALIZABLE`** (<span class="type">int</span>)  
 <span class="simpara"> This constant is an acceptable value for the
 SQLSRV DSN key TransactionIsolation. This constant sets the transaction
 isolation level for the connection to Serializable. </span>
 
-**`PDO::SQLSRV_ENCODING_BINARY`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ENCODING_BINARY`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is sent/retrieved as a raw
 byte stream to/from the server without performing encoding or
 translation. This constant can be passed to PDOStatement::setAttribute,
 PDO::prepare, PDOStatement::bindColumn, and PDOStatement::bindParam.
 </span>
 
-**`PDO::SQLSRV_ENCODING_SYSTEM`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ENCODING_SYSTEM`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is sent/retrieved to/from the
 server as 8-bit characters as specified in the code page of the Windows
 locale that is set on the system. Any multi-byte characters or
@@ -5990,14 +5990,14 @@ single byte question mark (?) character. This constant can be passed to
 PDOStatement::setAttribute, PDO::setAttribute, PDO::prepare,
 PDOStatement::bindColumn, and PDOStatement::bindParam. </span>
 
-**`PDO::SQLSRV_ENCODING_UTF8`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ENCODING_UTF8`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is sent/retrieved to/from the
 server in UTF-8 encoding. This is the default encoding. This constant
 can be passed to PDOStatement::setAttribute, PDO::setAttribute,
 PDO::prepare, PDOStatement::bindColumn, and PDOStatement::bindParam.
 </span>
 
-**`PDO::SQLSRV_ENCODING_DEFAULT`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ENCODING_DEFAULT`** (<span class="type">int</span>)  
 <span class="simpara"> Specifies that data is sent/retrieved to/from the
 server according to PDO::SQLSRV\_ENCODING\_SYSTEM if specified during
 connection. The connection's encoding is used if specified in a prepare
@@ -6005,13 +6005,13 @@ statement. This constant can be passed to PDOStatement::setAttribute,
 PDO::setAttribute, PDO::prepare, PDOStatement::bindColumn, and
 PDOStatement::bindParam. </span>
 
-**`PDO::SQLSRV_ATTR_QUERY_TIMEOUT`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ATTR_QUERY_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> A non-negative integer representing the timeout
 period, in seconds. Zero (0) is the default and means no timeout. This
 constant can be passed to PDOStatement::setAttribute, PDO::setAttribute,
 and PDO::prepare. </span>
 
-**`PDO::SQLSRV_ATTR_DIRECT_QUERY`** (<span class="type">integer</span>)  
+**`PDO::SQLSRV_ATTR_DIRECT_QUERY`** (<span class="type">int</span>)  
 <span class="simpara"> Indicates that a query should be executed
 directly, without being prepared. This constant can be passed to
 PDO::setAttribute, and PDO::prepare. For more information, see
@@ -6145,22 +6145,22 @@ behaviour. <span class="function">PDO::getAttribute</span> may be used
 to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
-**`PDO::OCI_ATTR_ACTION`** (<span class="type">integer</span>)  
+**`PDO::OCI_ATTR_ACTION`** (<span class="type">int</span>)  
 Provides a way to specify the action on the database session.
 
 This exists as of PHP 7.2.16 and 7.3.3
 
-**`PDO::OCI_ATTR_CLIENT_INFO`** (<span class="type">integer</span>)  
+**`PDO::OCI_ATTR_CLIENT_INFO`** (<span class="type">int</span>)  
 Provides a way to specify the client info on the database session.
 
 This exists as of PHP 7.2.16 and 7.3.3
 
-**`PDO::OCI_ATTR_CLIENT_IDENTIFIER`** (<span class="type">integer</span>)  
+**`PDO::OCI_ATTR_CLIENT_IDENTIFIER`** (<span class="type">int</span>)  
 Provides a way to specify the client identifier on the database session.
 
 This exists as of PHP 7.2.16 and 7.3.3
 
-**`PDO::OCI_ATTR_MODULE`** (<span class="type">integer</span>)  
+**`PDO::OCI_ATTR_MODULE`** (<span class="type">int</span>)  
 Provides a way to specify the module on the database session.
 
 This exists as of PHP 7.2.16 and 7.3.3
@@ -6278,7 +6278,7 @@ behaviour. <span class="function">PDO::getAttribute</span> may be used
 to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
-**`PDO::ODBC_ATTR_USE_CURSOR_LIBRARY`** (<span class="type">integer</span>)  
+**`PDO::ODBC_ATTR_USE_CURSOR_LIBRARY`** (<span class="type">int</span>)  
 This option controls whether the ODBC cursor library is used. The ODBC
 cursor library supports some advanced ODBC features (e.g. block
 scrollable cursors), which may not be implemented by the driver. The
@@ -6291,7 +6291,7 @@ following values are supported:
 
 -   **`PDO::ODBC_SQL_USE_ODBC`**: always use the ODBC cursor library.
 
-**`PDO::ODBC_ATTR_ASSUME_UTF8`** (<span class="type">boolean</span>)  
+**`PDO::ODBC_ATTR_ASSUME_UTF8`** (<span class="type">bool</span>)  
 Windows only. If **`TRUE`**, UTF-16 encoded character data (*CHAR*,
 *VARCHAR* and *LONGVARCHAR*) is converted to UTF-8 when reading from or
 writing data to the database. If **`FALSE`** (the default), no character
@@ -6571,8 +6571,9 @@ Copy data from database table into PHP array
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">PDO::pgsqlCopyToArray</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">PDO::pgsqlCopyToArray</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$table_name`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$delimiter`<span class="initializer"> =
@@ -6771,8 +6772,9 @@ Opens an existing large object stream
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">PDO::pgsqlLOBOpen</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">PDO::pgsqlLOBOpen</span> ( <span
 class="methodparam"><span class="type">string</span> `$oid`</span> \[,
 <span class="methodparam"><span class="type">string</span> `$mode`<span
 class="initializer"> = "rb"</span></span> \] )
@@ -7021,8 +7023,8 @@ class="replaceable">step</span></span> ( <span class="methodparam"><span
 class="type">mixed</span> `$context`</span> , <span
 class="methodparam"><span class="type">int</span> `$rownumber`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$value1`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$...`</span> \] )
+`$value`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 `context`  
 **`NULL`** for the first row; on subsequent rows it will have the value
@@ -7032,10 +7034,10 @@ to maintain the aggregate state.
 `rownumber`  
 The current row number.
 
-`value1`  
+`value`  
 The first argument passed to the aggregate.
 
-`...`  
+`values`  
 Further arguments passed to the aggregate.
 
 The return value of this function will be used as the `context` argument
@@ -7281,14 +7283,14 @@ This function need to be defined as:
 
 <span class="type">mixed</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
-class="methodparam"><span class="type">mixed</span> `$value1`</span> \[,
-<span class="methodparam"><span class="type">mixed</span> `$...`</span>
-\] )
+class="methodparam"><span class="type">mixed</span> `$value`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$values`</span> )
 
-`value1`  
+`value`  
 The first argument passed to the SQL function.
 
-`...`  
+`values`  
 Further arguments passed to the SQL function.
 
 `num_args`  

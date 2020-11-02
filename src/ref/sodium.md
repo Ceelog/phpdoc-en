@@ -1346,7 +1346,8 @@ Get an ASCII-encoded hash
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_pwhash\_str</span> ( <span
 class="methodparam"><span class="type">string</span> `$password`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -1434,7 +1435,8 @@ Derive a key from a password
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sodium\_crypto\_pwhash</span> ( <span
 class="methodparam"><span class="type">int</span> `$length`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1454,7 +1456,7 @@ class="function">password\_hash</span> functions instead.
 ### Parameters
 
 `length`  
-<span class="type">integer</span>; The length of the password hash to
+<span class="type">int</span>; The length of the password hash to
 generate, in bytes.
 
 `password`  
@@ -1485,8 +1487,8 @@ are constants to help you choose an appropriate value, in order of size:
 paired with the matching `opslimit` values.
 
 `alg`  
-<span class="type">integer</span> A number indicating the hash algorithm
-to use. By default **`SODIUM_CRYPTO_PWHASH_ALG_DEFAULT`** (the currently
+<span class="type">int</span> A number indicating the hash algorithm to
+use. By default **`SODIUM_CRYPTO_PWHASH_ALG_DEFAULT`** (the currently
 recommended algorithm, which can change from one version of libsodium to
 another), or explicitly using **`SODIUM_CRYPTO_PWHASH_ALG_ARGON2ID13`**,
 representing the Argon2id algorithm version 1.3.

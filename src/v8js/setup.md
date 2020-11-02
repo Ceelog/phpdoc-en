@@ -35,7 +35,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 Here's a short explanation of the configuration directives.
 
-`v8js.max_disposed_contexts` <span class="type">integer</span>  
+`v8js.max_disposed_contexts` <span class="type">int</span>  
 Sets limit for disposed contexts before forcing V8 to do garbage
 collection.
 

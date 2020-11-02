@@ -44,23 +44,23 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 
 Here's a short explanation of the configuration directives.
 
-`engine` <span class="type">boolean</span>  
+`engine` <span class="type">bool</span>  
 Turns PHP parsing on or off. This directive is really only useful in the
 Apache module version of PHP. It is used by sites that would like to
 turn PHP parsing on and off on a per-directory or per-virtual server
 basis. By putting **`engine off`** in the appropriate places in the
 `httpd.conf` file, PHP can be enabled or disabled.
 
-`child_terminate` <span class="type">boolean</span>  
+`child_terminate` <span class="type">bool</span>  
 Specify whether PHP scripts may request child process termination on end
 of request, see also <span
 class="function">apache\_child\_terminate</span>.
 
-`last_modified` <span class="type">boolean</span>  
+`last_modified` <span class="type">bool</span>  
 Send PHP scripts modification date as Last-Modified: header for this
 request.
 
-`xbithack` <span class="type">boolean</span>  
+`xbithack` <span class="type">bool</span>  
 Parse files with executable bit set as PHP regardless of their file
 ending.
 

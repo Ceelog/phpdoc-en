@@ -15,19 +15,9 @@ necessarily all) types.
 types, while <span class="function">str\_replace</span> will accept
 <span class="type">string</span>s and <span class="type">array</span>s.
 
-### number
-
-*number* indicates that a parameter can be either <span
-class="type">integer</span> or <span class="type">float</span>.
-
 ### void
 
 *void* as a return type means that the return value is useless. *void*
 in a parameter list means that the function doesn't accept any
 parameters. As of PHP 7.1 *void* is accepted as a function return type
 hint.
-
-### ...
-
-`$...` in function prototypes means *and so on*. This variable name is
-used when a function can take an endless number of arguments.

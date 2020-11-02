@@ -8,16 +8,16 @@ dynamically loaded at runtime.
 **`YAR_VERSION`** (<span class="type">string</span>)  
 <span class="simpara"> </span>
 
-**`YAR_CLIENT_PROTOCOL_HTTP`** (<span class="type">integer</span>)  
+**`YAR_CLIENT_PROTOCOL_HTTP`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_OPT_PACKAGER`** (<span class="type">integer</span>)  
+**`YAR_OPT_PACKAGER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_OPT_TIMEOUT`** (<span class="type">integer</span>)  
+**`YAR_OPT_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_OPT_CONNECT_TIMEOUT`** (<span class="type">integer</span>)  
+**`YAR_OPT_CONNECT_TIMEOUT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
 **`YAR_OPT_HEADER`** (<span class="type">array</span>)  
@@ -29,23 +29,23 @@ dynamically loaded at runtime.
 **`YAR_PACKAGER_JSON`** (<span class="type">string</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_OKEY`** (<span class="type">integer</span>)  
+**`YAR_ERR_OKEY`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_OUTPUT`** (<span class="type">integer</span>)  
+**`YAR_ERR_OUTPUT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_TRANSPORT`** (<span class="type">integer</span>)  
+**`YAR_ERR_TRANSPORT`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_REQUEST`** (<span class="type">integer</span>)  
+**`YAR_ERR_REQUEST`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_PROTOCOL`** (<span class="type">integer</span>)  
+**`YAR_ERR_PROTOCOL`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_PACKAGER`** (<span class="type">integer</span>)  
+**`YAR_ERR_PACKAGER`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
 
-**`YAR_ERR_EXCEPTION`** (<span class="type">integer</span>)  
+**`YAR_ERR_EXCEPTION`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
