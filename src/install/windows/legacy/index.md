@@ -1235,7 +1235,6 @@ DLL files. Here's a list of built in extensions (updated PHP 5.0.4):
 <a href="/book/session.html" class="link">Session</a>,
 <a href="/book/simplexml.html" class="link">SimpleXML</a>,
 <a href="/book/spl.html" class="link">SPL</a>,
-<a href="/book/sqlite.html" class="link">SQLite</a>,
 <a href="/book/wddx.html" class="link">WDDX</a>,
 <a href="/book/xml.html" class="link">XML</a> and
 <a href="/book/zlib.html" class="link">Zlib</a>.
@@ -1319,7 +1318,6 @@ required additional dlls.
 | php\_mcrypt.dll      | <a href="/book/mcrypt.html" class="link">Mcrypt Encryption</a> functions                        | Requires: `libmcrypt.dll`                                                                                                                    |
 | php\_mhash.dll       | <a href="/book/mhash.html" class="link">Mhash</a> functions                                     | Requires: `libmhash.dll` (bundled)                                                                                                           |
 | php\_mime\_magic.dll | <a href="/book/mime-magic.html" class="link">Mimetype</a> functions                             | Requires: `magic.mime` (bundled)                                                                                                             |
-| php\_msql.dll        | <a href="/book/msql.html" class="link">mSQL</a> functions                                       | Requires: `msql.dll` (bundled)                                                                                                               |
 | php\_mysql.dll       | <a href="/set/mysqlinfo.html#MySQL%20(Original)" class="link">MySQL</a> functions               | Requires `libmysql.dll` (bundled)                                                                                                            |
 | php\_mysqli.dll      | <a href="/set/mysqlinfo.html#MySQLi" class="link">MySQLi</a> functions                          | Requires `libmysql.dll` (`libmysqli.dll` in PHP \<= 5.0.2) (bundled)                                                                         |
 | php\_oci8.dll        | <a href="/book/oci8.html" class="link">Oracle 8</a> functions                                   | Requires: Oracle 8.1+ client libraries                                                                                                       |

@@ -156,8 +156,6 @@ external libraries will be needed.
 
 -   <a href="/book/mhash.html" class="xref">Mhash</a>
 
--   <a href="/book/msql.html" class="xref">mSQL</a>
-
 -   <a href="/set/mysqlinfo.html#MySQL%20(Original)" class="xref"></a>
 
 -   <a href="/set/mysqlinfo.html#MySQLi" class="xref"></a>
@@ -345,8 +343,6 @@ not documented in the PHP manual yet.
 -   <a href="/book/sphinx.html" class="xref">Sphinx</a>
 
 -   <a href="/book/spl-types.html" class="xref">SPL Types</a>
-
--   <a href="/book/sqlite.html" class="xref">SQLite</a>
 
 -   <a href="/book/sqlsrv.html" class="xref">SQLSRV</a>
 

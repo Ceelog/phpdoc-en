@@ -14,9 +14,7 @@ created according to user demand.
 -   <span class="simpara">
     <a href="/book/fdf.html" class="link">fdf</a> - Maintained </span>
 -   <span class="simpara"> ming - Maintained </span>
--   <span class="simpara">
-    <a href="/book/msql.html" class="link">msql</a> - No longer
-    maintained </span>
+-   <span class="simpara"> msql - No longer maintained </span>
 -   <span class="simpara">
     <a href="/book/ncurses.html" class="link">ncurses</a> - Maintained
     </span>

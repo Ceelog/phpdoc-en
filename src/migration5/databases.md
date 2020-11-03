@@ -17,9 +17,8 @@ There is also a new extension,
 <a href="/set/mysqlinfo.html#Aliases%20and%20deprecated%20Mysqli%20Functions" class="link">MySQLi (Improved MySQL)</a>,
 which is designed to work with MySQL 4.1 and above.
 
-Since PHP 5, the
-<a href="/book/sqlite.html#SQLite%20Functions" class="link">SQLite</a>
-extension is built-in PHP. SQLite is an embeddable SQL database engine
-and is not a client library used to connect to a big database server
-(like MySQL or PostgreSQL). The SQLite library reads and writes directly
-to and from the database files on disk.
+Since PHP 5, the SQLite extension is built-in PHP. SQLite is an
+embeddable SQL database engine and is not a client library used to
+connect to a big database server (like MySQL or PostgreSQL). The SQLite
+library reads and writes directly to and from the database files on
+disk.

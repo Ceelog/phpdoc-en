@@ -89,48 +89,47 @@ Runtime Configuration
 
 The behaviour of these functions is affected by settings in `php.ini`.
 
-| Name                                                                                  | Default      | Changeable       | Changelog                                                               |
-|---------------------------------------------------------------------------------------|--------------|------------------|-------------------------------------------------------------------------|
-| <a href="/opcache/setup.html#" class="link">opcache.enable</a>                        | "1"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.enable_cli</a>                    | "0"          | PHP\_INI\_SYSTEM | Between PHP 7.1.2 and 7.1.6 inclusive, the default was "1"              |
-| <a href="/opcache/setup.html#" class="link">opcache.memory_consumption</a>            | "128"        | PHP\_INI\_SYSTEM | Before PHP 7.0.0 the default was "64"                                   |
-| <a href="/opcache/setup.html#" class="link">opcache.interned_strings_buffer</a>       | "8"          | PHP\_INI\_SYSTEM | Before PHP 7.0.0 the default was "4"                                    |
-| <a href="/opcache/setup.html#" class="link">opcache.max_accelerated_files</a>         | "10000"      | PHP\_INI\_SYSTEM | Before PHP 7.0.0 the default was "2000"                                 |
-| <a href="/opcache/setup.html#" class="link">opcache.max_wasted_percentage</a>         | "5"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.use_cwd</a>                       | "1"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.validate_timestamps</a>           | "1"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.revalidate_freq</a>               | "2"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.revalidate_path</a>               | "0"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.save_comments</a>                 | "1"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.load_comments</a>                 | "1"          | PHP\_INI\_ALL    | Removed in PHP 7.0.0.                                                   |
-| <a href="/opcache/setup.html#" class="link">opcache.fast_shutdown</a>                 | "0"          | PHP\_INI\_SYSTEM | Removed in PHP 7.2.0                                                    |
-| <a href="/opcache/setup.html#" class="link">opcache.enable_file_override</a>          | "0"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.optimization_level</a>            | "0x7FFEBFFF" | PHP\_INI\_SYSTEM | Changed from 0x7FFFBFFF in PHP 7.3.0, and from 0xFFFFFFFF in PHP 5.6.18 |
-| <a href="/opcache/setup.html#" class="link">opcache.inherited_hack</a>                | "1"          | PHP\_INI\_SYSTEM | Removed in PHP 7.3.0                                                    |
-| <a href="/opcache/setup.html#" class="link">opcache.dups_fix</a>                      | "0"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.blacklist_filename</a>            | ""           | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.max_file_size</a>                 | "0"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.consistency_checks</a>            | "0"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.force_restart_timeout</a>         | "180"        | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.error_log</a>                     | ""           | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.log_verbosity_level</a>           | "1"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.preferred_memory_model</a>        | ""           | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.protect_memory</a>                | "0"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.mmap_base</a>                     | **`NULL`**   | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.restrict_api</a>                  | ""           | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.file_update_protection</a>        | "2"          | PHP\_INI\_ALL    |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.huge_code_pages</a>               | "0"          | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.lockfile_path</a>                 | "/tmp"       | PHP\_INI\_SYSTEM |                                                                         |
-| <a href="/opcache/setup.html#" class="link">opcache.opt_debug_level</a>               | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.1.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.file_cache</a>                    | NULL         | PHP\_INI\_SYSTEM | Available as of PHP 7.0.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.file_cache_only</a>               | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.file_cache_consistency_checks</a> | "1"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.file_cache_fallback</a>           | "1"          | PHP\_INI\_SYSTEM | Windows only. Available as of PHP 7.0.0                                 |
-| <a href="/opcache/setup.html#" class="link">opcache.validate_permission</a>           | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.14                                              |
-| <a href="/opcache/setup.html#" class="link">opcache.validate_root</a>                 | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.14                                              |
-| <a href="/opcache/setup.html#" class="link">opcache.preload</a>                       | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.preload_user</a>                  | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                               |
-| <a href="/opcache/setup.html#" class="link">opcache.cache_id</a>                      | "1"          | PHP\_INI\_SYSTEM | Windows only. Available as of PHP 7.4.0                                 |
+| Name                                                                                  | Default      | Changeable       | Changelog                                                  |
+|---------------------------------------------------------------------------------------|--------------|------------------|------------------------------------------------------------|
+| <a href="/opcache/setup.html#" class="link">opcache.enable</a>                        | "1"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.enable_cli</a>                    | "0"          | PHP\_INI\_SYSTEM | Between PHP 7.1.2 and 7.1.6 inclusive, the default was "1" |
+| <a href="/opcache/setup.html#" class="link">opcache.memory_consumption</a>            | "128"        | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.interned_strings_buffer</a>       | "8"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.max_accelerated_files</a>         | "10000"      | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.max_wasted_percentage</a>         | "5"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.use_cwd</a>                       | "1"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.validate_timestamps</a>           | "1"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.revalidate_freq</a>               | "2"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.revalidate_path</a>               | "0"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.save_comments</a>                 | "1"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.fast_shutdown</a>                 | "0"          | PHP\_INI\_SYSTEM | Removed in PHP 7.2.0                                       |
+| <a href="/opcache/setup.html#" class="link">opcache.enable_file_override</a>          | "0"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.optimization_level</a>            | "0x7FFEBFFF" | PHP\_INI\_SYSTEM | Changed from 0x7FFFBFFF in PHP 7.3.0                       |
+| <a href="/opcache/setup.html#" class="link">opcache.inherited_hack</a>                | "1"          | PHP\_INI\_SYSTEM | Removed in PHP 7.3.0                                       |
+| <a href="/opcache/setup.html#" class="link">opcache.dups_fix</a>                      | "0"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.blacklist_filename</a>            | ""           | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.max_file_size</a>                 | "0"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.consistency_checks</a>            | "0"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.force_restart_timeout</a>         | "180"        | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.error_log</a>                     | ""           | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.log_verbosity_level</a>           | "1"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.preferred_memory_model</a>        | ""           | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.protect_memory</a>                | "0"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.mmap_base</a>                     | **`NULL`**   | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.restrict_api</a>                  | ""           | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.file_update_protection</a>        | "2"          | PHP\_INI\_ALL    |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.huge_code_pages</a>               | "0"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.lockfile_path</a>                 | "/tmp"       | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.opt_debug_level</a>               | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.1.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.file_cache</a>                    | NULL         | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.file_cache_only</a>               | "0"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.file_cache_consistency_checks</a> | "1"          | PHP\_INI\_SYSTEM |                                                            |
+| <a href="/opcache/setup.html#" class="link">opcache.file_cache_fallback</a>           | "1"          | PHP\_INI\_SYSTEM | Windows only.                                              |
+| <a href="/opcache/setup.html#" class="link">opcache.validate_permission</a>           | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.14                                 |
+| <a href="/opcache/setup.html#" class="link">opcache.validate_root</a>                 | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 7.0.14                                 |
+| <a href="/opcache/setup.html#" class="link">opcache.preload</a>                       | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.preload_user</a>                  | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.cache_id</a>                      | "1"          | PHP\_INI\_SYSTEM | Windows only. Available as of PHP 7.4.0                    |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.
@@ -152,17 +151,16 @@ minimum permissible value is *"8"*, which is enforced if a smaller value
 is set.
 
 `opcache.interned_strings_buffer` <span class="type">int</span>  
-The amount of memory used to store interned strings, in megabytes. This
-configuration directive is ignored in PHP \< 5.3.0.
+The amount of memory used to store interned strings, in megabytes.
 
 `opcache.max_accelerated_files` <span class="type">int</span>  
 The maximum number of keys (and therefore scripts) in the OPcache hash
 table. The actual value used will be the first number in the set of
 prime numbers *{ 223, 463, 983, 1979, 3907, 7963, 16229, 32531, 65407,
 130987, 262237, 524521, 1048793 }* that is greater than or equal to the
-configured value. The minimum value is 200. The maximum value is 100000
-in PHP \< 5.5.6, and 1000000 in later versions. Values outside of this
-range are clamped to the permissible range.
+configured value. The minimum value is 200. The maximum value is
+1000000. Values outside of this range are clamped to the permissible
+range.
 
 `opcache.max_wasted_percentage` <span class="type">int</span>  
 The maximum percentage of wasted memory that is allowed before a restart
@@ -204,12 +202,6 @@ configuration directive may break applications and frameworks that rely
 on comment parsing for annotations, including Doctrine, Zend Framework 2
 and PHPUnit.
 
-`opcache.load_comments` <span class="type">bool</span>  
-If disabled, documentation comments won't be loaded from the opcode
-cache even if they exist. This can be used with
-<a href="/opcache/setup.html#" class="link">opcache.save_comments</a> to
-only load comments for applications that require them.
-
 `opcache.fast_shutdown` <span class="type">bool</span>  
 If enabled, a fast shutdown sequence is used that doesn't free each
 allocated block, but relies on the Zend Engine memory manager to
@@ -233,15 +225,7 @@ is disabled.
 A bitmask that controls which optimisation passes are executed.
 
 `opcache.inherited_hack` <span class="type">bool</span>  
-In PHP \< 5.3, OPcache stores the places where
-<a href="/internals2/opcodes/declare-class.html" class="link">DECLARE_CLASS</a>
-opcodes used inheritance; when the file is loaded, OPcache then tries to
-bind the inherited classes using the current environment. The problem is
-that while the DECLARE\_CLASS opcode may not be needed for the current
-script, if the script requires that the opcode be defined, it may not
-run.
-
-This configuration directive is ignored in PHP 5.3 and later.
+This configuration directive is ignored.
 
 `opcache.dups_fix` <span class="type">bool</span>  
 This hack should only be enabled to work around "Cannot redeclare class"

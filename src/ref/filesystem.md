@@ -4539,6 +4539,11 @@ The link name.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Errors/Exceptions
+
+The function fails, and issues **`E_WARNING`**, if `link` already
+exists, or if `target` does not exist.
+
 ### Examples
 
 **Example \#1 Creating a simple hard link**
@@ -4568,6 +4573,7 @@ link($target, $link);
 -   <span class="function">symlink</span>
 -   <span class="function">readlink</span>
 -   <span class="function">linkinfo</span>
+-   <span class="function">unlink</span>
 
 linkinfo
 ========
@@ -6191,6 +6197,12 @@ The link name.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Errors/Exceptions
+
+The function fails, and issues **`E_WARNING`**, if `link` already
+exists. On Windows, the function also fails, and issues **`E_WARNING`**,
+if `target` does not exist.
+
 ### Examples
 
 **Example \#1 Create a symbolic link**
@@ -6205,18 +6217,12 @@ echo readlink($link);
 ?>
 ```
 
-### Notes
-
-> **Note**: <span class="simpara"> Windows users should note that this
-> function will only work if the system you run PHP from is Windows
-> Vista/Windows Server 2008 or newer. Windows versions prior to that do
-> not support symbolic links. </span>
-
 ### See Also
 
 -   <span class="function">link</span>
 -   <span class="function">readlink</span>
 -   <span class="function">linkinfo</span>
+-   <span class="function">unlink</span>
 
 tempnam
 =======

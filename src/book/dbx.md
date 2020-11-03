@@ -74,9 +74,7 @@ supported, but others will follow:
 -   <span class="simpara">
     <a href="/book/oci8.html#OCI8%20Functions" class="link">Oracle (oci8)</a>
     </span>
--   <span class="simpara">
-    <a href="/book/sqlite.html#SQLite%20Functions" class="link">SQLite</a>
-    </span>
+-   <span class="simpara"> SQLite </span>
 
 Documentation for adding additional database support to dbx can be found
 at

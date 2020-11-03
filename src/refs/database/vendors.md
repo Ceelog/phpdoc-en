@@ -91,12 +91,6 @@ Vendor Specific Database Extensions
         — Monitoring classes and subscriber functions
     -   [MongoDB\\Driver\\Exception](/set/mongodb.html#MongoDB\Driver\Exception)
         — Exception classes
--   [mSQL](/book/msql.html)
-    -   [Introduction](/book/msql.html#Introduction)
-    -   [Installing/Configuring](/book/msql.html#Installing/Configuring)
-    -   [Predefined Constants](/book/msql.html#Predefined%20Constants)
-    -   [Examples](/book/msql.html#Examples)
-    -   [mSQL Functions](/book/msql.html#mSQL%20Functions)
 -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
     -   [Overview of the MySQL PHP
         drivers](/set/mysqlinfo.html#Overview%20of%20the%20MySQL%20PHP%20drivers)
@@ -148,11 +142,6 @@ Vendor Specific Database Extensions
     -   [Predefined Constants](/book/pgsql.html#Predefined%20Constants)
     -   [Examples](/book/pgsql.html#Examples)
     -   [PostgreSQL Functions](/book/pgsql.html#PostgreSQL%20Functions)
--   [SQLite](/book/sqlite.html)
-    -   [Introduction](/book/sqlite.html#Introduction)
-    -   [Installing/Configuring](/book/sqlite.html#Installing/Configuring)
-    -   [Predefined Constants](/book/sqlite.html#Predefined%20Constants)
-    -   [SQLite Functions](/book/sqlite.html#SQLite%20Functions)
 -   [SQLite3](/book/sqlite3.html) — SQLite3
     -   [Introduction](/book/sqlite3.html#Introduction)
     -   [Installing/Configuring](/book/sqlite3.html#Installing/Configuring)
