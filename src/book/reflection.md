@@ -784,8 +784,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">implementsInterface</span> ( <span
-class="methodparam"><span class="type">string</span> `$interface`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">ReflectionClass</span><span
+class="type">string</span></span> `$interface`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">inNamespace</span> ( <span
@@ -2706,8 +2707,9 @@ Implements interface
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionClass::implementsInterface</span> (
-<span class="methodparam"><span class="type">string</span>
-`$interface`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">ReflectionClass</span><span
+class="type">string</span></span> `$interface`</span> )
 
 Checks whether it implements an interface.
 
@@ -2719,6 +2721,12 @@ The interface name.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Errors/Exceptions
+
+<span class="methodname">ReflectionClass::implementsInterface</span>
+throws an <span class="classname">ReflectionException</span> if
+`interface` is not an interface.
 
 ### See Also
 
@@ -8230,8 +8238,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionClass::implementsInterface</span> (
-<span class="methodparam"><span class="type">string</span>
-`$interface`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">ReflectionClass</span><span
+class="type">string</span></span> `$interface`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionClass::inNamespace</span> ( <span

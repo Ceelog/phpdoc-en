@@ -130,6 +130,24 @@ The behaviour of these functions is affected by settings in `php.ini`.
 | <a href="/opcache/setup.html#" class="link">opcache.preload</a>                       | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                  |
 | <a href="/opcache/setup.html#" class="link">opcache.preload_user</a>                  | ""           | PHP\_INI\_SYSTEM | Available as of PHP 7.4.0                                  |
 | <a href="/opcache/setup.html#" class="link">opcache.cache_id</a>                      | "1"          | PHP\_INI\_SYSTEM | Windows only. Available as of PHP 7.4.0                    |
+| <a href="/opcache/setup.html#" class="link">opcache.jit</a>                           | "tracing"    | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_buffer_size</a>               | "0"          | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_debug</a>                     | "0"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_bisect_limit</a>              | "0"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_prof_threshold</a>            | "0.005"      | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_root_traces</a>           | "1024"       | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_side_traces</a>           | "128"        | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_exit_counters</a>         | "8192"       | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_hot_loop</a>                  | "64"         | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_hot_func</a>                  | "127"        | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_hot_return</a>                | "8"          | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_hot_side_exit</a>             | "8"          | PHP\_INI\_SYSTEM | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_blacklist_root_trace</a>      | "16"         | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_blacklist_side_trace</a>      | "8"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_loop_unrolls</a>          | "8"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_recursive_calls</a>       | "2"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_recursive_returns</a>     | "2"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
+| <a href="/opcache/setup.html#" class="link">opcache.jit_max_polymorphic_calls</a>     | "2"          | PHP\_INI\_ALL    | Available as of PHP 8.0.0                                  |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.
@@ -366,6 +384,118 @@ directive facilitates to let the preloading to be run as another user.
 On Windows, all processes running the same PHP SAPI under the same user
 account having the same cache ID share a single OPcache instance. The
 value of the cache ID can be freely chosen.
+
+`opcache.jit` <span class="type"><span class="type">string</span><span class="type">int</span></span>  
+For typical usage, this option accepts one of four string values:
+
+-   *disable*: Completely disabled, cannot be enabled at runtime.
+-   *off*: Disabled, but can be enabled at runtime.
+-   *tracing*/*on*: Use tracing JIT. Enabled by default and recommended
+    for most users.
+-   *function*: Use function JIT.
+
+For advanced usage, this option accepts a 4-digit integer *CRTO*, where
+the digits mean:
+
+*O* (optimization level)  
+-   *0*: No JIT.
+-   *1*: Minimal JIT (call standard VM handlers).
+-   *2*: Inline VM handlers.
+-   *3*: Use type inference.
+-   *4*: Use call graph.
+-   *5*: Optimize whole script.
+
+*T* (trigger)  
+-   *0*: Compile all functions on script load.
+-   *1*: Compile functions on first execution.
+-   *2*: Profile functions on first request and compile the hottest
+    functions afterwards.
+-   *3*: Profile on the fly and compile hot functions.
+-   *4*: Currently unused.
+-   *5*: Use tracing JIT. Profile on the fly and compile traces for hot
+    code segments.
+
+*R* (register allocation)  
+-   *0*: Don't perform register allocation.
+-   *1*: Perform block-local register allocation.
+-   *2*: Perform global register allocation.
+
+*C* (CPU-specific optimization flags)  
+-   *0*: Disable CPU-specific optimization.
+-   *1*: Enable use of AVX, if the CPU supports it.
+
+The *"tracing"* mode corresponds to `CRTO = 1254`, the *"function"* mode
+corresponds to `CRTO = 1205`.
+
+`opcache.jit_buffer_size` <span class="type">int</span>  
+The amount of shared memory to reserve for compiled JIT code. A zero
+value disables the JIT.
+
+<span class="simpara">When an <span class="type">int</span> is used, the
+value is measured in bytes. Shorthand notation, as described in
+<a href="/faq/using.html#faq.using.shorthandbytes" class="link">this FAQ</a>,
+may also be used. </span>
+
+`opcache.jit_debug` <span class="type">int</span>  
+A bit mask specifying which JIT debug output to enable. For possible
+values, please consult `zend_jit.h`.
+
+`opcache.jit_bisect_limit` <span class="type">int</span>  
+Debugging option that disables JIT compilation after compiling a certain
+number of functions. This may be helpful to bisect the source of a JIT
+miscompilation.
+
+`opcache.jit_prof_threshold` <span class="type">float</span>  
+When using the "profile on first request" trigger mode, this threshold
+determines whether a function is considered hot. The number of calls to
+the function divided by the number of calls to all functions must be
+above the threshold. For example, a threshold of 0.005 means that
+functions that made up more than 0.5% of all calls will be JIT compiled.
+
+`opcache.jit_max_root_traces` <span class="type">int</span>  
+Maximum number of root traces.
+
+`opcache.jit_max_side_traces` <span class="type">int</span>  
+Maximum number of side traces a root trace may have.
+
+`opcache.jit_max_exit_counters` <span class="type">int</span>  
+Maximum number of side trace exit counters. This limits the total number
+of side traces there may be, across all root traces.
+
+`opcache.jit_hot_loop` <span class="type">int</span>  
+After how many iterations a loop is considered hot.
+
+`opcache.jit_hot_func` <span class="type">int</span>  
+After how many calls a function is considered hot.
+
+`opcache.jit_hot_return` <span class="type">int</span>  
+After how many returns a return is considered hot.
+
+`opcache.jit_hot_side_exit` <span class="type">int</span>  
+After how many exits a side exit is considered hot.
+
+`opcache.jit_blacklist_root_trace` <span class="type">int</span>  
+Maximum number of times the compilation of a root trace is attempted
+before it is blacklisted.
+
+`opcache.jit_blacklist_side_trace` <span class="type">int</span>  
+Maximum number of times the compilation of a side trace is attempted
+before it is blacklisted.
+
+`opcache.jit_max_loops_unroll` <span class="type">int</span>  
+Maximum number of attempts to unroll a loop in a side trace, trying to
+reach the root trace and close the outer loop.
+
+`opcache.jit_max_recursive_calls` <span class="type">int</span>  
+Maximum number of unrolled recursive call loops.
+
+`opcache.jit_max_recursive_returns` <span class="type">int</span>  
+Maximum number of unrolled recursive return loops.
+
+`opcache.jit_max_polymorphic_calls` <span class="type">int</span>  
+Maximum number of attempts to inline polymorphic (dynamic or method)
+calls. Calls above this limit are treated as megamorphic and are not
+inlined.
 
 Resource Types
 --------------

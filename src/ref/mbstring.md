@@ -1859,20 +1859,20 @@ Used for encoding e-mail messages. The valid languages are listed in the
 following table. <span class="function">mb\_send\_mail</span> uses this
 setting to encode e-mail.
 
-| Language                  | Charset     | Encoding         | Notes                     |
-|---------------------------|-------------|------------------|---------------------------|
-| German/de                 | ISO-8859-15 | Quoted-Printable |                           |
-| English/en                | ISO-8859-1  | Quoted-Printable |                           |
-| Armenian/hy               | ArmSCII-8   | Quoted-Printable |                           |
-| Japanese/ja               | ISO-2022-JP | BASE64           |                           |
-| Korean/ko                 | ISO-2022-KR | BASE64           |                           |
-| neutral                   | UTF-8       | BASE64           |                           |
-| Russian/ru                | KOI8-R      | Quoted-Printable |                           |
-| Turkish/tr                | ISO-8859-9  | Quoted-Printable | Available as of PHP 5.2.0 |
-| Ukrainian/ua              | KOI8-U      | Quoted-Printable | Available as of PHP 5.3.0 |
-| uni                       | UTF-8       | BASE64           |                           |
-| Simplified Chinese/zh-cn  | HZ          | BASE64           |                           |
-| Traditional Chinese/zh-tw | BIG-5       | BASE64           |                           |
+| Language                  | Charset     | Encoding         | Alias     |
+|---------------------------|-------------|------------------|-----------|
+| German/de                 | ISO-8859-15 | Quoted-Printable | Deutsch   |
+| English/en                | ISO-8859-1  | Quoted-Printable |           |
+| Armenian/hy               | ArmSCII-8   | Quoted-Printable |           |
+| Japanese/ja               | ISO-2022-JP | BASE64           |           |
+| Korean/ko                 | ISO-2022-KR | BASE64           |           |
+| neutral                   | UTF-8       | BASE64           |           |
+| Russian/ru                | KOI8-R      | Quoted-Printable |           |
+| Turkish/tr                | ISO-8859-9  | Quoted-Printable |           |
+| Ukrainian/ua              | KOI8-U      | Quoted-Printable |           |
+| uni                       | UTF-8       | BASE64           | universal |
+| Simplified Chinese/zh-cn  | HZ          | BASE64           |           |
+| Traditional Chinese/zh-tw | BIG-5       | BASE64           |           |
 
 ### Return Values
 

@@ -267,8 +267,9 @@ list(, $secondElement) = getArray();
 > **Note**:
 >
 > Array dereferencing a scalar value which is not a <span
-> class="type">string</span> silently yields **`NULL`**, i.e. without
-> issuing an error message.
+> class="type">string</span> yields **`NULL`**. Prior to PHP 7.4.0, that
+> did not issue an error message. As of PHP 7.4.0, this issues
+> **`E_NOTICE`**; as of PHP 8.0.0, this issues **`E_WARNING`**.
 
 #### Creating/modifying with square bracket syntax
 

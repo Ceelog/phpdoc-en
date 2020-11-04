@@ -785,10 +785,6 @@ MySQL Improved Extension
         Selects the default database for database queries
     -   [mysqli::set\_charset](/set/mysqlinfo.html#mysqli::set_charset)
         — Sets the default client character set
-    -   [mysqli::set\_local\_infile\_default](/set/mysqlinfo.html#mysqli::set_local_infile_default)
-        — Unsets user defined handler for load local infile command
-    -   [mysqli::set\_local\_infile\_handler](/set/mysqlinfo.html#mysqli::set_local_infile_handler)
-        — Set callback function for LOAD DATA LOCAL INFILE command
     -   [mysqli::$sqlstate](/set/mysqlinfo.html#mysqli::$sqlstate) —
         Returns the SQLSTATE error from previous MySQL operation
     -   [mysqli::ssl\_set](/set/mysqlinfo.html#mysqli::ssl_set) — Used
@@ -927,8 +923,6 @@ MySQL Improved Extension
         — Alias of mysqli\_real\_escape\_string
     -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias
         for mysqli\_stmt\_execute
-    -   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
-        — Returns client Zval cache statistics
     -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
         — Returns client per-process statistics
     -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
@@ -3552,15 +3546,6 @@ N/A
 Returns client per-process statistics. Available only with
 <a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a>.
 
-<span class="methodname">mysqli::get\_cache\_stats</span>
-
-<span class="function">mysqli\_get\_cache\_stats</span>
-
-N/A
-
-Returns client Zval cache statistics. Available only with
-<a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a>.
-
 <span class="methodname">mysqli::get\_server\_info</span>
 
 <span class="function">mysqli\_get\_server\_info</span>
@@ -3710,22 +3695,6 @@ Selects the default database for database queries
 N/A
 
 Sets the default client character set
-
-<span class="methodname">mysqli::set\_local\_infile\_default</span>
-
-<span class="function">mysqli\_set\_local\_infile\_default</span>
-
-N/A
-
-Unsets user defined handler for load local infile command
-
-<span class="methodname">mysqli::set\_local\_infile\_handler</span>
-
-<span class="function">mysqli\_set\_local\_infile\_handler</span>
-
-N/A
-
-Set callback function for LOAD DATA LOCAL INFILE command
 
 <span class="methodname">mysqli::ssl\_set</span>
 
@@ -4570,15 +4539,6 @@ class="methodparam"><span class="type">string</span> `$dbname`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">set\_charset</span> ( <span
 class="methodparam"><span class="type">string</span> `$charset`</span> )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">set\_local\_infile\_default</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">set\_local\_infile\_handler</span> ( <span
-class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ssl\_set</span> ( <span
@@ -9417,203 +9377,6 @@ The above examples will output something similar to:
 -   <span class="function">mysqli\_real\_escape\_string</span>
 -   <a href="/set/mysqlinfo.html#Character%20sets" class="link">MySQL character set concepts</a>
 -   <a href="http://dev.mysql.com/doc/mysql/en/charset-charsets.html" class="link external">» List of character sets that MySQL supports</a>
-
-mysqli::set\_local\_infile\_default
-===================================
-
-mysqli\_set\_local\_infile\_default
-===================================
-
-Unsets user defined handler for load local infile command
-
-### Description
-
-Object oriented style
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">mysqli::set\_local\_infile\_default</span> (
-<span class="methodparam">void</span> )
-
-Procedural style
-
-<span class="type">void</span> <span
-class="methodname">mysqli\_set\_local\_infile\_default</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> )
-
-Deactivates a *LOAD DATA INFILE LOCAL* handler previously set with <span
-class="function">mysqli\_set\_local\_infile\_handler</span>.
-
-### Parameters
-
-` link`  
-Procedural style only: A link identifier returned by <span
-class="function">mysqli\_connect</span> or <span
-class="function">mysqli\_init</span>
-
-### Return Values
-
-No value is returned.
-
-### Examples
-
-See <span class="function">mysqli\_set\_local\_infile\_handler</span>
-examples
-
-### See Also
-
--   <span class="function">mysqli\_set\_local\_infile\_handler</span>
-
-mysqli::set\_local\_infile\_handler
-===================================
-
-mysqli\_set\_local\_infile\_handler
-===================================
-
-Set callback function for LOAD DATA LOCAL INFILE command
-
-### Description
-
-Object oriented style
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">mysqli::set\_local\_infile\_handler</span> (
-<span class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
-
-Procedural style
-
-<span class="type">bool</span> <span
-class="methodname">mysqli\_set\_local\_infile\_handler</span> ( <span
-class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$read_func`</span> )
-
-Set callback function for LOAD DATA LOCAL INFILE command
-
-The callbacks task is to read input from the file specified in the *LOAD
-DATA LOCAL INFILE* and to reformat it into the format understood by
-*LOAD DATA INFILE*.
-
-The returned data needs to match the format specified in the *LOAD DATA*
-
-### Parameters
-
-` link`  
-Procedural style only: A link identifier returned by <span
-class="function">mysqli\_connect</span> or <span
-class="function">mysqli\_init</span>
-
-`read_func`  
-A callback function or object method taking the following parameters:
-
-`stream`  
-A PHP stream associated with the SQL commands INFILE
-
-`&buffer`  
-A string buffer to store the rewritten input into
-
-`buflen`  
-The maximum number of characters to be stored in the buffer
-
-`&errormsg`  
-If an error occurs you can store an error message in here
-
-The callback function should return the number of characters stored in
-the `buffer` or a negative value if an error occurred.
-
-### Return Values
-
-Returns **`TRUE`** on success or **`FALSE`** on failure.
-
-### Examples
-
-**Example \#1 <span
-class="methodname">mysqli::set\_local\_infile\_handler</span> example**
-
-Object oriented style
-
-``` php
-<?php
-  $db = mysqli_init();
-  $db->real_connect("localhost","root","","test");
-
-  function callme($stream, &$buffer, $buflen, &$errmsg)
-  {
-    $buffer = fgets($stream);
-
-    echo $buffer;
-
-    // convert to upper case and replace "," delimiter with [TAB]
-    $buffer = strtoupper(str_replace(",", "\t", $buffer));
-
-    return strlen($buffer);
-  }
-
-
-  echo "Input:\n";
-
-  $db->set_local_infile_handler("callme");
-  $db->query("LOAD DATA LOCAL INFILE 'input.txt' INTO TABLE t1");
-  $db->set_local_infile_default();
-
-  $res = $db->query("SELECT * FROM t1");
-
-  echo "\nResult:\n";
-  while ($row = $res->fetch_assoc()) {
-    echo join(",", $row)."\n";
-  }
-?>
-```
-
-Procedural style
-
-``` php
-<?php
-  $db = mysqli_init();
-  mysqli_real_connect($db, "localhost","root","","test");
-
-  function callme($stream, &$buffer, $buflen, &$errmsg)
-  {
-    $buffer = fgets($stream);
-
-    echo $buffer;
-
-    // convert to upper case and replace "," delimiter with [TAB]
-    $buffer = strtoupper(str_replace(",", "\t", $buffer));
-
-    return strlen($buffer);
-  }
-
-
-  echo "Input:\n";
-
-  mysqli_set_local_infile_handler($db, "callme");
-  mysqli_query($db, "LOAD DATA LOCAL INFILE 'input.txt' INTO TABLE t1");
-  mysqli_set_local_infile_default($db);
-
-  $res = mysqli_query($db, "SELECT * FROM t1");
-
-
-  echo "\nResult:\n";
-  while ($row = mysqli_fetch_assoc($res)) {
-    echo join(",", $row)."\n";
-  }
-?>
-```
-
-The above examples will output:
-
-    Input:
-    23,foo
-    42,bar
-
-    Output:
-    23,FOO
-    42,BAR
-
-### See Also
-
--   <span class="function">mysqli\_set\_local\_infile\_default</span>
 
 mysqli::$sqlstate
 =================
@@ -15801,37 +15564,6 @@ class="function">mysqli\_stmt\_execute</span>.
 
 -   <span class="function">mysqli\_stmt\_execute</span>
 
-mysqli\_get\_cache\_stats
-=========================
-
-Returns client Zval cache statistics
-
-**Warning**
-
-This function has been *REMOVED* as of PHP 5.4.0.
-
-### Description
-
-<span class="type">array</span> <span
-class="methodname">mysqli\_get\_cache\_stats</span> ( <span
-class="methodparam">void</span> )
-
-Returns an empty array. Available only with
-<a href="/set/mysqlinfo.html#Mysqlnd" class="link">mysqlnd</a>.
-
-### Parameters
-
-### Return Values
-
-Returns an empty array on success, **`FALSE`** otherwise.
-
-### Changelog
-
-| Version | Description                                                                    |
-|---------|--------------------------------------------------------------------------------|
-| 5.4.0   | The <span class="function">mysqli\_get\_cache\_stats</span> was removed.       |
-| 5.3.0   | The <span class="function">mysqli\_get\_cache\_stats</span> was added as stub. |
-
 mysqli\_get\_client\_stats
 ==========================
 
@@ -16060,8 +15792,6 @@ class="function">mysqli\_options</span>.
     Alias of mysqli\_real\_escape\_string
 -   [mysqli\_execute](/set/mysqlinfo.html#mysqli_execute) — Alias for
     mysqli\_stmt\_execute
--   [mysqli\_get\_cache\_stats](/set/mysqlinfo.html#mysqli_get_cache_stats)
-    — Returns client Zval cache statistics
 -   [mysqli\_get\_client\_stats](/set/mysqlinfo.html#mysqli_get_client_stats)
     — Returns client per-process statistics
 -   [mysqli\_get\_links\_stats](/set/mysqlinfo.html#mysqli_get_links_stats)
@@ -29585,7 +29315,8 @@ for additional information. Alternatives to this function include:
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">bool</span></span> <span
 class="methodname">mysql\_db\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -33595,7 +33326,6 @@ special features are listed below:
     class="function">mysqli\_fetch\_all</span>
 
 -   Performance statistics calls: <span
-    class="function">mysqli\_get\_cache\_stats</span>, <span
     class="function">mysqli\_get\_client\_stats</span>, <span
     class="function">mysqli\_get\_connection\_stats</span>
 
@@ -33701,8 +33431,7 @@ Here's a short explanation of the configuration directives.
 Enables the collection of various client statistics which can be
 accessed through <span
 class="function">mysqli\_get\_client\_stats</span>, <span
-class="function">mysqli\_get\_connection\_stats</span>, <span
-class="function">mysqli\_get\_cache\_stats</span> and are shown in
+class="function">mysqli\_get\_connection\_stats</span>, and are shown in
 *mysqlnd* section of the output of the <span
 class="function">phpinfo</span> function as well.
 
@@ -33713,8 +33442,7 @@ except those relating to memory management.
 `mysqlnd.collect_memory_statistics` <span class="type">bool</span>  
 Enable the collection of various memory statistics which can be accessed
 through <span class="function">mysqli\_get\_client\_stats</span>, <span
-class="function">mysqli\_get\_connection\_stats</span>, <span
-class="function">mysqli\_get\_cache\_stats</span> and are shown in
+class="function">mysqli\_get\_connection\_stats</span>, and are shown in
 *mysqlnd* section of the output of the <span
 class="function">phpinfo</span> function as well.
 
@@ -41032,7 +40760,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2210" class="example">
+<div id="example-2209" class="example">
 <p><strong>Example #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -41121,7 +40849,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2211" class="example">
+<div id="example-2210" class="example">
 <p><strong>Example #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -43892,7 +43620,7 @@ Commits a distributed/XA transaction among MySQL servers
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type">bool</span> <span
 class="methodname">mysqlnd\_ms\_xa\_commit</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">string</span>

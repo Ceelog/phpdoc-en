@@ -1902,7 +1902,7 @@ day.
 
 <span class="function">mktime</span> returns the Unix timestamp of the
 arguments given. If the arguments are invalid, the function returns
-**`FALSE`** (before PHP 5.1 it returned *-1*).
+**`FALSE`**.
 
 ### Errors/Exceptions
 
@@ -2513,8 +2513,7 @@ dates.
 
 ### Return Values
 
-Returns a timestamp on success, **`FALSE`** otherwise. Previous to PHP
-5.1.0, this function would return *-1* on failure.
+Returns a timestamp on success, **`FALSE`** otherwise.
 
 ### Errors/Exceptions
 

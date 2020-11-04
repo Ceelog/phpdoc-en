@@ -253,6 +253,12 @@ $bytevalue %= 256;
 
 A single-character string containing the specified byte.
 
+### Changelog
+
+| Version | Description                                                                               |
+|---------|-------------------------------------------------------------------------------------------|
+| 7.4.0   | The function no longer silently accepts unsupported `bytevalue`s, and casts these to *0*. |
+
 ### Examples
 
 **Example \#1 <span class="function">chr</span> example**
@@ -2782,7 +2788,9 @@ The input string.
 
 `phonemes`  
 This parameter restricts the returned metaphone key to `phonemes`
-characters in length. The default value of *0* means no restriction.
+*characters* in length. However, the resulting phonemes are always
+transcribed completely, so the resulting string length may be slightly
+longer than `phonemes`. The default value of *0* means no restriction.
 
 ### Return Values
 
@@ -2799,7 +2807,7 @@ var_dump(metaphone('programmer'));
 ?>
 ```
 
-The above example will output something similar to:
+The above example will output:
 
     string(7) "PRKRMNK"
     string(6) "PRKRMR"
@@ -2813,10 +2821,27 @@ var_dump(metaphone('programmer', 5));
 ?>
 ```
 
-The above example will output something similar to:
+The above example will output:
 
     string(5) "PRKRM"
     string(5) "PRKRM"
+
+**Example \#3 Using the `phonemes` parameter**
+
+In this example, <span class="function">metaphone</span> is advised to
+produce a string of five characters, but that would require to split the
+final phoneme (*'x'* is supposed to be transcribed to *'KS'*), so the
+function returns a string with six characters.
+
+``` php
+<?php
+var_dump(metaphone('Asterix', 5));
+?>
+```
+
+The above example will output:
+
+    string(6) "ASTRKS"
 
 money\_format
 =============
