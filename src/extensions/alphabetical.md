@@ -112,8 +112,6 @@ Alphabetical
 -   <span
     class="simpara"><a href="/book/iconv.html" class="xref">iconv</a></span>
 -   <span
-    class="simpara"><a href="/book/ifx.html" class="xref">Informix</a></span>
--   <span
     class="simpara"><a href="/book/iisfunc.html" class="xref">IIS</a></span>
 -   <span
     class="simpara"><a href="/book/image.html" class="xref">GD</a></span>
@@ -147,8 +145,6 @@ Alphabetical
     class="simpara"><a href="/book/mailparse.html" class="xref">Mailparse</a></span>
 -   <span
     class="simpara"><a href="/book/math.html" class="xref">Math</a></span>
--   <span
-    class="simpara"><a href="/book/maxdb.html" class="xref">MaxDB</a></span>
 -   <span
     class="simpara"><a href="/book/mbstring.html" class="xref">Multibyte String</a></span>
 -   <span

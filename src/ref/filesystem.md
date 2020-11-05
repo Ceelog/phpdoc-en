@@ -5854,6 +5854,11 @@ The old name.
 `newname`  
 The new name.
 
+> **Note**: <span class="simpara"> On Windows, if `newname` already
+> exists, it must be writable. Otherwise <span
+> class="function">rename</span> fails and issues **`E_WARNING`**.
+> </span>
+
 `context`  
 > **Note**: <span class="simpara">Context support was added with PHP
 > 5.0.0. For a description of *contexts*, refer to

@@ -46,11 +46,6 @@ Vendor Specific Database Extensions
     -   [Predefined
         Constants](/book/ibm-db2.html#Predefined%20Constants)
     -   [IBM DB2 Functions](/book/ibm-db2.html#IBM%20DB2%20Functions)
--   [Informix](/book/ifx.html)
-    -   [Introduction](/book/ifx.html#Introduction)
-    -   [Installing/Configuring](/book/ifx.html#Installing/Configuring)
-    -   [Predefined Constants](/book/ifx.html#Predefined%20Constants)
-    -   [Informix Functions](/book/ifx.html#Informix%20Functions)
 -   [Ingres](/book/ingres.html) — Ingres DBMS, EDBC, and Enterprise
     Access Gateways
     -   [Introduction](/book/ingres.html#Introduction)
@@ -58,12 +53,6 @@ Vendor Specific Database Extensions
     -   [Predefined Constants](/book/ingres.html#Predefined%20Constants)
     -   [Examples](/book/ingres.html#Examples)
     -   [Ingres Functions](/book/ingres.html#Ingres%20Functions)
--   [MaxDB](/book/maxdb.html)
-    -   [Introduction](/book/maxdb.html#Introduction)
-    -   [Installing/Configuring](/book/maxdb.html#Installing/Configuring)
-    -   [Predefined Constants](/book/maxdb.html#Predefined%20Constants)
-    -   [Examples](/book/maxdb.html#Examples)
-    -   [MaxDB Functions](/book/maxdb.html#MaxDB%20Functions)
 -   [Mongo](/book/mongo.html) — MongoDB driver (legacy)
     -   [Installing/Configuring](/book/mongo.html#Installing/Configuring)
     -   [Predefined Constants](/book/mongo.html#Predefined%20Constants)

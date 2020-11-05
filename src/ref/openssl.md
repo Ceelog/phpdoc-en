@@ -1518,6 +1518,10 @@ If the call is successful the opened data is returned in this parameter.
 `method`  
 The cipher method.
 
+**Caution**
+The default value (*'RC4'*) is considered insecure. It is strongly
+recommended to explicitly specify a secure cipher method.
+
 `iv`  
 The initialization vector.
 
@@ -2728,6 +2732,10 @@ Array of public key resource identifiers.
 
 `method`  
 The cipher method.
+
+**Caution**
+The default value (*'RC4'*) is considered insecure. It is strongly
+recommended to explicitly specify a secure cipher method.
 
 `iv`  
 The initialization vector.

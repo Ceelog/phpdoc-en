@@ -1489,7 +1489,7 @@ be **`TRUE`** for success, **`FALSE`** for failure.
 `update_timestamp`  
 A callable with the following signature:
 
-<span class="type">string</span> <span class="methodname"><span
+<span class="type">bool</span> <span class="methodname"><span
 class="replaceable">update\_timestamp</span></span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> ,
 <span class="methodparam"><span class="type">string</span> `$val`</span>

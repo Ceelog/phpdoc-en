@@ -17,10 +17,8 @@ Database Extensions
     -   [FrontBase](/book/fbsql.html)
     -   [IBM DB2](/book/ibm-db2.html) — IBM DB2, Cloudscape and Apache
         Derby
-    -   [Informix](/book/ifx.html)
     -   [Ingres](/book/ingres.html) — Ingres DBMS, EDBC, and Enterprise
         Access Gateways
-    -   [MaxDB](/book/maxdb.html)
     -   [Mongo](/book/mongo.html) — MongoDB driver (legacy)
     -   [MongoDB](/set/mongodb.html) — MongoDB driver
     -   [MySQL](/set/mysqlinfo.html) — MySQL Drivers and Plugins
