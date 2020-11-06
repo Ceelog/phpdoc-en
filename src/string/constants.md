@@ -9,16 +9,28 @@ dynamically loaded at runtime.
 <span class="simpara"> </span>
 
 **`CRYPT_STD_DES`** <span class="type">int</span>  
-<span class="simpara"> </span>
+<span class="simpara"> Indicates whether standard DES-based hashes are
+supported in <span class="function">crypt</span>. Always *1*. </span>
 
 **`CRYPT_EXT_DES`** <span class="type">int</span>  
-<span class="simpara"> </span>
+<span class="simpara"> Indicates whether extended DES-based hashes are
+supported in <span class="function">crypt</span>. Always *1*. </span>
 
 **`CRYPT_MD5`** <span class="type">int</span>  
-<span class="simpara"> </span>
+<span class="simpara"> Indicates whether MD5 hashes are supported in
+<span class="function">crypt</span>. Always *1*. </span>
 
 **`CRYPT_BLOWFISH`** <span class="type">int</span>  
-<span class="simpara"> </span>
+<span class="simpara"> Indicates whether Blowfish hashes are supported
+in <span class="function">crypt</span>. Always *1*. </span>
+
+**`CRYPT_SHA256`** <span class="type">int</span>  
+<span class="simpara"> Indicates whether SHA-256 hashes are supported in
+<span class="function">crypt</span>. Always *1*. </span>
+
+**`CRYPT_SHA512`** <span class="type">int</span>  
+<span class="simpara"> Indicates whether SHA-512 hashes are supported in
+<span class="function">crypt</span>. Always *1*. </span>
 
 **`HTML_SPECIALCHARS`** (<span class="type">int</span>)  
 <span class="simpara"> </span>
