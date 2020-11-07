@@ -1840,71 +1840,66 @@ values of the `option` parameter:
 <td></td>
 </tr>
 <tr class="even">
-<td><strong><code>CURLOPT_SAFE_UPLOAD</code></strong></td>
-<td><strong><code>TRUE</code></strong> to disable support for the <em>@</em> prefix for uploading files in <strong><code>CURLOPT_POSTFIELDS</code></strong>, which means that values starting with <em>@</em> can be safely passed as fields. <span class="classname">CURLFile</span> may be used for uploads instead.</td>
-<td>Added in PHP 5.5.0 with <strong><code>FALSE</code></strong> as the default value. PHP 5.6.0 changes the default value to <strong><code>TRUE</code></strong>. PHP 7 removes this option; the CURLFile interface must be used to upload files.</td>
-</tr>
-<tr class="odd">
 <td><strong><code>CURLOPT_SASL_IR</code></strong></td>
 <td><strong><code>TRUE</code></strong> to enable sending the initial response in the first packet.</td>
 <td>Added in cURL 7.31.10. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_SSL_ENABLE_ALPN</code></strong></td>
 <td><strong><code>FALSE</code></strong> to disable ALPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
 <td>Added in cURL 7.36.0. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_SSL_ENABLE_NPN</code></strong></td>
 <td><strong><code>FALSE</code></strong> to disable NPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
 <td>Added in cURL 7.36.0. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_SSL_VERIFYPEER</code></strong></td>
 <td><strong><code>FALSE</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option.</td>
 <td><strong><code>TRUE</code></strong> by default as of cURL 7.10. Default bundle installed as of cURL 7.10.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_SSL_VERIFYSTATUS</code></strong></td>
 <td><strong><code>TRUE</code></strong> to verify the certificate's status.</td>
 <td>Added in cURL 7.41.0. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_PROXY_SSL_VERIFYPEER</code></strong></td>
 <td><strong><code>FALSE</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option. When set to false, the peer certificate verification succeeds regardless.</td>
 <td><strong><code>TRUE</code></strong> by default. Available since PHP 7.3.0 and libcurl &gt;= cURL 7.52.0.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_SUPPRESS_CONNECT_HEADERS</code></strong></td>
 <td><strong><code>TRUE</code></strong> to suppress proxy CONNECT response headers from the user callback functions <strong><code>CURLOPT_HEADERFUNCTION</code></strong> and <strong><code>CURLOPT_WRITEFUNCTION</code></strong>, when <strong><code>CURLOPT_HTTPPROXYTUNNEL</code></strong> is used and a CONNECT request is made.</td>
 <td>Added in cURL 7.54.0. Available since PHP 7.3.0.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_TCP_FASTOPEN</code></strong></td>
 <td><strong><code>TRUE</code></strong> to enable TCP Fast Open.</td>
 <td>Added in cURL 7.49.0. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_TFTP_NO_OPTIONS</code></strong></td>
 <td><strong><code>TRUE</code></strong> to not send TFTP options requests.</td>
 <td>Added in cURL 7.48.0. Available since PHP 7.0.7.</td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_TRANSFERTEXT</code></strong></td>
 <td><strong><code>TRUE</code></strong> to use ASCII mode for FTP transfers. For LDAP, it retrieves data in plain text instead of HTML. On Windows systems, it will not set <em>STDOUT</em> to binary mode.</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_UNRESTRICTED_AUTH</code></strong></td>
 <td><strong><code>TRUE</code></strong> to keep sending the username and password when following locations (using <strong><code>CURLOPT_FOLLOWLOCATION</code></strong>), even when the hostname has changed.</td>
 <td></td>
 </tr>
-<tr class="even">
+<tr class="odd">
 <td><strong><code>CURLOPT_UPLOAD</code></strong></td>
 <td><strong><code>TRUE</code></strong> to prepare for an upload.</td>
 <td></td>
 </tr>
-<tr class="odd">
+<tr class="even">
 <td><strong><code>CURLOPT_VERBOSE</code></strong></td>
 <td><strong><code>TRUE</code></strong> to output verbose information. Writes output to <em>STDERR</em>, or the file specified using <strong><code>CURLOPT_STDERR</code></strong>.</td>
 <td></td>
@@ -2301,7 +2296,7 @@ values of the `option` parameter:
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_POSTFIELDS</code></strong></td>
-<td><span class="simpara"> The full data to post in a HTTP "POST" operation. To post a file, prepend a filename with <em>@</em> and use the full path. The filetype can be explicitly specified by following the filename with the type in the format '<em>;type=mimetype</em>'. This parameter can either be passed as a urlencoded string like '<em>para1=val1&amp;para2=val2&amp;...</em>' or as an array with the field name as key and field data as value. If <code class="parameter">value</code> is an array, the <em>Content-Type</em> header will be set to <em>multipart/form-data</em>. </span> <span class="simpara"> As of PHP 5.2.0, <code class="parameter">value</code> must be an array if files are passed to this option with the <em>@</em> prefix. </span> <span class="simpara"> As of PHP 5.5.0, the <em>@</em> prefix is deprecated and files can be sent using <span class="classname">CURLFile</span>. The <em>@</em> prefix can be disabled for safe passing of values beginning with <em>@</em> by setting the <strong><code>CURLOPT_SAFE_UPLOAD</code></strong> option to <strong><code>TRUE</code></strong>. </span></td>
+<td><span class="simpara"> The full data to post in a HTTP "POST" operation. This parameter can either be passed as a urlencoded string like '<em>para1=val1&amp;para2=val2&amp;...</em>' or as an array with the field name as key and field data as value. If <code class="parameter">value</code> is an array, the <em>Content-Type</em> header will be set to <em>multipart/form-data</em>. </span> <span class="simpara"> Files can be sent using <span class="classname">CURLFile</span>, in which case <code class="parameter">value</code> must be an array. </span></td>
 <td></td>
 </tr>
 <tr class="even">
@@ -2630,48 +2625,6 @@ curl_exec($ch);
 curl_close($ch);
 ?>
 ```
-
-**Example \#2 Uploading file (deprecated as of PHP 5.5.0)**
-
-``` php
-<?php
-
-/* http://localhost/upload.php:
-print_r($_POST);
-print_r($_FILES);
-*/
-
-$ch = curl_init();
-
-$data = array('name' => 'Foo', 'file' => '@/home/user/test.png');
-
-curl_setopt($ch, CURLOPT_URL, 'http://localhost/upload.php');
-curl_setopt($ch, CURLOPT_POST, 1);
-curl_setopt($ch, CURLOPT_SAFE_UPLOAD, false); // required as of PHP 5.6.0
-curl_setopt($ch, CURLOPT_POSTFIELDS, $data);
-
-curl_exec($ch);
-?>
-```
-
-The above example will output:
-
-    Array
-    (
-        [name] => Foo
-    )
-    Array
-    (
-        [file] => Array
-            (
-                [name] => test.png
-                [type] => image/png
-                [tmp_name] => /tmp/phpcpjNeQ
-                [error] => 0
-                [size] => 279
-            )
-
-    )
 
 ### Notes
 

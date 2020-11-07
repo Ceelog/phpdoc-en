@@ -29,5 +29,12 @@ Resource Types
 --------------
 
 <span class="function">socket\_accept</span>, <span
-class="function">socket\_create\_listen</span> and <span
-class="function">socket\_create</span> return socket resources.
+class="function">socket\_import\_stream</span>, <span
+class="function">socket\_addrinfo\_connect</span>, <span
+class="function">socket\_addrinfo\_bind</span>, <span
+class="function">socket\_create\_listen</span>, <span
+class="function">socket\_wsaprotocol\_info\_import</span> and <span
+class="function">socket\_create</span> return Socket resources.
+
+<span class="function">socket\_addrinfo\_lookup</span> returns an array
+of AddressInfo resources.
