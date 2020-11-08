@@ -739,7 +739,7 @@ MySQL Improved Extension
     -   [mysqli::$info](/set/mysqlinfo.html#mysqli::$info) — Retrieves
         information about the most recently executed query
     -   [mysqli::init](/set/mysqlinfo.html#mysqli::init) — Initializes
-        MySQLi and returns a resource for use with
+        MySQLi and returns an object for use with
         mysqli\_real\_connect()
     -   [mysqli::$insert\_id](/set/mysqlinfo.html#mysqli::$insert_id) —
         Returns the auto generated id used in the latest query
@@ -968,11 +968,11 @@ in order to carry out its desired task. In the case of PHP applications
 that need to communicate with databases the necessary APIs are usually
 exposed via PHP extensions.
 
-APIs can be procedural or object-oriented. With a procedural API you
+APIs can be procedural or object-oriented. With a procedural API, you
 call functions to carry out tasks, with the object-oriented API you
 instantiate classes and then call methods on the resulting objects. Of
-the two the latter is usually the preferred interface, as it is more
-modern and leads to better organized code.
+the two, the latter is usually the preferred interface, as it is more
+modern and leads to better-organized code.
 
 When writing PHP applications that need to connect to the MySQL server
 there are several API options available. This document discusses what is
@@ -987,7 +987,7 @@ PHP.
 
 If your PHP application needs to communicate with a database server you
 will need to write PHP code to perform such activities as connecting to
-the database server, querying the database and other database-related
+the database server, querying the database, and other database-related
 functions. Software is required to provide the API that your PHP
 application will use, and also handle the communication between your
 application and the database server, possibly using other intermediate
@@ -1019,8 +1019,8 @@ part of a connector package.
 In the PHP documentation you will come across another term -
 *extension*. The PHP code consists of a core, with optional extensions
 to the core functionality. PHP's MySQL-related extensions, such as the
-*mysqli* extension, and the *mysql* extension, are implemented using the
-PHP extension framework.
+mysqli extension, and the PDO MySQL driver extension, are implemented
+using the PHP extension framework.
 
 An extension typically exposes an API to the PHP programmer, to allow
 its facilities to be used programmatically. However, some extensions
@@ -1035,10 +1035,8 @@ as an extension may not necessarily expose an API to the programmer.
 
 *What are the main PHP API offerings for using MySQL?*
 
-There are three main API options when considering connecting to a MySQL
+There are two main API options when considering connecting to a MySQL
 database server:
-
--   PHP's MySQL Extension
 
 -   PHP's mysqli Extension
 
@@ -1046,26 +1044,6 @@ database server:
 
 Each has its own advantages and disadvantages. The following discussion
 aims to give a brief introduction to the key aspects of each API.
-
-*What is PHP's MySQL Extension?*
-
-This is the original extension designed to allow you to develop PHP
-applications that interact with a MySQL database. The *mysql* extension
-provides a procedural interface and is intended for use only with MySQL
-versions older than 4.1.3. This extension can be used with versions of
-MySQL 4.1.3 or newer, but not all of the latest MySQL server features
-will be available.
-
-> **Note**:
->
-> If you are using MySQL versions 4.1.3 or later it is *strongly*
-> recommended that you use the *mysqli* extension instead.
-
-The *mysql* extension source code is located in the PHP extension
-directory `ext/mysql`.
-
-For further information on the *mysql* extension, see
-<a href="/set/mysqlinfo.html#MySQL%20(Original)" class="xref"></a>.
 
 *What is PHP's mysqli Extension?*
 
@@ -1086,13 +1064,6 @@ over the *mysql* extension being:
 -   Support for Transactions
 
 -   Enhanced debugging capabilities
-
--   Embedded server support
-
-> **Note**:
->
-> If you are using MySQL versions 4.1.3 or later it is *strongly*
-> recommended that you use this extension.
 
 As well as the object-oriented interface the extension also provides a
 procedural interface.
@@ -1130,8 +1101,8 @@ For further information on PDO, see the
 *What is the PDO MYSQL driver?*
 
 The PDO MYSQL driver is not an API as such, at least from the PHP
-programmer's perspective. In fact the PDO MYSQL driver sits in the layer
-below PDO itself and provides MySQL-specific functionality. The
+programmer's perspective. In fact, the PDO MYSQL driver sits in the
+layer below PDO itself and provides MySQL-specific functionality. The
 programmer still calls the PDO API, but PDO uses the PDO MYSQL driver to
 carry out communication with the MySQL server.
 
@@ -1148,29 +1119,22 @@ For further information on the PDO MYSQL driver, see
 
 *What is PHP's MySQL Native Driver?*
 
-In order to communicate with the MySQL database server the *mysql*
-extension, *mysqli* and the PDO MYSQL driver each use a low-level
-library that implements the required protocol. In the past, the only
-available library was the MySQL Client Library, otherwise known as
-*libmysqlclient*.
+In order to communicate with the MySQL database server, *mysqli* and the
+PDO MYSQL driver each use a low-level library that implements the
+required protocol. In the past, the only available library was the MySQL
+Client Library, otherwise known as *libmysqlclient*.
 
 However, the interface presented by *libmysqlclient* was not optimized
 for communication with PHP applications, as *libmysqlclient* was
-originally designed with C applications in mind. For this reason the
+originally designed with C applications in mind. For this reason, the
 MySQL Native Driver, *mysqlnd*, was developed as an alternative to
 *libmysqlclient* for PHP applications.
 
-The *mysql* extension, the *mysqli* extension and the PDO MySQL driver
-can each be individually configured to use either *libmysqlclient* or
-*mysqlnd*. As *mysqlnd* is designed specifically to be utilised in the
-PHP system it has numerous memory and speed enhancements over
-*libmysqlclient*. You are strongly encouraged to take advantage of these
-improvements.
-
-> **Note**:
->
-> The MySQL Native Driver can only be used with MySQL server versions
-> 4.1.3 and later.
+Both, the *mysqli* extension and the PDO MySQL driver can each be
+individually configured to use either *libmysqlclient* or *mysqlnd*. As
+*mysqlnd* is designed specifically to be utilised in the PHP system it
+has numerous memory and speed enhancements over *libmysqlclient*. You
+are strongly encouraged to take advantage of these improvements.
 
 The MySQL Native Driver is implemented using the PHP extension
 framework. The source code is located in `ext/mysqlnd`. It does not
@@ -1178,21 +1142,19 @@ expose an API to the PHP programmer.
 
 *Comparison of Features*
 
-The following table compares the functionality of the three main methods
-of connecting to MySQL from PHP:
+The following table compares the functionality of the main methods of
+connecting to MySQL from PHP:
 
-|                                              | PHP's mysqli Extension | PDO (Using PDO MySQL Driver and MySQL Native Driver) | PHP's MySQL Extension |
-|----------------------------------------------|------------------------|------------------------------------------------------|-----------------------|
-| PHP version introduced                       | 5.0                    | 5.0                                                  | Prior to 3.0          |
-| Included with PHP 5.x                        | yes                    | yes                                                  | Yes                   |
-| MySQL development status                     | Active development     | Active development as of PHP 5.3                     | Maintenance only      |
-| Recommended by MySQL for new projects        | Yes - preferred option | Yes                                                  | No                    |
-| API supports Charsets                        | Yes                    | Yes                                                  | No                    |
-| API supports server-side Prepared Statements | Yes                    | Yes                                                  | No                    |
-| API supports client-side Prepared Statements | No                     | Yes                                                  | No                    |
-| API supports Stored Procedures               | Yes                    | Yes                                                  | No                    |
-| API supports Multiple Statements             | Yes                    | Most                                                 | No                    |
-| Supports all MySQL 4.1+ functionality        | Yes                    | Most                                                 | No                    |
+|                                              | PHP's mysqli Extension | PDO (Using PDO MySQL Driver and MySQL Native Driver) |
+|----------------------------------------------|------------------------|------------------------------------------------------|
+| PHP version introduced                       | 5.0                    | 5.0                                                  |
+| MySQL development status                     | Active development     | Active development                                   |
+| API supports Charsets                        | Yes                    | Yes                                                  |
+| API supports server-side Prepared Statements | Yes                    | Yes                                                  |
+| API supports client-side Prepared Statements | No                     | Yes                                                  |
+| API supports Stored Procedures               | Yes                    | Yes                                                  |
+| API supports Multiple Statements             | Yes                    | Most                                                 |
+| Supports all MySQL 4.1+ functionality        | Yes                    | Most                                                 |
 
 Quick start guide
 =================
@@ -2513,39 +2475,35 @@ used. Since MySQL 5.5, the default storage engine is InnoDB. InnoDB has
 full ACID transaction support.
 
 Transactions can either be controlled using SQL or API calls. It is
-recommended to use API calls for enabling and disabling the auto commit
+recommended to use API calls for enabling and disabling the *autocommit*
 mode and for committing and rolling back transactions.
 
-**Example \#1 Setting auto commit mode with SQL and through the API**
+**Example \#1 Setting *autocommit* mode with SQL and through the API**
 
 ``` php
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli("example.com", "user", "password", "database");
-if ($mysqli->connect_errno) {
-    echo "Failed to connect to MySQL: (" . $mysqli->connect_errno . ") " . $mysqli->connect_error;
-}
 
 /* Recommended: using API to control transactional settings */
 $mysqli->autocommit(false);
 
 /* Won't be monitored and recognized by the replication and the load balancing plugin */
-if (!$mysqli->query('SET AUTOCOMMIT = 0')) {
-    echo "Query failed: (" . $mysqli->errno . ") " . $mysqli->error;
-}
-?>
+$mysqli->query('SET AUTOCOMMIT = 0');
 ```
 
 Optional feature packages, such as the replication and load balancing
 plugin, can easily monitor API calls. The replication plugin offers
 transaction aware load balancing, if transactions are controlled with
 API calls. Transaction aware load balancing is not available if SQL
-statements are used for setting auto commit mode, committing or rolling
+statements are used for setting *autocommit* mode, committing or rolling
 back a transaction.
 
 **Example \#2 Commit and rollback**
 
 ``` php
 <?php
+mysqli_report(MYSQLI_REPORT_ERROR | MYSQLI_REPORT_STRICT);
 $mysqli = new mysqli("example.com", "user", "password", "database");
 $mysqli->autocommit(false);
 
@@ -2554,7 +2512,6 @@ $mysqli->rollback();
 
 $mysqli->query("INSERT INTO test(id) VALUES (2)");
 $mysqli->commit();
-?>
 ```
 
 Please note, that the MySQL server cannot roll back all statements. Some
@@ -2563,8 +2520,9 @@ statements cause an implicit commit.
 *See also*
 
 -   <span class="methodname">mysqli::autocommit</span>
--   <span class="methodname">mysqli\_result::commit</span>
--   <span class="methodname">mysqli\_result::rollback</span>
+-   <span class="methodname">mysqli::begin\_transaction</span>
+-   <span class="methodname">mysqli::commit</span>
+-   <span class="methodname">mysqli::rollback</span>
 
 Metadata
 --------
@@ -3569,9 +3527,8 @@ NOT DOCUMENTED
 
 N/A
 
-Initializes MySQLi and returns a resource for use with
-mysqli\_real\_connect. \[Not called on an object, as it returns a
-$mysqli object.\]
+Initializes MySQLi and returns an object for use with
+mysqli\_real\_connect.
 
 <span class="methodname">mysqli::kill</span>
 
@@ -7242,7 +7199,7 @@ mysqli::init
 mysqli\_init
 ============
 
-Initializes MySQLi and returns a resource for use with
+Initializes MySQLi and returns an object for use with
 mysqli\_real\_connect()
 
 ### Description
@@ -8928,7 +8885,7 @@ Procedural style
 
 <span class="type">bool</span> <span
 class="methodname">mysqli\_refresh</span> ( <span
-class="methodparam"><span class="type">resource</span> `$link`</span> ,
+class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$options`</span> )
 
@@ -15141,7 +15098,7 @@ class="modifier">readonly</span> <span class="type">string</span>
 `$driver_version` ;
 
 <span class="modifier">public</span> <span
-class="modifier">readonly</span> <span class="type">string</span>
+class="modifier">readonly</span> <span class="type">bool</span>
 `$embedded` ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -15198,6 +15155,10 @@ mysqli\_embedded\_server\_end
 
 Stop embedded server
 
+**Warning**
+
+This function was *REMOVED* in PHP 7.4.0.
+
 ### Description
 
 Object oriented style
@@ -15224,6 +15185,10 @@ mysqli\_embedded\_server\_start
 ===============================
 
 Initialize and start embedded server
+
+**Warning**
+
+This function was *REMOVED* in PHP 7.4.0.
 
 ### Description
 

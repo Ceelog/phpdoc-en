@@ -16,17 +16,6 @@ No external libraries are needed to build this extension.
 Installation
 ------------
 
-The process of installing OPcache varies depending on which version of
-PHP you're running. Please refer to the appropriate section below.
-
-> **Note**:
->
-> If you want to use OPcache with
-> <a href="http://xdebug.org/" class="link external">» Xdebug</a>, you
-> must load OPcache before Xdebug.
-
-### PHP 5.5.0 and later
-
 OPcache can only be compiled as a shared extension. If you have disabled
 the building of default extensions with **--disable-all**, you must
 compile PHP with the **--enable-opcache** option for OPcache to be
@@ -39,21 +28,11 @@ be done with *zend\_extension=/full/path/to/opcache.so* on non-Windows
 platforms, and *zend\_extension=C:\\path\\to\\php\_opcache.dll* on
 Windows.
 
-### PHP 5.2, 5.3 and 5.4
-
-This <a href="https://pecl.php.net/" class="link external">» PECL</a>
-extension is not bundled with PHP.
-
-Information for installing this PECL extension may be found in the
-manual chapter titled
-<a href="/install/pecl.html" class="link">Installation of PECL extensions</a>.
-Additional information such as new releases, downloads, source files,
-maintainer information, and a CHANGELOG, can be located here:
-<a href="https://pecl.php.net/package/ZendOpcache" class="link external">» https://pecl.php.net/package/ZendOpcache</a>.
-
-A DLL for this PECL extension is currently unavailable. See also the
-<a href="/install/windows/legacy/index.html#install.windows.legacy.building" class="link">building on Windows</a>
-section.
+> **Note**:
+>
+> If you want to use OPcache with
+> <a href="http://xdebug.org/" class="link external">» Xdebug</a>, you
+> must load OPcache before Xdebug.
 
 ### Recommended php.ini settings
 
