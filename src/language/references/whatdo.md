@@ -58,15 +58,9 @@ $foo =& find_var($bar);
 ?>
 ```
 
-Since PHP 5,
 <a href="/language/oop5/basic.html#language.oop5.basic.new" class="link">new</a>
-returns a reference automatically, so using *=&* in this context is
-deprecated and produces an **`E_DEPRECATED`** message in PHP 5.3 and
-later, and an **`E_STRICT`** message in earlier versions. As of PHP 7.0
-it is syntactically invalid. (Technically, the difference is that, in
-PHP 5, object variables, much like resources, are a mere pointer to the
-actual object data, so these object references are not "references" in
-the same sense used before (aliases). For more information, see
+returns a reference automatically, thus it is syntactically invalid. For
+more information, see
 <a href="/language/oop5/references.html" class="link">Objects and references</a>.)
 
 **Warning**

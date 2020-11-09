@@ -120,7 +120,9 @@ $func(); // prints "bar"
 ?>
 ```
 
-See also <span class="function">is\_callable</span>, <span
-class="function">call\_user\_func</span>,
-<a href="/language/variables/variable.html" class="link">variable variables</a>
-and <span class="function">function\_exists</span>.
+### See Also
+
+-   <span class="function">is\_callable</span>
+-   <span class="function">call\_user\_func</span>
+-   <span class="function">function\_exists</span>
+-   <a href="/language/variables/variable.html" class="link">variable variables</a>

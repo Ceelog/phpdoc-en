@@ -145,12 +145,6 @@ function standard_array_compare($op1, $op2)
 ?>
 ```
 
-See also <span class="function">strcasecmp</span>, <span
-class="function">strcmp</span>,
-<a href="/language/operators/array.html" class="link">Array operators</a>,
-and the manual section on
-<a href="/language/types.html" class="link">Types</a>.
-
 **Warning**
 
 Because of the way <span class="type">float</span>s are represented
@@ -159,6 +153,13 @@ equality.
 
 See the documentation for <span class="type">float</span> for more
 information.
+
+### See Also
+
+-   <span class="function">strcasecmp</span>
+-   <span class="function">strcmp</span>
+-   <a href="/language/operators/array.html" class="link">Array operators</a>
+-   <a href="/language/types.html" class="link">Types</a>
 
 ### Ternary Operator
 
@@ -187,8 +188,8 @@ class="replaceable">expr1</span> evaluates to **`TRUE`**, and <span
 class="replaceable">expr3</span> if <span
 class="replaceable">expr1</span> evaluates to **`FALSE`**.
 
-Since PHP 5.3, it is possible to leave out the middle part of the
-ternary operator. Expression *expr1 ?: expr3* returns <span
+It is possible to leave out the middle part of the ternary operator.
+Expression *expr1 ?: expr3* returns <span
 class="replaceable">expr1</span> if <span
 class="replaceable">expr1</span> evaluates to **`TRUE`**, and <span
 class="replaceable">expr3</span> otherwise.

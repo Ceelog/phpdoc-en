@@ -79,6 +79,7 @@ var_dump($a === $b); // bool(false)
 ?>
 ```
 
-See also the manual sections on the
-<a href="/language/types/array.html" class="link">Array type</a> and
-<a href="/ref/array.html" class="link">Array functions</a>.
+### See Also
+
+-   <a href="/language/types/array.html" class="link">Array type</a>
+-   <a href="/ref/array.html" class="link">Array functions</a>

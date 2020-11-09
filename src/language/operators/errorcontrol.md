@@ -39,10 +39,6 @@ $value = @$cache[$key];
 > <a href="/control-structures/foreach.html" class="link">foreach</a>,
 > and so forth. </span>
 
-See also <span class="function">error\_reporting</span> and the manual
-section for
-<a href="/ref/errorfunc.html" class="link">Error Handling and Logging functions</a>.
-
 **Warning**
 
 Currently the "@" error-control operator prefix will even disable error
@@ -50,3 +46,8 @@ reporting for critical errors that will terminate script execution.
 Among other things, this means that if you use "@" to suppress errors
 from a certain function and either it isn't available or has been
 mistyped, the script will die right there with no indication as to why.
+
+### See Also
+
+-   <span class="function">error\_reporting</span>
+-   <a href="/ref/errorfunc.html" class="link">Error Handling and Logging functions</a>

@@ -4,9 +4,6 @@ variables represent everything from
 to built-in environment variables, last error messages to last retrieved
 headers.
 
-See also the FAQ titled
-"<a href="/faq/using.html#faq.register-globals" class="link">How does register_globals affect me?</a>"
-
 Superglobals
 ============
 

@@ -121,9 +121,8 @@ section of the manual.
 | $a .= $b  | $a = $a . $b  | String Concatenation |
 | $a ??= $b | $a = $a ?? $b | Null Coalesce        |
 
-See also the manual sections on
-<a href="/language/operators/arithmetic.html" class="link">arithmetic operators</a>,
-<a href="/language/operators/bitwise.html" class="link">bitwise operators</a>,
-<a href="/language/operators/string.html" class="link">string operators</a>,
-and
-<a href="/language/operators/comparison.html#language.operators.comparison.coalesce" class="link">null coalescing operator</a>.
+### See Also
+
+-   <a href="/language/operators/arithmetic.html" class="link">arithmetic operators</a>
+-   <a href="/language/operators/bitwise.html" class="link">bitwise operators</a>
+-   <a href="/language/operators/comparison.html#language.operators.comparison.coalesce" class="link">null coalescing operator</a>

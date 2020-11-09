@@ -25,10 +25,11 @@ follows:
 | **`__TRAIT__`**        | The trait name. The trait name includes the namespace it was declared in (e.g. *Foo\\Bar*).                                                                                                                                              |
 | **`__METHOD__`**       | The class method name.                                                                                                                                                                                                                   |
 | **`__NAMESPACE__`**    | The name of the current namespace.                                                                                                                                                                                                       |
-| **`ClassName::class`** | The fully qualified class name. See also <a href="/language/oop5/basic.html#language.oop5.basic.class.class" class="link">::class</a>.                                                                                                   |
+| **`ClassName::class`** | The fully qualified class name.                                                                                                                                                                                                          |
 
 ### See Also
 
+-   <a href="/language/oop5/basic.html#language.oop5.basic.class.class" class="link">::class</a>
 -   <span class="function">get\_class</span>
 -   <span class="function">get\_object\_vars</span>
 -   <span class="function">file\_exists</span>

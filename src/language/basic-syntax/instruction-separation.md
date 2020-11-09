@@ -8,6 +8,22 @@ semicolon terminating the last line of a PHP block. The closing tag for
 the block will include the immediately trailing newline if one is
 present.
 
+**Example \#1 Example showing the closing tag encompasing the trailing
+newline**
+
+``` php
+<?php echo "Some text"; ?>
+No newline
+<?= "But newline now" ?>
+```
+
+The above example will output:
+
+    Some textNo newline
+    But newline now
+
+Examples of entering and exiting the PHP parser:
+
 ``` php
 <?php
     echo 'This is a test';

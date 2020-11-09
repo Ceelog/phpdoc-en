@@ -10,11 +10,29 @@ opening and closing tags is ignored by the PHP parser.
 PHP includes a short echo tag *\<?=* which is a short-hand to the more
 verbose `<?php echo`.
 
-PHP also allows for short open tag *\<?* (which is discouraged since it
-is only available if enabled using the
+**Example \#1 PHP Opening and Closing Tags**
+
+``` php
+1.  <?php echo 'if you want to serve PHP code in XHTML or XML documents,
+                use these tags'; ?>
+
+2.  You can use the short echo tag to <?= 'print this string' ?>.
+    It's equivalent to <?php echo 'print this string' ?>.
+
+3.  <? echo 'this code is within short tags, but will only work '.
+            'if short_open_tag is enabled'; ?>
+```
+
+Short tags (example three) are available by default but can be disabled
+either via the
 <a href="/ini/core.html#ini.short-open-tag" class="link">short_open_tag</a>
-`php.ini` configuration file directive, or if PHP was configured with
-the **--enable-short-tags** option).
+`php.ini` configuration file directive, or are disabled by default if
+PHP is built with the **--disable-short-tags** configuration.
+
+> **Note**:
+>
+> As short tags can be disabled it is recommened to only use the normal
+> tags (`<?php ?>` and `<?= ?>`) to maximise compatibility.
 
 If a file contains only PHP code, it is preferable to omit the PHP
 closing tag at the end of the file. This prevents accidental whitespace

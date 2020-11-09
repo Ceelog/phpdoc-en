@@ -38,9 +38,7 @@ reference syntax.
 > a function with the syntax: *return ($this-\>value);* this will *not*
 > work as you are attempting to return the result of an *expression*,
 > and not a variable, by reference. You can only return variables by
-> reference from a function - nothing else. Since PHP 5.1.0, an
-> **`E_NOTICE`** error is issued if the code tries to return a dynamic
-> expression or a result of the *new* operator. </span>
+> reference from a function - nothing else. </span>
 
 To use the returned reference, you must use reference assignment:
 

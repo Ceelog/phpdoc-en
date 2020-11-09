@@ -40,7 +40,9 @@ crucial for writing correct PHP code.
 > it will likely return **`NULL`** but this is just a convention, and
 > cannot be relied upon. </span>
 
-See also <span class="function">function\_exists</span>,
-<a href="/funcref.html" class="link">the function reference</a>, <span
-class="function">get\_extension\_funcs</span>, and <span
-class="function">dl</span>.
+### See Also
+
+-   <span class="function">function\_exists</span>
+-   <a href="/funcref.html" class="link">the function reference</a>
+-   <span class="function">get\_extension\_funcs</span>
+-   <span class="function">dl</span>

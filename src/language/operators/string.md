@@ -19,6 +19,7 @@ $a .= "World!";     // now $a contains "Hello World!"
 ?>
 ```
 
-See also the manual sections on the
-<a href="/language/types/string.html" class="link">String type</a> and
-<a href="/ref/strings.html" class="link">String functions</a>.
+### See Also
+
+-   <a href="/language/types/string.html" class="link">String type</a>
+-   <a href="/ref/strings.html" class="link">String functions</a>

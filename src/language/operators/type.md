@@ -177,26 +177,6 @@ Output of the above example in PHP 7.3:
 
     bool(false)
 
-There are a few pitfalls to be aware of. Before PHP version 5.1.0,
-*instanceof* would call <span class="function">\_\_autoload</span> if
-the class name did not exist. In addition, if the class was not loaded,
-a fatal error would occur. This can be worked around by using a dynamic
-class reference, or a string variable containing the class name:
-
-**Example \#8 Avoiding classname lookups and fatal errors with
-*instanceof***
-
-``` php
-<?php
-$d = 'NotMyClass';
-var_dump($a instanceof $d); // no fatal error here
-?>
-```
-
-The above example will output:
-
-    bool(false)
-
 The *instanceof* operator has a functional variant with the <span
 class="function">is\_a</span> function.
 

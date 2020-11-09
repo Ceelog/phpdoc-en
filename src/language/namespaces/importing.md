@@ -6,13 +6,11 @@ or importing, is an important feature of namespaces. This is similar to
 the ability of unix-based filesystems to create symbolic links to a file
 or to a directory.
 
-All versions of PHP that support namespaces support three kinds of
-aliasing or importing: aliasing a class name, aliasing an interface
-name, and aliasing a namespace name. PHP 5.6+ also allows aliasing or
-importing function and constant names.
+PHP can alias(/import) constants, functions, classes, interfaces, and
+namespaces.
 
-In PHP, aliasing is accomplished with the *use* operator. Here is an
-example showing all 5 kinds of importing:
+Aliasing is accomplished with the *use* operator. Here is an example
+showing all 5 kinds of importing:
 
 **Example \#1 importing/aliasing with the use operator**
 
@@ -27,13 +25,13 @@ use My\Full\NSname;
 // importing a global class
 use ArrayObject;
 
-// importing a function (PHP 5.6+)
+// importing a function
 use function My\Full\functionName;
 
-// aliasing a function (PHP 5.6+)
+// aliasing a function
 use function My\Full\functionName as func;
 
-// importing a constant (PHP 5.6+)
+// importing a constant
 use const My\Full\CONSTANT;
 
 $obj = new namespace\Another; // instantiates object of class foo\Another

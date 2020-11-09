@@ -27,20 +27,22 @@ of all defined constants.
 > in a different namespace. This implies that for example **`TRUE`** and
 > `$TRUE` are generally different. </span>
 
-If you use an undefined constant, PHP assumes that you mean the name of
-the constant itself, just as if you called it as a <span
-class="type">string</span> (CONSTANT vs "CONSTANT"). This fallback is
-deprecated as of PHP 7.2.0, and an error of level **`E_WARNING`** is
-issued when it happens (previously, an error of level
+If an undefined constant is used an <span class="classname">Error</span>
+is thrown. Prior to PHP 8.0.0, undefined constants would be interpreted
+as a bare word <span class="type">string</span>, i.e. (CONSTANT vs
+"CONSTANT"). This fallback is deprecated as of PHP 7.2.0, and an error
+of level **`E_WARNING`** is issued when it happens. Prior to PHP 7.2.0,
+an error of level
 <a href="/ref/errorfunc.html" class="link">E_NOTICE</a> has been issued
-instead.) See also the manual entry on why
+instead. See also the manual entry on why
 <a href="/language/types/array.html#language.types.array.foo-bar" class="link">$foo[bar]</a>
-is wrong (unless you first <span class="function">define</span> *bar* as
-a constant). This does not apply to
+is wrong (unless *bar* is a constant). This does not apply to
 <a href="/language/namespaces/rules.html" class="link">(fully) qualified constants</a>,
-which will raise a fatal error if undefined. If you simply want to check
-if a constant is set, use the <span class="function">defined</span>
-function.
+which will always raise a <span class="classname">Error</span> if
+undefined.
+
+> **Note**: <span class="simpara"> To check if a constant is set, use
+> the <span class="function">defined</span> function. </span>
 
 These are the differences between constants and variables:
 
@@ -59,7 +61,8 @@ These are the differences between constants and variables:
 <?php
 define("CONSTANT", "Hello world.");
 echo CONSTANT; // outputs "Hello world."
-echo Constant; // outputs "Constant" and issues a notice.
+echo Constant; // Emits an Error: Undefined constant "Constant"
+               // Prior to PHP 8.0.0, outputs "Constant" and issues a warning.
 ?>
 ```
 
@@ -97,10 +100,6 @@ echo ANIMALS[1]; // outputs "cat"
 > defined at compile-time. This means that they cannot be declared
 > inside functions, loops, *if* statements or *try*/ *catch* blocks.
 
-> **Note**:
->
-> Prior to PHP 8.0.0, constants defined using <span
-> class="function">define</span> may be case-insensitive.
+### See Also
 
-See also
-<a href="/language/oop5/constants.html" class="link">Class Constants</a>.
+-   <a href="/language/oop5/constants.html" class="link">Class Constants</a>

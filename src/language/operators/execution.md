@@ -25,8 +25,9 @@ echo "<pre>$output</pre>";
 > Unlike some other languages, backticks have no special meaning within
 > double-quoted strings.
 
-See also the manual section on
-<a href="/ref/exec.html" class="link">Program Execution functions</a>,
-<span class="function">popen</span> <span
-class="function">proc\_open</span>, and
-<a href="/features/commandline.html" class="link">Using PHP from the commandline</a>.
+### See Also
+
+-   <a href="/ref/exec.html" class="link">Program Execution functions</a>
+-   <span class="function">popen</span>
+-   <span class="function">proc\_open</span>
+-   <a href="/features/commandline.html" class="link">Using PHP from the commandline</a>

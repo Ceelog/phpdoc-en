@@ -1,8 +1,8 @@
 Callbacks / Callables
 ---------------------
 
-Callbacks can be denoted by <span class="type">callable</span> type
-hint.
+Callbacks can be denoted by the <span class="type">callable</span> type
+declaration.
 
 Some functions like <span class="function">call\_user\_func</span> or
 <span class="function">usort</span> accept user-defined callback

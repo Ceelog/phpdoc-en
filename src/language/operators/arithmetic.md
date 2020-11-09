@@ -39,5 +39,6 @@ echo (-5 % -3)."\n";         // prints -2
 ?>
 ```
 
-See also the manual page on
-<a href="/ref/math.html" class="link">Math functions</a>.
+### See Also
+
+-   <a href="/ref/math.html" class="link">Math functions</a>
