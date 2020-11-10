@@ -3865,6 +3865,9 @@ Valid flags:
 -   <span class="simpara"> **`GLOB_ERR`** - Stop on read errors (like
     unreadable directories), by default errors are ignored. </span>
 
+> **Note**: <span class="simpara"> The **`GLOB_BRACE`** flag is not
+> available on some non GNU systems, like Solaris. </span>
+
 ### Return Values
 
 Returns an array containing the matched files/directories, an empty
@@ -3903,9 +3906,6 @@ The above example will output something similar to:
 
 > **Note**: <span class="simpara"> This function isn't available on some
 > systems (e.g. old Sun OS). </span>
-
-> **Note**: <span class="simpara"> The **`GLOB_BRACE`** flag is not
-> available on some non GNU systems, like Solaris. </span>
 
 ### See Also
 
