@@ -2030,9 +2030,7 @@ user-defined comparison function.
 `cmp_function`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -2074,9 +2072,7 @@ function.
 `cmp_function`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

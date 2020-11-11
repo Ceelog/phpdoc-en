@@ -2424,9 +2424,7 @@ Sorts the sequence in-place, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -2514,9 +2512,7 @@ Returns a sorted copy, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4471,9 +4467,7 @@ Sorts the vector in-place, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -4561,9 +4555,7 @@ Returns a sorted copy, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -6561,9 +6553,7 @@ Sorts the deque in-place, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -6650,9 +6640,7 @@ Returns a sorted copy, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -7995,9 +7983,7 @@ Sorts the map in-place by key, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -8112,9 +8098,7 @@ Returns a copy sorted by key, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -9211,9 +9195,7 @@ function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -9326,9 +9308,7 @@ Returns a copy, sorted by value using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -11466,9 +11446,7 @@ Sorts the set in-place, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span
@@ -11555,9 +11533,7 @@ Returns a sorted copy, using an optional `comparator` function.
 `comparator`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
-less than, equal to, or greater than the second. Note that before PHP
-7.0.0 this integer had to be in the range from -2147483648
-to 2147483647.
+less than, equal to, or greater than the second.
 
 <span class="type">int</span> <span class="methodname"><span
 class="replaceable">callback</span></span> ( <span

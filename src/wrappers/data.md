@@ -17,7 +17,7 @@ stream wrapper.
 
 | Attribute                                                                          | Supported |
 |------------------------------------------------------------------------------------|-----------|
-| Restricted by <a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>   | No        |
+| Restricted by <a href="/filesystem/setup.html#" class="link">allow_url_fopen</a>   | Yes       |
 | Restricted by <a href="/filesystem/setup.html#" class="link">allow_url_include</a> | Yes       |
 | Allows Reading                                                                     | Yes       |
 | Allows Writing                                                                     | No        |
