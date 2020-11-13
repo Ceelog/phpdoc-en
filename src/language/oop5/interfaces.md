@@ -203,4 +203,4 @@ An interface, together with type-hinting, provides a good way to make
 sure that a particular object contains particular methods. See
 <a href="/language/operators/type.html" class="link">instanceof</a>
 operator and
-<a href="/language/oop5/typehinting.html" class="link">type hinting</a>.
+<a href="/language/types/declarations.html" class="link">type declarations</a>.

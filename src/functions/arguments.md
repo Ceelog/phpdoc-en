@@ -137,273 +137,6 @@ The above example will output:
 > **Note**: <span class="simpara"> Arguments that are passed by
 > reference may have a default value. </span>
 
-### Type declarations
-
-> **Note**:
->
-> Type declarations were also known as type hints in previous versions
-> of PHP.
-
-Type declarations allow functions to require that parameters are of a
-certain type at call time. If the given value is of the incorrect type,
-then a <span class="classname">TypeError</span> will be thrown.
-
-To specify a type declaration, the type name should be added before the
-parameter name. The declaration can be made to accept **`NULL`** values
-if the default value of the parameter is set to **`NULL`**.
-
-#### Valid types
-
-| Type                               | Description                                                                                                                                                                                                    | Minimum PHP version |
-|------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|---------------------|
-| Class/interface name               | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the given class or interface name.                                                                       |                     |
-| *self*                             | The parameter must be an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> the same class as the one the method is defined on. This can only be used on class and instance methods. |                     |
-| <span class="type">array</span>    | The parameter must be an <span class="type">array</span>.                                                                                                                                                      |                     |
-| <span class="type">callable</span> | The parameter must be a valid <span class="type">callable</span>.                                                                                                                                              |                     |
-| <span class="type">bool</span>     | The parameter must be a <span class="type">bool</span> value.                                                                                                                                                  |                     |
-| <span class="type">float</span>    | The parameter must be a <span class="type">float</span>ing point number.                                                                                                                                       |                     |
-| <span class="type">int</span>      | The parameter must be an <span class="type">int</span>.                                                                                                                                                        |                     |
-| <span class="type">string</span>   | The parameter must be a <span class="type">string</span>.                                                                                                                                                      |                     |
-| *iterable*                         | The parameter must be either an <span class="type">array</span> or an <a href="/language/operators/type.html" class="link"><em>instanceof</em></a> <span class="classname">Traversable</span>.                 | PHP 7.1.0           |
-| *object*                           | The parameter must be an <span class="type">object</span>.                                                                                                                                                     | PHP 7.2.0           |
-
-**Warning**
-
-Aliases for the above scalar types are not supported. Instead, they are
-treated as class or interface names. For example, using *boolean* as a
-parameter or return type will require an argument or return value that
-is an
-<a href="/language/operators/type.html" class="link"><em>instanceof</em></a>
-the class or interface *boolean*, rather than of type <span
-class="type">bool</span>:
-
-``` php
-<?php
- function test(boolean $param) {}
- test(true);
- ?>
-```
-
-The above example will output:
-
-     Fatal error: Uncaught TypeError: Argument 1 passed to test() must be an instance of boolean, boolean given, called in - on line 1 and defined in -:1
-     
-
-#### Examples
-
-**Example \#7 Basic class type declaration**
-
-``` php
-<?php
-class C {}
-class D extends C {}
-
-// This doesn't extend C.
-class E {}
-
-function f(C $c) {
-    echo get_class($c)."\n";
-}
-
-f(new C);
-f(new D);
-f(new E);
-?>
-```
-
-The above example will output:
-
-    C
-    D
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to f() must be an instance of C, instance of E given, called in - on line 14 and defined in -:8
-    Stack trace:
-    #0 -(14): f(Object(E))
-    #1 {main}
-      thrown in - on line 8
-
-**Example \#8 Basic interface type declaration**
-
-``` php
-<?php
-interface I { public function f(); }
-class C implements I { public function f() {} }
-
-// This doesn't implement I.
-class E {}
-
-function f(I $i) {
-    echo get_class($i)."\n";
-}
-
-f(new C);
-f(new E);
-?>
-```
-
-The above example will output:
-
-    C
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to f() must implement interface I, instance of E given, called in - on line 13 and defined in -:8
-    Stack trace:
-    #0 -(13): f(Object(E))
-    #1 {main}
-      thrown in - on line 8
-
-**Example \#9 Typed pass-by-reference Parameters**
-
-Declared types of reference parameters are checked on function entry,
-but not when the function returns, so after the function had returned,
-the argument's type may have changed.
-
-``` php
-<?php
-function array_baz(array &$param)
-{
-    $param = 1;
-}
-$var = [];
-array_baz($var);
-var_dump($var);
-array_baz($var);
-?>
-```
-
-The above example will output something similar to:
-
-    int(1)
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to array_baz() must be of the type array, int given, called in %s on line %d
-
-**Example \#10 Nullable type declaration**
-
-``` php
-<?php
-class C {}
-
-function f(C $c = null) {
-    var_dump($c);
-}
-
-f(new C);
-f(null);
-?>
-```
-
-The above example will output:
-
-    object(C)#1 (0) {
-    }
-    NULL
-
-#### Strict typing
-
-By default, PHP will coerce values of the wrong type into the expected
-scalar type if possible. For example, a function that is given an <span
-class="type">int</span> for a parameter that expects a <span
-class="type">string</span> will get a variable of type <span
-class="type">string</span>.
-
-It is possible to enable strict mode on a per-file basis. In strict
-mode, only a variable of exact type of the type declaration will be
-accepted, or a <span class="classname">TypeError</span> will be thrown.
-The only exception to this rule is that an <span class="type">int</span>
-may be given to a function expecting a <span class="type">float</span>.
-Function calls from within internal functions will not be affected by
-the *strict\_types* declaration.
-
-To enable strict mode, the
-<a href="/control-structures/declare.html" class="link"><em>declare</em></a>
-statement is used with the *strict\_types* declaration:
-
-**Caution**
-
-Enabling strict mode will also affect
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">return type declarations</a>.
-
-> **Note**:
->
-> Strict typing applies to function calls made from *within* the file
-> with strict typing enabled, not to the functions declared within that
-> file. If a file without strict typing enabled makes a call to a
-> function that was defined in a file with strict typing, the caller's
-> preference (weak typing) will be respected, and the value will be
-> coerced.
-
-> **Note**:
->
-> Strict typing is only defined for scalar type declarations.
-
-**Example \#11 Strict typing**
-
-``` php
-<?php
-declare(strict_types=1);
-
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-var_dump(sum(1, 2));
-var_dump(sum(1.5, 2.5));
-?>
-```
-
-The above example will output:
-
-    int(3)
-
-    Fatal error: Uncaught TypeError: Argument 1 passed to sum() must be of the type integer, float given, called in - on line 9 and defined in -:4
-    Stack trace:
-    #0 -(9): sum(1.5, 2.5)
-    #1 {main}
-      thrown in - on line 4
-
-**Example \#12 Weak typing**
-
-``` php
-<?php
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-var_dump(sum(1, 2));
-
-// These will be coerced to integers: note the output below!
-var_dump(sum(1.5, 2.5));
-?>
-```
-
-The above example will output:
-
-    int(3)
-    int(3)
-
-**Example \#13 Catching <span class="classname">TypeError</span>**
-
-``` php
-<?php
-declare(strict_types=1);
-
-function sum(int $a, int $b) {
-    return $a + $b;
-}
-
-try {
-    var_dump(sum(1, 2));
-    var_dump(sum(1.5, 2.5));
-} catch (TypeError $e) {
-    echo 'Error: '.$e->getMessage();
-}
-?>
-```
-
-The above example will output:
-
-    int(3)
-    Error: Argument 1 passed to sum() must be of the type integer, float given, called in - on line 10
-
 ### Variable-length argument lists
 
 PHP has support for variable-length argument lists in user-defined
@@ -421,7 +154,7 @@ Argument lists may include the *...* token to denote that the function
 accepts a variable number of arguments. The arguments will be passed
 into the given variable as an array; for example:
 
-**Example \#14 Using *...* to access variable arguments**
+**Example \#7 Using *...* to access variable arguments**
 
 ``` php
 <?php
@@ -445,7 +178,7 @@ The above example will output:
 class="type">array</span> or <span class="classname">Traversable</span>
 variable or literal into the argument list:
 
-**Example \#15 Using *...* to provide arguments**
+**Example \#8 Using *...* to provide arguments**
 
 ``` php
 <?php
@@ -470,11 +203,11 @@ this case, only the trailing arguments that don't match a positional
 argument will be added to the array generated by *...*.
 
 It is also possible to add a
-<a href="/language/oop5/typehinting.html" class="link">type declaration</a>
+<a href="/language/types/declarations.html" class="link">type declaration</a>
 before the *...* token. If this is present, then all arguments captured
 by *...* must be objects of the hinted class.
 
-**Example \#16 Type declared variable arguments**
+**Example \#9 Type declared variable arguments**
 
 ``` php
 <?php
@@ -515,7 +248,7 @@ class="function">func\_get\_args</span>.
 The first example above would be implemented as follows in old versions
 of PHP:
 
-**Example \#17 Accessing variable arguments in old PHP versions**
+**Example \#10 Accessing variable arguments in old PHP versions**
 
 ``` php
 <?php

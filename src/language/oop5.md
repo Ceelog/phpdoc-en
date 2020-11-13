@@ -24,7 +24,6 @@ Classes and Objects
 -   [Final Keyword](/language/oop5/final.html)
 -   [Object Cloning](/language/oop5/cloning.html)
 -   [Comparing Objects](/language/oop5/object-comparison.html)
--   [Type Hinting](/language/oop5/typehinting.html)
 -   [Late Static Bindings](/language/oop5/late-static-bindings.html)
 -   [Objects and references](/language/oop5/references.html)
 -   [Object Serialization](/language/oop5/serialization.html)

@@ -1347,7 +1347,7 @@ Name of the file to read.
 > The **`FILE_USE_INCLUDE_PATH`** constant can be used to trigger
 > <a href="/ini/core.html#ini.include-path" class="link">include path</a>
 > search. This is not possible if
-> <a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">strict typing</a>
+> <a href="/language/types/declarations.html#language.types.declarations.strict" class="link">strict typing</a>
 > is enabled, since **`FILE_USE_INCLUDE_PATH`** is an <span
 > class="type">int</span>. Use **`TRUE`** instead.
 

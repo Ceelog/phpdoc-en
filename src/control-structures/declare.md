@@ -17,7 +17,7 @@ the
 <a href="/control-structures/declare.html#control-structures.declare.encoding" class="link">encoding</a>
 directive) and the *strict\_types* directive (See for more information
 the
-<a href="/functions/arguments.html#functions.arguments.type-declaration.strict" class="link">strict</a>
+<a href="/language/types/declarations.html#language.types.declarations.strict" class="link">strict</a>
 section on the Function arguments page)
 
 As directives are handled as the file is being compiled, only literals

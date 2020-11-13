@@ -1379,7 +1379,7 @@ Return value should be **`TRUE`** for success, **`FALSE`** for failure.
 `read`  
 A callable with the following signature:
 
-<span class="type">bool</span> <span class="methodname"><span
+<span class="type">string</span> <span class="methodname"><span
 class="replaceable">read</span></span> ( <span class="methodparam"><span
 class="type">string</span> `$sessionId`</span> )
 

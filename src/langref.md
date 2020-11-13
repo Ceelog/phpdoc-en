@@ -21,6 +21,7 @@ Language Reference
     -   [Resources](/language/types/resource.html)
     -   [NULL](/language/types/null.html)
     -   [Callbacks / Callables](/language/types/callable.html)
+    -   [Type declarations](/language/types/declarations.html)
     -   [Pseudo-types and variables used in this
         documentation](/language/pseudo-types.html)
     -   [Type Juggling](/language/types/type-juggling.html)
@@ -100,7 +101,6 @@ Language Reference
     -   [Final Keyword](/language/oop5/final.html)
     -   [Object Cloning](/language/oop5/cloning.html)
     -   [Comparing Objects](/language/oop5/object-comparison.html)
-    -   [Type Hinting](/language/oop5/typehinting.html)
     -   [Late Static Bindings](/language/oop5/late-static-bindings.html)
     -   [Objects and references](/language/oop5/references.html)
     -   [Object Serialization](/language/oop5/serialization.html)

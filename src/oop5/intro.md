@@ -8,8 +8,7 @@ PHP includes a complete object model. Some of its features are:
 methods, additional
 <a href="/language/oop5/magic.html" class="link">magic methods</a>,
 <a href="/language/oop5/interfaces.html" class="link">interfaces</a>,
-<a href="/language/oop5/cloning.html" class="link">cloning</a> and
-<a href="/language/oop5/typehinting.html" class="link">type declaration</a>.
+and <a href="/language/oop5/cloning.html" class="link">cloning</a>.
 
 PHP treats objects in the same way as references or handles, meaning
 that each variable contains an object reference rather than a copy of

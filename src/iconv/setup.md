@@ -52,7 +52,7 @@ This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
 feature is highly discouraged.
 
 PHP 5.6 and later users should leave this empty and set
-<a href="/ini/core.html#ini.default-charset" class="link"><code class="parameter">default_charset</code></a>
+<a href="/ini/core.html#ini.input-encoding" class="link">input_encoding</a>
 instead.
 
 `iconv.output_encoding` <span class="type">string</span>  
@@ -61,7 +61,7 @@ This feature has been *DEPRECATED* as of PHP 5.6.0. Relying on this
 feature is highly discouraged.
 
 PHP 5.6 and later users should leave this empty and set
-<a href="/ini/core.html#ini.default-charset" class="link"><code class="parameter">default_charset</code></a>
+<a href="/ini/core.html#ini.output-encoding" class="link">output_encoding</a>
 instead.
 
 `iconv.internal_encoding` <span class="type">string</span>  

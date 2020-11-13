@@ -4,7 +4,7 @@ New features
 ### Scalar type declarations
 
 Scalar
-<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">type declarations</a>
+<a href="/language/types/declarations.html" class="link">type declarations</a>
 come in two flavours: coercive (default) and strict. The following types
 for parameters can now be enforced (either coercively or strictly):
 strings (<span class="type">string</span>), integers (*int*),
@@ -34,24 +34,24 @@ directive must be placed at the top of the file. This means that the
 strictness of typing for scalars is configured on a per-file basis. This
 directive not only affects the type declarations of parameters, but also
 a function's return type (see
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">return type declarations</a>,
+<a href="/language/types/declarations.html" class="link">return type declarations</a>,
 built-in PHP functions, and functions from loaded extensions.
 
 Full documentation and examples of scalar type declarations can be found
 in the
-<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">type declaration</a>
+<a href="/language/types/declarations.html" class="link">type declaration</a>
 reference.
 
 ### Return type declarations
 
 PHP 7 adds support for
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">return type declarations</a>.
+<a href="/language/types/declarations.html" class="link">return type declarations</a>.
 Similarly to
-<a href="/functions/arguments.html#functions.arguments.type-declaration" class="link">argument type declarations</a>,
+<a href="/language/types/declarations.html" class="link">argument type declarations</a>,
 return type declarations specify the type of the value that will be
 returned from a function. The same
-<a href="/functions/arguments.html#functions.arguments.type-declaration.types" class="link">types</a>
-are available for return type declarations as are available for argument
+<a href="/language/types/declarations.html" class="link">types</a> are
+available for return type declarations as are available for argument
 type declarations.
 
 ``` php
@@ -78,7 +78,7 @@ The above example will output:
 
 Full documentation and examples of return type declarations can be found
 in the
-<a href="/functions/returning-values.html#functions.returning-values.type-declaration" class="link">return type declarations</a>.
+<a href="/language/types/declarations.html" class="link">return type declarations</a>.
 reference.
 
 ### Null coalescing operator

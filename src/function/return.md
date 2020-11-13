@@ -35,3 +35,8 @@ For more information, see
 > parentheses must be omitted and **`NULL`** will be returned. Calling
 > *return* with parentheses but with no arguments will result in a parse
 > error. </span>
+
+As of PHP 7.1.0, return statements without an argument trigger
+**`E_COMPILE_ERROR`**, unless the return type is <span
+class="type">void</span>, in which case return statements with an
+argument trigger that error.
