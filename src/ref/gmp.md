@@ -208,8 +208,7 @@ bit.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -382,8 +381,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -598,8 +596,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -699,8 +696,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -875,8 +871,8 @@ It should be positive.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+The hamming distance between `a` and `b`, as an <span
+class="type">int</span>.
 
 ### Examples
 
@@ -992,8 +988,7 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Notes
 
@@ -1163,8 +1158,7 @@ Should be odd and must be positive.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -1253,8 +1247,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### See Also
 
@@ -1294,8 +1287,7 @@ Should be odd and must be positive.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -1350,8 +1342,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -1401,8 +1392,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -1541,8 +1531,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -2290,8 +2279,7 @@ True to set the bit (set it to 1/on); false to clear the bit (set it to
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -2595,8 +2583,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
@@ -2700,8 +2687,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number <span class="type">resource</span> in PHP 5.5 and earlier,
-or a <span class="classname">GMP</span> object in PHP 5.6 and later.
+A <span class="classname">GMP</span> object.
 
 ### Examples
 
