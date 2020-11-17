@@ -1124,9 +1124,10 @@ Checks if the class method exists
 
 <span class="type">bool</span> <span
 class="methodname">method\_exists</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$object`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$method_name`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">object</span></span>
+`$object`</span> , <span class="methodparam"><span
+class="type">string</span> `$method_name`</span> )
 
 Checks if the class method exists in the given `object`.
 

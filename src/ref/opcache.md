@@ -7,7 +7,8 @@ Compiles and caches a PHP script without executing it
 
 <span class="type">bool</span> <span
 class="methodname">opcache\_compile\_file</span> ( <span
-class="methodparam"><span class="type">string</span> `$file`</span> )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
 This function compiles a PHP script and adds it to the opcode cache
 without executing it. This can be used to prime the cache after a Web
@@ -16,17 +17,17 @@ requests.
 
 ### Parameters
 
-`file`  
+`filename`  
 The path to the PHP script to be compiled.
 
 ### Return Values
 
-Returns **`TRUE`** if `file` was compiled successfully or **`FALSE`** on
-failure.
+Returns **`TRUE`** if `filename` was compiled successfully or
+**`FALSE`** on failure.
 
 ### Errors/Exceptions
 
-If `file` cannot be loaded or compiled, an error of level
+If `filename` cannot be loaded or compiled, an error of level
 **`E_WARNING`** is generated. You may use
 <a href="/language/operators/errorcontrol.html" class="link">@</a> to
 suppress this warning.
@@ -42,7 +43,8 @@ Get configuration information about the cache
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">opcache\_get\_configuration</span> ( <span
 class="methodparam">void</span> )
 
@@ -72,14 +74,15 @@ Get status information about the cache
 <span class="type"><span class="type">array</span><span
 class="type">false</span></span> <span
 class="methodname">opcache\_get\_status</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$get_scripts`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="methodparam"><span class="type">bool</span>
+`$include_scripts`<span class="initializer"> = **`TRUE`**</span></span>
+\] )
 
 This function returns state information about the cache instance
 
 ### Parameters
 
-`get_scripts`  
+`include_scripts`  
 Include script specific state information
 
 ### Return Values
@@ -106,7 +109,7 @@ Invalidates a cached script
 
 <span class="type">bool</span> <span
 class="methodname">opcache\_invalidate</span> ( <span
-class="methodparam"><span class="type">string</span> `$script`</span>
+class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$force`<span class="initializer"> = **`FALSE`**</span></span> \] )
 
@@ -116,7 +119,7 @@ the modification time of the script is newer than the cached opcodes.
 
 ### Parameters
 
-`script`  
+`filename`  
 The path to the script being invalidated.
 
 `force`  
@@ -125,7 +128,7 @@ whether invalidation is necessary.
 
 ### Return Values
 
-Returns **`TRUE`** if the opcode cache for `script` was invalidated or
+Returns **`TRUE`** if the opcode cache for `filename` was invalidated or
 if there was nothing to invalidate, or **`FALSE`** if the opcode cache
 is disabled.
 
@@ -143,7 +146,8 @@ Tells whether a script is cached in OPCache
 
 <span class="type">bool</span> <span
 class="methodname">opcache\_is\_script\_cached</span> ( <span
-class="methodparam"><span class="type">string</span> `$file`</span> )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
 This function checks if a PHP script has been cached in OPCache. This
 can be used to more easily detect the "warming" of the cache for a
@@ -151,12 +155,12 @@ particular script.
 
 ### Parameters
 
-`file`  
+`filename`  
 The path to the PHP script to be checked.
 
 ### Return Values
 
-Returns **`TRUE`** if `file` is cached in OPCache, **`FALSE`**
+Returns **`TRUE`** if `filename` is cached in OPCache, **`FALSE`**
 otherwise.
 
 ### See Also

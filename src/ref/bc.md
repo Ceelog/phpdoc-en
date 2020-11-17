@@ -7,19 +7,20 @@ Add two arbitrary precision numbers
 
 <span class="type">string</span> <span class="methodname">bcadd</span> (
 <span class="methodparam"><span class="type">string</span>
-`$left_operand`</span> , <span class="methodparam"><span
-class="type">string</span> `$right_operand`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Sums `left_operand` and `right_operand`.
+Sums `num1` and `num2`.
 
 ### Parameters
 
-`left_operand`  
+`num1`  
 The left operand, as a string.
 
-`right_operand`  
+`num2`  
 The right operand, as a string.
 
 ` scale`  
@@ -31,6 +32,12 @@ fallback to *0* if this has not been set.
 ### Return Values
 
 The sum of the two operands, as a string.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 
@@ -61,20 +68,20 @@ Compare two arbitrary precision numbers
 
 <span class="type">int</span> <span class="methodname">bccomp</span> (
 <span class="methodparam"><span class="type">string</span>
-`$left_operand`</span> , <span class="methodparam"><span
-class="type">string</span> `$right_operand`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Compares the `left_operand` to the `right_operand` and returns the
-result as an integer.
+Compares the `num1` to the `num2` and returns the result as an integer.
 
 ### Parameters
 
-`left_operand`  
+`num1`  
 The left operand, as a string.
 
-`right_operand`  
+`num2`  
 The right operand, as a string.
 
 `scale`  
@@ -83,8 +90,14 @@ the decimal place which will be used in the comparison.
 
 ### Return Values
 
-Returns 0 if the two operands are equal, 1 if the `left_operand` is
-larger than the `right_operand`, -1 otherwise.
+Returns 0 if the two operands are equal, 1 if the `num1` is larger than
+the `num2`, -1 otherwise.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 
@@ -109,19 +122,20 @@ Divide two arbitrary precision numbers
 
 <span class="type">string</span> <span class="methodname">bcdiv</span> (
 <span class="methodparam"><span class="type">string</span>
-`$dividend`</span> , <span class="methodparam"><span
-class="type">string</span> `$divisor`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Divides the `dividend` by the `divisor`.
+Divides the `num1` by the `num2`.
 
 ### Parameters
 
-`dividend`  
+`num1`  
 The dividend, as a string.
 
-`divisor`  
+`num2`  
 The divisor, as a string.
 
 ` scale`  
@@ -132,8 +146,14 @@ fallback to *0* if this has not been set.
 
 ### Return Values
 
-Returns the result of the division as a string, or **`NULL`** if
-`divisor` is *0*.
+Returns the result of the division as a string, or **`NULL`** if `num2`
+is *0*.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 
@@ -160,32 +180,34 @@ Get modulus of an arbitrary precision number
 
 <span class="type">string</span> <span class="methodname">bcmod</span> (
 <span class="methodparam"><span class="type">string</span>
-`$dividend`</span> , <span class="methodparam"><span
-class="type">string</span> `$divisor`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Get the remainder of dividing `dividend` by `divisor`. Unless `divisor`
-is zero, the result has the same sign as `dividend`.
+Get the remainder of dividing `num1` by `num2`. Unless `num2` is zero,
+the result has the same sign as `num1`.
 
 ### Parameters
 
-`dividend`  
+`num1`  
 The dividend, as a string.
 
-`divisor`  
+`num2`  
 The divisor, as a string.
 
 ### Return Values
 
-Returns the modulus as a string, or **`NULL`** if `divisor` is *0*.
+Returns the modulus as a string, or **`NULL`** if `num2` is *0*.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                      |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | `dividend` and `divisor` are no longer truncated to integer, so now the behavior of <span class="function">bcmod</span> follows <span class="function">fmod</span> rather than the *%* operator. |
-| 7.2.0   | The `scale` parameter was added.                                                                                                                                                                 |
+| Version | Description                                                                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `scale` is now nullable.                                                                                                                                                                  |
+| 7.2.0   | `num1` and `num2` are no longer truncated to integer, so now the behavior of <span class="function">bcmod</span> follows <span class="function">fmod</span> rather than the *%* operator. |
+| 7.2.0   | The `scale` parameter was added.                                                                                                                                                          |
 
 ### Examples
 
@@ -223,19 +245,20 @@ Multiply two arbitrary precision numbers
 
 <span class="type">string</span> <span class="methodname">bcmul</span> (
 <span class="methodparam"><span class="type">string</span>
-`$left_operand`</span> , <span class="methodparam"><span
-class="type">string</span> `$right_operand`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Multiply the `left_operand` by the `right_operand`.
+Multiply the `num1` by the `num2`.
 
 ### Parameters
 
-`left_operand`  
+`num1`  
 The left operand, as a string.
 
-`right_operand`  
+`num2`  
 The right operand, as a string.
 
 ` scale`  
@@ -252,6 +275,7 @@ Returns the result as a string.
 
 | Version | Description                                                                                                                                                |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `scale` is now nullable.                                                                                                                                   |
 | 7.3.0   | <span class="function">bcmul</span> now returns numbers with the requested scale. Formerly, the returned numbers may have omitted trailing decimal zeroes. |
 
 ### Examples
@@ -294,17 +318,18 @@ Raise an arbitrary precision number to another
 ### Description
 
 <span class="type">string</span> <span class="methodname">bcpow</span> (
-<span class="methodparam"><span class="type">string</span>
-`$base`</span> , <span class="methodparam"><span
-class="type">string</span> `$exponent`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+<span class="methodparam"><span class="type">string</span> `$num`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$exponent`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">int</span><span
+class="type">null</span></span> `$scale`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
-Raise `base` to the power `exponent`.
+Raise `num` to the power `exponent`.
 
 ### Parameters
 
-`base`  
+`num`  
 The base, as a string.
 
 `exponent`  
@@ -372,19 +397,19 @@ modulus
 
 <span class="type">string</span> <span
 class="methodname">bcpowmod</span> ( <span class="methodparam"><span
-class="type">string</span> `$base`</span> , <span
+class="type">string</span> `$num`</span> , <span
 class="methodparam"><span class="type">string</span> `$exponent`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$modulus`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$scale`<span class="initializer"> =
-0</span></span> \] )
+`$modulus`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Use the fast-exponentiation method to raise `base` to the power
+Use the fast-exponentiation method to raise `num` to the power
 `exponent` with respect to the modulus `modulus`.
 
 ### Parameters
 
-`base`  
+`num`  
 The base, as an integral string (i.e. the scale has to be zero).
 
 `exponent`  
@@ -411,6 +436,12 @@ Returns the result as a string, or **`FALSE`** if `modulus` is *0* or
 >
 > Because this method uses the modulus operation, numbers which are not
 > positive integers may give unexpected results.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 
@@ -448,8 +479,9 @@ Set or get default scale parameter for all bc math functions
 Sets the default scale parameter for all subsequent calls to bc math
 functions that do not explicitly specify a scale parameter.
 
-<span class="type">int</span> <span class="methodname">bcscale</span> (
-<span class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">bcscale</span>
+(\[ <span class="methodparam"><span class="type">null</span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Gets the current scale factor.
 
@@ -467,6 +499,7 @@ is returned.
 
 | Version | Description                                                                                                                                                                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `scale` is now nullable.                                                                                                                                                                                                                               |
 | 7.3.0   | <span class="function">bcscale</span> can now be used to get the current scale factor; when used as setter, it now returns the old scale value. Formerly, `scale` was mandatory, and <span class="function">bcscale</span> always returned **`TRUE`**. |
 
 ### Examples
@@ -495,15 +528,15 @@ Get the square root of an arbitrary precision number
 
 <span class="type">string</span> <span class="methodname">bcsqrt</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$operand`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$scale`<span class="initializer"> =
-0</span></span> \] )
+`$num`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Return the square root of the `operand`.
+Return the square root of the `num`.
 
 ### Parameters
 
-`operand`  
+`num`  
 The operand, as a string.
 
 ` scale`  
@@ -514,8 +547,13 @@ fallback to *0* if this has not been set.
 
 ### Return Values
 
-Returns the square root as a string, or **`NULL`** if `operand` is
-negative.
+Returns the square root as a string, or **`NULL`** if `num` is negative.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 
@@ -542,19 +580,20 @@ Subtract one arbitrary precision number from another
 
 <span class="type">string</span> <span class="methodname">bcsub</span> (
 <span class="methodparam"><span class="type">string</span>
-`$left_operand`</span> , <span class="methodparam"><span
-class="type">string</span> `$right_operand`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$scale`<span
-class="initializer"> = 0</span></span> \] )
+`$num1`</span> , <span class="methodparam"><span
+class="type">string</span> `$num2`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Subtracts the `right_operand` from the `left_operand`.
+Subtracts the `num2` from the `num1`.
 
 ### Parameters
 
-`left_operand`  
+`num1`  
 The left operand, as a string.
 
-`right_operand`  
+`num2`  
 The right operand, as a string.
 
 ` scale`  
@@ -566,6 +605,12 @@ fallback to *0* if this has not been set.
 ### Return Values
 
 The result of the subtraction, as a string.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `scale` is now nullable. |
 
 ### Examples
 

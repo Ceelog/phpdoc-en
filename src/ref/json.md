@@ -8,11 +8,12 @@ Decodes a JSON string
 <span class="type">mixed</span> <span
 class="methodname">json\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$json`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$assoc`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$depth`<span
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">null</span></span>
+`$associative`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$depth`<span
 class="initializer"> = 512</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
 Takes a JSON encoded string and converts it into a PHP variable.
@@ -29,18 +30,18 @@ This function only works with UTF-8 encoded strings.
 > PHP implements a superset of JSON as specified in the original
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
-`assoc`  
+`associative`  
 When **`TRUE`**, JSON objects will be returned as associative <span
 class="type">array</span>s; when **`FALSE`**, JSON objects will be
 returned as <span class="type">object</span>s. When **`NULL`**, JSON
 objects will be returned as associative <span class="type">array</span>s
 or <span class="type">object</span>s depending on whether
-**`JSON_OBJECT_AS_ARRAY`** is set in the `options`.
+**`JSON_OBJECT_AS_ARRAY`** is set in the `flags`.
 
 `depth`  
 User specified recursion depth.
 
-`options`  
+`flags`  
 Bitmask of **`JSON_BIGINT_AS_STRING`**, **`JSON_INVALID_UTF8_IGNORE`**,
 **`JSON_INVALID_UTF8_SUBSTITUTE`**, **`JSON_OBJECT_AS_ARRAY`**,
 **`JSON_THROW_ON_ERROR`**. The behaviour of these constants is described
@@ -58,9 +59,9 @@ decoded or if the encoded data is deeper than the recursion limit.
 
 | Version | Description                                                                                                       |
 |---------|-------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                    |
-| 7.2.0   | `assoc` is nullable now.                                                                                          |
-| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                      |
+| 7.3.0   | **`JSON_THROW_ON_ERROR`** `flags` was added.                                                                      |
+| 7.2.0   | `associative` is nullable now.                                                                                    |
+| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `flags` were added.                        |
 | 7.1.0   | An empty JSON key ("") can be encoded to the empty object property instead of using a key with value *\_empty\_*. |
 
 ### Examples
@@ -252,7 +253,7 @@ Returns the JSON representation of a value
 class="type">false</span></span> <span
 class="methodname">json\_encode</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$depth`<span
 class="initializer"> = 512</span></span> \]\] )
@@ -260,7 +261,7 @@ class="initializer"> = 512</span></span> \]\] )
 Returns a string containing the JSON representation of the supplied
 `value`.
 
-The encoding is affected by the supplied `options` and additionally the
+The encoding is affected by the supplied `flags` and additionally the
 encoding of float values depends on the value of
 <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a>.
 
@@ -277,7 +278,7 @@ All string data must be UTF-8 encoded.
 > PHP implements a superset of JSON as specified in the original
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
-`options`  
+`flags`  
 Bitmask consisting of **`JSON_FORCE_OBJECT`**, **`JSON_HEX_QUOT`**,
 **`JSON_HEX_TAG`**, **`JSON_HEX_AMP`**, **`JSON_HEX_APOS`**,
 **`JSON_INVALID_UTF8_IGNORE`**, **`JSON_INVALID_UTF8_SUBSTITUTE`**,
@@ -300,9 +301,9 @@ Returns a JSON encoded <span class="type">string</span> on success or
 
 | Version | Description                                                                                                                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | **`JSON_THROW_ON_ERROR`** `options` was added.                                                                                                                                                          |
-| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `options` were added.                                                                                                            |
-| 7.1.0   | **`JSON_UNESCAPED_LINE_TERMINATORS`** `options` was added.                                                                                                                                              |
+| 7.3.0   | **`JSON_THROW_ON_ERROR`** `flags` was added.                                                                                                                                                            |
+| 7.2.0   | **`JSON_INVALID_UTF8_IGNORE`**, and **`JSON_INVALID_UTF8_SUBSTITUTE`** `flags` were added.                                                                                                              |
+| 7.1.0   | **`JSON_UNESCAPED_LINE_TERMINATORS`** `flags` was added.                                                                                                                                                |
 | 7.1.0   | <a href="/ini/core.html#ini.serialize-precision" class="link">serialize_precision</a> is used instead of <a href="/ini/core.html#ini.precision" class="link">precision</a> when encoding double values. |
 
 ### Examples
@@ -536,8 +537,7 @@ call
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">json\_last\_error\_msg</span> ( <span
 class="methodparam">void</span> )
 
@@ -552,8 +552,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the error message on success, *"No error"* if no error has
-occurred, or **`FALSE`** on failure.
+Returns the error message on success, or *"No error"* if no error has
+occurred.
 
 ### See Also
 

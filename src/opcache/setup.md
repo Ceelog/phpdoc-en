@@ -263,6 +263,8 @@ If
 is set to 2 or above, a warning will be recorded in the error log when
 this occurs.
 
+This directive is not supported on Windows.
+
 `opcache.error_log` <span class="type">string</span>  
 The error log for OPcache errors. An empty string is treated the same as
 *stderr*, and will result in logs being sent to standard error (which
