@@ -2937,6 +2937,9 @@ Read options from the named option file instead of from `my.cnf`
 **`MYSQLI_OPT_CONNECT_TIMEOUT`**  
 Connect timeout in seconds
 
+**`MYSQLI_OPT_READ_TIMEOUT`**  
+Command execution result timeout in seconds. Available as of PHP 7.2.0.
+
 **`MYSQLI_OPT_LOCAL_INFILE`**  
 Enables command *LOAD LOCAL INFILE*
 
@@ -7761,7 +7764,8 @@ The option that you want to set. It can be one of the following values:
 
 | Name                                    | Description                                                                                                                          |
 |-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **`MYSQLI_OPT_CONNECT_TIMEOUT`**        | connection timeout in seconds (supported on Windows with TCP/IP since PHP 5.3.1)                                                     |
+| **`MYSQLI_OPT_CONNECT_TIMEOUT`**        | connection timeout in seconds                                                                                                        |
+| **`MYSQLI_OPT_READ_TIMEOUT`**           | command execution result timeout in seconds. Available as of PHP 7.2.0.                                                              |
 | **`MYSQLI_OPT_LOCAL_INFILE`**           | enable/disable use of *LOAD LOCAL INFILE*                                                                                            |
 | **`MYSQLI_INIT_COMMAND`**               | command to execute after when connecting to MySQL server                                                                             |
 | **`MYSQLI_READ_DEFAULT_FILE`**          | Read options from named option file instead of `my.cnf`                                                                              |

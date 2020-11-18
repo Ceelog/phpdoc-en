@@ -161,8 +161,8 @@ range.
 
 `opcache.max_wasted_percentage` <span class="type">int</span>  
 The maximum percentage of wasted memory that is allowed before a restart
-is scheduled. The maximum permissible value is *"50"*, which is enforced
-if a larger value is set.
+is scheduled, if there is insufficient free memory. The maximum
+permissible value is *"50"*, which is enforced if a larger value is set.
 
 `opcache.use_cwd` <span class="type">bool</span>  
 If enabled, OPcache appends the current working directory to the script

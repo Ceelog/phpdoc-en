@@ -7,17 +7,17 @@ Checks if variable of specified type exists
 
 <span class="type">bool</span> <span
 class="methodname">filter\_has\_var</span> ( <span
-class="methodparam"><span class="type">int</span> `$type`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$variable_name`</span> )
+class="methodparam"><span class="type">int</span> `$input_type`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$var_name`</span> )
 
 ### Parameters
 
-`type`  
+`input_type`  
 One of **`INPUT_GET`**, **`INPUT_POST`**, **`INPUT_COOKIE`**,
 **`INPUT_SERVER`**, or **`INPUT_ENV`**.
 
-`variable_name`  
+`var_name`  
 Name of a variable to check.
 
 ### Return Values
@@ -31,13 +31,14 @@ Returns the filter ID belonging to a named filter
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">filter\_id</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filtername`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">filter\_id</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> )
 
 ### Parameters
 
-`filtername`  
+`name`  
 Name of a filter to get.
 
 ### Return Values
@@ -55,11 +56,14 @@ Gets external variables and optionally filters them
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">filter\_input\_array</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$definition`</span> \[, <span class="methodparam"><span
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span></span>
+`$options`<span class="initializer"> =
+**`FILTER_DEFAULT`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add_empty`<span class="initializer"> =
 **`TRUE`**</span></span> \]\] )
 
@@ -72,7 +76,7 @@ calling <span class="function">filter\_input</span>.
 One of **`INPUT_GET`**, **`INPUT_POST`**, **`INPUT_COOKIE`**,
 **`INPUT_SERVER`**, or **`INPUT_ENV`**.
 
-`definition`  
+`options`  
 An array defining the arguments. A valid key is a <span
 class="type">string</span> containing a variable name and a valid value
 is either a <a href="/filter/filters.html" class="link">filter type</a>,
@@ -201,11 +205,12 @@ Gets a specific external variable by name and optionally filters it
 <span class="type">mixed</span> <span
 class="methodname">filter\_input</span> ( <span
 class="methodparam"><span class="type">int</span> `$type`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$variable_name`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$filter`<span class="initializer"> =
-FILTER\_DEFAULT</span></span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$options`</span> \]\] )
+class="methodparam"><span class="type">string</span> `$var_name`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$filter`<span class="initializer"> = **`FILTER_DEFAULT`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span></span>
+`$options`<span class="initializer"> = 0</span></span> \]\] )
 
 ### Parameters
 
@@ -213,7 +218,7 @@ class="type">mixed</span> `$options`</span> \]\] )
 One of **`INPUT_GET`**, **`INPUT_POST`**, **`INPUT_COOKIE`**,
 **`INPUT_SERVER`**, or **`INPUT_ENV`**.
 
-`variable_name`  
+`var_name`  
 Name of a variable to get.
 
 `filter`  
@@ -232,8 +237,8 @@ accepts options, flags can be provided in "flags" field of array.
 ### Return Values
 
 Value of the requested variable on success, **`FALSE`** if the filter
-fails, or **`NULL`** if the `variable_name` variable is not set. If the
-flag **`FILTER_NULL_ON_FAILURE`** is used, it returns **`FALSE`** if the
+fails, or **`NULL`** if the `var_name` variable is not set. If the flag
+**`FILTER_NULL_ON_FAILURE`** is used, it returns **`FALSE`** if the
 variable is not set and **`NULL`** if the filter fails.
 
 ### Examples
@@ -320,11 +325,14 @@ Gets multiple variables and optionally filters them
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">filter\_var\_array</span> ( <span
-class="methodparam"><span class="type">array</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$definition`</span> \[, <span class="methodparam"><span
+class="methodparam"><span class="type">array</span> `$array`</span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span></span>
+`$options`<span class="initializer"> =
+**`FILTER_DEFAULT`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add_empty`<span class="initializer"> =
 **`TRUE`**</span></span> \]\] )
 
@@ -333,10 +341,10 @@ calling <span class="function">filter\_var</span>.
 
 ### Parameters
 
-`data`  
+`array`  
 An array with string keys containing the data to filter.
 
-`definition`  
+`options`  
 An array defining the arguments. A valid key is a <span
 class="type">string</span> containing a variable name and a valid value
 is either a <a href="/filter/filters.html" class="link">filter type</a>,
@@ -442,15 +450,16 @@ Filters a variable with a specified filter
 
 <span class="type">mixed</span> <span
 class="methodname">filter\_var</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$variable`</span> \[, <span
+class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$filter`<span
-class="initializer"> = FILTER\_DEFAULT</span></span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$options`</span>
-\]\] )
+class="initializer"> = **`FILTER_DEFAULT`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span></span>
+`$options`<span class="initializer"> = 0</span></span> \]\] )
 
 ### Parameters
 
-`variable`  
+`value`  
 Value to filter. Note that scalar values are
 <a href="/language/types/string.html#language.types.string.casting" class="link">converted to string</a>
 internally before they are filtered.

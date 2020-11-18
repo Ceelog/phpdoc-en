@@ -553,7 +553,7 @@ This function has no parameters.
 
 Returns a copy of the array. When the <span
 class="classname">ArrayObject</span> refers to an object, an array of
-the public properties of that object will be returned.
+the properties of that object will be returned.
 
 ### Examples
 

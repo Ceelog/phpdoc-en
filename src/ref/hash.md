@@ -224,12 +224,13 @@ Generate a hash value using the contents of a given file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">hash\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$binary`<span class="initializer"> = **`FALSE`**</span></span> \] )
 
 ### Parameters
 
@@ -241,14 +242,14 @@ class="function">hash\_algos</span>.
 `filename`  
 URL describing location of file to be hashed; Supports fopen wrappers.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
-hexits unless `raw_output` is set to true in which case the raw binary
+hexits unless `binary` is set to true in which case the raw binary
 representation of the message digest is returned.
 
 ### Examples
@@ -286,7 +287,7 @@ Finalize an incremental hash and return resulting digest
 <span class="type">string</span> <span
 class="methodname">hash\_final</span> ( <span class="methodparam"><span
 class="type">HashContext</span> `$context`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$raw_output`<span
+class="methodparam"><span class="type">bool</span> `$binary`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 ### Parameters
@@ -294,14 +295,14 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 `context`  
 Hashing context returned by <span class="function">hash\_init</span>.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
-hexits unless `raw_output` is set to true in which case the raw binary
+hexits unless `binary` is set to true in which case the raw binary
 representation of the message digest is returned.
 
 ### Changelog
@@ -343,13 +344,13 @@ Generate a HKDF key derivation of a supplied key input
 <span class="type">string</span> <span
 class="methodname">hash\_hkdf</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
-class="methodparam"><span class="type">string</span> `$ikm`</span> \[,
+class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$info`<span
-class="initializer"> = ''</span></span> \[, <span
+class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$salt`<span
-class="initializer"> = ''</span></span> \]\]\] )
+class="initializer"> = ""</span></span> \]\]\] )
 
 ### Parameters
 
@@ -362,7 +363,7 @@ list of supported algorithms.
 >
 > Non-cryptographic hash functions are not allowed.
 
-`ikm`  
+`key`  
 Input keying material (raw binary). Cannot be empty.
 
 `length`  
@@ -389,7 +390,7 @@ failure.
 
 ### Errors/Exceptions
 
-An **`E_WARNING`** will be raised if `ikm` is empty, `algo` is
+An **`E_WARNING`** will be raised if `key` is empty, `algo` is
 unknown/non-cryptographic, `length` is less than *0* or too large
 (greater than 255 times the size of the hash function).
 
@@ -519,13 +520,14 @@ given file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">hash\_hmac\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$algo`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$filename`</span> , <span class="methodparam"><span
+`$data`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$raw_output`<span
+class="methodparam"><span class="type">bool</span> `$binary`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 ### Parameters
@@ -535,24 +537,24 @@ Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
 etc..) See <span class="function">hash\_hmac\_algos</span> for a list of
 supported algorithms.
 
-`filename`  
+`data`  
 URL describing location of file to be hashed; Supports fopen wrappers.
 
 `key`  
 Shared secret key used for generating the HMAC variant of the message
 digest.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
-hexits unless `raw_output` is set to true in which case the raw binary
+hexits unless `binary` is set to true in which case the raw binary
 representation of the message digest is returned. Returns **`FALSE`**
 when `algo` is unknown or is a non-cryptographic hash function, or if
-the file `filename` cannot be read.
+the file `data` cannot be read.
 
 ### Changelog
 
@@ -590,13 +592,14 @@ Generate a keyed hash value using the HMAC method
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">hash\_hmac</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$binary`<span class="initializer"> = **`FALSE`**</span></span> \] )
 
 ### Parameters
 
@@ -612,14 +615,14 @@ Message to be hashed.
 Shared secret key used for generating the HMAC variant of the message
 digest.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
-hexits unless `raw_output` is set to true in which case the raw binary
+hexits unless `binary` is set to true in which case the raw binary
 representation of the message digest is returned. Returns **`FALSE`**
 when `algo` is unknown or is a non-cryptographic hash function.
 
@@ -660,10 +663,10 @@ Initialize an incremental hashing context
 <span class="type">HashContext</span> <span
 class="methodname">hash\_init</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$key`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = ""</span></span> \]\] )
 
 ### Parameters
 
@@ -672,13 +675,13 @@ Name of selected hashing algorithm (i.e. "md5", "sha256", "haval160,4",
 etc..). For a list of supported algorithms see <span
 class="function">hash\_algos</span>.
 
-`options`  
+`flags`  
 Optional settings for hash generation, currently supports only one
 option: **`HASH_HMAC`**. When specified, the `key` *must* be specified.
 
 `key`  
-When **`HASH_HMAC`** is specified for `options`, a shared secret key to
-be used with the HMAC hashing method must be supplied in this parameter.
+When **`HASH_HMAC`** is specified for `flags`, a shared secret key to be
+used with the HMAC hashing method must be supplied in this parameter.
 
 ### Return Values
 
@@ -736,7 +739,7 @@ class="methodparam"><span class="type">string</span> `$password`</span>
 `$iterations`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
-class="type">bool</span> `$raw_output`<span class="initializer"> =
+class="type">bool</span> `$binary`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
 ### Parameters
@@ -757,21 +760,21 @@ randomly.
 The number of internal iterations to perform for the derivation.
 
 `length`  
-The length of the output string. If `raw_output` is **`TRUE`** this
-corresponds to the byte-length of the derived key, if `raw_output` is
+The length of the output string. If `binary` is **`TRUE`** this
+corresponds to the byte-length of the derived key, if `binary` is
 **`FALSE`** this corresponds to twice the byte-length of the derived key
 (as every byte of the key is returned as two hexits).
 
 If *0* is passed, the entire output of the supplied algorithm is used.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the derived key as lowercase hexits unless
-`raw_output` is set to **`TRUE`** in which case the raw binary
+`binary` is set to **`TRUE`** in which case the raw binary
 representation of the derived key is returned.
 
 ### Errors/Exceptions
@@ -841,20 +844,22 @@ Pump data into an active hashing context from a file
 <span class="type">bool</span> <span
 class="methodname">hash\_update\_file</span> ( <span
 class="methodparam"><span class="type">HashContext</span>
-`$hcontext`</span> , <span class="methodparam"><span
+`$context`</span> , <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
-class="methodparam"><span class="type">resource</span> `$scontext`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$stream_context`<span class="initializer"> = **`NULL`**</span></span>
+\] )
 
 ### Parameters
 
-`hcontext`  
+`context`  
 Hashing context returned by <span class="function">hash\_init</span>.
 
 `filename`  
 URL describing location of file to be hashed; Supports fopen wrappers.
 
-`scontext`  
+`stream_context`  
 Stream context as returned by <span
 class="function">stream\_context\_create</span>.
 
@@ -866,6 +871,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 | Version | Description                                                            |
 |---------|------------------------------------------------------------------------|
+| 8.0.0   | `stream_context` is now nullable.                                      |
 | 7.2.0   | Accept <span class="classname">HashContext</span> instead of resource. |
 
 ### See Also
@@ -888,7 +894,7 @@ Pump data into an active hashing context from an open stream
 class="methodname">hash\_update\_stream</span> ( <span
 class="methodparam"><span class="type">HashContext</span>
 `$context`</span> , <span class="methodparam"><span
-class="type">resource</span> `$handle`</span> \[, <span
+class="type">resource</span> `$stream`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = -1</span></span> \] )
 
@@ -897,16 +903,16 @@ class="initializer"> = -1</span></span> \] )
 `context`  
 Hashing context returned by <span class="function">hash\_init</span>.
 
-`handle`  
+`stream`  
 Open file handle as returned by any stream creation function.
 
 `length`  
-Maximum number of characters to copy from `handle` into the hashing
+Maximum number of characters to copy from `stream` into the hashing
 context.
 
 ### Return Values
 
-Actual number of bytes added to the hashing context from `handle`.
+Actual number of bytes added to the hashing context from `stream`.
 
 ### Changelog
 
@@ -987,11 +993,12 @@ Generate a hash value (message digest)
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">hash</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">hash</span> (
 <span class="methodparam"><span class="type">string</span>
 `$algo`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$raw_output`<span
+class="methodparam"><span class="type">bool</span> `$binary`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 ### Parameters
@@ -1004,14 +1011,14 @@ class="function">hash\_algos</span>.
 `data`  
 Message to be hashed.
 
-`raw_output`  
+`binary`  
 When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
-hexits unless `raw_output` is set to true in which case the raw binary
+hexits unless `binary` is set to true in which case the raw binary
 representation of the message digest is returned.
 
 ### Examples

@@ -7,11 +7,11 @@ Split given source into PHP tokens
 
 <span class="type">array</span> <span
 class="methodname">token\_get\_all</span> ( <span
-class="methodparam"><span class="type">string</span> `$source`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = 0</span></span> \] )
+class="methodparam"><span class="type">string</span> `$code`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \] )
 
-<span class="function">token\_get\_all</span> parses the given `source`
+<span class="function">token\_get\_all</span> parses the given `code`
 string into PHP language tokens using the Zend engine's lexical scanner.
 
 For a list of parser tokens, see
@@ -21,7 +21,7 @@ into its string representation.
 
 ### Parameters
 
-`source`  
+`code`  
 The PHP source to parse.
 
 `flags`  
@@ -139,19 +139,19 @@ Get the symbolic name of a given PHP token
 
 <span class="type">string</span> <span
 class="methodname">token\_name</span> ( <span class="methodparam"><span
-class="type">int</span> `$token`</span> )
+class="type">int</span> `$id`</span> )
 
 <span class="function">token\_name</span> gets the symbolic name for a
-PHP `token` value.
+PHP `id` value.
 
 ### Parameters
 
-`token`  
+`id`  
 The token value.
 
 ### Return Values
 
-The symbolic name of the given `token`.
+The symbolic name of the given `id`.
 
 ### Examples
 

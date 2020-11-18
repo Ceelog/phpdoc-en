@@ -5162,6 +5162,11 @@ list of the flags can found under
 They can also be set later with <span
 class="methodname">FilesystemIterator::setFlags</span>
 
+> **Note**:
+>
+> **`FilesystemIterator::SKIP_DOTS`** is always set, and cannot be
+> removed.
+
 ### Return Values
 
 No value is returned.
