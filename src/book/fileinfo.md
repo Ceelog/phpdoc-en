@@ -49,30 +49,34 @@ Class synopsis
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = ""</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$magic_database`<span class="initializer"> = ""</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">buffer</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">buffer</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">resource</span> `$context`</span>
-\]\] )
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">file</span> ( <span class="methodparam"><span
-class="type">string</span> `$file_name`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">resource</span> `$context`</span>
-\]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">file</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">set\_flags</span> ( <span
-class="methodparam"><span class="type">int</span> `$options`</span> )
+class="methodparam"><span class="type">int</span> `$flags`</span> )
 
 }
 
@@ -84,13 +88,15 @@ Alias of
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">finfo::buffer</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">finfo::buffer</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = FILEINFO\_NONE</span></span> \[,
-<span class="methodparam"><span class="type">resource</span>
-`$context`</span> \]\] )
+`$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 This function is an alias of:
 <a href="/ref/fileinfo.html#finfo_buffer" class="link">finfo_buffer()</a>
@@ -104,10 +110,10 @@ Alias of <span class="function">finfo\_open</span>
 
 <span class="modifier">public</span> <span
 class="methodname">finfo::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = ""</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$magic_database`<span class="initializer"> = ""</span></span> \]\] )
 
 This function is an alias of: <span class="function">finfo\_open</span>
 
@@ -119,13 +125,15 @@ Alias of
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">finfo::file</span> ( <span
-class="methodparam"><span class="type">string</span> `$file_name`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = FILEINFO\_NONE</span></span> \[,
-<span class="methodparam"><span class="type">resource</span>
-`$context`</span> \]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">finfo::file</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 This function is an alias of:
 <a href="/ref/fileinfo.html#finfo_file" class="link">finfo_file()</a>
@@ -140,7 +148,7 @@ Alias of
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">finfo::set\_flags</span> ( <span
-class="methodparam"><span class="type">int</span> `$options`</span> )
+class="methodparam"><span class="type">int</span> `$flags`</span> )
 
 This function is an alias of:
 <a href="/ref/fileinfo.html#finfo_set_flags" class="link">finfo_set_flags()</a>

@@ -10,24 +10,29 @@ Return information about a string buffer
 
 Procedural style
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">finfo\_buffer</span> ( <span
 class="methodparam"><span class="type">resource</span> `$finfo`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$options`<span class="initializer"> =
-FILEINFO\_NONE</span></span> \[, <span class="methodparam"><span
-class="type">resource</span> `$context`</span> \]\] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`FILEINFO_NONE`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">resource</span><span
+class="type">null</span></span> `$context`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">finfo::buffer</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">finfo::buffer</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = FILEINFO\_NONE</span></span> \[,
-<span class="methodparam"><span class="type">resource</span>
-`$context`</span> \]\] )
+`$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 This function is used to get information about binary data in a string.
 
@@ -39,7 +44,7 @@ Fileinfo resource returned by <span class="function">finfo\_open</span>.
 `string`  
 Content of a file to be checked.
 
-`options`  
+`flags`  
 One or disjunction of more
 <a href="/fileinfo/constants.html" class="link">Fileinfo constants</a>.
 
@@ -49,6 +54,12 @@ One or disjunction of more
 
 Returns a textual description of the `string` argument, or **`FALSE`**
 if an error occurred.
+
+### Changelog
+
+| Version | Description                |
+|---------|----------------------------|
+| 8.0.0   | `context` is nullable now. |
 
 ### Examples
 
@@ -104,24 +115,28 @@ Return information about a file
 
 Procedural style
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">finfo\_file</span> ( <span class="methodparam"><span
 class="type">resource</span> `$finfo`</span> , <span
-class="methodparam"><span class="type">string</span> `$file_name`</span>
+class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = FILEINFO\_NONE</span></span> \[,
-<span class="methodparam"><span class="type">resource</span>
-`$context`</span> \]\] )
+`$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">finfo::file</span> ( <span
-class="methodparam"><span class="type">string</span> `$file_name`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = FILEINFO\_NONE</span></span> \[,
-<span class="methodparam"><span class="type">resource</span>
-`$context`</span> \]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">finfo::file</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 This function is used to get information about a file.
 
@@ -130,10 +145,10 @@ This function is used to get information about a file.
 `finfo`  
 Fileinfo resource returned by <span class="function">finfo\_open</span>.
 
-`file_name`  
+`filename`  
 Name of a file to be checked.
 
-`options`  
+`flags`  
 One or disjunction of more
 <a href="/fileinfo/constants.html" class="link">Fileinfo constants</a>.
 
@@ -143,8 +158,14 @@ For a description of *contexts*, refer to
 
 ### Return Values
 
-Returns a textual description of the contents of the `file_name`
+Returns a textual description of the contents of the `filename`
 argument, or **`FALSE`** if an error occurred.
+
+### Changelog
+
+| Version | Description                |
+|---------|----------------------------|
+| 8.0.0   | `context` is nullable now. |
 
 ### Examples
 
@@ -185,29 +206,29 @@ Procedural style
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">finfo\_open</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = ""</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$magic_database`<span class="initializer"> = ""</span></span> \]\] )
 
 Object oriented style (constructor):
 
 <span class="modifier">public</span> <span
 class="methodname">finfo::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = FILEINFO\_NONE</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$magic_file`<span
-class="initializer"> = ""</span></span> \]\] )
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$magic_database`<span class="initializer"> = ""</span></span> \]\] )
 
 This function opens a magic database and returns its resource.
 
 ### Parameters
 
-`options`  
+`flags`  
 One or disjunction of more
 <a href="/fileinfo/constants.html" class="link">Fileinfo constants</a>.
 
-`magic_file`  
+`magic_database`  
 Name of a magic database file, usually something like
 `/path/to/magic.mime`. If not specified, the *MAGIC* environment
 variable is used. If the environment variable isn't set, then PHP's
@@ -234,9 +255,10 @@ instead of "PHP script text" returned.
 
 > **Note**:
 >
-> Generally, using the bundled magic database (by leaving `magic_file`
-> and the *MAGIC* environment variables unset) is the best course of
-> action unless you specifically need a custom magic database.
+> Generally, using the bundled magic database (by leaving
+> `magic_database` and the *MAGIC* environment variables unset) is the
+> best course of action unless you specifically need a custom magic
+> database.
 
 ### Examples
 
@@ -296,14 +318,14 @@ Procedural style
 <span class="type">bool</span> <span
 class="methodname">finfo\_set\_flags</span> ( <span
 class="methodparam"><span class="type">resource</span> `$finfo`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$options`</span> )
+<span class="methodparam"><span class="type">int</span> `$flags`</span>
+)
 
 Object oriented style
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">finfo::set\_flags</span> ( <span
-class="methodparam"><span class="type">int</span> `$options`</span> )
+class="methodparam"><span class="type">int</span> `$flags`</span> )
 
 This function sets various Fileinfo options. Options can be set also
 directly in <span class="function">finfo\_open</span> or other Fileinfo
@@ -314,7 +336,7 @@ functions.
 `finfo`  
 Fileinfo resource returned by <span class="function">finfo\_open</span>.
 
-`options`  
+`flags`  
 One or disjunction of more
 <a href="/fileinfo/constants.html" class="link">Fileinfo constants</a>.
 
@@ -332,8 +354,9 @@ Detect MIME Content-type for a file
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">mime\_content\_type</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">string</span></span>
+`$filename`</span> )
 
 Returns the MIME content type for a file as determined by using
 information from the `magic.mime` file.

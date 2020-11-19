@@ -5776,6 +5776,11 @@ e.g. if the file does not exist.
 > a file which is inside a Phar as such path would be a virtual path,
 > not a real one.
 
+> **Note**:
+>
+> On Windows, junctions and symbolic links to directories are only
+> expanded by one level.
+
 > **Note**: <span class="simpara"> Because PHP's integer type is signed
 > and many platforms use 32bit integers, some filesystem functions may
 > return unexpected results for files which are larger than 2GB. </span>
