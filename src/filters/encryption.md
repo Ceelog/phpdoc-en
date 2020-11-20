@@ -53,8 +53,7 @@ echo $data;
 ?>
 ```
 
-**Example \#2 Encrypt file using AES-128 CBC with SHA256 HMAC in PHP
-5.5+**
+**Example \#2 Encrypt file using AES-128 CBC with SHA256 HMAC**
 
 ``` php
 <?php

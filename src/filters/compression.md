@@ -38,13 +38,8 @@ speed only and does not impact the size of the generated payload.
 > commonly used parameter, it may be alternatively provided as a simple
 > integer value (rather than an array element). </span>
 
-zlib.\* compression filters are available with PHP as of version *5.1.0*
-if <a href="/ref/zlib.html" class="link">zlib</a> support is enabled.
-They are also available as a backport in version *5.0.x* by installing
-the
-<a href="https://pecl.php.net/package/zlib_filter" class="link external">» zlib_filter</a>
-package from
-<a href="https://pecl.php.net/" class="link external">» PECL</a>.
+zlib.\* compression filters are available if
+<a href="/ref/zlib.html" class="link">zlib</a> support is enabled.
 
 **Example \#1 *zlib.deflate* and *zlib.inflate***
 
@@ -121,13 +116,8 @@ as the `small` element of an associative array. `small`, when set to a
 **`TRUE`** value, instructs the bzip library to perform decompression in
 a minimal memory footprint at the cost of speed.
 
-bzip2.\* compression filters are available with PHP as of version
-*5.1.0* if <a href="/ref/bzip2.html" class="link">bz2</a> support is
-enabled. They are also available as a backport in version *5.0.x* by
-installing the
-<a href="https://pecl.php.net/package/bz2_filter" class="link external">» bz2_filter</a>
-package from
-<a href="https://pecl.php.net/" class="link external">» PECL</a>.
+bzip2.\* compression filters are available if
+<a href="/ref/bzip2.html" class="link">bz2</a> support is enabled.
 
 **Example \#3 *bzip2.compress* and *bzip2.decompress***
 
