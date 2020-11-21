@@ -209,24 +209,29 @@ class="modifier">readonly</span> <span class="type">string</span>
 <span class="methodname">close</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">expand</span> (\[ <span
-class="methodparam"><span class="type">DOMNode</span> `$basenode`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">expand</span> (\[ <span class="methodparam"><span
+class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> `$baseNode`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getAttribute</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getAttribute</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getAttributeNo</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getAttributeNo</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$localName`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getAttributeNs</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$namespace`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">getParserProperty</span> ( <span
@@ -236,8 +241,9 @@ class="methodparam"><span class="type">int</span> `$property`</span> )
 <span class="methodname">isValid</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">lookupNamespace</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">lookupNamespace</span> ( <span
 class="methodparam"><span class="type">string</span> `$prefix`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -250,9 +256,9 @@ class="methodparam"><span class="type">int</span> `$index`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">moveToAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$localName`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$namespace`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">moveToElement</span> ( <span
@@ -268,14 +274,19 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">next</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$localname`</span> \] )
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$name`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">open</span> ( <span class="methodparam"><span
-class="type">string</span> `$URI`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">bool</span><span class="type">XMLReader</span></span> <span
+class="methodname">open</span> ( <span class="methodparam"><span
+class="type">string</span> `$uri`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -302,24 +313,29 @@ class="methodparam"><span class="type">int</span> `$property`</span> ,
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setRelaxNGSchema</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setRelaxNGSchemaSource</span> ( <span
-class="methodparam"><span class="type">string</span> `$source`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$source`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSchema</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">xml</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
+class="methodname">xml</span> ( <span class="methodparam"><span
 class="type">string</span> `$source`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$options`<span class="initializer"> = 0</span></span> \]\] )
+`$flags`<span class="initializer"> = 0</span></span> \]\] )
 
 }
 
@@ -472,17 +488,19 @@ Returns a copy of the current node as a DOM object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">XMLReader::expand</span> (\[ <span
-class="methodparam"><span class="type">DOMNode</span> `$basenode`</span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">XMLReader::expand</span> (\[ <span
+class="methodparam"><span class="type"><span
+class="type">DOMNode</span><span class="type">null</span></span>
+`$baseNode`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 This method copies the current node and returns the appropriate DOM
 object.
 
 ### Parameters
 
-`basenode`  
+`baseNode`  
 A <span class="classname">DOMNode</span> defining the target <span
 class="classname">DOMDocument</span> for the created DOM object.
 
@@ -498,8 +516,9 @@ Get the value of a named attribute
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">XMLReader::getAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">XMLReader::getAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 Returns the value of a named attribute or **`NULL`** if the attribute
@@ -509,6 +528,12 @@ does not exist or not positioned on an element node.
 
 `name`  
 The name of the attribute.
+
+### Changelog
+
+| Version | Description                                  |
+|---------|----------------------------------------------|
+| 8.0.0   | This function can longer return **`FALSE`**. |
 
 ### Return Values
 
@@ -527,8 +552,9 @@ Get the value of an attribute by index
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">XMLReader::getAttributeNo</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">XMLReader::getAttributeNo</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Returns the value of an attribute based on its position or an empty
@@ -563,33 +589,35 @@ Get the value of an attribute by localname and URI
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">XMLReader::getAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$localName`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">XMLReader::getAttributeNs</span> ( <span
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$namespace`</span> )
 
 Returns the value of an attribute by name and namespace URI or an empty
 string if attribute does not exist or not positioned on an element node.
 
 ### Parameters
 
-`localName`  
+`name`  
 The local name.
 
-`namespaceURI`  
+`namespace`  
 The namespace URI.
 
 ### Return Values
 
 The value of the attribute, or an empty string (before PHP 5.6) or
-**`NULL`** (from PHP 5.6 onwards) if no attribute with the given
-`localName` and `namespaceURI` is found or not positioned of element.
+**`NULL`** (from PHP 5.6 onwards) if no attribute with the given `name`
+and `namespace` is found or not positioned of element.
 
 ### Changelog
 
 | Version | Description                                                                                                      |
 |---------|------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function can longer return **`FALSE`**.                                                                     |
 | 5.6.0   | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`NULL`** if the attribute doesn't exist. |
 
 ### See Also
@@ -677,8 +705,9 @@ Lookup namespace for a prefix
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">XMLReader::lookupNamespace</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">XMLReader::lookupNamespace</span> ( <span
 class="methodparam"><span class="type">string</span> `$prefix`</span> )
 
 Lookup in scope namespace for a given prefix.
@@ -691,6 +720,12 @@ String containing the prefix.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                  |
+|---------|----------------------------------------------|
+| 8.0.0   | This function can longer return **`FALSE`**. |
 
 XMLReader::moveToAttribute
 ==========================
@@ -759,18 +794,18 @@ Move cursor to a named attribute
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">XMLReader::moveToAttributeNs</span> ( <span
-class="methodparam"><span class="type">string</span> `$localName`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$namespaceURI`</span> )
+class="methodparam"><span class="type">string</span> `$name`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$namespace`</span> )
 
 Positions cursor on the named attribute in specified namespace.
 
 ### Parameters
 
-`localName`  
+`name`  
 The local name.
 
-`namespaceURI`  
+`namespace`  
 The namespace URI.
 
 ### Return Values
@@ -869,19 +904,26 @@ Move cursor to next node skipping all subtrees
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">XMLReader::next</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$localname`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$name`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Positions cursor on the next node skipping all subtrees.
 
 ### Parameters
 
-`localname`  
+`name`  
 The name of the next node to move to.
 
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `name` is nullable now. |
 
 ### See Also
 
@@ -896,25 +938,28 @@ Set the URI containing the XML to parse
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">XMLReader::open</span> ( <span
-class="methodparam"><span class="type">string</span> `$URI`</span> \[,
-<span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">bool</span><span class="type">XMLReader</span></span> <span
+class="methodname">XMLReader::open</span> ( <span
+class="methodparam"><span class="type">string</span> `$uri`</span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
-<span class="methodparam"><span class="type">int</span> `$options`<span
+<span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
 Set the URI containing the XML document to be parsed.
 
 ### Parameters
 
-`URI`  
+`uri`  
 URI pointing to the document.
 
 `encoding`  
 The document encoding or **`NULL`**.
 
-`options`  
+`flags`  
 A bitmask of the
 <a href="/libxml/constants.html" class="link">LIBXML_*</a> constants.
 
@@ -926,8 +971,14 @@ statically, returns an <span class="classname">XMLReader</span> or
 
 ### Errors/Exceptions
 
-This method *may* be called statically, but will issue an **`E_STRICT`**
-error.
+This method may be called statically, but prior to PHP 8.0.0, will issue
+an **`E_DEPRECATED`** error in this case.
+
+### Changelog
+
+| Version | Description                                                                                                                                                        |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | <span class="methodname">XMLReader::open</span> is now declared as static method, but can still be called on an <span class="classname">XMLReader</span> instance. |
 
 ### See Also
 
@@ -1104,8 +1155,9 @@ Set the filename or URI for a RelaxNG Schema
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">XMLReader::setRelaxNGSchema</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
 Set the filename or URI for the RelaxNG Schema to use for validation.
 
@@ -1133,7 +1185,8 @@ Set the data containing a RelaxNG Schema
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">XMLReader::setRelaxNGSchemaSource</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
 `$source`</span> )
 
 Set the data containing a RelaxNG Schema to use for validation.
@@ -1162,8 +1215,9 @@ Validate document against XSD
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">XMLReader::setSchema</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-)
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`</span> )
 
 Use W3C XSD schema to validate the document as it is processed.
 Activation is only possible before the first Read().
@@ -1203,12 +1257,13 @@ Set the data containing the XML to parse
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">XMLReader::xml</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type">bool</span> <span
+class="methodname">XMLReader::xml</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$options`<span class="initializer"> =
+class="type">int</span> `$flags`<span class="initializer"> =
 0</span></span> \]\] )
 
 Set the data containing the XML to parse.
@@ -1221,7 +1276,7 @@ String containing the XML to be parsed.
 `encoding`  
 The document encoding or **`NULL`**.
 
-`options`  
+`flags`  
 A bitmask of the
 <a href="/libxml/constants.html" class="link">LIBXML_*</a> constants.
 
@@ -1233,8 +1288,14 @@ statically, returns an <span class="classname">XMLReader</span> or
 
 ### Errors/Exceptions
 
-This method *may* be called statically, but will issue an **`E_STRICT`**
-error.
+This method may be called statically, but prior to PHP 8.0.0, will issue
+an **`E_DEPRECATED`** error in this case.
+
+### Changelog
+
+| Version | Description                                                                                                                                                       |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | <span class="methodname">XMLReader::xml</span> is now declared as static method, but can still be called on an <span class="classname">XMLReader</span> instance. |
 
 ### See Also
 

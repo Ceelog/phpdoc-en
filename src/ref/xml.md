@@ -112,21 +112,22 @@ Get XML parser error string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">xml\_error\_string</span> ( <span
-class="methodparam"><span class="type">int</span> `$code`</span> )
+class="methodparam"><span class="type">int</span> `$error_code`</span> )
 
-Gets the XML parser error string associated with the given `code`.
+Gets the XML parser error string associated with the given `error_code`.
 
 ### Parameters
 
-`code`  
+`error_code`  
 An error code from <span class="function">xml\_get\_error\_code</span>.
 
 ### Return Values
 
-Returns a string with a textual description of the error `code`, or
-**`FALSE`** if no description was found.
+Returns a string with a textual description of the error `error_code`,
+or **`FALSE`** if no description was found.
 
 ### See Also
 
@@ -141,7 +142,7 @@ Get current byte index for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_byte\_index</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
 
 Gets the current byte index of the given XML parser.
@@ -164,6 +165,12 @@ in its data buffer (starting at 0).
 This function returns byte index according to UTF-8 encoded text
 disregarding if input is in another encoding.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span class="function">xml\_get\_current\_column\_number</span>
@@ -178,7 +185,7 @@ Get current column number for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_column\_number</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
 
 Gets the current column number of the given XML parser.
@@ -195,6 +202,12 @@ parser, or else it returns which column on the current line (as given by
 <span class="function">xml\_get\_current\_line\_number</span>) the
 parser is currently at.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span class="function">xml\_get\_current\_byte\_index</span>
@@ -209,7 +222,7 @@ Get current line number for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_line\_number</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
 
 Gets the current line number for the given XML parser.
@@ -225,6 +238,12 @@ This function returns **`FALSE`** if `parser` does not refer to a valid
 parser, or else it returns which line the parser is currently at in its
 data buffer.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span class="function">xml\_get\_current\_column\_number</span>
@@ -239,7 +258,7 @@ Get XML parser error code
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_error\_code</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
 
 Gets the XML parser error code.
@@ -255,6 +274,12 @@ This function returns **`FALSE`** if `parser` does not refer to a valid
 parser, or else it returns one of the error codes listed in the
 <a href="/xml/error-codes.html" class="link">error codes section</a>.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span class="function">xml\_error\_string</span>
@@ -268,12 +293,12 @@ Parse XML data into an array structure
 
 <span class="type">int</span> <span
 class="methodname">xml\_parse\_into\_struct</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$data`</span> , <span class="methodparam"><span
 class="type">array</span> `&$values`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$index`</span> \]
-)
+class="methodparam"><span class="type">array</span> `&$index`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 This function parses an XML string into 2 parallel array structures, one
 (`index`) containing pointers to the location of the appropriate values
@@ -300,6 +325,12 @@ in the $values.
 <span class="function">xml\_parse\_into\_struct</span> returns 0 for
 failure and 1 for success. This is not the same as **`FALSE`** and
 **`TRUE`**, be careful with operators such as ===.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -498,7 +529,7 @@ Start parsing an XML document
 ### Description
 
 <span class="type">int</span> <span class="methodname">xml\_parse</span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_final`<span
@@ -539,6 +570,12 @@ class="function">xml\_get\_current\_byte\_index</span>.
 > Some errors (such as entity errors) are reported at the end of the
 > data, thus only if `is_final` is set and **`TRUE`**.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### Examples
 
 **Example \#1 Chunked parsing of large XML documents**
@@ -567,16 +604,18 @@ Create an XML parser with namespace support
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">XmlParser</span> <span
 class="methodname">xml\_parser\_create\_ns</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\[, <span class="methodparam"><span class="type">string</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">string</span>
 `$separator`<span class="initializer"> = ":"</span></span> \]\] )
 
 <span class="function">xml\_parser\_create\_ns</span> creates a new XML
-parser with XML namespace support and returns a resource handle
-referencing it to be used by the other XML functions.
+parser with XML namespace support and returns a <span
+class="classname">XMLParser</span> instance to be used by the other XML
+functions.
 
 ### Parameters
 
@@ -594,8 +633,14 @@ the string specified in `separator`.
 
 ### Return Values
 
-Returns a resource handle for the new XML parser, or **`FALSE`** on
-failure.
+Returns a new <span class="classname">XMLParser</span> instance.
+
+### Changelog
+
+| Version | Description                                                                                                                                                               |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`FALSE`** on failure. |
+| 8.0.0   | `encoding` is nullable now.                                                                                                                                               |
 
 ### See Also
 
@@ -609,15 +654,15 @@ Create an XML parser
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">XmlParser</span> <span
 class="methodname">xml\_parser\_create</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">xml\_parser\_create</span> creates a new XML
-parser and returns a resource handle referencing it to be used by the
-other XML functions.
+parser and returns a <span class="classname">XMLParser</span> instance
+to be used by the other XML functions.
 
 ### Parameters
 
@@ -634,8 +679,14 @@ encodings are *ISO-8859-1*, *UTF-8* and *US-ASCII*.
 
 ### Return Values
 
-Returns a resource handle for the new XML parser, or **`FALSE`** on
-failure.
+Returns a new <span class="classname">XMLParser</span> instance.
+
+### Changelog
+
+| Version | Description                                                                                                                                                               |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`FALSE`** on failure. |
+| 8.0.0   | `encoding` is nullable now.                                                                                                                                               |
 
 ### See Also
 
@@ -651,7 +702,7 @@ Free an XML parser
 
 <span class="type">bool</span> <span
 class="methodname">xml\_parser\_free</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
 
 Frees the given XML `parser`.
@@ -659,10 +710,10 @@ Frees the given XML `parser`.
 **Caution**
 
 In addition to calling <span class="function">xml\_parser\_free</span>
-when the parsing is finished, as of PHP 7.0.0 it is necessary to also
-explicitly unset the reference to `parser` to avoid memory leaks, if the
-parser resource is referenced from an object, and this object references
-that parser resource.
+when the parsing is finished, prior to PHP 8.0.0, it was necessary to
+also explicitly unset the reference to `parser` to avoid memory leaks,
+if the parser resource is referenced from an object, and this object
+references that parser resource.
 
 ### Parameters
 
@@ -671,8 +722,13 @@ that parser resource.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
-parser, or else it frees the parser and returns **`TRUE`**.
+Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 xml\_parser\_get\_option
 ========================
@@ -681,9 +737,10 @@ Get options from an XML parser
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span></span> <span
 class="methodname">xml\_parser\_get\_option</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$option`</span> )
 
@@ -710,9 +767,10 @@ Else the option's value is returned.
 
 ### Changelog
 
-| Version               | Description                                                                            |
-|-----------------------|----------------------------------------------------------------------------------------|
-| 7.1.24, 7.2.12, 7.3.0 | `options` now supports **`XML_OPTION_SKIP_TAGSTART`** and **`XML_OPTION_SKIP_WHITE`**. |
+| Version               | Description                                                                                                                               |
+|-----------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0                 | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 7.1.24, 7.2.12, 7.3.0 | `options` now supports **`XML_OPTION_SKIP_TAGSTART`** and **`XML_OPTION_SKIP_WHITE`**.                                                    |
 
 xml\_parser\_set\_option
 ========================
@@ -723,10 +781,11 @@ Set options in an XML parser
 
 <span class="type">bool</span> <span
 class="methodname">xml\_parser\_set\_option</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">int</span>
-`$option`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$value`</span> )
+`$option`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$value`</span> )
 
 Sets an option in an XML parser.
 
@@ -756,6 +815,12 @@ This function returns **`FALSE`** if `parser` does not refer to a valid
 parser, or if the option could not be set. Else the option is set and
 **`TRUE`** is returned.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 xml\_set\_character\_data\_handler
 ==================================
 
@@ -765,7 +830,7 @@ Set up character data handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_character\_data\_handler</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -783,7 +848,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept two parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
@@ -811,6 +876,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 xml\_set\_default\_handler
 ==========================
 
@@ -820,7 +891,7 @@ Set up default handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_default\_handler</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -838,7 +909,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept two parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
@@ -860,6 +931,12 @@ handler in question is disabled.
 > containing an object reference and a method name can also be
 > supplied.</span>
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
@@ -873,15 +950,15 @@ Set up start and end element handlers
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_element\_handler</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
-`$start_element_handler`</span> , <span class="methodparam"><span
-class="type">callable</span> `$end_element_handler`</span> )
+`$start_handler`</span> , <span class="methodparam"><span
+class="type">callable</span> `$end_handler`</span> )
 
-Sets the element handler functions for the XML `parser`.
-`start_element_handler` and `end_element_handler` are strings containing
-the names of functions that must exist when <span
-class="function">xml\_parse</span> is called for `parser`.
+Sets the element handler functions for the XML `parser`. `start_handler`
+and `end_handler` are strings containing the names of functions that
+must exist when <span class="function">xml\_parse</span> is called for
+`parser`.
 
 ### Parameters
 
@@ -889,13 +966,12 @@ class="function">xml\_parse</span> is called for `parser`.
 A reference to the XML parser to set up start and end element handler
 functions.
 
-`start_element_handler`  
-The function named by `start_element_handler` must accept three
-parameters:
+`start_handler`  
+The function named by `start_handler` must accept three parameters:
 
 <span class="methodname"><span
 class="replaceable">start\_element\_handler</span></span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> , <span class="methodparam"><span
 class="type">array</span> `$attribs`</span> )
@@ -928,12 +1004,12 @@ attribute, and so on. </span>
 > containing an object reference and a method name can also be
 > supplied.</span>
 
-`end_element_handler`  
-The function named by `end_element_handler` must accept two parameters:
+`end_handler`  
+The function named by `end_handler` must accept two parameters:
 
 <span class="methodname"><span
 class="replaceable">end\_element\_handler</span></span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> )
 
@@ -956,6 +1032,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 xml\_set\_end\_namespace\_decl\_handler
 =======================================
 
@@ -965,7 +1047,7 @@ Set up end namespace declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_end\_namespace\_decl\_handler</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -996,7 +1078,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> )
 
@@ -1020,6 +1102,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span
@@ -1034,7 +1122,7 @@ Set up external entity reference handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_external\_entity\_ref\_handler</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1059,7 +1147,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$open_entity_names`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,
@@ -1108,6 +1196,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 | Version | Description                                                                                                                                                                     |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected.                                       |
 | 7.3.0   | The return value of the `handler` is no longer ignored if the extension has been built against libxml. Formerly, the return value has been ignored, and parsing did never stop. |
 
 xml\_set\_notation\_decl\_handler
@@ -1119,7 +1208,7 @@ Set up notation declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_notation\_decl\_handler</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -1151,7 +1240,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept five parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$notation_name`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,
@@ -1192,6 +1281,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 xml\_set\_object
 ================
 
@@ -1201,9 +1296,9 @@ Use XML Parser within an object
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_object</span> ( <span
-class="methodparam"><span class="type">resource</span> `$parser`</span>
+class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">object</span>
-`&$object`</span> )
+`$object`</span> )
 
 This function allows to use `parser` inside `object`. All callback
 functions could be set with <span
@@ -1221,6 +1316,12 @@ The object where to use the XML parser.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -1292,7 +1393,7 @@ Set up processing instruction (PI) handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_processing\_instruction\_handler</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1328,7 +1429,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept three parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$target`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
@@ -1357,6 +1458,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 xml\_set\_start\_namespace\_decl\_handler
 =========================================
 
@@ -1366,7 +1473,7 @@ Set up start namespace declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_start\_namespace\_decl\_handler</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1392,7 +1499,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> , <span
 class="methodparam"><span class="type">string</span> `$uri`</span> )
@@ -1421,6 +1528,12 @@ handler in question is disabled.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
+
 ### See Also
 
 -   <span
@@ -1435,7 +1548,7 @@ Set up unparsed entity declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_unparsed\_entity\_decl\_handler</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1467,7 +1580,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept six parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">resource</span>
+( <span class="methodparam"><span class="type">XmlParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$entity_name`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,
@@ -1513,6 +1626,12 @@ handler in question is disabled.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `parser` expects an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 **Table of Contents**
 
