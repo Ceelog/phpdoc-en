@@ -183,6 +183,7 @@ Language Reference
     -   [CompileError](/class/compileerror.html) — CompileError
     -   [ParseError](/class/parseerror.html) — ParseError
     -   [TypeError](/class/typeerror.html) — TypeError
+    -   [ValueError](/class/valueerror.html) — ValueError
 -   [Predefined Interfaces and Classes](/reserved/interfaces.html)
     -   [Traversable](/class/traversable.html) — The Traversable
         interface

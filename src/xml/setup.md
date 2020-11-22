@@ -59,7 +59,7 @@ This extension has no configuration directives defined in `php.ini`.
 Resource Types
 --------------
 
-The *xml* resource as returned by <span
+Prior to PHP 8.0.0, the *xml* resource as returned by <span
 class="function">xml\_parser\_create</span> and <span
-class="function">xml\_parser\_create\_ns</span> references an xml parser
+class="function">xml\_parser\_create\_ns</span> referenced an xml parser
 instance to be used with the functions provided by this extension.

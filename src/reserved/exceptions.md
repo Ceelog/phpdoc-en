@@ -56,6 +56,7 @@ Predefined Exceptions
 -   [CompileError](/class/compileerror.html) — CompileError
 -   [ParseError](/class/parseerror.html) — ParseError
 -   [TypeError](/class/typeerror.html) — TypeError
+-   [ValueError](/class/valueerror.html) — ValueError
 
 See also the
 <a href="/spl/exceptions.html" class="link">SPL Exceptions</a>
@@ -881,6 +882,86 @@ Class synopsis
 **TypeError**
 
 <span class="ooclass"> class **TypeError** </span> <span
+class="ooclass"> <span class="modifier">extends</span> **Error** </span>
+{
+
+/\* Inherited properties \*/
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$message` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$code` ;
+
+<span class="modifier">protected</span> <span class="type">string</span>
+`$file` ;
+
+<span class="modifier">protected</span> <span class="type">int</span>
+`$line` ;
+
+/\* Inherited methods \*/
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getMessage</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">Throwable</span> <span
+class="methodname">Error::getPrevious</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">mixed</span> <span
+class="methodname">Error::getCode</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getFile</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">int</span> <span
+class="methodname">Error::getLine</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">array</span> <span
+class="methodname">Error::getTrace</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span class="modifier">public</span>
+<span class="type">string</span> <span
+class="methodname">Error::getTraceAsString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Error::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">final</span> <span
+class="modifier">private</span> <span class="type">void</span> <span
+class="methodname">Error::\_\_clone</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+Introduction
+------------
+
+A <span class="classname">ValueError</span> is thrown when the type of
+an argument is correct but the value of it is incorrect. For example,
+passing a negative integer when the function expects a positive one, or
+passing an empty string/array when the function expects it to not be
+empty.
+
+Class synopsis
+--------------
+
+**ValueError**
+
+<span class="ooclass"> class **ValueError** </span> <span
 class="ooclass"> <span class="modifier">extends</span> **Error** </span>
 {
 

@@ -5,16 +5,20 @@ Perform a regular expression search and replace
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">preg\_filter</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$pattern`</span> , <span
-class="methodparam"><span class="type">mixed</span>
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$pattern`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$replacement`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$subject`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \]\]
-)
+class="methodparam"><span class="type">int</span> `&$count`<span
+class="initializer"> = **`NULL`**</span></span> \]\] )
 
 <span class="function">preg\_filter</span> is identical to <span
 class="function">preg\_replace</span> except it only returns the
@@ -93,14 +97,15 @@ Return array entries that match the pattern
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">preg\_grep</span> ( <span class="methodparam"><span
 class="type">string</span> `$pattern`</span> , <span
-class="methodparam"><span class="type">array</span> `$input`</span> \[,
+class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \] )
 
-Returns the array consisting of the elements of the `input` array that
+Returns the array consisting of the elements of the `array` array that
 match the given `pattern`.
 
 ### Parameters
@@ -108,7 +113,7 @@ match the given `pattern`.
 `pattern`  
 The pattern to search for, as a string.
 
-`input`  
+`array`  
 The input array.
 
 `flags`  
@@ -117,7 +122,7 @@ the input array that do *not* match the given `pattern`.
 
 ### Return Values
 
-Returns an array indexed using the keys from the `input` array.
+Returns an array indexed using the keys from the `array` array.
 
 ### Examples
 
@@ -243,14 +248,16 @@ Perform a global regular expression match
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">preg\_match\_all</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$subject`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$matches`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = **`PREG_PATTERN_ORDER`**</span></span> \[, <span
+class="type">array</span> `&$matches`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+**`PREG_PATTERN_ORDER`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
@@ -562,16 +569,17 @@ Perform a regular expression match
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">preg\_match</span> ( <span class="methodparam"><span
 class="type">string</span> `$pattern`</span> , <span
 class="methodparam"><span class="type">string</span> `$subject`</span>
 \[, <span class="methodparam"><span class="type">array</span>
-`&$matches`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$offset`<span class="initializer"> =
-0</span></span> \]\]\] )
+`&$matches`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`<span
+class="initializer"> = 0</span></span> \]\]\] )
 
 Searches `subject` for a match to the regular expression given in
 `pattern`.
@@ -862,8 +870,9 @@ Quote regular expression characters
 <span class="type">string</span> <span
 class="methodname">preg\_quote</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$delimiter`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$delimiter`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">preg\_quote</span> takes `str` and puts a
 backslash in front of every character that is part of the regular
@@ -901,6 +910,7 @@ Returns the quoted (escaped) string.
 | Version | Description                      |
 |---------|----------------------------------|
 | 7.3.0   | The *\#* character is now quoted |
+| 7.2.0   | `delimiter` is nullable now.     |
 
 ### Examples
 
@@ -946,16 +956,19 @@ Perform a regular expression search and replace using callbacks
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">preg\_replace\_callback\_array</span> ( <span
-class="methodparam"><span class="type">array</span>
-`$patterns_and_callbacks`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$limit`<span
-class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \]\]\] )
+class="methodparam"><span class="type">array</span> `$pattern`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$subject`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$limit`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$count`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+0</span></span> \]\]\] )
 
 The behavior of this function is similar to <span
 class="function">preg\_replace\_callback</span>, except that callbacks
@@ -963,7 +976,7 @@ are executed on a per-pattern basis.
 
 ### Parameters
 
-`patterns_and_callbacks`  
+`pattern`  
 An associative array mapping patterns (keys) to <span
 class="type">callable</span>s (values).
 
@@ -1043,17 +1056,22 @@ Perform a regular expression search and replace using a callback
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">preg\_replace\_callback</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$pattern`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$callback`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$limit`<span
-class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = 0</span></span> \]\]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$pattern`</span> , <span class="methodparam"><span
+class="type">callable</span> `$callback`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$subject`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$limit`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$count`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+0</span></span> \]\]\] )
 
 The behavior of this function is almost identical to <span
 class="function">preg\_replace</span>, except for the fact that instead
@@ -1212,16 +1230,20 @@ Perform a regular expression search and replace
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">null</span></span> <span
 class="methodname">preg\_replace</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$pattern`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$pattern`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$replacement`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
+class="type"><span class="type">string</span><span
+class="type">array</span></span> `$subject`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \]\]
-)
+class="methodparam"><span class="type">int</span> `&$count`<span
+class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Searches `subject` for matches to `pattern` and replaces them with
 `replacement`.
