@@ -16,6 +16,7 @@ Control Structures
 -   [break](/control-structures/break.html)
 -   [continue](/control-structures/continue.html)
 -   [switch](/control-structures/switch.html)
+-   [match](/control-structures/match.html)
 -   [declare](/control-structures/declare.html)
 -   [return](/function/return.html)
 -   [require](/function/require.html)

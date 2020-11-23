@@ -45,6 +45,8 @@ required.
                 class="classname">ArgumentCountError</span></span>
         -   <span class="simpara"><span
             class="classname">ValueError</span></span>
+        -   <span class="simpara"><span
+            class="classname">UnhandledMatchError</span></span>
     -   <span class="simpara"><span
         class="classname">Exception</span></span>
         -   <span class="simpara">...</span>

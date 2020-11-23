@@ -42,4 +42,6 @@ A default size of the shared memory segment.
 Resource Types
 --------------
 
-This extension has no resource types defined.
+Prior to PHP 8.0.0, this extension defined the resource types *sysvmsg
+queue* (System V Message Queue), *sysvsem* (System V Semaphore) and
+*sysvshm* (System V Shared Memory).

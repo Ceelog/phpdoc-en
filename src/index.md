@@ -128,6 +128,7 @@ PHP Manual
         Questions
 -   [Appendices](/appendices.html)
     -   [History of PHP and Related Projects](/history.html)
+    -   [Migrating from PHP 7.4.x to PHP 8.0.x](/migration80.html)
     -   [Migrating from PHP 7.3.x to PHP 7.4.x](/migration74.html)
     -   [Migrating from PHP 7.2.x to PHP 7.3.x](/migration73.html)
     -   [Migrating from PHP 7.1.x to PHP 7.2.x](/migration72.html)
@@ -194,7 +195,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">And several others</a>
 </span> </span>
 
-2020-11-23
+2020-11-24
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

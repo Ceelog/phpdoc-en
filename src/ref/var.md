@@ -501,18 +501,17 @@ The variable being type checked.
 
 Possible values for the returned string are:
 
--   <span class="simpara"> "<span class="type">bool</span>" </span>
--   <span class="simpara"> "<span class="type">int</span>" </span>
--   <span class="simpara"> "<span class="type">double</span>" (for
-    historical reasons "double" is returned in case of a <span
-    class="type">float</span>, and not simply "float") </span>
--   <span class="simpara"> "<span class="type">string</span>" </span>
--   <span class="simpara"> "<span class="type">array</span>" </span>
--   <span class="simpara"> "<span class="type">object</span>" </span>
--   <span class="simpara"> "<span class="type">resource</span>" </span>
--   <span class="simpara"> "resource (closed)" as of PHP 7.2.0 </span>
--   <span class="simpara"> "<span class="type">NULL</span>" </span>
--   <span class="simpara"> "unknown type" </span>
+-   *"boolean"*
+-   *"integer"*
+-   *"double"* (for historical reasons *"double"* is returned in case of
+    a <span class="type">float</span>, and not simply *"float"*)
+-   *"string"*
+-   *"array"*
+-   *"object"*
+-   *"resource"*
+-   *"resource (closed)"* as of PHP 7.2.0
+-   *"NULL"*
+-   *"unknown type"*
 
 ### Examples
 

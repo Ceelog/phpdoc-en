@@ -8,7 +8,8 @@ Retrieve internal configuration variables of iconv extension
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">iconv\_get\_encoding</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$type`<span
 class="initializer"> = "all"</span></span> \] )
@@ -70,20 +71,21 @@ Decodes multiple *MIME* header fields at once
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_mime\_decode\_headers</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$encoded_headers`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$mode`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$headers`</span>
+\[, <span class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Decodes multiple *MIME* header fields at once.
 
 ### Parameters
 
-`encoded_headers`  
+`headers`  
 The encoded headers, as a string.
 
 `mode`  
@@ -97,17 +99,17 @@ following bitmasks.
 | 1     | ICONV\_MIME\_DECODE\_STRICT              | If set, the given header is decoded in full conformance with the standards defined in <a href="http://www.faqs.org/rfcs/rfc2047" class="link external">» RFC2047</a>. This option is disabled by default because there are a lot of broken mail user agents that don't follow the specification and don't produce correct *MIME* headers. |
 | 2     | ICONV\_MIME\_DECODE\_CONTINUE\_ON\_ERROR | If set, <span class="function">iconv\_mime\_decode\_headers</span> attempts to ignore any grammatical errors and continue to process a given header.                                                                                                                                                                                      |
 
-`charset`  
-The optional `charset` parameter specifies the character set to
-represent the result by. If omitted,
+`encoding`  
+The optional `encoding` parameter specifies the character set to
+represent the result by. If omitted or **`NULL`**,
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>
 will be used.
 
 ### Return Values
 
 Returns an associative array that holds a whole set of *MIME* header
-fields specified by `encoded_headers` on success, or **`FALSE`** if an
-error occurs during the decoding.
+fields specified by `headers` on success, or **`FALSE`** if an error
+occurs during the decoding.
 
 Each key of the return value represents an individual field name and the
 corresponding element represents a field value. If more than one field
@@ -115,6 +117,12 @@ of the same name are present, <span
 class="function">iconv\_mime\_decode\_headers</span> automatically
 incorporates them into a numerically indexed array in the order of
 occurrence.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -172,20 +180,21 @@ Decodes a *MIME* header field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_mime\_decode</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$encoded_header`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$mode`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Decodes a *MIME* header field.
 
 ### Parameters
 
-`encoded_header`  
+`string`  
 The encoded header, as a string.
 
 `mode`  
@@ -199,9 +208,9 @@ bitmasks.
 | 1     | ICONV\_MIME\_DECODE\_STRICT              | If set, the given header is decoded in full conformance with the standards defined in <a href="http://www.faqs.org/rfcs/rfc2047" class="link external">» RFC2047</a>. This option is disabled by default because there are a lot of broken mail user agents that don't follow the specification and don't produce correct *MIME* headers. |
 | 2     | ICONV\_MIME\_DECODE\_CONTINUE\_ON\_ERROR | If set, <span class="function">iconv\_mime\_decode\_headers</span> attempts to ignore any grammatical errors and continue to process a given header.                                                                                                                                                                                      |
 
-`charset`  
-The optional `charset` parameter specifies the character set to
-represent the result by. If omitted,
+`encoding`  
+The optional `encoding` parameter specifies the character set to
+represent the result by. If omitted or **`NULL`**,
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>
 will be used.
 
@@ -209,6 +218,12 @@ will be used.
 
 Returns a decoded *MIME* field on success, or **`FALSE`** if an error
 occurs during the decoding.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -238,13 +253,14 @@ Composes a *MIME* header field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_mime\_encode</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$field_name`</span> , <span class="methodparam"><span
 class="type">string</span> `$field_value`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$preferences`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = \[\]</span></span> \] )
 
 Composes and returns a string that represents a valid *MIME* header
 field, which looks like the following:
@@ -262,11 +278,11 @@ The field name.
 `field_value`  
 The field value.
 
-`preferences`  
+`options`  
 You can control the behaviour of <span
 class="function">iconv\_mime\_encode</span> by specifying an associative
 array that contains configuration items to the optional third parameter
-`preferences`. The items supported by <span
+`options`. The items supported by <span
 class="function">iconv\_mime\_encode</span> are listed below. Note that
 item names are treated case-sensitive.
 
@@ -324,10 +340,10 @@ Set current setting for character encoding conversion
 class="methodname">iconv\_set\_encoding</span> ( <span
 class="methodparam"><span class="type">string</span> `$type`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$charset`</span> )
+`$encoding`</span> )
 
 Changes the value of the internal configuration variable specified by
-`type` to `charset`.
+`type` to `encoding`.
 
 ### Parameters
 
@@ -338,7 +354,7 @@ The value of `type` can be any one of these:
 -   output\_encoding
 -   internal\_encoding
 
-`charset`  
+`encoding`  
 The character set.
 
 ### Return Values
@@ -369,31 +385,40 @@ Returns the character count of string
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_strlen</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 In contrast to <span class="function">strlen</span>, <span
 class="function">iconv\_strlen</span> counts the occurrences of
-characters in the given byte sequence `str` on the basis of the
+characters in the given byte sequence `string` on the basis of the
 specified character set, the result of which is not necessarily
 identical to the length of the string in byte.
 
 ### Parameters
 
-`str`  
+`string`  
 The string.
 
-`charset`  
-If `charset` parameter is omitted, `str` is assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` is assumed to
+be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
 ### Return Values
 
-Returns the character count of `str`, as an integer.
+Returns the character count of `string`, as an integer, or **`FALSE`**
+if an error occurs during the encoding.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -408,15 +433,16 @@ Finds position of first occurrence of a needle within a haystack
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_strpos</span> ( <span
 class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$offset`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \]\] )
+0</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Finds position of first occurrence of a `needle` within a `haystack`.
 
@@ -424,7 +450,7 @@ In contrast to <span class="function">strpos</span>, the return value of
 <span class="function">iconv\_strpos</span> is the number of characters
 that appear before the needle, rather than the offset in bytes to the
 position where the needle has been found. The characters are counted on
-the basis of the specified character set `charset`.
+the basis of the specified character set `encoding`.
 
 ### Parameters
 
@@ -439,8 +465,9 @@ The optional `offset` parameter specifies the position from which the
 search should be performed. If the offset is negative, it is counted
 from the end of the string.
 
-`charset`  
-If `charset` parameter is omitted, `string` are assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
 If `haystack` or `needle` is not a string, it is converted to a string
@@ -468,6 +495,7 @@ for testing the return value of this function.
 
 | Version | Description                                    |
 |---------|------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                    |
 | 7.1.0   | Support for negative `offset`s has been added. |
 
 ### See Also
@@ -483,13 +511,14 @@ Finds the last occurrence of a needle within a haystack
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_strrpos</span> ( <span
 class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$needle`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \] )
+`$needle`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Finds the last occurrence of a `needle` within a `haystack`.
 
@@ -497,7 +526,7 @@ In contrast to <span class="function">strrpos</span>, the return value
 of <span class="function">iconv\_strrpos</span> is the number of
 characters that appear before the needle, rather than the offset in
 bytes to the position where the needle has been found. The characters
-are counted on the basis of the specified character set `charset`.
+are counted on the basis of the specified character set `encoding`.
 
 ### Parameters
 
@@ -507,8 +536,9 @@ The entire string.
 `needle`  
 The searched substring.
 
-`charset`  
-If `charset` parameter is omitted, `string` are assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
 If `haystack` or `needle` is not a string, it is converted to a string
@@ -532,6 +562,12 @@ more information. Use
 <a href="/language/operators/comparison.html" class="link">the === operator</a>
 for testing the return value of this function.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">strrpos</span>
@@ -545,32 +581,34 @@ Cut out part of a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">iconv\_substr</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
+class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$length`<span class="initializer"> = iconv\_strlen($str,
-$charset)</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$charset`<span class="initializer"> =
-ini\_get("iconv.internal\_encoding")</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
-Cuts a portion of `str` specified by the `offset` and `length`
+Cuts a portion of `string` specified by the `offset` and `length`
 parameters.
 
 ### Parameters
 
-`str`  
+`string`  
 The original string.
 
 `offset`  
 If `offset` is non-negative, <span class="function">iconv\_substr</span>
-cuts the portion out of `str` beginning at `offset`'th character,
+cuts the portion out of `string` beginning at `offset`'th character,
 counting from zero.
 
 If `offset` is negative, <span class="function">iconv\_substr</span>
 cuts out the portion beginning at the position, `offset` characters away
-from the end of `str`.
+from the end of `string`.
 
 `length`  
 If `length` is given and is positive, the return value will contain at
@@ -578,35 +616,37 @@ most `length` characters of the portion that begins at `offset`
 (depending on the length of `string`).
 
 If negative `length` is passed, <span
-class="function">iconv\_substr</span> cuts the portion out of `str` from
-the `offset`'th character up to the character that is `length`
+class="function">iconv\_substr</span> cuts the portion out of `string`
+from the `offset`'th character up to the character that is `length`
 characters away from the end of the string. In case `offset` is also
 negative, the start position is calculated beforehand according to the
 rule explained above.
 
-`charset`  
-If `charset` parameter is omitted, `string` are assumed to be encoded in
+`encoding`  
+If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
 Note that `offset` and `length` parameters are always deemed to
 represent offsets that are calculated on the basis of the character set
-determined by `charset`, whilst the counterpart <span
+determined by `encoding`, whilst the counterpart <span
 class="function">substr</span> always takes these for byte offsets.
 
 ### Return Values
 
-Returns the portion of `str` specified by the `offset` and `length`
+Returns the portion of `string` specified by the `offset` and `length`
 parameters.
 
-If `str` is shorter than `offset` characters long, **`FALSE`** will be
-returned. If `str` is exactly `offset` characters long, an empty string
-will be returned.
+If `string` is shorter than `offset` characters long, **`FALSE`** will
+be returned. If `string` is exactly `offset` characters long, an empty
+string will be returned.
 
 ### Changelog
 
-| Version | Description                                                                                                                                    |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.11  | If `str` is equal to `offset` characters long, an empty string will be returned. Prior to this version, **`FALSE`** was returned in this case. |
+| Version | Description                                                                                                                                       |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `length` and `encoding` are nullable now.                                                                                                         |
+| 7.0.11  | If `string` is equal to `offset` characters long, an empty string will be returned. Prior to this version, **`FALSE`** was returned in this case. |
 
 ### See Also
 
@@ -624,22 +664,22 @@ Convert string to requested character encoding
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span class="methodname">iconv</span> (
 <span class="methodparam"><span class="type">string</span>
-`$in_charset`</span> , <span class="methodparam"><span
-class="type">string</span> `$out_charset`</span> , <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+`$from_encoding`</span> , <span class="methodparam"><span
+class="type">string</span> `$to_encoding`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
-Performs a character set conversion on the string `str` from
-`in_charset` to `out_charset`.
+Performs a character set conversion on the string `string` from
+`from_encoding` to `to_encoding`.
 
 ### Parameters
 
-`in_charset`  
+`from_encoding`  
 The input charset.
 
-`out_charset`  
+`to_encoding`  
 The output charset.
 
-If you append the string *//TRANSLIT* to `out_charset` transliteration
+If you append the string *//TRANSLIT* to `to_encoding` transliteration
 is activated. This means that when a character can't be represented in
 the target charset, it can be approximated through one or several
 similarly looking characters. If you append the string *//IGNORE*,
@@ -651,9 +691,9 @@ return **`FALSE`**.
 If and how *//TRANSLIT* works exactly depends on the system's iconv()
 implementation (cf. **`ICONV_IMPL`**). Some implementations are known to
 ignore *//TRANSLIT*, so the conversion is likely to fail for characters
-which are illegal for the `out_charset`.
+which are illegal for the `to_encoding`.
 
-`str`  
+`string`  
 The string to be converted.
 
 ### Return Values

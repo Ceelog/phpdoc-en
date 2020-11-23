@@ -64,6 +64,7 @@ Language Reference
     -   [break](/control-structures/break.html)
     -   [continue](/control-structures/continue.html)
     -   [switch](/control-structures/switch.html)
+    -   [match](/control-structures/match.html)
     -   [declare](/control-structures/declare.html)
     -   [return](/function/return.html)
     -   [require](/function/require.html)
@@ -184,6 +185,8 @@ Language Reference
     -   [ParseError](/class/parseerror.html) — ParseError
     -   [TypeError](/class/typeerror.html) — TypeError
     -   [ValueError](/class/valueerror.html) — ValueError
+    -   [UnhandledMatchError](/class/unhandledmatcherror.html) —
+        UnhandledMatchError
 -   [Predefined Interfaces and Classes](/reserved/interfaces.html)
     -   [Traversable](/class/traversable.html) — The Traversable
         interface
