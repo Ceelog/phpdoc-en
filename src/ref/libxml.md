@@ -163,7 +163,8 @@ Retrieve last error from libxml
 
 ### Description
 
-<span class="type">LibXMLError</span> <span
+<span class="type"><span class="type">LibXMLError</span><span
+class="type">false</span></span> <span
 class="methodname">libxml\_get\_last\_error</span> ( <span
 class="methodparam">void</span> )
 
@@ -188,7 +189,8 @@ Changes the default external entity loader
 
 <span class="type">bool</span> <span
 class="methodname">libxml\_set\_external\_entity\_loader</span> ( <span
-class="methodparam"><span class="type">callable</span>
+class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">null</span></span>
 `$resolver_function`</span> )
 
 Changes the default external entity loader.
@@ -265,14 +267,14 @@ Set the streams context for the next libxml document load or write
 
 <span class="type">void</span> <span
 class="methodname">libxml\_set\_streams\_context</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$streams_context`</span> )
+class="methodparam"><span class="type">resource</span> `$context`</span>
+)
 
 Sets the streams context for the next libxml document load or write.
 
 ### Parameters
 
-`streams_context`  
+`context`  
 The stream context resource (created with <span
 class="function">stream\_context\_create</span>)
 
@@ -317,8 +319,9 @@ needed
 
 <span class="type">bool</span> <span
 class="methodname">libxml\_use\_internal\_errors</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$use_errors`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">null</span></span>
+`$use_errors`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">libxml\_use\_internal\_errors</span> allows you
 to disable standard libxml errors and enable user error handling.
@@ -332,6 +335,12 @@ error handling. Disabling will also clear any existing libxml errors.
 ### Return Values
 
 This function returns the previous value of `use_errors`.
+
+### Changelog
+
+| Version | Description                                                            |
+|---------|------------------------------------------------------------------------|
+| 8.0.0   | `use_errors` is nullable now. Previously, its default was **`FALSE`**. |
 
 ### Examples
 

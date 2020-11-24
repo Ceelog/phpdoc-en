@@ -73,10 +73,7 @@ Oracle OCI8
         Frees all resources associated with statement or cursor
     -   [oci\_get\_implicit\_resultset](/book/oci8.html#oci_get_implicit_resultset)
         — Returns the next child statement resource from a parent
-        statement resource that has Oracle Database 12c Implicit Result
-        Sets
-    -   [oci\_internal\_debug](/book/oci8.html#oci_internal_debug) —
-        Enables or disables internal debug output
+        statement resource that has Oracle Database Implicit Result Sets
     -   [oci\_lob\_copy](/book/oci8.html#oci_lob_copy) — Copies large
         object
     -   [oci\_lob\_is\_equal](/book/oci8.html#oci_lob_is_equal) —
@@ -195,25 +192,27 @@ Oracle OCI8
         Alias of OCI-Lob::export
 -   [OCI8 Obsolete Aliases and
     Functions](/book/oci8.html#OCI8%20Obsolete%20Aliases%20and%20Functions)
+    -   [oci\_internal\_debug](/book/oci8.html#oci_internal_debug) —
+        Enables or disables internal debug output
     -   [ocibindbyname](/book/oci8.html#ocibindbyname) — Alias of
         oci\_bind\_by\_name
     -   [ocicancel](/book/oci8.html#ocicancel) — Alias of oci\_cancel
     -   [ocicloselob](/book/oci8.html#ocicloselob) — Alias of
         OCI-Lob::close
     -   [ocicollappend](/book/oci8.html#ocicollappend) — Alias of
-        OCI-Collection::append
+        OCICollection::append
     -   [ocicollassign](/book/oci8.html#ocicollassign) — Alias of
-        OCI-Collection::assign
+        OCICollection::assign
     -   [ocicollassignelem](/book/oci8.html#ocicollassignelem) — Alias
-        of OCI-Collection::assignElem
+        of OCICollection::assignElem
     -   [ocicollgetelem](/book/oci8.html#ocicollgetelem) — Alias of
-        OCI-Collection::getElem
+        OCICollection::getElem
     -   [ocicollmax](/book/oci8.html#ocicollmax) — Alias of
-        OCI-Collection::max
+        OCICollection::max
     -   [ocicollsize](/book/oci8.html#ocicollsize) — Alias of
-        OCI-Collection::size
+        OCICollection::size
     -   [ocicolltrim](/book/oci8.html#ocicolltrim) — Alias of
-        OCI-Collection::trim
+        OCICollection::trim
     -   [ocicolumnisnull](/book/oci8.html#ocicolumnisnull) — Alias of
         oci\_field\_is\_null
     -   [ocicolumnname](/book/oci8.html#ocicolumnname) — Alias of
@@ -240,7 +239,7 @@ Oracle OCI8
     -   [ocifetchstatement](/book/oci8.html#ocifetchstatement) — Alias
         of oci\_fetch\_all
     -   [ocifreecollection](/book/oci8.html#ocifreecollection) — Alias
-        of OCI-Collection::free
+        of OCICollection::free
     -   [ocifreecursor](/book/oci8.html#ocifreecursor) — Alias of
         oci\_free\_statement
     -   [ocifreedesc](/book/oci8.html#ocifreedesc) — Alias of
@@ -285,12 +284,12 @@ Oracle OCI8
     -   [ociwritetemporarylob](/book/oci8.html#ociwritetemporarylob) —
         Alias of OCI-Lob::writeTemporary
 
-These functions allow you to access Oracle Database 19c, 18c, 12*c*,
-11*g*, 10*g*, 9*i* and 8*i*. They support SQL and PL/SQL statements.
-Basic features include transaction control, binding of PHP variables to
-Oracle placeholders, and support for large object (LOB) types and
-collections. Oracle's scalability features such as Database Resident
-Connection Pooling (DRCP) and result caching are also supported.
+These functions allow you to access Oracle Database. They support SQL
+and PL/SQL statements. Basic features include transaction control,
+binding of PHP variables to Oracle placeholders, and support for large
+object (LOB) types and collections. Oracle's scalability features such
+as Database Resident Connection Pooling (DRCP) and result caching are
+also supported.
 
 Installing/Configuring
 ======================
@@ -305,44 +304,34 @@ Installing/Configuring
 Requirements
 ------------
 
-The OCI8 1.4 extension is included with PHP 5.3, PHP 5.4 and PHP 5.5. It
-is also available from
-<a href="https://pecl.php.net/" class="link external">» PECL</a>. A
-newer OCI8 2.0 version is available only from
+OCI8 3.0 is included with PHP 8. It is also available from
+<a href="https://pecl.php.net/" class="link external">» PECL</a>. For
+PHP 7, use OCI8 2.2 from
 <a href="https://pecl.php.net/" class="link external">» PECL</a>. OCI8
-1.4 requires Oracle 12*c*, 11*g*, 10*g* or 9*i*R2 client libraries and
-will install on PHP 4.3.9 onwards. OCI8 2.0 requires Oracle 12*c*, 11*g*
-or 10*g* client libraries and will install on PHP 5.2 onwards.
+requires Oracle 10*g* or later Oracle client libraries.
 
 If the Oracle Database is on the same machine as PHP, the database
-software already contains the necessary libraries. When PHP is on a
-different machine, use the free
-<a href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index-4369172.html" class="link external">» Oracle Instant Client</a>
+software already contains the necessary libraries and header files. When
+PHP is on a different machine, use the free
+<a href="https://www.oracle.com/database/technologies/instant-client.html" class="link external">» Oracle Instant Client</a>
 libraries.
 
-To use Oracle Instant Client, install the *basic* or *basiclite* Oracle
-Instant Client ZIP file or RPM package. When building PHP from source
-code, also install the *sdk* ZIP file or *devel* RPM package.
+To use Oracle Instant Client, install the *Basic* or *Basic Light*
+Oracle Instant Client ZIP file, RPM package, or DMG package. When
+building OCI8 from source code, also install the Instant Client *SDK*.
 
 You must run PHP with the same, or a more recent, version of the Oracle
 libraries that OCI8 was built with.
 
-On Windows, the php\_oci8 DLL needs Oracle client libraries from version
-10*g*R2 or greater. In PHP 5.3 up to and including PHP 5.3.5, the
-php\_oci8\_11g DLL requires Oracle 11*g*R1 or greater client libraries.
-From PHP 5.3.6 the php\_oci8\_11g DLL requires Oracle 11*g*R2 or greater
-client libraries. The php\_oci8\_12c DLL from PECL requires Oracle
-12*c*R1 client libraries. With some versions of Instant Client you may
-additionally need `mfc71.dll` and `msvcr71.dll` libraries.
-
 > **Note**:
 >
-> If OCI8 uses 9*i*R2 client libraries, then PHP can connect to Oracle
-> Database 8*i*, 9*i*R2, 10*g* or 11*g*. If OCI8 uses 10*g*R2 client
-> libraries, the database can be 9*i*R2, 10*g*, 11*g* or 12*c*. If OCI8
-> uses 11*g* client libraries, the database can be 9*i*R2, 10*g*, 11*g*
-> or 12*c*. If OCI8 uses 12*c* client libraries, the database can be
-> 10*g*R2, 11*g* or 12*c*.
+> Oracle's standard client-server network interoperability allows
+> connections between different versions of Oracle Client and Oracle
+> Database. For certified configurations see Oracle Support's Doc ID
+> 207303.1. In summary, Oracle Client 19, 18 and 12.2 can connect to
+> Oracle Database 11.2 or greater. Oracle Client 12.1 can connect to
+> Oracle Database 10.2 or greater. Oracle Client 11.2 can connect to
+> Oracle Database 9.2 or greater.
 
 > **Note**:
 >
@@ -370,29 +359,89 @@ process starts.
 
 The PHP binary must link with the same, or more recent, major version of
 Oracle libraries as it was configured with. For example, if you build
-OCI8 with Oracle 11.2 libraries, then PHP should also be deployed and
-run with Oracle 11.2 libraries. PHP applications can connect to other
-versions of Oracle Database, since Oracle has client-server
-cross-version compatibility.
+OCI8 with Oracle 19 libraries, then PHP should also be deployed and run
+with Oracle 19 libraries. PHP applications can connect to other versions
+of Oracle Database, since Oracle has client-server cross-version
+compatibility.
+
+Installing OCI8 from PECL
+-------------------------
+
+The OCI8 extension can be added to an existing PHP installation by using
+<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>.
+
+For an automated install follow these steps:
+
+-   If you are behind a firewall, set PEAR's proxy, for example:
+
+        pear config-set http_proxy http://my-proxy.example.com:80/
+
+-   Run
+
+        pecl install oci8
+
+    For PHP 7, use *pecl install oci8-2.2.0*
+
+    When prompted, enter either the value of *$ORACLE\_HOME*, or
+    *instantclient,/path/to/instant/client/lib*.
+
+    Note: Do not enter the text *$ORACLE\_HOME* because it will not be
+    expanded. Instead, enter the actual path of the Oracle home
+    directory.
+
+For a manual install when the *pecl* command is not available, download
+the PECL OCI8 package, e.g. `oci8-3.0.0.tgz`.
+
+-   Extract the package:
+
+        tar -zxf oci8-3.0.0.tgz
+        cd oci8-3.0.0
+
+-   Prepare the package:
+
+        phpize
+
+-   Configure the package, either using *$ORACLE\_HOME* or Instant
+    Client
+
+        ./configure -with-oci8=shared,$ORACLE_HOME
+
+    or
+
+        ./configure -with-oci8=shared,instantclient,/path/to/instant/client/lib
+
+-   Install the package:
+
+        make install
+
+After either an automatic or manual install, edit your `php.ini` file
+and add the line:
+
+    extension=oci8.so
+
+Make sure the `php.ini` directive
+<a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
+is set to the directory that `oci8.so` was installed in.
 
 Installing OCI8 as a Shared Extension
 -------------------------------------
 
-The configuration *shared* option builds OCI8 as a shared library that
-can be dynamically loaded into PHP. Building a shared extension allows
-OCI8 to be upgraded easily without impacting the rest of PHP.
+If you are building PHP from source code, the configuration *shared*
+option can be used to build OCI8 as a shared library that can be
+dynamically loaded into PHP. Building a shared extension allows OCI8 to
+be upgraded easily without impacting the rest of PHP.
 
 Configure OCI8 using one of the following configure options.
 
 -   If using the free
-    <a href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index-4369172.html" class="link external">» Oracle Instant Client</a>
+    <a href="https://www.oracle.com/database/technologies/instant-client.html" class="link external">» Oracle Instant Client</a>
     libraries, then do:
 
         ./configure --with-oci8=shared,instantclient,/path/to/instant/client/lib
 
-    If Instant Client is installed from ZIP files, make sure to create
-    the library symbolic link first, for example *ln -s
-    libclntsh.so.12.1 libclntsh.so*.
+    If Instant Client 12.2 (or earlier) is installed from ZIP files,
+    make sure to create the library symbolic link first, for example *ln
+    -s libclntsh.so.12.1 libclntsh.so*.
 
     If using an RPM-based installation of Oracle Instant Client, the
     configure line will look like this:
@@ -400,7 +449,7 @@ Configure OCI8 using one of the following configure options.
         ./configure --with-oci8=shared,instantclient,/usr/lib/oracle/<version>/client/lib
 
     For example,
-    **--with-oci8=shared,instantclient,/usr/lib/oracle/12.1/client/lib**
+    **--with-oci8=shared,instantclient,/usr/lib/oracle/19.9/client/lib**
 
     Note that Oracle Instant Client support first appeared in PHP 4.3.11
     and 5.0.4 and originally used the option
@@ -431,7 +480,8 @@ To complete installation of OCI8, edit `php.ini` and add the line:
 Installing OCI8 as a Statically Compiled Extension
 --------------------------------------------------
 
-Configure PHP to include OCI8 using one of the following configure
+If you are building PHP from source code, you can configure PHP to
+include OCI8 as a static extension using one of the following configure
 options.
 
 -   If using Oracle Instant Client, then do:
@@ -447,73 +497,12 @@ After configuration, follow the usual PHP building procedure, e.g. *make
 install*. After successful compilation, you do not need to add `oci8.so`
 to `php.ini`. No additional build steps are required.
 
-Installing OCI8 from PECL
--------------------------
-
-The OCI8 extension can be added to an existing PHP installation either
-automatically or manually from
-<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>.
-
-For an automated install follow these steps:
-
--   If you are behind a firewall, set PEAR's proxy, for example:
-
-        pear config-set http_proxy http://my-proxy.example.com:80/
-
--   Run
-
-        pecl install oci8
-
-    When prompted, enter either the value of *$ORACLE\_HOME*, or
-    *instantclient,/path/to/instant/client/lib*.
-
-    Note: Do not enter the variable *$ORACLE\_HOME* because it will not
-    be expanded. Instead, enter the actual path of the Oracle home
-    directory.
-
-For a manual install when the *pecl* command is not available, download
-the PECL OCI8 package, e.g. `oci8-1.4.10.tgz`.
-
--   Extract the package:
-
-        tar -zxf oci8-1.4.10.tgz
-        cd oci8-1.4.10
-
--   Prepare the package:
-
-        phpize
-
--   Configure the package, either using *$ORACLE\_HOME* or Instant
-    Client
-
-        ./configure -with-oci8=shared,$ORACLE_HOME
-
-    or
-
-        ./configure -with-oci8=shared,instantclient,/path/to/instant/client/lib
-
--   Install the package:
-
-        make install
-
-After either an automatic or manual install, edit your `php.ini` file
-and add the line:
-
-    extension=oci8.so
-
-Make sure the `php.ini` directive
-<a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
-is set to the directory that `oci8.so` was installed in.
-
 Installing OCI8 on Windows
 --------------------------
 
-When using Oracle 10*g*R2 client libraries on Windows, uncomment the
-`php.ini` line *extension=php\_oci8.dll*. When using Oracle 11*g*R2 or
-later client libraries, uncomment *extension=php\_oci8\_11g.dll* or
-*extension=php\_oci8.dll*. With Oracle 12*c* libraries use
-*extension=php\_oci8\_12c.dll* or *extension=php\_oci8\_11g.dll* or
-*extension=php\_oci8.dll*. Only one of these DLLs may be enabled at a
+With Oracle 12*c* (or later) libraries, uncomment one of the `php.ini`
+lines *extension=php\_oci8\_12c.dll* or *extension=php\_oci8\_11g.dll*
+or *extension=php\_oci8.dll*. Only one of these DLLs may be enabled at a
 time. DLLs with higher versions may contain more functionality. Not all
 DLLs may be available for all versions of PHP. Make sure
 <a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
@@ -554,14 +543,14 @@ The variables that might be needed are included in the following table.
 Refer to the Oracle documentation for more information on all the
 available variables.
 
-| Name              | Purpose                                                                                                                                                                                                                                                                                                                                                                                                 |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ORACLE\_HOME      | Contains the directory of the full Oracle Database software. Do not set this when using Oracle Instant Client as it is unnecessary and may cause installation problems.                                                                                                                                                                                                                                 |
-| ORACLE\_SID       | Contains the name of the database on the local machine to be connected to. There is no need to set this if you using Oracle Instant Client, or always pass the connection parameter to <span class="function">oci\_connect</span>.                                                                                                                                                                      |
-| LD\_LIBRARY\_PATH | Set this (or its platform equivalent, such as *DYLD\_LIBRARY\_PATH*, *LIBPATH*, or *SHLIB\_PATH*) to the location of the Oracle libraries, for example `$ORACLE_HOME/lib` or `/usr/lib/oracle/11.1/client/lib`. This variable is not needed if the libraries are located by a different search mechanism, such as with `ldconfig` or with *LD\_PRELOAD*.                                                |
-| NLS\_LANG         | This is the primary variable for setting the character set and globalization information used by the Oracle libraries.                                                                                                                                                                                                                                                                                  |
-| ORA\_SDTZ         | Sets the Oracle session timezone.                                                                                                                                                                                                                                                                                                                                                                       |
-| TNS\_ADMIN        | Contains the directory where the Oracle Net Services configuration files such as `tnsnames.ora` and `sqlnet.ora` are kept. Not needed if the <span class="function">oci\_connect</span> connection string uses the Easy Connect naming syntax such as *localhost/XE*. Not needed if the network configuration files are in one of the default locations such as `$ORACLE_HOME/network/admin` or `/etc`. |
+| Name              | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ORACLE\_HOME      | Contains the directory of the full Oracle Database software. Do not set this when using Oracle Instant Client as it is unnecessary and may cause installation problems.                                                                                                                                                                                                                                                                                                                     |
+| ORACLE\_SID       | Contains the name of the database on the local machine to be connected to. There is no need to set this if you using Oracle Instant Client, or always pass the connection parameter to <span class="function">oci\_connect</span>.                                                                                                                                                                                                                                                          |
+| LD\_LIBRARY\_PATH | Set this (or its platform equivalent, such as *LIBPATH*, or *SHLIB\_PATH*) to the location of the Oracle libraries, for example `$ORACLE_HOME/lib` or `/usr/lib/oracle/18.5/client/lib`. Note with Instant Client 19 ZIP files on Linux it is more reliable to use `ldconfig` instead, see the Instant Client installation instructions. With Instant Client 19 (or later) RPM files, *ldconfig* is automatically run for you. Some users use *LD\_PRELOAD* instead of *LD\_LIBRARY\_PATH*. |
+| NLS\_LANG         | This is the primary variable for setting the character set and globalization information used by the Oracle libraries.                                                                                                                                                                                                                                                                                                                                                                      |
+| ORA\_SDTZ         | Sets the Oracle session timezone.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
+| TNS\_ADMIN        | Contains the directory where the Oracle Net Services configuration files such as `tnsnames.ora` and `sqlnet.ora` are kept. Not needed if the <span class="function">oci\_connect</span> connection string uses the Easy Connect naming syntax such as *localhost/XE*. Not needed if the network configuration files are in one of the default locations such as `/usr/lib/oracle/VERSION/client/lib/network/admin`, `$ORACLE_HOME/network/admin` or `/etc`.                                 |
 
 Less frequently used Oracle environment variables include *TWO\_TASK*,
 *ORA\_TZFILE*, and the various Oracle globalization settings like
@@ -641,18 +630,14 @@ variables, for example:
 Note in some shells these variables are not propagated correctly to the
 PHP process and tests will fail to connect if this method is used.
 
-Next, set any necessary environment for the Oracle database. With Oracle
-10*g*R2 XE do:
+Next, set any necessary environment for the Oracle database. If you are
+running PHP on the same machines as Oracle Database, you can run:
 
-        $ . /usr/lib/oracle/xe/app/oracle/product/10.2.0/server/bin/oracle_env.sh
+        $ . /usr/local/bin/oraenv
 
 With Oracle 11*g*R2 XE do:
 
         $ . /u01/app/oracle/product/11.2.0/xe/bin/oracle_env.sh
-
-For other versions of the Oracle database do:
-
-        $ . /usr/local/bin/oraenv
 
 Some shells require that `php.ini` has *E* in the variables\_order
 parameter, for example:
@@ -715,23 +700,24 @@ The behaviour of these functions is affected by settings in `php.ini`.
 Here's a short explanation of the configuration directives.
 
 `oci8.connection_class` <span class="type">string</span>  
-This user defined text is used by Oracle 11*g* Database Resident
-Connection Pooling (DRCP) connections to sub-partition the connection
-pool. It allows OCI8 persistent connections from an application to reuse
-database sessions from a previous PHP script, giving better scalability.
-When an application uses a database pooled process previously used with
-a different connection class, the session settings such as the default
-Oracle date format are reset. This prevents accidental sharing of
-information between different applications.
+This user defined text should always be set when using Oracle Database
+Resident Connection Pooling (DRCP). It allows sub-partitioning of the
+DRCP connection pool, allowing OCI8 persistent connections from an
+application to reuse database sessions from a previous PHP script,
+giving better scalability. When an application uses a database pooled
+process previously used with a different connection class, the session
+settings such as the default Oracle date format are reset. This prevents
+accidental sharing of information between different applications.
 
 The value can be set at runtime with <span
 class="function">ini\_set</span> prior to connecting.
 
-To use DRCP, OCI8 must be linked with Oracle 11*g* libraries and the
-database must be Oracle 11*g*. The connection pool must be enabled in
-the database, the *oci8.connection\_class* should be set to the same
-string for all web servers running the same application, and the OCI8
-connection string must specify to use a pooled server.
+To use DRCP, OCI8 must be linked with Oracle 11*g* (or later) libraries
+and the database must be Oracle 11*g* (or later). The DRCP connection
+pool must be enabled in the database, the *oci8.connection\_class*
+should be set to the same string for all web servers running the same
+application, and the OCI8 connection string must specify to use a pooled
+server. The application should use persistent connections.
 
 `oci8.default_prefetch` <span class="type">int</span>  
 This option sets the default number of extra rows that will be fetched
@@ -751,9 +737,9 @@ to *100*.
 In PHP 5.3.2 (PECL OCI8 1.4) the minimum value settable was reduced from
 *1* to *0*, allowing prefetching to be turned off.
 
-When using Oracle Database 12*c* or later, the prefetch value set by PHP
-can be overridden by Oracle's client *oraaccess.xml* configuration file.
-Refer to Oracle documentation for more detail.
+When using Oracle Database 12*c* (or later), the prefetch value set by
+PHP can be overridden by Oracle's client *oraaccess.xml* configuration
+file. Refer to Oracle documentation for more detail.
 
 > **Note**: <span class="simpara"> A larger prefetch can result in
 > improved performance, at the cost of some increased memory usage. For
@@ -854,9 +840,9 @@ flushed from the cache before they are reused.
 
 This option is of most use with persistent connections.
 
-When using Oracle Database 12*c*, this value can be overridden and
-automatically tuned by Oracle's client *oraaccess.xml* file. Refer to
-Oracle documentation for more detail.
+When using Oracle Database 12*c* (or later), this value can be
+overridden and automatically tuned by Oracle's client *oraaccess.xml*
+file. Refer to Oracle documentation for more detail.
 
 Predefined Constants
 ====================
@@ -1264,7 +1250,7 @@ of connections that can be re-used across different script requests.
 This means that the connection overhead will typically only occur once
 per PHP process (or Apache child).
 
-If the application connects to Oracle using a different set of
+If the application connects to Oracle using a different set of database
 credentials for each web user, the persistent cache employed by <span
 class="function">oci\_pconnect</span> will become less useful as the
 number of concurrent users increases, to the point where it may start to
@@ -1298,7 +1284,7 @@ class="function">oci\_new\_connect</span>.
 The <span class="function">oci\_pconnect</span> cache is cleared and any
 database connections closed when the PHP process terminates, so
 effective use of persistent connections requires that PHP be an Apache
-module or used with FCGI, or similar. Persistent connections will not
+module or used with FPM, or similar. Persistent connections will not
 have any benefits over <span class="function">oci\_connect</span> when
 PHP is used with CGI or via the command-line.
 
@@ -1307,6 +1293,22 @@ creates a new connection to the Oracle server, regardless of what other
 connections might already exist. High traffic web applications should
 avoid using <span class="function">oci\_new\_connect</span>, especially
 in the busiest sections of the application.
+
+From OCI8 1.3, persistent connections can be closed by the user,
+allowing greater control over connection resource usage. Persistent
+connections will now also be closed automatically when there is no PHP
+variable referencing them, such as at the end of scope of a PHP user
+function. This will rollback any uncommitted transaction. These changes
+to persistent connections make them behave similarly to non-persistent
+connections, simplifying the interface, allowing for greater application
+consistency and predictability. Use
+<a href="/book/oci8.html#" class="link">oci8.old_oci_close_semantics</a>
+set to *On* to retain the historical behavior.
+
+The automatic re-establishment of PHP persistent connections after an
+Apache or FPM process respawns means Oracle Database *LOGON* triggers
+are only recommended for setting session attributes and not for
+per-application user connection requests.
 
 DRCP Connection Pooling
 -----------------------
@@ -1330,13 +1332,13 @@ and the version of the Oracle Database must both be 11g or greater.
 
 Documentation on DRCP is found in several Oracle manuals. For example,
 see
-<a href="https://docs.oracle.com/cd/B28359_01/server.111/b28310/manproc004.htm" class="link external">» Configuring Database Resident Connection Pooling</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-82FF6896-F57E-41CF-89F7-755F3BC9C924" class="link external">» Configuring Database Resident Connection Pooling</a>
 in the Oracle documentation for usage information. A
-<a href="http://www.oracle.com/technetwork/topics/php/whatsnew/php-scalability-ha-twp-128842.pdf" class="link external">» DRCP white paper</a>
+<a href="https://www.oracle.com/technetwork/topics/php/whatsnew/php-scalability-ha-twp-128842.pdf" class="link external">» DRCP white paper</a>
 contains background information on DRCP.
 
-To use DRCP, build PHP with the OCI8 1.3 (or later) extension and Oracle
-11g (or later) libraries and then follow these steps:
+To use DRCP, install the OCI8 1.3 (or later) extension and Oracle 11g
+(or later) libraries and then follow these steps:
 
 -   As a privileged database administrator, use a program like SQL\*Plus
     to start the connection pool in the database:
@@ -1376,67 +1378,17 @@ To use DRCP, build PHP with the OCI8 1.3 (or later) extension and Oracle
 
 > **Note**:
 >
-> Applications using Oracle 10g that require the performance of
-> persistent connections can reduce the amount of database server memory
-> needed by using Oracle *Shared* servers (previously known as Multi
-> Threaded Servers). Refer to Oracle documentation for information.
+> Applications using Oracle Client libraries 10g that require the
+> performance of persistent connections can reduce the amount of
+> database server memory needed by using Oracle *Shared* servers
+> (previously known as Multi Threaded Servers). Refer to Oracle
+> documentation for information.
 
-DRCP Recommendations and Known Limitations
-------------------------------------------
-
-Changing a password over DRCP connections will fail with the error
-*ORA-56609: Usage not supported with DRCP*. This is a documented
-restriction of Oracle Database 11g.
-
-From OCI8 1.3, persistent connections can be closed by the user,
-allowing greater control over connection resource usage. Persistent
-connections will now also be closed automatically when there is no PHP
-variable referencing them, such as at the end of scope of a PHP user
-function. This will rollback any uncommitted transaction. These changes
-to persistent connections make them behave similarly to non-persistent
-connections, simplifying the interface, allowing for greater application
-consistency and predictability. Use
-<a href="/book/oci8.html#" class="link">oci8.old_oci_close_semantics</a>
-set to *On* to retain the historical behavior.
-
-If the Oracle Database is version 11.1.0.6, then the Oracle database
-patch for Oracle bug 6474441 must be applied to use DRCP. Without this
-patch, errors such as *ORA-01000: maximum open cursors exceeded*,
-*ORA-01001 invalid cursor* or *ORA-01002 fetch out of sequence* may
-occur. This bug was fixed in Oracle 11.1.0.7 onwards.
-
-If the Oracle 11.1.0.6 database patch cannot be applied, one of the
-following three workarounds can be used instead:
-
--   <span class="simpara"> Connect using Oracle *Dedicated* or *Shared*
-    servers instead of DRCP. </span>
--   <span class="simpara"> Set PHP's
-    <a href="/book/oci8.html#" class="link">oci8.statement_cache_size</a>
-    to 0. </span>
--   <span class="simpara"> Set an event in the database initialization
-    parameter file: *event="56699 trace name context forever, level
-    128"*. </span>
-
-Oracle Database 11.1.0.7 and the Oracle Database 11.1.0.6 patch for
-Oracle bug 6474441 allow PHP applications with DRCP connection to use a
-database *LOGON* trigger to set session properties at the time of
-session creation. Examples of such settings are the NLS language and the
-date format.
-
-If the Oracle 11.1.0.6 database patch cannot be applied, one of the
-following workarounds can be used instead of using *LOGON* triggers:
-
--   <span class="simpara"> After logon, explicitly set the session
-    properties using PHP application code. </span>
--   <span class="simpara"> Connect using Oracle *Dedicated* or *Shared*
-    servers instead of DRCP. </span>
-
-The automatic re-establishment of PHP persistent connections after an
-Apache or FCGI process respawns means *LOGON* triggers in PHP are only
-recommended for setting session attributes and not for per-application
-user connection requests. This is even more so with DRCP due to the
-automatic pool sizing and with the way *LOGON* triggers fire with DRCP
-authentication.
+> **Note**:
+>
+> Changing a password over DRCP connections will fail with the error
+> *ORA-56609: Usage not supported with DRCP*. This is a documented
+> restriction of Oracle Database 11g.
 
 OCI8 Fast Application Notification (FAN) Support
 ================================================
@@ -1502,10 +1454,10 @@ or network failure.
 In a configured Oracle Database system, TAF occurs when the PHP
 application detects that the database instance is down or unreachable.
 It establishes a connection to another node in an Oracle
-<a href="http://docs.oracle.com/database/122/RACAD/ensuring-application-continuity.htm#RACAD-GUID-DEF850F6-27E9-428E-B8FC-530230D78AD2" class="link external">» RAC</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-DEF850F6-27E9-428E-B8FC-530230D78AD2" class="link external">» RAC</a>
 configuration, a hot standby database, or the same database instance
 itself. See
-<a href="http://docs.oracle.com/database/122/LNOCI/oci-programming-advanced-topics.htm#LNOCI16675" class="link external">» Oracle Call Interface Programmer's Guide</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-F7817CD2-4A2C-4D37-BD36-56DBABD4725F" class="link external">» Oracle Call Interface Programmer's Guide</a>
 for more information about OCI TAF.
 
 An application callback can be registered with <span
@@ -1534,7 +1486,7 @@ precedence.
 Configure TAF in PHP OCI8 (the client side) by including the
 FAILOVER\_MODE parameter in the CONNECT\_DATA portion of a connect
 descriptor. See Configuring Transparent Application Failover in
-<a href="http://docs.oracle.com/database/122/NETAG/enabling-advanced-features.htm#NETAG338" class="link external">»  Oracle Database Net Services Administrator's Guide</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-8F532535-C401-4B51-BE0B-04FD74BB0621" class="link external">»  Oracle Database Net Services Administrator's Guide</a>
 for more information about client side configuration of TAF.
 
 An example tnsnames.ora to configure TAF reconnecting to the same
@@ -1554,9 +1506,9 @@ database instance:
 
 Alternatively configure TAF on the database side by modifying the target
 service with
-<a href="http://docs.oracle.com/database/122/RACAD/workload-management-with-dynamic-database-services.htm#RACAD076" class="link external">» srvctl</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-8DC4D5E0-CA9D-47BC-BAD0-8769405AFEC5" class="link external">» srvctl</a>
 (for RAC) or the
-<a href="http://docs.oracle.com/database/122/ARPLS/DBMS_SERVICE.htm#ARPLS092" class="link external">»  DBMS_SERVICE.MODIFY_SERVICE</a>
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-C11449DC-EEDE-4BB8-9D2C-0A45198C1928" class="link external">»  DBMS_SERVICE.MODIFY_SERVICE</a>
 packaged procedure (for single instance databases).
 
 Using TAF Callbacks in OCI8
@@ -1758,7 +1710,7 @@ extension by adding:
 
     extension=oci8.so
 
-If you install PHP OCI8 2.0 from PECL using `phpize` and `configure`
+If you install PHP OCI8 from PECL using `phpize` and `configure`
 (instead of `pecl`), you will still need to set *PHP\_DTRACE=yes*. This
 is because the *--enable-dtrace* option will be ignored by the limited
 `configure` script of a PECL bundle.
@@ -2838,7 +2790,7 @@ example**
 
 ``` php
 <?php
-    echo "Client Version: " . oci_client_version(); // Client version: 11.2.0.2
+    echo "Client Version: " . oci_client_version(); // Client version: 19.9.0.0.0
 ?>
 ```
 
@@ -3153,7 +3105,9 @@ class="methodparam"><span class="type">int</span> `$session_mode`</span>
 
 Returns a connection identifier needed for most other OCI8 operations.
 
-See
+For performance, most applications should use persistent connections
+with <span class="function">oci\_pconnect</span> instead of <span
+class="function">oci\_connect</span>. See
 <a href="/book/oci8.html#OCI8%20Connection%20Handling%20and%20Connection%20Pooling" class="link">Connection Handling</a>
 for general information on connection management and connection pooling.
 
@@ -3178,7 +3132,7 @@ The password for `username`.
 
 `connection_string`  
 Contains the *Oracle instance* to connect to. It can be an
-<a href="https://docs.oracle.com/database/121/NETAG/naming.htm" class="link external">» Easy Connect string</a>,
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-E5358DEA-D619-4B7B-A799-3D2F802500F1" class="link external">» Easy Connect string</a>,
 or a Connect Name from the `tnsnames.ora` file, or the name of a local
 Oracle instance.
 
@@ -3191,13 +3145,16 @@ To use the Easy Connect naming method, PHP must be linked with Oracle
 10*g* is of the form: *\[//\]host\_name\[:port\]\[/service\_name\]*.
 From Oracle 11*g*, the syntax is:
 *\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*.
-Service names can be found by running the Oracle utility *lsnrctl
-status* on the database server machine.
+Futher options were introduced with Oracle 19c, including timeout and
+keep-alive settings. Refer to Oracle documentation. Service names can be
+found by running the Oracle utility *lsnrctl status* on the database
+server machine.
 
 The `tnsnames.ora` file can be in the Oracle Net search path, which
-includes `$ORACLE_HOME/network/admin` and `/etc`. Alternatively set
-*TNS\_ADMIN* so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the
-web daemon has read access to the file.
+includes `/your/path/to/instantclient/network/admin`,
+`$ORACLE_HOME/network/admin` and `/etc`. Alternatively set *TNS\_ADMIN*
+so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the web daemon has
+read access to the file.
 
 `character_set`  
 Determines the character set used by the Oracle Client libraries. The
@@ -3432,7 +3389,7 @@ echo "c2 is $c2<br>\n";
 //    c2 ----selecting
 //    c2 ----done
 //    Dropped table
-//    c1 is 
+//    c1 is
 //    c2 is Resource id #5
 
 ?>
@@ -4242,8 +4199,8 @@ typically called in a loop until it returns **`FALSE`**, indicating no
 more rows exist.
 
 If `statement` corresponds to a PL/SQL block returning Oracle Database
-12c Implicit Result Sets, then rows from all sets are consecutively
-fetched. If `statement` is returned by <span
+Implicit Result Sets, then rows from all sets are consecutively fetched.
+If `statement` is returned by <span
 class="function">oci\_get\_implicit\_resultset</span>, then only the
 subset of rows for one child query are returned.
 
@@ -4714,7 +4671,7 @@ oci_close($conn);
 ```
 
 **Example \#11 <span class="function">oci\_fetch\_array</span> with
-Oracle Database 12*c* Implicit Result Sets**
+Oracle Database Implicit Result Sets**
 
 ``` php
 <?php
@@ -4725,7 +4682,7 @@ if (!$conn) {
     trigger_error(htmlentities($e['message'], ENT_QUOTES), E_USER_ERROR);
 }
 
-// Requires OCI8 2.0 and Oracle Database 12c
+// Requires OCI8 2.0 (or later) and Oracle Database 12c (or later)
 // Also see oci_get_implicit_resultset()
 $sql = 'DECLARE
            c1 SYS_REFCURSOR;
@@ -5223,8 +5180,8 @@ oci_close($conn);
 
 > **Note**:
 >
-> Will not return rows from Oracle Database 12*c* Implicit Result Sets.
-> Use <span class="function">oci\_fetch\_array</span> instead.
+> Will not return rows from Oracle Database Implicit Result Sets. Use
+> <span class="function">oci\_fetch\_array</span> instead.
 
 ### See Also
 
@@ -5873,11 +5830,11 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 > **Note**:
 >
 > This function is commonly used as a method
-> <a href="/book/oci8.html#OCI-Lob::free" class="link">OCI-LOB::free</a>.
+> <a href="/book/oci8.html#OCI-Lob::free" class="link">OCILOB::free</a>.
 
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::free" class="link">OCI-LOB::free</a>
+-   <a href="/book/oci8.html#OCI-Lob::free" class="link">OCILOB::free</a>
 
 oci\_free\_statement
 ====================
@@ -5908,7 +5865,7 @@ oci\_get\_implicit\_resultset
 =============================
 
 Returns the next child statement resource from a parent statement
-resource that has Oracle Database 12c Implicit Result Sets
+resource that has Oracle Database Implicit Result Sets
 
 ### Description
 
@@ -5919,8 +5876,9 @@ class="methodparam"><span class="type">resource</span>
 
 Used to fetch consectutive sets of query results after the execution of
 a stored or anonymous Oracle PL/SQL block where that block returns query
-results with Oracle's *DBMS\_SQL.RETURN\_RESULT* PL/SQL function. This
-allows PL/SQL blocks to easily return query results.
+results with the Oracle Database 12 (or later)
+*DBMS\_SQL.RETURN\_RESULT* PL/SQL function. This allows PL/SQL blocks to
+easily return query results.
 
 The child statement can be used with any of the OCI8 fetching functions:
 <span class="function">oci\_fetch</span>, <span
@@ -6166,39 +6124,6 @@ oci_close($conn);
 > <a href="/book/oci8.html#" class="link">oci8.default_prefetch</a> or
 > using <span class="function">oci\_set\_prefetch</span>.
 
-oci\_internal\_debug
-====================
-
-Enables or disables internal debug output
-
-### Description
-
-<span class="type">void</span> <span
-class="methodname">oci\_internal\_debug</span> ( <span
-class="methodparam"><span class="type">bool</span> `$onoff`</span> )
-
-Enables or disables internal debug output.
-
-### Parameters
-
-`onoff`  
-Set this to **`FALSE`** to turn debug output off or **`TRUE`** to turn
-it on.
-
-### Return Values
-
-No value is returned.
-
-### Notes
-
-> **Note**:
->
-> In PHP versions before 5.0.0 you must use <span
-> class="function">ociinternaldebug</span> instead. This name still can
-> be used, it was left as alias of <span
-> class="function">oci\_internal\_debug</span> for downwards
-> compatability. This, however, is deprecated and not recommended.
-
 oci\_lob\_copy
 ==============
 
@@ -6208,8 +6133,8 @@ Copies large object
 
 <span class="type">bool</span> <span
 class="methodname">oci\_lob\_copy</span> ( <span
-class="methodparam"><span class="type">OCI-Lob</span> `$lob_to`</span> ,
-<span class="methodparam"><span class="type">OCI-Lob</span>
+class="methodparam"><span class="type">OCILob</span> `$lob_to`</span> ,
+<span class="methodparam"><span class="type">OCILob</span>
 `$lob_from`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`<span class="initializer"> =
 0</span></span> \] )
@@ -6218,7 +6143,7 @@ Copies a large object or a part of a large object to another large
 object. Old LOB-recipient data will be overwritten.
 
 If you need to copy a particular part of a LOB to a particular position
-of a LOB, use <span class="function">OCI-Lob::seek</span> to move LOB
+of a LOB, use <span class="function">OCILob::seek</span> to move LOB
 internal pointers.
 
 ### Parameters
@@ -6235,6 +6160,13 @@ Indicates the length of data to be copied.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Notes
+
+> **Note**:
+>
+> The OCILob class was called OCI-Lob prior to PHP 8 and PECL OCI8
+> 3.0.0.
 
 oci\_lob\_is\_equal
 ===================
@@ -6263,6 +6195,13 @@ A LOB identifier.
 
 Returns **`TRUE`** if these objects are equal, **`FALSE`** otherwise.
 
+### Notes
+
+> **Note**:
+>
+> The OCILob class was called OCI-Lob prior to PHP 8 and PECL OCI8
+> 3.0.0.
+
 oci\_new\_collection
 ====================
 
@@ -6270,7 +6209,7 @@ Allocates new collection object
 
 ### Description
 
-<span class="type">OCI-Collection</span> <span
+<span class="type">OCICollection</span> <span
 class="methodname">oci\_new\_collection</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -6300,6 +6239,11 @@ Returns a new <span class="classname">OCICollection</span> object or
 **`FALSE`** on error.
 
 ### Notes
+
+> **Note**:
+>
+> The OCICollection class was called OCI-Collection prior to PHP 8 and
+> OCI8 3.0.0.
 
 > **Note**:
 >
@@ -6345,7 +6289,7 @@ The password for `username`.
 
 `connection_string`  
 Contains the *Oracle instance* to connect to. It can be an
-<a href="https://docs.oracle.com/database/121/NETAG/naming.htm" class="link external">» Easy Connect string</a>,
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-E5358DEA-D619-4B7B-A799-3D2F802500F1" class="link external">» Easy Connect string</a>,
 or a Connect Name from the `tnsnames.ora` file, or the name of a local
 Oracle instance.
 
@@ -6358,13 +6302,16 @@ To use the Easy Connect naming method, PHP must be linked with Oracle
 10*g* is of the form: *\[//\]host\_name\[:port\]\[/service\_name\]*.
 From Oracle 11*g*, the syntax is:
 *\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*.
-Service names can be found by running the Oracle utility *lsnrctl
-status* on the database server machine.
+Futher options were introduced with Oracle 19c, including timeout and
+keep-alive settings. Refer to Oracle documentation. Service names can be
+found by running the Oracle utility *lsnrctl status* on the database
+server machine.
 
 The `tnsnames.ora` file can be in the Oracle Net search path, which
-includes `$ORACLE_HOME/network/admin` and `/etc`. Alternatively set
-*TNS\_ADMIN* so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the
-web daemon has read access to the file.
+includes `/your/path/to/instantclient/network/admin`,
+`$ORACLE_HOME/network/admin` and `/etc`. Alternatively set *TNS\_ADMIN*
+so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the web daemon has
+read access to the file.
 
 `character_set`  
 Determines the character set used by the Oracle Client libraries. The
@@ -7106,9 +7053,8 @@ Creates a persistent connection to an Oracle server and logs on.
 Persistent connections are cached and re-used between requests,
 resulting in reduced overhead on each page load; a typical PHP
 application will have a single persistent connection open against an
-Oracle server per Apache child process (or PHP FastCGI/CGI process). See
-the
-<a href="/features/persistent-connections.html" class="link">Persistent Database Connections</a>
+Oracle server per Apache child process (or PHP FPM process). See the
+<a href="/book/oci8.html#OCI8%20Connection%20Handling%20and%20Connection%20Pooling" class="link">OCI8 Connection Handling and Connection Pooling</a>
 section for more information.
 
 ### Parameters
@@ -7121,7 +7067,7 @@ The password for `username`.
 
 `connection_string`  
 Contains the *Oracle instance* to connect to. It can be an
-<a href="https://docs.oracle.com/database/121/NETAG/naming.htm" class="link external">» Easy Connect string</a>,
+<a href="https://www.oracle.com/pls/topic/lookup?ctx=dblatest&amp;id=GUID-E5358DEA-D619-4B7B-A799-3D2F802500F1" class="link external">» Easy Connect string</a>,
 or a Connect Name from the `tnsnames.ora` file, or the name of a local
 Oracle instance.
 
@@ -7134,13 +7080,16 @@ To use the Easy Connect naming method, PHP must be linked with Oracle
 10*g* is of the form: *\[//\]host\_name\[:port\]\[/service\_name\]*.
 From Oracle 11*g*, the syntax is:
 *\[//\]host\_name\[:port\]\[/service\_name\]\[:server\_type\]\[/instance\_name\]*.
-Service names can be found by running the Oracle utility *lsnrctl
-status* on the database server machine.
+Futher options were introduced with Oracle 19c, including timeout and
+keep-alive settings. Refer to Oracle documentation. Service names can be
+found by running the Oracle utility *lsnrctl status* on the database
+server machine.
 
 The `tnsnames.ora` file can be in the Oracle Net search path, which
-includes `$ORACLE_HOME/network/admin` and `/etc`. Alternatively set
-*TNS\_ADMIN* so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the
-web daemon has read access to the file.
+includes `/your/path/to/instantclient/network/admin`,
+`$ORACLE_HOME/network/admin` and `/etc`. Alternatively set *TNS\_ADMIN*
+so that `$TNS_ADMIN/tnsnames.ora` is read. Make sure the web daemon has
+read access to the file.
 
 `character_set`  
 Determines the character set used by the Oracle Client libraries. The
@@ -8507,9 +8456,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
     all resources associated with statement or cursor
 -   [oci\_get\_implicit\_resultset](/book/oci8.html#oci_get_implicit_resultset)
     — Returns the next child statement resource from a parent statement
-    resource that has Oracle Database 12c Implicit Result Sets
--   [oci\_internal\_debug](/book/oci8.html#oci_internal_debug) — Enables
-    or disables internal debug output
+    resource that has Oracle Database Implicit Result Sets
 -   [oci\_lob\_copy](/book/oci8.html#oci_lob_copy) — Copies large object
 -   [oci\_lob\_is\_equal](/book/oci8.html#oci_lob_is_equal) — Compares
     two LOB/FILE locators for equality
@@ -9530,6 +9477,48 @@ Alias of <span class="function">OCI-Lob::export</span>
 This function is an alias of: <span
 class="function">OCI-Lob::export</span>.
 
+oci\_internal\_debug
+====================
+
+Enables or disables internal debug output
+
+### Description
+
+<span class="type">void</span> <span
+class="methodname">oci\_internal\_debug</span> ( <span
+class="methodparam"><span class="type">bool</span> `$onoff`</span> )
+
+Enables or disables internal debug output.
+
+### Parameters
+
+`onoff`  
+Set this to **`FALSE`** to turn debug output off or **`TRUE`** to turn
+it on.
+
+### Return Values
+
+No value is returned.
+
+### Notes
+
+> **Note**:
+>
+> This function was removed in PHP 8 and PECL OCI8 3.0.
+
+> **Note**:
+>
+> This function is a no-op in PHP 5.6 and PECL OCI8 2.0. Use DTrace
+> instead.
+
+> **Note**:
+>
+> In PHP versions before 5.0.0 you must use <span
+> class="function">ociinternaldebug</span> instead. This name still can
+> be used, it was left as alias of <span
+> class="function">oci\_internal\_debug</span> for downwards
+> compatability. This, however, is deprecated and not recommended.
+
 ocibindbyname
 =============
 
@@ -9575,11 +9564,11 @@ is highly discouraged.
 ocicollappend
 =============
 
-Alias of <span class="function">OCI-Collection::append</span>
+Alias of <span class="function">OCICollection::append</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::append</span>
+Alias of <span class="function">OCICollection::append</span>
 
 **Warning**
 
@@ -9589,11 +9578,11 @@ is highly discouraged.
 ocicollassign
 =============
 
-Alias of <span class="function">OCI-Collection::assign</span>
+Alias of <span class="function">OCICollection::assign</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::assign</span>
+Alias of <span class="function">OCICollection::assign</span>
 
 **Warning**
 
@@ -9603,11 +9592,11 @@ is highly discouraged.
 ocicollassignelem
 =================
 
-Alias of <span class="function">OCI-Collection::assignElem</span>
+Alias of <span class="function">OCICollection::assignElem</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::assignElem</span>
+Alias of <span class="function">OCICollection::assignElem</span>
 
 **Warning**
 
@@ -9617,11 +9606,11 @@ is highly discouraged.
 ocicollgetelem
 ==============
 
-Alias of <span class="function">OCI-Collection::getElem</span>
+Alias of <span class="function">OCICollection::getElem</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::getElem</span>
+Alias of <span class="function">OCICollection::getElem</span>
 
 **Warning**
 
@@ -9631,11 +9620,11 @@ is highly discouraged.
 ocicollmax
 ==========
 
-Alias of <span class="function">OCI-Collection::max</span>
+Alias of <span class="function">OCICollection::max</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::max</span>
+Alias of <span class="function">OCICollection::max</span>
 
 **Warning**
 
@@ -9645,11 +9634,11 @@ is highly discouraged.
 ocicollsize
 ===========
 
-Alias of <span class="function">OCI-Collection::size</span>
+Alias of <span class="function">OCICollection::size</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::size</span>
+Alias of <span class="function">OCICollection::size</span>
 
 **Warning**
 
@@ -9659,11 +9648,11 @@ is highly discouraged.
 ocicolltrim
 ===========
 
-Alias of <span class="function">OCI-Collection::trim</span>
+Alias of <span class="function">OCICollection::trim</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::trim</span>
+Alias of <span class="function">OCICollection::trim</span>
 
 **Warning**
 
@@ -9875,11 +9864,11 @@ is highly discouraged.
 ocifreecollection
 =================
 
-Alias of <span class="function">OCI-Collection::free</span>
+Alias of <span class="function">OCICollection::free</span>
 
 ### Description
 
-Alias of <span class="function">OCI-Collection::free</span>
+Alias of <span class="function">OCICollection::free</span>
 
 **Warning**
 
@@ -10224,24 +10213,26 @@ is highly discouraged.
 
 **Table of Contents**
 
+-   [oci\_internal\_debug](/book/oci8.html#oci_internal_debug) — Enables
+    or disables internal debug output
 -   [ocibindbyname](/book/oci8.html#ocibindbyname) — Alias of
     oci\_bind\_by\_name
 -   [ocicancel](/book/oci8.html#ocicancel) — Alias of oci\_cancel
 -   [ocicloselob](/book/oci8.html#ocicloselob) — Alias of OCI-Lob::close
 -   [ocicollappend](/book/oci8.html#ocicollappend) — Alias of
-    OCI-Collection::append
+    OCICollection::append
 -   [ocicollassign](/book/oci8.html#ocicollassign) — Alias of
-    OCI-Collection::assign
+    OCICollection::assign
 -   [ocicollassignelem](/book/oci8.html#ocicollassignelem) — Alias of
-    OCI-Collection::assignElem
+    OCICollection::assignElem
 -   [ocicollgetelem](/book/oci8.html#ocicollgetelem) — Alias of
-    OCI-Collection::getElem
+    OCICollection::getElem
 -   [ocicollmax](/book/oci8.html#ocicollmax) — Alias of
-    OCI-Collection::max
+    OCICollection::max
 -   [ocicollsize](/book/oci8.html#ocicollsize) — Alias of
-    OCI-Collection::size
+    OCICollection::size
 -   [ocicolltrim](/book/oci8.html#ocicolltrim) — Alias of
-    OCI-Collection::trim
+    OCICollection::trim
 -   [ocicolumnisnull](/book/oci8.html#ocicolumnisnull) — Alias of
     oci\_field\_is\_null
 -   [ocicolumnname](/book/oci8.html#ocicolumnname) — Alias of
@@ -10268,7 +10259,7 @@ is highly discouraged.
 -   [ocifetchstatement](/book/oci8.html#ocifetchstatement) — Alias of
     oci\_fetch\_all
 -   [ocifreecollection](/book/oci8.html#ocifreecollection) — Alias of
-    OCI-Collection::free
+    OCICollection::free
 -   [ocifreecursor](/book/oci8.html#ocifreecursor) — Alias of
     oci\_free\_statement
 -   [ocifreedesc](/book/oci8.html#ocifreedesc) — Alias of OCI-Lob::free

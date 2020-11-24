@@ -5936,6 +5936,33 @@ The above example will output:
 
 -   <span class="function">imagesetclip</span>
 
+imagegetinterpolation
+=====================
+
+Get the interpolation method
+
+### Description
+
+<span class="type">int</span> <span
+class="methodname">imagegetinterpolation</span> ( <span
+class="methodparam"><span class="type">GdImage</span> `$image`</span> )
+
+Gets the currently set interpolation method of the `image`.
+
+### Parameters
+
+` image`  
+An image resource, returned by one of the image creation functions, such
+as <span class="function">imagecreatetruecolor</span>.
+
+### Return Values
+
+Returns the interpolation method.
+
+### See Also
+
+-   <span class="function">imagesetinterpolation</span>
+
 imagegif
 ========
 
@@ -7665,6 +7692,10 @@ rendering:
 -   <span class="simpara"> <span class="function">imagerotate</span>
     </span>
 
+### See Also
+
+-   <span class="function">imagegetinterpolation</span>
+
 imagesetpixel
 =============
 
@@ -9326,6 +9357,8 @@ png2wbmp($path, './test.wbmp', $image[1], $image[0], 7);
     file
 -   [imagegetclip](/ref/image.html#imagegetclip) — Get the clipping
     rectangle
+-   [imagegetinterpolation](/ref/image.html#imagegetinterpolation) — Get
+    the interpolation method
 -   [imagegif](/ref/image.html#imagegif) — Output image to browser or
     file
 -   [imagegrabscreen](/ref/image.html#imagegrabscreen) — Captures the

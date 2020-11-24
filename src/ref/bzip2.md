@@ -32,12 +32,13 @@ Compress a string into bzip2 encoded data
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span></span> <span
 class="methodname">bzcompress</span> ( <span class="methodparam"><span
-class="type">string</span> `$source`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$blocksize`<span
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$block_size`<span
 class="initializer"> = 4</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$workfactor`<span
+class="methodparam"><span class="type">int</span> `$work_factor`<span
 class="initializer"> = 0</span></span> \]\] )
 
 <span class="function">bzcompress</span> compresses the given string and
@@ -45,20 +46,20 @@ returns it as bzip2 encoded data.
 
 ### Parameters
 
-`source`  
+`data`  
 The string to compress.
 
-`blocksize`  
+`block_size`  
 Specifies the blocksize used during compression and should be a number
 from 1 to 9 with 9 giving the best compression, but using more resources
 to do so.
 
-`workfactor`  
+`work_factor`  
 Controls how the compression phase behaves when presented with worst
 case, highly repetitive, input data. The value can be between 0 and 250
 with 0 being a special case.
 
-Regardless of the `workfactor`, the generated output is the same.
+Regardless of the `work_factor`, the generated output is the same.
 
 ### Return Values
 
@@ -87,21 +88,23 @@ Decompresses bzip2 encoded data
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">bzdecompress</span> ( <span class="methodparam"><span
-class="type">string</span> `$source`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$small`<span
-class="initializer"> = 0</span></span> \] )
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type">bool</span>
+`$use_less_memory`<span class="initializer"> = **`FALSE`**</span></span>
+\] )
 
 <span class="function">bzdecompress</span> decompresses the given string
 containing bzip2 encoded data.
 
 ### Parameters
 
-`source`  
+`data`  
 The string to decompress.
 
-`small`  
+`use_less_memory`  
 If **`TRUE`**, an alternative decompression algorithm will be used which
 uses less memory (the maximum memory requirement drops to around 2300K)
 but works at roughly half the speed.
@@ -112,7 +115,14 @@ for more information about this feature.
 
 ### Return Values
 
-The decompressed string, or an error number if an error occurred.
+The decompressed string, or **`FALSE`** or an error number if an error
+occurred.
+
+### Changelog
+
+| Version | Description                                                                                                                                                 |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | The type of `use_less_memory` has been changed from <span class="type">int</span> to <span class="type">bool</span>. Previously, the default value was *0*. |
 
 ### Examples
 
@@ -274,12 +284,14 @@ Opens a bzip2 compressed file
 
 ### Description
 
-<span class="type">resource</span> <span
-class="methodname">bzopen</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$file`</span> , <span
-class="methodparam"><span class="type">string</span> `$mode`</span> )
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">bzopen</span>
+( <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">resource</span></span>
+`$file`</span> , <span class="methodparam"><span
+class="type">string</span> `$mode`</span> )
 
-<span class="function">bzopen</span> opens a bzip2 (.bz2) file for
+<span class="function">bzopen</span> opens a bzip2 (`.bz2`) file for
 reading or writing.
 
 ### Parameters
@@ -288,7 +300,7 @@ reading or writing.
 The name of the file to open, or an existing stream resource.
 
 `mode`  
-The modes 'r' (read), and 'w' (write) are supported. Everything else
+The modes *'r'* (read), and *'w'* (write) are supported. Everything else
 will cause <span class="function">bzopen</span> to return **`FALSE`**.
 
 ### Return Values
@@ -322,7 +334,8 @@ Binary safe bzip2 file read
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">bzread</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">bzread</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$bz`</span> \[, <span class="methodparam"><span class="type">int</span>
 `$length`<span class="initializer"> = 1024</span></span> \] )
@@ -383,11 +396,14 @@ Binary safe bzip2 file write
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">bzwrite</span> (
-<span class="methodparam"><span class="type">resource</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">bzwrite</span>
+( <span class="methodparam"><span class="type">resource</span>
 `$bz`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">bzwrite</span> writes a string into the given
 bzip2 file stream.
@@ -408,6 +424,12 @@ been written or the end of `data` is reached, whichever comes first.
 ### Return Values
 
 Returns the number of bytes written, or **`FALSE`** on error.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `length` is nullable now. |
 
 ### Examples
 

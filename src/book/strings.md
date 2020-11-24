@@ -107,6 +107,10 @@ Strings
     -   [sprintf](/ref/strings.html#sprintf) — Return a formatted string
     -   [sscanf](/ref/strings.html#sscanf) — Parses input from a string
         according to a format
+    -   [str\_contains](/ref/strings.html#str_contains) — Determine if a
+        string contains a given substring
+    -   [str\_ends\_with](/ref/strings.html#str_ends_with) — Checks if a
+        string ends with a given substring
     -   [str\_getcsv](/ref/strings.html#str_getcsv) — Parse a CSV string
         into an array
     -   [str\_ireplace](/ref/strings.html#str_ireplace) —
@@ -122,6 +126,8 @@ Strings
         shuffles a string
     -   [str\_split](/ref/strings.html#str_split) — Convert a string to
         an array
+    -   [str\_starts\_with](/ref/strings.html#str_starts_with) — Checks
+        if a string starts with a given substring
     -   [str\_word\_count](/ref/strings.html#str_word_count) — Return
         information about words used in a string
     -   [strcasecmp](/ref/strings.html#strcasecmp) — Binary safe

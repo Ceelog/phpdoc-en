@@ -7,13 +7,13 @@ Adds a line to the history
 
 <span class="type">bool</span> <span
 class="methodname">readline\_add\_history</span> ( <span
-class="methodparam"><span class="type">string</span> `$line`</span> )
+class="methodparam"><span class="type">string</span> `$prompt`</span> )
 
 This function adds a line to the command line history.
 
 ### Parameters
 
-`line`  
+`prompt`  
 The line to be added in the history.
 
 ### Return Values
@@ -189,14 +189,14 @@ Registers a completion function
 <span class="type">bool</span> <span
 class="methodname">readline\_completion\_function</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> )
+`$callback`</span> )
 
 This function registers a completion function. This is the same kind of
 functionality you'd get if you hit your tab key while using Bash.
 
 ### Parameters
 
-`function`  
+`callback`  
 You must supply the name of an existing function which accepts a partial
 command line and returns an array of possible matches.
 
@@ -213,18 +213,22 @@ Gets/sets various internal readline variables
 
 <span class="type">mixed</span> <span
 class="methodname">readline\_info</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$varname`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$newvalue`</span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$var_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span><span
+class="type">bool</span><span class="type">null</span></span>
+`$value`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 Gets or sets various internal readline variables.
 
 ### Parameters
 
-`varname`  
+`var_name`  
 A variable name.
 
-`newvalue`  
+`value`  
 If provided, this will be the new value of the setting.
 
 ### Return Values
@@ -236,6 +240,12 @@ line\_buffer, mark, pending\_input, point, prompt, readline\_name, and
 terminal\_name.
 
 If called with one or two parameters, the old value is returned.
+
+### Changelog
+
+| Version | Description                              |
+|---------|------------------------------------------|
+| 8.0.0   | `var_name` and `value` are nullable now. |
 
 readline\_list\_history
 =======================
@@ -281,8 +291,9 @@ Reads the history
 
 <span class="type">bool</span> <span
 class="methodname">readline\_read\_history</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 This function reads a command history from a file.
 
@@ -294,6 +305,12 @@ Path to the filename containing the command history.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `filename` is nullable now. |
 
 readline\_redisplay
 ===================
@@ -321,8 +338,9 @@ Writes the history
 
 <span class="type">bool</span> <span
 class="methodname">readline\_write\_history</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 This function writes the command history to a file.
 
@@ -335,6 +353,12 @@ Path to the saved file.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `filename` is nullable now. |
+
 readline
 ========
 
@@ -342,9 +366,11 @@ Reads a line
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">readline</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$prompt`<span class="initializer"> =
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$prompt`<span class="initializer"> =
 **`NULL`**</span></span> \] )
 
 Reads a single line from the user. You must add this line to the history

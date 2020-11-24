@@ -51,17 +51,18 @@ Converts from Julian Day Count to a supported calendar
 
 <span class="type">array</span> <span
 class="methodname">cal\_from\_jd</span> ( <span
-class="methodparam"><span class="type">int</span> `$jd`</span> , <span
-class="methodparam"><span class="type">int</span> `$calendar`</span> )
+class="methodparam"><span class="type">int</span> `$julian_day`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$calendar`</span> )
 
 <span class="function">cal\_from\_jd</span> converts the Julian day
-given in `jd` into a date of the specified `calendar`. Supported
+given in `julian_day` into a date of the specified `calendar`. Supported
 `calendar` values are **`CAL_GREGORIAN`**, **`CAL_JULIAN`**,
 **`CAL_JEWISH`** and **`CAL_FRENCH`**.
 
 ### Parameters
 
-`jd`  
+`julian_day`  
 Julian day as integer
 
 `calendar`  
@@ -257,10 +258,11 @@ Get Unix timestamp for midnight on Easter of a given year
 
 <span class="type">int</span> <span
 class="methodname">easter\_date</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$year`<span
-class="initializer"> = date("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$method`<span
-class="initializer"> = CAL\_EASTER\_DEFAULT</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$year`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = **`CAL_EASTER_DEFAULT`**</span></span> \]\] )
 
 Returns the Unix timestamp corresponding to midnight on Easter of the
 given year.
@@ -286,10 +288,10 @@ correction factors are added to make the cycle more accurate.
 ### Parameters
 
 `year`  
-The year as a number between 1970 an 2037. If omitted, defaults to the
-current year according to the local time.
+The year as a number between 1970 an 2037. If omitted or **`NULL`**,
+defaults to the current year according to the local time.
 
-`method`  
+`mode`  
 Allows Easter dates to be calculated based on the Julian calendar when
 set to **`CAL_EASTER_ALWAYS_JULIAN`**. See also
 <a href="/calendar/constants.html" class="link">calendar constants</a>.
@@ -297,6 +299,12 @@ set to **`CAL_EASTER_ALWAYS_JULIAN`**. See also
 ### Return Values
 
 The easter date as a unix timestamp.
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `year` is nullable now. |
 
 ### Examples
 
@@ -370,10 +378,11 @@ Get number of days after March 21 on which Easter falls for a given year
 
 <span class="type">int</span> <span
 class="methodname">easter\_days</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$year`<span
-class="initializer"> = date("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$method`<span
-class="initializer"> = CAL\_EASTER\_DEFAULT</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$year`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = **`CAL_EASTER_DEFAULT`**</span></span> \]\] )
 
 Returns the number of days after March 21 on which Easter falls for a
 given year. If no year is specified, the current year is assumed.
@@ -398,10 +407,10 @@ correction factors are added to make the cycle more accurate.
 ### Parameters
 
 `year`  
-The year as a positive number. If omitted, defaults to the current year
-according to the local time.
+The year as a positive number. If omitted or **`NULL`**, defaults to the
+current year according to the local time.
 
-`method`  
+`mode`  
 Allows Easter dates to be calculated based on the Gregorian calendar
 during the years 1582 - 1752 when set to **`CAL_EASTER_ROMAN`**. See the
 <a href="/calendar/constants.html" class="link">calendar constants</a>
@@ -411,6 +420,12 @@ for more valid constants.
 
 The number of days after March 21st that the Easter Sunday is in the
 given `year`.
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `year` is nullable now. |
 
 ### Examples
 
@@ -558,18 +573,19 @@ Returns the day of the week
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">string</span></span> <span
 class="methodname">jddayofweek</span> ( <span class="methodparam"><span
-class="type">int</span> `$julianday`</span> \[, <span
+class="type">int</span> `$julian_day`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$mode`<span
-class="initializer"> = CAL\_DOW\_DAYNO</span></span> \] )
+class="initializer"> = **`CAL_DOW_DAYNO`**</span></span> \] )
 
 Returns the day of the week. Can return a string or an integer depending
 on the mode.
 
 ### Parameters
 
-`julianday`  
+`julian_day`  
 A julian day number as integer
 
 `mode`  
@@ -592,7 +608,7 @@ Returns a month name
 
 <span class="type">string</span> <span
 class="methodname">jdmonthname</span> ( <span class="methodparam"><span
-class="type">int</span> `$julianday`</span> , <span
+class="type">int</span> `$julian_day`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 Returns a string containing a month name. `mode` tells this function
@@ -629,7 +645,7 @@ Converts a Julian Day Count to the French Republican Calendar
 
 <span class="type">string</span> <span
 class="methodname">jdtofrench</span> ( <span class="methodparam"><span
-class="type">int</span> `$juliandaycount`</span> )
+class="type">int</span> `$julian_day`</span> )
 
 Converts a Julian Day Count to the French Republican Calendar.
 
@@ -656,14 +672,14 @@ Converts Julian Day Count to Gregorian date
 
 <span class="type">string</span> <span
 class="methodname">jdtogregorian</span> ( <span
-class="methodparam"><span class="type">int</span> `$julianday`</span> )
+class="methodparam"><span class="type">int</span> `$julian_day`</span> )
 
 Converts Julian Day Count to a string containing the Gregorian date in
 the format of "month/day/year".
 
 ### Parameters
 
-`julianday`  
+`julian_day`  
 A julian day number as integer
 
 ### Return Values
@@ -684,10 +700,10 @@ Converts a Julian day count to a Jewish calendar date
 
 <span class="type">string</span> <span
 class="methodname">jdtojewish</span> ( <span class="methodparam"><span
-class="type">int</span> `$juliandaycount`</span> \[, <span
+class="type">int</span> `$julian_day`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$hebrew`<span
 class="initializer"> = **`FALSE`**</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$fl`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
 Converts a Julian Day Count to the Jewish Calendar.
@@ -698,10 +714,10 @@ Converts a Julian Day Count to the Jewish Calendar.
 A julian day number as integer
 
 `hebrew`  
-If the `hebrew` parameter is set to **`TRUE`**, the `fl` parameter is
+If the `hebrew` parameter is set to **`TRUE`**, the `flags` parameter is
 used for Hebrew, ISO-8859-8 encoded string based, output format.
 
-`fl`  
+`flags`  
 A bitmask which may consist of **`CAL_JEWISH_ADD_ALAFIM_GERESH`**,
 **`CAL_JEWISH_ADD_ALAFIM`** and **`CAL_JEWISH_ADD_GERESHAYIM`**.
 
@@ -746,14 +762,14 @@ Converts a Julian Day Count to a Julian Calendar Date
 
 <span class="type">string</span> <span
 class="methodname">jdtojulian</span> ( <span class="methodparam"><span
-class="type">int</span> `$julianday`</span> )
+class="type">int</span> `$julian_day`</span> )
 
 Converts Julian Day Count to a string containing the Julian Calendar
 Date in the format of "month/day/year".
 
 ### Parameters
 
-`julianday`  
+`julian_day`  
 A julian day number as integer
 
 ### Return Values
@@ -772,31 +788,35 @@ Convert Julian Day to Unix timestamp
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">jdtounix</span> ( <span class="methodparam"><span
-class="type">int</span> `$jday`</span> )
+<span class="type">int</span> <span class="methodname">jdtounix</span> (
+<span class="methodparam"><span class="type">int</span>
+`$julian_day`</span> )
 
 This function will return a Unix timestamp corresponding to the Julian
-Day given in `jday` or **`FALSE`** if `jday` is outside of the allowed
-range. The time returned is UTC.
+Day given in `julian_day`. The time returned is UTC.
 
 ### Parameters
 
-`jday`  
+`julian_day`  
 A julian day number between *2440588* and *106751993607888* on 64bit
 systems, or between *2440588* and *2465443* on 32bit systems.
 
 ### Return Values
 
 The unix timestamp for the start (midnight, not noon) of the given
-Julian day, or **`FALSE`** on failure.
+Julian day
+
+### Errors/Exceptions
+
+If `julian_day` is outside of the allowed range, a <span
+class="classname">ValueError</span> is thrown.
 
 ### Changelog
 
-| Version        | Description                                                                                               |
-|----------------|-----------------------------------------------------------------------------------------------------------|
-| 7.3.24, 7.4.12 | The upper limit of `jday` has been extended. Previously, it was *2465342* regardless of the architecture. |
+| Version        | Description                                                                                                             |
+|----------------|-------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0          | This function no longer returns **`FALSE`** on failure, but raises a <span class="classname">ValueError</span> instead. |
+| 7.3.24, 7.4.12 | The upper limit of `julian_day` has been extended. Previously, it was *2465342* regardless of the architecture.         |
 
 ### See Also
 
@@ -898,9 +918,12 @@ Convert Unix timestamp to Julian Day
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">unixtojd</span>
-(\[ <span class="methodparam"><span class="type">int</span>
-`$timestamp`<span class="initializer"> = time()</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">unixtojd</span> (\[ <span class="methodparam"><span
+class="type"><span class="type">int</span><span
+class="type">null</span></span> `$timestamp`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 Return the Julian Day for a Unix `timestamp` (seconds since 1.1.1970),
 or for the current day if no `timestamp` is given. Either way, the time
@@ -913,7 +936,13 @@ A unix timestamp to convert.
 
 ### Return Values
 
-A julian day number as integer.
+A julian day number as integer, or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### See Also
 

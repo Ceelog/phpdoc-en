@@ -164,6 +164,8 @@ Image Processing and GD
         or file
     -   [imagegetclip](/ref/image.html#imagegetclip) — Get the clipping
         rectangle
+    -   [imagegetinterpolation](/ref/image.html#imagegetinterpolation) —
+        Get the interpolation method
     -   [imagegif](/ref/image.html#imagegif) — Output image to browser
         or file
     -   [imagegrabscreen](/ref/image.html#imagegrabscreen) — Captures

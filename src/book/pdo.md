@@ -2580,8 +2580,9 @@ array()</span></span> \]\]\] )
 class="methodparam"><span class="type">int</span> `$column_number`<span
 class="initializer"> = 0</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">fetchObject</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">false</span></span> <span
+class="methodname">fetchObject</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$ctor_args`</span>
@@ -4093,8 +4094,9 @@ Fetches the next row and returns it as an object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">PDOStatement::fetchObject</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">object</span><span class="type">false</span></span> <span
+class="methodname">PDOStatement::fetchObject</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$ctor_args`</span>
@@ -6115,7 +6117,7 @@ Installation
 If the Oracle Database is on the same machine as PHP, the database
 software already contains the necessary libraries. When PHP is on a
 different machine, use the free
-<a href="http://www.oracle.com/technetwork/database/database-technologies/instant-client/overview/index-4369172.html" class="link external">» Oracle Instant Client</a>
+<a href="https://www.oracle.com/database/technologies/instant-client.html" class="link external">» Oracle Instant Client</a>
 libraries. For details refer to the
 <a href="/book/oci8.html#Requirements" class="link">OCI8 Requirements</a>
 section.

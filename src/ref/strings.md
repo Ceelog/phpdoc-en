@@ -4783,6 +4783,175 @@ echo "<author id='$id'>
 -   <span class="function">number\_format</span>
 -   <span class="function">date</span>
 
+str\_contains
+=============
+
+Determine if a string contains a given substring
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">str\_contains</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `needle` is contained in
+`haystack`.
+
+### Parameters
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### Return Values
+
+Returns **`TRUE`** if `needle` is in `haystack`, **`FALSE`** otherwise.
+
+### Examples
+
+**Example \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_contains('abc', '')) {
+    echo "Checking the existence of the empty string will always return true";
+}
+?>
+```
+
+The above example will output:
+
+    Checking the existence of the empty string will always return true
+
+**Example \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_contains($string, 'lazy')) {
+    echo "The string 'lazy' was found in the string\n";
+}
+
+if (str_contains($string, 'Lazy')) {
+    echo 'The string "Lazy" was found in the string';
+} else {
+    echo '"Lazy" was not found because the case does not match';
+}
+
+?>
+```
+
+The above example will output:
+
+    The string 'lazy' was found in the string
+    "Lazy" was not found because the case does not match
+
+### Notes
+
+> **Note**: <span class="simpara">This function is binary-safe.</span>
+
+### See Also
+
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">str\_starts\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
+
+str\_ends\_with
+===============
+
+Checks if a string ends with a given substring
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">str\_ends\_with</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `haystack` ends with
+`needle`.
+
+### Parameters
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### Return Values
+
+Returns **`TRUE`** if `haystack` ends with `needle`, **`FALSE`**
+otherwise.
+
+### Examples
+
+**Example \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_ends_with('abc', '')) {
+    echo "All strings end with the empty string";
+}
+?>
+```
+
+The above example will output:
+
+    All strings end with the empty string
+
+**Example \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_ends_with($string, 'fence')) {
+    echo "The string ends with 'fence'\n";
+}
+
+if (str_ends_with($string, 'Fence')) {
+    echo 'The string ends with "fence"';
+} else {
+    echo '"fence" was not found because the case does not match';
+}
+
+?>
+```
+
+The above example will output:
+
+    The string ends with 'fence'
+    "fence" was not found because the case does not match
+
+### Notes
+
+> **Note**: <span class="simpara">This function is binary-safe.</span>
+
+### See Also
+
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_starts\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
+
 str\_getcsv
 ===========
 
@@ -5367,6 +5536,91 @@ The above example will output:
 -   <span class="function">count\_chars</span>
 -   <span class="function">str\_word\_count</span>
 -   <a href="/control-structures/for.html" class="link">for</a>
+
+str\_starts\_with
+=================
+
+Checks if a string starts with a given substring
+
+### Description
+
+<span class="type">bool</span> <span
+class="methodname">str\_starts\_with</span> ( <span
+class="methodparam"><span class="type">string</span> `$haystack`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$needle`</span> )
+
+Performs a case-sensitive check indicating if `haystack` begins with
+`needle`.
+
+### Parameters
+
+`haystack`  
+The string to search in.
+
+`needle`  
+The substring to search for in the `haystack`.
+
+### Return Values
+
+Returns **`TRUE`** if `haystack` begins with `needle`, **`FALSE`**
+otherwise.
+
+### Examples
+
+**Example \#1 Using the empty string *''***
+
+``` php
+<?php
+if (str_starts_with('abc', '')) {
+    echo "All strings start with the empty string";
+}
+?>
+```
+
+The above example will output:
+
+    All strings start with the empty string
+
+**Example \#2 Showing case-sensitivity**
+
+``` php
+<?php
+$string = 'The lazy fox jumped over the fence';
+
+if (str_starts_with($string, 'The')) {
+    echo "The string starts with 'The'\n";
+}
+
+if (str_starts_with($string, 'the')) {
+    echo 'The string starts with "the"';
+} else {
+    echo '"the" was not found because the case does not match';
+}
+
+?>
+```
+
+The above example will output:
+
+    The string starts with 'The'
+    "the" was not found because the case does not match
+
+### Notes
+
+> **Note**: <span class="simpara">This function is binary-safe.</span>
+
+### See Also
+
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">stripos</span>
+-   <span class="function">strrpos</span>
+-   <span class="function">strripos</span>
+-   <span class="function">strstr</span>
+-   <span class="function">strpbrk</span>
+-   <span class="function">substr</span>
+-   <span class="function">preg\_match</span>
 
 str\_word\_count
 ================
@@ -5974,6 +6228,9 @@ if ($pos2 !== false) {
 ### See Also
 
 -   <span class="function">mb\_stripos</span>
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">str\_starts\_with</span>
 -   <span class="function">strpos</span>
 -   <span class="function">strrpos</span>
 -   <span class="function">strripos</span>
@@ -6582,7 +6839,7 @@ $findme   = 'a';
 $pos = strpos($mystring, $findme);
 
 // The !== operator can also be used.  Using != would not work as expected
-// because the position of 'a' is 0. The statement (0 != false) evaluates 
+// because the position of 'a' is 0. The statement (0 != false) evaluates
 // to false.
 if ($pos !== false) {
      echo "The string '$findme' was found in the string '$mystring'";
@@ -6610,6 +6867,9 @@ $pos = strpos($newstring, 'a', 1); // $pos = 7, not 0
 ### See Also
 
 -   <span class="function">stripos</span>
+-   <span class="function">str\_contains</span>
+-   <span class="function">str\_ends\_with</span>
+-   <span class="function">str\_starts\_with</span>
 -   <span class="function">strrpos</span>
 -   <span class="function">strripos</span>
 -   <span class="function">strstr</span>
@@ -8965,6 +9225,10 @@ The above example will output:
 -   [sprintf](/ref/strings.html#sprintf) — Return a formatted string
 -   [sscanf](/ref/strings.html#sscanf) — Parses input from a string
     according to a format
+-   [str\_contains](/ref/strings.html#str_contains) — Determine if a
+    string contains a given substring
+-   [str\_ends\_with](/ref/strings.html#str_ends_with) — Checks if a
+    string ends with a given substring
 -   [str\_getcsv](/ref/strings.html#str_getcsv) — Parse a CSV string
     into an array
 -   [str\_ireplace](/ref/strings.html#str_ireplace) — Case-insensitive
@@ -8980,6 +9244,8 @@ The above example will output:
     string
 -   [str\_split](/ref/strings.html#str_split) — Convert a string to an
     array
+-   [str\_starts\_with](/ref/strings.html#str_starts_with) — Checks if a
+    string starts with a given substring
 -   [str\_word\_count](/ref/strings.html#str_word_count) — Return
     information about words used in a string
 -   [strcasecmp](/ref/strings.html#strcasecmp) — Binary safe
