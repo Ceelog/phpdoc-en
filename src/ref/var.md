@@ -429,6 +429,57 @@ print_r(array_keys(get_defined_vars()));
 -   <span class="function">get\_defined\_functions</span>
 -   <span class="function">get\_defined\_constants</span>
 
+get\_resource\_id
+=================
+
+Returns an integer identifier for the given resource
+
+### Description
+
+<span class="type">int</span> <span
+class="methodname">get\_resource\_id</span> ( <span
+class="methodparam"><span class="type">resource</span> `$res`</span> )
+
+This function provides a type-safe way for generating the integer
+identifier for a resource.
+
+### Parameters
+
+`res`  
+The evaluated resource handle.
+
+### Return Values
+
+The <span class="type">int</span> identifier for the given `res`.
+
+This function is essentially an <span class="type">int</span> cast of
+`res` to make it easier to retrieve the resource ID.
+
+### Examples
+
+**Example \#1 <span class="function">get\_resource\_id</span> example**
+
+``` php
+<?php
+$handle = fopen('./storage/logs/lumen.log', 'rt');
+
+echo (int) $handle . "\n\n";
+
+echo get_resource_id($handle);
+
+?>
+```
+
+The above example will output:
+
+    698
+
+    698
+
+### See Also
+
+-   <span class="function">get\_resource\_type</span>
+
 get\_resource\_type
 ===================
 
@@ -477,6 +528,10 @@ $doc = new_xmldoc("1.0");
 echo get_resource_type($doc->doc) . "\n";
 ?>
 ```
+
+### See Also
+
+-   <span class="function">get\_resource\_id</span>
 
 gettype
 =======
@@ -2699,6 +2754,8 @@ classes for maximum compatibility.
 -   [floatval](/ref/var.html#floatval) — Get float value of a variable
 -   [get\_defined\_vars](/ref/var.html#get_defined_vars) — Returns an
     array of all defined variables
+-   [get\_resource\_id](/ref/var.html#get_resource_id) — Returns an
+    integer identifier for the given resource
 -   [get\_resource\_type](/ref/var.html#get_resource_type) — Returns the
     resource type
 -   [gettype](/ref/var.html#gettype) — Get the type of a variable

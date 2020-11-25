@@ -22,6 +22,8 @@ Variable handling
         variable
     -   [get\_defined\_vars](/ref/var.html#get_defined_vars) — Returns
         an array of all defined variables
+    -   [get\_resource\_id](/ref/var.html#get_resource_id) — Returns an
+        integer identifier for the given resource
     -   [get\_resource\_type](/ref/var.html#get_resource_type) — Returns
         the resource type
     -   [gettype](/ref/var.html#gettype) — Get the type of a variable

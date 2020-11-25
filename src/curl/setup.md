@@ -55,5 +55,5 @@ be an absolute path.
 Resource Types
 --------------
 
-This extension defines two resource types: a cURL handle and a cURL
-multi handle.
+This extension defines three resource types: a cURL handle, a cURL multi
+handle, and a cURL share handle.

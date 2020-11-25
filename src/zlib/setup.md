@@ -81,4 +81,5 @@ Resource Types
 --------------
 
 This extension defines a file pointer resource returned by <span
-class="function">gzopen</span>.
+class="function">gzopen</span>. Prior to PHP 8.0.0, *zlib.deflate* and
+*zlib.inflate* resources were also defined.

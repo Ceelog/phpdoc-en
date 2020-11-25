@@ -11743,11 +11743,11 @@ class="methodparam"><span class="type">string</span> `$timezone`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$region`</span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">getOffset</span> ( <span class="methodparam"><span
-class="type">float</span> `$date`</span> , <span
-class="methodparam"><span class="type">bool</span> `$local`</span> ,
-<span class="methodparam"><span class="type">int</span>
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">getOffset</span> ( <span
+class="methodparam"><span class="type">float</span> `$date`</span> ,
+<span class="methodparam"><span class="type">bool</span> `$local`</span>
+, <span class="methodparam"><span class="type">int</span>
 `&$rawOffset`</span> , <span class="methodparam"><span
 class="type">int</span> `&$dstOffset`</span> )
 
@@ -11803,14 +11803,25 @@ Predefined Constants
 IntlTimeZone::countEquivalentIDs
 ================================
 
+intltz\_count\_equivalent\_ids
+==============================
+
 Get the number of IDs in the equivalency group that includes the given
 ID
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">IntlTimeZone::countEquivalentIDs</span> ( <span
+class="methodparam"><span class="type">string</span> `$zoneId`</span> )
+
+Procedural style:
+
+<span class="type">int</span> <span
+class="methodname">intltz\_count\_equivalent\_ids</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
 **Warning**
@@ -11827,13 +11838,24 @@ available.
 IntlTimeZone::createDefault
 ===========================
 
+intltz\_create\_default
+=======================
+
 Create a new copy of the default timezone for this host
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlTimeZone</span>
 <span class="methodname">IntlTimeZone::createDefault</span> ( <span
+class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">IntlTimeZone</span> <span
+class="methodname">intltz\_create\_default</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -11850,15 +11872,27 @@ This function has no parameters.
 IntlTimeZone::createEnumeration
 ===============================
 
+intltz\_create\_enumeration
+===========================
+
 Get an enumeration over time zone IDs associated with the given country
 or offset
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlIterator</span>
 <span class="methodname">IntlTimeZone::createEnumeration</span> (\[
 <span class="methodparam"><span class="type">mixed</span>
+`$countryOrRawOffset`</span> \] )
+
+Procedural style:
+
+<span class="type">IntlIterator</span> <span
+class="methodname">intltz\_create\_enumeration</span> (\[ <span
+class="methodparam"><span class="type">mixed</span>
 `$countryOrRawOffset`</span> \] )
 
 **Warning**
@@ -11875,13 +11909,24 @@ available.
 IntlTimeZone::createTimeZone
 ============================
 
+intltz\_create\_time\_zone
+==========================
+
 Create a timezone object for the given ID
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlTimeZone</span>
 <span class="methodname">IntlTimeZone::createTimeZone</span> ( <span
+class="methodparam"><span class="type">string</span> `$zoneId`</span> )
+
+Procedural style:
+
+<span class="type">IntlTimeZone</span> <span
+class="methodname">intltz\_create\_time\_zone</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
 **Warning**
@@ -11898,16 +11943,32 @@ available.
 IntlTimeZone::createTimeZoneIDEnumeration
 =========================================
 
+intltz\_create\_time\_zone\_id\_enumeration
+===========================================
+
 Get an enumeration over system time zone IDs with the given filter
 conditions
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
 class="type">IntlIterator</span><span class="type">false</span></span>
 <span
 class="methodname">IntlTimeZone::createTimeZoneIDEnumeration</span> (
+<span class="methodparam"><span class="type">int</span>
+`$zoneType`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$region`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rawOffset`</span>
+\]\] )
+
+Procedural style:
+
+<span class="type"><span class="type">IntlIterator</span><span
+class="type">false</span></span> <span
+class="methodname">intltz\_create\_time\_zone\_id\_enumeration</span> (
 <span class="methodparam"><span class="type">int</span>
 `$zoneType`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$region`</span> \[, <span
@@ -11935,13 +11996,25 @@ failure.
 IntlTimeZone::fromDateTimeZone
 ==============================
 
+intltz\_from\_date\_time\_zone
+==============================
+
 Create a timezone object from <span class="type">DateTimeZone</span>
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlTimeZone</span>
 <span class="methodname">IntlTimeZone::fromDateTimeZone</span> ( <span
+class="methodparam"><span class="type">DateTimeZone</span>
+`$zoneId`</span> )
+
+Procedural style:
+
+<span class="type">IntlTimeZone</span> <span
+class="methodname">intltz\_from\_date\_time\_zone</span> ( <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$zoneId`</span> )
 
@@ -11959,14 +12032,27 @@ available.
 IntlTimeZone::getCanonicalID
 ============================
 
+intltz\_get\_canonical\_id
+==========================
+
 Get the canonical system timezone ID or the normalized custom time zone
 ID for the given time zone ID
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">IntlTimeZone::getCanonicalID</span> ( <span
+class="methodparam"><span class="type">string</span> `$zoneId`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`&$isSystemID`</span> \] )
+
+Procedural style:
+
+<span class="type">string</span> <span
+class="methodname">intltz\_get\_canonical\_id</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `&$isSystemID`</span> \] )
@@ -11987,9 +12073,14 @@ available.
 IntlTimeZone::getDisplayName
 ============================
 
+intltz\_get\_display\_name
+==========================
+
 Get a name of this time zone suitable for presentation to the user
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">IntlTimeZone::getDisplayName</span> (\[ <span
@@ -11997,6 +12088,17 @@ class="methodparam"><span class="type">bool</span> `$isDaylight`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$style`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$locale`</span> \]\]\] )
+
+Procedural style:
+
+<span class="type">string</span> <span
+class="methodname">intltz\_get\_display\_name</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$isDaylight`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$style`</span> \[,
+<span class="methodparam"><span class="type">string</span>
+`$locale`</span> \]\]\] )
 
 **Warning**
 
@@ -12016,14 +12118,26 @@ available.
 IntlTimeZone::getDSTSavings
 ===========================
 
+intltz\_get\_dst\_savings
+=========================
+
 Get the amount of time to be added to local standard time to get local
 wall clock time
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">IntlTimeZone::getDSTSavings</span> ( <span
 class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">int</span> <span
+class="methodname">intltz\_get\_dst\_savings</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12039,13 +12153,26 @@ This function has no parameters.
 IntlTimeZone::getEquivalentID
 =============================
 
+intltz\_get\_equivalent\_id
+===========================
+
 Get an ID in the equivalency group that includes the given ID
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">IntlTimeZone::getEquivalentID</span> ( <span
+class="methodparam"><span class="type">string</span> `$zoneId`</span> ,
+<span class="methodparam"><span class="type">int</span> `$index`</span>
+)
+
+Procedural style:
+
+<span class="type">string</span> <span
+class="methodname">intltz\_get\_equivalent\_id</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span> ,
 <span class="methodparam"><span class="type">int</span> `$index`</span>
 )
@@ -12083,7 +12210,8 @@ Procedural style:
 
 <span class="type">int</span> <span
 class="methodname">intltz\_get\_error\_code</span> ( <span
-class="methodparam">void</span> )
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12116,7 +12244,8 @@ Procedural style:
 
 <span class="type">string</span> <span
 class="methodname">intltz\_get\_error\_message</span> ( <span
-class="methodparam">void</span> )
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12132,13 +12261,24 @@ This function has no parameters.
 IntlTimeZone::getGMT
 ====================
 
+intltz\_get\_gmt
+================
+
 Create GMT (UTC) timezone
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlTimeZone</span>
 <span class="methodname">IntlTimeZone::getGMT</span> ( <span
+class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">IntlTimeZone</span> <span
+class="methodname">intltz\_get\_gmt</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -12155,13 +12295,25 @@ This function has no parameters.
 IntlTimeZone::getID
 ===================
 
+intltz\_get\_id
+===============
+
 Get timezone ID
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">IntlTimeZone::getID</span> ( <span
 class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">string</span> <span
+class="methodname">intltz\_get\_id</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12177,14 +12329,28 @@ This function has no parameters.
 IntlTimeZone::getIDForWindowsID
 ===============================
 
+intltz\_get\_id\_for\_windows\_id
+=================================
+
 Translate a Windows timezone into a system timezone
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getIDForWindowsID</span> ( <span
+class="methodparam"><span class="type">string</span> `$timezone`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$region`</span> \] )
+
+Procedural style:
+
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
+class="methodname">intltz\_get\_id\_for\_windows\_id</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$region`</span> \] )
@@ -12217,15 +12383,32 @@ Returns the system timezone or **`FALSE`** on failure.
 IntlTimeZone::getOffset
 =======================
 
+intltz\_get\_offset
+===================
+
 Get the time zone raw and GMT offset for the given moment in time
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">IntlTimeZone::getOffset</span> ( <span
+Object oriented style (method):
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">IntlTimeZone::getOffset</span> ( <span
 class="methodparam"><span class="type">float</span> `$date`</span> ,
 <span class="methodparam"><span class="type">bool</span> `$local`</span>
 , <span class="methodparam"><span class="type">int</span>
+`&$rawOffset`</span> , <span class="methodparam"><span
+class="type">int</span> `&$dstOffset`</span> )
+
+Procedural style:
+
+<span class="type">bool</span> <span
+class="methodname">intltz\_get\_offset</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> , <span class="methodparam"><span
+class="type">float</span> `$date`</span> , <span
+class="methodparam"><span class="type">bool</span> `$local`</span> ,
+<span class="methodparam"><span class="type">int</span>
 `&$rawOffset`</span> , <span class="methodparam"><span
 class="type">int</span> `&$dstOffset`</span> )
 
@@ -12249,13 +12432,25 @@ available.
 IntlTimeZone::getRawOffset
 ==========================
 
+intltz\_get\_raw\_offset
+========================
+
 Get the raw GMT offset (before taking daylight savings time into account
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">IntlTimeZone::getRawOffset</span> ( <span
 class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">int</span> <span
+class="methodname">intltz\_get\_raw\_offset</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12271,14 +12466,26 @@ This function has no parameters.
 IntlTimeZone::getRegion
 =======================
 
+intltz\_get\_region
+===================
+
 Get the region code associated with the given system time zone ID
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getRegion</span> ( <span
+class="methodparam"><span class="type">string</span> `$zoneId`</span> )
+
+Procedural style:
+
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
+class="methodname">intltz\_get\_region</span> ( <span
 class="methodparam"><span class="type">string</span> `$zoneId`</span> )
 
 **Warning**
@@ -12297,13 +12504,24 @@ Return region or **`FALSE`** on failure.
 IntlTimeZone::getTZDataVersion
 ==============================
 
+intltz\_get\_tz\_data\_version
+==============================
+
 Get the timezone data version currently used by ICU
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">IntlTimeZone::getTZDataVersion</span> ( <span
+class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">string</span> <span
+class="methodname">intltz\_get\_tz\_data\_version</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -12320,13 +12538,24 @@ This function has no parameters.
 IntlTimeZone::getUnknown
 ========================
 
+intltz\_get\_unknown
+====================
+
 Get the "unknown" time zone
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">IntlTimeZone</span>
 <span class="methodname">IntlTimeZone::getUnknown</span> ( <span
+class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">IntlTimeZone</span> <span
+class="methodname">intltz\_get\_unknown</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -12346,14 +12575,27 @@ failure.
 IntlTimeZone::getWindowsID
 ==========================
 
+intltz\_get\_windows\_id
+========================
+
 Translate a system timezone into a Windows timezone
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">IntlTimeZone::getWindowsID</span> ( <span
+class="methodparam"><span class="type">string</span> `$timezone`</span>
+)
+
+Procedural style:
+
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
+class="methodname">intltz\_get\_windows\_id</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 )
 
@@ -12383,14 +12625,27 @@ Returns the Windows timezone or **`FALSE`** on failure.
 IntlTimeZone::hasSameRules
 ==========================
 
+intltz\_has\_same\_rules
+========================
+
 Check if this zone has the same rules and offset as another zone
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">IntlTimeZone::hasSameRules</span> ( <span
 class="methodparam"><span class="type">IntlTimeZone</span>
 `$otherTimeZone`</span> )
+
+Procedural style:
+
+<span class="type">bool</span> <span
+class="methodname">intltz\_has\_same\_rules</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> , <span class="methodparam"><span
+class="type">IntlTimeZone</span> `$otherTimeZone`</span> )
 
 **Warning**
 
@@ -12406,14 +12661,26 @@ available.
 IntlTimeZone::toDateTimeZone
 ============================
 
+intltz\_to\_date\_time\_zone
+============================
+
 Convert to <span class="type">DateTimeZone</span> object
 
 ### Description
+
+Object oriented style (method):
 
 <span class="modifier">public</span> <span
 class="type">DateTimeZone</span> <span
 class="methodname">IntlTimeZone::toDateTimeZone</span> ( <span
 class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">DateTimeZone</span> <span
+class="methodname">intltz\_to\_date\_time\_zone</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 
@@ -12429,13 +12696,25 @@ This function has no parameters.
 IntlTimeZone::useDaylightTime
 =============================
 
+intltz\_use\_daylight\_time
+===========================
+
 Check if this time zone uses daylight savings time
 
 ### Description
 
+Object oriented style (method):
+
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">IntlTimeZone::useDaylightTime</span> ( <span
 class="methodparam">void</span> )
+
+Procedural style:
+
+<span class="type">bool</span> <span
+class="methodname">intltz\_use\_daylight\_time</span> ( <span
+class="methodparam"><span class="type">IntlTimeZone</span>
+`$timezone`</span> )
 
 **Warning**
 

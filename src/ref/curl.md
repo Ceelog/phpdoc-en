@@ -7,19 +7,25 @@ Close a cURL session
 
 <span class="type">void</span> <span
 class="methodname">curl\_close</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> )
+class="type">CurlHandle</span> `$handle`</span> )
 
-Closes a cURL session and frees all resources. The cURL handle, `ch`, is
-also deleted.
+Closes a cURL session and frees all resources. The cURL handle,
+`handle`, is also deleted.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 No value is returned.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -54,20 +60,29 @@ Copy a cURL handle along with all of its preferences
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">CurlHandle</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_copy\_handle</span> ( <span
-class="methodparam"><span class="type">resource</span> `$ch`</span> )
+class="methodparam"><span class="type">CurlHandle</span>
+`$handle`</span> )
 
 Copies a cURL handle keeping the same preferences.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
-Returns a new cURL handle.
+Returns a new cURL handle, or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                                                |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected.                  |
+| 8.0.0   | On success, this function returns a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was returned. |
 
 ### Examples
 
@@ -103,18 +118,24 @@ Return the last error number
 
 <span class="type">int</span> <span
 class="methodname">curl\_errno</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> )
+class="type">CurlHandle</span> `$handle`</span> )
 
 Returns the error number for the last cURL operation.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 Returns the error number or *0* (zero) if no error occurred.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -154,19 +175,25 @@ Return a string containing the last error for the current session
 
 <span class="type">string</span> <span
 class="methodname">curl\_error</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> )
+class="type">CurlHandle</span> `$handle`</span> )
 
 Returns a clear text error message for the last cURL operation.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 Returns the error message or *''* (the empty string) if no error
 occurred.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -207,23 +234,29 @@ URL encodes the given string
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">curl\_escape</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> , <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+class="type">CurlHandle</span> `$handle`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 This function URL encodes the given string according to
 <a href="http://www.faqs.org/rfcs/rfc3986" class="link external">» RFC 3986</a>.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
-`str`  
+`string`  
 The string to be encoded.
 
 ### Return Values
 
 Returns escaped string or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -264,9 +297,10 @@ Perform a cURL session
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">curl\_exec</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> )
+class="type">CurlHandle</span> `$handle`</span> )
 
 Execute the given cURL session.
 
@@ -275,7 +309,7 @@ the options for the session are set.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
@@ -300,6 +334,12 @@ for testing the return value of this function.
 > Note that response status codes which indicate errors (such as *404
 > Not found*) are not regarded as failure. <span
 > class="function">curl\_getinfo</span> can be used to check for these.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -345,18 +385,19 @@ Get information regarding a specific transfer
 
 <span class="type">mixed</span> <span
 class="methodname">curl\_getinfo</span> ( <span
-class="methodparam"><span class="type">resource</span> `$ch`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$opt`</span> \]
-)
+class="methodparam"><span class="type">CurlHandle</span>
+`$handle`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$option`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 Gets information about the last transfer.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
-`opt`  
+`option`  
 This may be one of the following constants:
 
 -   <span class="simpara"> **`CURLINFO_EFFECTIVE_URL`** - Last effective
@@ -523,9 +564,9 @@ This may be one of the following constants:
 
 ### Return Values
 
-If `opt` is given, returns its value. Otherwise, returns an associative
-array with the following elements (which correspond to `opt`), or
-**`FALSE`** on failure:
+If `option` is given, returns its value. Otherwise, returns an
+associative array with the following elements (which correspond to
+`option`), or **`FALSE`** on failure:
 
 -   <span class="simpara"> "url" </span>
 -   <span class="simpara"> "content\_type" </span>
@@ -564,6 +605,8 @@ be retrieved individually with the **`CURLINFO_PRIVATE`** option.
 
 | Version | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected.                                                                                                                                                                                                                                                                                                                                                                                                                                                                         |
+| 8.0.0   | `option` is nullable now; previously, the default was *0*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 | 7.3.0   | Introduced **`CURLINFO_CONTENT_LENGTH_DOWNLOAD_T`**, **`CURLINFO_CONTENT_LENGTH_UPLOAD_T`**, **`CURLINFO_HTTP_VERSION`**, **`CURLINFO_PROTOCOL`**, **`CURLINFO_PROXY_SSL_VERIFYRESULT`**, **`CURLINFO_SCHEME`**, **`CURLINFO_SIZE_DOWNLOAD_T`**, **`CURLINFO_SIZE_UPLOAD_T`**, **`CURLINFO_SPEED_DOWNLOAD_T`**, **`CURLINFO_SPEED_UPLOAD_T`**, **`CURLINFO_APPCONNECT_TIME_T`**, **`CURLINFO_CONNECT_TIME_T`**, **`CURLINFO_FILETIME_T`**, **`CURLINFO_NAMELOOKUP_TIME_T`**, **`CURLINFO_PRETRANSFER_TIME_T`**, **`CURLINFO_REDIRECT_TIME_T`**, **`CURLINFO_STARTTRANSFER_TIME_T`**, **`CURLINFO_TOTAL_TIME_T`**. |
 
 ### Examples
@@ -590,7 +633,7 @@ curl_close($ch);
 ```
 
 **Example \#2 <span class="function">curl\_getinfo</span> example with
-`opt` parameter**
+`option` parameter**
 
 ``` php
 <?php
@@ -630,9 +673,11 @@ Initialize a cURL session
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">CurlHandle</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_init</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$url`<span class="initializer"> =
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$url`<span class="initializer"> =
 **`NULL`**</span></span> \] )
 
 Initializes a new session and return a cURL handle for use with the
@@ -656,6 +701,13 @@ class="function">curl\_setopt</span> function.
 ### Return Values
 
 Returns a cURL handle on success, **`FALSE`** on errors.
+
+### Changelog
+
+| Version | Description                                                                                                                                                |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | On success, this function returns a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was returned. |
+| 8.0.0   | `url` is nullable now.                                                                                                                                     |
 
 ### Examples
 
@@ -692,24 +744,31 @@ Add a normal cURL handle to a cURL multi handle
 
 <span class="type">int</span> <span
 class="methodname">curl\_multi\_add\_handle</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> ,
-<span class="methodparam"><span class="type">resource</span>
-`$ch`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> , <span class="methodparam"><span
+class="type">CurlHandle</span> `$handle`</span> )
 
-Adds the `ch` handle to the multi handle `mh`
+Adds the `handle` handle to the multi handle `multi_handle`
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 Returns 0 on success, or one of the **`CURLM_XXX`** errors code.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected.            |
 
 ### Examples
 
@@ -768,19 +827,26 @@ Close a set of cURL handles
 
 <span class="type">void</span> <span
 class="methodname">curl\_multi\_close</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> )
 
 Closes a set of cURL handles.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
 ### Return Values
 
 No value is returned.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -838,23 +904,29 @@ Return the last multi curl error number
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">curl\_multi\_errno</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> )
 
 Return an integer containing the last multi curl error number.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
 ### Return Values
 
-Return an integer containing the last multi curl error number, or
-**`FALSE`** on failure.
+Return an integer containing the last multi curl error number.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | The function no longer returns **`FALSE`** on failure.                                                                                               |
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
 
@@ -869,16 +941,16 @@ Run the sub-connections of the current cURL handle
 
 <span class="type">int</span> <span
 class="methodname">curl\_multi\_exec</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`&$still_running`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> , <span class="methodparam"><span
+class="type">int</span> `&$still_running`</span> )
 
 Processes each of the handles in the stack. This method can be called
 whether or not a handle needs to read or write data.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
@@ -895,6 +967,12 @@ A cURL code defined in the cURL
 > This only returns errors regarding the whole multi stack. There might
 > still have occurred problems on individual transfers even when this
 > function returns **`CURLM_OK`**.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -953,9 +1031,11 @@ set
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">curl\_multi\_getcontent</span> ( <span
-class="methodparam"><span class="type">resource</span> `$ch`</span> )
+class="methodparam"><span class="type">CurlHandle</span>
+`$handle`</span> )
 
 If **`CURLOPT_RETURNTRANSFER`** is an option that is set for a specific
 handle, then this function will return the content of that cURL handle
@@ -963,13 +1043,19 @@ in the form of a string.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 Return the content of a cURL handle if **`CURLOPT_RETURNTRANSFER`** is
 set.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
 
@@ -982,12 +1068,13 @@ Get information about the current transfers
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">curl\_multi\_info\_read</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`&$msgs_in_queue`<span class="initializer"> = **`NULL`**</span></span>
-\] )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> \[, <span class="methodparam"><span
+class="type">int</span> `&$queued_messages`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 Ask the multi handle if there are any messages or information from the
 individual transfers. Messages may include information such as an error
@@ -995,8 +1082,8 @@ code from the transfer or just the fact that a transfer is completed.
 
 Repeated calls to this function will return a new result each time,
 until a **`FALSE`** is returned as a signal that there is no more to get
-at this point. The integer pointed to with `msgs_in_queue` will contain
-the number of remaining messages after this function was called.
+at this point. The integer pointed to with `queued_messages` will
+contain the number of remaining messages after this function was called.
 
 **Warning**
 
@@ -1005,11 +1092,11 @@ class="function">curl\_multi\_remove\_handle</span>.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
-`msgs_in_queue`  
+`queued_messages`  
 Number of messages that are still in the queue
 
 ### Return Values
@@ -1022,6 +1109,12 @@ failure.
 | *msg*    | The **`CURLMSG_DONE`** constant. Other return values are currently not available.               |
 | *result* | One of the **`CURLE_*`** constants. If everything is OK, the **`CURLE_OK`** will be the result. |
 | *handle* | Resource of type curl indicates the handle which it concerns.                                   |
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -1104,7 +1197,7 @@ Returns a new cURL multi handle
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type">CurlMultiHandle</span> <span
 class="methodname">curl\_multi\_init</span> ( <span
 class="methodparam">void</span> )
 
@@ -1116,7 +1209,13 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a cURL multi handle resource on success, **`FALSE`** on failure.
+Returns a cURL multi handle on success, **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                                                     |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | On success, this function returns a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was returned. |
 
 ### Examples
 
@@ -1174,28 +1273,35 @@ Remove a multi handle from a set of cURL handles
 
 <span class="type">int</span> <span
 class="methodname">curl\_multi\_remove\_handle</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> ,
-<span class="methodparam"><span class="type">resource</span>
-`$ch`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> , <span class="methodparam"><span
+class="type">CurlHandle</span> `$handle`</span> )
 
-Removes a given `ch` handle from the given `mh` handle. When the `ch`
-handle has been removed, it is again perfectly legal to run <span
-class="function">curl\_exec</span> on this handle. Removing the `ch`
-handle while being used, will effectively halt the transfer in progress
-involving that handle.
+Removes a given `handle` handle from the given `multi_handle` handle.
+When the `handle` handle has been removed, it is again perfectly legal
+to run <span class="function">curl\_exec</span> on this handle. Removing
+the `handle` handle while being used, will effectively halt the transfer
+in progress involving that handle.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 Returns 0 on success, or one of the **`CURLM_XXX`** error codes.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected.            |
 
 ### See Also
 
@@ -1212,15 +1318,16 @@ Wait for activity on any curl\_multi connection
 
 <span class="type">int</span> <span
 class="methodname">curl\_multi\_select</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> \[,
-<span class="methodparam"><span class="type">float</span>
-`$timeout`<span class="initializer"> = 1.0</span></span> \] )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> \[, <span class="methodparam"><span
+class="type">float</span> `$timeout`<span class="initializer"> =
+1.0</span></span> \] )
 
 Blocks until there is activity on any of the curl\_multi connections.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 A cURL multi handle returned by <span
 class="function">curl\_multi\_init</span>.
 
@@ -1233,6 +1340,12 @@ On success, returns the number of descriptors contained in the
 descriptor sets. This may be 0 if there was no activity on any of the
 descriptors. On failure, this function will return -1 on a select
 failure (from the underlying select system call).
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
 
@@ -1247,10 +1360,10 @@ Set an option for the cURL multi handle
 
 <span class="type">bool</span> <span
 class="methodname">curl\_multi\_setopt</span> ( <span
-class="methodparam"><span class="type">resource</span> `$mh`</span> ,
-<span class="methodparam"><span class="type">int</span> `$option`</span>
-, <span class="methodparam"><span class="type">mixed</span>
-`$value`</span> )
+class="methodparam"><span class="type">CurlMultiHandle</span>
+`$multi_handle`</span> , <span class="methodparam"><span
+class="type">int</span> `$option`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 **Warning**
 
@@ -1259,7 +1372,7 @@ available.
 
 ### Parameters
 
-`mh`  
+`multi_handle`  
 
 `option`  
 One of the **`CURLMOPT_*`** constants.
@@ -1340,6 +1453,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 | Version | Description                                                                                                                                                                                                        |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected.                                                               |
 | 7.1.0   | Introduced **`CURLMOPT_PUSHFUNCTION`**.                                                                                                                                                                            |
 | 7.0.7   | Introduced **`CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE`**, **`CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE`**, **`CURLMOPT_MAX_HOST_CONNECTIONS`**, **`CURLMOPT_MAX_PIPELINE_LENGTH`** and **`CURLMOPT_MAX_TOTAL_CONNECTIONS`**. |
 
@@ -1350,15 +1464,16 @@ Return string describing error code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">curl\_multi\_strerror</span> ( <span
-class="methodparam"><span class="type">int</span> `$errornum`</span> )
+class="methodparam"><span class="type">int</span> `$error_code`</span> )
 
 Returns a text error message describing the given CURLM error code.
 
 ### Parameters
 
-`errornum`  
+`error_code`  
 One of the
 <a href="http://curl.haxx.se/libcurl/c/libcurl-errors.html" class="link external">» CURLM error codes</a>
 constants.
@@ -1416,8 +1531,8 @@ Pause and unpause a connection
 
 <span class="type">int</span> <span
 class="methodname">curl\_pause</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> , <span
-class="methodparam"><span class="type">int</span> `$bitmask`</span> )
+class="type">CurlHandle</span> `$handle`</span> , <span
+class="methodparam"><span class="type">int</span> `$flags`</span> )
 
 **Warning**
 
@@ -1426,15 +1541,21 @@ available.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
-`bitmask`  
+`flags`  
 One of **`CURLPAUSE_*`** constants.
 
 ### Return Values
 
 Returns an error code (**`CURLE_OK`** for no error).
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 curl\_reset
 ===========
@@ -1445,19 +1566,25 @@ Reset all options of a libcurl session handle
 
 <span class="type">void</span> <span
 class="methodname">curl\_reset</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> )
+class="type">CurlHandle</span> `$handle`</span> )
 
 This function re-initializes all options set on the given cURL handle to
 the default values.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
 No value is returned.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -1503,9 +1630,9 @@ Set multiple options for a cURL transfer
 
 <span class="type">bool</span> <span
 class="methodname">curl\_setopt\_array</span> ( <span
-class="methodparam"><span class="type">resource</span> `$ch`</span> ,
-<span class="methodparam"><span class="type">array</span>
-`$options`</span> )
+class="methodparam"><span class="type">CurlHandle</span>
+`$handle`</span> , <span class="methodparam"><span
+class="type">array</span> `$options`</span> )
 
 Sets multiple options for a cURL session. This function is useful for
 setting a large number of cURL options without repetitively calling
@@ -1513,7 +1640,7 @@ setting a large number of cURL options without repetitively calling
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 `options`  
@@ -1527,6 +1654,12 @@ equivalents.
 Returns **`TRUE`** if all options were successfully set. If an option
 could not be successfully set, **`FALSE`** is immediately returned,
 ignoring any future options in the `options` array.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -1595,7 +1728,7 @@ Set an option for a cURL transfer
 
 <span class="type">bool</span> <span
 class="methodname">curl\_setopt</span> ( <span class="methodparam"><span
-class="type">resource</span> `$ch`</span> , <span
+class="type">CurlHandle</span> `$handle`</span> , <span
 class="methodparam"><span class="type">int</span> `$option`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> )
@@ -1604,7 +1737,7 @@ Sets an option on the given cURL session handle.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
 `option`  
@@ -2601,6 +2734,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 | Version       | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
 |---------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0         | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | 7.3.15, 7.4.3 | Introduced **`CURLOPT_HTTP09_ALLOWED `**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |
 | 7.3.0         | Introduced **`CURLOPT_ABSTRACT_UNIX_SOCKET`**, **`CURLOPT_KEEP_SENDING_ON_ERROR`**, **`CURLOPT_PRE_PROXY`**, **`CURLOPT_PROXY_CAINFO`**, **`CURLOPT_PROXY_CAPATH`**, **`CURLOPT_PROXY_CRLFILE`**, **`CURLOPT_PROXY_KEYPASSWD`**, **`CURLOPT_PROXY_PINNEDPUBLICKEY`**, **`CURLOPT_PROXY_SSLCERT`**, **`CURLOPT_PROXY_SSLCERTTYPE`**, **`CURLOPT_PROXY_SSL_CIPHER_LIST`**, **`CURLOPT_PROXY_SSLKEY`**, **`CURLOPT_PROXY_SSLKEYTYPE`**, **`CURLOPT_PROXY_SSL_OPTIONS`**, **`CURLOPT_PROXY_SSL_VERIFYHOST`**, **`CURLOPT_PROXY_SSL_VERIFYPEER`**, **`CURLOPT_PROXY_SSLVERSION`**, **`CURLOPT_PROXY_TLSAUTH_PASSWORD`**, **`CURLOPT_PROXY_TLSAUTH_TYPE`**, **`CURLOPT_PROXY_TLSAUTH_USERNAME`**, **`CURLOPT_SOCKS5_AUTH`**, **`CURLOPT_SUPPRESS_CONNECT_HEADERS`**, **`CURLOPT_DISALLOW_USERNAME_IN_URL`**, **`CURLOPT_DNS_SHUFFLE_ADDRESSES`**, **`CURLOPT_HAPPY_EYEBALLS_TIMEOUT_MS`**, **`CURLOPT_HAPROXYPROTOCOL`**, **`CURLOPT_PROXY_TLS13_CIPHERS`**, **`CURLOPT_SSH_COMPRESSION`**, **`CURLOPT_TIMEVALUE_LARGE`** and **`CURLOPT_TLS13_CIPHERS`**.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
 | 7.0.7         | Introduced **`CURL_HTTP_VERSION_2`**, **`CURL_HTTP_VERSION_2_PRIOR_KNOWLEDGE`**, **`CURL_HTTP_VERSION_2TLS`**, **`CURL_REDIR_POST_301`**, **`CURL_REDIR_POST_302`**, **`CURL_REDIR_POST_303`**, **`CURL_REDIR_POST_ALL`**, **`CURL_VERSION_KERBEROS5`**, **`CURL_VERSION_PSL`**, **`CURL_VERSION_UNIX_SOCKETS`**, **`CURLAUTH_NEGOTIATE`**, **`CURLAUTH_NTLM_WB`**, **`CURLFTP_CREATE_DIR`**, **`CURLFTP_CREATE_DIR_NONE`**, **`CURLFTP_CREATE_DIR_RETRY`**, **`CURLHEADER_SEPARATE`**, **`CURLHEADER_UNIFIED`**, **`CURLMOPT_CHUNK_LENGTH_PENALTY_SIZE`**, **`CURLMOPT_CONTENT_LENGTH_PENALTY_SIZE`**, **`CURLMOPT_MAX_HOST_CONNECTIONS`**, **`CURLMOPT_MAX_PIPELINE_LENGTH`**, **`CURLMOPT_MAX_TOTAL_CONNECTIONS`**, **`CURLOPT_CONNECT_TO`**, **`CURLOPT_DEFAULT_PROTOCOL`**, **`CURLOPT_DNS_INTERFACE`**, **`CURLOPT_DNS_LOCAL_IP4`**, **`CURLOPT_DNS_LOCAL_IP6`**, **`CURLOPT_EXPECT_100_TIMEOUT_MS`**, **`CURLOPT_HEADEROPT`**, **`CURLOPT_LOGIN_OPTIONS`**, **`CURLOPT_PATH_AS_IS`**, **`CURLOPT_PINNEDPUBLICKEY`**, **`CURLOPT_PIPEWAIT`**, **`CURLOPT_PROXY_SERVICE_NAME`**, **`CURLOPT_PROXYHEADER`**, **`CURLOPT_SASL_IR`**, **`CURLOPT_SERVICE_NAME`**, **`CURLOPT_SSL_ENABLE_ALPN`**, **`CURLOPT_SSL_ENABLE_NPN`**, **`CURLOPT_SSL_FALSESTART`**, **`CURLOPT_SSL_VERIFYSTATUS`**, **`CURLOPT_STREAM_WEIGHT`**, **`CURLOPT_TCP_FASTOPEN`**, **`CURLOPT_TFTP_NO_OPTIONS`**, **`CURLOPT_UNIX_SOCKET_PATH`**, **`CURLOPT_XOAUTH2_BEARER`**, **`CURLPROTO_SMB`**, **`CURLPROTO_SMBS`**, **`CURLPROXY_HTTP_1_0`**, **`CURLSSH_AUTH_AGENT`** and **`CURLSSLOPT_NO_REVOKE`**. |
@@ -2647,19 +2781,26 @@ Close a cURL share handle
 
 <span class="type">void</span> <span
 class="methodname">curl\_share\_close</span> ( <span
-class="methodparam"><span class="type">resource</span> `$sh`</span> )
+class="methodparam"><span class="type">CurlShareHandle</span>
+`$share_handle`</span> )
 
 Closes a cURL share handle and frees all resources.
 
 ### Parameters
 
-`sh`  
+`share_handle`  
 A cURL share handle returned by <span
-class="function">curl\_share\_init</span>
+class="function">curl\_share\_init</span>.
 
 ### Return Values
 
 No value is returned.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `share_handle` expects a <span class="classname">CurlShareHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -2710,16 +2851,16 @@ Return the last share curl error number
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">curl\_share\_errno</span> ( <span
-class="methodparam"><span class="type">resource</span> `$sh`</span> )
+class="methodparam"><span class="type">CurlShareHandle</span>
+`$share_handle`</span> )
 
 Return an integer containing the last share curl error number.
 
 ### Parameters
 
-`sh`  
+`share_handle`  
 A cURL share handle returned by <span
 class="function">curl\_share\_init</span>.
 
@@ -2727,6 +2868,13 @@ class="function">curl\_share\_init</span>.
 
 Returns an integer containing the last share curl error number, or
 **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | The function no longer returns **`FALSE`** on failure.                                                                                               |
+| 8.0.0   | `share_handle` expects a <span class="classname">CurlShareHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
 
@@ -2739,7 +2887,7 @@ Initialize a cURL share handle
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type">CurlShareHandle</span> <span
 class="methodname">curl\_share\_init</span> ( <span
 class="methodparam">void</span> )
 
@@ -2751,7 +2899,13 @@ This function has no parameters.
 
 ### Return Values
 
-Returns resource of type "cURL Share Handle".
+Returns a cURL share handle.
+
+### Changelog
+
+| Version | Description                                                                                                                                         |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function returns a <span class="classname">CurlShareHandle</span> instance now; previously, a <span class="type">resource</span> was returned. |
 
 ### Examples
 
@@ -2804,16 +2958,16 @@ Set an option for a cURL share handle
 
 <span class="type">bool</span> <span
 class="methodname">curl\_share\_setopt</span> ( <span
-class="methodparam"><span class="type">resource</span> `$sh`</span> ,
-<span class="methodparam"><span class="type">int</span> `$option`</span>
-, <span class="methodparam"><span class="type">mixed</span>
-`$value`</span> )
+class="methodparam"><span class="type">CurlShareHandle</span>
+`$share_handle`</span> , <span class="methodparam"><span
+class="type">int</span> `$option`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 Sets an option on the given cURL share handle.
 
 ### Parameters
 
-`sh`  
+`share_handle`  
 A cURL share handle returned by <span
 class="function">curl\_share\_init</span>.
 
@@ -2833,6 +2987,12 @@ class="function">curl\_share\_init</span>.
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `share_handle` expects a <span class="classname">CurlShareHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -2879,15 +3039,16 @@ Return string describing the given error code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">curl\_share\_strerror</span> ( <span
-class="methodparam"><span class="type">int</span> `$errornum`</span> )
+class="methodparam"><span class="type">int</span> `$error_code`</span> )
 
 Returns a text error message describing the given error code.
 
 ### Parameters
 
-`errornum`  
+`error_code`  
 One of the
 <a href="http://curl.haxx.se/libcurl/c/libcurl-errors.html" class="link external">» cURL error codes</a>
 constants.
@@ -2908,15 +3069,16 @@ Return string describing the given error code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">curl\_strerror</span> ( <span
-class="methodparam"><span class="type">int</span> `$errornum`</span> )
+class="methodparam"><span class="type">int</span> `$error_code`</span> )
 
 Returns a text error message describing the given error code.
 
 ### Parameters
 
-`errornum`  
+`error_code`  
 One of the
 <a href="http://curl.haxx.se/libcurl/c/libcurl-errors.html" class="link external">» cURL error codes</a>
 constants.
@@ -2969,23 +3131,29 @@ Decodes the given URL encoded string
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">curl\_unescape</span> ( <span
-class="methodparam"><span class="type">resource</span> `$ch`</span> ,
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-)
+class="methodparam"><span class="type">CurlHandle</span>
+`$handle`</span> , <span class="methodparam"><span
+class="type">string</span> `$string`</span> )
 
 This function decodes the given URL encoded string.
 
 ### Parameters
 
-`ch`  
+`handle`  
 A cURL handle returned by <span class="function">curl\_init</span>.
 
-`str`  
+`string`  
 The URL encoded string to be decoded.
 
 ### Return Values
 
 Returns decoded string or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                               |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `handle` expects a <span class="classname">CurlHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples
 
@@ -3035,10 +3203,10 @@ Gets cURL version information
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">curl\_version</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$age`<span
-class="initializer"> = CURLVERSION\_NOW</span></span> \] )
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
+class="methodname">curl\_version</span> ( <span
+class="methodparam">void</span> )
 
 Returns information about the cURL version.
 

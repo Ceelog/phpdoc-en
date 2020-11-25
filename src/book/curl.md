@@ -90,14 +90,16 @@ Client URL Library
         — Set MIME type
     -   [CURLFile::setPostFilename](/class/curlfile.html#CURLFile::setPostFilename)
         — Set file name for POST
-    -   [CURLFile::\_\_wakeup](/class/curlfile.html#CURLFile::__wakeup)
-        — Unserialization handler
 
 Introduction
 ------------
 
 <span class="classname">CURLFile</span> should be used to upload a file
 with **`CURLOPT_POSTFIELDS`**.
+
+Unserialization of <span class="classname">CURLFile</span> instances is
+not allowed. As of PHP 7.4.0, serialization is forbidden in the first
+place.
 
 Class synopsis
 --------------
@@ -122,10 +124,13 @@ Class synopsis
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$mimetype`<span class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$postname`<span
-class="initializer"> = ""</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+\]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getFilename</span> ( <span
@@ -141,16 +146,13 @@ class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setMimeType</span> ( <span
-class="methodparam"><span class="type">string</span> `$mime`</span> )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">setPostFilename</span> ( <span
-class="methodparam"><span class="type">string</span> `$postname`</span>
+class="methodparam"><span class="type">string</span> `$mime_type`</span>
 )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">\_\_wakeup</span> ( <span
-class="methodparam">void</span> )
+<span class="methodname">setPostFilename</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$posted_filename`</span> )
 
 }
 
@@ -187,20 +189,26 @@ Object oriented style
 <span class="modifier">public</span> <span
 class="methodname">CURLFile::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$mimetype`<span class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$postname`<span
-class="initializer"> = ""</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+\]\] )
 
 Procedural style
 
 <span class="type">CURLFile</span> <span
 class="methodname">curl\_file\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$mimetype`<span class="initializer"> = ""</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$postname`<span
-class="initializer"> = ""</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+\]\] )
 
 Creates a <span class="classname">CURLFile</span> object, used to upload
 a file with **`CURLOPT_POSTFIELDS`**.
@@ -210,15 +218,21 @@ a file with **`CURLOPT_POSTFIELDS`**.
 `filename`  
 Path to the file which will be uploaded.
 
-`mimetype`  
+`mime_type`  
 Mimetype of the file.
 
-`postname`  
+`posted_filename`  
 Name of the file to be used in the upload data.
 
 ### Return Values
 
 Returns a <span class="classname">CURLFile</span> object.
+
+### Changelog
+
+| Version | Description                                                                           |
+|---------|---------------------------------------------------------------------------------------|
+| 8.0.0   | `mime_type` and `posted_filename` are nullable now; previously their default was *0*. |
 
 ### Examples
 
@@ -470,11 +484,12 @@ Set MIME type
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">CURLFile::setMimeType</span> ( <span
-class="methodparam"><span class="type">string</span> `$mime`</span> )
+class="methodparam"><span class="type">string</span> `$mime_type`</span>
+)
 
 ### Parameters
 
-`mime`  
+`mime_type`  
 MIME type to be used in POST data.
 
 ### Return Values
@@ -490,37 +505,14 @@ Set file name for POST
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">CURLFile::setPostFilename</span> ( <span
-class="methodparam"><span class="type">string</span> `$postname`</span>
-)
+class="methodparam"><span class="type">string</span>
+`$posted_filename`</span> )
 
 ### Parameters
 
-`postname`  
+`posted_filename`  
 Filename to be used in POST data.
 
 ### Return Values
 
 No value is returned.
-
-CURLFile::\_\_wakeup
-====================
-
-Unserialization handler
-
-### Description
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">CURLFile::\_\_wakeup</span> ( <span
-class="methodparam">void</span> )
-
-### Parameters
-
-This function has no parameters.
-
-### Return Values
-
-No value is returned.
-
-### Errors/Exceptions
-
-CURLFile is not serializable.

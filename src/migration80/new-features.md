@@ -344,10 +344,12 @@ representation, while being more memory efficient and faster.
     <span class="methodname">ZipArchive::setMtimeIndex</span> to set the
     modification time of an entry.
 
--   New <span class="methodname">ZipArchive::setProgressCallback</span>
-    to provide updates during archive close.
+-   New <span
+    class="methodname">ZipArchive::registerProgressCallback</span> to
+    provide updates during archive close.
 
--   New <span class="methodname">ZipArchive::setCancelCallback</span> to
+-   New <span
+    class="methodname">ZipArchive::registerCancelCallback</span> to
     allow cancellation during archive close.
 
 -   New <span class="methodname">ZipArchive::replaceFile</span> to
