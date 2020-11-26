@@ -767,6 +767,14 @@ The `php.ini` directive
 <a href="/book/pdo.html#" class="link">pdo_odbc.db2_instance_name</a>
 has been removed.
 
+### PDO MySQL
+
+<span class="methodname">PDO::inTransaction</span> now reports the
+actual transaction state of the connection, rather than an approximation
+maintained by PDO. If a query that is subject to "implicit commit" is
+executed, <span class="methodname">PDO::inTransaction</span> will
+subsequently return **`FALSE`**, as a transaction is no longer active.
+
 ### PostgreSQL
 
 -   The deprecated <span class="function">pg\_connect</span> syntax
