@@ -56,9 +56,15 @@ that's also titled "Why don’t my numbers add up?"
 
 ### Converting to float
 
-For information on converting <span class="type">string</span>s to <span
-class="type">float</span>, see
-<a href="/language/types/string.html#language.types.string.conversion" class="link">String conversion to numbers</a>.
+#### From strings
+
+If the string is
+<a href="/language/types/numeric-strings.html" class="link">numeric</a>
+or leading numeric then it will resolve to the corresponding float
+value, otherwise it is converted to zero (*0*).
+
+#### From other types
+
 For values of other types, the conversion is performed by converting the
 value to <span class="type">int</span> first and then to <span
 class="type">float</span>. See
@@ -67,8 +73,9 @@ for more information.
 
 > **Note**:
 >
-> A notice is thrown if an <span class="type">object</span> is converted
-> to <span class="type">float</span>.
+> As certain types have undefined behavior when converting to <span
+> class="type">int</span>, this is also the case when converting to
+> <span class="type">float</span>.
 
 ### Comparing floats
 

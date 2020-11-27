@@ -19,13 +19,22 @@ as they show examples of various type related comparisons.
 | $a \>= $b   | Greater than or equal to | **`TRUE`** if `$a` is greater than or equal to `$b`.                                                                                             |
 | $a \<=\> $b | Spaceship                | An <span class="type">int</span> less than, equal to, or greater than zero when `$a` is less than, equal to, or greater than `$b`, respectively. |
 
-If you compare a number with a string or the comparison involves
-numerical strings, then each string is
-<a href="/language/types/string.html#language.types.string.conversion" class="link">converted to a number</a>
-and the comparison performed numerically. These rules also apply to the
+If both operands are
+<a href="/language/types/numeric-strings.html" class="link">numeric strings</a>,
+or one operand is a number and the other one is a
+<a href="/language/types/numeric-strings.html" class="link">numeric string</a>,
+then the comparison is done numerically. These rules also apply to the
 <a href="/control-structures/switch.html" class="link">switch</a>
 statement. The type conversion does not take place when the comparison
-is === or !== as this involves comparing the type as well as the value.
+is *===* or *!==* as this involves comparing the type as well as the
+value.
+
+**Warning**
+
+Prior to PHP 8.0.0, if a <span class="type">string</span> is compared to
+a number or a numeric string than the <span class="type">string</span>
+was converted to a number before performing the comparison. This can
+lead to surprising results as can be seen with the following example:
 
 ``` php
 <?php

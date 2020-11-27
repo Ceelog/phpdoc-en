@@ -2179,11 +2179,6 @@ Returns the rounded value of `val` to specified `precision` (number of
 digits after the decimal point). `precision` can also be negative or
 zero (default).
 
-> **Note**: <span class="simpara"> PHP doesn't handle strings like
-> *"12,300.2"* correctly by default. See
-> <a href="/language/types/string.html#language.types.string.conversion" class="link">converting from strings</a>.
-> </span>
-
 ### Parameters
 
 `val`  

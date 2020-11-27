@@ -463,7 +463,7 @@ before it is blacklisted.
 Maximum number of times the compilation of a side trace is attempted
 before it is blacklisted.
 
-`opcache.jit_max_loops_unroll` <span class="type">int</span>  
+`opcache.jit_max_loop_unrolls` <span class="type">int</span>  
 Maximum number of attempts to unroll a loop in a side trace, trying to
 reach the root trace and close the outer loop.
 

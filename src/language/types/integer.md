@@ -178,8 +178,10 @@ See also the
 
 #### From strings
 
-See
-<a href="/language/types/string.html#language.types.string.conversion" class="link">String conversion to numbers</a>
+If the string is
+<a href="/language/types/numeric-strings.html" class="link">numeric</a>
+or leading numeric then it will resolve to the corresponding integer
+value, otherwise it is converted to zero (*0*).
 
 #### From <span class="type">NULL</span>
 

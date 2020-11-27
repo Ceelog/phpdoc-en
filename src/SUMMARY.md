@@ -74,6 +74,7 @@
     * [Integers](language/types/integer.md)
     * [Floating point numbers](language/types/float.md)
     * [Strings](language/types/string.md)
+    * [Numeric strings](language/types/numeric-strings.md)
     * [Arrays](language/types/array.md)
     * [Iterables](language/types/iterable.md)
     * [Objects](language/types/object.md)

@@ -731,8 +731,9 @@ using exponential notation (*4.1E+6*).
 
 > **Note**:
 >
-> The decimal point character is defined in the script's locale
-> (category LC\_NUMERIC). See the <span
+> As of PHP 8.0.0, the decimal point character is always *.*. Prior to
+> PHP 8.0.0, the decimal point character is defined in the script's
+> locale (category LC\_NUMERIC). See the <span
 > class="function">setlocale</span> function.
 
 <span class="type">Array</span>s are always converted to the <span
@@ -772,56 +773,6 @@ Most PHP values can also be converted to <span
 class="type">string</span>s for permanent storage. This method is called
 serialization, and is performed by the <span
 class="function">serialize</span> function.
-
-### String conversion to numbers
-
-When a <span class="type">string</span> is evaluated in a numeric
-context, the resulting value and type are determined as follows.
-
-If the <span class="type">string</span> does not contain any of the
-characters '.', 'e', or 'E' and the numeric value fits into integer type
-limits (as defined by **`PHP_INT_MAX`**), the <span
-class="type">string</span> will be evaluated as an <span
-class="type">int</span>. In all other cases it will be evaluated as a
-<span class="type">float</span>.
-
-The value is given by the initial portion of the <span
-class="type">string</span>. If the <span class="type">string</span>
-starts with valid numeric data, this will be the value used. Otherwise,
-the value will be 0 (zero). Valid numeric data is an optional sign,
-followed by one or more digits (optionally containing a decimal point),
-followed by an optional exponent. The exponent is an 'e' or 'E' followed
-by one or more digits.
-
-``` php
-<?php
-$foo = 1 + "10.5";                // $foo is float (11.5)
-$foo = 1 + "-1.3e3";              // $foo is float (-1299)
-$foo = 1 + "bob-1.3e3";           // $foo is integer (1)
-$foo = 1 + "bob3";                // $foo is integer (1)
-$foo = 1 + "10 Small Pigs";       // $foo is integer (11)
-$foo = 4 + "10.2 Little Piggies"; // $foo is float (14.2)
-$foo = "10.0 pigs " + 1;          // $foo is float (11)
-$foo = "10.0 pigs " + 1.0;        // $foo is float (11)
-?>
-```
-
-For more information on this conversion, see the Unix manual page for
-strtod(3).
-
-To test any of the examples in this section, cut and paste the examples
-and insert the following line to see what's going on:
-
-``` php
-<?php
-echo "\$foo==$foo; type is " . gettype ($foo) . "<br />\n";
-?>
-```
-
-Do not expect to get the code of one character by converting it to
-integer, as is done in C. Use the <span class="function">ord</span> and
-<span class="function">chr</span> functions to convert between ASCII
-codes and characters.
 
 ### Details of the String Type
 

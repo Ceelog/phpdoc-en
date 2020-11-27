@@ -28,8 +28,9 @@ $foo = 5 * "10 Small Pigs";     // $foo is integer (50)
 ?>
 ```
 
-If the last two examples above seem odd, see
-<a href="/language/types/string.html#language.types.string.conversion" class="link">String conversion to numbers</a>.
+If the last two examples above seem odd, see how
+<a href="/language/types/numeric-strings.html" class="link">numeric strings</a>
+convert to integers.
 
 To force a variable to be evaluated as a certain type, see the section
 on

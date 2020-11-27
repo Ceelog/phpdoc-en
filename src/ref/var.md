@@ -1249,11 +1249,8 @@ Finds whether a variable is a number or a numeric string
 class="methodname">is\_numeric</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> )
 
-Finds whether the given variable is numeric. Numeric strings consist of
-optional whitespace, optional sign, any number of digits, optional
-decimal part and optional exponential part. Thus *+0123.45e6* is a valid
-numeric value. Hexadecimal (e.g. *0xf4c3b00c*) and binary (e.g.
-*0b10100111001*) notation is not allowed.
+Determines if the given variable is a number or a
+<a href="/language/types/numeric-strings.html" class="link">numeric string</a>.
 
 ### Parameters
 
@@ -1262,8 +1259,9 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a number or a numeric string, **`FALSE`**
-otherwise.
+Returns **`TRUE`** if `var` is a number or a
+<a href="/language/types/numeric-strings.html" class="link">numeric string</a>,
+**`FALSE`** otherwise.
 
 ### Examples
 
@@ -1316,14 +1314,9 @@ The above example will output:
     9.1 is numeric
     NULL is NOT numeric
 
-### Changelog
-
-| Version | Description                                                                                                                                                            |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.0.0   | Strings in hexadecimal (e.g. *0xf4c3b00c*) notation are no longer regarded as numeric strings, i.e. <span class="function">is\_numeric</span> returns **`FALSE`** now. |
-
 ### See Also
 
+-   <a href="/language/types/numeric-strings.html" class="link">Numeric strings</a>
 -   <span class="function">ctype\_digit</span>
 -   <span class="function">is\_bool</span>
 -   <span class="function">is\_null</span>

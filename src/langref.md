@@ -15,6 +15,7 @@ Language Reference
     -   [Integers](/language/types/integer.html)
     -   [Floating point numbers](/language/types/float.html)
     -   [Strings](/language/types/string.html)
+    -   [Numeric strings](/language/types/numeric-strings.html)
     -   [Arrays](/language/types/array.html)
     -   [Iterables](/language/types/iterable.html)
     -   [Objects](/language/types/object.html)
