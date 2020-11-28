@@ -5,7 +5,8 @@ Returns the current version of the Apache Solr extension
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">solr\_get\_version</span> ( <span
 class="methodparam">void</span> )
 

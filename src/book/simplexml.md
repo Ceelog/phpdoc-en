@@ -118,8 +118,9 @@ class="methodparam"><span class="type">string</span> `$value`</span> \[,
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \] )
 
-<span class="modifier">public</span> <span
-class="type">SimpleXMLElement</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SimpleXMLElement</span><span
+class="type">null</span></span> <span
 class="methodname">attributes</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$ns`<span class="initializer"> =
 **`NULL`**</span></span> \[, <span class="methodparam"><span
@@ -163,8 +164,9 @@ class="methodparam"><span class="type">string</span> `$prefix`</span> ,
 <span class="methodname">\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">xpath</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">xpath</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> )
 
 }
@@ -496,8 +498,9 @@ Identifies an element's attributes
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">SimpleXMLElement</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SimpleXMLElement</span><span
+class="type">null</span></span> <span
 class="methodname">SimpleXMLElement::attributes</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
@@ -1225,8 +1228,9 @@ Runs XPath query on XML data
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SimpleXMLElement::xpath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SimpleXMLElement::xpath</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> )
 
 The *xpath* method searches the SimpleXML node for children matching the
@@ -1378,8 +1382,9 @@ class="type">string</span> `$namespace`</span> \]\] )
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \] )
 
-<span class="modifier">public</span> <span
-class="type">SimpleXMLElement</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">SimpleXMLElement</span><span
+class="type">null</span></span> <span
 class="methodname">SimpleXMLElement::attributes</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`<span
 class="initializer"> = **`NULL`**</span></span> \[, <span
@@ -1424,8 +1429,9 @@ class="type">string</span> `$ns`</span> )
 <span class="methodname">SimpleXMLElement::\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SimpleXMLElement::xpath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SimpleXMLElement::xpath</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> )
 
 }

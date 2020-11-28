@@ -268,7 +268,8 @@ Read from an open directory entry
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">zip\_entry\_read</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$zip_entry`</span> \[, <span class="methodparam"><span
@@ -350,7 +351,8 @@ Read next entry in a ZIP file archive
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">zip\_read</span> ( <span class="methodparam"><span
 class="type">resource</span> `$zip`</span> )
 

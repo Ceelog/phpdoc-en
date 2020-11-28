@@ -5,7 +5,8 @@ Calculates the match score between two fuzzy hash signatures
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ssdeep\_fuzzy\_compare</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$signature1`</span> , <span class="methodparam"><span
@@ -34,7 +35,8 @@ Create a fuzzy hash from a file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ssdeep\_fuzzy\_hash\_filename</span> ( <span
 class="methodparam"><span class="type">string</span> `$file_name`</span>
 )
@@ -60,7 +62,8 @@ Create a fuzzy hash from a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ssdeep\_fuzzy\_hash</span> ( <span
 class="methodparam"><span class="type">string</span> `$to_hash`</span> )
 

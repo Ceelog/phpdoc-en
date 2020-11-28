@@ -477,7 +477,8 @@ Open Internet or Unix domain socket connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fsockopen</span> ( <span class="methodparam"><span
 class="type">string</span> `$hostname`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
@@ -631,7 +632,8 @@ Get the Internet host name corresponding to a given IP address
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gethostbyaddr</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$ip_address`</span> )
@@ -717,7 +719,8 @@ Get a list of IPv4 addresses corresponding to a given Internet host name
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gethostbynamel</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -768,7 +771,8 @@ Gets the host name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gethostname</span> ( <span
 class="methodparam">void</span> )
 
@@ -939,7 +943,8 @@ Get port number associated with an Internet service and protocol
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">getservbyname</span> ( <span
 class="methodparam"><span class="type">string</span> `$service`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1671,7 +1676,8 @@ representation
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inet\_pton</span> ( <span class="methodparam"><span
 class="type">string</span> `$address`</span> )
 
@@ -1716,8 +1722,9 @@ into a long integer
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">ip2long</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">ip2long</span>
+( <span class="methodparam"><span class="type">string</span>
 `$ip_address`</span> )
 
 The function <span class="function">ip2long</span> generates a long

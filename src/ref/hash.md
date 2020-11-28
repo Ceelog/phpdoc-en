@@ -341,7 +341,8 @@ Generate a HKDF key derivation of a supplied key input
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">hash\_hkdf</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,

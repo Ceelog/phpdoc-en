@@ -995,7 +995,8 @@ Format a local time/date
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">date</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">date</span> (
 <span class="methodparam"><span class="type">string</span>
 `$format`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timestamp`<span class="initializer"> =
@@ -1299,7 +1300,8 @@ Format a GMT/UTC date/time
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">gmdate</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">gmdate</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$format`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timestamp`<span class="initializer"> =
@@ -1801,8 +1803,9 @@ Get Unix timestamp for a date
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mktime</span> (\[
-<span class="methodparam"><span class="type">int</span> `$hour`<span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">mktime</span>
+(\[ <span class="methodparam"><span class="type">int</span> `$hour`<span
 class="initializer"> = date("H")</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$minute`<span
 class="initializer"> = date("i")</span></span> \[, <span
@@ -1981,7 +1984,8 @@ Format a local time/date according to locale settings
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">strftime</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$timestamp`<span
@@ -2477,11 +2481,12 @@ timestamp
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strtotime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$datetime`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$now`<span class="initializer"> =
-time()</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">strtotime</span> ( <span class="methodparam"><span
+class="type">string</span> `$datetime`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$now`<span
+class="initializer"> = time()</span></span> \] )
 
 The function expects to be given a string containing an English date
 format and will try to parse that format into a Unix timestamp (the

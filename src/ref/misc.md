@@ -1146,7 +1146,8 @@ Convert string from one codepage to another
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">sapi\_windows\_cp\_conv</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">string</span></span>
@@ -1188,24 +1189,29 @@ given, or if the subject is not valid for `in_codepage`.
 sapi\_windows\_cp\_get
 ======================
 
-Get process codepage
+Get current codepage
 
 ### Description
 
 <span class="type">int</span> <span
-class="methodname">sapi\_windows\_cp\_get</span> ( <span
-class="methodparam"><span class="type">string</span> `$kind`</span> )
+class="methodname">sapi\_windows\_cp\_get</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$kind`<span
+class="initializer"> = ""</span></span> \] )
 
-Get the identifier of the codepage of the current process.
+Gets the current codepage.
 
 ### Parameters
 
 `kind`  
-The kind of codepage: either *'ansi'* or *'oem'*.
+The kind of operating system codepage to get, either *'ansi'* or
+*'oem'*. Any other value refers to the current codepage of the process.
 
 ### Return Values
 
-Returns the codepage identifier.
+If `kind` is *'ansi'*, the current ANSI code page of the operating
+system is returned. If `kind` is *'oem'*, the current OEM code page of
+the operating system is returned. Otherwise, the current codepage of the
+process is returned.
 
 ### See Also
 
@@ -1530,7 +1536,8 @@ Delay execution
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">sleep</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">sleep</span> (
 <span class="methodparam"><span class="type">int</span>
 `$seconds`</span> )
 
@@ -2096,7 +2103,7 @@ The above example will output:
 -   [sapi\_windows\_cp\_conv](/ref/misc.html#sapi_windows_cp_conv) —
     Convert string from one codepage to another
 -   [sapi\_windows\_cp\_get](/ref/misc.html#sapi_windows_cp_get) — Get
-    process codepage
+    current codepage
 -   [sapi\_windows\_cp\_is\_utf8](/ref/misc.html#sapi_windows_cp_is_utf8)
     — Indicates whether the codepage is UTF-8 compatible
 -   [sapi\_windows\_cp\_set](/ref/misc.html#sapi_windows_cp_set) — Set

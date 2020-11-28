@@ -1340,7 +1340,8 @@ Fetch a row of result into an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ingres\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1436,7 +1437,8 @@ Fetch a row of result into an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ingres\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1507,7 +1509,8 @@ Fetch a row of result into an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">ingres\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1578,7 +1581,8 @@ Get the return value from a procedure call
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">null</span></span> <span
 class="methodname">ingres\_fetch\_proc\_return</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1647,7 +1651,8 @@ Fetch a row of result into an enumerated array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ingres\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )

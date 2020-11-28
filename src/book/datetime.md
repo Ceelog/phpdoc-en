@@ -580,7 +580,8 @@ class="methodparam"><span class="type">DateTimeZone</span>
 
 Procedural style
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">date\_create</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
@@ -3255,7 +3256,8 @@ class="methodparam"><span class="type">string</span> `$timezone`</span>
 
 Procedural style
 
-<span class="type">DateTimeZone</span> <span
+<span class="type"><span class="type">DateTimeZone</span><span
+class="type">false</span></span> <span
 class="methodname">timezone\_open</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 )
@@ -4220,8 +4222,9 @@ class="type">DateInterval</span> <span
 class="methodname">getDateInterval</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">getEndDate</span> ( <span
 class="methodparam">void</span> )
 
@@ -4460,8 +4463,9 @@ Gets the end date
 
 Object oriented style
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">DatePeriod::getEndDate</span> ( <span
 class="methodparam">void</span> )
 

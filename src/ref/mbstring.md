@@ -325,7 +325,8 @@ Convert character code in variable(s)
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_convert\_variables</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$to_encoding`</span> , <span class="methodparam"><span
@@ -541,7 +542,8 @@ Detect character encoding
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_detect\_encoding</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> \[,
 <span class="methodparam"><span class="type">mixed</span>
@@ -983,7 +985,8 @@ using a callback
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_replace\_callback</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">callable</span>
@@ -1105,7 +1108,8 @@ Replace regular expression with multibyte support
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1212,7 +1216,8 @@ Retrieve the result from the last multibyte regular expression match
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_getregs</span> ( <span
 class="methodparam">void</span> )
 
@@ -1305,7 +1310,8 @@ expression for a predefined multibyte string
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_pos</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -1356,7 +1362,8 @@ Returns the matched part of a multibyte regular expression
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_regs</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$pattern`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -1491,11 +1498,13 @@ Regular expression match with multibyte support
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_ereg</span> (
-<span class="methodparam"><span class="type">string</span>
-`$pattern`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">mb\_ereg</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">array</span>
+`&$regs`</span> \] )
 
 Executes the regular expression match with multibyte support.
 
@@ -1553,7 +1562,8 @@ Replace regular expression with multibyte support ignoring case
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_eregi\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1619,11 +1629,13 @@ Regular expression match ignoring case with multibyte support
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_eregi</span>
-( <span class="methodparam"><span class="type">string</span>
-`$pattern`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">mb\_eregi</span> ( <span class="methodparam"><span
+class="type">string</span> `$pattern`</span> , <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">array</span>
+`&$regs`</span> \] )
 
 Executes the case insensitive regular expression match with multibyte
 support.
@@ -2629,7 +2641,8 @@ insensitive
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_stripos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -2685,7 +2698,8 @@ Finds first occurrence of a string within another, case insensitive
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_stristr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -2839,7 +2853,8 @@ Finds the last occurrence of a character in a string within another
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrchr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -2889,7 +2904,8 @@ case insensitive
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrichr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -2940,7 +2956,8 @@ insensitive
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strripos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -2990,7 +3007,8 @@ Find position of last occurrence of a string in a string
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrpos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
@@ -3049,7 +3067,8 @@ Finds first occurrence of a string within another
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strstr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>

@@ -339,10 +339,9 @@ The above example will output:
 
 ### ::class
 
-Since PHP 5.5, the *class* keyword is also used for class name
-resolution. You can get a string containing the fully qualified name of
-the *ClassName* class by using *ClassName::class*. This is particularly
-useful with
+The *class* keyword is also used for class name resolution. You can get
+a string containing the fully qualified name of the *ClassName* class by
+using *ClassName::class*. This is particularly useful with
 <a href="/language/namespaces.html" class="link">namespaced</a> classes.
 
 **Example \#10 Class name resolution**
@@ -369,3 +368,36 @@ The above example will output:
 > created no autoloading has happened yet. As a consequence, class names
 > are expanded even if the class does not exist. No error is issued in
 > that case.
+>
+> **Example \#11 Missing class name resolution**
+>
+> ``` php
+> <?php
+> print Some\Class\DoesNot\Exist::class;
+> ?>
+> ```
+>
+> The above example will output:
+>
+>     Some\Class\Does\Not\Exist
+
+As of PHP 8.0.0, the *::class* constant may also be used on objects.
+This resolution happens at runtime, not compile time. Its effect is the
+same as calling <span class="function">get\_class</span> on the object.
+
+**Example \#12 Object name resolution**
+
+``` php
+<?php
+namespace NS {
+    class ClassName {
+    }
+}
+$c = new ClassName();
+print $c::class;
+?>
+```
+
+The above example will output:
+
+    NS\ClassName

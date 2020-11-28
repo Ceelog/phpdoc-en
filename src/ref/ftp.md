@@ -234,11 +234,13 @@ Set permissions on a file via FTP
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">ftp\_chmod</span>
-( <span class="methodparam"><span class="type">resource</span>
-`$ftp_stream`</span> , <span class="methodparam"><span
-class="type">int</span> `$mode`</span> , <span class="methodparam"><span
-class="type">string</span> `$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">ftp\_chmod</span> ( <span class="methodparam"><span
+class="type">resource</span> `$ftp_stream`</span> , <span
+class="methodparam"><span class="type">int</span> `$mode`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+)
 
 Sets the permissions on the specified remote file to `mode`.
 
@@ -348,7 +350,8 @@ Opens an FTP connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
@@ -951,7 +954,8 @@ Creates a directory
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_mkdir</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
@@ -1010,7 +1014,8 @@ Returns a list of files in the given directory
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_mlsd</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
@@ -1646,7 +1651,8 @@ Returns a list of files in the given directory
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_nlist</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
@@ -1855,7 +1861,8 @@ Returns the current directory name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_pwd</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> )
 
@@ -1961,7 +1968,8 @@ Returns a detailed list of files in the given directory
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_rawlist</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
@@ -2336,7 +2344,8 @@ Opens a Secure SSL-FTP connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_ssl\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$port`<span
@@ -2425,7 +2434,8 @@ Returns the system type identifier of the remote FTP server
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ftp\_systype</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> )
 

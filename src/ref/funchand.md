@@ -334,7 +334,8 @@ function is highly discouraged.
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">create\_function</span> ( <span
 class="methodparam"><span class="type">string</span> `$args`</span> ,
 <span class="methodparam"><span class="type">string</span>

@@ -240,7 +240,8 @@ Get current buffer contents and delete current output buffer
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_clean</span> ( <span
 class="methodparam">void</span> )
 
@@ -299,7 +300,8 @@ Return the contents of the output buffer
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_contents</span> ( <span
 class="methodparam">void</span> )
 
@@ -352,7 +354,8 @@ buffering
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_flush</span> ( <span
 class="methodparam">void</span> )
 
@@ -413,7 +416,8 @@ Return the length of the output buffer
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_length</span> ( <span
 class="methodparam">void</span> )
 
@@ -488,7 +492,8 @@ Get status of output buffers
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_status</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$full_status` <span
 class="initializer"> = FALSE</span></span> \] )
@@ -579,7 +584,8 @@ ob\_start callback function to gzip output buffer
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_gzhandler</span> ( <span
 class="methodparam"><span class="type">string</span> `$buffer`</span> ,
 <span class="methodparam"><span class="type">int</span> `$mode`</span> )

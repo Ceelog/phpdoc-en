@@ -163,8 +163,9 @@ class="methodparam">void</span> )
 <span class="methodname">resetGroupBy</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">runQueries</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">runQueries</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -285,11 +286,13 @@ class="methodparam"><span class="type">int</span> `$mode`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$sortby`</span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">status</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">status</span> ( <span class="methodparam">void</span>
+)
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">updateAttributes</span> ( <span
 class="methodparam"><span class="type">string</span> `$index`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -682,8 +685,9 @@ Run a batch of search queries
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SphinxClient::runQueries</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SphinxClient::runQueries</span> ( <span
 class="methodparam">void</span> )
 
 Connects to searchd, runs a batch of all queries added using
@@ -1409,8 +1413,9 @@ Queries searchd status
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SphinxClient::status</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">SphinxClient::status</span> ( <span
 class="methodparam">void</span> )
 
 Queries searchd status, and returns an array of status variable name and
@@ -1438,7 +1443,8 @@ Update document attributes
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">SphinxClient::updateAttributes</span> ( <span
 class="methodparam"><span class="type">string</span> `$index`</span> ,
 <span class="methodparam"><span class="type">array</span>

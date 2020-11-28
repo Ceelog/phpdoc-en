@@ -32,7 +32,7 @@ value.
 **Warning**
 
 Prior to PHP 8.0.0, if a <span class="type">string</span> is compared to
-a number or a numeric string than the <span class="type">string</span>
+a number or a numeric string then the <span class="type">string</span>
 was converted to a number before performing the comparison. This can
 lead to surprising results as can be seen with the following example:
 

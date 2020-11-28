@@ -720,8 +720,6 @@ String containing the prefix.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
-
 ### Changelog
 
 | Version | Description                                     |

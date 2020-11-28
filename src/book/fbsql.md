@@ -386,7 +386,8 @@ Get the size of a BLOB
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_blob\_size</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$blob_handle`</span> \[, <span class="methodparam"><span
@@ -471,7 +472,8 @@ Get the size of a CLOB
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_clob\_size</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$clob_handle`</span> \[, <span class="methodparam"><span
@@ -600,7 +602,8 @@ Open a connection to a FrontBase Server
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$hostname`<span
 class="initializer"> = ini\_get("fbsql.default\_host")</span></span> \[,
@@ -1014,7 +1017,8 @@ Send a FrontBase query
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_db\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -1062,7 +1066,8 @@ Get the status for a given database
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_db\_status</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$database_name`</span> \[, <span class="methodparam"><span
@@ -1281,7 +1286,8 @@ Fetch a result row as an associative array, a numeric array, or both
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1357,7 +1363,8 @@ Fetch a result row as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1423,7 +1430,8 @@ Get column information from a result and return as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_field</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1503,7 +1511,8 @@ Get the length of each output in a result
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_lengths</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1537,7 +1546,8 @@ Fetch a result row as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1595,7 +1605,8 @@ Get a result row as an enumerated array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -1694,7 +1705,8 @@ Get the name of the specified field in a result
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2024,7 +2036,8 @@ List databases available on a FrontBase server
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_list\_dbs</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \] )
@@ -2089,7 +2102,8 @@ List FrontBase result fields
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_list\_fields</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$database_name`</span> , <span class="methodparam"><span
@@ -2167,7 +2181,8 @@ List tables in a FrontBase database
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_list\_tables</span> ( <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 \[, <span class="methodparam"><span class="type">resource</span>
@@ -2384,7 +2399,8 @@ Open a persistent connection to a FrontBase Server
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_pconnect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$hostname`<span
 class="initializer"> = ini\_get("fbsql.default\_host")</span></span> \[,
@@ -2441,7 +2457,8 @@ Send a FrontBase query
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fbsql\_query</span> ( <span class="methodparam"><span
 class="type">string</span> `$query`</span> \[, <span
 class="methodparam"><span class="type">resource</span>

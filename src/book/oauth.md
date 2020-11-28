@@ -187,8 +187,9 @@ class="type">string</span> `$url`</span> \[, <span
 class="methodparam"><span class="type">mixed</span>
 `$extra_parameters`</span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getAccessToken</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getAccessToken</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$access_token_url`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$auth_session_handle`</span> \[, <span
@@ -222,8 +223,9 @@ class="type">string</span> `$url`</span> \[, <span
 class="methodparam"><span class="type">mixed</span>
 `$extra_parameters`</span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getRequestToken</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getRequestToken</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$request_token_url`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$callback_url`</span> \[, <span
@@ -661,8 +663,9 @@ Fetch an access token
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">OAuth::getAccessToken</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">OAuth::getAccessToken</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$access_token_url`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$auth_session_handle`</span> \[, <span
@@ -898,8 +901,9 @@ Fetch a request token
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">OAuth::getRequestToken</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">OAuth::getRequestToken</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$request_token_url`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$callback_url`</span> \[, <span

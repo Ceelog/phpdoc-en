@@ -97,7 +97,8 @@ class="methodparam">void</span> )
 class="methodname">getTotalCount</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getTotalHits</span> ( <span
 class="methodparam">void</span> )
 
@@ -105,9 +106,9 @@ class="methodparam">void</span> )
 class="methodname">getTotalSize</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">key</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">key</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">next</span> ( <span
@@ -256,7 +257,8 @@ Get total cache hits
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">APCUIterator::getTotalHits</span> ( <span
 class="methodparam">void</span> )
 
@@ -320,8 +322,9 @@ Get iterator key
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">APCUIterator::key</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">APCUIterator::key</span> ( <span
 class="methodparam">void</span> )
 
 Gets the current iterator key.

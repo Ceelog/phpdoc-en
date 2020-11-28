@@ -1586,7 +1586,8 @@ Get len bytes data from open blob
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_get</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$blob_handle`</span> , <span class="methodparam"><span
@@ -1644,13 +1645,15 @@ Create blob, copy file in it, and close it
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_import</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
 class="type">resource</span> `$file_handle`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_blob\_import</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$file_handle`</span> )
@@ -1885,7 +1888,8 @@ Open a connection to a database
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_connect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2070,7 +2074,8 @@ Return an error code
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_errcode</span> ( <span
 class="methodparam">void</span> )
 
@@ -2093,7 +2098,8 @@ Return error messages
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_errmsg</span> ( <span
 class="methodparam">void</span> )
 
@@ -2116,7 +2122,8 @@ Execute a previously prepared query
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">bool</span></span> <span
 class="methodname">ibase\_execute</span> ( <span
 class="methodparam"><span class="type">resource</span> `$query`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -2186,7 +2193,8 @@ Fetch a result row from a query as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2232,7 +2240,8 @@ Get an object from a InterBase database
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> \[, <span class="methodparam"><span
@@ -2292,7 +2301,8 @@ Fetch a row from an InterBase database
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_identifier`</span> \[, <span class="methodparam"><span
@@ -2722,7 +2732,8 @@ Open a persistent connection to an InterBase database
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_pconnect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$database`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -2803,17 +2814,20 @@ execution
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
 class="type">string</span> `$query`</span> )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> , <span class="methodparam"><span
@@ -2848,7 +2862,8 @@ Execute a query on an InterBase database
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">bool</span></span> <span
 class="methodname">ibase\_query</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \], <span class="methodparam"><span
@@ -3405,13 +3420,15 @@ Begin a transaction
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_trans</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$trans_args`</span>
 \[, <span class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \]\] )
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">ibase\_trans</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`</span> \[, <span class="methodparam"><span

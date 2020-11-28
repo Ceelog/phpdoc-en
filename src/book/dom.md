@@ -403,8 +403,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -454,8 +455,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -763,8 +765,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -814,8 +817,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -1031,8 +1035,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1082,8 +1087,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -1468,8 +1474,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1519,8 +1526,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -1736,66 +1744,73 @@ class="methodparam"><span class="type">string</span> `$version`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \]\] )
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">createAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">createAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">createAttributeNS</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">createAttributeNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$qualifiedName`</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMCDATASection</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMCDATASection</span><span
+class="type">false</span></span> <span
 class="methodname">createCDATASection</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMComment</span> <span
-class="methodname">createComment</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMComment</span><span class="type">false</span></span>
+<span class="methodname">createComment</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMDocumentFragment</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocumentFragment</span><span
+class="type">false</span></span> <span
 class="methodname">createDocumentFragment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">createElement</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">false</span></span>
+<span class="methodname">createElement</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> \] )
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">createElementNS</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">false</span></span>
+<span class="methodname">createElementNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$qualifiedName`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$value`</span> \]
 )
 
-<span class="modifier">public</span> <span
-class="type">DOMEntityReference</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMEntityReference</span><span
+class="type">false</span></span> <span
 class="methodname">createEntityReference</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMProcessingInstruction</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMProcessingInstruction</span><span
+class="type">false</span></span> <span
 class="methodname">createProcessingInstruction</span> ( <span
 class="methodparam"><span class="type">string</span> `$target`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$data`</span> \] )
 
-<span class="modifier">public</span> <span class="type">DOMText</span>
-<span class="methodname">createTextNode</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMText</span><span class="type">false</span></span> <span
+class="methodname">createTextNode</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">getElementById</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">null</span></span>
+<span class="methodname">getElementById</span> ( <span
 class="methodparam"><span class="type">string</span> `$elementId`</span>
 )
 
@@ -1811,12 +1826,12 @@ class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$localName`</span> )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">importNode</span> ( <span
-class="methodparam"><span class="type">DOMNode</span>
-`$importedNode`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$deep`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">importNode</span> ( <span class="methodparam"><span
+class="type">DOMNode</span> `$importedNode`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$deep`<span
+class="initializer"> = **`FALSE`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">load</span> ( <span class="methodparam"><span
@@ -1861,25 +1876,29 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 <span class="methodname">relaxNGValidateSource</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">save</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">saveHTML</span> (\[ <span
-class="methodparam"><span class="type">DOMNode</span> `$node`<span
-class="initializer"> = NULL</span></span> \] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">saveHTML</span> (\[ <span class="methodparam"><span
+class="type">DOMNode</span> `$node`<span class="initializer"> =
+NULL</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">saveHTMLFile</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">saveXML</span> (\[ <span
-class="methodparam"><span class="type">DOMNode</span> `$node`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$options`<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">saveXML</span> (\[ <span class="methodparam"><span
+class="type">DOMNode</span> `$node`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1898,7 +1917,8 @@ class="methodparam"><span class="type">string</span> `$source`</span>
 <span class="methodname">validate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">xinclude</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$options`<span class="initializer"> =
 0</span></span> \] )
@@ -1940,8 +1960,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1991,8 +2012,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -2155,8 +2177,9 @@ Create new attribute
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">DOMDocument::createAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::createAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 This function creates a new instance of class <span
@@ -2200,8 +2223,9 @@ Create new attribute node with an associated namespace
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">DOMDocument::createAttributeNS</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::createAttributeNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$qualifiedName`</span> )
@@ -2254,8 +2278,9 @@ Create new cdata node
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMCDATASection</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMCDATASection</span><span
+class="type">false</span></span> <span
 class="methodname">DOMDocument::createCDATASection</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
@@ -2295,9 +2320,9 @@ Create new comment node
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMComment</span> <span
-class="methodname">DOMDocument::createComment</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMComment</span><span class="type">false</span></span>
+<span class="methodname">DOMDocument::createComment</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
 
 This function creates a new instance of class <span
@@ -2336,8 +2361,9 @@ Create new document fragment
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMDocumentFragment</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocumentFragment</span><span
+class="type">false</span></span> <span
 class="methodname">DOMDocument::createDocumentFragment</span> ( <span
 class="methodparam">void</span> )
 
@@ -2372,9 +2398,9 @@ Create new element node
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">DOMDocument::createElement</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">false</span></span>
+<span class="methodname">DOMDocument::createElement</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> \] )
@@ -2477,9 +2503,9 @@ Create new element node with an associated namespace
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">DOMDocument::createElementNS</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">false</span></span>
+<span class="methodname">DOMDocument::createElementNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$qualifiedName`</span> \[, <span
@@ -2591,8 +2617,9 @@ Create new entity reference node
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMEntityReference</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMEntityReference</span><span
+class="type">false</span></span> <span
 class="methodname">DOMDocument::createEntityReference</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -2638,8 +2665,9 @@ Creates new PI node
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMProcessingInstruction</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMProcessingInstruction</span><span
+class="type">false</span></span> <span
 class="methodname">DOMDocument::createProcessingInstruction</span> (
 <span class="methodparam"><span class="type">string</span>
 `$target`</span> \[, <span class="methodparam"><span
@@ -2688,8 +2716,9 @@ Create new text node
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMText</span>
-<span class="methodname">DOMDocument::createTextNode</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMText</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::createTextNode</span> ( <span
 class="methodparam"><span class="type">string</span> `$content`</span> )
 
 This function creates a new instance of class <span
@@ -2728,9 +2757,9 @@ Searches for an element with a certain id
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMElement</span> <span
-class="methodname">DOMDocument::getElementById</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMElement</span><span class="type">null</span></span>
+<span class="methodname">DOMDocument::getElementById</span> ( <span
 class="methodparam"><span class="type">string</span> `$elementId`</span>
 )
 
@@ -2959,8 +2988,9 @@ Import node into current document
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMDocument::importNode</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::importNode</span> ( <span
 class="methodparam"><span class="type">DOMNode</span>
 `$importedNode`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$deep`<span class="initializer"> =
@@ -3574,7 +3604,8 @@ Dumps the internal XML tree back into a file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMDocument::save</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -3636,8 +3667,9 @@ Dumps the internal document into a string using HTML formatting
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMDocument::saveHTML</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::saveHTML</span> (\[ <span
 class="methodparam"><span class="type">DOMNode</span> `$node`<span
 class="initializer"> = NULL</span></span> \] )
 
@@ -3693,7 +3725,8 @@ Dumps the internal document into a file using HTML formatting
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMDocument::saveHTMLFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
@@ -3752,8 +3785,9 @@ Dumps the internal XML tree back into a string
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMDocument::saveXML</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">DOMDocument::saveXML</span> (\[ <span
 class="methodparam"><span class="type">DOMNode</span> `$node`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \]\] )
@@ -3974,7 +4008,8 @@ Substitutes XIncludes in a DOMDocument Object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMDocument::xinclude</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \] )
@@ -4191,8 +4226,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -4242,8 +4278,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -4450,8 +4487,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -4501,8 +4539,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -4692,14 +4731,15 @@ class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$localName`</span> )
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">setAttribute</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$value`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">setAttribute</span> ( <span class="methodparam"><span
+class="type">string</span> `$name`</span> , <span
+class="methodparam"><span class="type">string</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">setAttributeNode</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">null</span></span> <span
+class="methodname">setAttributeNode</span> ( <span
 class="methodparam"><span class="type">DOMAttr</span> `$attr`</span> )
 
 <span class="modifier">public</span> <span class="type">DOMAttr</span>
@@ -4769,8 +4809,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -4820,8 +4861,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -5284,8 +5326,9 @@ Adds new attribute
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">DOMElement::setAttribute</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">false</span></span> <span
+class="methodname">DOMElement::setAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -5337,8 +5380,9 @@ Adds new attribute node to element
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMAttr</span>
-<span class="methodname">DOMElement::setAttributeNode</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMAttr</span><span class="type">null</span></span> <span
+class="methodname">DOMElement::setAttributeNode</span> ( <span
 class="methodparam"><span class="type">DOMAttr</span> `$attr`</span> )
 
 Adds new attribute node `attr` to element.
@@ -5724,8 +5768,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -5775,8 +5820,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -5937,8 +5983,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -5988,8 +6035,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -6155,9 +6203,9 @@ class="methodparam"><span class="type">string</span>
 \[, <span class="methodparam"><span class="type">DOMDocumentType</span>
 `$doctype`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span
-class="type">DOMDocumentType</span> <span
-class="methodname">createDocumentType</span> (\[ <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocumentType</span><span class="type">null</span></span>
+<span class="methodname">createDocumentType</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -6251,10 +6299,10 @@ Creates an empty DOMDocumentType object
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMDocumentType</span> <span
-class="methodname">DOMImplementation::createDocumentType</span> (\[
-<span class="methodparam"><span class="type">string</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMDocumentType</span><span class="type">null</span></span>
+<span class="methodname">DOMImplementation::createDocumentType</span>
+(\[ <span class="methodparam"><span class="type">string</span>
 `$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
@@ -6432,17 +6480,20 @@ class="modifier">readonly</span> <span class="type">int</span> `$length`
 class="methodname">count</span> ( <span class="methodparam">void</span>
 )
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">getNamedItem</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> )
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">getNamedItemNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
 class="type">string</span> `$localName`</span> )
 
-<span class="type">DOMNode</span> <span class="methodname">item</span> (
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span class="methodname">item</span> (
 <span class="methodparam"><span class="type">int</span> `$index`</span>
 )
 
@@ -6484,7 +6535,8 @@ Retrieves a node specified by name
 
 ### Description
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">DOMNamedNodeMap::getNamedItem</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
@@ -6511,7 +6563,8 @@ Retrieves a node specified by local name and namespace URI
 
 ### Description
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">DOMNamedNodeMap::getNamedItemNS</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$namespaceURI`</span> , <span class="methodparam"><span
@@ -6543,7 +6596,8 @@ Retrieves a node specified by index
 
 ### Description
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">DOMNamedNodeMap::item</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
@@ -6677,8 +6731,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -6728,11 +6783,12 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">replaceChild</span> ( <span
-class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
-, <span class="methodparam"><span class="type">DOMNode</span>
-`$oldnode`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">replaceChild</span> ( <span class="methodparam"><span
+class="type">DOMNode</span> `$newnode`</span> , <span
+class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
+)
 
 }
 
@@ -7082,8 +7138,9 @@ Get an XPath for a node
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 Gets an XPath location path for the node.
@@ -7469,8 +7526,9 @@ Replaces a child
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -7540,7 +7598,8 @@ class="modifier">readonly</span> <span class="type">int</span> `$length`
 class="methodname">count</span> ( <span class="methodparam">void</span>
 )
 
-<span class="type">DOMNode</span> <span class="methodname">item</span> (
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span class="methodname">item</span> (
 <span class="methodparam"><span class="type">int</span> `$index`</span>
 )
 
@@ -7594,7 +7653,8 @@ Retrieves a node specified by index
 
 ### Description
 
-<span class="type">DOMNode</span> <span
+<span class="type"><span class="type">DOMNode</span><span
+class="type">null</span></span> <span
 class="methodname">DOMNodeList::item</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
@@ -7798,8 +7858,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -7849,8 +7910,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -7999,8 +8061,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8050,8 +8113,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -8307,8 +8371,9 @@ class="methodparam"><span class="type">bool</span> `$deep`</span> \] )
 class="methodname">DOMNode::getLineNo</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">DOMNode::getNodePath</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">DOMNode::getNodePath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8358,8 +8423,9 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">DOMNode</span> `$oldnode`</span>
 )
 
-<span class="modifier">public</span> <span class="type">DOMNode</span>
-<span class="methodname">DOMNode::replaceChild</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNode</span><span class="type">false</span></span> <span
+class="methodname">DOMNode::replaceChild</span> ( <span
 class="methodparam"><span class="type">DOMNode</span> `$newnode`</span>
 , <span class="methodparam"><span class="type">DOMNode</span>
 `$oldnode`</span> )
@@ -8513,14 +8579,14 @@ class="methodparam"><span class="type">bool</span>
 `$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
 \]\] )
 
-<span class="modifier">public</span> <span
-class="type">DOMNodeList</span> <span class="methodname">query</span> (
-<span class="methodparam"><span class="type">string</span>
-`$expression`</span> \[, <span class="methodparam"><span
-class="type">DOMNode</span> `$contextnode`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
-\]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNodeList</span><span class="type">false</span></span>
+<span class="methodname">query</span> ( <span class="methodparam"><span
+class="type">string</span> `$expression`</span> \[, <span
+class="methodparam"><span class="type">DOMNode</span>
+`$contextnode`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$registerNodeNS`<span class="initializer"> =
+**`TRUE`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">registerNamespace</span> ( <span
@@ -8641,9 +8707,9 @@ Evaluates the given XPath expression
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">DOMNodeList</span> <span
-class="methodname">DOMXPath::query</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DOMNodeList</span><span class="type">false</span></span>
+<span class="methodname">DOMXPath::query</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">DOMNode</span> `$contextnode`</span> \[, <span

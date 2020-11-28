@@ -942,7 +942,8 @@ Gets the client encoding
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_client\_encoding</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -1091,7 +1092,8 @@ Open a PostgreSQL connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$connection_string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$connect_type`</span>
@@ -1355,7 +1357,8 @@ Convert associative array values into forms suitable for SQL statements
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_convert</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -1511,7 +1514,8 @@ Copy a table to an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_copy\_to</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -1571,7 +1575,8 @@ Get the database name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_dbname</span> (\[ <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> \] )
 
@@ -1893,7 +1898,8 @@ Escape a literal for insertion into a text field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_escape\_literal</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -2117,7 +2123,8 @@ Fetches all rows in a particular result column as an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_all\_columns</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2187,7 +2194,8 @@ Fetches all rows from a result as an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_all</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2279,7 +2287,8 @@ Fetch a row as an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2386,7 +2395,8 @@ Fetch a row as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2470,7 +2480,8 @@ Fetch a row as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2478,7 +2489,8 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 class="type">int</span> `$result_type`<span class="initializer"> =
 PGSQL\_ASSOC</span></span> \]\] )
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2577,14 +2589,16 @@ Returns values from a result resource
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$field`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -2658,7 +2672,8 @@ Get a row as an enumerated array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -2732,14 +2747,16 @@ Test if a field is SQL *NULL*
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_is\_null</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$field`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_is\_null</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -2802,7 +2819,8 @@ Returns the name of a field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -2943,14 +2961,16 @@ Returns the printed length
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_prtlen</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$row_number`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$field_name_or_number`</span> )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_prtlen</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -3042,7 +3062,8 @@ Returns the internal storage size of the named field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_size</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -3202,7 +3223,8 @@ Returns the type ID (OID) for the corresponding field number
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_type\_oid</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -3270,7 +3292,8 @@ Returns the type name for the corresponding field number
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_field\_type</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -3429,7 +3452,8 @@ Gets SQL NOTIFY message
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_get\_notify</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \[, <span class="methodparam"><span
@@ -3542,7 +3566,8 @@ Get asynchronous query result
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_get\_result</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -3611,7 +3636,8 @@ Returns the host name associated with the connection
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_host</span> (\[ <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> \] )
 
@@ -3752,7 +3778,8 @@ Get the last error message string of a connection
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_last\_error</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -3894,7 +3921,8 @@ Returns the last row's OID
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_last\_oid</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -4025,13 +4053,15 @@ Create a large object
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_create</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$object_id`</span> \]\] )
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_create</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$object_id`</span>
 )
@@ -4164,7 +4194,8 @@ Import a large object from file
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_import</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -4230,7 +4261,8 @@ Open a large object
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_open</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">int</span> `$oid`</span> , <span
@@ -4302,7 +4334,8 @@ Reads an entire large object and send straight to browser
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_read\_all</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$large_object`</span> )
@@ -4356,7 +4389,8 @@ Read a large object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_read</span> ( <span class="methodparam"><span
 class="type">resource</span> `$large_object`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$len`<span
@@ -4661,7 +4695,8 @@ Write to a large object
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_lo\_write</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$large_object`</span> , <span class="methodparam"><span
@@ -4727,7 +4762,8 @@ Get meta data for table
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_meta\_data</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -4942,7 +4978,8 @@ Get the options associated with the connection
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_options</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
@@ -4986,7 +5023,8 @@ Looks up a current parameter setting of the server
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_parameter\_status</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \], <span class="methodparam"><span
@@ -5064,7 +5102,8 @@ Open a persistent PostgreSQL connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_pconnect</span> ( <span class="methodparam"><span
 class="type">string</span> `$connection_string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$connect_type`</span>
@@ -5199,9 +5238,10 @@ Return the port number associated with the connection
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">pg\_port</span>
-(\[ <span class="methodparam"><span class="type">resource</span>
-`$connection`</span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">pg\_port</span> (\[ <span class="methodparam"><span
+class="type">resource</span> `$connection`</span> \] )
 
 <span class="function">pg\_port</span> returns the port number that the
 given PostgreSQL `connection` resource is connected to.
@@ -5624,7 +5664,8 @@ Returns an individual field of an error report
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_result\_error\_field</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -5694,7 +5735,8 @@ Get error message associated with result
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_result\_error</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -6628,7 +6670,8 @@ Return the TTY name associated with the connection
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">pg\_tty</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">pg\_tty</span>
 (\[ <span class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )
 
@@ -6901,7 +6944,8 @@ available)
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pg\_version</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \] )

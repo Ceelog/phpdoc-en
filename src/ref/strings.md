@@ -993,7 +993,8 @@ Split a string by a string
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">explode</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">explode</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$delimiter`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
@@ -2654,7 +2655,8 @@ Calculates the md5 hash of a given file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">md5\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
@@ -2855,7 +2857,8 @@ function is highly discouraged.
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">money\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">float</span>
@@ -3058,7 +3061,8 @@ Query language and locale information
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">nl\_langinfo</span> ( <span class="methodparam"><span
 class="type">int</span> `$item`</span> )
 
@@ -3866,7 +3870,8 @@ Quote meta characters
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">quotemeta</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> )
 
@@ -4000,14 +4005,16 @@ Set locale information
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">setlocale</span> ( <span class="methodparam"><span
 class="type">int</span> `$category`</span> , <span
 class="methodparam"><span class="type">string</span> `$locale`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$locales`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">setlocale</span> ( <span class="methodparam"><span
 class="type">int</span> `$category`</span> , <span
 class="methodparam"><span class="type">array</span> `$locale`</span> )
@@ -4140,7 +4147,8 @@ Calculate the sha1 hash of a file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sha1\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$raw_output`<span
@@ -5451,7 +5459,8 @@ Convert a string to an array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">str\_split</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$split_length`<span
@@ -6137,8 +6146,9 @@ substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">stripos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">stripos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -6337,7 +6347,8 @@ Case-insensitive <span class="function">strstr</span>
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">stristr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">stristr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
@@ -6705,7 +6716,8 @@ Search a string for any of a set of characters
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strpbrk</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strpbrk</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">string</span> `$char_list`</span> )
@@ -6756,8 +6768,9 @@ Find the position of the first occurrence of a substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strpos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">strpos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -6884,7 +6897,8 @@ Find the last occurrence of a character in a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strrchr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strrchr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> )
@@ -6985,11 +6999,12 @@ in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strripos</span> (
-<span class="methodparam"><span class="type">string</span>
-`$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$offset`<span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">strripos</span> ( <span class="methodparam"><span
+class="type">string</span> `$haystack`</span> , <span
+class="methodparam"><span class="type">mixed</span> `$needle`</span> \[,
+<span class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
 Find the numeric position of the last occurrence of `needle` in the
@@ -7091,8 +7106,9 @@ Find the position of the last occurrence of a substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strrpos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">strrpos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -7334,7 +7350,8 @@ Find the first occurrence of a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strstr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strstr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$needle`</span> \[, <span
@@ -7604,15 +7621,19 @@ Translate characters or replace substrings
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strtr</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$from`</span> , <span class="methodparam"><span
-class="type">string</span> `$to`</span> )
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
+class="methodname">strtr</span> ( <span class="methodparam"><span
+class="type">string</span> `$str`</span> , <span
+class="methodparam"><span class="type">string</span> `$from`</span> ,
+<span class="methodparam"><span class="type">string</span> `$to`</span>
+)
 
-<span class="type">string</span> <span class="methodname">strtr</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-, <span class="methodparam"><span class="type">array</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
+class="methodname">strtr</span> ( <span class="methodparam"><span
+class="type">string</span> `$str`</span> , <span
+class="methodparam"><span class="type">array</span>
 `$replace_pairs`</span> )
 
 If given three arguments, this function returns a copy of `str` where
@@ -7726,7 +7747,8 @@ characters
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">substr\_compare</span> ( <span
 class="methodparam"><span class="type">string</span> `$main_str`</span>
 , <span class="methodparam"><span class="type">string</span>

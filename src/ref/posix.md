@@ -74,7 +74,8 @@ Get path name of controlling terminal
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_ctermid</span> ( <span
 class="methodparam">void</span> )
 
@@ -163,7 +164,8 @@ Pathname of current directory
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getcwd</span> ( <span
 class="methodparam">void</span> )
 
@@ -692,7 +694,8 @@ Return info about a user by username
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getpwnam</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 )
@@ -1564,7 +1567,8 @@ Determine terminal device name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_ttyname</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> )
 

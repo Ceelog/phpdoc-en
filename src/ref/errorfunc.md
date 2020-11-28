@@ -247,7 +247,8 @@ Get the last occurred error
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">error\_get\_last</span> ( <span
 class="methodparam">void</span> )
 
@@ -855,7 +856,8 @@ Sets a user-defined exception handler function
 
 ### Description
 
-<span class="type">callable</span> <span
+<span class="type"><span class="type">callable</span><span
+class="type">null</span></span> <span
 class="methodname">set\_exception\_handler</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$exception_handler`</span> )
@@ -872,7 +874,8 @@ This handler function needs to accept one parameter, which will be the
 exception object that was thrown. This is the handler signature before
 PHP 7:
 
-<span class="type">void</span> <span class="methodname"><span
+<span class="type"><span class="type">void</span><span
+class="type">null</span></span> <span class="methodname"><span
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">Exception</span> `$ex`</span> )
 
@@ -883,7 +886,8 @@ class="classname">Exception</span> implements the <span
 class="classname">Throwable</span> interface. This is the handler
 signature since PHP 7:
 
-<span class="type">void</span> <span class="methodname"><span
+<span class="type"><span class="type">void</span><span
+class="type">null</span></span> <span class="methodname"><span
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">Throwable</span> `$ex`</span> )
 

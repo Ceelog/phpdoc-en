@@ -109,7 +109,8 @@ request
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">get\_headers</span> ( <span class="methodparam"><span
 class="type">string</span> `$url`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$format`<span

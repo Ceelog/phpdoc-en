@@ -96,8 +96,9 @@ class="interfacename">Traversable</span> </span> {
 <span class="methodname">close</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getComment</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getComment</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -220,13 +221,15 @@ Get comment text from the RAR archive
 
 Object oriented style (method):
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">RarArchive::getComment</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">RarArchive::getComment</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style:
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">rar\_comment\_get</span> ( <span
 class="methodparam"><span class="type">RarArchive</span>
 `$rarfile`</span> )
@@ -1114,31 +1117,38 @@ class="initializer"> = NULL</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$extended_data`<span
 class="initializer"> = **`FALSE`**</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getAttr</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getCrc</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getCrc</span> ( <span class="methodparam">void</span>
+)
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getFileTime</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getFileTime</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getHostOs</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getMethod</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getPackedSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -1147,11 +1157,13 @@ class="type">resource</span><span class="type">false</span></span> <span
 class="methodname">getStream</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$password`</span> \] )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getUnpackedSize</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getVersion</span> ( <span
 class="methodparam">void</span> )
 
@@ -1530,7 +1542,8 @@ Get attributes of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getAttr</span> ( <span
 class="methodparam">void</span> )
 
@@ -1616,8 +1629,9 @@ Get CRC of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">RarEntry::getCrc</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">RarEntry::getCrc</span> ( <span
 class="methodparam">void</span> )
 
 Returns an hexadecimal string representation of the CRC of the archive
@@ -1644,8 +1658,9 @@ Get entry last modification time
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">RarEntry::getFileTime</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">RarEntry::getFileTime</span> ( <span
 class="methodparam">void</span> )
 
 Gets entry last modification time.
@@ -1666,7 +1681,8 @@ Get entry host OS
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getHostOs</span> ( <span
 class="methodparam">void</span> )
 
@@ -1761,7 +1777,8 @@ Get pack method of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getMethod</span> ( <span
 class="methodparam">void</span> )
 
@@ -1800,8 +1817,9 @@ Get name of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">RarEntry::getName</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">RarEntry::getName</span> ( <span
 class="methodparam">void</span> )
 
 Returns the name (with path) of the archive entry.
@@ -1855,7 +1873,8 @@ Get packed size of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getPackedSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -1994,7 +2013,8 @@ Get unpacked size of the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getUnpackedSize</span> ( <span
 class="methodparam">void</span> )
 
@@ -2044,7 +2064,8 @@ Get minimum version of RAR program required to unpack the entry
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">RarEntry::getVersion</span> ( <span
 class="methodparam">void</span> )
 

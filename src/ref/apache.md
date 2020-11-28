@@ -123,7 +123,8 @@ Get an Apache subprocess\_env variable
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_getenv</span> ( <span
 class="methodparam"><span class="type">string</span> `$variable`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -270,11 +271,13 @@ Get and set apache request notes
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_note</span> ( <span class="methodparam"><span
 class="type">string</span> `$note_name`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_note</span> ( <span class="methodparam"><span
 class="type">string</span> `$note_name`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -356,7 +359,8 @@ Fetch all HTTP request headers
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_request\_headers</span> ( <span
 class="methodparam">void</span> )
 
@@ -557,7 +561,8 @@ Fetch all HTTP request headers
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">getallheaders</span> ( <span
 class="methodparam">void</span> )
 

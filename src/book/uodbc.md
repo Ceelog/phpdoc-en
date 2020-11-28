@@ -871,7 +871,8 @@ Connect to a datasource
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -918,7 +919,7 @@ cursortype: </span>
 
 ### Return Values
 
-Returns an ODBC connection or (**`FALSE`**) on error.
+Returns an ODBC connection or **`FALSE`** on error.
 
 ### Examples
 
@@ -973,7 +974,8 @@ Returns information about available DSNs
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_data\_source</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -1111,7 +1113,8 @@ Directly execute an SQL statement
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_exec</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection_id`</span> , <span
 class="methodparam"><span class="type">string</span>
@@ -1220,7 +1223,8 @@ Fetch a result row as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1259,7 +1263,8 @@ Fetch one result row into array
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_into</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1311,7 +1316,8 @@ Fetch a result row as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -1392,7 +1398,8 @@ Get the length (precision) of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_len</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1425,7 +1432,8 @@ Get the columnname
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1453,7 +1461,8 @@ Return column number
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_num</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1497,7 +1506,8 @@ Get the scale of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_scale</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1525,7 +1535,8 @@ Datatype of a field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_type</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> , <span class="methodparam"><span
@@ -1688,7 +1699,8 @@ Retrieves information about data types supported by the data source
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_gettypeinfo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
@@ -1927,7 +1939,8 @@ Open a persistent database connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1951,7 +1964,7 @@ See <span class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-Returns an ODBC connection id or 0 (**`FALSE`**) on error.
+Returns an ODBC connection id or **`FALSE`** on error.
 
 ### Notes
 
@@ -1970,7 +1983,8 @@ Prepares a statement for execution
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span
@@ -2341,7 +2355,8 @@ Print result as HTML table
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_result\_all</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$result_id`</span> \[, <span class="methodparam"><span
@@ -2528,7 +2543,8 @@ Retrieves special columns
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_specialcolumns</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> , <span class="methodparam"><span

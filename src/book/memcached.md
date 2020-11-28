@@ -249,9 +249,10 @@ class="type">array</span> `$keys`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$time`<span
 class="initializer"> = 0</span></span> \] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">fetch</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">fetch</span> ( <span class="methodparam">void</span>
+)
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">array</span><span class="type">false</span></span> <span
@@ -326,8 +327,9 @@ class="methodparam">void</span> )
 <span class="methodname">getResultMessage</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">getServerByKey</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">getServerByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> )
 
@@ -1330,8 +1332,9 @@ Fetch the next result
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::fetch</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::fetch</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">Memcached::fetch</span> retrieves the next result
@@ -2234,8 +2237,9 @@ Map a key to a server
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Memcached::getServerByKey</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
+class="methodname">Memcached::getServerByKey</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$server_key`</span> )
 

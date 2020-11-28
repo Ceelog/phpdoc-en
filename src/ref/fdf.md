@@ -121,7 +121,8 @@ Create a new FDF document
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fdf\_create</span> ( <span
 class="methodparam">void</span> )
 
@@ -617,7 +618,8 @@ Read a FDF document from a string
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fdf\_open\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$fdf_data`</span>
 )
@@ -664,7 +666,8 @@ Open a FDF document
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fdf\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -735,7 +738,8 @@ Returns the FDF document as a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">fdf\_save\_string</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$fdf_document`</span> )

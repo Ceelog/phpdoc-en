@@ -171,7 +171,8 @@ Create a config used to open a dictionary
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pspell\_config\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$language`</span>
 \[, <span class="methodparam"><span class="type">string</span>

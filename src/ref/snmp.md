@@ -403,7 +403,8 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -459,7 +460,8 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_getnext</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -519,7 +521,8 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_real\_walk</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -715,7 +718,8 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp2\_walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -784,7 +788,8 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$sec_name`</span>
@@ -862,7 +867,8 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_getnext</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -944,7 +950,8 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_real\_walk</span> ( <span class="methodparam">
 <span class="type">string</span> `$host` </span> , <span
 class="methodparam"> <span class="type">string</span> `$sec_name`
@@ -1182,7 +1189,8 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmp3\_walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$sec_name`</span>
@@ -1281,7 +1289,8 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">snmpget</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">snmpget</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> , <span
@@ -1336,7 +1345,8 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">snmpgetnext</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -1395,7 +1405,8 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmprealwalk</span> ( <span class="methodparam"><span
 class="type">string</span> `$host`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
@@ -1592,15 +1603,17 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">snmpwalk</span>
-( <span class="methodparam"><span class="type">string</span>
-`$hostname`</span> , <span class="methodparam"><span
-class="type">string</span> `$community`</span> , <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$timeout`<span class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
+class="methodname">snmpwalk</span> ( <span class="methodparam"><span
+class="type">string</span> `$hostname`</span> , <span
+class="methodparam"><span class="type">string</span> `$community`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+1000000</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+5</span></span> \]\] )
 
 <span class="function">snmpwalk</span> function is used to read all the
 values from an SNMP agent specified by the `hostname`.
@@ -1660,7 +1673,8 @@ Query for a tree of information about a network entity
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">snmpwalkoid</span> ( <span class="methodparam"><span
 class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>

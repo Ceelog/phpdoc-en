@@ -381,8 +381,9 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$options`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">dir\_readdir</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">dir\_readdir</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -405,9 +406,10 @@ class="methodparam"><span class="type">string</span> `$path_to`</span> )
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$options`</span> )
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">stream\_cast</span> ( <span
-class="methodparam"><span class="type">int</span> `$cast_as`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">stream\_cast</span> ( <span class="methodparam"><span
+class="type">int</span> `$cast_as`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">stream\_close</span> ( <span
@@ -440,9 +442,10 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 `$options`</span> , <span class="methodparam"><span
 class="type">string</span> `&$opened_path`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">stream\_read</span> ( <span
-class="methodparam"><span class="type">int</span> `$count`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">stream\_read</span> ( <span class="methodparam"><span
+class="type">int</span> `$count`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">stream\_seek</span> ( <span
@@ -617,8 +620,9 @@ Read entry from directory handle
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">streamWrapper::dir\_readdir</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">streamWrapper::dir\_readdir</span> ( <span
 class="methodparam">void</span> )
 
 This method is called in response to <span
@@ -951,8 +955,9 @@ Retrieve the underlaying resource
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">resource</span>
-<span class="methodname">streamWrapper::stream\_cast</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">resource</span><span class="type">false</span></span> <span
+class="methodname">streamWrapper::stream\_cast</span> ( <span
 class="methodparam"><span class="type">int</span> `$cast_as`</span> )
 
 This method is called in response to <span
@@ -1280,8 +1285,9 @@ Read from stream
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">streamWrapper::stream\_read</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">streamWrapper::stream\_read</span> ( <span
 class="methodparam"><span class="type">int</span> `$count`</span> )
 
 This method is called in response to <span class="function">fread</span>

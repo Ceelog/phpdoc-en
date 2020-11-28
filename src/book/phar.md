@@ -437,8 +437,9 @@ class="type">null</span></span> `$files`<span class="initializer"> =
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getAlias</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">getAlias</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -2189,8 +2190,9 @@ Get the alias for Phar
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getAlias</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">Phar::getAlias</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -4505,8 +4507,9 @@ class="type">null</span></span> `$files`<span class="initializer"> =
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getAlias</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">Phar::getAlias</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>

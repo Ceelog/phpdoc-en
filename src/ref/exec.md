@@ -319,7 +319,8 @@ class="function">proc\_open</span>
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">proc\_get\_status</span> ( <span
 class="methodparam"><span class="type">resource</span> `$process`</span>
 )
@@ -436,7 +437,8 @@ Execute a command and open file pointers for input/output
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">proc\_open</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$cmd`</span> , <span
 class="methodparam"><span class="type">array</span>
@@ -703,7 +705,8 @@ Execute command via shell and return the complete output as a string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">shell\_exec</span> ( <span class="methodparam"><span
 class="type">string</span> `$cmd`</span> )
 
@@ -756,7 +759,8 @@ Execute an external program and display the output
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">system</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">system</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$command`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$return_var`</span> \] )

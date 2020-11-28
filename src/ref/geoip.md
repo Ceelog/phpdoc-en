@@ -5,7 +5,8 @@ Get the Autonomous System Numbers (ASN)
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_asnum\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -52,7 +53,8 @@ Get the two letter continent code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_continent\_code\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -112,7 +114,8 @@ Get the two letter country code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_country\_code\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -171,7 +174,8 @@ Get the three letter country code
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_country\_code3\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -222,7 +226,8 @@ Get the full country name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_country\_name\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -273,7 +278,8 @@ Get GeoIP Database information
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">geoip\_database\_info</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$database`<span
 class="initializer"> = GEOIP\_COUNTRY\_EDITION</span></span> \] )
@@ -320,7 +326,8 @@ Determine if GeoIP Database is available
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">bool</span><span
+class="type">null</span></span> <span
 class="methodname">geoip\_db\_avail</span> ( <span
 class="methodparam"><span class="type">int</span> `$database`</span> )
 
@@ -367,7 +374,8 @@ Returns the filename of the corresponding GeoIP Database
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">geoip\_db\_filename</span> ( <span
 class="methodparam"><span class="type">int</span> `$database`</span> )
 
@@ -509,7 +517,8 @@ Get the second level domain name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_domain\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -628,7 +637,8 @@ Get the Internet Service Provider (ISP) name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_isp\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -678,7 +688,8 @@ Get the Internet connection speed
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_netspeedcell\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -739,7 +750,8 @@ Get the organization name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_org\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -788,7 +800,8 @@ Returns the detailed City information found in the GeoIP Database
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_record\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -886,7 +899,8 @@ Get the country code and region
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_region\_by\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -950,7 +964,8 @@ Returns the region name for some country and region code combo
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_region\_name\_by\_code</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$country_code`</span> , <span class="methodparam"><span
@@ -1082,7 +1097,8 @@ Returns the time zone for some country and region code combo
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">geoip\_time\_zone\_by\_country\_and\_region</span> (
 <span class="methodparam"><span class="type">string</span>
 `$country_code`</span> \[, <span class="methodparam"><span

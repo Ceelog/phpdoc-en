@@ -126,70 +126,70 @@ Oracle OCI8
     -   [oci\_unregister\_taf\_callback](/book/oci8.html#oci_unregister_taf_callback)
         — Unregister a user-defined callback function for Oracle
         Database TAF
--   [OCI-Collection](/book/oci8.html#OCI-Collection) — The
-    OCI-Collection class
-    -   [OCI-Collection::append](/book/oci8.html#OCI-Collection::append)
-        — Appends element to the collection
-    -   [OCI-Collection::assign](/book/oci8.html#OCI-Collection::assign)
-        — Assigns a value to the collection from another existing
+-   [OCICollection](/book/oci8.html#OCICollection) — The OCICollection
+    class
+    -   [OCICollection::append](/book/oci8.html#OCICollection::append) —
+        Appends element to the collection
+    -   [OCICollection::assign](/book/oci8.html#OCICollection::assign) —
+        Assigns a value to the collection from another existing
         collection
-    -   [OCI-Collection::assignElem](/book/oci8.html#OCI-Collection::assignElem)
+    -   [OCICollection::assignElem](/book/oci8.html#OCICollection::assignElem)
         — Assigns a value to the element of the collection
-    -   [OCI-Collection::free](/book/oci8.html#OCI-Collection::free) —
+    -   [OCICollection::free](/book/oci8.html#OCICollection::free) —
         Frees the resources associated with the collection object
-    -   [OCI-Collection::getElem](/book/oci8.html#OCI-Collection::getElem)
+    -   [OCICollection::getElem](/book/oci8.html#OCICollection::getElem)
         — Returns value of the element
-    -   [OCI-Collection::max](/book/oci8.html#OCI-Collection::max) —
+    -   [OCICollection::max](/book/oci8.html#OCICollection::max) —
         Returns the maximum number of elements in the collection
-    -   [OCI-Collection::size](/book/oci8.html#OCI-Collection::size) —
+    -   [OCICollection::size](/book/oci8.html#OCICollection::size) —
         Returns size of the collection
-    -   [OCI-Collection::trim](/book/oci8.html#OCI-Collection::trim) —
+    -   [OCICollection::trim](/book/oci8.html#OCICollection::trim) —
         Trims elements from the end of the collection
--   [OCI-Lob](/book/oci8.html#OCI-Lob) — The OCI-Lob class
-    -   [OCI-Lob::append](/book/oci8.html#OCI-Lob::append) — Appends
-        data from the large object to another large object
-    -   [OCI-Lob::close](/book/oci8.html#OCI-Lob::close) — Closes LOB
+-   [OCILob](/book/oci8.html#OCILob) — The OCILob class
+    -   [OCILob::append](/book/oci8.html#OCILob::append) — Appends data
+        from the large object to another large object
+    -   [OCILob::close](/book/oci8.html#OCILob::close) — Closes LOB
         descriptor
-    -   [OCI-Lob::eof](/book/oci8.html#OCI-Lob::eof) — Tests for
+    -   [OCILob::eof](/book/oci8.html#OCILob::eof) — Tests for
         end-of-file on a large object's descriptor
-    -   [OCI-Lob::erase](/book/oci8.html#OCI-Lob::erase) — Erases a
+    -   [OCILob::erase](/book/oci8.html#OCILob::erase) — Erases a
         specified portion of the internal LOB data
-    -   [OCI-Lob::export](/book/oci8.html#OCI-Lob::export) — Exports
-        LOB's contents to a file
-    -   [OCI-Lob::flush](/book/oci8.html#OCI-Lob::flush) —
-        Flushes/writes buffer of the LOB to the server
-    -   [OCI-Lob::free](/book/oci8.html#OCI-Lob::free) — Frees resources
+    -   [OCILob::export](/book/oci8.html#OCILob::export) — Exports LOB's
+        contents to a file
+    -   [OCILob::flush](/book/oci8.html#OCILob::flush) — Flushes/writes
+        buffer of the LOB to the server
+    -   [OCILob::free](/book/oci8.html#OCILob::free) — Frees resources
         associated with the LOB descriptor
-    -   [OCI-Lob::getBuffering](/book/oci8.html#OCI-Lob::getBuffering) —
+    -   [OCILob::getBuffering](/book/oci8.html#OCILob::getBuffering) —
         Returns current state of buffering for the large object
-    -   [OCI-Lob::import](/book/oci8.html#OCI-Lob::import) — Imports
-        file data to the LOB
-    -   [OCI-Lob::load](/book/oci8.html#OCI-Lob::load) — Returns large
+    -   [OCILob::import](/book/oci8.html#OCILob::import) — Imports file
+        data to the LOB
+    -   [OCILob::load](/book/oci8.html#OCILob::load) — Returns large
         object's contents
-    -   [OCI-Lob::read](/book/oci8.html#OCI-Lob::read) — Reads part of
-        the large object
-    -   [OCI-Lob::rewind](/book/oci8.html#OCI-Lob::rewind) — Moves the
-        internal pointer to the beginning of the large object
-    -   [OCI-Lob::save](/book/oci8.html#OCI-Lob::save) — Saves data to
-        the large object
-    -   [OCI-Lob::saveFile](/book/oci8.html#OCI-Lob::saveFile) — Alias
-        of OCI-Lob::import
-    -   [OCI-Lob::seek](/book/oci8.html#OCI-Lob::seek) — Sets the
-        internal pointer of the large object
-    -   [OCI-Lob::setBuffering](/book/oci8.html#OCI-Lob::setBuffering) —
-        Changes current state of buffering for the large object
-    -   [OCI-Lob::size](/book/oci8.html#OCI-Lob::size) — Returns size of
+    -   [OCILob::read](/book/oci8.html#OCILob::read) — Reads part of the
         large object
-    -   [OCI-Lob::tell](/book/oci8.html#OCI-Lob::tell) — Returns the
+    -   [OCILob::rewind](/book/oci8.html#OCILob::rewind) — Moves the
+        internal pointer to the beginning of the large object
+    -   [OCILob::save](/book/oci8.html#OCILob::save) — Saves data to the
+        large object
+    -   [OCILob::saveFile](/book/oci8.html#OCILob::saveFile) — Alias of
+        OCILob::import
+    -   [OCILob::seek](/book/oci8.html#OCILob::seek) — Sets the internal
+        pointer of the large object
+    -   [OCILob::setBuffering](/book/oci8.html#OCILob::setBuffering) —
+        Changes current state of buffering for the large object
+    -   [OCILob::size](/book/oci8.html#OCILob::size) — Returns size of
+        large object
+    -   [OCILob::tell](/book/oci8.html#OCILob::tell) — Returns the
         current position of internal pointer of large object
-    -   [OCI-Lob::truncate](/book/oci8.html#OCI-Lob::truncate) —
-        Truncates large object
-    -   [OCI-Lob::write](/book/oci8.html#OCI-Lob::write) — Writes data
-        to the large object
-    -   [OCI-Lob::writeTemporary](/book/oci8.html#OCI-Lob::writeTemporary)
+    -   [OCILob::truncate](/book/oci8.html#OCILob::truncate) — Truncates
+        large object
+    -   [OCILob::write](/book/oci8.html#OCILob::write) — Writes data to
+        the large object
+    -   [OCILob::writeTemporary](/book/oci8.html#OCILob::writeTemporary)
         — Writes a temporary large object
-    -   [OCI-Lob::writeToFile](/book/oci8.html#OCI-Lob::writeToFile) —
-        Alias of OCI-Lob::export
+    -   [OCILob::writeToFile](/book/oci8.html#OCILob::writeToFile) —
+        Alias of OCILob::export
 -   [OCI8 Obsolete Aliases and
     Functions](/book/oci8.html#OCI8%20Obsolete%20Aliases%20and%20Functions)
     -   [oci\_internal\_debug](/book/oci8.html#oci_internal_debug) —
@@ -862,19 +862,19 @@ dynamically loaded at runtime.
 | **`OCI_EXACT_FETCH`**              | Obsolete. Statement fetch mode. Used when the application knows in advance exactly how many rows it will be fetching. This mode turns prefetching off for Oracle release 8 or later mode. The cursor is canceled after the desired rows are fetched which may result in reduced server-side resource usage. |
 | **`OCI_FETCHSTATEMENT_BY_COLUMN`** | Default mode of <span class="function">oci\_fetch\_all</span>.                                                                                                                                                                                                                                              |
 | **`OCI_FETCHSTATEMENT_BY_ROW`**    | Alternative mode of <span class="function">oci\_fetch\_all</span>.                                                                                                                                                                                                                                          |
-| **`OCI_LOB_BUFFER_FREE`**          | Used with <a href="/book/oci8.html#OCI-Lob::flush" class="xref"></a> to free buffers used.                                                                                                                                                                                                                  |
+| **`OCI_LOB_BUFFER_FREE`**          | Used with <a href="/book/oci8.html#OCILob::flush" class="xref"></a> to free buffers used.                                                                                                                                                                                                                   |
 | **`OCI_NO_AUTO_COMMIT`**           | Statement execution mode for <span class="function">oci\_execute</span>. The transaction is not automatically committed when using this mode. For readability in new code, use this value instead of the older, equivalent **`OCI_DEFAULT`** constant. Introduced in PHP 5.3.2 (PECL OCI8 1.4).             |
 | **`OCI_NUM`**                      | Used with <span class="function">oci\_fetch\_all</span> and <span class="function">oci\_fetch\_array</span> to get results as an enumerated array.                                                                                                                                                          |
 | **`OCI_RETURN_LOBS`**              | Used with <span class="function">oci\_fetch\_array</span> to get the data value of the LOB instead of the descriptor.                                                                                                                                                                                       |
 | **`OCI_RETURN_NULLS`**             | Used with <span class="function">oci\_fetch\_array</span> to get empty array elements if the row items value is **`NULL`**.                                                                                                                                                                                 |
-| **`OCI_SEEK_CUR`**                 | Used with <a href="/book/oci8.html#OCI-Lob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                               |
-| **`OCI_SEEK_END`**                 | Used with <a href="/book/oci8.html#OCI-Lob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                               |
-| **`OCI_SEEK_SET`**                 | Used with <a href="/book/oci8.html#OCI-Lob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                               |
+| **`OCI_SEEK_CUR`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
+| **`OCI_SEEK_END`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
+| **`OCI_SEEK_SET`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
 | **`OCI_SYSDATE`**                  | Obsolete.                                                                                                                                                                                                                                                                                                   |
 | **`OCI_SYSDBA`**                   | Used with <span class="function">oci\_connect</span> to connect with the SYSDBA privilege. The `php.ini` setting <a href="/book/oci8.html#" class="link">oci8.privileged_connect</a> should be enabled to use this.                                                                                         |
 | **`OCI_SYSOPER`**                  | Used with <span class="function">oci\_connect</span> to connect with the SYSOPER privilege. The `php.ini` setting <a href="/book/oci8.html#" class="link">oci8.privileged_connect</a> should be enabled to use this.                                                                                        |
-| **`OCI_TEMP_BLOB`**                | Used with <a href="/book/oci8.html#OCI-Lob::writeTemporary" class="xref"></a> to indicate that a temporary BLOB should be created.                                                                                                                                                                          |
-| **`OCI_TEMP_CLOB`**                | Used with <a href="/book/oci8.html#OCI-Lob::writeTemporary" class="xref"></a> to indicate that a temporary CLOB should be created.                                                                                                                                                                          |
+| **`OCI_TEMP_BLOB`**                | Used with <a href="/book/oci8.html#OCILob::writeTemporary" class="xref"></a> to indicate that a temporary BLOB should be created.                                                                                                                                                                           |
+| **`OCI_TEMP_CLOB`**                | Used with <a href="/book/oci8.html#OCILob::writeTemporary" class="xref"></a> to indicate that a temporary CLOB should be created.                                                                                                                                                                           |
 
 | Constant           | Description                                                                                                                                                      |
 |--------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -3093,7 +3093,8 @@ Connect to an Oracle database
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$username`</span> , <span
 class="methodparam"><span class="type">string</span> `$password`</span>
@@ -3643,7 +3644,8 @@ Returns the last error found
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_error</span> (\[ <span class="methodparam"><span
 class="type">resource</span> `$resource`</span> \] )
 
@@ -4187,7 +4189,8 @@ Returns the next row from a query as an associative or numeric array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> \[, <span class="methodparam"><span
@@ -4758,7 +4761,8 @@ Returns the next row from a query as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -4833,7 +4837,8 @@ Returns the next row from a query as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5007,7 +5012,8 @@ Returns the next row from a query as a numeric array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5276,7 +5282,8 @@ Returns the name of a field from the statement
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5373,7 +5380,8 @@ Tell the precision of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_field\_precision</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5457,7 +5465,8 @@ Tell the scale of the field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_field\_scale</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5540,7 +5549,8 @@ Returns field's size
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_field\_size</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5638,7 +5648,8 @@ Tell the raw Oracle data type of the field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_field\_type\_raw</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5830,11 +5841,11 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 > **Note**:
 >
 > This function is commonly used as a method
-> <a href="/book/oci8.html#OCI-Lob::free" class="link">OCILOB::free</a>.
+> <a href="/book/oci8.html#OCILob::free" class="link">OCILOB::free</a>.
 
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::free" class="link">OCILOB::free</a>
+-   <a href="/book/oci8.html#OCILob::free" class="link">OCILOB::free</a>
 
 oci\_free\_statement
 ====================
@@ -5869,7 +5880,8 @@ resource that has Oracle Database Implicit Result Sets
 
 ### Description
 
-<span class="type">resource </span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_get\_implicit\_resultset</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6209,7 +6221,8 @@ Allocates new collection object
 
 ### Description
 
-<span class="type">OCICollection</span> <span
+<span class="type"><span class="type">OCICollection</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_new\_collection</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -6260,7 +6273,8 @@ Connect to the Oracle server using a unique connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_new\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -6417,7 +6431,8 @@ Allocates and returns a new cursor (statement handle)
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_new\_cursor</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
@@ -6488,7 +6503,8 @@ Initializes a new empty LOB or FILE descriptor
 
 ### Description
 
-<span class="type">OCI-Lob</span> <span
+<span class="type"><span class="type">OCI-Lob</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_new\_descriptor</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \[, <span class="methodparam"><span
@@ -6639,7 +6655,8 @@ Returns the number of result columns in a statement
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_num\_fields</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6706,7 +6723,8 @@ Returns number of rows affected during statement execution
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_num\_rows</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6780,7 +6798,8 @@ Prepares an Oracle statement for execution
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_parse</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span> `$sql_text`</span>
@@ -7038,7 +7057,8 @@ Connect to an Oracle database using a persistent connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -7452,7 +7472,8 @@ Returns the Oracle Database version
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_server\_version</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
@@ -8315,7 +8336,8 @@ Returns the type of a statement
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">oci\_statement\_type</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -8513,12 +8535,17 @@ Introduction
 
 OCI8 Collection functionality.
 
+> **Note**:
+>
+> The OCI-Collection class was renamed to OCICollection in PHP 8 OCI8
+> 3.0.0 to align with PHP naming standards.
+
 Class synopsis
 --------------
 
-**OCI-Collection**
+**OCICollection**
 
-<span class="ooclass"> class **OCI-Collection** </span> {
+<span class="ooclass"> class **OCICollection** </span> {
 
 /\* Methods \*/
 
@@ -8527,7 +8554,7 @@ Class synopsis
 `$value`</span> )
 
 <span class="type">bool</span> <span class="methodname">assign</span> (
-<span class="methodparam"><span class="type">OCI-Collection</span>
+<span class="methodparam"><span class="type">OCICollection</span>
 `$from`</span> )
 
 <span class="type">bool</span> <span
@@ -8542,10 +8569,12 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 ( <span class="methodparam"><span class="type">int</span>
 `$index`</span> )
 
-<span class="type">int</span> <span class="methodname">max</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">max</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">size</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">bool</span> <span class="methodname">trim</span> (
@@ -8553,15 +8582,15 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 }
 
-OCI-Collection::append
-======================
+OCICollection::append
+=====================
 
 Appends element to the collection
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Collection::append</span> ( <span
+class="methodname">OCICollection::append</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 Appends element to the end of the collection.
@@ -8575,20 +8604,26 @@ The value to be added to the collection. Can be a string or a number.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::assign" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::assign" class="xref"></a>
 
-OCI-Collection::assign
-======================
+OCICollection::assign
+=====================
 
 Assigns a value to the collection from another existing collection
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Collection::assign</span> ( <span
-class="methodparam"><span class="type">OCI-Collection</span>
+class="methodname">OCICollection::assign</span> ( <span
+class="methodparam"><span class="type">OCICollection</span>
 `$from`</span> )
 
 Assigns a value to the collection from another, previously created
@@ -8604,19 +8639,25 @@ An instance of OCI-Collection.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::append" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::append" class="xref"></a>
 
-OCI-Collection::assignElem
-==========================
+OCICollection::assignElem
+=========================
 
 Assigns a value to the element of the collection
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Collection::assignElem</span> ( <span
+class="methodname">OCICollection::assignElem</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> )
@@ -8635,19 +8676,25 @@ Can be a string or a number.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::getElem" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::getElem" class="xref"></a>
 
-OCI-Collection::free
-====================
+OCICollection::free
+===================
 
 Frees the resources associated with the collection object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Collection::free</span> ( <span
+class="methodname">OCICollection::free</span> ( <span
 class="methodparam">void</span> )
 
 Frees the resources associated with the collection object.
@@ -8656,19 +8703,25 @@ Frees the resources associated with the collection object.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
 -   <a href="/book/oci8.html#oci_new_collection" class="xref"></a>
 
-OCI-Collection::getElem
-=======================
+OCICollection::getElem
+======================
 
 Returns value of the element
 
 ### Description
 
 <span class="type">mixed</span> <span
-class="methodname">OCI-Collection::getElem</span> ( <span
+class="methodname">OCICollection::getElem</span> ( <span
 class="methodparam"><span class="type">int</span> `$index`</span> )
 
 Returns element's value with the index `index` (0-based).
@@ -8684,19 +8737,26 @@ Returns **`FALSE`** if such element doesn't exist; **`NULL`** if element
 is **`NULL`**; string if element is column of a string datatype or
 number if element is numeric field.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::assignElem" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::assignElem" class="xref"></a>
 
-OCI-Collection::max
-===================
+OCICollection::max
+==================
 
 Returns the maximum number of elements in the collection
 
 ### Description
 
-<span class="type">int</span> <span
-class="methodname">OCI-Collection::max</span> ( <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">OCICollection::max</span> ( <span
 class="methodparam">void</span> )
 
 Returns the maximum number of elements in the collection.
@@ -8707,19 +8767,26 @@ Returns the maximum number as an integer, or **`FALSE`** on errors.
 
 If the returned value is 0, then the number of elements is not limited.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::size" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::size" class="xref"></a>
 
-OCI-Collection::size
-====================
+OCICollection::size
+===================
 
 Returns size of the collection
 
 ### Description
 
-<span class="type">int</span> <span
-class="methodname">OCI-Collection::size</span> ( <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">OCICollection::size</span> ( <span
 class="methodparam">void</span> )
 
 Returns the size of the collection.
@@ -8729,19 +8796,25 @@ Returns the size of the collection.
 Returns the number of elements in the collection or **`FALSE`** on
 error.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::max" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::max" class="xref"></a>
 
-OCI-Collection::trim
-====================
+OCICollection::trim
+===================
 
 Trims elements from the end of the collection
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Collection::trim</span> ( <span
+class="methodname">OCICollection::trim</span> ( <span
 class="methodparam"><span class="type">int</span> `$num`</span> )
 
 Trims `num` of elements from the end of the collection.
@@ -8755,9 +8828,15 @@ The number of elements to be trimmed.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                                             |
+|------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Collection</span> class was renamed to <span class="classname">OCICollection</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Collection::size" class="xref"></a>
+-   <a href="/book/oci8.html#OCICollection::size" class="xref"></a>
 
 Introduction
 ------------
@@ -8765,17 +8844,22 @@ Introduction
 OCI8 LOB functionality for large binary (BLOB) and character (CLOB)
 objects.
 
+> **Note**:
+>
+> The OCI-Lob class was renamed to OCILob in PHP 8 and PECL OCI8 3.0.0
+> to align with PHP naming standards.
+
 Class synopsis
 --------------
 
-**OCI-Lob**
+**OCILob**
 
-<span class="ooclass"> class **OCI-Lob** </span> {
+<span class="ooclass"> class **OCILob** </span> {
 
 /\* Methods \*/
 
 <span class="type">bool</span> <span class="methodname">append</span> (
-<span class="methodparam"><span class="type">OCI-Lob</span>
+<span class="methodparam"><span class="type">OCILob</span>
 `$lob_from`</span> )
 
 <span class="type">bool</span> <span class="methodname">close</span> (
@@ -8812,7 +8896,8 @@ class="methodparam">void</span> )
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
-<span class="type">string</span> <span class="methodname">load</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">load</span> (
 <span class="methodparam">void</span> )
 
 <span class="type"><span class="type">string</span><span
@@ -8842,12 +8927,14 @@ class="type">bool</span> `$on_off`</span> )
 class="type">false</span></span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">int</span> <span class="methodname">tell</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">tell</span> (
 <span class="methodparam">void</span> )
 
-<span class="type">bool</span> <span class="methodname">truncate</span>
-(\[ <span class="methodparam"><span class="type">int</span>
-`$length`<span class="initializer"> = 0</span></span> \] )
+<span class="type">bool</span> <span
+class="methodname">Lob::truncate</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$length`<span
+class="initializer"> = 0</span></span> \] )
 
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span class="methodname">write</span> (
@@ -8863,16 +8950,16 @@ class="initializer"> = OCI\_TEMP\_CLOB</span></span> \] )
 
 }
 
-OCI-Lob::append
-===============
+OCILob::append
+==============
 
 Appends data from the large object to another large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::append</span> ( <span
-class="methodparam"><span class="type">OCI-Lob</span> `$lob_from`</span>
+class="methodname">OCILob::append</span> ( <span
+class="methodparam"><span class="type">OCILob</span> `$lob_from`</span>
 )
 
 Appends data from the large object to the end of another large object.
@@ -8880,7 +8967,7 @@ Appends data from the large object to the end of another large object.
 Writing to the large object with this method will fail if buffering was
 previously enabled. You must disable buffering before appending. You may
 need to flush buffers with
-<a href="/book/oci8.html#OCI-Lob::flush" class="xref"></a> before
+<a href="/book/oci8.html#OCILob::flush" class="xref"></a> before
 disabling buffering.
 
 ### Parameters
@@ -8892,43 +8979,55 @@ The copied LOB.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::flush" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::setBuffering" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::getBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::flush" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::setBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::getBuffering" class="xref"></a>
 
-OCI-Lob::close
-==============
+OCILob::close
+=============
 
 Closes LOB descriptor
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::close</span> ( <span
+class="methodname">OCILob::close</span> ( <span
 class="methodparam">void</span> )
 
 Closes descriptor of LOB or FILE. This function should be used only with
-<a href="/book/oci8.html#OCI-Lob::writeTemporary" class="xref"></a>.
+<a href="/book/oci8.html#OCILob::writeTemporary" class="xref"></a>.
 
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::writeTemporary" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::writeTemporary" class="xref"></a>
 
-OCI-Lob::eof
-============
+OCILob::eof
+===========
 
 Tests for end-of-file on a large object's descriptor
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::eof</span> ( <span
+class="methodname">OCILob::eof</span> ( <span
 class="methodparam">void</span> )
 
 Tells whether the internal pointer of large object is at the end of LOB.
@@ -8943,15 +9042,21 @@ LOB. Otherwise returns **`FALSE`**.
 > **Note**:
 >
 > This function will return an Oracle error if
-> <a href="/book/oci8.html#OCI-Lob::setBuffering" class="xref"></a> is
+> <a href="/book/oci8.html#OCILob::setBuffering" class="xref"></a> is
 > enabled on the LOB.
+
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
 
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::size" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::size" class="xref"></a>
 
-OCI-Lob::erase
-==============
+OCILob::erase
+=============
 
 Erases a specified portion of the internal LOB data
 
@@ -8959,7 +9064,7 @@ Erases a specified portion of the internal LOB data
 
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
-class="methodname">OCI-Lob::erase</span> (\[ <span
+class="methodname">OCILob::erase</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$offset`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>
 \]\] )
@@ -8983,19 +9088,25 @@ spaces.
 Returns the actual number of characters/bytes erased or **`FALSE`** on
 failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::truncate" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::truncate" class="xref"></a>
 
-OCI-Lob::export
-===============
+OCILob::export
+==============
 
 Exports LOB's contents to a file
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::export</span> ( <span
+class="methodname">OCILob::export</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$start`</span> \[, <span class="methodparam"><span
@@ -9018,22 +9129,28 @@ Indicates the length of data to be exported.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::import" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::import" class="xref"></a>
 
-OCI-Lob::flush
-==============
+OCILob::flush
+=============
 
 Flushes/writes buffer of the LOB to the server
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::flush</span> (\[ <span
+class="methodname">OCILob::flush</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$flag`</span> \] )
 
-<span class="function">OCI-Lob::flush</span> actually writes data to the
+<span class="function">OCILob::flush</span> actually writes data to the
 server.
 
 ### Parameters
@@ -9052,20 +9169,26 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 Returns **`FALSE`** if buffering was not enabled or an error occurred.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::getBuffering" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::setBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::getBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::setBuffering" class="xref"></a>
 
-OCI-Lob::free
-=============
+OCILob::free
+============
 
 Frees resources associated with the LOB descriptor
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::free</span> ( <span
+class="methodname">OCILob::free</span> ( <span
 class="methodparam">void</span> )
 
 Frees resources associated with the descriptor, previously allocated
@@ -9075,15 +9198,21 @@ with <span class="function">oci\_new\_descriptor</span>.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
-OCI-Lob::getBuffering
-=====================
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
+OCILob::getBuffering
+====================
 
 Returns current state of buffering for the large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::getBuffering</span> ( <span
+class="methodname">OCILob::getBuffering</span> ( <span
 class="methodparam">void</span> )
 
 Tells whether the buffering for the large object is on or off.
@@ -9093,19 +9222,25 @@ Tells whether the buffering for the large object is on or off.
 Returns **`FALSE`** if buffering for the large object is off and
 **`TRUE`** if buffering is used.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::setBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::setBuffering" class="xref"></a>
 
-OCI-Lob::import
-===============
+OCILob::import
+==============
 
 Imports file data to the LOB
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::import</span> ( <span
+class="methodname">OCILob::import</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
@@ -9121,20 +9256,27 @@ Path to the file.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::export" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::write" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::export" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::write" class="xref"></a>
 
-OCI-Lob::load
-=============
+OCILob::load
+============
 
 Returns large object's contents
 
 ### Description
 
-<span class="type">string</span> <span
-class="methodname">OCI-Lob::load</span> ( <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
+class="methodname">OCILob::load</span> ( <span
 class="methodparam">void</span> )
 
 Returns large object's contents. As script execution is terminated when
@@ -9142,18 +9284,24 @@ the
 <a href="/ini/core.html#ini.memory-limit" class="link">memory_limit</a>
 is reached, ensure that the LOB does not exceed this limit. In most
 cases it's recommended to use
-<a href="/book/oci8.html#OCI-Lob::read" class="xref"></a> instead.
+<a href="/book/oci8.html#OCILob::read" class="xref"></a> instead.
 
 ### Return Values
 
 Returns the contents of the object, or **`FALSE`** on errors.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::read" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::read" class="xref"></a>
 
-OCI-Lob::read
-=============
+OCILob::read
+============
 
 Reads part of the large object
 
@@ -9161,8 +9309,8 @@ Reads part of the large object
 
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
-class="methodname">OCI-Lob::read</span> ( <span
-class="methodparam"><span class="type">int</span> `$length`</span> )
+class="methodname">OCILob::read</span> ( <span class="methodparam"><span
+class="type">int</span> `$length`</span> )
 
 Reads `length` bytes from the current position of LOB's internal
 pointer.
@@ -9181,20 +9329,26 @@ to 1 MB.
 
 Returns the contents as a string, or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::load" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::write" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::load" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::write" class="xref"></a>
 
-OCI-Lob::rewind
-===============
+OCILob::rewind
+==============
 
 Moves the internal pointer to the beginning of the large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::rewind</span> ( <span
+class="methodname">OCILob::rewind</span> ( <span
 class="methodparam">void</span> )
 
 Sets the internal pointer to the beginning of the large object.
@@ -9203,23 +9357,28 @@ Sets the internal pointer to the beginning of the large object.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::seek" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::tell" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::seek" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::tell" class="xref"></a>
 
-OCI-Lob::save
-=============
+OCILob::save
+============
 
 Saves data to the large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::save</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$offset`</span>
-\] )
+class="methodname">OCILob::save</span> ( <span class="methodparam"><span
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`</span> \] )
 
 Saves `data` to the large object.
 
@@ -9235,32 +9394,44 @@ Can be used to indicate offset from the beginning of the large object.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::write" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::import" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::write" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::import" class="xref"></a>
 
-OCI-Lob::saveFile
-=================
+OCILob::saveFile
+================
 
-Alias of <span class="function">OCI-Lob::import</span>
+Alias of <span class="function">OCILob::import</span>
 
 ### Description
 
 This function is an alias of: <span
-class="function">OCI-Lob::import</span>.
+class="function">OCILob::import</span>.
 
-OCI-Lob::seek
-=============
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
+OCILob::seek
+============
 
 Sets the internal pointer of the large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::seek</span> ( <span
-class="methodparam"><span class="type">int</span> `$offset`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$whence`<span
+class="methodname">OCILob::seek</span> ( <span class="methodparam"><span
+class="type">int</span> `$offset`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$whence`<span
 class="initializer"> = **`OCI_SEEK_SET`**</span></span> \] )
 
 Sets the internal pointer of the large object.
@@ -9284,21 +9455,27 @@ May be one of:
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::rewind" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::tell" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::eof" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::rewind" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::tell" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::eof" class="xref"></a>
 
-OCI-Lob::setBuffering
-=====================
+OCILob::setBuffering
+====================
 
 Changes current state of buffering for the large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::setBuffering</span> ( <span
+class="methodname">OCILob::setBuffering</span> ( <span
 class="methodparam"><span class="type">bool</span> `$on_off`</span> )
 
 Sets the buffering for the large object, depending on the value of the
@@ -9307,7 +9484,7 @@ Sets the buffering for the large object, depending on the value of the
 Use of this function may provide performance improvements by buffering
 small reads and writes of LOBs by reducing the number of network
 round-trips and LOB versions. <span
-class="function">OCI-Lob::flush</span> should be used to flush buffers,
+class="function">OCILob::flush</span> should be used to flush buffers,
 when you have finished working with the large object.
 
 ### Parameters
@@ -9320,12 +9497,18 @@ when you have finished working with the large object.
 Returns **`TRUE`** on success or **`FALSE`** on failure. Repeated calls
 to this method with the same flag will return **`TRUE`**.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::getBuffering" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::getBuffering" class="xref"></a>
 
-OCI-Lob::size
-=============
+OCILob::size
+============
 
 Returns size of large object
 
@@ -9333,7 +9516,7 @@ Returns size of large object
 
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
-class="methodname">OCI-Lob::size</span> ( <span
+class="methodname">OCILob::size</span> ( <span
 class="methodparam">void</span> )
 
 Gets the size of the large object.
@@ -9343,15 +9526,22 @@ Gets the size of the large object.
 Returns length of large object value or **`FALSE`** on failure. Empty
 objects have zero length.
 
-OCI-Lob::tell
-=============
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
+OCILob::tell
+============
 
 Returns the current position of internal pointer of large object
 
 ### Description
 
-<span class="type">int</span> <span
-class="methodname">OCI-Lob::tell</span> ( <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">OCILob::tell</span> ( <span
 class="methodparam">void</span> )
 
 Gets the current position of a LOB's internal pointer.
@@ -9361,21 +9551,27 @@ Gets the current position of a LOB's internal pointer.
 Returns current position of a LOB's internal pointer or **`FALSE`** if
 an error occurred.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::rewind" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::size" class="xref"></a>
--   <a href="/book/oci8.html#OCI-Lob::eof" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::rewind" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::size" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::eof" class="xref"></a>
 
-OCI-Lob::truncate
-=================
+OCILob::truncate
+================
 
 Truncates large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::truncate</span> (\[ <span
+class="methodname">Lob::truncate</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -9391,12 +9587,18 @@ Otherwise, it will completely purge the LOB.
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::erase" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::erase" class="xref"></a>
 
-OCI-Lob::write
-==============
+OCILob::write
+=============
 
 Writes data to the large object
 
@@ -9404,7 +9606,7 @@ Writes data to the large object
 
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
-class="methodname">OCI-Lob::write</span> ( <span
+class="methodname">OCILob::write</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>
 \] )
@@ -9425,28 +9627,33 @@ been written or the end of `data` is reached, whichever comes first.
 
 Returns the number of bytes written or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::read" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::read" class="xref"></a>
 
-OCI-Lob::writeTemporary
-=======================
+OCILob::writeTemporary
+======================
 
 Writes a temporary large object
 
 ### Description
 
 <span class="type">bool</span> <span
-class="methodname">OCI-Lob::writeTemporary</span> ( <span
+class="methodname">OCILob::writeTemporary</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$lob_type`<span
 class="initializer"> = OCI\_TEMP\_CLOB</span></span> \] )
 
 Creates a temporary large object and writes `data` to it.
 
-You should use
-<a href="/book/oci8.html#OCI-Lob::close" class="xref"></a> when you are
-done with this object.
+You should use <a href="/book/oci8.html#OCILob::close" class="xref"></a>
+when you are done with this object.
 
 ### Parameters
 
@@ -9463,19 +9670,31 @@ Can be one of the following:
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
+
 ### See Also
 
--   <a href="/book/oci8.html#OCI-Lob::close" class="xref"></a>
+-   <a href="/book/oci8.html#OCILob::close" class="xref"></a>
 
-OCI-Lob::writeToFile
-====================
+OCILob::writeToFile
+===================
 
-Alias of <span class="function">OCI-Lob::export</span>
+Alias of <span class="function">OCILob::export</span>
 
 ### Description
 
 This function is an alias of: <span
-class="function">OCI-Lob::export</span>.
+class="function">OCILob::export</span>.
+
+### Changelog
+
+| Version                | Description                                                                                                                               |
+|------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0, PECL OCI8 3.0.0 | The <span class="classname">OCI-Lob</span> class was renamed to <span class="classname">OCILob</span> to align with PHP naming standards. |
 
 oci\_internal\_debug
 ====================

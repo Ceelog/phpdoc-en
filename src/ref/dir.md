@@ -169,10 +169,12 @@ Return an instance of the Directory class
 
 ### Description
 
-<span class="type">Directory</span> <span class="methodname">dir</span>
-( <span class="methodparam"><span class="type">string</span>
-`$directory`</span> \[, <span class="methodparam"><span
-class="type">resource</span> `$context`</span> \] )
+<span class="type"><span class="type">Directory</span><span
+class="type">false</span><span class="type">null</span></span> <span
+class="methodname">dir</span> ( <span class="methodparam"><span
+class="type">string</span> `$directory`</span> \[, <span
+class="methodparam"><span class="type">resource</span> `$context`</span>
+\] )
 
 A pseudo-object oriented mechanism for reading a directory. The given
 `directory` is opened.
@@ -241,7 +243,8 @@ Gets the current working directory
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">getcwd</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">getcwd</span>
 ( <span class="methodparam">void</span> )
 
 Gets the current working directory.
@@ -470,9 +473,10 @@ Rewind directory handle
 
 ### Description
 
-<span class="type">void</span> <span class="methodname">rewinddir</span>
-(\[ <span class="methodparam"><span class="type">resource</span>
-`$dir_handle`</span> \] )
+<span class="type"><span class="type">null</span><span
+class="type">false</span></span> <span
+class="methodname">rewinddir</span> (\[ <span class="methodparam"><span
+class="type">resource</span> `$dir_handle`</span> \] )
 
 Resets the directory stream indicated by `dir_handle` to the beginning
 of the directory.
@@ -496,7 +500,8 @@ List files and directories inside the specified path
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">scandir</span>
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">scandir</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$directory`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$sorting_order`<span class="initializer"> =

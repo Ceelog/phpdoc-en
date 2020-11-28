@@ -5,7 +5,8 @@ Accepts a connection on a socket
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_accept</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 )
@@ -58,7 +59,8 @@ Create and bind to a socket from a given addrinfo
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">null</span></span> <span
 class="methodname">socket\_addrinfo\_bind</span> ( <span
 class="methodparam"><span class="type">resource</span> `$addr`</span> )
 
@@ -90,7 +92,8 @@ Create and connect to a socket from a given addrinfo
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">null</span></span> <span
 class="methodname">socket\_addrinfo\_connect</span> ( <span
 class="methodparam"><span class="type">resource</span> `$addr`</span> )
 
@@ -450,7 +453,8 @@ Opens a socket on port to accept connections
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_create\_listen</span> ( <span
 class="methodparam"><span class="type">int</span> `$port`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$backlog`<span
@@ -638,7 +642,8 @@ Create a socket (endpoint for communication)
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_create</span> ( <span
 class="methodparam"><span class="type">int</span> `$domain`</span> ,
 <span class="methodparam"><span class="type">int</span> `$type`</span> ,
@@ -1111,7 +1116,8 @@ Import a stream
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">null</span><span class="type">false</span></span> <span
 class="methodname">socket\_import\_stream</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 )
@@ -1273,7 +1279,8 @@ Reads a maximum of length bytes from a socket
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_read</span> ( <span class="methodparam"><span
 class="type">resource</span> `$socket`</span> , <span
 class="methodparam"><span class="type">int</span> `$length`</span> \[,
@@ -1336,7 +1343,8 @@ Receives data from a connected socket
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_recv</span> ( <span class="methodparam"><span
 class="type">resource</span> `$socket`</span> , <span
 class="methodparam"><span class="type">string</span> `&$buf`</span> ,
@@ -1474,7 +1482,8 @@ Receives data from a socket whether or not it is connection-oriented
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_recvfrom</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -1614,7 +1623,8 @@ specified timeout
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_select</span> ( <span
 class="methodparam"><span class="type">array</span> `&$read`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -1775,7 +1785,8 @@ Sends data to a connected socket
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_send</span> ( <span class="methodparam"><span
 class="type">resource</span> `$socket`</span> , <span
 class="methodparam"><span class="type">string</span> `$buf`</span> ,
@@ -1864,7 +1875,8 @@ Sends a message to a socket, whether it is connected or not
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">socket\_sendto</span> ( <span
 class="methodparam"><span class="type">resource</span> `$socket`</span>
 , <span class="methodparam"><span class="type">string</span>

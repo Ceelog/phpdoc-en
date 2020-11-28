@@ -88,9 +88,9 @@ class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">getExtensions</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">V8JsException</span> <span
-class="methodname">getPendingException</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">V8JsException</span><span class="type">null</span></span>
+<span class="methodname">getPendingException</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -244,9 +244,9 @@ Return pending uncaught Javascript exception
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="type">V8JsException</span> <span
-class="methodname">V8Js::getPendingException</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">V8JsException</span><span class="type">null</span></span>
+<span class="methodname">V8Js::getPendingException</span> ( <span
 class="methodparam">void</span> )
 
 Returns any pending uncaught Javascript exception as <span

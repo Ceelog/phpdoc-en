@@ -184,7 +184,8 @@ The "Late Static Binding" class name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">get\_called\_class</span> ( <span
 class="methodparam">void</span> )
 
@@ -235,7 +236,8 @@ Gets the class methods' names
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">get\_class\_methods</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class_name`</span>
 )
@@ -310,7 +312,8 @@ Get the default properties of the class
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">get\_class\_vars</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$class_name`</span> )
@@ -423,7 +426,8 @@ Returns the name of the class of an object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">get\_class</span> (\[ <span class="methodparam"><span
 class="type">object</span> `$object`</span> \] )
 
@@ -667,7 +671,8 @@ Returns an array of all declared traits
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">get\_declared\_traits</span> ( <span
 class="methodparam">void</span> )
 
@@ -767,7 +772,8 @@ Retrieves the parent class name for object or class
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">get\_parent\_class</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$object`</span> \]
 )
@@ -1193,7 +1199,8 @@ Checks if the object or class has a property
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">bool</span><span
+class="type">null</span></span> <span
 class="methodname">property\_exists</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1274,7 +1281,8 @@ Checks if the trait exists
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">bool</span><span
+class="type">null</span></span> <span
 class="methodname">trait\_exists</span> ( <span
 class="methodparam"><span class="type">string</span> `$traitname`</span>
 \[, <span class="methodparam"><span class="type">bool</span>

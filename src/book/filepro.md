@@ -91,7 +91,8 @@ Find out how many fields are in a filePro database
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_fieldcount</span> ( <span
 class="methodparam">void</span> )
 
@@ -113,7 +114,8 @@ Gets the name of a field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_fieldname</span> ( <span
 class="methodparam"><span class="type">int</span> `$field_number`</span>
 )
@@ -136,7 +138,8 @@ Gets the type of a field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_fieldtype</span> ( <span
 class="methodparam"><span class="type">int</span> `$field_number`</span>
 )
@@ -160,7 +163,8 @@ Gets the width of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_fieldwidth</span> ( <span
 class="methodparam"><span class="type">int</span> `$field_number`</span>
 )
@@ -183,7 +187,8 @@ Retrieves data from a filePro database
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_retrieve</span> ( <span
 class="methodparam"><span class="type">int</span> `$row_number`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -213,7 +218,8 @@ Find out how many rows are in a filePro database
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">filepro\_rowcount</span> ( <span
 class="methodparam">void</span> )
 
