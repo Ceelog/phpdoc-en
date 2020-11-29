@@ -42,7 +42,7 @@ $greet('PHP');
 ```
 
 Closures may also inherit variables from the parent scope. Any such
-variables must be passed to the *use* language construct. From PHP 7.1,
+variables must be passed to the *use* language construct. As of PHP 7.1,
 these variables must not include
 <a href="/language/variables/predefined.html" class="link">superglobals</a>,
 `$this`, or variables with the same name as a parameter.
@@ -101,6 +101,9 @@ The above example will output something similar to:
     string(5) "hello"
     string(5) "world"
     string(11) "hello world"
+
+As of PHP 8.0.0, the list of scope-inherited variables may include a
+trailing comma, which will be ignored.
 
 Inheriting variables from the parent scope is *not* the same as using
 global variables. Global variables exist in the global scope, which is

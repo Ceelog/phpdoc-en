@@ -1146,8 +1146,7 @@ Convert string from one codepage to another
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">sapi\_windows\_cp\_conv</span> ( <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">string</span></span>
@@ -1536,8 +1535,7 @@ Delay execution
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">sleep</span> (
+<span class="type">int</span> <span class="methodname">sleep</span> (
 <span class="methodparam"><span class="type">int</span>
 `$seconds`</span> )
 

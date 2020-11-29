@@ -412,8 +412,7 @@ Returns the current process title
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cli\_get\_process\_title</span> ( <span
 class="methodparam">void</span> )
 
@@ -1077,8 +1076,7 @@ Returns an array with the names of the functions of a module
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">get\_extension\_funcs</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$module_name`</span> )
@@ -1527,16 +1525,14 @@ Gets the value of an environment variable
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">getenv</span>
+<span class="type">string</span> <span class="methodname">getenv</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$varname`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$local_only`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">getenv</span>
-( <span class="methodparam">void</span> )
+<span class="type">array</span> <span class="methodname">getenv</span> (
+<span class="methodparam">void</span> )
 
 Gets the value of an environment variable.
 
@@ -1610,10 +1606,8 @@ Gets time of last page modification
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">getlastmod</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">getlastmod</span>
+( <span class="methodparam">void</span> )
 
 Gets the time of the last modification of the main script of execution.
 
@@ -1654,10 +1648,8 @@ Get PHP script owner's GID
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">getmygid</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">getmygid</span> (
+<span class="methodparam">void</span> )
 
 Gets the group ID of the current script.
 
@@ -1680,10 +1672,8 @@ Gets the inode of the current script
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">getmyinode</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">getmyinode</span>
+( <span class="methodparam">void</span> )
 
 Gets the inode of the current script.
 
@@ -1707,10 +1697,8 @@ Gets PHP's process ID
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">getmypid</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">getmypid</span> (
+<span class="methodparam">void</span> )
 
 Gets the current PHP process ID.
 
@@ -1740,10 +1728,8 @@ Gets PHP script owner's UID
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">getmyuid</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">getmyuid</span> (
+<span class="methodparam">void</span> )
 
 Gets the user ID of the current script.
 
@@ -2065,8 +2051,7 @@ Gets all configuration options
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">ini\_get\_all</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -2204,8 +2189,7 @@ Gets the value of a configuration option
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ini\_get</span> ( <span class="methodparam"><span
 class="type">string</span> `$varname`</span> )
 
@@ -2361,8 +2345,7 @@ Sets the value of a configuration option
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ini\_set</span> ( <span class="methodparam"><span
 class="type">string</span> `$varname`</span> , <span
 class="methodparam"><span class="type">string</span> `$newvalue`</span>
@@ -2542,8 +2525,7 @@ Retrieve a path to the loaded php.ini file
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">php\_ini\_loaded\_file</span> ( <span
 class="methodparam">void</span> )
 
@@ -2591,8 +2573,7 @@ Return a list of .ini files parsed from the additional ini dir
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">php\_ini\_scanned\_files</span> ( <span
 class="methodparam">void</span> )
 
@@ -2984,8 +2965,7 @@ Gets the current PHP version
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">phpversion</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$extension`</span> \] )
 
@@ -3335,8 +3315,7 @@ class="methodparam"><span class="type">string</span> `$version1`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$version2`</span> )
 
-<span class="type"><span class="type">bool</span><span
-class="type">null</span></span> <span
+<span class="type">bool</span> <span
 class="methodname">version\_compare</span> ( <span
 class="methodparam"><span class="type">string</span> `$version1`</span>
 , <span class="methodparam"><span class="type">string</span>

@@ -114,14 +114,12 @@ class="initializer"> = 1</span></span> \] )
 <span class="type">bool</span> <span class="methodname">flush</span> (
 <span class="methodparam">void</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">get</span> (
+<span class="type">string</span> <span class="methodname">get</span> (
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `&$flags`</span> \] )
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">getExtendedStats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$slabid`</span>
@@ -726,15 +724,13 @@ Retrieve item from the server
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">Memcache::get</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">int</span> `&$flags`</span>
 \] )
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">Memcache::get</span> ( <span
 class="methodparam"><span class="type">array</span> `$keys`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -807,8 +803,7 @@ Get statistics from all servers in pool
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">Memcache::getExtendedStats</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$type`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$slabid`</span>

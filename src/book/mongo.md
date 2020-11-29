@@ -5258,12 +5258,11 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">createDBRef</span> ( <span class="methodparam"><span
-class="type">string</span> `$collection`</span> , <span
-class="methodparam"><span class="type">mixed</span>
-`$document_or_id`</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">createDBRef</span> ( <span
+class="methodparam"><span class="type">string</span>
+`$collection`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$document_or_id`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">drop</span> ( <span
@@ -6032,9 +6031,8 @@ Creates a database reference
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">MongoDB::createDBRef</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MongoDB::createDBRef</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$collection`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$document_or_id`</span> )
@@ -7664,10 +7662,10 @@ array()</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$options`<span class="initializer"> =
 array()</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">createDBRef</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$document_or_id`</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">createDBRef</span> ( <span
+class="methodparam"><span class="type">mixed</span>
+`$document_or_id`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">createIndex</span> ( <span
@@ -7719,15 +7717,14 @@ class="type">array</span> `$fields`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$options`</span>
 \]\]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">findOne</span> (\[ <span class="methodparam"><span
-class="type">array</span> `$query`<span class="initializer"> =
-array()</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$fields`<span class="initializer"> =
-array()</span></span> \[, <span class="methodparam"><span
-class="type">array</span> `$options`<span class="initializer"> =
-array()</span></span> \]\]\] )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">findOne</span> (\[ <span
+class="methodparam"><span class="type">array</span> `$query`<span
+class="initializer"> = array()</span></span> \[, <span
+class="methodparam"><span class="type">array</span> `$fields`<span
+class="initializer"> = array()</span></span> \[, <span
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = array()</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCollection</span> <span
@@ -8953,9 +8950,8 @@ Creates a database reference
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">MongoCollection::createDBRef</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MongoCollection::createDBRef</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$document_or_id`</span> )
 
@@ -10463,9 +10459,8 @@ Queries this collection, returning a single element
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">MongoCollection::findOne</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MongoCollection::findOne</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$query`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$fields`<span
@@ -12766,9 +12761,8 @@ class="methodname">count</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$foundOnly`<span class="initializer"> =
 **`FALSE`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -13335,9 +13329,8 @@ Returns the current element
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">MongoCursor::current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MongoCursor::current</span> ( <span
 class="methodparam">void</span> )
 
 This returns **`NULL`** until <span
@@ -15108,9 +15101,8 @@ class="methodparam"><span class="type">MongoClient</span>
 class="type">string</span> `$hash`</span> , <span
 class="methodparam"><span class="type">array</span> `$document`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -15412,9 +15404,8 @@ Returns the current element
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">MongoCommandCursor::current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MongoCommandCursor::current</span> ( <span
 class="methodparam">void</span> )
 
 This returns **`NULL`** until <span
@@ -17875,8 +17866,7 @@ class="methodparam"><span class="type">mixed</span> `$id`</span> \[,
 `$database`</span> \] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">get</span> ( <span class="methodparam"><span
 class="type">MongoDB</span> `$db`</span> , <span
 class="methodparam"><span class="type">array</span> `$ref`</span> )
@@ -17984,8 +17974,7 @@ Fetches the object pointed to by a reference
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">MongoDBRef::get</span> ( <span
 class="methodparam"><span class="type">MongoDB</span> `$db`</span> ,
 <span class="methodparam"><span class="type">array</span> `$ref`</span>
@@ -18563,18 +18552,18 @@ array()</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$fields`<span class="initializer"> =
 array()</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">MongoGridFSFile</span><span class="type">null</span></span>
-<span class="methodname">findOne</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$query`<span
-class="initializer"> = array()</span></span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$fields`<span
-class="initializer"> = array()</span></span> \]\] )
+<span class="modifier">public</span> <span
+class="type">MongoGridFSFile</span> <span
+class="methodname">findOne</span> (\[ <span class="methodparam"><span
+class="type">mixed</span> `$query`<span class="initializer"> =
+array()</span></span> \[, <span class="methodparam"><span
+class="type">mixed</span> `$fields`<span class="initializer"> =
+array()</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">MongoGridFSFile</span><span class="type">null</span></span>
-<span class="methodname">get</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$id`</span> )
+<span class="modifier">public</span> <span
+class="type">MongoGridFSFile</span> <span class="methodname">get</span>
+( <span class="methodparam"><span class="type">mixed</span> `$id`</span>
+)
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">put</span> ( <span class="methodparam"><span
@@ -18760,9 +18749,9 @@ Returns a single file matching the criteria
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">MongoGridFSFile</span><span class="type">null</span></span>
-<span class="methodname">MongoGridFS::findOne</span> (\[ <span
+<span class="modifier">public</span> <span
+class="type">MongoGridFSFile</span> <span
+class="methodname">MongoGridFS::findOne</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$query`<span
 class="initializer"> = array()</span></span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$fields`<span
@@ -18840,9 +18829,9 @@ Retrieve a file from the database
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">MongoGridFSFile</span><span class="type">null</span></span>
-<span class="methodname">MongoGridFS::get</span> ( <span
+<span class="modifier">public</span> <span
+class="type">MongoGridFSFile</span> <span
+class="methodname">MongoGridFS::get</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$id`</span> )
 
 ### Parameters
@@ -20574,8 +20563,7 @@ class="modifier">static</span> <span class="type">int</span> `$module` ;
 /\* Methods \*/
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">callable</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">callable</span> <span
 class="methodname">getCallback</span> ( <span
 class="methodparam">void</span> )
 
@@ -20690,8 +20678,7 @@ Gets the previously set callback function
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">callable</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">callable</span> <span
 class="methodname">MongoLog::getCallback</span> ( <span
 class="methodparam">void</span> )
 
@@ -21305,9 +21292,8 @@ class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">getPoolSize</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getSlave</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getSlave</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -21545,9 +21531,8 @@ Returns the address being used by this for slaveOkay reads
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">Mongo::getSlave</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Mongo::getSlave</span> ( <span
 class="methodparam">void</span> )
 
 This finds the address of the secondary currently being used for reads.

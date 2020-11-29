@@ -1083,8 +1083,7 @@ Inverse by modulo
 
 ### Description
 
-<span class="type"><span class="type">GMP</span><span
-class="type">false</span></span> <span
+<span class="type">GMP</span> <span
 class="methodname">gmp\_invert</span> ( <span class="methodparam"><span
 class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
 class="type">GMP</span> `$b`</span> )
@@ -1957,8 +1956,7 @@ Sets the RNG seed
 
 ### Description
 
-<span class="type"><span class="type">null</span><span
-class="type">false</span></span> <span
+<span class="type">void</span> <span
 class="methodname">gmp\_random\_seed</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$seed`</span> )
 

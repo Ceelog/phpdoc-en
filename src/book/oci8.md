@@ -3093,8 +3093,7 @@ Connect to an Oracle database
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">oci\_connect</span> ( <span class="methodparam"><span
 class="type">string</span> `$username`</span> , <span
 class="methodparam"><span class="type">string</span> `$password`</span>
@@ -3644,8 +3643,7 @@ Returns the last error found
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_error</span> (\[ <span class="methodparam"><span
 class="type">resource</span> `$resource`</span> \] )
 
@@ -4189,8 +4187,7 @@ Returns the next row from a query as an associative or numeric array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> \[, <span class="methodparam"><span
@@ -4761,8 +4758,7 @@ Returns the next row from a query as an associative array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -4837,8 +4833,7 @@ Returns the next row from a query as an object
 
 ### Description
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">oci\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5012,8 +5007,7 @@ Returns the next row from a query as a numeric array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">oci\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -5282,8 +5276,7 @@ Returns the name of a field from the statement
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">oci\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5380,8 +5373,7 @@ Tell the precision of a field
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_field\_precision</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5465,8 +5457,7 @@ Tell the scale of the field
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_field\_scale</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5549,8 +5540,7 @@ Returns field's size
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_field\_size</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5648,8 +5638,7 @@ Tell the raw Oracle data type of the field
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_field\_type\_raw</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> , <span class="methodparam"><span
@@ -5880,8 +5869,7 @@ resource that has Oracle Database Implicit Result Sets
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource </span> <span
 class="methodname">oci\_get\_implicit\_resultset</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6221,8 +6209,7 @@ Allocates new collection object
 
 ### Description
 
-<span class="type"><span class="type">OCICollection</span><span
-class="type">false</span></span> <span
+<span class="type">OCICollection</span> <span
 class="methodname">oci\_new\_collection</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -6273,8 +6260,7 @@ Connect to the Oracle server using a unique connection
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">oci\_new\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -6431,8 +6417,7 @@ Allocates and returns a new cursor (statement handle)
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">oci\_new\_cursor</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
@@ -6503,8 +6488,7 @@ Initializes a new empty LOB or FILE descriptor
 
 ### Description
 
-<span class="type"><span class="type">OCI-Lob</span><span
-class="type">false</span></span> <span
+<span class="type">OCI-Lob</span> <span
 class="methodname">oci\_new\_descriptor</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> \[, <span class="methodparam"><span
@@ -6655,8 +6639,7 @@ Returns the number of result columns in a statement
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_num\_fields</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6723,8 +6706,7 @@ Returns number of rows affected during statement execution
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">oci\_num\_rows</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -6798,8 +6780,7 @@ Prepares an Oracle statement for execution
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">oci\_parse</span> ( <span class="methodparam"><span
 class="type">resource</span> `$connection`</span> , <span
 class="methodparam"><span class="type">string</span> `$sql_text`</span>
@@ -7057,8 +7038,7 @@ Connect to an Oracle database using a persistent connection
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">oci\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -7472,8 +7452,7 @@ Returns the Oracle Database version
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">oci\_server\_version</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection`</span> )
@@ -8336,8 +8315,7 @@ Returns the type of a statement
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">oci\_statement\_type</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$statement`</span> )
@@ -8569,12 +8547,10 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 ( <span class="methodparam"><span class="type">int</span>
 `$index`</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">max</span> (
+<span class="type">int</span> <span class="methodname">max</span> (
 <span class="methodparam">void</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">size</span> (
+<span class="type">int</span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">bool</span> <span class="methodname">trim</span> (
@@ -8754,8 +8730,7 @@ Returns the maximum number of elements in the collection
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCICollection::max</span> ( <span
 class="methodparam">void</span> )
 
@@ -8784,8 +8759,7 @@ Returns size of the collection
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCICollection::size</span> ( <span
 class="methodparam">void</span> )
 
@@ -8896,8 +8870,7 @@ class="methodparam">void</span> )
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">load</span> (
+<span class="type">string</span> <span class="methodname">load</span> (
 <span class="methodparam">void</span> )
 
 <span class="type"><span class="type">string</span><span
@@ -8927,8 +8900,7 @@ class="type">bool</span> `$on_off`</span> )
 class="type">false</span></span> <span class="methodname">size</span> (
 <span class="methodparam">void</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">tell</span> (
+<span class="type">int</span> <span class="methodname">tell</span> (
 <span class="methodparam">void</span> )
 
 <span class="type">bool</span> <span
@@ -9274,8 +9246,7 @@ Returns large object's contents
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">OCILob::load</span> ( <span
 class="methodparam">void</span> )
 
@@ -9539,8 +9510,7 @@ Returns the current position of internal pointer of large object
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">OCILob::tell</span> ( <span
 class="methodparam">void</span> )
 

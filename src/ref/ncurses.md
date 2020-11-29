@@ -1959,8 +1959,7 @@ Returns terminals description
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ncurses\_longname</span> ( <span
 class="methodparam">void</span> )
 
@@ -3892,8 +3891,7 @@ Returns terminals (short)-name
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">ncurses\_termname</span> ( <span
 class="methodparam">void</span> )
 

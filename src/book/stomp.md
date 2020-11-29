@@ -107,10 +107,9 @@ class="type">array</span> `$headers`</span> \]\]\]\] )
 <span class="methodname">\_\_destruct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">error</span> ( <span class="methodparam">void</span>
-)
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">error</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getReadTimeout</span> ( <span
@@ -735,15 +734,13 @@ Gets the last stomp error
 
 Object oriented style (method):
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">Stomp::error</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">Stomp::error</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style:
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">stomp\_error</span> ( <span class="methodparam"><span
 class="type">resource</span> `$link`</span> )
 

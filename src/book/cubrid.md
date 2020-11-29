@@ -860,8 +860,7 @@ Get contents of collection type column using OID
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_col\_get</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -942,8 +941,7 @@ Get the number of elements in collection type column using OID
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_col\_size</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -1025,8 +1023,7 @@ Get the column names in result
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_column\_names</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$req_identifier`</span> )
@@ -1093,8 +1090,7 @@ Get column types in result
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_column\_types</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$req_identifier`</span> )
@@ -1272,8 +1268,7 @@ Establish the environment for connecting to CUBRID server
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_connect\_with\_url</span> ( <span
 class="methodparam"><span class="type">string</span> `$conn_url`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -1453,8 +1448,7 @@ Open a connection to a CUBRID Server
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span> `$port`</span> ,
@@ -1575,8 +1569,7 @@ Get OID of the current cursor location
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_current\_oid</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$req_identifier`</span> )
@@ -2289,8 +2282,7 @@ Get auto-commit mode of the connection
 
 ### Description
 
-<span class="type"><span class="type">bool</span><span
-class="type">null</span></span> <span
+<span class="type">bool</span> <span
 class="methodname">cubrid\_get\_autocommit</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> )
@@ -2329,8 +2321,7 @@ Return the current CUBRID connection charset
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_get\_charset</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> )
@@ -2384,8 +2375,7 @@ Get the class name using OID
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_get\_class\_name</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -2444,8 +2434,7 @@ Return the client library version
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_get\_client\_info</span> ( <span
 class="methodparam">void</span> )
 
@@ -2523,8 +2512,7 @@ Returns the CUBRID database parameters
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_get\_db\_parameter</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> )
@@ -2706,8 +2694,7 @@ Return the CUBRID server version
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_get\_server\_info</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> )
@@ -2895,8 +2882,7 @@ Return the ID generated for the last updated **`AUTO_INCREMENT`** column
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_insert\_id</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> \] )
@@ -3159,8 +3145,7 @@ Get BLOB/CLOB data
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_lob\_get</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -3281,8 +3266,7 @@ Get BLOB/CLOB data size
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_lob\_size</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> )
@@ -3590,8 +3574,7 @@ Create a lob object
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_lob2\_new</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> \[, <span class="methodparam"><span
@@ -3631,8 +3614,7 @@ Read from BLOB/CLOB data
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_lob2\_read</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> , <span class="methodparam"><span
@@ -3945,8 +3927,7 @@ Get a lob object's size
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_lob2\_size64</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> )
@@ -3986,8 +3967,7 @@ Get a lob object's size
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_lob2\_size</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> )
@@ -4025,8 +4005,7 @@ Tell the cursor position of the LOB object
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_lob2\_tell64</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> )
@@ -4066,8 +4045,7 @@ Tell the cursor position of the LOB object
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_lob2\_tell</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$lob_identifier`</span> )
@@ -4621,8 +4599,7 @@ Return the number of columns in the result set
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_num\_cols</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -4678,8 +4655,7 @@ Get the number of rows in the result set
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_num\_rows</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -4749,8 +4725,7 @@ Open a persistent connection to CUBRID server
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_pconnect\_with\_url</span> ( <span
 class="methodparam"><span class="type">string</span> `$conn_url`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -4927,8 +4902,7 @@ Open a persistent connection to a CUBRID server
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span> `$port`</span> ,
@@ -5049,8 +5023,7 @@ Prepare a SQL statement for execution
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_prepare</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -5355,8 +5328,7 @@ Get the requested schema information
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_schema</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -6495,14 +6467,12 @@ Return the number of rows affected by the last SQL statement
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_affected\_rows</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> \] )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_affected\_rows</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$req_identifier`</span> \] )
@@ -6580,8 +6550,7 @@ Return the current CUBRID connection charset
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_client\_encoding</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> \] )
@@ -6774,8 +6743,7 @@ Get db name from results of cubrid\_list\_dbs
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_db\_name</span> ( <span
 class="methodparam"><span class="type">array</span> `$result`</span> ,
 <span class="methodparam"><span class="type">int</span> `$index`</span>
@@ -6947,8 +6915,7 @@ Fetch a result row as an associative array, a numeric array, or both
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span> `$type`<span
@@ -7038,8 +7005,7 @@ Return the associative array that corresponds to the fetched row
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -7118,8 +7084,7 @@ Get column information from a result and return as an object
 
 ### Description
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">cubrid\_fetch\_field</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -7257,8 +7222,7 @@ current row
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_fetch\_lengths</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -7334,8 +7298,7 @@ Fetch the next row and return it as an object
 
 ### Description
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">object</span> <span
 class="methodname">cubrid\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -7462,8 +7425,7 @@ Return a numerical array with the values of the current row
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -7540,8 +7502,7 @@ Return a string with the flags of the given field offset
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_field\_flags</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -7611,8 +7572,7 @@ Get the maximum length of the specified field
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_field\_len</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -7678,8 +7638,7 @@ Return the name of the specified field index
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -7835,8 +7794,7 @@ Return the name of the table of the specified field
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_field\_table</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -7899,8 +7857,7 @@ Return the type of the column corresponding to the given field offset
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_field\_type</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -7964,8 +7921,7 @@ Return an array with the list of all existing CUBRID databases
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">cubrid\_list\_dbs</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> \] )
@@ -8013,8 +7969,7 @@ Return the number of columns in the result set
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_num\_fields</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -8127,8 +8082,7 @@ Send a CUBRID query
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">resource</span>
@@ -8262,8 +8216,7 @@ Escape special characters in a string for use in an SQL statement
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_real\_escape\_string</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$unescaped_string`</span> \[, <span class="methodparam"><span
@@ -8337,8 +8290,7 @@ Return the value of a specific field in a specific row
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
@@ -8408,8 +8360,7 @@ Perform a query without fetching the results into memory
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">cubrid\_unbuffered\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">resource</span>
@@ -8537,7 +8488,7 @@ Read data from a GLO instance and save it in a file
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_load\_from\_glo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -8609,8 +8560,7 @@ Create a glo instance
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">cubrid\_new\_glo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -8682,7 +8632,7 @@ Save requested file in a GLO instance
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_save\_to\_glo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span
@@ -8753,7 +8703,7 @@ Read data from glo and send it to std output
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">cubrid\_send\_glo</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$conn_identifier`</span> , <span class="methodparam"><span

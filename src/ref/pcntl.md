@@ -80,8 +80,7 @@ Executes specified program in current process space
 
 ### Description
 
-<span class="type"><span class="type">null</span><span
-class="type">false</span></span> <span
+<span class="type">void</span> <span
 class="methodname">pcntl\_exec</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$args`</span> \[,
@@ -195,8 +194,7 @@ Get the priority of any process
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">pcntl\_getpriority</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$pid`<span
 class="initializer"> = getmypid()</span></span> \[, <span

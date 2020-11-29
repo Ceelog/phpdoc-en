@@ -5,8 +5,7 @@ Gets the cipher iv length
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">openssl\_cipher\_iv\_length</span> ( <span
 class="methodparam"><span class="type">string</span> `$method`</span> )
 
@@ -467,8 +466,7 @@ certificate
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">openssl\_csr\_sign</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$csr`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -977,8 +975,7 @@ Return openSSL error message
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">openssl\_error\_string</span> ( <span
 class="methodparam">void</span> )
 
@@ -2246,8 +2243,7 @@ Returns an array with the key details
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">openssl\_pkey\_get\_details</span> ( <span
 class="methodparam"><span class="type">resource</span> `$key`</span> )
 
@@ -2318,8 +2314,7 @@ Get a private key
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">openssl\_pkey\_get\_private</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$key`</span> \[,
 <span class="methodparam"><span class="type">string</span>
@@ -2354,8 +2349,7 @@ Extract public key from certificate and prepare it for use
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">openssl\_pkey\_get\_public</span> ( <span
 class="methodparam"><span class="type">mixed</span>
 `$certificate`</span> )
@@ -2387,8 +2381,7 @@ Generates a new private key
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">openssl\_pkey\_new</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$configargs`</span>
 \] )
@@ -2702,8 +2695,7 @@ Seal (encrypt) data
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">openssl\_seal</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -3342,8 +3334,7 @@ Verifies if a certificate can be used for a particular purpose
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">bool</span></span> <span
+<span class="type">int</span> <span
 class="methodname">openssl\_x509\_checkpurpose</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$x509cert`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -3468,8 +3459,7 @@ Calculates the fingerprint, or digest, of a given X.509 certificate
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">openssl\_x509\_fingerprint</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$x509`</span> \[,
 <span class="methodparam"><span class="type">string</span>

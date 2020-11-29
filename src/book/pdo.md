@@ -1212,9 +1212,8 @@ class="methodparam">void</span> )
 <span class="methodname">commit</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">errorCode</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">errorCode</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1243,21 +1242,20 @@ class="methodparam">void</span> )
 class="methodparam"><span class="type">string</span> `$name`<span
 class="initializer"> = **`NULL`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">prepare</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-\[, <span class="methodparam"><span class="type">array</span>
-`$driver_options`<span class="initializer"> = array()</span></span> \] )
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span class="methodname">prepare</span>
+( <span class="methodparam"><span class="type">string</span>
+`$statement`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$driver_options`<span class="initializer"> =
+array()</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">query</span> ( <span class="methodparam"><span
-class="type">string</span> `$statement`</span> )
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span class="methodname">query</span> (
+<span class="methodparam"><span class="type">string</span>
+`$statement`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">quote</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">quote</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$parameter_type`<span
 class="initializer"> = PDO::PARAM\_STR</span></span> \] )
@@ -1587,9 +1585,8 @@ handle
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">PDO::errorCode</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">PDO::errorCode</span> ( <span
 class="methodparam">void</span> )
 
 ### Return Values
@@ -1984,11 +1981,11 @@ Prepares a statement for execution and returns a statement object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">PDO::prepare</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-\[, <span class="methodparam"><span class="type">array</span>
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span
+class="methodname">PDO::prepare</span> ( <span class="methodparam"><span
+class="type">string</span> `$statement`</span> \[, <span
+class="methodparam"><span class="type">array</span>
 `$driver_options`<span class="initializer"> = array()</span></span> \] )
 
 Prepares an SQL statement to be executed by the <span
@@ -2116,39 +2113,36 @@ object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">PDO::query</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-)
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span
+class="methodname">PDO::query</span> ( <span class="methodparam"><span
+class="type">string</span> `$statement`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">PDO::query</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$fetch_style`<span class="initializer"> =
-PDO::FETCH\_COLUMN</span></span> , <span class="methodparam"><span
-class="type">int</span> `$colno`</span> )
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span
+class="methodname">PDO::query</span> ( <span class="methodparam"><span
+class="type">string</span> `$statement`</span> , <span
+class="methodparam"><span class="type">int</span> `$fetch_style`<span
+class="initializer"> = PDO::FETCH\_COLUMN</span></span> , <span
+class="methodparam"><span class="type">int</span> `$colno`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">PDO::query</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$fetch_style`<span class="initializer"> =
-PDO::FETCH\_CLASS</span></span> , <span class="methodparam"><span
-class="type">string</span> `$classname`</span> , <span
-class="methodparam"><span class="type">array</span> `$ctorargs`</span> )
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span
+class="methodname">PDO::query</span> ( <span class="methodparam"><span
+class="type">string</span> `$statement`</span> , <span
+class="methodparam"><span class="type">int</span> `$fetch_style`<span
+class="initializer"> = PDO::FETCH\_CLASS</span></span> , <span
+class="methodparam"><span class="type">string</span> `$classname`</span>
+, <span class="methodparam"><span class="type">array</span>
+`$ctorargs`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">PDOStatement</span><span class="type">false</span></span>
-<span class="methodname">PDO::query</span> ( <span
-class="methodparam"><span class="type">string</span> `$statement`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$fetch_style`<span class="initializer"> =
-PDO::FETCH\_INTO</span></span> , <span class="methodparam"><span
-class="type">object</span> `$object`</span> )
+<span class="modifier">public</span> <span
+class="type">PDOStatement</span> <span
+class="methodname">PDO::query</span> ( <span class="methodparam"><span
+class="type">string</span> `$statement`</span> , <span
+class="methodparam"><span class="type">int</span> `$fetch_style`<span
+class="initializer"> = PDO::FETCH\_INTO</span></span> , <span
+class="methodparam"><span class="type">object</span> `$object`</span> )
 
 <span class="function">PDO::query</span> executes an SQL statement in a
 single function call, returning the result set (if any) returned by the
@@ -2228,12 +2222,12 @@ Quotes a string for use in a query
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">PDO::quote</span> ( <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$parameter_type`<span
-class="initializer"> = PDO::PARAM\_STR</span></span> \] )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">PDO::quote</span> ( <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$parameter_type`<span class="initializer"> =
+PDO::PARAM\_STR</span></span> \] )
 
 <span class="function">PDO::quote</span> places quotes around the input
 string (if required) and escapes special characters within the input
@@ -2573,11 +2567,10 @@ PDO::FETCH\_ORI\_NEXT</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$cursor_offset`<span class="initializer"> =
 0</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">fetchAll</span> (\[ <span class="methodparam"><span
-class="type">int</span> `$fetch_style`</span> \[, <span
-class="methodparam"><span class="type">mixed</span>
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetchAll</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$fetch_style`</span>
+\[, <span class="methodparam"><span class="type">mixed</span>
 `$fetch_argument`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ctor_args`<span class="initializer"> =
 array()</span></span> \]\]\] )
@@ -2599,9 +2592,8 @@ class="methodparam"><span class="type">array</span> `$ctor_args`</span>
 <span class="methodname">getAttribute</span> ( <span
 class="methodparam"><span class="type">int</span> `$attribute`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">getColumnMeta</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getColumnMeta</span> ( <span
 class="methodparam"><span class="type">int</span> `$column`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -3738,9 +3730,8 @@ Returns an array containing all of the result set rows
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">PDOStatement::fetchAll</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">PDOStatement::fetchAll</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$fetch_style`</span>
 \[, <span class="methodparam"><span class="type">mixed</span>
 `$fetch_argument`</span> \[, <span class="methodparam"><span
@@ -4169,9 +4160,8 @@ Returns metadata for a column in a result set
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">PDOStatement::getColumnMeta</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">PDOStatement::getColumnMeta</span> ( <span
 class="methodparam"><span class="type">int</span> `$column`</span> )
 
 Retrieves the metadata for a 0-indexed column in a result set as an
@@ -4801,7 +4791,7 @@ Features
 <tr class="even">
 <td>LOBs</td>
 <td>PDO_CUBRID supports BLOB/CLOB data type. The LOB in PDO is represented as a stream, so you can insert LOBs by binding a stream, and get LOBs by reading a stream returned by CUBRID PDO. For example:
-<div id="example-1038" class="example">
+<div id="example-1040" class="example">
 <p><strong>Example #1 Insert LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4817,7 +4807,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1039" class="example">
+<div id="example-1041" class="example">
 <p><strong>Example #2 Fetch LOBs in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4858,7 +4848,7 @@ Features
 <tr class="even">
 <td>Collection Data Type</td>
 <td>PDO_CUBRID supports SET/MULTISET/SEQUENCE data type. If you don't specify data type, the default data type is char,for example:
-<div id="example-1040" class="example">
+<div id="example-1042" class="example">
 <p><strong>Example #3 Insert set in CUBRID PDO with default data type.</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -4879,7 +4869,7 @@ Features
 </div>
 </div>
 </div>
-<div id="example-1041" class="example">
+<div id="example-1043" class="example">
 <p><strong>Example #4 Specify data type when insert set in CUBRID PDO</strong></p>
 <div class="example-contents">
 <div class="phpcode">
@@ -6665,9 +6655,8 @@ Get asynchronous notification
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">PDO::pgsqlGetNotify</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">PDO::pgsqlGetNotify</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$result_type`<span
 class="initializer"> = **`PDO::FETCH_USE_DEFAULT`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
@@ -6714,9 +6703,8 @@ Creates a new large object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">PDO::pgsqlLOBCreate</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">PDO::pgsqlLOBCreate</span> ( <span
 class="methodparam">void</span> )
 
 <span class="function">PDO::pgsqlLOBCreate</span> creates a large object

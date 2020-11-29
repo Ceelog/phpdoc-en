@@ -134,8 +134,7 @@ library input/ouput stream functions allow
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">dio\_open</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> , <span
 class="methodparam"><span class="type">int</span> `$flags`</span> \[,
@@ -318,8 +317,7 @@ Gets stat information about the file descriptor fd
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">dio\_stat</span> ( <span class="methodparam"><span
 class="type">resource</span> `$fd`</span> )
 

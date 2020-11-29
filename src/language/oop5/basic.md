@@ -401,3 +401,43 @@ print $c::class;
 The above example will output:
 
     NS\ClassName
+
+### Nullsafe methods and properties
+
+As of PHP 8.0.0, properties and methods may also be accessed with the
+"nullsafe" operator instead: *?-\>*. The nullsafe operator works the
+same as property or method access as above, except that if the object
+being dereferenced is **`NULL`** then **`NULL`** will be returned rather
+than an exception thrown. If the dereference is part of a chain, the
+rest of the chain is skipped.
+
+The effect is similar to wrapping each access in an <span
+class="function">is\_null</span> check first, but more compact.
+
+**Example \#13 Nullsafe Operator**
+
+``` php
+<?php
+
+// As of PHP 8.0.0, this line:
+$result = $repository?->getUser(5)?->name;
+
+// Is equivalent to the following code block:
+if (is_null($repository)) {
+    $result = null;
+} else {
+    $user = $repository->getUser(5);
+    if (is_null($user)) {
+        $result = null;
+    } else {
+        $result = $user->name;
+    }
+}
+?>
+```
+
+> **Note**:
+>
+> The nullsafe operator is best used when null is considered a valid and
+> expected possible value for a property or method return. For
+> indicating an error, a thrown exception is preferable.

@@ -1530,8 +1530,7 @@ class="methodparam">void</span> )
 class="methodname">getFilename</span> ( <span
 class="methodparam">void</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">getFont</span>
+<span class="type">string</span> <span class="methodname">getFont</span>
 ( <span class="methodparam">void</span> )
 
 <span class="type">string</span> <span
@@ -3454,7 +3453,7 @@ function affineTransformImage($imagePath) {
     $imagick = new \Imagick(realpath($imagePath));
     $draw = new \ImagickDraw();
 
-    $angle = 40 ;
+    $angle = deg2rad(40);
 
     $affineRotate = array(
         "sx" => cos($angle), "sy" => cos($angle), 
@@ -6776,8 +6775,7 @@ Gets font
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">Imagick::getFont</span> ( <span
 class="methodparam">void</span> )
 

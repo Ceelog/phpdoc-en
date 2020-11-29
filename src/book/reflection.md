@@ -663,35 +663,29 @@ class="type">ReflectionMethod</span> <span
 class="methodname">getConstructor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getDefaultProperties</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getDefaultProperties</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getDocComment</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getDocComment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getEndLine</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionExtension</span><span
-class="type">null</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionExtension</span> <span
 class="methodname">getExtension</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getExtensionName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getExtensionName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getFileName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getFileName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -723,9 +717,8 @@ class="methodparam">void</span> )
 <span class="methodname">getNamespaceName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">getParentClass</span> ( <span
 class="methodparam">void</span> )
 
@@ -766,19 +759,16 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">mixed</span>
 `&$def_value`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getTraitAliases</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getTraitAliases</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getTraitNames</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getTraitNames</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">getTraits</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getTraits</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -843,9 +833,8 @@ class="methodparam">void</span> )
 <span class="methodname">isSubclassOf</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">isTrait</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isTrait</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1236,10 +1225,9 @@ Gets default properties
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getDefaultProperties</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getDefaultProperties</span> (
+<span class="methodparam">void</span> )
 
 Gets default properties from a class (including inherited properties).
 
@@ -1313,9 +1301,8 @@ Gets doc comments
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getDocComment</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getDocComment</span> ( <span
 class="methodparam">void</span> )
 
 Gets doc comments from a class. Doc comments start with /\*\*. If there
@@ -1328,7 +1315,7 @@ This function has no parameters.
 
 ### Return Values
 
-The doc comment if it exists, otherwise **`FALSE`**.
+The doc comment if it exists, otherwise **`FALSE`**
 
 ### Examples
 
@@ -1370,8 +1357,7 @@ Gets end line
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ReflectionClass::getEndLine</span> ( <span
 class="methodparam">void</span> )
 
@@ -1418,9 +1404,8 @@ extension which defined the class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionExtension</span><span
-class="type">null</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionExtension</span> <span
 class="methodname">ReflectionClass::getExtension</span> ( <span
 class="methodparam">void</span> )
 
@@ -1468,10 +1453,9 @@ Gets the name of the extension which defined the class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getExtensionName</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getExtensionName</span> (
+<span class="methodparam">void</span> )
 
 Gets the name of the extension which defined the class.
 
@@ -1512,9 +1496,8 @@ Gets the filename of the file in which the class has been defined
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getFileName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getFileName</span> ( <span
 class="methodparam">void</span> )
 
 Gets the filename of the file in which the class has been defined.
@@ -1997,9 +1980,8 @@ Gets parent class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">ReflectionClass::getParentClass</span> ( <span
 class="methodparam">void</span> )
 
@@ -2463,9 +2445,8 @@ Returns an array of trait aliases
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraitAliases</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraitAliases</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -2490,9 +2471,8 @@ Returns an array of names of traits used by this class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraitNames</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraitNames</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -2516,9 +2496,8 @@ Returns an array of traits used by this class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraits</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraits</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -3385,9 +3364,8 @@ Returns whether this is a trait
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::isTrait</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionClass::isTrait</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -3743,9 +3721,8 @@ class="type">ReflectionClass</span> <span
 class="methodname">getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getDocComment</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getDocComment</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -3903,10 +3880,9 @@ Gets doc comments
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClassConstant::getDocComment</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClassConstant::getDocComment</span> (
+<span class="methodparam">void</span> )
 
 Gets doc comments from a class constant.
 
@@ -4443,11 +4419,11 @@ class="methodparam">void</span> )
 <span class="methodname">info</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">isPersistent</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">isTemporary</span> ( <span
 class="methodparam">void</span> )
 
@@ -5092,7 +5068,7 @@ Returns whether this extension is persistent
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">ReflectionExtension::isPersistent</span> (
 <span class="methodparam">void</span> )
 
@@ -5122,7 +5098,7 @@ Returns whether this extension is temporary
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">ReflectionExtension::isTemporary</span> ( <span
 class="methodparam">void</span> )
 
@@ -5215,9 +5191,8 @@ class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$return`</span> \]
 )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Closure</span><span class="type">null</span></span> <span
-class="methodname">getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type">Closure</span>
+<span class="methodname">getClosure</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -5243,24 +5218,22 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">ReflectionFunctionAbstract::\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureThis</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getDocComment</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ReflectionFunctionAbstract::getEndLine</span> ( <span
 class="methodparam">void</span> )
 
@@ -5300,9 +5273,8 @@ class="methodname">ReflectionFunctionAbstract::getNumberOfRequiredParameters</sp
 class="methodname">ReflectionFunctionAbstract::getParameters</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -5336,10 +5308,9 @@ class="methodname">ReflectionFunctionAbstract::hasReturnType</span> (
 <span class="methodname">ReflectionFunctionAbstract::isDeprecated</span>
 ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionFunctionAbstract::isGenerator</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionFunctionAbstract::isGenerator</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionFunctionAbstract::isInternal</span> (
@@ -5552,9 +5523,8 @@ Returns a dynamically created closure for the function
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Closure</span><span class="type">null</span></span> <span
-class="methodname">ReflectionFunction::getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type">Closure</span>
+<span class="methodname">ReflectionFunction::getClosure</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -5835,23 +5805,20 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span class="methodname">getClosureScopeClass</span> ( <span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
+class="methodname">getClosureScopeClass</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
-class="methodname">getClosureThis</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">getClosureThis</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getDocComment</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getDocComment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getEndLine</span> ( <span
 class="methodparam">void</span> )
 
@@ -5888,9 +5855,9 @@ class="methodparam">void</span> )
 <span class="methodname">getParameters</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span class="methodname">getReturnType</span> ( <span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
+class="methodname">getReturnType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -5921,9 +5888,8 @@ class="methodparam">void</span> )
 <span class="methodname">isDeprecated</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">isGenerator</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isGenerator</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -5992,9 +5958,8 @@ Returns the scope associated to the closure
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
@@ -6018,8 +5983,8 @@ Returns this pointer bound to closure
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureThis</span> (
 <span class="methodparam">void</span> )
 
@@ -6043,8 +6008,8 @@ Gets doc comment
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getDocComment</span> (
 <span class="methodparam">void</span> )
 
@@ -6061,7 +6026,7 @@ This function has no parameters.
 
 ### Return Values
 
-The doc comment if it exists, otherwise **`FALSE`**.
+The doc comment if it exists, otherwise **`FALSE`**
 
 ### See Also
 
@@ -6075,8 +6040,7 @@ Gets end line number
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ReflectionFunctionAbstract::getEndLine</span> ( <span
 class="methodparam">void</span> )
 
@@ -6369,9 +6333,8 @@ Gets the specified return type of a function
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -6728,10 +6691,9 @@ Returns whether this function is a generator
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionFunctionAbstract::isGenerator</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionFunctionAbstract::isGenerator</span>
+( <span class="methodparam">void</span> )
 
 **Warning**
 
@@ -6958,10 +6920,9 @@ class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$return`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Closure</span><span class="type">null</span></span> <span
-class="methodname">getClosure</span> ( <span class="methodparam"><span
-class="type">object</span> `$object`</span> )
+<span class="modifier">public</span> <span class="type">Closure</span>
+<span class="methodname">getClosure</span> ( <span
+class="methodparam"><span class="type">object</span> `$object`</span> )
 
 <span class="modifier">public</span> <span
 class="type">ReflectionClass</span> <span
@@ -7036,24 +6997,22 @@ class="modifier">private</span> <span class="type">void</span> <span
 class="methodname">ReflectionFunctionAbstract::\_\_clone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">ReflectionFunctionAbstract::getClosureScopeClass</span>
 ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getClosureThis</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span
 class="methodname">ReflectionFunctionAbstract::getDocComment</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ReflectionFunctionAbstract::getEndLine</span> ( <span
 class="methodparam">void</span> )
 
@@ -7093,9 +7052,8 @@ class="methodname">ReflectionFunctionAbstract::getNumberOfRequiredParameters</sp
 class="methodname">ReflectionFunctionAbstract::getParameters</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
 class="methodname">ReflectionFunctionAbstract::getReturnType</span> (
 <span class="methodparam">void</span> )
 
@@ -7129,10 +7087,9 @@ class="methodname">ReflectionFunctionAbstract::hasReturnType</span> (
 <span class="methodname">ReflectionFunctionAbstract::isDeprecated</span>
 ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionFunctionAbstract::isGenerator</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionFunctionAbstract::isGenerator</span>
+( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionFunctionAbstract::isInternal</span> (
@@ -7377,14 +7334,12 @@ Returns a dynamically created closure for the method
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Closure</span><span class="type">null</span></span> <span
-class="methodname">ReflectionMethod::getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type">Closure</span>
+<span class="methodname">ReflectionMethod::getClosure</span> ( <span
 class="methodparam"><span class="type">object</span> `$object`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Closure</span><span class="type">null</span></span> <span
-class="methodname">ReflectionMethod::getClosure</span> ( <span
+<span class="modifier">public</span> <span class="type">Closure</span>
+<span class="methodname">ReflectionMethod::getClosure</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -8165,35 +8120,29 @@ class="type">ReflectionMethod</span> <span
 class="methodname">ReflectionClass::getConstructor</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getDefaultProperties</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getDefaultProperties</span> (
+<span class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getDocComment</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getDocComment</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ReflectionClass::getEndLine</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionExtension</span><span
-class="type">null</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionExtension</span> <span
 class="methodname">ReflectionClass::getExtension</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getExtensionName</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getExtensionName</span> (
+<span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">ReflectionClass::getFileName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionClass::getFileName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -8225,9 +8174,8 @@ class="methodparam">void</span> )
 <span class="methodname">ReflectionClass::getNamespaceName</span> (
 <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span
-class="type">false</span></span> <span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
 class="methodname">ReflectionClass::getParentClass</span> ( <span
 class="methodparam">void</span> )
 
@@ -8268,19 +8216,16 @@ class="methodparam">void</span> )
 `$name`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `&$def_value`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraitAliases</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraitAliases</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraitNames</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraitNames</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::getTraits</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionClass::getTraits</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8345,9 +8290,8 @@ class="methodparam">void</span> )
 <span class="methodname">ReflectionClass::isSubclassOf</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionClass::isTrait</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionClass::isTrait</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8492,9 +8436,8 @@ class="interfacename">Reflector</span> </span> {
 <span class="methodname">allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">canBePassedByValue</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">canBePassedByValue</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">final</span> <span
@@ -8521,9 +8464,9 @@ class="type">ReflectionClass</span> <span
 class="methodname">getClass</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span class="methodname">getDeclaringClass</span> ( <span
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
+class="methodname">getDeclaringClass</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -8535,9 +8478,8 @@ class="methodparam">void</span> )
 <span class="methodname">getDefaultValue</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getDefaultValueConstantName</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getDefaultValueConstantName</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -8548,9 +8490,9 @@ class="methodparam">void</span> )
 class="methodname">getPosition</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span class="methodname">getType</span> ( <span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
+class="methodname">getType</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8561,9 +8503,8 @@ class="methodparam">void</span> )
 <span class="methodname">isArray</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">isCallable</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isCallable</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8636,10 +8577,9 @@ Returns whether this parameter can be passed by value
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionParameter::canBePassedByValue</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionParameter::canBePassedByValue</span>
+( <span class="methodparam">void</span> )
 
 **Warning**
 
@@ -8896,10 +8836,10 @@ Gets declaring class
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionClass</span><span class="type">null</span></span>
-<span class="methodname">ReflectionParameter::getDeclaringClass</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span
+class="type">ReflectionClass</span> <span
+class="methodname">ReflectionParameter::getDeclaringClass</span> ( <span
+class="methodparam">void</span> )
 
 Gets the declaring class.
 
@@ -9059,8 +8999,8 @@ or null
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span
 class="methodname">ReflectionParameter::getDefaultValueConstantName</span>
 ( <span class="methodparam">void</span> )
 
@@ -9178,9 +9118,9 @@ Gets a parameter's type
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">ReflectionType</span><span class="type">null</span></span>
-<span class="methodname">ReflectionParameter::getType</span> ( <span
+<span class="modifier">public</span> <span
+class="type">ReflectionType</span> <span
+class="methodname">ReflectionParameter::getType</span> ( <span
 class="methodparam">void</span> )
 
 Gets the associated type of a parameter.
@@ -9335,9 +9275,8 @@ Returns whether parameter MUST be callable
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">ReflectionParameter::isCallable</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionParameter::isCallable</span> ( <span
 class="methodparam">void</span> )
 
 **Warning**
@@ -10942,9 +10881,8 @@ class="type">ReflectionFunctionAbstract</span> <span
 class="methodname">getFunction</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
-class="methodname">getThis</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">getThis</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -11258,9 +11196,8 @@ Gets the *$this* value of the generator
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
-class="methodname">ReflectionGenerator::getThis</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">ReflectionGenerator::getThis</span> ( <span
 class="methodparam">void</span> )
 
 Get the *$this* value that the generator has access to.
@@ -11414,9 +11351,8 @@ Class synopsis
 /\* Methods \*/
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">ReflectionReference</span><span
-class="type">null</span></span> <span
+class="modifier">static</span> <span
+class="type">ReflectionReference</span> <span
 class="methodname">fromArrayElement</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$key`</span>
@@ -11436,9 +11372,8 @@ Create a ReflectionReference from an array element
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">ReflectionReference</span><span
-class="type">null</span></span> <span
+class="modifier">static</span> <span
+class="type">ReflectionReference</span> <span
 class="methodname">ReflectionReference::fromArrayElement</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">mixed</span> `$key`</span>

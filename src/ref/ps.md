@@ -825,7 +825,7 @@ Closes image and frees memory
 
 ### Description
 
-<span class="type"><span class="type">null</span><span
+<span class="type"><span class="type">void</span><span
 class="type">false</span></span> <span
 class="methodname">ps\_close\_image</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
@@ -1429,8 +1429,7 @@ Gets certain values
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">ps\_get\_value</span> ( <span
 class="methodparam"><span class="type">resource</span> `$psdoc`</span> ,
 <span class="methodparam"><span class="type">string</span>

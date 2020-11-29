@@ -30,18 +30,18 @@ in alphabetical order.
 
 The following contributors should be recognized for the impact they have
 made and/or continue to make by adding content to the manual: Bill Abt,
-Jouni Ahto, Alexander Aulbach, Christoph Michael Becker, Daniel Beckham,
-Stig Bakken, Nilgün Belma Bugüner, Jesus M. Castagnetto, Ron Chmara,
-Sean Coates, John Coggeshall, Simone Cortesi, Peter Cowburn, Daniel
-Egeberg, Markus Fischer, Wez Furlong, Sara Golemon, Rui Hirokawa, Brad
-House, Pierre-Alain Joye, Etienne Kneuss, Moriyoshi Koizumi, Rasmus
-Lerdorf, Andrew Lindeman, Stanislav Malyshev, Justin Martin, Rafael
-Martinez, Rick McGuire, Moacir de Oliveira Miranda Júnior, Kalle Sommer
-Nielsen, Yasuo Ohgaki, Philip Olson, Richard Quadling, Derick Rethans,
-Rob Richards, Sander Roobol, Egon Schmid, Thomas Schoefbeck, Sascha
-Schumann, Dan Scott, Masahiro Takagi, Yannick Torres, Michael Wallner,
-Lars Torben Wilson, Jim Winstead, Jeroen van Wolffelaar and Andrei
-Zmievski.
+Jouni Ahto, Alexander Aulbach, Stig Bakken, George Peter Banyard,
+Christoph M. Becker, Daniel Beckham, Nilgün Belma Bugüner, Jesus M.
+Castagnetto, Ron Chmara, Sean Coates, John Coggeshall, Simone Cortesi,
+Peter Cowburn, Daniel Egeberg, Markus Fischer, Wez Furlong, Sara
+Golemon, Rui Hirokawa, Brad House, Pierre-Alain Joye, Etienne Kneuss,
+Moriyoshi Koizumi, Rasmus Lerdorf, Andrew Lindeman, Stanislav Malyshev,
+Justin Martin, Rafael Martinez, Rick McGuire, Moacir de Oliveira Miranda
+Júnior, Kalle Sommer Nielsen, Yasuo Ohgaki, Philip Olson, Richard
+Quadling, Derick Rethans, Rob Richards, Sander Roobol, Egon Schmid,
+Thomas Schoefbeck, Sascha Schumann, Dan Scott, Masahiro Takagi, Yannick
+Torres, Michael Wallner, Lars Torben Wilson, Jim Winstead, Jeroen van
+Wolffelaar and Andrei Zmievski.
 
 The following contributors have done significant work editing the
 manual: Stig Bakken, Gabor Hojtsy, Hartmut Holzgraefe, Philip Olson and

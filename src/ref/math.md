@@ -935,8 +935,7 @@ Round fractions down
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span class="methodname">floor</span> (
+<span class="type">float</span> <span class="methodname">floor</span> (
 <span class="methodparam"><span class="type">float</span>
 `$value`</span> )
 
@@ -1704,16 +1703,12 @@ Generate a random value via the Mersenne Twister Random Number Generator
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">mt\_rand</span> ( <span
-class="methodparam">void</span> )
+<span class="type">int</span> <span class="methodname">mt\_rand</span> (
+<span class="methodparam">void</span> )
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">mt\_rand</span> ( <span class="methodparam"><span
-class="type">int</span> `$min`</span> , <span class="methodparam"><span
-class="type">int</span> `$max`</span> )
+<span class="type">int</span> <span class="methodname">mt\_rand</span> (
+<span class="methodparam"><span class="type">int</span> `$min`</span> ,
+<span class="methodparam"><span class="type">int</span> `$max`</span> )
 
 **Caution**
 

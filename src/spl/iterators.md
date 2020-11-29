@@ -586,18 +586,17 @@ class="type">ArrayIterator</span> <span
 class="methodname">getArrayIterator</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Iterator</span><span class="type">null</span></span> <span
-class="methodname">getInnerIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">Iterator</span>
+<span class="methodname">getInnerIterator</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getIteratorIndex</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">scalar</span><span class="type">null</span></span> <span
-class="methodname">key</span> ( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">scalar</span>
+<span class="methodname">key</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">next</span> ( <span
@@ -861,9 +860,8 @@ Gets the inner iterator
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Iterator</span><span class="type">null</span></span> <span
-class="methodname">AppendIterator::getInnerIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">Iterator</span>
+<span class="methodname">AppendIterator::getInnerIterator</span> ( <span
 class="methodparam">void</span> )
 
 This method returns the current inner iterator.
@@ -978,9 +976,8 @@ Gets the current key
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">scalar</span><span class="type">null</span></span> <span
-class="methodname">AppendIterator::key</span> ( <span
+<span class="modifier">public</span> <span class="type">scalar</span>
+<span class="methodname">AppendIterator::key</span> ( <span
 class="methodparam">void</span> )
 
 Get the current key.
@@ -2249,7 +2246,7 @@ class="methodparam">void</span> )
 <span class="methodname">next</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">offsetExists</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$index`</span> )
 
@@ -2592,7 +2589,7 @@ The offsetExists purpose
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">CachingIterator::offsetExists</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$index`</span> )
 
@@ -6925,9 +6922,8 @@ class="methodparam"><span class="type">Iterator</span>
 class="methodname">countIterators</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">current</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
@@ -6939,9 +6935,9 @@ class="methodparam"><span class="type">Iterator</span>
 class="methodname">getFlags</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">key</span> ( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">key</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">next</span> ( <span
@@ -7230,9 +7226,8 @@ Gets the registered iterator instances
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">MultipleIterator::current</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MultipleIterator::current</span> ( <span
 class="methodparam">void</span> )
 
 Get the registered iterator instances current() result.
@@ -7333,9 +7328,8 @@ Gets the registered iterator instances
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">MultipleIterator::key</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">MultipleIterator::key</span> ( <span
 class="methodparam">void</span> )
 
 Get the registered iterator instances key() result.
@@ -8460,7 +8454,7 @@ class="methodparam">void</span> )
 <span class="methodname">CachingIterator::next</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">CachingIterator::offsetExists</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$index`</span> )
 

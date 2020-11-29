@@ -77,8 +77,7 @@ Get the size of an image
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">getimagesize</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">array</span> `&$imageinfo`</span>
@@ -1141,8 +1140,7 @@ Allocate a color for an image
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">imagecolorallocate</span> ( <span
 class="methodparam"><span class="type">resource</span> `$image`</span> ,
 <span class="methodparam"><span class="type">int</span> `$red`</span> ,
@@ -1230,8 +1228,7 @@ Allocate a color for an image
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">imagecolorallocatealpha</span> ( <span
 class="methodparam"><span class="type">resource</span> `$image`</span> ,
 <span class="methodparam"><span class="type">int</span> `$red`</span> ,
@@ -3628,8 +3625,7 @@ Create a new image from the image stream in the string
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">imagecreatefromstring</span> ( <span
 class="methodparam"><span class="type">string</span> `$image`</span> )
 
@@ -6152,8 +6148,7 @@ Captures the whole screen
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">imagegrabscreen</span> ( <span
 class="methodparam">void</span> )
 
@@ -6193,8 +6188,7 @@ Captures a window
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">imagegrabwindow</span> ( <span
 class="methodparam"><span class="type">int</span>
 `$window_handle`</span> \[, <span class="methodparam"><span
@@ -6675,8 +6669,7 @@ Load a new font
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">imageloadfont</span> ( <span
 class="methodparam"><span class="type">string</span> `$file`</span> )
 
@@ -8161,9 +8154,8 @@ Get image width
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">imagesx</span>
-( <span class="methodparam"><span class="type">resource</span>
+<span class="type">int</span> <span class="methodname">imagesx</span> (
+<span class="methodparam"><span class="type">resource</span>
 `$image`</span> )
 
 Returns the width of the given `image` resource.
@@ -8206,9 +8198,8 @@ Get image height
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">imagesy</span>
-( <span class="methodparam"><span class="type">resource</span>
+<span class="type">int</span> <span class="methodname">imagesy</span> (
+<span class="methodparam"><span class="type">resource</span>
 `$image`</span> )
 
 Returns the height of the given `image` resource.
@@ -8311,8 +8302,7 @@ Give the bounding box of a text using TrueType fonts
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">imagettfbbox</span> ( <span class="methodparam"><span
 class="type">float</span> `$size`</span> , <span
 class="methodparam"><span class="type">float</span> `$angle`</span> ,
@@ -8458,8 +8448,7 @@ Write text to the image using TrueType fonts
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">imagettftext</span> ( <span class="methodparam"><span
 class="type">resource</span> `$image`</span> , <span
 class="methodparam"><span class="type">float</span> `$size`</span> ,
@@ -9041,8 +9030,7 @@ Parse a binary IPTC block into single tags
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">iptcparse</span> ( <span class="methodparam"><span
 class="type">string</span> `$iptcblock`</span> )
 

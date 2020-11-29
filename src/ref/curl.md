@@ -1197,8 +1197,7 @@ Returns a new cURL multi handle
 
 ### Description
 
-<span class="type"><span class="type">CurlMultiHandle</span><span
-class="type">false</span></span> <span
+<span class="type">CurlMultiHandle</span> <span
 class="methodname">curl\_multi\_init</span> ( <span
 class="methodparam">void</span> )
 

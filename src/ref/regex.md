@@ -131,8 +131,7 @@ Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">ereg</span> (
+<span class="type">int</span> <span class="methodname">ereg</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
@@ -286,8 +285,7 @@ Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">eregi</span> (
+<span class="type">int</span> <span class="methodname">eregi</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
@@ -363,8 +361,7 @@ Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">split</span> (
+<span class="type">array</span> <span class="methodname">split</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
@@ -476,9 +473,8 @@ Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">spliti</span>
-( <span class="methodparam"><span class="type">string</span>
+<span class="type">array</span> <span class="methodname">spliti</span> (
+<span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span

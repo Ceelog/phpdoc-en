@@ -11,8 +11,7 @@ Changes the case of all keys in an array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">array\_change\_key\_case</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$case`<span
@@ -383,8 +382,7 @@ Creates an array by using one array for keys and another for its values
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">array\_combine</span> ( <span
 class="methodparam"><span class="type">array</span> `$keys`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -1343,8 +1341,7 @@ Exchanges all keys with their associated values in an array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">array\_flip</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> )
 
@@ -3243,8 +3240,7 @@ Replaces elements from passed arrays into the first array recursively
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">array\_replace\_recursive</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -3375,8 +3371,7 @@ Replaces elements from passed arrays into the first array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">array\_replace</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">array</span>
@@ -5674,8 +5669,7 @@ function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">each</span> (
+<span class="type">array</span> <span class="methodname">each</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> )
 

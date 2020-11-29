@@ -487,8 +487,7 @@ Returns the resource type
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">get\_resource\_type</span> ( <span
 class="methodparam"><span class="type">resource</span> `$handle`</span>
 )

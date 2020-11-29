@@ -1226,8 +1226,7 @@ Resolve host information for relation
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">dbplus\_resolve</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$relation_name`</span> )

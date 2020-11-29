@@ -6,8 +6,7 @@ class="classname">SimpleXMLElement</span> object
 
 ### Description
 
-<span class="type"><span class="type">DOMElement</span><span
-class="type">false</span></span> <span
+<span class="type">DOMElement</span> <span
 class="methodname">dom\_import\_simplexml</span> ( <span
 class="methodparam"><span class="type">SimpleXMLElement</span>
 `$node`</span> )

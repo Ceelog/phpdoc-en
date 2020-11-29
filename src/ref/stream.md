@@ -589,8 +589,7 @@ Attach a filter to a stream
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_filter\_append</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -705,8 +704,7 @@ Attach a filter to a stream
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_filter\_prepend</span> ( <span
 class="methodparam"><span class="type">resource</span> `$stream`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -1129,8 +1127,7 @@ Gets line from stream resource up to a given delimiter
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">stream\_get\_line</span> ( <span
 class="methodparam"><span class="type">resource</span> `$handle`</span>
 , <span class="methodparam"><span class="type">int</span>
@@ -1765,8 +1762,7 @@ streams with a timeout specified by tv\_sec and tv\_usec
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">stream\_select</span> ( <span
 class="methodparam"><span class="type">array</span> `&$read`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -1984,8 +1980,7 @@ Set the stream chunk size
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">stream\_set\_chunk\_size</span> ( <span
 class="methodparam"><span class="type">resource</span> `$fp`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -2263,8 +2258,7 @@ Open Internet or Unix domain socket connection
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_socket\_client</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$remote_socket`</span> \[, <span class="methodparam"><span
@@ -2570,8 +2564,7 @@ Creates a pair of connected, indistinguishable socket streams
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">stream\_socket\_pair</span> ( <span
 class="methodparam"><span class="type">int</span> `$domain`</span> ,
 <span class="methodparam"><span class="type">int</span> `$type`</span> ,
@@ -2822,8 +2815,7 @@ Create an Internet or Unix domain server socket
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">stream\_socket\_server</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$local_socket`</span> \[, <span class="methodparam"><span

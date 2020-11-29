@@ -5,8 +5,7 @@ Artificially increase load. Could be useful in tests, benchmarking
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_busy</span> ( <span class="methodparam"><span
 class="type">int</span> `$delay`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -135,8 +134,7 @@ Change file/directory permissions
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_chmod</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> \[,
@@ -204,8 +202,7 @@ Change file/directory permissions
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_chown</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$uid`</span> \[,
@@ -277,8 +274,7 @@ Close file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_close</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -338,8 +334,7 @@ Execute custom request like any other *eio\_\** call
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_custom</span> ( <span class="methodparam"><span
 class="type">callable</span> `$execute`</span> , <span
 class="methodparam"><span class="type">int</span> `$pri`</span> , <span
@@ -451,8 +446,7 @@ Duplicate a file descriptor
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_dup2</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$fd2`</span> \[, <span
@@ -570,8 +564,7 @@ file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fallocate</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> , <span
@@ -650,8 +643,7 @@ Change file permissions
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fchmod</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">int</span> `$mode`</span> \[, <span
@@ -782,8 +774,7 @@ Synchronize a file's in-core state with storage device
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fdatasync</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$pri`<span
@@ -841,8 +832,7 @@ Get file status
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fstat</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">int</span> `$pri`</span> , <span class="methodparam"><span
@@ -974,8 +964,7 @@ Get file system statistics
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fstatvfs</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> , <span
 class="methodparam"><span class="type">int</span> `$pri`</span> , <span
@@ -1034,8 +1023,7 @@ Synchronize a file's in-core state with storage device
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_fsync</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -1095,8 +1083,7 @@ Truncate a file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_ftruncate</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$offset`<span
@@ -1163,8 +1150,7 @@ Change file last access and modification times
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_futime</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">float</span> `$atime`</span> , <span
@@ -1510,8 +1496,7 @@ Creates a request group
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_grp</span> ( <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$data`<span
@@ -1765,8 +1750,7 @@ Get file status
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_lstat</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$pri`</span> , <span
@@ -1885,8 +1869,7 @@ Create directory
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_mkdir</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> \[,
@@ -1982,8 +1965,7 @@ Create a special or ordinary file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_mknod</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$mode`</span> , <span
@@ -2152,8 +2134,7 @@ Does nothing, except go through the whole request cycle
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_nop</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$pri`<span class="initializer"> =
 EIO\_PRI\_DEFAULT</span></span> \[, <span class="methodparam"><span
@@ -2657,8 +2638,7 @@ Perform file readahead into page cache
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_readahead</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> ,
@@ -2724,8 +2704,7 @@ Reads through a whole directory
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_readdir</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$flags`</span> ,
@@ -2987,8 +2966,7 @@ Read value of a symbolic link
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_readlink</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> ,
 <span class="methodparam"><span class="type">int</span> `$pri`</span> ,
@@ -3147,8 +3125,7 @@ Change the name or location of a file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_rename</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">string</span> `$new_path`</span>
@@ -3239,8 +3216,7 @@ Remove a directory
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_rmdir</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -3328,8 +3304,7 @@ argument to the argument `offset` according to the directive `whence`
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_seek</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">int</span> `$offset`</span> , <span
@@ -3400,8 +3375,7 @@ Transfer data between file descriptors
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_sendfile</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$out_fd`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
@@ -3592,8 +3566,7 @@ Get file status
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_stat</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$pri`</span> , <span
@@ -3713,8 +3686,7 @@ Get file system statistics
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_statvfs</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">int</span> `$pri`</span> , <span
@@ -3819,8 +3791,7 @@ Create a symbolic link
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_symlink</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">string</span> `$new_path`</span>
@@ -3923,8 +3894,7 @@ Sync a file segment with disk
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_sync\_file\_range</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$fd`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> ,
@@ -4001,8 +3971,7 @@ Commit buffer cache to disk
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_sync</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$pri`<span class="initializer"> =
 EIO\_PRI\_DEFAULT</span></span> \[, <span class="methodparam"><span
@@ -4027,8 +3996,7 @@ Calls Linux' syncfs syscall, if available
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_syncfs</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -4082,8 +4050,7 @@ Truncate a file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_truncate</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$offset`<span
@@ -4149,8 +4116,7 @@ Delete a name and possibly the file it refers to
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_unlink</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$pri`<span
@@ -4207,8 +4173,7 @@ Change file last access and modification times
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_utime</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">float</span> `$atime`</span> ,
@@ -4275,8 +4240,7 @@ Write to file
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">eio\_write</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$fd`</span> , <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span

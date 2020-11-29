@@ -89,8 +89,7 @@ Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mcrypt\_create\_iv</span> ( <span
 class="methodparam"><span class="type">int</span> `$size`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$source`<span
@@ -806,8 +805,7 @@ PHP 7.2.0. Relying on this function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">mcrypt\_generic\_init</span> ( <span
 class="methodparam"><span class="type">resource</span> `$td`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
@@ -997,13 +995,11 @@ PHP 7.2.0. Relying on this function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mcrypt\_get\_cipher\_name</span> ( <span
 class="methodparam"><span class="type">int</span> `$cipher`</span> )
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mcrypt\_get\_cipher\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$cipher`</span> )
 
@@ -1056,8 +1052,7 @@ PHP 7.2.0. Relying on this function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">mcrypt\_get\_iv\_size</span> ( <span
 class="methodparam"><span class="type">string</span> `$cipher`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1567,8 +1562,7 @@ PHP 7.2.0. Relying on this function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">mcrypt\_module\_open</span> ( <span
 class="methodparam"><span class="type">string</span> `$algorithm`</span>
 , <span class="methodparam"><span class="type">string</span>

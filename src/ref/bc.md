@@ -120,8 +120,7 @@ Divide two arbitrary precision numbers
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span class="methodname">bcdiv</span> (
+<span class="type">string</span> <span class="methodname">bcdiv</span> (
 <span class="methodparam"><span class="type">string</span>
 `$num1`</span> , <span class="methodparam"><span
 class="type">string</span> `$num2`</span> \[, <span
@@ -179,8 +178,7 @@ Get modulus of an arbitrary precision number
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span class="methodname">bcmod</span> (
+<span class="type">string</span> <span class="methodname">bcmod</span> (
 <span class="methodparam"><span class="type">string</span>
 `$num1`</span> , <span class="methodparam"><span
 class="type">string</span> `$num2`</span> \[, <span
@@ -397,8 +395,7 @@ modulus
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">bcpowmod</span> ( <span class="methodparam"><span
 class="type">string</span> `$num`</span> , <span
 class="methodparam"><span class="type">string</span> `$exponent`</span>
@@ -529,10 +526,9 @@ Get the square root of an arbitrary precision number
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span class="methodname">bcsqrt</span> (
-<span class="methodparam"><span class="type">string</span> `$num`</span>
-\[, <span class="methodparam"><span class="type"><span
+<span class="type">string</span> <span class="methodname">bcsqrt</span>
+( <span class="methodparam"><span class="type">string</span>
+`$num`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
 `$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
 

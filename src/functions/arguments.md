@@ -23,6 +23,28 @@ function takes_array($input)
 ?>
 ```
 
+As of PHP 8.0.0, the list of function arguments may include a trailing
+comma, which will be ignored. That is particularly useful in cases where
+the list of arguments is long or contains long variable names, making it
+convenient to list arguments vertically.
+
+**Example \#2 Function Argument List with trailing Comma**
+
+``` php
+<?php
+function takes_many_args(
+    $first_arg,
+    $second_arg,
+    $a_very_long_argument_name,
+    $arg_with_default = 5,
+    $again = 'a default string', // This trailing comma was not permitted before 8.0.0.
+)
+{
+    // ...
+}
+?>
+```
+
 ### Passing arguments by reference
 
 By default, function arguments are passed by value (so that if the value
@@ -33,7 +55,7 @@ they must be passed by reference.
 To have an argument to a function always passed by reference, prepend an
 ampersand (&) to the argument name in the function definition:
 
-**Example \#2 Passing function parameters by reference**
+**Example \#3 Passing function parameters by reference**
 
 ``` php
 <?php
@@ -52,7 +74,7 @@ echo $str;    // outputs 'This is a string, and something extra.'
 A function may define C++-style default values for scalar arguments as
 follows:
 
-**Example \#3 Use of default parameters in functions**
+**Example \#4 Use of default parameters in functions**
 
 ``` php
 <?php
@@ -75,7 +97,7 @@ The above example will output:
 PHP also allows the use of <span class="type">array</span>s and the
 special type **`NULL`** as default values, for example:
 
-**Example \#4 Using non-scalar types as default values**
+**Example \#5 Using non-scalar types as default values**
 
 ``` php
 <?php
@@ -96,7 +118,7 @@ Note that when using default arguments, any defaults should be on the
 right side of any non-default arguments; otherwise, things will not work
 as expected. Consider the following code snippet:
 
-**Example \#5 Incorrect usage of default function arguments**
+**Example \#6 Incorrect usage of default function arguments**
 
 ``` php
 <?php
@@ -117,7 +139,7 @@ The above example will output:
 
 Now, compare the above with this:
 
-**Example \#6 Correct usage of default function arguments**
+**Example \#7 Correct usage of default function arguments**
 
 ``` php
 <?php
@@ -154,7 +176,7 @@ Argument lists may include the *...* token to denote that the function
 accepts a variable number of arguments. The arguments will be passed
 into the given variable as an array; for example:
 
-**Example \#7 Using *...* to access variable arguments**
+**Example \#8 Using *...* to access variable arguments**
 
 ``` php
 <?php
@@ -178,7 +200,7 @@ The above example will output:
 class="type">array</span> or <span class="classname">Traversable</span>
 variable or literal into the argument list:
 
-**Example \#8 Using *...* to provide arguments**
+**Example \#9 Using *...* to provide arguments**
 
 ``` php
 <?php
@@ -207,7 +229,7 @@ It is also possible to add a
 before the *...* token. If this is present, then all arguments captured
 by *...* must be objects of the hinted class.
 
-**Example \#9 Type declared variable arguments**
+**Example \#10 Type declared variable arguments**
 
 ``` php
 <?php
@@ -248,7 +270,7 @@ class="function">func\_get\_args</span>.
 The first example above would be implemented as follows in old versions
 of PHP:
 
-**Example \#10 Accessing variable arguments in old PHP versions**
+**Example \#11 Accessing variable arguments in old PHP versions**
 
 ``` php
 <?php

@@ -864,8 +864,7 @@ Gets character from file pointer
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">fgetc</span> (
+<span class="type">string</span> <span class="methodname">fgetc</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> )
 
@@ -929,18 +928,17 @@ Gets line from file pointer and parse for CSV fields
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
-class="methodname">fgetcsv</span> ( <span class="methodparam"><span
-class="type">resource</span> `$handle`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$delimiter`<span
-class="initializer"> = ","</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$enclosure`<span
-class="initializer"> = '"'</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$escape`<span
-class="initializer"> = "\\\\"</span></span> \]\]\]\] )
+<span class="type">array</span> <span class="methodname">fgetcsv</span>
+( <span class="methodparam"><span class="type">resource</span>
+`$handle`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$length`<span class="initializer"> =
+0</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$delimiter`<span class="initializer"> =
+","</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$enclosure`<span class="initializer"> =
+'"'</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$escape`<span class="initializer"> =
+"\\\\"</span></span> \]\]\]\] )
 
 Similar to <span class="function">fgets</span> except that <span
 class="function">fgetcsv</span> parses the line it reads for fields in
@@ -1050,8 +1048,7 @@ Gets line from file pointer
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">fgets</span> (
+<span class="type">string</span> <span class="methodname">fgets</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`</span> \] )
@@ -1136,8 +1133,7 @@ function is highly discouraged.
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">fgetss</span>
+<span class="type">string</span> <span class="methodname">fgetss</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$length`</span> \[, <span
@@ -1501,8 +1497,7 @@ Write data to a file
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">file\_put\_contents</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -1626,8 +1621,7 @@ Reads entire file into an array
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">file</span> (
+<span class="type">array</span> <span class="methodname">file</span> (
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
@@ -1918,10 +1912,9 @@ Gets file group
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">filegroup</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> )
+<span class="type">int</span> <span class="methodname">filegroup</span>
+( <span class="methodparam"><span class="type">string</span>
+`$filename`</span> )
 
 Gets the file group. The group ID is returned in numerical format, use
 <span class="function">posix\_getgrgid</span> to resolve it to a group
@@ -2305,10 +2298,9 @@ Gets file size
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">filesize</span> ( <span class="methodparam"><span
-class="type">string</span> `$filename`</span> )
+<span class="type">int</span> <span class="methodname">filesize</span> (
+<span class="methodparam"><span class="type">string</span>
+`$filename`</span> )
 
 Gets the size for the given file.
 
@@ -2370,8 +2362,7 @@ Gets file type
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">filetype</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -2655,9 +2646,8 @@ Opens file or URL
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span class="methodname">fopen</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type">resource</span> <span class="methodname">fopen</span>
+( <span class="methodparam"><span class="type">string</span>
 `$filename`</span> , <span class="methodparam"><span
 class="type">string</span> `$mode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
@@ -2854,10 +2844,9 @@ Output all remaining data on a file pointer
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">fpassthru</span> ( <span class="methodparam"><span
-class="type">resource</span> `$handle`</span> )
+<span class="type">int</span> <span class="methodname">fpassthru</span>
+( <span class="methodparam"><span class="type">resource</span>
+`$handle`</span> )
 
 Reads to EOF on the given file pointer from the current position and
 writes the results to the output buffer.
@@ -3567,8 +3556,7 @@ Returns the current position of the file read/write pointer
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">ftell</span> (
+<span class="type">int</span> <span class="methodname">ftell</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$handle`</span> )
 
@@ -3692,9 +3680,8 @@ Binary-safe file write
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span class="methodname">fwrite</span>
-( <span class="methodparam"><span class="type">resource</span>
+<span class="type">int</span> <span class="methodname">fwrite</span> (
+<span class="methodparam"><span class="type">resource</span>
 `$handle`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`</span> \] )
@@ -3832,8 +3819,7 @@ Find pathnames matching a pattern
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">glob</span> (
+<span class="type">array</span> <span class="methodname">glob</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
@@ -4596,10 +4582,9 @@ Gets information about a link
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
-class="methodname">linkinfo</span> ( <span class="methodparam"><span
-class="type">string</span> `$path`</span> )
+<span class="type">int</span> <span class="methodname">linkinfo</span> (
+<span class="methodparam"><span class="type">string</span>
+`$path`</span> )
 
 Gets information about a link.
 
@@ -4899,8 +4884,7 @@ Parse a configuration file
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">parse\_ini\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -5163,8 +5147,7 @@ Parse a configuration string
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">parse\_ini\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$ini`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
@@ -5416,9 +5399,8 @@ Opens process file pointer
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span class="methodname">popen</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type">resource</span> <span class="methodname">popen</span>
+( <span class="methodparam"><span class="type">string</span>
 `$command`</span> , <span class="methodparam"><span
 class="type">string</span> `$mode`</span> )
 
@@ -5603,8 +5585,7 @@ Returns the target of a symbolic link
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">readlink</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> )
 
@@ -5750,8 +5731,7 @@ Returns canonicalized absolute pathname
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">realpath</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> )
 
@@ -6036,8 +6016,7 @@ Gives information about a file
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span class="methodname">stat</span> (
+<span class="type">array</span> <span class="methodname">stat</span> (
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
@@ -6262,8 +6241,7 @@ Create file with unique file name
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">tempnam</span>
+<span class="type">string</span> <span class="methodname">tempnam</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$dir`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> )

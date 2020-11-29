@@ -223,9 +223,8 @@ class="methodparam">void</span> )
 class="methodname">getPerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">getRealPath</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getRealPath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -988,9 +987,8 @@ Gets absolute path to file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileInfo::getRealPath</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getRealPath</span> ( <span
 class="methodparam">void</span> )
 
 This method expands all symbolic links, resolves relative references and
@@ -1635,30 +1633,27 @@ class="methodparam">void</span> )
 <span class="methodname">fflush</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">fgetc</span> ( <span class="methodparam">void</span>
-)
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">fgetc</span> ( <span
+class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">fgetcsv</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$delimiter`<span class="initializer"> =
-","</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$enclosure`<span class="initializer"> =
-"\\""</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$escape`<span class="initializer"> =
-"\\\\"</span></span> \]\]\] )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fgetcsv</span> (\[ <span
+class="methodparam"><span class="type">string</span> `$delimiter`<span
+class="initializer"> = ","</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$enclosure`<span
+class="initializer"> = "\\""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$escape`<span
+class="initializer"> = "\\\\"</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">fgets</span> ( <span class="methodparam">void</span>
-)
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">fgets</span> ( <span
+class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">fgetss</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$allowable_tags`</span> \] )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">fgetss</span> (\[ <span
+class="methodparam"><span class="type">string</span>
+`$allowable_tags`</span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">flock</span> ( <span class="methodparam"><span
@@ -1701,8 +1696,7 @@ class="initializer"> = SEEK\_SET</span></span> \] )
 <span class="methodname">fstat</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">ftell</span> ( <span class="methodparam">void</span>
 )
 
@@ -1710,8 +1704,7 @@ class="methodname">ftell</span> ( <span class="methodparam">void</span>
 <span class="methodname">ftruncate</span> ( <span
 class="methodparam"><span class="type">int</span> `$size`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">fwrite</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`</span> \] )
@@ -1839,9 +1832,8 @@ class="methodparam">void</span> )
 class="methodname">SplFileInfo::getPerms</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileInfo::getRealPath</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileInfo::getRealPath</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -2166,9 +2158,8 @@ Gets character from file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetc</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgetc</span> ( <span
 class="methodparam">void</span> )
 
 Gets a character from the file.
@@ -2217,9 +2208,8 @@ Gets line from file and parse as CSV fields
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetcsv</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SplFileObject::fgetcsv</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$delimiter`<span
 class="initializer"> = ","</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$enclosure`<span
@@ -2338,9 +2328,8 @@ Gets line from file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgets</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgets</span> ( <span
 class="methodparam">void</span> )
 
 Gets a line from the file.
@@ -2394,9 +2383,8 @@ function is highly discouraged.
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetss</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgetss</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$allowable_tags`</span> \] )
 
@@ -3056,8 +3044,7 @@ Return current file position
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SplFileObject::ftell</span> ( <span
 class="methodparam">void</span> )
 
@@ -3157,8 +3144,7 @@ Write to file
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SplFileObject::fwrite</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>
@@ -3964,14 +3950,12 @@ class="methodparam">void</span> )
 <span class="methodname">SplFileObject::fflush</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetc</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgetc</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetcsv</span> (\[ <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">SplFileObject::fgetcsv</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$delimiter`<span
 class="initializer"> = ","</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$enclosure`<span
@@ -3979,14 +3963,12 @@ class="initializer"> = "\\""</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$escape`<span
 class="initializer"> = "\\\\"</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgets</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgets</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">SplFileObject::fgetss</span> (\[ <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">SplFileObject::fgetss</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$allowable_tags`</span> \] )
 
@@ -4032,8 +4014,7 @@ class="initializer"> = SEEK\_SET</span></span> \] )
 <span class="methodname">SplFileObject::fstat</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SplFileObject::ftell</span> ( <span
 class="methodparam">void</span> )
 
@@ -4041,8 +4022,7 @@ class="methodparam">void</span> )
 <span class="methodname">SplFileObject::ftruncate</span> ( <span
 class="methodparam"><span class="type">int</span> `$size`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">SplFileObject::fwrite</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$length`</span>

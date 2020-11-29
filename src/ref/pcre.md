@@ -249,7 +249,7 @@ Perform a global regular expression match
 ### Description
 
 <span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">preg\_match\_all</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>

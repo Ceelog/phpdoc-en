@@ -80,8 +80,7 @@ Retrieves authentication parameter
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">svn\_auth\_get\_parameter</span> ( <span
 class="methodparam"><span class="type">string</span> `$key`</span> )
 
@@ -243,8 +242,7 @@ Returns the contents of a file in a repository
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">svn\_cat</span> ( <span class="methodparam"><span
 class="type">string</span> `$repos_url`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$revision_no`</span>
@@ -474,8 +472,7 @@ Sends changes from the local working copy to the repository
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">svn\_commit</span> ( <span class="methodparam"><span
 class="type">string</span> `$log`</span> , <span
 class="methodparam"><span class="type">array</span> `$targets`</span>
@@ -619,8 +616,7 @@ Recursively diffs two paths
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span><span class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">svn\_diff</span> ( <span class="methodparam"><span
 class="type">string</span> `$path1`</span> , <span
 class="methodparam"><span class="type">int</span> `$rev1`</span> , <span
@@ -2194,8 +2190,7 @@ Update working copy
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">svn\_update</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$revno`<span

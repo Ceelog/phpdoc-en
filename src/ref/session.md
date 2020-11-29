@@ -39,10 +39,12 @@ Get and/or set current cache expire
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">session\_cache\_expire</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$new_cache_expire`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$value`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_cache\_expire</span> returns the current
 setting of *session.cache\_expire*.
@@ -55,18 +57,25 @@ before <span class="function">session\_start</span> is called).
 
 ### Parameters
 
-`new_cache_expire`  
-If `new_cache_expire` is given, the current cache expire is replaced
-with `new_cache_expire`.
+`value`  
+If `value` is given and not **`NULL`**, the current cache expire is
+replaced with `value`.
 
-> **Note**: <span class="simpara"> Setting `new_cache_expire` is of
-> value only, if *session.cache\_limiter* is set to a value *different*
-> from *nocache*. </span>
+> **Note**: <span class="simpara"> Setting `value` is of value only, if
+> *session.cache\_limiter* is set to a value *different* from *nocache*.
+> </span>
 
 ### Return Values
 
 Returns the current setting of *session.cache\_expire*. The value
-returned should be read in minutes, defaults to 180.
+returned should be read in minutes, defaults to 180. On failure to
+change the value, **`FALSE`** is returned.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `value` is nullable now. |
 
 ### Examples
 
@@ -107,10 +116,12 @@ Get and/or set the current cache limiter
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_cache\_limiter</span> (\[ <span
-class="methodparam"><span class="type">string</span>
-`$cache_limiter`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$value`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_cache\_limiter</span> returns the name
 of the current cache limiter.
@@ -140,9 +151,9 @@ before <span class="function">session\_start</span> is called).
 
 ### Parameters
 
-`cache_limiter`  
-If `cache_limiter` is specified, the name of the current cache limiter
-is changed to the new value.
+`value`  
+If `value` is specified and not **`NULL`**, the name of the current
+cache limiter is changed to the new value.
 
 <table>
 <caption><strong>Possible values</strong></caption>
@@ -201,7 +212,14 @@ Pragma: no-cache</code></pre>
 
 ### Return Values
 
-Returns the name of the current cache limiter.
+Returns the name of the current cache limiter. On failure to change the
+value, **`FALSE`** is returned.
+
+### Changelog
+
+| Version | Description              |
+|---------|--------------------------|
+| 8.0.0   | `value` is nullable now. |
 
 ### Examples
 
@@ -241,10 +259,11 @@ Create new session id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_create\_id</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$prefix`</span> \]
-)
+class="methodparam"><span class="type">string</span> `$prefix`<span
+class="initializer"> = ""</span></span> \] )
 
 <span class="function">session\_create\_id</span> is used to create new
 session id for the current session. It returns collision free session
@@ -269,7 +288,7 @@ range *a-z A-Z 0-9 , (comma) and - (minus)* are allowed.
 
 <span class="function">session\_create\_id</span> returns new collision
 free session id for the current session. If it is used without active
-session, it omits collision check.
+session, it omits collision check. On failure, **`FALSE`** is returned.
 
 ### Examples
 
@@ -470,7 +489,8 @@ Encodes the current session data as a session encoded string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_encode</span> ( <span
 class="methodparam">void</span> )
 
@@ -485,7 +505,8 @@ method can be set using
 
 ### Return Values
 
-Returns the contents of the current session encoded.
+Returns the contents of the current session encoded, or **`FALSE`** on
+failure.
 
 ### Notes
 
@@ -647,9 +668,12 @@ Get and/or set the current session id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_id</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$id`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_id</span> is used to get or set the
 session id for the current session.
@@ -661,12 +685,12 @@ session id as a string suitable for adding to URLs. See also
 ### Parameters
 
 `id`  
-If `id` is specified, it will replace the current session id. <span
-class="function">session\_id</span> needs to be called before <span
-class="function">session\_start</span> for that purpose. Depending on
-the session handler, not all characters are allowed within the session
-id. For example, the file session handler only allows characters in the
-range *a-z A-Z 0-9 , (comma) and - (minus)*!
+If `id` is specified and not **`NULL`**, it will replace the current
+session id. <span class="function">session\_id</span> needs to be called
+before <span class="function">session\_start</span> for that purpose.
+Depending on the session handler, not all characters are allowed within
+the session id. For example, the file session handler only allows
+characters in the range *a-z A-Z 0-9 , (comma) and - (minus)*!
 
 > **Note**: <span class="simpara"> When using session cookies,
 > specifying an `id` for <span class="function">session\_id</span> will
@@ -678,7 +702,14 @@ range *a-z A-Z 0-9 , (comma) and - (minus)*!
 
 <span class="function">session\_id</span> returns the session id for the
 current session or the empty string (*""*) if there is no current
-session (no current session id exists).
+session (no current session id exists). On failure, **`FALSE`** is
+returned.
+
+### Changelog
+
+| Version | Description           |
+|---------|-----------------------|
+| 8.0.0   | `id` is nullable now. |
 
 ### See Also
 
@@ -737,10 +768,12 @@ Get and/or set the current session module
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_module\_name</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$module`</span> \]
-)
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$module`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_module\_name</span> gets the name of the
 current session module, which is also known as
@@ -749,19 +782,21 @@ current session module, which is also known as
 ### Parameters
 
 `module`  
-If `module` is specified, that module will be used instead. Passing
-*"user"* to this parameter is forbidden. Instead <span
+If `module` is specified and not **`NULL`**, that module will be used
+instead. Passing *"user"* to this parameter is forbidden. Instead <span
 class="function">session\_set\_save\_handler</span> has to be called to
 set a user defined session handler.
 
 ### Return Values
 
-Returns the name of the current session module.
+Returns the name of the current session module, or **`FALSE`** on
+failure.
 
 ### Changelog
 
 | Version | Description                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `module` is nullable now.                                                                                    |
 | 7.2.0   | It is now explicitly forbidden to set the module name to *"user"*. Formerly, this has been silently ignored. |
 
 session\_name
@@ -771,9 +806,12 @@ Get and/or set the current session name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_name</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$name`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$name`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_name</span> returns the name of the
 current session. If `name` is given, <span
@@ -798,8 +836,8 @@ class="function">session\_name</span> for every request (and before
 The session name references the name of the session, which is used in
 cookies and URLs (e.g. *PHPSESSID*). It should contain only alphanumeric
 characters; it should be short and descriptive (i.e. for users with
-enabled cookie warnings). If `name` is specified, the name of the
-current session is changed to its value.
+enabled cookie warnings). If `name` is specified and not **`NULL`**, the
+name of the current session is changed to its value.
 
 **Warning**
 The session name can't consist of digits only, at least one letter must
@@ -808,7 +846,8 @@ be present. Otherwise a new session id is generated every time.
 ### Return Values
 
 Returns the name of the current session. If `name` is given and function
-updates the session name, name of the *old* session is returned.
+updates the session name, name of the *old* session is returned, or
+**`FALSE`** on failure.
 
 ### Examples
 
@@ -829,6 +868,7 @@ echo "The previous session name was $previous_name<br />";
 
 | Version | Description                                                                                                                                                                                                                                                                                                                                 |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `value` is nullable now.                                                                                                                                                                                                                                                                                                                    |
 | 7.2.0   | <span class="function">session\_name</span> checks session status, previously it only checked cookie status. Therefore, older <span class="function">session\_name</span> allows to call <span class="function">session\_name</span> after <span class="function">session\_start</span> which may crash PHP and may result in misbehaviors. |
 
 ### See Also
@@ -1175,9 +1215,12 @@ Get and/or set the current session save path
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">session\_save\_path</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$path`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$path`<span class="initializer"> = **`NULL`**</span></span> \] )
 
 <span class="function">session\_save\_path</span> returns the path of
 the current directory used to save session data.
@@ -1185,10 +1228,10 @@ the current directory used to save session data.
 ### Parameters
 
 `path`  
-Session data path. If specified, the path to which data is saved will be
-changed. <span class="function">session\_save\_path</span> needs to be
-called before <span class="function">session\_start</span> for that
-purpose.
+Session data path. If specified and not **`NULL`**, the path to which
+data is saved will be changed. <span
+class="function">session\_save\_path</span> needs to be called before
+<span class="function">session\_start</span> for that purpose.
 
 > **Note**:
 >
@@ -1198,7 +1241,14 @@ purpose.
 
 ### Return Values
 
-Returns the path of the current directory used for data storage.
+Returns the path of the current directory used for data storage, or
+**`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `path` is nullable now. |
 
 ### See Also
 
@@ -1215,18 +1265,25 @@ Set the session cookie parameters
 
 <span class="type">bool</span> <span
 class="methodname">session\_set\_cookie\_params</span> ( <span
-class="methodparam"><span class="type">int</span> `$lifetime`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$path`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$domain`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$secure`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$httponly`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\]\] )
+class="methodparam"><span class="type">int</span>
+`$lifetime_or_options`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$path`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$domain`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">bool</span><span
+class="type">null</span></span> `$secure`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">bool</span><span
+class="type">null</span></span> `$httponly`<span class="initializer"> =
+**`NULL`**</span></span> \]\]\]\] )
 
 <span class="type">bool</span> <span
 class="methodname">session\_set\_cookie\_params</span> ( <span
-class="methodparam"><span class="type">array</span> `$options`</span> )
+class="methodparam"><span class="type">array</span>
+`$lifetime_or_options`</span> )
 
 Set cookie parameters defined in the `php.ini` file. The effect of this
 function only lasts for the duration of the script. Thus, you need to
@@ -1240,9 +1297,19 @@ class="function">ini\_get</span>.
 
 ### Parameters
 
-`lifetime`  
-<a href="/session/setup.html#" class="link">Lifetime</a> of the session
+`lifetime_or_options`  
+When using the first signature,
+<a href="/session/setup.html#" class="link">lifetime</a> of the session
 cookie, defined in seconds.
+
+When using the second signature, an associative <span
+class="type">array</span> which may have any of the keys *lifetime*,
+*path*, *domain*, *secure*, *httponly* and *samesite*. The values have
+the same meaning as described for the parameters with the same name. The
+value of the *samesite* element should be either *Lax* or *Strict*. If
+any of the allowed options are not given, their default values are the
+same as the default values of the explicit parameters. If the *samesite*
+element is omitted, no SameSite cookie attribute is set.
 
 `path`  
 <a href="/session/setup.html#" class="link">Path</a> on the domain where
@@ -1263,26 +1330,17 @@ If set to **`TRUE`** then PHP will attempt to send the
 <a href="/session/setup.html#" class="link">httponly</a> flag when
 setting the session cookie.
 
-`options`  
-An associative <span class="type">array</span> which may have any of the
-keys *lifetime*, *path*, *domain*, *secure*, *httponly* and *samesite*.
-The values have the same meaning as described for the parameters with
-the same name. The value of the *samesite* element should be either
-*Lax* or *Strict*. If any of the allowed options are not given, their
-default values are the same as the default values of the explicit
-parameters. If the *samesite* element is omitted, no SameSite cookie
-attribute is set.
-
 ### Return Values
 
 Returns **`TRUE`** on success or **`FALSE`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                   |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.3.0   | An alternative signature supporting an `options` array has been added. This signature supports also setting of the SameSite cookie attribute. |
-| 7.2.0   | Returns **`TRUE`** on success or **`FALSE`** on failure. Formerly the function returned <span class="type">void</span>.                       |
+| Version | Description                                                                                                                                                                         |
+|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `path`, `domain`, `secure` and `httponly` are nullable now.                                                                                                                         |
+| 7.3.0   | An alternative signature supporting an `lifetime_or_options` <span class="type">array</span> has been added. This signature supports also setting of the SameSite cookie attribute. |
+| 7.2.0   | Returns **`TRUE`** on success or **`FALSE`** on failure. Formerly the function returned <span class="type">void</span>.                                                             |
 
 ### See Also
 
@@ -1679,7 +1737,7 @@ Start new or resume existing session
 <span class="type">bool</span> <span
 class="methodname">session\_start</span> (\[ <span
 class="methodparam"><span class="type">array</span> `$options`<span
-class="initializer"> = array()</span></span> \] )
+class="initializer"> = \[\]</span></span> \] )
 
 <span class="function">session\_start</span> creates a session or
 resumes the current one based on a session identifier passed via a GET

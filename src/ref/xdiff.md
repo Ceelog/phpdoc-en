@@ -670,8 +670,7 @@ Make binary diff of two strings
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -706,8 +705,7 @@ Patch a string with a binary diff
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_bpatch</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -743,8 +741,7 @@ Alias of xdiff\_string\_bdiff
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -782,8 +779,7 @@ Make unified diff of two strings
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_diff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -906,8 +902,7 @@ Alias of xdiff\_string\_bpatch
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_patch\_binary</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -947,8 +942,7 @@ Patch a string with an unified diff
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_patch</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -1028,8 +1022,7 @@ fingerprinting algorithm
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">xdiff\_string\_bdiff</span> ( <span
 class="methodparam"><span class="type">string</span> `$old_data`</span>
 , <span class="methodparam"><span class="type">string</span>

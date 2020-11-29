@@ -127,7 +127,7 @@ An error code from <span class="function">xml\_get\_error\_code</span>.
 ### Return Values
 
 Returns a string with a textual description of the error `error_code`,
-or **`NULL`** if no description was found.
+or **`FALSE`** if no description was found.
 
 ### See Also
 
@@ -140,8 +140,7 @@ Get current byte index for an XML parser
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">xml\_get\_current\_byte\_index</span> ( <span
 class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
@@ -184,8 +183,7 @@ Get current column number for an XML parser
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">xml\_get\_current\_column\_number</span> ( <span
 class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
@@ -222,8 +220,7 @@ Get current line number for an XML parser
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">xml\_get\_current\_line\_number</span> ( <span
 class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
@@ -259,8 +256,7 @@ Get XML parser error code
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">xml\_get\_error\_code</span> ( <span
 class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 )
@@ -742,7 +738,7 @@ Get options from an XML parser
 ### Description
 
 <span class="type"><span class="type">string</span><span
-class="type">int</span><span class="type">false</span></span> <span
+class="type">int</span></span> <span
 class="methodname">xml\_parser\_get\_option</span> ( <span
 class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">int</span>

@@ -21,5 +21,7 @@ Windows Only Extensions
     -   [Introduction](/intro/win32service.html)
     -   [Installing/Configuring](/win32service/setup.html)
     -   [Predefined Constants](/win32service/constants.html)
+    -   [Win32ServiceException](/class/win32serviceexception.html) — The
+        Win32ServiceException class
     -   [Examples](/win32service/examples.html)
     -   [win32service Functions](/ref/win32service.html)

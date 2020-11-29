@@ -909,8 +909,6 @@ MySQL Improved Extension
         — Enables or disables internal report functions
 -   [mysqli\_warning](/set/mysqlinfo.html#mysqli_warning) — The
     mysqli\_warning class
-    -   [mysqli\_warning::\_\_construct](/set/mysqlinfo.html#mysqli_warning::__construct)
-        — The \_\_construct purpose
     -   [mysqli\_warning::next](/set/mysqlinfo.html#mysqli_warning::next)
         — Fetch next warning
 -   [mysqli\_sql\_exception](/set/mysqlinfo.html#mysqli_sql_exception) —
@@ -4420,8 +4418,7 @@ class="methodparam"><span class="type">int</span> `$option`</span> ,
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">poll</span> ( <span class="methodparam"><span
 class="type">array</span> `&$read`</span> , <span
 class="methodparam"><span class="type">array</span> `&$error`</span> ,
@@ -4431,10 +4428,10 @@ class="type">int</span> `$sec`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$usec`<span
 class="initializer"> = 0</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_stmt</span><span class="type">false</span></span>
-<span class="methodname">prepare</span> ( <span
-class="methodparam"><span class="type">string</span> `$query`</span> )
+<span class="modifier">public</span> <span
+class="type">mysqli\_stmt</span> <span class="methodname">prepare</span>
+( <span class="methodparam"><span class="type">string</span>
+`$query`</span> )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">query</span> ( <span class="methodparam"><span
@@ -4469,9 +4466,9 @@ class="methodparam"><span class="type">string</span> `$escapestr`</span>
 <span class="methodname">real\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">reap\_async\_query</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">reap\_async\_query</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -4511,27 +4508,27 @@ class="methodparam"><span class="type">string</span> `$capath`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$cipher`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">stat</span> ( <span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">stat</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
 class="type">mysqli\_stmt</span> <span
 class="methodname">stmt\_init</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">store\_result</span> (\[ <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">store\_result</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$option`</span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">thread\_safe</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">use\_result</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">use\_result</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -5516,8 +5513,7 @@ Object oriented style
 
 Procedural style
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysqli\_connect\_error</span> ( <span
 class="methodparam">void</span> )
 
@@ -7764,19 +7760,20 @@ class="function">mysqli\_init</span>
 `option`  
 The option that you want to set. It can be one of the following values:
 
-| Name                                    | Description                                                                                                                          |
-|-----------------------------------------|--------------------------------------------------------------------------------------------------------------------------------------|
-| **`MYSQLI_OPT_CONNECT_TIMEOUT`**        | connection timeout in seconds                                                                                                        |
-| **`MYSQLI_OPT_READ_TIMEOUT`**           | command execution result timeout in seconds. Available as of PHP 7.2.0.                                                              |
-| **`MYSQLI_OPT_LOCAL_INFILE`**           | enable/disable use of *LOAD LOCAL INFILE*                                                                                            |
-| **`MYSQLI_INIT_COMMAND`**               | command to execute after when connecting to MySQL server                                                                             |
-| **`MYSQLI_READ_DEFAULT_FILE`**          | Read options from named option file instead of `my.cnf`                                                                              |
-| **`MYSQLI_READ_DEFAULT_GROUP`**         | Read options from the named group from `my.cnf` or the file specified with **`MYSQL_READ_DEFAULT_FILE`**.                            |
-| **`MYSQLI_SERVER_PUBLIC_KEY`**          | RSA public key file used with the SHA-256 based authentication. Available since PHP 5.5.0.                                           |
-| **`MYSQLI_OPT_NET_CMD_BUFFER_SIZE`**    | The size of the internal command/network buffer. Only valid for mysqlnd. Available since PHP 5.3.0.                                  |
-| **`MYSQLI_OPT_NET_READ_BUFFER_SIZE`**   | Maximum read chunk size in bytes when reading the body of a MySQL command packet. Only valid for mysqlnd. Available since PHP 5.3.0. |
-| **`MYSQLI_OPT_INT_AND_FLOAT_NATIVE`**   | Convert integer and float columns back to PHP numbers. Only valid for mysqlnd. Available since PHP 5.3.0.                            |
-| **`MYSQLI_OPT_SSL_VERIFY_SERVER_CERT`** | Available since PHP 5.3.0.                                                                                                           |
+| Name                                    | Description                                                                                                                         |
+|-----------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------|
+| **`MYSQLI_OPT_CONNECT_TIMEOUT`**        | Connection timeout in seconds                                                                                                       |
+| **`MYSQLI_OPT_READ_TIMEOUT`**           | Command execution result timeout in seconds. Available as of PHP 7.2.0.                                                             |
+| **`MYSQLI_OPT_LOCAL_INFILE`**           | Enable/disable use of *LOAD LOCAL INFILE*                                                                                           |
+| **`MYSQLI_INIT_COMMAND`**               | Command to execute after when connecting to MySQL server                                                                            |
+| **`MYSQLI_SET_CHARSET_NAME`**           | The charset to be set as default.                                                                                                   |
+| **`MYSQLI_READ_DEFAULT_FILE`**          | Read options from named option file instead of `my.cnf` Not supported by mysqlnd.                                                   |
+| **`MYSQLI_READ_DEFAULT_GROUP`**         | Read options from the named group from `my.cnf` or the file specified with **`MYSQL_READ_DEFAULT_FILE`**. Not supported by mysqlnd. |
+| **`MYSQLI_SERVER_PUBLIC_KEY`**          | RSA public key file used with the SHA-256 based authentication.                                                                     |
+| **`MYSQLI_OPT_NET_CMD_BUFFER_SIZE`**    | The size of the internal command/network buffer. Only valid for mysqlnd.                                                            |
+| **`MYSQLI_OPT_NET_READ_BUFFER_SIZE`**   | Maximum read chunk size in bytes when reading the body of a MySQL command packet. Only valid for mysqlnd.                           |
+| **`MYSQLI_OPT_INT_AND_FLOAT_NATIVE`**   | Convert integer and float columns back to PHP numbers. Only valid for mysqlnd.                                                      |
+| **`MYSQLI_OPT_SSL_VERIFY_SERVER_CERT`** | Whether to verify server certificate or not.                                                                                        |
 
 `value`  
 The value for the option.
@@ -7923,8 +7920,7 @@ Poll connections
 Object oriented style
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">int</span> <span
 class="methodname">mysqli::poll</span> ( <span class="methodparam"><span
 class="type">array</span> `&$read`</span> , <span
 class="methodparam"><span class="type">array</span> `&$error`</span> ,
@@ -7936,8 +7932,7 @@ class="initializer"> = 0</span></span> \] )
 
 Procedural style
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">mysqli\_poll</span> ( <span class="methodparam"><span
 class="type">array</span> `&$read`</span> , <span
 class="methodparam"><span class="type">array</span> `&$error`</span> ,
@@ -8029,15 +8024,14 @@ Prepare an SQL statement for execution
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_stmt</span><span class="type">false</span></span>
-<span class="methodname">mysqli::prepare</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_stmt</span> <span
+class="methodname">mysqli::prepare</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_stmt</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_stmt</span> <span
 class="methodname">mysqli\_prepare</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -8844,15 +8838,14 @@ Get result from async query
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">mysqli::reap\_async\_query</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">mysqli::reap\_async\_query</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_result</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_reap\_async\_query</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 
@@ -9533,15 +9526,13 @@ Gets the current system status
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">mysqli::stat</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">mysqli::stat</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysqli\_stat</span> ( <span class="methodparam"><span
 class="type">mysqli</span> `$link`</span> )
 
@@ -9670,15 +9661,14 @@ Transfers a result set from the last query
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">mysqli::store\_result</span> (\[ <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">mysqli::store\_result</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$option`</span> \] )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_result</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_store\_result</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$option`</span>
@@ -9900,15 +9890,14 @@ Initiate a result set retrieval
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">mysqli::use\_result</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">mysqli::use\_result</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_result</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_use\_result</span> ( <span
 class="methodparam"><span class="type">mysqli</span> `$link`</span> )
 
@@ -10190,8 +10179,7 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$query`</span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">attr\_get</span> ( <span class="methodparam"><span
 class="type">int</span> `$attr`</span> )
 
@@ -10225,18 +10213,17 @@ class="methodparam"><span class="type">int</span> `$offset`</span> )
 <span class="methodname">execute</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">fetch</span> ( <span class="methodparam">void</span>
-)
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">fetch</span> ( <span
+class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">free\_result</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">get\_result</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">get\_result</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">object</span>
@@ -10263,9 +10250,9 @@ class="methodparam"><span class="type">string</span> `$query`</span> )
 <span class="methodname">reset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">result\_metadata</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">result\_metadata</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -10428,15 +10415,13 @@ Used to get the current value of a statement attribute
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">mysqli\_stmt::attr\_get</span> ( <span
 class="methodparam"><span class="type">int</span> `$attr`</span> )
 
 Procedural style
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">mysqli\_stmt\_attr\_get</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> , <span class="methodparam"><span class="type">int</span>
@@ -11624,15 +11609,13 @@ Fetch results from a prepared statement into the bound variables
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">bool</span><span class="type">null</span></span> <span
-class="methodname">mysqli\_stmt::fetch</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">mysqli\_stmt::fetch</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">bool</span><span
-class="type">null</span></span> <span
+<span class="type">bool</span> <span
 class="methodname">mysqli\_stmt\_fetch</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
@@ -11832,15 +11815,14 @@ Gets a result set from a prepared statement
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">mysqli\_stmt::get\_result</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">mysqli\_stmt::get\_result</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_result</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_stmt\_get\_result</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
@@ -12591,15 +12573,14 @@ Returns result set metadata from a prepared statement
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">mysqli\_result</span><span class="type">false</span></span>
-<span class="methodname">mysqli\_stmt::result\_metadata</span> ( <span
+<span class="modifier">public</span> <span
+class="type">mysqli\_result</span> <span
+class="methodname">mysqli\_stmt::result\_metadata</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">mysqli\_result</span><span
-class="type">false</span></span> <span
+<span class="type">mysqli\_result</span> <span
 class="methodname">mysqli\_stmt\_result\_metadata</span> ( <span
 class="methodparam"><span class="type">mysqli\_stmt</span>
 `$stmt`</span> )
@@ -13103,29 +13084,24 @@ class="initializer"> = MYSQLI\_NUM</span></span> \] )
 class="methodparam"><span class="type">int</span> `$resulttype`<span
 class="initializer"> = MYSQLI\_BOTH</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">fetch\_assoc</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetch\_assoc</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">false</span></span> <span
-class="methodname">fetch\_field\_direct</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_field\_direct</span> ( <span
 class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">false</span></span> <span
-class="methodname">fetch\_field</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_field</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">fetch\_fields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetch\_fields</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
-class="methodname">fetch\_object</span> (\[ <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">fetch\_object</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$params`</span>
@@ -13664,15 +13640,13 @@ Fetch a result row as an associative array
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">mysqli\_result::fetch\_assoc</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysqli\_result::fetch\_assoc</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqli\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
@@ -13833,15 +13807,14 @@ Fetch meta-data for a single field
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">false</span></span> <span
-class="methodname">mysqli\_result::fetch\_field\_direct</span> ( <span
-class="methodparam"><span class="type">int</span> `$fieldnr`</span> )
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_field\_direct</span> (
+<span class="methodparam"><span class="type">int</span>
+`$fieldnr`</span> )
 
 Procedural style
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">mysqli\_fetch\_field\_direct</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> , <span class="methodparam"><span
@@ -13976,15 +13949,13 @@ Returns the next field in the result set
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">false</span></span> <span
-class="methodname">mysqli\_result::fetch\_field</span> ( <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_field</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">mysqli\_fetch\_field</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
@@ -14123,15 +14094,13 @@ Returns an array of objects representing the fields in a result set
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
-class="methodname">mysqli\_result::fetch\_fields</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysqli\_result::fetch\_fields</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqli\_fetch\_fields</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
@@ -14315,9 +14284,8 @@ Returns the current row of a result set as an object
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">object</span><span class="type">null</span></span> <span
-class="methodname">mysqli\_result::fetch\_object</span> (\[ <span
+<span class="modifier">public</span> <span class="type">object</span>
+<span class="methodname">mysqli\_result::fetch\_object</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$class_name`<span
 class="initializer"> = "stdClass"</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$params`</span>
@@ -14325,8 +14293,7 @@ class="methodparam"><span class="type">array</span> `$params`</span>
 
 Procedural style
 
-<span class="type"><span class="type">object</span><span
-class="type">null</span></span> <span
+<span class="type">object</span> <span
 class="methodname">mysqli\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> \[, <span class="methodparam"><span
@@ -14882,8 +14849,7 @@ Object oriented style
 
 Procedural style
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqli\_fetch\_lengths</span> ( <span
 class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
@@ -15374,7 +15340,8 @@ Class synopsis
 
 **mysqli\_warning**
 
-<span class="ooclass"> class **mysqli\_warning** </span> {
+<span class="ooclass"> <span class="modifier">final</span> class
+**mysqli\_warning** </span> {
 
 /\* Properties \*/
 
@@ -15385,10 +15352,6 @@ Class synopsis
 <span class="modifier">public</span> `$errno` ;
 
 /\* Methods \*/
-
-<span class="modifier">protected</span> <span
-class="methodname">\_\_construct</span> ( <span
-class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">next</span> ( <span
@@ -15407,28 +15370,6 @@ SQL state
 
 `errno`  
 Error number
-
-mysqli\_warning::\_\_construct
-==============================
-
-The \_\_construct purpose
-
-### Description
-
-<span class="modifier">protected</span> <span
-class="methodname">mysqli\_warning::\_\_construct</span> ( <span
-class="methodparam">void</span> )
-
-**Warning**
-
-This function is currently not documented; only its argument list is
-available.
-
-### Parameters
-
-This function has no parameters.
-
-### Return Values
 
 mysqli\_warning::next
 =====================
@@ -15577,8 +15518,7 @@ Returns client per-process statistics
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqli\_get\_client\_stats</span> ( <span
 class="methodparam">void</span> )
 
@@ -17181,14 +17121,12 @@ class="type">string</span> `$search_condition`</span> \] )
 <span class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Document</span><span class="type">null</span></span> <span
-class="methodname">getOne</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">Document</span>
+<span class="methodname">getOne</span> ( <span class="methodparam"><span
 class="type">string</span> `$id`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Schema Object</span><span class="type">null</span></span>
-<span class="methodname">getSchema</span> ( <span
+<span class="modifier">public</span> <span class="type">Schema
+Object</span> <span class="methodname">getSchema</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">Session</span>
@@ -17886,10 +17824,10 @@ Get one document
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Document</span><span class="type">null</span></span> <span
-class="methodname">mysql\_xdevapi\\Collection::getOne</span> ( <span
-class="methodparam"><span class="type">string</span> `$id`</span> )
+<span class="modifier">public</span> <span class="type">Document</span>
+<span class="methodname">mysql\_xdevapi\\Collection::getOne</span> (
+<span class="methodparam"><span class="type">string</span> `$id`</span>
+)
 
 Fetches one document from the collection.
 
@@ -17954,10 +17892,10 @@ Get schema object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">Schema Object</span><span class="type">null</span></span>
-<span class="methodname">mysql\_xdevapi\\Collection::getSchema</span> (
-<span class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">Schema
+Object</span> <span
+class="methodname">mysql\_xdevapi\\Collection::getSchema</span> ( <span
+class="methodparam">void</span> )
 
 Retrieve the schema object that contains the collection.
 
@@ -21517,9 +21455,8 @@ class="oointerface">, <span class="interfacename">Traversable</span>
 <span class="methodname">fetchAll</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">fetchOne</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetchOne</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">Array</span>
@@ -21689,10 +21626,9 @@ Get one row
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">mysql\_xdevapi\\DocResult::fetchOne</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysql\_xdevapi\\DocResult::fetchOne</span> (
+<span class="methodparam">void</span> )
 
 Fetch one result from a result set.
 
@@ -22532,9 +22468,8 @@ class="oointerface">, <span class="interfacename">Traversable</span>
 <span class="methodname">fetchAll</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">fetchOne</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">fetchOne</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -22677,10 +22612,9 @@ Get row from result
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">array</span><span class="type">null</span></span> <span
-class="methodname">mysql\_xdevapi\\RowResult::fetchOne</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">mysql\_xdevapi\\RowResult::fetchOne</span> (
+<span class="methodparam">void</span> )
 
 Fetch one result from the result set.
 
@@ -23828,9 +23762,8 @@ class="methodparam"><span class="type">string</span>
 <span class="methodname">generateUUID</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
-class="methodname">getDefaultSchema</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">getDefaultSchema</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
@@ -24126,8 +24059,8 @@ Get default schema name
 
 ### Description
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">null</span></span> <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span
 class="methodname">mysql\_xdevapi\\Session::getDefaultSchema</span> (
 <span class="methodparam">void</span> )
 
@@ -29240,8 +29173,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysql\_db\_name</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
@@ -29769,8 +29701,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysql\_fetch\_array</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">int</span>
@@ -29918,8 +29849,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysql\_fetch\_assoc</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -30263,8 +30193,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">object</span><span
-class="type">false</span></span> <span
+<span class="type">object</span> <span
 class="methodname">mysql\_fetch\_object</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -30384,8 +30313,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysql\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 )
@@ -31327,8 +31255,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysql\_info</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`<span class="initializer"> = NULL</span></span> \] )
@@ -31408,8 +31335,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">mysql\_insert\_id</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`<span class="initializer"> = NULL</span></span> \] )
@@ -31504,8 +31430,7 @@ for additional information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">mysql\_list\_dbs</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`<span class="initializer"> = NULL</span></span> \] )
@@ -31595,8 +31520,7 @@ for additional information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">mysql\_list\_fields</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$database_name`</span> , <span class="methodparam"><span
@@ -32051,8 +31975,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">mysql\_pconnect</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$server`<span
 class="initializer"> = ini\_get("mysql.default\_host")</span></span> \[,
@@ -32390,8 +32313,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysql\_real\_escape\_string</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$unescaped_string`</span> \[, <span class="methodparam"><span
@@ -32575,8 +32497,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysql\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
@@ -32826,8 +32747,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">null</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysql\_stat</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_identifier`<span class="initializer"> = NULL</span></span> \] )
@@ -33087,8 +33007,7 @@ for more information. Alternatives to this function include:
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">bool</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">mysql\_unbuffered\_query</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">resource</span>
@@ -40788,7 +40707,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2077" class="example">
+<div id="example-2079" class="example">
 <p><strong>Example #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -40877,7 +40796,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2078" class="example">
+<div id="example-2080" class="example">
 <p><strong>Example #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -42249,8 +42168,7 @@ Returns a list of currently configured servers
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_ms\_dump\_servers</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 )
@@ -42393,8 +42311,7 @@ Switch to global sharding server for a given table
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_ms\_fabric\_select\_global</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -42441,8 +42358,7 @@ Switch to shard
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_ms\_fabric\_select\_shard</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">mixed</span>
@@ -42493,8 +42409,7 @@ Returns the latest global transaction ID
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">mysqlnd\_ms\_get\_last\_gtid</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 )
@@ -42578,8 +42493,7 @@ Returns an array which describes the last used connection
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_ms\_get\_last\_used\_connection</span> (
 <span class="methodparam"><span class="type">mixed</span>
 `$connection`</span> )
@@ -42680,8 +42594,7 @@ Returns query distribution and connection statistics
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">null</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_ms\_get\_stats</span> ( <span
 class="methodparam">void</span> )
 
@@ -43544,7 +43457,7 @@ Starts a distributed/XA transaction among MySQL servers
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">mysqlnd\_ms\_xa\_begin</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -43706,7 +43619,7 @@ Garbage collects unfinished XA transactions after severe errors
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">mysqlnd\_ms\_xa\_gc</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -43784,7 +43697,7 @@ Rolls back a distributed/XA transaction among MySQL servers
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">int</span> <span
 class="methodname">mysqlnd\_ms\_xa\_rollback</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 , <span class="methodparam"><span class="type">string</span>
@@ -49217,7 +49130,7 @@ class="methodparam"><span class="type">mysqlnd\_connection</span>
 class="type">int</span> `$option`</span> , <span
 class="methodparam"><span class="type">int</span> `$value`</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setServerOption</span> ( <span
 class="methodparam"><span class="type">mysqlnd\_connection</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -52629,7 +52542,7 @@ Sets a server option
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
+<span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">MysqlndUhConnection::setServerOption</span> (
 <span class="methodparam"><span class="type">mysqlnd\_connection</span>
 `$connection`</span> , <span class="methodparam"><span
@@ -54580,8 +54493,7 @@ Returns information about the plugin configuration
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mysqlnd\_memcache\_get\_config</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$connection`</span>
 )

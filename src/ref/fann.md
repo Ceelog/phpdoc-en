@@ -143,8 +143,7 @@ Creates a copy of a fann structure
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_copy</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ann`</span> )
 
@@ -208,8 +207,7 @@ connectected and has shortcut connections
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_shortcut\_array</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -245,8 +243,7 @@ connectected and has shortcut connections
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_shortcut</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -295,8 +292,7 @@ connected using an array of layer sizes
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_sparse\_array</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$connection_rate`</span> , <span class="methodparam"><span
@@ -339,8 +335,7 @@ connected
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_sparse</span> ( <span
 class="methodparam"><span class="type">float</span>
 `$connection_rate`</span> , <span class="methodparam"><span
@@ -392,8 +387,7 @@ an array of layer sizes
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_standard\_array</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -433,8 +427,7 @@ Creates a standard fully connected backpropagation neural network
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_create\_standard</span> ( <span
 class="methodparam"><span class="type">int</span> `$num_layers`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -785,8 +778,7 @@ Returns the activation function
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_activation\_function</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 <span class="methodparam"><span class="type">int</span> `$layer`</span>
@@ -837,8 +829,7 @@ Returns the activation steepness for supplied neuron and layer number
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_activation\_steepness</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 <span class="methodparam"><span class="type">int</span> `$layer`</span>
@@ -918,8 +909,7 @@ Returns the bit fail limit used during training
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_bit\_fail\_limit</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -957,8 +947,7 @@ The number of fail bits
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_bit\_fail</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -999,8 +988,7 @@ Returns the number of cascade activation functions
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_activation\_functions\_count</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1033,8 +1021,7 @@ Returns the cascade activation functions
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">fann\_get\_cascade\_activation\_functions</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1074,8 +1061,7 @@ The number of activation steepnesses
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_activation\_steepnesses\_count</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1108,8 +1094,7 @@ Returns the cascade activation steepnesses
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">fann\_get\_cascade\_activation\_steepnesses</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1146,8 +1131,7 @@ Returns the cascade candidate change fraction
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_cascade\_candidate\_change\_fraction</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1198,8 +1182,7 @@ Return the candidate limit
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_cascade\_candidate\_limit</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1232,8 +1215,7 @@ Returns the number of cascade candidate stagnation epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_candidate\_stagnation\_epochs</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1272,8 +1254,7 @@ Returns the maximum candidate epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_max\_cand\_epochs</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1303,8 +1284,7 @@ Returns the maximum out epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_max\_out\_epochs</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1333,8 +1313,7 @@ Returns the minimum candidate epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_min\_cand\_epochs</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1371,8 +1350,7 @@ Returns the minimum out epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_min\_out\_epochs</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1408,8 +1386,7 @@ Returns the number of candidate groups
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_num\_candidate\_groups</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1447,8 +1424,7 @@ Returns the number of candidates used during training
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_num\_candidates</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1506,8 +1482,7 @@ Returns the cascade output change fraction
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_cascade\_output\_change\_fraction</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1558,8 +1533,7 @@ Returns the number of cascade output stagnation epochs
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_cascade\_output\_stagnation\_epochs</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -1597,8 +1571,7 @@ Returns the weight multiplier
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_cascade\_weight\_multiplier</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1651,8 +1624,7 @@ Get the connection rate used when the network was created
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_connection\_rate</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1675,8 +1647,7 @@ Returns the last error number
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_errno</span> ( <span
 class="methodparam"><span class="type">resource</span> `$errdat`</span>
 )
@@ -1705,8 +1676,7 @@ Returns the last errstr
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">fann\_get\_errstr</span> ( <span
 class="methodparam"><span class="type">resource</span> `$errdat`</span>
 )
@@ -1759,8 +1729,7 @@ Returns the learning momentum
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_learning\_momentum</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1795,8 +1764,7 @@ Returns the learning rate
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_learning\_rate</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1828,8 +1796,7 @@ Reads the mean square error from the network
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_MSE</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1859,8 +1826,7 @@ Get the type of neural network it was created as
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_network\_type</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1883,8 +1849,7 @@ Get the number of input neurons
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_num\_input</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1906,8 +1871,7 @@ Get the number of layers in the neural network
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_num\_layers</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1929,8 +1893,7 @@ Get the number of output neurons
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_num\_output</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1953,8 +1916,7 @@ iteration during quickprop training
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_quickprop\_decay</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -1985,8 +1947,7 @@ Returns the mu factor
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_quickprop\_mu</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2017,8 +1978,7 @@ Returns the increase factor used during RPROP training
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_rprop\_decrease\_factor</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2047,8 +2007,7 @@ Returns the maximum step-size
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_rprop\_delta\_max</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2078,8 +2037,7 @@ Returns the minimum step-size
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_rprop\_delta\_min</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2108,8 +2066,7 @@ Returns the initial step-size
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_rprop\_delta\_zero</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2140,8 +2097,7 @@ Returns the increase factor used during RPROP training
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_rprop\_increase\_factor</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2170,8 +2126,7 @@ Returns the sarprop step error shift
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_sarprop\_step\_error\_shift</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2206,8 +2161,7 @@ Returns the sarprop step error threshold factor
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_sarprop\_step\_error\_threshold\_factor</span>
 ( <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -2244,8 +2198,7 @@ Returns the sarprop temperature
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_sarprop\_temperature</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2280,8 +2233,7 @@ Returns the sarprop weight decay shift
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_get\_sarprop\_weight\_decay\_shift</span> (
 <span class="methodparam"><span class="type">resource</span>
 `$ann`</span> )
@@ -2318,8 +2270,7 @@ Get the total number of connections in the entire network
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_total\_connections</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2342,8 +2293,7 @@ Get the total number of neurons in the entire network
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_total\_neurons</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2367,8 +2317,7 @@ Returns the error function used during training
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_train\_error\_function</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2402,8 +2351,7 @@ Returns the stop function used during training
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_train\_stop\_function</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2437,8 +2385,7 @@ Returns the training algorithm
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_get\_training\_algorithm</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> )
 
@@ -2515,8 +2462,7 @@ Returns the number of training patterns in the train data
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_length\_train\_data</span> ( <span
 class="methodparam"><span class="type">resource</span> `$data`</span> )
 
@@ -2540,8 +2486,7 @@ Merges the train data
 
 ### Description
 
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
+<span class="type">resource</span> <span
 class="methodname">fann\_merge\_train\_data</span> ( <span
 class="methodparam"><span class="type">resource</span> `$data1`</span> ,
 <span class="methodparam"><span class="type">resource</span>
@@ -2571,8 +2516,7 @@ train data
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_num\_input\_train\_data</span> ( <span
 class="methodparam"><span class="type">resource</span> `$data`</span> )
 
@@ -2601,8 +2545,7 @@ train data
 
 ### Description
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">fann\_num\_output\_train\_data</span> ( <span
 class="methodparam"><span class="type">resource</span> `$data`</span> )
 
@@ -2855,8 +2798,7 @@ Will run input through the neural network
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">fann\_run</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ann`</span> , <span
 class="methodparam"><span class="type">array</span> `$input`</span> )
@@ -4916,8 +4858,7 @@ Test a set of training data and calculates the MSE for the training data
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_test\_data</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 <span class="methodparam"><span class="type">resource</span>
@@ -4955,8 +4896,7 @@ Test with a set of inputs, and a set of desired outputs
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">fann\_test</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ann`</span> , <span
 class="methodparam"><span class="type">array</span> `$input`</span> ,
@@ -4998,8 +4938,7 @@ Train one epoch with a set of training data
 
 ### Description
 
-<span class="type"><span class="type">float</span><span
-class="type">false</span></span> <span
+<span class="type">float</span> <span
 class="methodname">fann\_train\_epoch</span> ( <span
 class="methodparam"><span class="type">resource</span> `$ann`</span> ,
 <span class="methodparam"><span class="type">resource</span>
