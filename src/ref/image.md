@@ -3632,7 +3632,7 @@ class="methodparam"><span class="type">string</span> `$image`</span> )
 <span class="function">imagecreatefromstring</span> returns an image
 identifier representing the image obtained from the given `image`. These
 types will be automatically detected if your build of PHP supports them:
-JPEG, PNG, GIF, BMP, WBMP, and GD2.
+JPEG, PNG, GIF, BMP, WBMP, GD2, and WEBP.
 
 ### Parameters
 
@@ -3644,6 +3644,12 @@ A string containing the image data.
 An image resource will be returned on success. **`FALSE`** is returned
 if the image type is unsupported, the data is not in a recognised
 format, or the image is corrupt and cannot be loaded.
+
+### Changelog
+
+| Version | Description                                               |
+|---------|-----------------------------------------------------------|
+| 7.3.0   | WEBP is supported now (if supported by the libgd in use). |
 
 ### Errors/Exceptions
 

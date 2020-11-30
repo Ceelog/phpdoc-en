@@ -114,26 +114,37 @@ class="type">string</span>`$tidy->errorBuffer`;
 
 /\* Methods \*/
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">body</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> (\[ <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
+**`FALSE`**</span></span> \]\]\]\] )
+
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">body</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">cleanRepair</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`</span> \]\]\]\] )
-
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">diagnose</span> ( <span
 class="methodparam">void</span> )
+
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
+class="methodname">tidy\_get\_error\_buffer</span> ( <span
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getConfig</span> ( <span
@@ -143,13 +154,16 @@ class="methodparam">void</span> )
 class="methodname">getHtmlVer</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">getOpt</span> ( <span class="methodparam"><span
-class="type">string</span> `$option`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">bool</span></span> <span class="methodname">getOpt</span> (
+<span class="methodparam"><span class="type">string</span>
+`$option`</span> )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">getOptDoc</span> ( <span
-class="methodparam"><span class="type">string</span> `$optname`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">getOptDoc</span> ( <span class="methodparam"><span
+class="type">string</span> `$option`</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getRelease</span> ( <span
@@ -159,13 +173,13 @@ class="methodparam">void</span> )
 class="methodname">getStatus</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">head</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">head</span> ( <span class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">html</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">html</span> ( <span class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">isXhtml</span> ( <span
@@ -178,40 +192,58 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">parseFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">parseString</span> ( <span
-class="methodparam"><span class="type">string</span> `$input`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">repairFile</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">repairFile</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">repairString</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">repairString</span> ( <span class="methodparam"><span
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">root</span> ( <span
-class="methodparam">void</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">root</span> ( <span class="methodparam">void</span> )
 
 }
 
@@ -228,22 +260,24 @@ the \<body\> tag of the tidy parse tree
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidy::body</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidy::body</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type">tidyNode</span> <span
+<span class="type"><span class="type">tidyNode</span><span
+class="type">null</span></span> <span
 class="methodname">tidy\_get\_body</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns a <span class="classname">tidyNode</span> object starting from
 the \<body\> tag of the tidy parse tree.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -305,13 +339,13 @@ Procedural style
 
 <span class="type">bool</span> <span
 class="methodname">tidy\_clean\_repair</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
-This function cleans and repairs the given tidy `object`.
+This function cleans and repairs the given tidy `tidy`.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -359,12 +393,18 @@ Constructs a new <span class="classname">tidy</span> object
 
 <span class="modifier">public</span> <span
 class="methodname">tidy::\_\_construct</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`</span> \]\]\]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$filename`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
+**`FALSE`**</span></span> \]\]\]\] )
 
 Constructs a new <span class="classname">tidy</span> object.
 
@@ -389,13 +429,19 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 *raw*, *utf8*, *iso2022*, *mac*, *win1252*, *ibm858*, *utf16*,
 *utf16le*, *utf16be*, *big5*, and *shiftjis*.
 
-`use_include_path`  
+`useIncludePath`  
 Search for the file in the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>.
 
 ### Return Values
 
 Returns the new <span class="classname">tidy</span> instance.
+
+### Changelog
+
+| Version | Description                                                             |
+|---------|-------------------------------------------------------------------------|
+| 8.0.0   | `filename`, `config`, `encoding` and `useIncludePath` are nullable now. |
 
 ### Examples
 
@@ -463,14 +509,14 @@ Procedural style
 
 <span class="type">bool</span> <span
 class="methodname">tidy\_diagnose</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
-Runs diagnostic tests on the given tidy `object`, adding some more
+Runs diagnostic tests on the given tidy `tidy`, adding some more
 information about the document in the error buffer.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -534,7 +580,8 @@ class="type">string</span>`$tidy->errorBuffer`;
 
 Procedural style:
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_get\_error\_buffer</span> ( <span
 class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
@@ -548,7 +595,8 @@ The <span class="classname">Tidy</span> object.
 
 ### Return Values
 
-Returns the error buffer as a string.
+Returns the error buffer as a string, or **`FALSE`** if the buffer is
+empty.
 
 ### Examples
 
@@ -598,14 +646,14 @@ Procedural style
 
 <span class="type">array</span> <span
 class="methodname">tidy\_get\_config</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Gets the list of the configuration options in use by the given tidy
-`object`.
+`tidy`.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -745,13 +793,13 @@ Procedural style
 
 <span class="type">int</span> <span
 class="methodname">tidy\_get\_html\_ver</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
-Returns the detected HTML version for the specified tidy `object`.
+Returns the detected HTML version for the specified tidy `tidy`.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -776,23 +824,26 @@ document
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">tidy::getOpt</span> ( <span
-class="methodparam"><span class="type">string</span> `$option`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">bool</span></span> <span
+class="methodname">tidy::getOpt</span> ( <span class="methodparam"><span
+class="type">string</span> `$option`</span> )
 
 Procedural style
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">tidy\_getopt</span> ( <span class="methodparam"><span
-class="type">tidy</span> `$object`</span> , <span
+class="type">tidy</span> `$tidy`</span> , <span
 class="methodparam"><span class="type">string</span> `$option`</span> )
 
 Returns the value of the specified `option` for the specified tidy
-`object`.
+`tidy`.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 `option`  
@@ -851,17 +902,19 @@ Returns the documentation for the given option name
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">tidy::getOptDoc</span> ( <span
-class="methodparam"><span class="type">string</span> `$optname`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">tidy::getOptDoc</span> ( <span
+class="methodparam"><span class="type">string</span> `$option`</span> )
 
 Procedural style
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_get\_opt\_doc</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> ,
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$optname`</span> )
+`$option`</span> )
 
 <span class="function">tidy\_get\_opt\_doc</span> returns the
 documentation for the given option name.
@@ -873,10 +926,10 @@ documentation for the given option name.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
-`optname`  
+`option`  
 The option name
 
 ### Return Values
@@ -966,13 +1019,13 @@ Procedural style
 
 <span class="type">int</span> <span
 class="methodname">tidy\_get\_status</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
-Returns the status for the specified tidy `object`.
+Returns the status for the specified tidy `tidy`.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -1013,22 +1066,24 @@ the \<head\> tag of the tidy parse tree
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidy::head</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidy::head</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type">tidyNode</span> <span
+<span class="type"><span class="type">tidyNode</span><span
+class="type">null</span></span> <span
 class="methodname">tidy\_get\_head</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns a <span class="classname">tidyNode</span> object starting from
 the \<head\> tag of the tidy parse tree.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -1082,22 +1137,24 @@ the \<html\> tag of the tidy parse tree
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidy::html</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidy::html</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type">tidyNode</span> <span
+<span class="type"><span class="type">tidyNode</span><span
+class="type">null</span></span> <span
 class="methodname">tidy\_get\_html</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns a <span class="classname">tidyNode</span> object starting from
 the \<html\> tag of the tidy parse tree.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -1163,19 +1220,19 @@ Procedural style
 
 <span class="type">bool</span> <span
 class="methodname">tidy\_is\_xhtml</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Tells if the document is a XHTML document.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
 
-This function returns **`TRUE`** if the specified tidy `object` is a
-XHTML document, or **`FALSE`** otherwise.
+This function returns **`TRUE`** if the specified tidy `tidy` is a XHTML
+document, or **`FALSE`** otherwise.
 
 **Warning**
 
@@ -1202,18 +1259,18 @@ Procedural style
 
 <span class="type">bool</span> <span
 class="methodname">tidy\_is\_xml</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Tells if the document is a generic (non HTML/XHTML) XML document.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
 
-This function returns **`TRUE`** if the specified tidy `object` is a
+This function returns **`TRUE`** if the specified tidy `tidy` is a
 generic XML document (non HTML/XHTML), or **`FALSE`** otherwise.
 
 **Warning**
@@ -1236,23 +1293,30 @@ Object oriented style
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">tidy::parseFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
 Procedural style
 
-<span class="type">tidy</span> <span
+<span class="type"><span class="type">tidy</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_parse\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
 Parses the given file.
@@ -1278,13 +1342,22 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 *raw*, *utf8*, *iso2022*, *mac*, *win1252*, *ibm858*, *utf16*,
 *utf16le*, *utf16be*, *big5*, and *shiftjis*.
 
-`use_include_path`  
+`useIncludePath`  
 Search for the file in the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+<span class="methodname">tidy::parseFile</span> returns **`TRUE`** on
+success. <span class="function">tidy\_parse\_file</span> returns a new
+<span class="classname">tidy</span> instance on success. Both, the
+method and the function return **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `config` and `encoding` are nullable now. |
 
 ### Examples
 
@@ -1324,25 +1397,34 @@ Object oriented style
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">tidy::parseString</span> ( <span
-class="methodparam"><span class="type">string</span> `$input`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Procedural style
 
-<span class="type">tidy</span> <span
+<span class="type"><span class="type">tidy</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_parse\_string</span> ( <span
-class="methodparam"><span class="type">string</span> `$input`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Parses a document stored in a string.
 
 ### Parameters
 
-`input`  
+`string`  
 The data to be parsed.
 
 `config`  
@@ -1361,7 +1443,16 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 
 ### Return Values
 
-Returns a new <span class="classname">tidy</span> instance.
+<span class="methodname">tidy::parseString</span> returns **`TRUE`** on
+success. <span class="function">tidy\_parse\_srting</span> returns a new
+<span class="classname">tidy</span> instance on success. Both, the
+method and the function return **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `config` and `encoding` are nullable now. |
 
 ### Examples
 
@@ -1431,26 +1522,35 @@ Repair a file and return it as a string
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">tidy::repairFile</span> ( <span
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">tidy::repairFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
 Procedural style
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_repair\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
-class="methodparam"><span class="type">bool</span>
-`$use_include_path`<span class="initializer"> =
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type">bool</span> `$useIncludePath`<span class="initializer"> =
 **`FALSE`**</span></span> \]\]\] )
 
 Repairs the given file and returns it as a string.
@@ -1474,13 +1574,20 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 *raw*, *utf8*, *iso2022*, *mac*, *win1252*, *ibm858*, *utf16*,
 *utf16le*, *utf16be*, *big5*, and *shiftjis*.
 
-`use_include_path`  
+`useIncludePath`  
 Search for the file in the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>.
 
 ### Return Values
 
-Returns the repaired contents as a string.
+Returns the repaired contents as a string, or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                              |
+|---------|--------------------------------------------------------------------------|
+| 8.0.0   | <span class="methodname">tidy::repairFile</span> is a static method now. |
+| 8.0.0   | `config` and `encoding` are nullable now.                                |
 
 ### Examples
 
@@ -1516,27 +1623,38 @@ Repair a string using an optionally provided configuration file
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">tidy::repairString</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+<span class="modifier">public</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">string</span><span class="type">false</span></span> <span
+class="methodname">tidy::repairString</span> ( <span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Procedural style
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">tidy\_repair\_string</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$config`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$config`<span class="initializer"> =
+**`NULL`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`NULL`**</span></span> \]\] )
 
 Repairs the given string.
 
 ### Parameters
 
-`data`  
+`string`  
 The data to be repaired.
 
 `config`  
@@ -1556,7 +1674,15 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 
 ### Return Values
 
-Returns the repaired string.
+Returns the repaired string, or **`FALSE`** on failure.
+
+### Changelog
+
+| Version | Description                                                                |
+|---------|----------------------------------------------------------------------------|
+| 8.0.0   | <span class="methodname">tidy::repairString</span> is a static method now. |
+| 8.0.0   | `config` and `encoding` are nullable now.                                  |
+| 8.0.0   | This function no longer accepts the `useIncludePath` parameter.            |
 
 ### Examples
 
@@ -1617,22 +1743,24 @@ the root of the tidy parse tree
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidy::root</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidy::root</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type">tidyNode</span> <span
+<span class="type"><span class="type">tidyNode</span><span
+class="type">null</span></span> <span
 class="methodname">tidy\_get\_root</span> ( <span
-class="methodparam"><span class="type">tidy</span> `$object`</span> )
+class="methodparam"><span class="type">tidy</span> `$tidy`</span> )
 
 Returns a <span class="classname">tidyNode</span> object representing
 the root of the tidy parse tree.
 
 ### Parameters
 
-`object`  
+`tidy`  
 The <span class="classname">Tidy</span> object.
 
 ### Return Values
@@ -1728,8 +1856,9 @@ class="type">array</span>`$child`;
 class="methodname">\_\_construct</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">getParent</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">getParent</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -1828,11 +1957,17 @@ Returns the parent node of the current node
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">tidyNode</span>
-<span class="methodname">tidyNode::getParent</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">tidyNode</span><span class="type">null</span></span> <span
+class="methodname">tidyNode::getParent</span> ( <span
 class="methodparam">void</span> )
 
 Returns the parent node of the current node.
+
+### Return Values
+
+Returns a <span class="type">tidyNode</span> if the node has a parent,
+or **`NULL`** otherwise.
 
 ### Examples
 
@@ -1870,11 +2005,6 @@ var_dump($node->getparent()->name);
 The above example will output:
 
     string(4) "head"
-
-### Return Values
-
-Returns a <span class="type">tidyNode</span> if the node has a parent,
-or **`NULL`** otherwise.
 
 tidyNode::hasChildren
 =====================

@@ -763,6 +763,64 @@ The above example will output something similar to:
 
 -   <span class="function">apcu\_dec</span>
 
+apcu\_key\_info
+===============
+
+Get detailed information about the cache key
+
+### Description
+
+<span class="type">array</span> <span
+class="methodname">apcu\_key\_info</span> ( <span
+class="methodparam"><span class="type">string</span> `$key`</span> )
+
+Get detailed information about the cache key
+
+### Parameters
+
+`key`  
+Get detailed information about the cache key
+
+### Return Values
+
+null or array info
+
+### Examples
+
+**Example \#1 A <span class="function">apcu\_key\_info</span> example**
+
+``` php
+<?php
+apcu_add('a','b');
+var_dump(apcu_key_info('a'));
+?>
+```
+
+The above example will output:
+
+    array(7) {
+      ["hits"]=>
+      int(0)
+      ["access_time"]=>
+      int(1606701783)
+      ["mtime"]=>
+      int(1606701783)
+      ["creation_time"]=>
+      int(1606701783)
+      ["deletion_time"]=>
+      int(0)
+      ["ttl"]=>
+      int(0)
+      ["refs"]=>
+      int(0)
+    }
+
+### See Also
+
+-   <span class="function">apcu\_store</span>
+-   <span class="function">apcu\_fetch</span>
+-   <span class="function">apcu\_delete</span>
+
 apcu\_sma\_info
 ===============
 
@@ -921,6 +979,8 @@ The above example will output:
 -   [apcu\_fetch](/ref/apcu.html#apcu_fetch) — Fetch a stored variable
     from the cache
 -   [apcu\_inc](/ref/apcu.html#apcu_inc) — Increase a stored number
+-   [apcu\_key\_info](/ref/apcu.html#apcu_key_info) — Get detailed
+    information about the cache key
 -   [apcu\_sma\_info](/ref/apcu.html#apcu_sma_info) — Retrieves APCu
     Shared Memory Allocation information
 -   [apcu\_store](/ref/apcu.html#apcu_store) — Cache a variable in the

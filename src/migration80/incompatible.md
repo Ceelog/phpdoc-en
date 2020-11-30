@@ -496,10 +496,10 @@ checks for **`FALSE`**.
 
 -   <span class="function">xml\_parser\_create</span> and <span
     class="function">xml\_parser\_create\_ns</span> will now return an
-    <span class="classname">XmlParser</span> object rather than a
+    <span class="classname">XMLParser</span> object rather than a
     <a href="/language/types/resource.html" class="link">resource</a>.
     The <span class="function">xml\_parser\_free</span> function no
-    longer has an effect, instead the XmlParser instance is
+    longer has an effect, instead the XMLParser instance is
     automatically destroyed if it is no longer referenced.
 
 -   The
@@ -848,6 +848,10 @@ instantiation, autoloading, etc.
 
 -   <span class="methodname">SplFileObject::fgetss</span> has been
     removed.
+
+-   <span class="methodname">SplFileObject::seek</span> now always seeks
+    to the beginning of the line. Previously, positions *=1* sought to
+    the beginning of the next line.
 
 -   <span class="methodname">SplHeap::compare</span> now specifies a
     method signature. Inheriting classes implementing this method will

@@ -348,9 +348,6 @@ Review the previous
 <a href="/book/oci8.html#Requirements" class="link">Requirements</a>
 section before configuring OCI8.
 
-To enable the OCI8 extension, configure PHP with the option
-**--with-oci8**.
-
 Before starting the web server, OCI8 typically requires several Oracle
 environment variables (see below) to locate libraries, point to
 configuration files, and set some basic properties such as the character
@@ -364,13 +361,13 @@ with Oracle 19 libraries. PHP applications can connect to other versions
 of Oracle Database, since Oracle has client-server cross-version
 compatibility.
 
-Installing OCI8 from PECL
--------------------------
+Installing OCI8 from PECL Using the pecl Command
+------------------------------------------------
 
 The OCI8 extension can be added to an existing PHP installation by using
-<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>.
-
-For an automated install follow these steps:
+the
+<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>
+repository.
 
 -   If you are behind a firewall, set PEAR's proxy, for example:
 
@@ -382,15 +379,37 @@ For an automated install follow these steps:
 
     For PHP 7, use *pecl install oci8-2.2.0*
 
-    When prompted, enter either the value of *$ORACLE\_HOME*, or
+-   When prompted, enter either the value of *$ORACLE\_HOME*, or
     *instantclient,/path/to/instant/client/lib*.
 
-    Note: Do not enter the text *$ORACLE\_HOME* because it will not be
-    expanded. Instead, enter the actual path of the Oracle home
-    directory.
+    Note: Do not enter variable names like *$ORACLE\_HOME* or *$HOME*
+    because *pecl* will not expand them. Instead, enter an expanded
+    path, for example */opt/oracle/product/19c/dbhome\_1* or
+    *instantclient,/Users/myname/Downloads/instantclient\_19\_8*
 
-For a manual install when the *pecl* command is not available, download
-the PECL OCI8 package, e.g. `oci8-3.0.0.tgz`.
+-   If you get an error *oci8\_dtrace\_gen.h: No such file or
+    directory*, it means PHP was built with
+    <a href="/features/dtrace.html" class="link">DTrace Dynamic Tracing</a>
+    enabled. Install using:
+
+        $ export PHP_DTRACE=yes
+        $ pecl install oci8
+
+-   Edit your `php.ini` file and add the line:
+
+        extension=oci8.so
+
+    Make sure the `php.ini` directive
+    <a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
+    is set to the directory that `oci8.so` was installed in.
+
+Installing OCI8 from PECL Using phpize
+--------------------------------------
+
+To install OCI8 on an existing PHP installation when the *pecl* command
+is not available, manually download the
+<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>
+OCI8 package, e.g. `oci8-3.0.0.tgz`.
 
 -   Extract the package:
 
@@ -414,17 +433,24 @@ the PECL OCI8 package, e.g. `oci8-3.0.0.tgz`.
 
         make install
 
-After either an automatic or manual install, edit your `php.ini` file
-and add the line:
+-   If you get an error *oci8\_dtrace\_gen.h: No such file or
+    directory*, it means PHP was built with
+    <a href="/features/dtrace.html" class="link">DTrace Dynamic Tracing</a>
+    enabled. Re-run the *configure* and *make* commands after setting
+    this environment variable:
 
-    extension=oci8.so
+        $ export PHP_DTRACE=yes
 
-Make sure the `php.ini` directive
-<a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
-is set to the directory that `oci8.so` was installed in.
+-   Edit your `php.ini` file and add the line:
 
-Installing OCI8 as a Shared Extension
--------------------------------------
+        extension=oci8.so
+
+    Make sure the `php.ini` directive
+    <a href="/ini/core.html#ini.extension-dir" class="link">extension_dir</a>
+    is set to the directory that `oci8.so` was installed in.
+
+Installing OCI8 as a Shared Extension when Building PHP
+-------------------------------------------------------
 
 If you are building PHP from source code, the configuration *shared*
 option can be used to build OCI8 as a shared library that can be
@@ -477,8 +503,8 @@ To complete installation of OCI8, edit `php.ini` and add the line:
 
     extension=oci8.so
 
-Installing OCI8 as a Statically Compiled Extension
---------------------------------------------------
+Installing OCI8 as a Statically Compiled Extension when Building PHP
+--------------------------------------------------------------------
 
 If you are building PHP from source code, you can configure PHP to
 include OCI8 as a static extension using one of the following configure
@@ -499,6 +525,11 @@ to `php.ini`. No additional build steps are required.
 
 Installing OCI8 on Windows
 --------------------------
+
+The OCI8 extension can be added to an existing PHP installation by using
+the DLLs from
+<a href="https://pecl.php.net/package/oci8" class="link external">» PECL</a>
+repository or the libraries in your PHP installation's *ext* directory.
 
 With Oracle 12*c* (or later) libraries, uncomment one of the `php.ini`
 lines *extension=php\_oci8\_12c.dll* or *extension=php\_oci8\_11g.dll*
@@ -543,14 +574,14 @@ The variables that might be needed are included in the following table.
 Refer to the Oracle documentation for more information on all the
 available variables.
 
-| Name              | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
-|-------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| ORACLE\_HOME      | Contains the directory of the full Oracle Database software. Do not set this when using Oracle Instant Client as it is unnecessary and may cause installation problems.                                                                                                                                                                                                                                                                                                                     |
-| ORACLE\_SID       | Contains the name of the database on the local machine to be connected to. There is no need to set this if you using Oracle Instant Client, or always pass the connection parameter to <span class="function">oci\_connect</span>.                                                                                                                                                                                                                                                          |
-| LD\_LIBRARY\_PATH | Set this (or its platform equivalent, such as *LIBPATH*, or *SHLIB\_PATH*) to the location of the Oracle libraries, for example `$ORACLE_HOME/lib` or `/usr/lib/oracle/18.5/client/lib`. Note with Instant Client 19 ZIP files on Linux it is more reliable to use `ldconfig` instead, see the Instant Client installation instructions. With Instant Client 19 (or later) RPM files, *ldconfig* is automatically run for you. Some users use *LD\_PRELOAD* instead of *LD\_LIBRARY\_PATH*. |
-| NLS\_LANG         | This is the primary variable for setting the character set and globalization information used by the Oracle libraries.                                                                                                                                                                                                                                                                                                                                                                      |
-| ORA\_SDTZ         | Sets the Oracle session timezone.                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
-| TNS\_ADMIN        | Contains the directory where the Oracle Net Services configuration files such as `tnsnames.ora` and `sqlnet.ora` are kept. Not needed if the <span class="function">oci\_connect</span> connection string uses the Easy Connect naming syntax such as *localhost/XE*. Not needed if the network configuration files are in one of the default locations such as `/usr/lib/oracle/VERSION/client/lib/network/admin`, `$ORACLE_HOME/network/admin` or `/etc`.                                 |
+| Name              | Purpose                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+|-------------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| ORACLE\_HOME      | Contains the directory of the full Oracle Database software. Do not set this when using Oracle Instant Client as it is unnecessary and may cause installation problems.                                                                                                                                                                                                                                                                                                                  |
+| ORACLE\_SID       | Contains the name of the database on the local machine to be connected to. There is no need to set this if you using Oracle Instant Client, or always pass the connection parameter to <span class="function">oci\_connect</span>.                                                                                                                                                                                                                                                       |
+| LD\_LIBRARY\_PATH | Set this (or its platform equivalent, such as *LIBPATH*, or *SHLIB\_PATH*) to the location of the Oracle libraries, for example `$ORACLE_HOME/lib` or `/usr/lib/oracle/18.5/client/lib`. Note with Instant Client ZIP files on Linux it is more reliable to use `ldconfig` instead, see the Instant Client installation instructions. With Instant Client 19 (or later) RPM files, *ldconfig* is automatically run for you. Some users use *LD\_PRELOAD* instead of *LD\_LIBRARY\_PATH*. |
+| NLS\_LANG         | This is the primary variable for setting the character set and globalization information used by the Oracle libraries.                                                                                                                                                                                                                                                                                                                                                                   |
+| ORA\_SDTZ         | Sets the Oracle session timezone.                                                                                                                                                                                                                                                                                                                                                                                                                                                        |
+| TNS\_ADMIN        | Contains the directory where the Oracle Net Services configuration files such as `tnsnames.ora` and `sqlnet.ora` are kept. Not needed if the <span class="function">oci\_connect</span> connection string uses the Easy Connect naming syntax such as *localhost/XE*. Not needed if the network configuration files are in one of the default locations such as `/usr/lib/oracle/VERSION/client/lib/network/admin`, `$ORACLE_HOME/network/admin` or `/etc`.                              |
 
 Less frequently used Oracle environment variables include *TWO\_TASK*,
 *ORA\_TZFILE*, and the various Oracle globalization settings like
