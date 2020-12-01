@@ -7,9 +7,9 @@ Add the word to a personal wordlist
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_add\_to\_personal</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$word`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$word`</span> )
 
 <span class="function">pspell\_add\_to\_personal</span> adds a word to
 the personal wordlist. If you used <span
@@ -20,7 +20,7 @@ class="function">pspell\_save\_wordlist</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 
 `word`  
 The added word.
@@ -60,9 +60,9 @@ Add the word to the wordlist in the current session
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_add\_to\_session</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$word`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$word`</span> )
 
 <span class="function">pspell\_add\_to\_session</span> adds a word to
 the wordlist associated with the current session. It is very similar to
@@ -70,7 +70,7 @@ the wordlist associated with the current session. It is very similar to
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 
 `word`  
 The added word.
@@ -88,16 +88,16 @@ Check a word
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_check</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$word`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$word`</span> )
 
 <span class="function">pspell\_check</span> checks the spelling of a
 word.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 
 `word`  
 The tested word.
@@ -131,8 +131,7 @@ Clear the current session
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_clear\_session</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> )
 
 <span class="function">pspell\_clear\_session</span> clears the current
 session. The current wordlist becomes blank, and, for example, if you
@@ -141,7 +140,7 @@ class="function">pspell\_save\_wordlist</span>, nothing happens.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 
 ### Return Values
 
@@ -175,10 +174,11 @@ Create a config used to open a dictionary
 class="methodname">pspell\_config\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$language`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$spelling`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$jargon`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\]\]\] )
+`$spelling`<span class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$jargon`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$encoding`<span
+class="initializer"> = ""</span></span> \]\]\] )
 
 Create a config used to open a dictionary.
 
@@ -243,9 +243,9 @@ Location of language data files
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_data\_dir</span> ( <span
-class="methodparam"><span class="type">int</span> `$conf`</span> , <span
-class="methodparam"><span class="type">string</span> `$directory`</span>
-)
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$directory`</span> )
 
 **Warning**
 
@@ -265,9 +265,9 @@ Location of the main word list
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_dict\_dir</span> ( <span
-class="methodparam"><span class="type">int</span> `$conf`</span> , <span
-class="methodparam"><span class="type">string</span> `$directory`</span>
-)
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$directory`</span> )
 
 **Warning**
 
@@ -287,9 +287,9 @@ Ignore words less than N characters long
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_ignore</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">int</span> `$n`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$min_length`</span> )
 
 <span class="function">pspell\_config\_ignore</span> should be used on a
 config before calling <span class="function">pspell\_new\_config</span>.
@@ -297,10 +297,10 @@ This function allows short words to be skipped by the spell checker.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
-`n`  
-Words less than `n` characters will be skipped.
+`min_length`  
+Words less than `min_length` characters will be skipped.
 
 ### Return Values
 
@@ -328,9 +328,8 @@ Change the mode number of suggestions returned
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_mode</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">int</span> `$mode`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">int</span> `$mode`</span> )
 
 <span class="function">pspell\_config\_mode</span> should be used on a
 config before calling <span class="function">pspell\_new\_config</span>.
@@ -339,7 +338,7 @@ class="function">pspell\_suggest</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
 `mode`  
 The mode parameter is the mode in which spellchecker will work. There
@@ -379,9 +378,9 @@ Set a file that contains personal wordlist
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_personal</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$file`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$filename`</span> )
 
 Set a file that contains personal wordlist. The personal wordlist will
 be loaded and used in addition to the standard one after you call <span
@@ -395,9 +394,9 @@ class="function">pspell\_new\_config</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
-`file`  
+`filename`  
 The personal wordlist. If the file does not exist, it will be created.
 The file should be writable by whoever PHP runs as (e.g. nobody).
 
@@ -434,9 +433,9 @@ Set a file that contains replacement pairs
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_repl</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$file`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$filename`</span> )
 
 Set a file that contains replacement pairs.
 
@@ -452,9 +451,9 @@ config before calling <span class="function">pspell\_new\_config</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
-`file`  
+`filename`  
 The file should be writable by whoever PHP runs as (e.g. nobody).
 
 ### Return Values
@@ -491,9 +490,9 @@ Consider run-together words as valid compounds
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_runtogether</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">bool</span> `$flag`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">bool</span> `$allow`</span>
+)
 
 This function determines whether run-together words will be treated as
 legal compounds. That is, "thecat" will be a legal compound, although
@@ -508,9 +507,9 @@ class="function">pspell\_new\_config</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
-`flag`  
+`allow`  
 **`TRUE`** if run-together words should be treated as legal compounds,
 **`FALSE`** otherwise.
 
@@ -542,9 +541,9 @@ wordlist
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_config\_save\_repl</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">bool</span> `$flag`</span> )
+class="methodparam"><span class="type">int</span> `$config`</span> ,
+<span class="methodparam"><span class="type">bool</span> `$save`</span>
+)
 
 <span class="function">pspell\_config\_save\_repl</span> determines
 whether <span class="function">pspell\_save\_wordlist</span> will save
@@ -561,9 +560,9 @@ class="function">pspell\_new\_config</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`config`  
 
-`flag`  
+`save`  
 **`TRUE`** if replacement pairs should be saved, **`FALSE`** otherwise.
 
 ### Return Values
@@ -629,15 +628,18 @@ Load a new dictionary with personal wordlist
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">pspell\_new\_personal</span> ( <span
-class="methodparam"><span class="type">string</span> `$personal`</span>
+class="methodparam"><span class="type">string</span> `$filename`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$language`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$spelling`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$jargon`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$spelling`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$jargon`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$encoding`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$mode`<span class="initializer"> =
 0</span></span> \]\]\]\] )
 
@@ -658,7 +660,7 @@ website:<a href="http://aspell.net/" class="link external">» http://aspell.net
 
 ### Parameters
 
-`personal`  
+`filename`  
 The file where words added to the personal list will be stored. It
 should be an absolute filename beginning with '/' because otherwise it
 will be relative to $HOME, which is "/root" for most systems, and is
@@ -732,10 +734,12 @@ Load a new dictionary
 class="type">false</span></span> <span
 class="methodname">pspell\_new</span> ( <span class="methodparam"><span
 class="type">string</span> `$language`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$spelling`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$jargon`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \[, <span
+class="methodparam"><span class="type">string</span> `$spelling`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$jargon`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$encoding`<span
+class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> = 0</span></span> \]\]\]\] )
 
@@ -817,8 +821,7 @@ Save the personal wordlist to a file
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_save\_wordlist</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> )
 
 <span class="function">pspell\_save\_wordlist</span> saves the personal
 wordlist from the current session. The location of files to be saved
@@ -827,7 +830,7 @@ and (optionally) <span class="function">pspell\_config\_repl</span>.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 A dictionary link identifier opened with <span
 class="function">pspell\_new\_personal</span>.
 
@@ -866,10 +869,10 @@ Store a replacement pair for a word
 
 <span class="type">bool</span> <span
 class="methodname">pspell\_store\_replacement</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$misspelled`</span> , <span
-class="methodparam"><span class="type">string</span> `$correct`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$misspelled`</span> , <span class="methodparam"><span
+class="type">string</span> `$correct`</span> )
 
 <span class="function">pspell\_store\_replacement</span> stores a
 replacement pair for a word, so that replacement can be returned by
@@ -885,7 +888,7 @@ written to disk.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 A dictionary link identifier, opened with <span
 class="function">pspell\_new\_personal</span>
 
@@ -929,18 +932,19 @@ Suggest spellings of a word
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">pspell\_suggest</span> ( <span
-class="methodparam"><span class="type">int</span>
-`$dictionary_link`</span> , <span class="methodparam"><span
-class="type">string</span> `$word`</span> )
+class="methodparam"><span class="type">int</span> `$dictionary`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$word`</span> )
 
 <span class="function">pspell\_suggest</span> returns an array of
 possible spellings for the given word.
 
 ### Parameters
 
-`dictionary_link`  
+`dictionary`  
 
 `word`  
 The tested word.

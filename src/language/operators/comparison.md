@@ -263,8 +263,8 @@ class="replaceable">expr2</span> if <span
 class="replaceable">expr1</span> is **`NULL`**, and <span
 class="replaceable">expr1</span> otherwise.
 
-In particular, this operator does not emit a notice if the left-hand
-side value does not exist, just like <span
+In particular, this operator does not emit a notice or warning if the
+left-hand side value does not exist, just like <span
 class="function">isset</span>. This is especially useful on array keys.
 
 > **Note**: <span class="simpara"> Please note that the null coalescing

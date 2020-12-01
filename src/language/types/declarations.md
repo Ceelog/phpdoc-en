@@ -54,6 +54,17 @@ Output of the above example in PHP 8:
     #1 {main}
       thrown in - on line 2
 
+#### mixed
+
+<span class="type">mixed</span> is equivalent to the
+<a href="/language/types/declarations.html#language.types.declarations.union" class="link">union type</a>
+<span class="type"> <span class="type">array</span><span
+class="type">bool</span><span class="type">callable</span><span
+class="type">int</span><span class="type">float</span> <span
+class="type">object</span><span class="type">resource</span><span
+class="type">string</span><span class="type">null</span> </span>.
+Available as of PHP 8.0.0.
+
 #### Examples
 
 **Example \#1 Basic class type declaration**

@@ -1444,7 +1444,7 @@ The possible values for encoding are: *ascii*, *latin0*, *latin1*,
 ### Return Values
 
 <span class="methodname">tidy::parseString</span> returns **`TRUE`** on
-success. <span class="function">tidy\_parse\_srting</span> returns a new
+success. <span class="function">tidy\_parse\_string</span> returns a new
 <span class="classname">tidy</span> instance on success. Both, the
 method and the function return **`FALSE`** on failure.
 

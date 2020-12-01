@@ -142,7 +142,7 @@ Get current byte index for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_byte\_index</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 )
 
 Gets the current byte index of the given XML parser.
@@ -185,7 +185,7 @@ Get current column number for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_column\_number</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 )
 
 Gets the current column number of the given XML parser.
@@ -222,7 +222,7 @@ Get current line number for an XML parser
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_current\_line\_number</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 )
 
 Gets the current line number for the given XML parser.
@@ -258,7 +258,7 @@ Get XML parser error code
 
 <span class="type">int</span> <span
 class="methodname">xml\_get\_error\_code</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 )
 
 Gets the XML parser error code.
@@ -293,7 +293,7 @@ Parse XML data into an array structure
 
 <span class="type">int</span> <span
 class="methodname">xml\_parse\_into\_struct</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$data`</span> , <span class="methodparam"><span
 class="type">array</span> `&$values`</span> \[, <span
@@ -529,7 +529,7 @@ Start parsing an XML document
 ### Description
 
 <span class="type">int</span> <span class="methodname">xml\_parse</span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_final`<span
@@ -604,7 +604,7 @@ Create an XML parser with namespace support
 
 ### Description
 
-<span class="type">XmlParser</span> <span
+<span class="type">XMLParser</span> <span
 class="methodname">xml\_parser\_create\_ns</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
@@ -654,7 +654,7 @@ Create an XML parser
 
 ### Description
 
-<span class="type">XmlParser</span> <span
+<span class="type">XMLParser</span> <span
 class="methodname">xml\_parser\_create</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
@@ -702,7 +702,7 @@ Free an XML parser
 
 <span class="type">bool</span> <span
 class="methodname">xml\_parser\_free</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 )
 
 Frees the given XML `parser`.
@@ -740,7 +740,7 @@ Get options from an XML parser
 <span class="type"><span class="type">string</span><span
 class="type">int</span></span> <span
 class="methodname">xml\_parser\_get\_option</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$option`</span> )
 
@@ -781,7 +781,7 @@ Set options in an XML parser
 
 <span class="type">bool</span> <span
 class="methodname">xml\_parser\_set\_option</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$option`</span> , <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">int</span></span>
@@ -830,7 +830,7 @@ Set up character data handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_character\_data\_handler</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -848,7 +848,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept two parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
@@ -891,7 +891,7 @@ Set up default handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_default\_handler</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -909,7 +909,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept two parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> )
 
@@ -950,7 +950,7 @@ Set up start and end element handlers
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_element\_handler</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$start_handler`</span> , <span class="methodparam"><span
 class="type">callable</span> `$end_handler`</span> )
@@ -1047,7 +1047,7 @@ Set up end namespace declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_end\_namespace\_decl\_handler</span> (
-<span class="methodparam"><span class="type">XmlParser</span>
+<span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1078,7 +1078,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> )
 
@@ -1122,7 +1122,7 @@ Set up external entity reference handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_external\_entity\_ref\_handler</span> (
-<span class="methodparam"><span class="type">XmlParser</span>
+<span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1147,7 +1147,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$open_entity_names`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,
@@ -1208,7 +1208,7 @@ Set up notation declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_notation\_decl\_handler</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">callable</span>
 `$handler`</span> )
 
@@ -1240,7 +1240,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept five parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$notation_name`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,
@@ -1296,7 +1296,7 @@ Use XML Parser within an object
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_object</span> ( <span
-class="methodparam"><span class="type">XmlParser</span> `$parser`</span>
+class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 , <span class="methodparam"><span class="type">object</span>
 `$object`</span> )
 
@@ -1393,7 +1393,7 @@ Set up processing instruction (PI) handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_processing\_instruction\_handler</span> (
-<span class="methodparam"><span class="type">XmlParser</span>
+<span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1429,7 +1429,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept three parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$target`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> )
@@ -1473,7 +1473,7 @@ Set up start namespace declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_start\_namespace\_decl\_handler</span> (
-<span class="methodparam"><span class="type">XmlParser</span>
+<span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1499,7 +1499,7 @@ class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> , <span
 class="methodparam"><span class="type">string</span> `$uri`</span> )
@@ -1548,7 +1548,7 @@ Set up unparsed entity declaration handler
 
 <span class="type">bool</span> <span
 class="methodname">xml\_set\_unparsed\_entity\_decl\_handler</span> (
-<span class="methodparam"><span class="type">XmlParser</span>
+<span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">callable</span> `$handler`</span> )
 
@@ -1580,7 +1580,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 The function named by `handler` must accept six parameters:
 
 <span class="methodname"><span class="replaceable">handler</span></span>
-( <span class="methodparam"><span class="type">XmlParser</span>
+( <span class="methodparam"><span class="type">XMLParser</span>
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$entity_name`</span> , <span
 class="methodparam"><span class="type">string</span> `$base`</span> ,

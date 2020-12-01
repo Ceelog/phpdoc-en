@@ -24,13 +24,6 @@ And finally two special types:
 -   <span class="simpara"> <span class="type">resource</span> </span>
 -   <span class="simpara"> <span class="type">NULL</span> </span>
 
-This manual also introduces some
-<a href="/language/pseudo-types.html" class="link">pseudo-types</a> for
-readability reasons:
-
--   <span class="simpara"> <span class="type">mixed</span> </span>
--   <span class="simpara"> <span class="type">void</span> </span>
-
 Some references to the type "double" may remain in the manual. Consider
 double the same as float; the two names exist only for historic reasons.
 

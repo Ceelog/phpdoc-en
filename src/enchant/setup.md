@@ -42,5 +42,6 @@ This extension has no configuration directives defined in `php.ini`.
 Resource Types
 --------------
 
-There are two types of resources in this extension. The first one is the
-broker (backends manager) and the second is for the dictionary.
+Prior to PHP 8.0.0, there are two types of resources in this extension.
+The first one is the broker (backends manager) and the second is for the
+dictionary.

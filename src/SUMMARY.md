@@ -82,7 +82,6 @@
     * [NULL](language/types/null.md)
     * [Callbacks / Callables](language/types/callable.md)
     * [Type declarations](language/types/declarations.md)
-    * [Pseudo-types and variables used in this documentation](language/pseudo-types.md)
     * [Type Juggling](language/types/type-juggling.md)
   * [Variables](language/variables.md)
     * [Basics](language/variables/basics.md)

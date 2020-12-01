@@ -23,8 +23,6 @@ Language Reference
     -   [NULL](/language/types/null.html)
     -   [Callbacks / Callables](/language/types/callable.html)
     -   [Type declarations](/language/types/declarations.html)
-    -   [Pseudo-types and variables used in this
-        documentation](/language/pseudo-types.html)
     -   [Type Juggling](/language/types/type-juggling.html)
 -   [Variables](/language/variables.html)
     -   [Basics](/language/variables/basics.html)
