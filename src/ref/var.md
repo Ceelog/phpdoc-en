@@ -1940,7 +1940,7 @@ $sqldata = array (serialize($session_data), $_SERVER['PHP_AUTH_USER']);
 if (!odbc_execute($stmt, $sqldata)) {
     $stmt = odbc_prepare($conn,
      "INSERT INTO sessions (id, data) VALUES(?, ?)");
-    if (!odbc_execute($stmt, $sqldata)) {
+    if (!odbc_execute($stmt, array_reverse($sqldata))) {
         /* Something went wrong.. */
     }
 }
