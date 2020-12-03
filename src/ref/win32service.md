@@ -33,7 +33,7 @@ on failure.
 
 ### Errors/Exceptions
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
@@ -1015,7 +1015,7 @@ on failure.
 
 ### Errors/Exceptions
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
@@ -1073,7 +1073,7 @@ on failure.
 
 ### Errors/Exceptions
 
-A <span class="classname">ValueError</span> is thrown if the; value of
+A <span class="classname">ValueError</span> is thrown if the value of
 `servicename` parameter is empty.
 
 A <span class="classname">Win32ServiceException</span> is thrown on
