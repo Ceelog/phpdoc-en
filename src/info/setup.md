@@ -89,8 +89,8 @@ running PHP from the
 <a href="/features/commandline.html" class="link">command line</a> the
 default setting is *0*.
 
-The maximum execution time is not affected by system calls, stream
-operations etc. Please see the <span
+On non Windows systems, the maximum execution time is not affected by
+system calls, stream operations etc. Please see the <span
 class="function">set\_time\_limit</span> function for more details.
 
 Your web server can have other timeout configurations that may also

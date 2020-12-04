@@ -189,6 +189,12 @@ array indexes are the header names and the array values are the values
 associated with those headers. If no data can be returned, <span
 class="function">exif\_read\_data</span> will return **`FALSE`**.
 
+### Errors/Exceptions
+
+Errors of level **`E_WARNING`** and/or **`E_NOTICE`** may be raised for
+unsupported tags or other potential error conditions, but the function
+still tries to read all comprehensible information.
+
 ### Changelog
 
 <table>

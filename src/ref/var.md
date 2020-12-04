@@ -2183,6 +2183,11 @@ class="type">array</span> or <span class="type">object</span>.
 In case the passed string is not unserializeable, **`FALSE`** is
 returned and **`E_NOTICE`** is issued.
 
+### Errors/Exceptions
+
+Objects may throw <span class="classname">Throwable</span>s in their
+unserialization handlers.
+
 ### Changelog
 
 | Version | Description                                                                                                                                                                                                                                                                   |

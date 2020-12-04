@@ -15,7 +15,7 @@ Changes the case of all keys in an array
 class="methodname">array\_change\_key\_case</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$case`<span
-class="initializer"> = CASE\_LOWER</span></span> \] )
+class="initializer"> = **`CASE_LOWER`**</span></span> \] )
 
 Returns an array with all keys from `array` lowercased or uppercased.
 Numbered indices are left as is.
@@ -75,20 +75,20 @@ Split an array into chunks
 <span class="type">array</span> <span
 class="methodname">array\_chunk</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> , <span
-class="methodparam"><span class="type">int</span> `$size`</span> \[,
+class="methodparam"><span class="type">int</span> `$length`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
 `$preserve_keys`<span class="initializer"> = **`FALSE`**</span></span>
 \] )
 
-Chunks an array into arrays with `size` elements. The last chunk may
-contain less than `size` elements.
+Chunks an array into arrays with `length` elements. The last chunk may
+contain less than `length` elements.
 
 ### Parameters
 
 `array`  
 The array to work on
 
-`size`  
+`length`  
 The size of each chunk
 
 `preserve_keys`  
@@ -98,11 +98,11 @@ which will reindex the chunk numerically
 ### Return Values
 
 Returns a multidimensional numerically indexed array, starting with
-zero, with each dimension containing `size` elements.
+zero, with each dimension containing `length` elements.
 
 ### Errors/Exceptions
 
-If `size` is less than 1 **`E_WARNING`** will be thrown and **`NULL`**
+If `length` is less than 1 **`E_WARNING`** will be thrown and **`NULL`**
 returned.
 
 ### Examples
@@ -173,21 +173,24 @@ Return the values from a single column in the input array
 
 <span class="type">array</span> <span
 class="methodname">array\_column</span> ( <span
-class="methodparam"><span class="type">array</span> `$input`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`$column_key`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$index_key`<span class="initializer"> =
+class="methodparam"><span class="type">array</span> `$array`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span><span
+class="type">null</span></span> `$column_key`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span><span
+class="type">null</span></span> `$index_key`<span class="initializer"> =
 **`NULL`**</span></span> \] )
 
 <span class="function">array\_column</span> returns the values from a
-single column of the `input`, identified by the `column_key`.
+single column of the `array`, identified by the `column_key`.
 Optionally, an `index_key` may be provided to index the values in the
 returned array by the values from the `index_key` column of the input
 array.
 
 ### Parameters
 
-`input`  
+`array`  
 A multi-dimensional array or an array of objects from which to pull a
 column of values from. If an array of objects is provided, then public
 properties can be directly pulled. In order for protected or private
@@ -219,7 +222,7 @@ array.
 
 | Version | Description                                                            |
 |---------|------------------------------------------------------------------------|
-| 7.0.0   | Added the ability for the `input` parameter to be an array of objects. |
+| 7.0.0   | Added the ability for the `array` parameter to be an array of objects. |
 
 ### Examples
 
@@ -1081,11 +1084,12 @@ Fill an array with values
 <span class="type">array</span> <span
 class="methodname">array\_fill</span> ( <span class="methodparam"><span
 class="type">int</span> `$start_index`</span> , <span
-class="methodparam"><span class="type">int</span> `$num`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$value`</span> )
+class="methodparam"><span class="type">int</span> `$count`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$value`</span> )
 
-Fills an array with `num` entries of the value of the `value` parameter,
-keys starting at the `start_index` parameter.
+Fills an array with `count` entries of the value of the `value`
+parameter, keys starting at the `start_index` parameter.
 
 ### Parameters
 
@@ -1096,7 +1100,7 @@ If `start_index` is negative, the first index of the returned array will
 be `start_index` and the following indices will start from zero (see
 <a href="/ref/array.html#array_fill%20example" class="link">example</a>).
 
-`num`  
+`count`  
 Number of elements to insert. Must be greater than or equal to zero.
 
 `value`  
@@ -1108,13 +1112,13 @@ Returns the filled array
 
 ### Errors/Exceptions
 
-Throws a **`E_WARNING`** if `num` is less than zero.
+Throws a **`E_WARNING`** if `count` is less than zero.
 
 ### Changelog
 
-| Version | Description                                                                    |
-|---------|--------------------------------------------------------------------------------|
-| 5.6.0   | `num` may now be zero. Previously, `num` was required to be greater than zero. |
+| Version | Description                                                                        |
+|---------|------------------------------------------------------------------------------------|
+| 5.6.0   | `count` may now be zero. Previously, `count` was required to be greater than zero. |
 
 ### Examples
 
@@ -1170,10 +1174,11 @@ Filters elements of an array using a callback function
 <span class="type">array</span> <span
 class="methodname">array\_filter</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
-<span class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flag`<span class="initializer"> =
-0</span></span> \]\] )
+<span class="methodparam"><span class="type"><span
+class="type">callable</span><span class="type">null</span></span>
+`$callback`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = 0</span></span> \]\] )
 
 Iterates over each value in the `array` passing them to the `callback`
 function. If the `callback` function returns **`TRUE`**, the current
@@ -1196,7 +1201,7 @@ If no `callback` is supplied, all empty entries of `array` will be
 removed. See <span class="function">empty</span> for how PHP defines
 empty in this case.
 
-`flag`  
+`mode`  
 Flag determining what arguments are sent to `callback`:
 
 -   <span class="simpara">**`ARRAY_FILTER_USE_KEY`** - pass key as the
@@ -1215,7 +1220,8 @@ Returns the filtered array.
 
 | Version | Description                                                                                              |
 |---------|----------------------------------------------------------------------------------------------------------|
-| 5.6.0   | Added optional `flag` parameter and constants **`ARRAY_FILTER_USE_KEY`** and **`ARRAY_FILTER_USE_BOTH`** |
+| 8.0.0   | `callback` is nullable now.                                                                              |
+| 5.6.0   | Added optional `mode` parameter and constants **`ARRAY_FILTER_USE_KEY`** and **`ARRAY_FILTER_USE_BOTH`** |
 
 ### Examples
 
@@ -1291,7 +1297,7 @@ The above example will output:
         [2] => -1
     )
 
-**Example \#3 <span class="function">array\_filter</span> with `flag`**
+**Example \#3 <span class="function">array\_filter</span> with `mode`**
 
 ``` php
 <?php
@@ -1804,9 +1810,10 @@ Checks if the given key or index exists in the array
 
 <span class="type">bool</span> <span
 class="methodname">array\_key\_exists</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$key`</span> ,
-<span class="methodparam"><span class="type">array</span>
-`$array`</span> )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$key`</span> , <span class="methodparam"><span
+class="type">array</span> `$array`</span> )
 
 <span class="function">array\_key\_exists</span> returns **`TRUE`** if
 the given `key` is set in the array. `key` can be any value possible for
@@ -1890,7 +1897,8 @@ Gets the first key of an array
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">array\_key\_first</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> )
 
@@ -1963,7 +1971,8 @@ Gets the last key of an array
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">string</span><span class="type">null</span></span> <span
 class="methodname">array\_key\_last</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> )
 
@@ -2078,7 +2087,8 @@ Applies the callback to the elements of the given arrays
 
 <span class="type">array</span> <span
 class="methodname">array\_map</span> ( <span class="methodparam"><span
-class="type">callable</span> `$callback`</span> , <span
+class="type"><span class="type">callable</span><span
+class="type">null</span></span> `$callback`</span> , <span
 class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
 `$arrays`</span> )
@@ -2851,13 +2861,14 @@ Pad array to the specified length with a value
 <span class="type">array</span> <span
 class="methodname">array\_pad</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> , <span
-class="methodparam"><span class="type">int</span> `$size`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$value`</span> )
+class="methodparam"><span class="type">int</span> `$length`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`$value`</span> )
 
 <span class="function">array\_pad</span> returns a copy of the `array`
-padded to size specified by `size` with value `value`. If `size` is
+padded to size specified by `length` with value `value`. If `length` is
 positive then the array is padded on the right, if it's negative then on
-the left. If the absolute value of `size` is less than or equal to the
+the left. If the absolute value of `length` is less than or equal to the
 length of the `array` then no padding takes place. It is possible to add
 at most 1048576 elements at a time.
 
@@ -2866,18 +2877,18 @@ at most 1048576 elements at a time.
 `array`  
 Initial array of values to pad.
 
-`size`  
+`length`  
 New size of the array.
 
 `value`  
-Value to pad if `array` is less than `size`.
+Value to pad if `array` is less than `length`.
 
 ### Return Values
 
-Returns a copy of the `array` padded to size specified by `size` with
-value `value`. If `size` is positive then the array is padded on the
+Returns a copy of the `array` padded to size specified by `length` with
+value `value`. If `length` is positive then the array is padded on the
 right, if it's negative then on the left. If the absolute value of
-`size` is less than or equal to the length of the `array` then no
+`length` is less than or equal to the length of the `array` then no
 padding takes place.
 
 ### Examples
@@ -3098,7 +3109,8 @@ Pick one or more random keys out of an array
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">string</span><span class="type">array</span></span> <span
 class="methodname">array\_rand</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$num`<span
@@ -3242,9 +3254,9 @@ Replaces elements from passed arrays into the first array recursively
 
 <span class="type">array</span> <span
 class="methodname">array\_replace\_recursive</span> ( <span
-class="methodparam"><span class="type">array</span> `$array`</span> \[,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$replacements`</span> \] )
+`$replacements`</span> )
 
 <span class="function">array\_replace\_recursive</span> replaces the
 values of `array` with the same values from all the following arrays. If
@@ -3373,9 +3385,9 @@ Replaces elements from passed arrays into the first array
 
 <span class="type">array</span> <span
 class="methodname">array\_replace</span> ( <span
-class="methodparam"><span class="type">array</span> `$array`</span> \[,
+class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">array</span>
-`$replacements`</span> \] )
+`$replacements`</span> )
 
 <span class="function">array\_replace</span> replaces the values of
 `array` with values having the same keys in each of the following
@@ -3529,7 +3541,8 @@ key if successful
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">array\_search</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$needle`</span> ,
 <span class="methodparam"><span class="type">array</span>
@@ -3670,8 +3683,9 @@ Extract a slice of the array
 class="methodname">array\_slice</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
 class="initializer"> = **`FALSE`**</span></span> \]\] )
 
@@ -3811,20 +3825,21 @@ Remove a portion of the array and replace it with something else
 
 <span class="type">array</span> <span
 class="methodname">array\_splice</span> ( <span
-class="methodparam"><span class="type">array</span> `&$input`</span> ,
+class="methodparam"><span class="type">array</span> `&$array`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$length`<span class="initializer"> = count($input)</span></span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$replacement`<span class="initializer"> = array()</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$replacement`<span
+class="initializer"> = \[\]</span></span> \]\] )
 
 Removes the elements designated by `offset` and `length` from the
-`input` array, and replaces them with the elements of the `replacement`
+`array` array, and replaces them with the elements of the `replacement`
 array, if supplied.
 
 > **Note**:
 >
-> Numerical keys in `input` are not preserved.
+> Numerical keys in `array` are not preserved.
 
 > **Note**: <span class="simpara"> If `replacement` is not an array, it
 > will be
@@ -3834,15 +3849,15 @@ array, if supplied.
 
 ### Parameters
 
-`input`  
+`array`  
 The input array.
 
 `offset`  
 If `offset` is positive then the start of the removed portion is at that
-offset from the beginning of the `input` array.
+offset from the beginning of the `array` array.
 
 If `offset` is negative then the start of the removed portion is at that
-offset from the end of the `input` array.
+offset from the end of the `array` array.
 
 `length`  
 If `length` is omitted, removes everything from `offset` to the end of
@@ -3879,6 +3894,12 @@ itself, an object or **`NULL`**.
 ### Return Values
 
 Returns an array consisting of the extracted elements.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `length` is nullable now. |
 
 ### Examples
 
@@ -4698,15 +4719,14 @@ Removes duplicate values from an array
 <span class="type">array</span> <span
 class="methodname">array\_unique</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$sort_flags`<span class="initializer"> = SORT\_STRING</span></span> \]
-)
+<span class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`SORT_STRING`**</span></span> \] )
 
 Takes an input `array` and returns a new array without duplicate values.
 
 Note that keys are preserved. If multiple elements compare equal under
-the given `sort_flags`, then the key and value of the first equal
-element will be retained.
+the given `flags`, then the key and value of the first equal element
+will be retained.
 
 > **Note**: <span class="simpara"> Two elements are considered equal if
 > and only if *(string) $elem1 === (string) $elem2* i.e. when the string
@@ -4717,9 +4737,9 @@ element will be retained.
 `array`  
 The input array.
 
-`sort_flags`  
-The optional second parameter `sort_flags` may be used to modify the
-sorting behavior using these values:
+`flags`  
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
 
 Sorting type flags:
 
@@ -4738,9 +4758,9 @@ Returns the filtered array.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                        |
-|---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | If `sort_flags` is **`SORT_STRING`**, formerly `array` has been copied and non-unique elements have been removed (without packing the array afterwards), but now a new array is built by adding the unique elements. This can result in different numeric indexes. |
+| Version | Description                                                                                                                                                                                                                                                   |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.2.0   | If `flags` is **`SORT_STRING`**, formerly `array` has been copied and non-unique elements have been removed (without packing the array afterwards), but now a new array is built by adding the unique elements. This can result in different numeric indexes. |
 
 ### Examples
 
@@ -5239,8 +5259,8 @@ Sort an array in reverse order and maintain index association
 <span class="type">bool</span> <span class="methodname">arsort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 This function sorts an array such that array indices maintain their
 correlation with the array elements they are associated with.
@@ -5258,9 +5278,9 @@ element order is significant.
 `array`  
 The input array.
 
-`sort_flags`  
+`flags`  
 You may modify the behavior of the sort using the optional parameter
-`sort_flags`, for details see <span class="function">sort</span>.
+`flags`, for details see <span class="function">sort</span>.
 
 ### Return Values
 
@@ -5306,8 +5326,8 @@ Sort an array and maintain index association
 <span class="type">bool</span> <span class="methodname">asort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 This function sorts an array such that array indices maintain their
 correlation with the array elements they are associated with. This is
@@ -5324,9 +5344,9 @@ order is significant.
 `array`  
 The input array.
 
-`sort_flags`  
+`flags`  
 You may modify the behavior of the sort using the optional parameter
-`sort_flags`, for details see <span class="function">sort</span>.
+`flags`, for details see <span class="function">sort</span>.
 
 ### Return Values
 
@@ -5370,9 +5390,11 @@ Create array containing variables and their values
 ### Description
 
 <span class="type">array</span> <span class="methodname">compact</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$var_name`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$var_names`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$var_name`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$var_names`</span> )
 
 Creates an array containing variables and their values.
 
@@ -5460,10 +5482,11 @@ Count all elements in an array, or something in an object
 ### Description
 
 <span class="type">int</span> <span class="methodname">count</span> (
-<span class="methodparam"><span class="type">mixed</span>
-`$array_or_countable`</span> \[, <span class="methodparam"><span
+<span class="methodparam"><span class="type"><span
+class="type">Countable</span><span class="type">array</span></span>
+`$value`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$mode`<span class="initializer"> =
-COUNT\_NORMAL</span></span> \] )
+**`COUNT_NORMAL`**</span></span> \] )
 
 Counts all elements in an array, or something in an object.
 
@@ -5481,7 +5504,7 @@ used in PHP.
 
 ### Parameters
 
-`array_or_countable`  
+`value`  
 An array or <span class="classname">Countable</span> object.
 
 `mode`  
@@ -5498,11 +5521,10 @@ than may be expected.
 
 ### Return Values
 
-Returns the number of elements in `array_or_countable`. When the
-parameter is neither an array nor an object with implemented <span
+Returns the number of elements in `value`. When the parameter is neither
+an array nor an object with implemented <span
 class="classname">Countable</span> interface, *1* will be returned.
-There is one exception, if `array_or_countable` is **`NULL`**, *0* will
-be returned.
+There is one exception, if `value` is **`NULL`**, *0* will be returned.
 
 ### Examples
 
@@ -5555,9 +5577,9 @@ echo count($food); // output 2
 
 ### Changelog
 
-| Version | Description                                                                                                                           |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | <span class="function">count</span> will now yield a warning on invalid countable types passed to the `array_or_countable` parameter. |
+| Version | Description                                                                                                              |
+|---------|--------------------------------------------------------------------------------------------------------------------------|
+| 7.2.0   | <span class="function">count</span> will now yield a warning on invalid countable types passed to the `value` parameter. |
 
 ### See Also
 
@@ -5575,7 +5597,8 @@ Return the current element in an array
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">current</span>
-( <span class="methodparam"><span class="type">array</span>
+( <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `$array`</span> )
 
 Every array has an internal pointer to its "current" element, which is
@@ -5792,7 +5815,8 @@ Set the internal pointer of an array to its last element
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">end</span> (
-<span class="methodparam"><span class="type">array</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `&$array`</span> )
 
 <span class="function">end</span> advances `array`'s internal pointer to
@@ -5843,9 +5867,9 @@ Import variables into the current symbol table from an array
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
-EXTR\_OVERWRITE</span></span> \[, <span class="methodparam"><span
+**`EXTR_OVERWRITE`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$prefix`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+""</span></span> \]\] )
 
 Import variables from an array into the current symbol table.
 
@@ -6180,9 +6204,11 @@ Fetch a key from an array
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">key</span> (
-<span class="methodparam"><span class="type">array</span>
-`$array`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">string</span><span class="type">null</span></span> <span
+class="methodname">key</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `$array`</span> )
 
 <span class="function">key</span> returns the index element of the
 current array position.
@@ -6252,8 +6278,8 @@ Sort an array by key in reverse order
 <span class="type">bool</span> <span class="methodname">krsort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 Sorts an array by key in reverse order, maintaining key to data
 correlations. This is useful mainly for associative arrays.
@@ -6263,9 +6289,9 @@ correlations. This is useful mainly for associative arrays.
 `array`  
 The input array.
 
-`sort_flags`  
+`flags`  
 You may modify the behavior of the sort using the optional parameter
-`sort_flags`, for details see <span class="function">sort</span>.
+`flags`, for details see <span class="function">sort</span>.
 
 ### Return Values
 
@@ -6309,8 +6335,8 @@ Sort an array by key
 <span class="type">bool</span> <span class="methodname">ksort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 Sorts an array by key, maintaining key to data correlations. This is
 useful mainly for associative arrays.
@@ -6320,9 +6346,9 @@ useful mainly for associative arrays.
 `array`  
 The input array.
 
-`sort_flags`  
+`flags`  
 You may modify the behavior of the sort using the optional parameter
-`sort_flags`, for details see <span class="function">sort</span>.
+`flags`, for details see <span class="function">sort</span>.
 
 ### Return Values
 
@@ -6828,7 +6854,8 @@ Advance the internal pointer of an array
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">next</span> (
-<span class="methodparam"><span class="type">array</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `&$array`</span> )
 
 <span class="function">next</span> behaves like <span
@@ -6909,7 +6936,8 @@ Rewind the internal array pointer
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">prev</span> (
-<span class="methodparam"><span class="type">array</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `&$array`</span> )
 
 Rewind the internal array pointer.
@@ -6978,9 +7006,12 @@ Create an array containing a range of elements
 ### Description
 
 <span class="type">array</span> <span class="methodname">range</span> (
-<span class="methodparam"><span class="type">mixed</span>
-`$start`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$end`</span> \[, <span
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">float</span></span> `$start`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">float</span></span> `$end`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">float</span></span>
 `$step`<span class="initializer"> = 1</span></span> \] )
@@ -7054,7 +7085,8 @@ Set the internal pointer of an array to its first element
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">reset</span> (
-<span class="methodparam"><span class="type">array</span>
+<span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
 `&$array`</span> )
 
 <span class="function">reset</span> rewinds `array`'s internal pointer
@@ -7134,8 +7166,8 @@ Sort an array in reverse order
 <span class="type">bool</span> <span class="methodname">rsort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 This function sorts an array in reverse order (highest to lowest).
 
@@ -7149,9 +7181,9 @@ This function sorts an array in reverse order (highest to lowest).
 `array`  
 The input array.
 
-`sort_flags`  
+`flags`  
 You may modify the behavior of the sort using the optional parameter
-`sort_flags`, for details see <span class="function">sort</span>.
+`flags`, for details see <span class="function">sort</span>.
 
 ### Return Values
 
@@ -7268,8 +7300,8 @@ Sort an array
 <span class="type">bool</span> <span class="methodname">sort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$sort_flags`<span class="initializer"> =
-SORT\_REGULAR</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`SORT_REGULAR`**</span></span> \] )
 
 This function sorts an array. Elements will be arranged from lowest to
 highest when this function has completed.
@@ -7284,9 +7316,9 @@ highest when this function has completed.
 `array`  
 The input array.
 
-`sort_flags`  
-The optional second parameter `sort_flags` may be used to modify the
-sorting behavior using these values:
+`flags`  
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
 
 Sorting type flags:
 
@@ -7380,8 +7412,8 @@ class="function">natcasesort</span>.
 **Warning**
 
 Be careful when sorting arrays with mixed types values because <span
-class="function">sort</span> can produce unexpected results, if
-`sort_flags` is **`SORT_REGULAR`**,
+class="function">sort</span> can produce unexpected results, if `flags`
+is **`SORT_REGULAR`**,
 
 ### See Also
 
@@ -7401,7 +7433,7 @@ association
 <span class="type">bool</span> <span class="methodname">uasort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> , <span class="methodparam"><span
-class="type">callable</span> `$value_compare_func`</span> )
+class="type">callable</span> `$callback`</span> )
 
 This function sorts an array such that array indices maintain their
 correlation with the array elements they are associated with, using a
@@ -7420,7 +7452,7 @@ element order is significant.
 `array`  
 The input array.
 
-`value_compare_func`  
+`callback`  
 See <span class="function">usort</span> and <span
 class="function">uksort</span> for examples of user-defined comparison
 functions.
@@ -7494,7 +7526,7 @@ Sort an array by keys using a user-defined comparison function
 <span class="type">bool</span> <span class="methodname">uksort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> , <span class="methodparam"><span
-class="type">callable</span> `$key_compare_func`</span> )
+class="type">callable</span> `$callback`</span> )
 
 <span class="function">uksort</span> will sort the keys of an array
 using a user-supplied comparison function. If the array you wish to sort
@@ -7511,7 +7543,7 @@ function.
 `array`  
 The input array.
 
-`key_compare_func`  
+`callback`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
 less than, equal to, or greater than the second.
@@ -7571,7 +7603,7 @@ Sort an array by values using a user-defined comparison function
 <span class="type">bool</span> <span class="methodname">usort</span> (
 <span class="methodparam"><span class="type">array</span>
 `&$array`</span> , <span class="methodparam"><span
-class="type">callable</span> `$value_compare_func`</span> )
+class="type">callable</span> `$callback`</span> )
 
 This function will sort an array by its values using a user-supplied
 comparison function. If the array you wish to sort needs to be sorted by
@@ -7591,7 +7623,7 @@ some non-trivial criteria, you should use this function.
 `array`  
 The input array.
 
-`value_compare_func`  
+`callback`  
 The comparison function must return an integer less than, equal to, or
 greater than zero if the first argument is considered to be respectively
 less than, equal to, or greater than the second.
