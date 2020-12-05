@@ -4931,11 +4931,12 @@ Apply a user function recursively to every member of an array
 
 <span class="type">bool</span> <span
 class="methodname">array\_walk\_recursive</span> ( <span
-class="methodparam"><span class="type">array</span> `&$array`</span> ,
-<span class="methodparam"><span class="type">callable</span>
-`$callback`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$userdata`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">object</span></span>
+`&$array`</span> , <span class="methodparam"><span
+class="type">callable</span> `$callback`</span> \[, <span
+class="methodparam"><span class="type">mixed</span> `$userdata`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 Applies the user-defined `callback` function to each element of the
 `array`. This function will recurse into deeper arrays.
@@ -5007,7 +5008,8 @@ Apply a user supplied function to every member of an array
 
 <span class="type">bool</span> <span
 class="methodname">array\_walk</span> ( <span class="methodparam"><span
-class="type">array</span> `&$array`</span> , <span
+class="type"><span class="type">array</span><span
+class="type">object</span></span> `&$array`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$userdata`<span class="initializer"> =

@@ -33,6 +33,7 @@ PHP Manual
     -   [Errors](/language/errors.html)
     -   [Exceptions](/language/exceptions.html)
     -   [Generators](/language/generators.html)
+    -   [Attributes](/language/attributes.html)
     -   [References Explained](/language/references.html)
     -   [Predefined Variables](/reserved/variables.html)
     -   [Predefined Exceptions](/reserved/exceptions.html)
@@ -195,7 +196,7 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">And several others</a>
 </span> </span>
 
-2020-12-05
+2020-12-06
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span

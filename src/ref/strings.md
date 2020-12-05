@@ -13,20 +13,20 @@ Quote string with slashes in a C style
 
 <span class="type">string</span> <span
 class="methodname">addcslashes</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> , <span
-class="methodparam"><span class="type">string</span> `$charlist`</span>
-)
+class="type">string</span> `$string`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$characters`</span> )
 
 Returns a string with backslashes before characters that are listed in
-`charlist` parameter.
+`characters` parameter.
 
 ### Parameters
 
-`str`  
+`string`  
 The string to be escaped.
 
-`charlist`  
-A list of characters to be escaped. If `charlist` contains characters
+`characters`  
+A list of characters to be escaped. If `characters` contains characters
 *\\n*, *\\r* etc., they are converted in C-like style, while other
 non-alphanumeric characters with ASCII codes lower than 32 and higher
 than 126 converted to octal representation.
@@ -63,7 +63,7 @@ of which are predefined escape sequences in C. Many of these sequences
 are also defined in other C-derived languages, including PHP, meaning
 that you may not get the desired result if you use the output of <span
 class="function">addcslashes</span> to generate code in those languages
-with these characters defined in `charlist`.
+with these characters defined in `characters`.
 
 ### Return Values
 
@@ -71,7 +71,7 @@ Returns the escaped string.
 
 ### Examples
 
-`charlist` like "\\0..\\37", which would escape all characters with
+`characters` like "\\0..\\37", which would escape all characters with
 ASCII code between 0 and 31.
 
 **Example \#1 <span class="function">addcslashes</span> example**
@@ -99,7 +99,7 @@ Quote string with slashes
 
 <span class="type">string</span> <span
 class="methodname">addslashes</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Returns a string with backslashes added before characters that need to
 be escaped. These characters are:
@@ -138,7 +138,7 @@ should be used.
 
 ### Parameters
 
-`str`  
+`string`  
 The string to be escaped.
 
 ### Return Values
@@ -176,14 +176,14 @@ Convert binary data into hexadecimal representation
 
 <span class="type">string</span> <span class="methodname">bin2hex</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> )
+`$string`</span> )
 
 Returns an ASCII string containing the hexadecimal representation of
-`str`. The conversion is done byte-wise with the high-nibble first.
+`string`. The conversion is done byte-wise with the high-nibble first.
 
 ### Parameters
 
-`str`  
+`string`  
 A string.
 
 ### Return Values
@@ -220,10 +220,10 @@ Generate a single-byte string from a number
 
 <span class="type">string</span> <span class="methodname">chr</span> (
 <span class="methodparam"><span class="type">int</span>
-`$bytevalue`</span> )
+`$codepoint`</span> )
 
 Returns a one-character string containing the character specified by
-interpreting `bytevalue` as an unsigned integer.
+interpreting `codepoint` as an unsigned integer.
 
 This can be used to create a one-character string in a single-byte
 encoding such as ASCII, ISO-8859, or Windows 1252, by passing the
@@ -236,7 +236,7 @@ This function complements <span class="function">ord</span>.
 
 ### Parameters
 
-`bytevalue`  
+`codepoint`  
 An integer between 0 and 255.
 
 Values outside the valid range (0..255) will be bitwise and'ed with 255,
@@ -257,7 +257,7 @@ A single-character string containing the specified byte.
 
 | Version | Description                                                                               |
 |---------|-------------------------------------------------------------------------------------------|
-| 7.4.0   | The function no longer silently accepts unsupported `bytevalue`s, and casts these to *0*. |
+| 7.4.0   | The function no longer silently accepts unsupported `codepoint`s, and casts these to *0*. |
 
 ### Examples
 
@@ -319,25 +319,26 @@ Split a string into smaller chunks
 
 <span class="type">string</span> <span
 class="methodname">chunk\_split</span> ( <span class="methodparam"><span
-class="type">string</span> `$body`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$chunklen`<span
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 76</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$end`<span
+class="methodparam"><span class="type">string</span> `$separator`<span
 class="initializer"> = "\\r\\n"</span></span> \]\] )
 
 Can be used to split a string into smaller chunks which is useful for
 e.g. converting <span class="function">base64\_encode</span> output to
-match RFC 2045 semantics. It inserts `end` every `chunklen` characters.
+match RFC 2045 semantics. It inserts `separator` every `length`
+characters.
 
 ### Parameters
 
-`body`  
+`string`  
 The string to be chunked.
 
-`chunklen`  
+`length`  
 The chunk length.
 
-`end`  
+`separator`  
 The line ending sequence.
 
 ### Return Values
@@ -427,7 +428,7 @@ Decode a uuencoded string
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">convert\_uudecode</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 <span class="function">convert\_uudecode</span> decodes a uuencoded
 string.
@@ -438,7 +439,7 @@ string.
 
 ### Parameters
 
-`data`  
+`string`  
 The uuencoded data.
 
 ### Return Values
@@ -470,10 +471,9 @@ Uuencode a string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">convert\_uuencode</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 <span class="function">convert\_uuencode</span> encodes a string using
 the uuencode algorithm.
@@ -488,12 +488,18 @@ is about 35% larger than the original.
 
 ### Parameters
 
-`data`  
+`string`  
 The data to be encoded.
 
 ### Return Values
 
-Returns the uuencoded data or **`FALSE`** on failure.
+Returns the uuencoded data.
+
+### Changelog
+
+| Version | Description                                                                                             |
+|---------|---------------------------------------------------------------------------------------------------------|
+| 8.0.0   | Prior to this version, trying to convert an empty string returned **`FALSE`** for no particular reason. |
 
 ### Examples
 
@@ -524,7 +530,8 @@ Return information about characters used in a string
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">string</span></span> <span
 class="methodname">count\_chars</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$mode`<span
@@ -556,6 +563,12 @@ one of the following:
     is returned. </span>
 -   <span class="simpara"> 4 - a string containing all not used
     characters is returned. </span>
+
+### Changelog
+
+| Version | Description                                                          |
+|---------|----------------------------------------------------------------------|
+| 8.0.0   | Prior to this version, the function returned **`FALSE`** on failure. |
 
 ### Examples
 
@@ -598,12 +611,12 @@ Calculates the crc32 polynomial of a string
 ### Description
 
 <span class="type">int</span> <span class="methodname">crc32</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-)
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> )
 
 Generates the cyclic redundancy checksum polynomial of 32-bit lengths of
-the `str`. This is usually used to validate the integrity of data being
-transmitted.
+the `string`. This is usually used to validate the integrity of data
+being transmitted.
 
 **Warning**
 
@@ -641,12 +654,12 @@ same string as `str_pad(dechex(crc32($str)), 8, '0', STR_PAD_LEFT)`.
 
 ### Parameters
 
-`str`  
+`string`  
 The data.
 
 ### Return Values
 
-Returns the crc32 checksum of `str` as an integer.
+Returns the crc32 checksum of `string` as an integer.
 
 ### Examples
 
@@ -995,17 +1008,17 @@ Split a string by a string
 
 <span class="type">array</span> <span class="methodname">explode</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$delimiter`</span> , <span class="methodparam"><span
+`$separator`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
-class="initializer"> = PHP\_INT\_MAX</span></span> \] )
+class="initializer"> = **`PHP_INT_MAX`**</span></span> \] )
 
 Returns an array of strings, each of which is a substring of `string`
-formed by splitting it on boundaries formed by the string `delimiter`.
+formed by splitting it on boundaries formed by the string `separator`.
 
 ### Parameters
 
-`delimiter`  
+`separator`  
 The boundary string.
 
 `string`  
@@ -1026,16 +1039,16 @@ If the `limit` parameter is zero, then this is treated as 1.
 > Although <span class="function">implode</span> can, for historical
 > reasons, accept its parameters in either order, <span
 > class="function">explode</span> cannot. You must ensure that the
-> `delimiter` argument comes before the `string` argument.
+> `separator` argument comes before the `string` argument.
 
 ### Return Values
 
 Returns an <span class="type">array</span> of <span
 class="type">string</span>s created by splitting the `string` parameter
-on boundaries formed by the `delimiter`.
+on boundaries formed by the `separator`.
 
-If `delimiter` is an empty <span class="type">string</span> (""), <span
-class="function">explode</span> will return **`FALSE`**. If `delimiter`
+If `separator` is an empty <span class="type">string</span> (""), <span
+class="function">explode</span> will return **`FALSE`**. If `separator`
 contains a value that is not contained in `string` and a negative
 `limit` is used, then an empty <span class="type">array</span> will be
 returned, otherwise an <span class="type">array</span> containing
@@ -1147,16 +1160,16 @@ Write a formatted string to a stream
 
 <span class="type">int</span> <span class="methodname">fprintf</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$format`</span> , <span
 class="methodparam"><span class="type">mixed</span> `$values`</span> )
 
 Write a string produced according to `format` to the stream resource
-specified by `handle`.
+specified by `stream`.
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -1368,11 +1381,11 @@ class="function">htmlentities</span>
 <span class="type">array</span> <span
 class="methodname">get\_html\_translation\_table</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$table`<span
-class="initializer"> = HTML\_SPECIALCHARS</span></span> \[, <span
+class="initializer"> = **`HTML_SPECIALCHARS`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = ENT\_COMPAT \| ENT\_HTML401</span></span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> = "UTF-8"</span></span> \]\]\] )
+class="initializer"> = **`ENT_COMPAT`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$encoding`<span
+class="initializer"> = "UTF-8"</span></span> \]\]\] )
 
 <span class="function">get\_html\_translation\_table</span> will return
 the translation table that is used internally for <span
@@ -1490,7 +1503,7 @@ Convert logical Hebrew text to visual text
 
 <span class="type">string</span> <span class="methodname">hebrev</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$hebrew_text`</span> \[, <span class="methodparam"><span
+`$string`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$max_chars_per_line`<span class="initializer">
 = 0</span></span> \] )
 
@@ -1500,7 +1513,7 @@ The function tries to avoid breaking words.
 
 ### Parameters
 
-`hebrew_text`  
+`string`  
 A Hebrew input string.
 
 `max_chars_per_line`  
@@ -1565,7 +1578,7 @@ Decodes a hexadecimally encoded binary string
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span class="methodname">hex2bin</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$data`</span> )
+`$string`</span> )
 
 Decodes a hexadecimally encoded binary string.
 
@@ -1577,7 +1590,7 @@ class="function">base\_convert</span> function.
 
 ### Parameters
 
-`data`  
+`string`  
 Hexadecimal representation of data.
 
 ### Return Values
@@ -1621,10 +1634,10 @@ Convert HTML entities to their corresponding characters
 class="methodname">html\_entity\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = ENT\_COMPAT \|
-ENT\_HTML401</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-ini\_get("default\_charset")</span></span> \]\] )
+`$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 <span class="function">html\_entity\_decode</span> is the opposite of
 <span class="function">htmlentities</span> in that it converts HTML
@@ -1702,6 +1715,12 @@ The following character sets are supported:
 
 Returns the decoded string.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### Examples
 
 **Example \#1 Decoding HTML entities**
@@ -1748,12 +1767,13 @@ Convert all applicable characters to HTML entities
 class="methodname">htmlentities</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = ENT\_COMPAT \| ENT\_HTML401</span></span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-ini\_get("default\_charset")</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$double_encode`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`ENT_COMPAT`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">bool</span>
+`$double_encode`<span class="initializer"> = **`TRUE`**</span></span>
+\]\]\] )
 
 This function is identical to <span
 class="function">htmlspecialchars</span> in all ways, except with <span
@@ -1838,6 +1858,12 @@ If the input `string` contains an invalid code unit sequence within the
 given `encoding` an empty string will be returned, unless either the
 **`ENT_IGNORE`** or **`ENT_SUBSTITUTE`** flags are set.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### Examples
 
 **Example \#1 A <span class="function">htmlentities</span> example**
@@ -1887,8 +1913,7 @@ Convert special HTML entities back to characters
 class="methodname">htmlspecialchars\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = ENT\_COMPAT \|
-ENT\_HTML401</span></span> \] )
+`$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \] )
 
 This function is the opposite of <span
 class="function">htmlspecialchars</span>. It converts special HTML
@@ -1960,12 +1985,13 @@ Convert special characters to HTML entities
 class="methodname">htmlspecialchars</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = ENT\_COMPAT \|
-ENT\_HTML401</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-ini\_get("default\_charset")</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$double_encode`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+`$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+<span class="methodparam"><span class="type">bool</span>
+`$double_encode`<span class="initializer"> = **`TRUE`**</span></span>
+\]\]\] )
 
 Certain characters have special significance in HTML, and should be
 represented by HTML entities if they are to preserve their meanings.
@@ -2213,9 +2239,9 @@ Make a string's first character lowercase
 
 <span class="type">string</span> <span class="methodname">lcfirst</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> )
+`$string`</span> )
 
-Returns a string with the first character of `str` lowercased if that
+Returns a string with the first character of `string` lowercased if that
 character is alphabetic.
 
 Note that 'alphabetic' is determined by the current locale. For
@@ -2224,7 +2250,7 @@ not be converted.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -2563,26 +2589,27 @@ Strip whitespace (or other characters) from the beginning of a string
 ### Description
 
 <span class="type">string</span> <span class="methodname">ltrim</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$character_mask`</span> \] )
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$characters`<span class="initializer"> = "
+\\n\\r\\t\\v\\0"</span></span> \] )
 
 Strip whitespace (or other characters) from the beginning of a string.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`character_mask`  
+`characters`  
 You can also specify the characters you want to strip, by means of the
-`character_mask` parameter. Simply list all characters that you want to
-be stripped. With *..* you can specify a range of characters.
+`characters` parameter. Simply list all characters that you want to be
+stripped. With *..* you can specify a range of characters.
 
 ### Return Values
 
 This function returns a string with whitespace stripped from the
-beginning of `str`. Without the second parameter, <span
+beginning of `string`. Without the second parameter, <span
 class="function">ltrim</span> will strip these characters:
 
 -   <span class="simpara"> " " (ASCII *32* (*0x20*)), an ordinary space.
@@ -2594,8 +2621,8 @@ class="function">ltrim</span> will strip these characters:
     return. </span>
 -   <span class="simpara"> "\\0" (ASCII *0* (*0x00*)), the *NUL*-byte.
     </span>
--   <span class="simpara"> "\\x0B" (ASCII *11* (*0x0B*)), a vertical
-    tab. </span>
+-   <span class="simpara"> "\\v" (ASCII *11* (*0x0B*)), a vertical tab.
+    </span>
 
 ### Examples
 
@@ -2654,10 +2681,11 @@ Calculates the md5 hash of a given file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">md5\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$raw_output`<span
+class="methodparam"><span class="type">bool</span> `$binary`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 Calculates the MD5 hash of the file specified by the `filename`
@@ -2670,7 +2698,7 @@ and returns that hash. The hash is a 32-character hexadecimal number.
 `filename`  
 The filename
 
-`raw_output`  
+`binary`  
 When **`TRUE`**, returns the digest in raw binary format with a length
 of 16.
 
@@ -2711,22 +2739,23 @@ for details and best practices.
 ### Description
 
 <span class="type">string</span> <span class="methodname">md5</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$binary`<span class="initializer"> =
+**`FALSE`**</span></span> \] )
 
-Calculates the MD5 hash of `str` using the
+Calculates the MD5 hash of `string` using the
 <a href="http://www.faqs.org/rfcs/rfc1321" class="link external">» RSA Data Security, Inc. MD5 Message-Digest Algorithm</a>,
 and returns that hash.
 
 ### Parameters
 
-`str`  
+`string`  
 The string.
 
-`raw_output`  
-If the optional `raw_output` is set to **`TRUE`**, then the md5 digest
-is instead returned in raw binary format with a length of 16.
+`binary`  
+If the optional `binary` is set to **`TRUE`**, then the md5 digest is
+instead returned in raw binary format with a length of 16.
 
 ### Return Values
 
@@ -2763,14 +2792,13 @@ Calculate the metaphone key of a string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">metaphone</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$phonemes`<span
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$max_phonemes`<span
 class="initializer"> = 0</span></span> \] )
 
-Calculates the metaphone key of `str`.
+Calculates the metaphone key of `string`.
 
 Similar to <span class="function">soundex</span> metaphone creates the
 same key for similar sounding words. It's more accurate than <span
@@ -2783,18 +2811,25 @@ Binstock & Rex, Addison Wesley, 1995\].
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`phonemes`  
-This parameter restricts the returned metaphone key to `phonemes`
+`max_phonemes`  
+This parameter restricts the returned metaphone key to `max_phonemes`
 *characters* in length. However, the resulting phonemes are always
 transcribed completely, so the resulting string length may be slightly
-longer than `phonemes`. The default value of *0* means no restriction.
+longer than `max_phonemes`. The default value of *0* means no
+restriction.
 
 ### Return Values
 
-Returns the metaphone key as a string, or **`FALSE`** on failure.
+Returns the metaphone key as a string.
+
+### Changelog
+
+| Version | Description                                   |
+|---------|-----------------------------------------------|
+| 8.0.0   | The function returned **`FALSE`** on failure. |
 
 ### Examples
 
@@ -2812,7 +2847,7 @@ The above example will output:
     string(7) "PRKRMNK"
     string(6) "PRKRMR"
 
-**Example \#2 Using the `phonemes` parameter**
+**Example \#2 Using the `max_phonemes` parameter**
 
 ``` php
 <?php
@@ -2826,7 +2861,7 @@ The above example will output:
     string(5) "PRKRM"
     string(5) "PRKRM"
 
-**Example \#3 Using the `phonemes` parameter**
+**Example \#3 Using the `max_phonemes` parameter**
 
 In this example, <span class="function">metaphone</span> is advised to
 produce a string of five characters, but that would require to split the
@@ -3058,7 +3093,8 @@ Query language and locale information
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">nl\_langinfo</span> ( <span class="methodparam"><span
 class="type">int</span> `$item`</span> )
 
@@ -3104,7 +3140,7 @@ Inserts HTML line breaks before all newlines in a string
 <span class="type">string</span> <span class="methodname">nl2br</span> (
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$is_xhtml`<span class="initializer"> =
+class="type">bool</span> `$use_xhtml`<span class="initializer"> =
 **`TRUE`**</span></span> \] )
 
 Returns `string` with `<br />` or `<br>` inserted before all newlines
@@ -3115,7 +3151,7 @@ Returns `string` with `<br />` or `<br>` inserted before all newlines
 `string`  
 The input string.
 
-`is_xhtml`  
+`use_xhtml`  
 Whether to use XHTML compatible line breaks or not.
 
 ### Return Values
@@ -3137,7 +3173,7 @@ The above example will output:
     foo isn't<br />
      bar
 
-**Example \#2 Generating valid HTML markup using the `is_xhtml`
+**Example \#2 Generating valid HTML markup using the `use_xhtml`
 parameter**
 
 ``` php
@@ -3281,10 +3317,10 @@ Convert the first byte of a string to a value between 0 and 255
 
 <span class="type">int</span> <span class="methodname">ord</span> (
 <span class="methodparam"><span class="type">string</span>
-`$string`</span> )
+`$character`</span> )
 
-Interprets the binary value of the first byte of `string` as an unsigned
-integer between 0 and 255.
+Interprets the binary value of the first byte of `character` as an
+unsigned integer between 0 and 255.
 
 If the string is in a single-byte encoding, such as ASCII, ISO-8859, or
 Windows 1252, this is equivalent to returning the position of a
@@ -3297,7 +3333,7 @@ This function complements <span class="function">chr</span>.
 
 ### Parameters
 
-`string`  
+`character`  
 A character.
 
 ### Return Values
@@ -3354,17 +3390,16 @@ Parses the string into variables
 
 <span class="type">void</span> <span
 class="methodname">parse\_str</span> ( <span class="methodparam"><span
-class="type">string</span> `$encoded_string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$result`</span> \]
-)
+class="type">string</span> `$string`</span> , <span
+class="methodparam"><span class="type">array</span> `&$result`</span> )
 
-Parses `encoded_string` as if it were the query string passed via a URL
-and sets variables in the current scope (or in the array if `result` is
+Parses `string` as if it were the query string passed via a URL and sets
+variables in the current scope (or in the array if `result` is
 provided).
 
 ### Parameters
 
-`encoded_string`  
+`string`  
 The input string.
 
 `result`  
@@ -3391,6 +3426,7 @@ No value is returned.
 
 | Version | Description                                                                                                          |
 |---------|----------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `result` is no longer optional.                                                                                      |
 | 7.2.0   | Usage of <span class="function">parse\_str</span> without a second parameter now emits an **`E_DEPRECATED`** notice. |
 
 ### Examples
@@ -3801,7 +3837,7 @@ Convert a quoted-printable string to an 8 bit string
 
 <span class="type">string</span> <span
 class="methodname">quoted\_printable\_decode</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 This function returns an 8-bit binary string corresponding to the
 decoded quoted printable string (according to
@@ -3816,7 +3852,7 @@ except this one does not require the IMAP module to work.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -3836,7 +3872,7 @@ Convert a 8 bit string to a quoted-printable string
 
 <span class="type">string</span> <span
 class="methodname">quoted\_printable\_encode</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 Returns a quoted printable string created according to
 <a href="http://www.faqs.org/rfcs/rfc2045" class="link external">» RFC2045</a>,
@@ -3847,7 +3883,7 @@ except this one does not require the IMAP module to work.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -3868,7 +3904,7 @@ Quote meta characters
 
 <span class="type">string</span> <span
 class="methodname">quotemeta</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Returns a version of str with a backslash character (*\\*) before every
 character that is among these:
@@ -3877,13 +3913,13 @@ character that is among these:
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
 
 Returns the string with meta characters quoted, or **`FALSE`** if an
-empty string is given as `str`.
+empty string is given as `string`.
 
 ### Notes
 
@@ -3909,12 +3945,13 @@ Strip whitespace (or other characters) from the end of a string
 ### Description
 
 <span class="type">string</span> <span class="methodname">rtrim</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$character_mask`</span> \] )
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$characters`<span class="initializer"> = "
+\\n\\r\\t\\v\\0"</span></span> \] )
 
 This function returns a string with whitespace (or other characters)
-stripped from the end of `str`.
+stripped from the end of `string`.
 
 Without the second parameter, <span class="function">rtrim</span> will
 strip these characters:
@@ -3928,18 +3965,18 @@ strip these characters:
     return. </span>
 -   <span class="simpara"> "\\0" (ASCII *0* (*0x00*)), the *NULL*-byte.
     </span>
--   <span class="simpara"> "\\x0B" (ASCII *11* (*0x0B*)), a vertical
-    tab. </span>
+-   <span class="simpara"> "\\v" (ASCII *11* (*0x0B*)), a vertical tab.
+    </span>
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`character_mask`  
+`characters`  
 You can also specify the characters you want to strip, by means of the
-`character_mask` parameter. Simply list all characters that you want to
-be stripped. With *..* you can specify a range of characters.
+`characters` parameter. Simply list all characters that you want to be
+stripped. With *..* you can specify a range of characters.
 
 ### Return Values
 
@@ -4140,10 +4177,11 @@ Calculate the sha1 hash of a file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">sha1\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$raw_output`<span
+class="methodparam"><span class="type">bool</span> `$binary`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
 Calculates the sha1 hash of the file specified by `filename` using the
@@ -4155,7 +4193,7 @@ and returns that hash. The hash is a 40-character hexadecimal number.
 `filename`  
 The filename of the file to hash.
 
-`raw_output`  
+`binary`  
 When **`TRUE`**, returns the digest in raw binary format with a length
 of 20.
 
@@ -4202,22 +4240,23 @@ for details and best practices.
 ### Description
 
 <span class="type">string</span> <span class="methodname">sha1</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$raw_output`<span class="initializer"> = **`FALSE`**</span></span> \] )
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$binary`<span class="initializer"> =
+**`FALSE`**</span></span> \] )
 
-Calculates the sha1 hash of `str` using the
+Calculates the sha1 hash of `string` using the
 <a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» US Secure Hash Algorithm 1</a>.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`raw_output`  
-If the optional `raw_output` is set to **`TRUE`**, then the sha1 digest
-is instead returned in raw binary format with a length of 20, otherwise
-the returned value is a 40-character hexadecimal number.
+`binary`  
+If the optional `binary` is set to **`TRUE`**, then the sha1 digest is
+instead returned in raw binary format with a length of 20, otherwise the
+returned value is a 40-character hexadecimal number.
 
 ### Return Values
 
@@ -4255,10 +4294,11 @@ Calculate the similarity between two strings
 
 <span class="type">int</span> <span
 class="methodname">similar\_text</span> ( <span
-class="methodparam"><span class="type">string</span> `$first`</span> ,
+class="methodparam"><span class="type">string</span> `$string1`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$second`</span> \[, <span class="methodparam"><span
-class="type">float</span> `&$percent`</span> \] )
+`$string2`</span> \[, <span class="methodparam"><span
+class="type">float</span> `&$percent`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 This calculates the similarity between two strings as described in
 Programming Classics: Implementing the World's Best Algorithms by Oliver
@@ -4269,15 +4309,15 @@ algorithm is O(N\*\*3) where N is the length of the longest string.
 
 ### Parameters
 
-`first`  
+`string1`  
 The first string.
 
-`second`  
+`string2`  
 The second string.
 
 > **Note**:
 >
-> Swapping the `first` and `second` may yield a different result; see
+> Swapping the `string1` and `string2` may yield a different result; see
 > the example below.
 
 `percent`  
@@ -4301,8 +4341,8 @@ added.
 **Example \#1 <span class="function">similar\_text</span> argument
 swapping example**
 
-This example shows that swapping the `first` and `second` argument may
-yield different results.
+This example shows that swapping the `string1` and `string2` argument
+may yield different results.
 
 ``` php
 <?php
@@ -4329,12 +4369,11 @@ Calculate the soundex key of a string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">soundex</span>
+<span class="type">string</span> <span class="methodname">soundex</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> )
+`$string`</span> )
 
-Calculates the soundex key of `str`.
+Calculates the soundex key of `string`.
 
 Soundex keys have the property that words pronounced similarly produce
 the same soundex key, and can thus be used to simplify searches in
@@ -4348,13 +4387,18 @@ Addison-Wesley (1973), pp. 391-392.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
 
-Returns the soundex key as a <span class="type">string</span>, or
-**`FALSE`** on failure.
+Returns the soundex key as a <span class="type">string</span>.
+
+### Changelog
+
+| Version | Description                                                                                                     |
+|---------|-----------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | Prior to this version, calling the function with an empty string returned **`FALSE`** for no particular reason. |
 
 ### Examples
 
@@ -4691,15 +4735,17 @@ Parses input from a string according to a format
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">sscanf</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$format`</span> , <span class="methodparam"><span
-class="type">mixed</span> `&$vars`</span> )
+<span class="type"><span class="type">array</span><span
+class="type">int</span><span class="type">null</span></span> <span
+class="methodname">sscanf</span> ( <span class="methodparam"><span
+class="type">string</span> `$string`</span> , <span
+class="methodparam"><span class="type">string</span> `$format`</span> ,
+<span class="methodparam"><span class="type">mixed</span>
+`&$vars`</span> )
 
 The function <span class="function">sscanf</span> is the input analog of
 <span class="function">printf</span>. <span
-class="function">sscanf</span> reads from the string `str` and
+class="function">sscanf</span> reads from the string `string` and
 interprets it according to the specified `format`, which is described in
 the documentation for <span class="function">sprintf</span>.
 
@@ -4709,11 +4755,11 @@ single space character in the input string.
 
 ### Parameters
 
-`str`  
+`string`  
 The input <span class="type">string</span> being parsed.
 
 `format`  
-The interpreted format for `str`, which is described in the
+The interpreted format for `string`, which is described in the
 documentation for <span class="function">sprintf</span> with following
 differences:
 
@@ -4736,7 +4782,7 @@ passed, the function will return the number of assigned values. The
 optional parameters must be passed by reference.
 
 If there are more substrings expected in the `format` than there are
-available within `str`, *-1* will be returned.
+available within `string`, **`NULL`** will be returned.
 
 ### Examples
 
@@ -4961,13 +5007,13 @@ Parse a CSV string into an array
 
 <span class="type">array</span> <span
 class="methodname">str\_getcsv</span> ( <span class="methodparam"><span
-class="type">string</span> `$input`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$delimiter`<span
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type">string</span> `$separator`<span
 class="initializer"> = ","</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$enclosure`<span
-class="initializer"> = '"'</span></span> \[, <span
+class="initializer"> = "\\""</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$escape`<span
-class="initializer"> = "\\\\"</span></span> \]\]\] )
+class="initializer"> = '\\\\'</span></span> \]\]\] )
 
 Parses a string input for fields in CSV format and returns an array
 containing the fields read.
@@ -4980,10 +5026,10 @@ containing the fields read.
 
 ### Parameters
 
-`input`  
+`string`  
 The string to parse.
 
-`delimiter`  
+`separator`  
 Set the field delimiter (one character only).
 
 `enclosure`  
@@ -5022,13 +5068,18 @@ Case-insensitive version of <span class="function">str\_replace</span>
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span></span> <span
 class="methodname">str\_ireplace</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$search`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`$replace`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$subject`</span> \[, <span
-class="methodparam"><span class="type">int</span> `&$count`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$search`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$replace`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
+`$subject`</span> \[, <span class="methodparam"><span
+class="type">int</span> `&$count`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 This function returns a string or an array with all occurrences of
 `search` in `subject` (ignoring case) replaced with the given `replace`
@@ -5109,27 +5160,27 @@ Pad a string to a certain length with another string
 
 <span class="type">string</span> <span
 class="methodname">str\_pad</span> ( <span class="methodparam"><span
-class="type">string</span> `$input`</span> , <span
-class="methodparam"><span class="type">int</span> `$pad_length`</span>
-\[, <span class="methodparam"><span class="type">string</span>
+class="type">string</span> `$string`</span> , <span
+class="methodparam"><span class="type">int</span> `$length`</span> \[,
+<span class="methodparam"><span class="type">string</span>
 `$pad_string`<span class="initializer"> = " "</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$pad_type`<span
-class="initializer"> = STR\_PAD\_RIGHT</span></span> \]\] )
+class="initializer"> = **`STR_PAD_RIGHT`**</span></span> \]\] )
 
-This function returns the `input` string padded on the left, the right,
+This function returns the `string` string padded on the left, the right,
 or both sides to the specified padding length. If the optional argument
-`pad_string` is not supplied, the `input` is padded with spaces,
+`pad_string` is not supplied, the `string` is padded with spaces,
 otherwise it is padded with characters from `pad_string` up to the
 limit.
 
 ### Parameters
 
-`input`  
+`string`  
 The input string.
 
-`pad_length`  
-If the value of `pad_length` is negative, less than, or equal to the
-length of the input string, no padding takes place, and `input` will be
+`length`  
+If the value of `length` is negative, less than, or equal to the length
+of the input string, no padding takes place, and `string` will be
 returned.
 
 `pad_string`  
@@ -5171,21 +5222,21 @@ Repeat a string
 
 <span class="type">string</span> <span
 class="methodname">str\_repeat</span> ( <span class="methodparam"><span
-class="type">string</span> `$input`</span> , <span
-class="methodparam"><span class="type">int</span> `$multiplier`</span> )
+class="type">string</span> `$string`</span> , <span
+class="methodparam"><span class="type">int</span> `$times`</span> )
 
-Returns `input` repeated `multiplier` times.
+Returns `string` repeated `times` times.
 
 ### Parameters
 
-`input`  
+`string`  
 The string to be repeated.
 
-`multiplier`  
-Number of time the `input` string should be repeated.
+`times`  
+Number of time the `string` string should be repeated.
 
-`multiplier` has to be greater than or equal to 0. If the `multiplier`
-is set to 0, the function will return an empty string.
+`times` has to be greater than or equal to 0. If the `times` is set to
+0, the function will return an empty string.
 
 ### Return Values
 
@@ -5218,13 +5269,18 @@ Replace all occurrences of the search string with the replacement string
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span></span> <span
 class="methodname">str\_replace</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$search`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$replace`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$search`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$replace`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">array</span></span>
 `$subject`</span> \[, <span class="methodparam"><span
-class="type">int</span> `&$count`</span> \] )
+class="type">int</span> `&$count`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 This function returns a string or an array with all occurrences of
 `search` in `subject` replaced with the given `replace` value.
@@ -5356,9 +5412,9 @@ Perform the rot13 transform on a string
 
 <span class="type">string</span> <span
 class="methodname">str\_rot13</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
-Performs the ROT13 encoding on the `str` argument and returns the
+Performs the ROT13 encoding on the `string` argument and returns the
 resulting string.
 
 The ROT13 encoding simply shifts every letter by 13 places in the
@@ -5368,7 +5424,7 @@ argument will return the original version.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -5396,7 +5452,7 @@ Randomly shuffles a string
 
 <span class="type">string</span> <span
 class="methodname">str\_shuffle</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 <span class="function">str\_shuffle</span> shuffles a string. One
 permutation of all possible is created.
@@ -5412,7 +5468,7 @@ class="function">openssl\_random\_pseudo\_bytes</span> instead.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -5454,7 +5510,7 @@ Convert a string to an array
 <span class="type">array</span> <span
 class="methodname">str\_split</span> ( <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$split_length`<span
+class="methodparam"><span class="type">int</span> `$length`<span
 class="initializer"> = 1</span></span> \] )
 
 Converts a string to an array.
@@ -5464,18 +5520,18 @@ Converts a string to an array.
 `string`  
 The input string.
 
-`split_length`  
+`length`  
 Maximum length of the chunk.
 
 ### Return Values
 
-If the optional `split_length` parameter is specified, the returned
-array will be broken down into chunks with each being `split_length` in
-length, otherwise each chunk will be one character in length.
+If the optional `length` parameter is specified, the returned array will
+be broken down into chunks with each being `length` in length, otherwise
+each chunk will be one character in length.
 
-**`FALSE`** is returned if `split_length` is less than 1. If the
-`split_length` length exceeds the length of `string`, the entire string
-is returned as the first (and only) array element.
+**`FALSE`** is returned if `length` is less than 1. If the `length`
+length exceeds the length of `string`, the entire string is returned as
+the first (and only) array element.
 
 ### Examples
 
@@ -5629,13 +5685,16 @@ Return information about words used in a string
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">int</span></span> <span
 class="methodname">str\_word\_count</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$format`<span class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$charlist`</span>
-\]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$characters`<span class="initializer"> = **`NULL`**</span></span> \]\]
+)
 
 Counts the number of words inside `string`. If the optional `format` is
 not specified, then the return value will be an integer representing the
@@ -5664,12 +5723,18 @@ are:
     key is the numeric position of the word inside the `string` and the
     value is the actual word itself </span>
 
-`charlist`  
+`characters`  
 A list of additional characters which will be considered as 'word'
 
 ### Return Values
 
 Returns an array or an integer, depending on the `format` chosen.
+
+### Changelog
+
+| Version | Description                   |
+|---------|-------------------------------|
+| 8.0.0   | `characters` is nullable now. |
 
 ### Examples
 
@@ -5852,8 +5917,8 @@ Locale based string comparison
 
 <span class="type">int</span> <span class="methodname">strcoll</span> (
 <span class="methodparam"><span class="type">string</span>
-`$str1`</span> , <span class="methodparam"><span
-class="type">string</span> `$str2`</span> )
+`$string1`</span> , <span class="methodparam"><span
+class="type">string</span> `$string2`</span> )
 
 Note that this comparison is case sensitive, and unlike <span
 class="function">strcmp</span> this function is not binary safe.
@@ -5864,16 +5929,16 @@ equivalent to <span class="function">strcmp</span>.
 
 ### Parameters
 
-`str1`  
+`string1`  
 The first string.
 
-`str2`  
+`string2`  
 The second string.
 
 ### Return Values
 
-Returns \< 0 if `str1` is less than `str2`; \> 0 if `str1` is greater
-than `str2`, and 0 if they are equal.
+Returns \< 0 if `string1` is less than `string2`; \> 0 if `string1` is
+greater than `string2`, and 0 if they are equal.
 
 ### See Also
 
@@ -5896,16 +5961,18 @@ Find length of initial segment not matching mask
 
 <span class="type">int</span> <span class="methodname">strcspn</span> (
 <span class="methodparam"><span class="type">string</span>
-`$subject`</span> , <span class="methodparam"><span
-class="type">string</span> `$mask`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$start`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`</span>
-\]\] )
+`$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$characters`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
-Returns the length of the initial segment of `subject` which does *not*
-contain any of the characters in `mask`.
+Returns the length of the initial segment of `string` which does *not*
+contain any of the characters in `characters`.
 
-If `start` and `length` are omitted, then all of `subject` will be
+If `offset` and `length` are omitted, then all of `string` will be
 examined. If they are included, then the effect will be the same as
 calling *strcspn(substr($subject, $start, $length), $mask)* (see
 <a href="/ref/strings.html#substr" class="xref"></a> for more
@@ -5913,44 +5980,50 @@ information).
 
 ### Parameters
 
-`subject`  
+`string`  
 The string to examine.
 
-`mask`  
+`characters`  
 The string containing every disallowed character.
 
-`start`  
-The position in `subject` to start searching.
+`offset`  
+The position in `string` to start searching.
 
-If `start` is given and is non-negative, then <span
-class="function">strcspn</span> will begin examining `subject` at the
-`start`'th position. For instance, in the string '*abcdef*', the
+If `offset` is given and is non-negative, then <span
+class="function">strcspn</span> will begin examining `string` at the
+`offset`'th position. For instance, in the string '*abcdef*', the
 character at position *0* is '*a*', the character at position *2* is
 '*c*', and so forth.
 
-If `start` is given and is negative, then <span
-class="function">strcspn</span> will begin examining `subject` at the
-`start`'th position from the end of `subject`.
+If `offset` is given and is negative, then <span
+class="function">strcspn</span> will begin examining `string` at the
+`offset`'th position from the end of `string`.
 
 `length`  
-The length of the segment from `subject` to examine.
+The length of the segment from `string` to examine.
 
-If `length` is given and is non-negative, then `subject` will be
-examined for `length` characters after the starting position.
+If `length` is given and is non-negative, then `string` will be examined
+for `length` characters after the starting position.
 
-If `length` is given and is negative, then `subject` will be examined
+If `length` is given and is negative, then `string` will be examined
 from the starting position up to `length` characters from the end of
-`subject`.
+`string`.
 
 ### Return Values
 
-Returns the length of the initial segment of `subject` which consists
-entirely of characters *not* in `mask`.
+Returns the length of the initial segment of `string` which consists
+entirely of characters *not* in `characters`.
 
 > **Note**:
 >
-> When a `start` parameter is set, the returned length is counted
-> starting from this position, not from the beginning of `subject`.
+> When a `offset` parameter is set, the returned length is counted
+> starting from this position, not from the beginning of `string`.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `length` is nullable now. |
 
 ### Examples
 
@@ -6000,20 +6073,22 @@ Strip HTML and PHP tags from a string
 
 <span class="type">string</span> <span
 class="methodname">strip\_tags</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">mixed</span>
-`$allowable_tags`</span> \] )
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$allowed_tags`<span
+class="initializer"> = **`NULL`**</span></span> \] )
 
 This function tries to return a string with all NULL bytes, HTML and PHP
-tags stripped from a given `str`. It uses the same tag stripping state
-machine as the <span class="function">fgetss</span> function.
+tags stripped from a given `string`. It uses the same tag stripping
+state machine as the <span class="function">fgetss</span> function.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`allowable_tags`  
+`allowed_tags`  
 You can use the optional second parameter to specify tags which should
 not be stripped. These are either given as <span
 class="type">string</span>, or as of PHP 7.4.0, as <span
@@ -6023,12 +6098,12 @@ format of this parameter.
 > **Note**:
 >
 > HTML comments and PHP tags are also stripped. This is hardcoded and
-> can not be changed with `allowable_tags`.
+> can not be changed with `allowed_tags`.
 
 > **Note**:
 >
 > In PHP 5.3.4 and later, self-closing XHTML tags are ignored and only
-> non-self-closing tags should be used in `allowable_tags`. For example,
+> non-self-closing tags should be used in `allowed_tags`. For example,
 > to allow both *\<br\>* and *\<br/\>*, you should use:
 >
 > ``` php
@@ -6043,9 +6118,10 @@ Returns the stripped string.
 
 ### Changelog
 
-| Version | Description                                                                        |
-|---------|------------------------------------------------------------------------------------|
-| 7.4.0   | The `allowable_tags` now alternatively accepts an <span class="type">array</span>. |
+| Version | Description                                                                      |
+|---------|----------------------------------------------------------------------------------|
+| 8.0.0   | `allowed_tags` is nullable now.                                                  |
+| 7.4.0   | The `allowed_tags` now alternatively accepts an <span class="type">array</span>. |
 
 ### Examples
 
@@ -6088,15 +6164,15 @@ more text/data than expected.
 **Warning**
 
 This function does not modify any attributes on the tags that you allow
-using `allowable_tags`, including the *style* and *onmouseover*
-attributes that a mischievous user may abuse when posting text that will
-be shown to other users.
+using `allowed_tags`, including the *style* and *onmouseover* attributes
+that a mischievous user may abuse when posting text that will be shown
+to other users.
 
 > **Note**:
 >
 > Tag names within the input HTML that are greater than 1023 bytes in
 > length will be treated as though they are invalid, regardless of the
-> `allowable_tags` parameter.
+> `allowed_tags` parameter.
 
 ### See Also
 
@@ -6111,14 +6187,14 @@ Un-quote string quoted with <span class="function">addcslashes</span>
 
 <span class="type">string</span> <span
 class="methodname">stripcslashes</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
 Returns a string with backslashes stripped off. Recognizes C-like *\\n*,
 *\\r* ..., octal and hexadecimal representation.
 
 ### Parameters
 
-`str`  
+`string`  
 The string to be unescaped.
 
 ### Return Values
@@ -6137,10 +6213,11 @@ substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">stripos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">stripos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
+class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -6158,12 +6235,12 @@ The string to search in.
 `needle`  
 Note that the `needle` may be a string of one or more characters.
 
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `offset`  
 If specified, search will start this number of characters counted from
@@ -6190,10 +6267,11 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
-| 7.1.0   | Support for negative `offset`s has been added.                            |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
+| 7.1.0   | Support for negative `offset`s has been added.                               |
 
 ### Examples
 
@@ -6247,7 +6325,7 @@ Un-quotes a quoted string
 
 <span class="type">string</span> <span
 class="methodname">stripslashes</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Un-quotes a quoted string.
 
@@ -6260,7 +6338,7 @@ example, if you're simply outputting data straight from an HTML form.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -6337,10 +6415,11 @@ Case-insensitive <span class="function">strstr</span>
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">stristr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">stristr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
+class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
@@ -6353,12 +6432,12 @@ occurrence of `needle` to the end.
 The string to search in
 
 `needle`  
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `before_needle`  
 If **`TRUE`**, <span class="function">stristr</span> returns the part of
@@ -6374,9 +6453,10 @@ Returns the matched substring. If `needle` is not found, returns
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
 
 ### Examples
 
@@ -6488,9 +6568,9 @@ Case insensitive string comparisons using a "natural order" algorithm
 
 <span class="type">int</span> <span
 class="methodname">strnatcasecmp</span> ( <span
-class="methodparam"><span class="type">string</span> `$str1`</span> ,
+class="methodparam"><span class="type">string</span> `$string1`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$str2`</span> )
+`$string2`</span> )
 
 This function implements a comparison algorithm that orders alphanumeric
 strings in the way a human being would. The behaviour of this function
@@ -6502,17 +6582,17 @@ page.
 
 ### Parameters
 
-`str1`  
+`string1`  
 The first string.
 
-`str2`  
+`string2`  
 The second string.
 
 ### Return Values
 
 Similar to other string comparison functions, this one returns \< 0 if
-`str1` is less than `str2` \> 0 if `str1` is greater than `str2`, and 0
-if they are equal.
+`string1` is less than `string2` \> 0 if `string1` is greater than
+`string2`, and 0 if they are equal.
 
 ### See Also
 
@@ -6535,8 +6615,8 @@ String comparisons using a "natural order" algorithm
 
 <span class="type">int</span> <span class="methodname">strnatcmp</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str1`</span> , <span class="methodparam"><span
-class="type">string</span> `$str2`</span> )
+`$string1`</span> , <span class="methodparam"><span
+class="type">string</span> `$string2`</span> )
 
 This function implements a comparison algorithm that orders alphanumeric
 strings in the way a human being would, this is described as a "natural
@@ -6544,17 +6624,17 @@ ordering". Note that this comparison is case sensitive.
 
 ### Parameters
 
-`str1`  
+`string1`  
 The first string.
 
-`str2`  
+`string2`  
 The second string.
 
 ### Return Values
 
 Similar to other string comparison functions, this one returns \< 0 if
-`str1` is less than `str2`; \> 0 if `str1` is greater than `str2`, and 0
-if they are equal.
+`string1` is less than `string2`; \> 0 if `string1` is greater than
+`string2`, and 0 if they are equal.
 
 ### Examples
 
@@ -6705,20 +6785,21 @@ Search a string for any of a set of characters
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strpbrk</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strpbrk</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$haystack`</span> , <span class="methodparam"><span
-class="type">string</span> `$char_list`</span> )
+`$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$characters`</span> )
 
-<span class="function">strpbrk</span> searches the `haystack` string for
-a `char_list`.
+<span class="function">strpbrk</span> searches the `string` string for a
+`characters`.
 
 ### Parameters
 
-`haystack`  
-The string where `char_list` is looked for.
+`string`  
+The string where `characters` is looked for.
 
-`char_list`  
+`characters`  
 This parameter is case sensitive.
 
 ### Return Values
@@ -6756,10 +6837,11 @@ Find the position of the first occurrence of a substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strpos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">strpos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
+class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -6772,12 +6854,12 @@ Find the numeric position of the first occurrence of `needle` in the
 The string to search in.
 
 `needle`  
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `offset`  
 If specified, search will start this number of characters counted from
@@ -6804,10 +6886,11 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
-| 7.1.0   | Support for negative `offset`s has been added.                            |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
+| 7.1.0   | Support for negative `offset`s has been added.                               |
 
 ### Examples
 
@@ -6884,10 +6967,11 @@ Find the last occurrence of a character in a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strrchr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strrchr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> )
+class="type">string</span> `$needle`</span> )
 
 This function returns the portion of `haystack` which starts at the last
 occurrence of `needle` and goes until the end of `haystack`.
@@ -6902,12 +6986,12 @@ If `needle` contains more than one character, only the first is used.
 This behavior is different from that of <span
 class="function">strstr</span>.
 
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 ### Return Values
 
@@ -6916,9 +7000,10 @@ is not found.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
 
 ### Examples
 
@@ -6985,12 +7070,13 @@ in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strripos</span> (
-<span class="methodparam"><span class="type">string</span>
-`$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$offset`<span
-class="initializer"> = 0</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">strripos</span> ( <span class="methodparam"><span
+class="type">string</span> `$haystack`</span> , <span
+class="methodparam"><span class="type">string</span> `$needle`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$offset`<span class="initializer"> = 0</span></span> \] )
 
 Find the numeric position of the last occurrence of `needle` in the
 `haystack` string.
@@ -7004,12 +7090,12 @@ class="function">strripos</span> is case-insensitive.
 The string to search in.
 
 `needle`  
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `offset`  
 If zero or positive, the search is performed left to right skipping the
@@ -7046,9 +7132,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
 
 ### Examples
 
@@ -7091,10 +7178,11 @@ Find the position of the last occurrence of a substring in a string
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strrpos</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">strrpos</span>
+( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
+class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -7107,12 +7195,12 @@ Find the numeric position of the last occurrence of `needle` in the
 The string to search in.
 
 `needle`  
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `offset`  
 If zero or positive, the search is performed left to right skipping the
@@ -7149,9 +7237,10 @@ for testing the return value of this function.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
 
 ### Examples
 
@@ -7228,16 +7317,18 @@ of characters contained within a given mask
 
 <span class="type">int</span> <span class="methodname">strspn</span> (
 <span class="methodparam"><span class="type">string</span>
-`$subject`</span> , <span class="methodparam"><span
-class="type">string</span> `$mask`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$start`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`</span>
-\]\] )
+`$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$characters`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$offset`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
-Finds the length of the initial segment of `subject` that contains
-*only* characters from `mask`.
+Finds the length of the initial segment of `string` that contains *only*
+characters from `characters`.
 
-If `start` and `length` are omitted, then all of `subject` will be
+If `offset` and `length` are omitted, then all of `string` will be
 examined. If they are included, then the effect will be the same as
 calling *strspn(substr($subject, $start, $length), $mask)* (see
 <a href="/ref/strings.html#substr" class="xref"></a> for more
@@ -7252,49 +7343,55 @@ $var = strspn("42 is the answer to the 128th question.", "1234567890");
 ```
 
 will assign *2* to `$var`, because the string "42" is the initial
-segment of `subject` that consists only of characters contained within
+segment of `string` that consists only of characters contained within
 "1234567890".
 
 ### Parameters
 
-`subject`  
+`string`  
 The string to examine.
 
-`mask`  
+`characters`  
 The list of allowable characters.
 
-`start`  
-The position in `subject` to start searching.
+`offset`  
+The position in `string` to start searching.
 
-If `start` is given and is non-negative, then <span
-class="function">strspn</span> will begin examining `subject` at the
-`start`'th position. For instance, in the string '*abcdef*', the
+If `offset` is given and is non-negative, then <span
+class="function">strspn</span> will begin examining `string` at the
+`offset`'th position. For instance, in the string '*abcdef*', the
 character at position *0* is '*a*', the character at position *2* is
 '*c*', and so forth.
 
-If `start` is given and is negative, then <span
-class="function">strspn</span> will begin examining `subject` at the
-`start`'th position from the end of `subject`.
+If `offset` is given and is negative, then <span
+class="function">strspn</span> will begin examining `string` at the
+`offset`'th position from the end of `string`.
 
 `length`  
-The length of the segment from `subject` to examine.
+The length of the segment from `string` to examine.
 
-If `length` is given and is non-negative, then `subject` will be
-examined for `length` characters after the starting position.
+If `length` is given and is non-negative, then `string` will be examined
+for `length` characters after the starting position.
 
-If `length` is given and is negative, then `subject` will be examined
+If `length` is given and is negative, then `string` will be examined
 from the starting position up to `length` characters from the end of
-`subject`.
+`string`.
 
 ### Return Values
 
-Returns the length of the initial segment of `subject` which consists
-entirely of characters in `mask`.
+Returns the length of the initial segment of `string` which consists
+entirely of characters in `characters`.
 
 > **Note**:
 >
-> When a `start` parameter is set, the returned length is counted
-> starting from this position, not from the beginning of `subject`.
+> When a `offset` parameter is set, the returned length is counted
+> starting from this position, not from the beginning of `string`.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `length` is nullable now. |
 
 ### Examples
 
@@ -7334,10 +7431,11 @@ Find the first occurrence of a string
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">strstr</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">strstr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$haystack`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$needle`</span> \[, <span
+class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
 class="initializer"> = **`FALSE`**</span></span> \] )
 
@@ -7361,12 +7459,12 @@ occurrence of `needle` to the end of `haystack`.
 The input string.
 
 `needle`  
-If `needle` is not a string, it is converted to an integer and applied
-as the ordinal value of a character. This behavior is deprecated as of
-PHP 7.3.0, and relying on it is highly discouraged. Depending on the
-intended behavior, the `needle` should either be explicitly cast to
-string, or an explicit call to <span class="function">chr</span> should
-be performed.
+Prior to PHP 8.0.0, if `needle` is not a string, it is converted to an
+integer and applied as the ordinal value of a character. This behavior
+is deprecated as of PHP 7.3.0, and relying on it is highly discouraged.
+Depending on the intended behavior, the `needle` should either be
+explicitly cast to string, or an explicit call to <span
+class="function">chr</span> should be performed.
 
 `before_needle`  
 If **`TRUE`**, <span class="function">strstr</span> returns the part of
@@ -7379,9 +7477,10 @@ Returns the portion of string, or **`FALSE`** if `needle` is not found.
 
 ### Changelog
 
-| Version | Description                                                               |
-|---------|---------------------------------------------------------------------------|
-| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated. |
+| Version | Description                                                                  |
+|---------|------------------------------------------------------------------------------|
+| 8.0.0   | Passing an <span class="type">int</span> as `needle` is no longer supported. |
+| 7.3.0   | Passing an <span class="type">int</span> as `needle` has been deprecated.    |
 
 ### Examples
 
@@ -7728,24 +7827,26 @@ characters
 
 <span class="type">int</span> <span
 class="methodname">substr\_compare</span> ( <span
-class="methodparam"><span class="type">string</span> `$main_str`</span>
+class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$str`</span> , <span class="methodparam"><span class="type">int</span>
-`$offset`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$length`</span> \[, <span
+`$needle`</span> , <span class="methodparam"><span
+class="type">int</span> `$offset`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$case_insensitivity`<span class="initializer"> =
+`$case_insensitive`<span class="initializer"> =
 **`FALSE`**</span></span> \]\] )
 
-<span class="function">substr\_compare</span> compares `main_str` from
-position `offset` with `str` up to `length` characters.
+<span class="function">substr\_compare</span> compares `haystack` from
+position `offset` with `needle` up to `length` characters.
 
 ### Parameters
 
-`main_str`  
+`haystack`  
 The main string being compared.
 
-`str`  
+`needle`  
 The secondary string being compared.
 
 `offset`  
@@ -7754,26 +7855,28 @@ from the end of the string.
 
 `length`  
 The length of the comparison. The default value is the largest of the
-length of the `str` compared to the length of `main_str` minus the
+length of the `needle` compared to the length of `haystack` minus the
 `offset`.
 
-`case_insensitivity`  
-If `case_insensitivity` is **`TRUE`**, comparison is case insensitive.
+`case_insensitive`  
+If `case_insensitive` is **`TRUE`**, comparison is case insensitive.
 
 ### Return Values
 
-Returns \< 0 if `main_str` from position `offset` is less than `str`, \>
-0 if it is greater than `str`, and 0 if they are equal. If `offset` is
-equal to (prior to PHP 7.2.18, 7.3.5) or greater than the length of
-`main_str`, or the `length` is set and is less than 0, (or, prior to PHP
-5.5.11, less than 1) <span class="function">substr\_compare</span>
-prints a warning and returns **`FALSE`**.
+Returns \< 0 if `haystack` from position `offset` is less than `needle`,
+\> 0 if it is greater than `needle`, and 0 if they are equal. If
+`offset` is equal to (prior to PHP 7.2.18, 7.3.5) or greater than the
+length of `haystack`, or the `length` is set and is less than 0, (or,
+prior to PHP 5.5.11, less than 1) <span
+class="function">substr\_compare</span> prints a warning and returns
+**`FALSE`**.
 
 ### Changelog
 
 | Version       | Description                                            |
 |---------------|--------------------------------------------------------|
-| 7.2.18, 7.3.5 | `offset` may now be equal to the length of `main_str`. |
+| 8.0.0         | `length` is nullable now.                              |
+| 7.2.18, 7.3.5 | `offset` may now be equal to the length of `haystack`. |
 
 ### Examples
 
@@ -7808,8 +7911,9 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$offset`<span class="initializer"> =
-0</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$length`</span> \]\] )
+0</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
 
 <span class="function">substr\_count</span> returns the number of times
 the `needle` substring occurs in the `haystack` string. Please note that
@@ -7846,6 +7950,7 @@ This function returns an <span class="type">int</span>.
 
 | Version | Description                                                                                |
 |---------|--------------------------------------------------------------------------------------------|
+| 8.0.0   | `length` is nullable now.                                                                  |
 | 7.1.0   | Support for negative `offset`s and `length`s has been added. `length` may also be *0* now. |
 
 ### Examples
@@ -7889,18 +7994,23 @@ Replace text within a portion of a string
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span></span> <span
 class="methodname">substr\_replace</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$string`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
-`$replacement`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$start`</span> \[, <span
-class="methodparam"><span class="type">mixed</span> `$length`</span> \]
-)
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$string`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$replace`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span></span>
+`$offset`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">int</span><span
+class="type">null</span></span> `$length`<span class="initializer"> =
+**`NULL`**</span></span> \] )
 
 <span class="function">substr\_replace</span> replaces a copy of
-`string` delimited by the `start` and (optionally) `length` parameters
-with the string given in `replacement`.
+`string` delimited by the `offset` and (optionally) `length` parameters
+with the string given in `replace`.
 
 ### Parameters
 
@@ -7909,19 +8019,19 @@ The input string.
 
 An <span class="type">array</span> of <span class="type">string</span>s
 can be provided, in which case the replacements will occur on each
-string in turn. In this case, the `replacement`, `start` and `length`
+string in turn. In this case, the `replace`, `offset` and `length`
 parameters may be provided either as scalar values to be applied to each
 input string in turn, or as <span class="type">array</span>s, in which
 case the corresponding array element will be used for each input string.
 
-`replacement`  
+`replace`  
 The replacement string.
 
-`start`  
-If `start` is non-negative, the replacing will begin at the `start`'th
+`offset`  
+If `offset` is non-negative, the replacing will begin at the `offset`'th
 offset into `string`.
 
-If `start` is negative, the replacing will begin at the `start`'th
+If `offset` is negative, the replacing will begin at the `offset`'th
 character from the end of `string`.
 
 `length`  
@@ -7930,13 +8040,19 @@ If given and is positive, it represents the length of the portion of
 number of characters from the end of `string` at which to stop
 replacing. If it is not given, then it will default to strlen( `string`
 ); i.e. end the replacing at the end of `string`. Of course, if `length`
-is zero then this function will have the effect of inserting
-`replacement` into `string` at the given `start` offset.
+is zero then this function will have the effect of inserting `replace`
+into `string` at the given `offset` offset.
 
 ### Return Values
 
 The result string is returned. If `string` is an array then array is
 returned.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `length` is nullable now. |
 
 ### Examples
 
@@ -8007,14 +8123,15 @@ Return part of a string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">substr</span>
+<span class="type">string</span> <span class="methodname">substr</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$string`</span> , <span class="methodparam"><span
-class="type">int</span> `$start`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$length`</span> \] )
+class="type">int</span> `$offset`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
 
-Returns the portion of `string` specified by the `start` and `length`
+Returns the portion of `string` specified by the `offset` and `length`
 parameters.
 
 ### Parameters
@@ -8022,19 +8139,19 @@ parameters.
 `string`  
 The input string.
 
-`start`  
-If `start` is non-negative, the returned string will start at the
-`start`'th position in `string`, counting from zero. For instance, in
+`offset`  
+If `offset` is non-negative, the returned string will start at the
+`offset`'th position in `string`, counting from zero. For instance, in
 the string '*abcdef*', the character at position *0* is '*a*', the
 character at position *2* is '*c*', and so forth.
 
-If `start` is negative, the returned string will start at the `start`'th
-character from the end of `string`.
+If `offset` is negative, the returned string will start at the
+`offset`'th character from the end of `string`.
 
-If `string` is less than `start` characters long, **`FALSE`** will be
+If `string` is less than `offset` characters long, **`FALSE`** will be
 returned.
 
-**Example \#1 Using a negative `start`**
+**Example \#1 Using a negative `offset`**
 
 ``` php
 <?php
@@ -8046,18 +8163,18 @@ $rest = substr("abcdef", -3, 1); // returns "d"
 
 `length`  
 If `length` is given and is positive, the string returned will contain
-at most `length` characters beginning from `start` (depending on the
+at most `length` characters beginning from `offset` (depending on the
 length of `string`).
 
 If `length` is given and is negative, then that many characters will be
 omitted from the end of `string` (after the start position has been
-calculated when a `start` is negative). If `start` denotes the position
-of this truncation or beyond, **`FALSE`** will be returned.
+calculated when a `offset` is negative). If `offset` denotes the
+position of this truncation or beyond, **`FALSE`** will be returned.
 
 If `length` is given and is *0*, **`FALSE`** or **`NULL`**, an empty
 string will be returned.
 
-If `length` is omitted, the substring starting from `start` until the
+If `length` is omitted, the substring starting from `offset` until the
 end of the string will be returned.
 
 **Example \#2 Using a negative `length`**
@@ -8075,6 +8192,13 @@ $rest = substr("abcdef", -3, -1); // returns "de"
 
 Returns the extracted part of `string`; or **`FALSE`** on failure, or an
 empty string.
+
+### Changelog
+
+| Version | Description                                                             |
+|---------|-------------------------------------------------------------------------|
+| 8.0.0   | `length` is nullable now.                                               |
+| 8.0.0   | The function returns an empty where it previously returned **`FALSE`**. |
 
 ### Examples
 
@@ -8167,13 +8291,13 @@ string
 ### Description
 
 <span class="type">string</span> <span class="methodname">trim</span> (
-<span class="methodparam"><span class="type">string</span> `$str`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$character_mask`<span class="initializer"> = "
-\\t\\n\\r\\0\\x0B"</span></span> \] )
+<span class="methodparam"><span class="type">string</span>
+`$string`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$characters`<span class="initializer"> = "
+\\n\\r\\t\\v\\0"</span></span> \] )
 
 This function returns a string with whitespace stripped from the
-beginning and end of `str`. Without the second parameter, <span
+beginning and end of `string`. Without the second parameter, <span
 class="function">trim</span> will strip these characters:
 
 -   <span class="simpara"> " " (ASCII *32* (*0x20*)), an ordinary space.
@@ -8185,18 +8309,18 @@ class="function">trim</span> will strip these characters:
     return. </span>
 -   <span class="simpara"> "\\0" (ASCII *0* (*0x00*)), the *NUL*-byte.
     </span>
--   <span class="simpara"> "\\x0B" (ASCII *11* (*0x0B*)), a vertical
-    tab. </span>
+-   <span class="simpara"> "\\v" (ASCII *11* (*0x0B*)), a vertical tab.
+    </span>
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> that will be trimmed.
 
-`character_mask`  
+`characters`  
 Optionally, the stripped characters can also be specified using the
-`character_mask` parameter. Simply list all characters that you want to
-be stripped. With *..* you can specify a range of characters.
+`characters` parameter. Simply list all characters that you want to be
+stripped. With *..* you can specify a range of characters.
 
 ### Return Values
 
@@ -8313,10 +8437,10 @@ Make a string's first character uppercase
 
 <span class="type">string</span> <span class="methodname">ucfirst</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> )
+`$string`</span> )
 
-Returns a string with the first character of `str` capitalized, if that
-character is alphabetic.
+Returns a string with the first character of `string` capitalized, if
+that character is alphabetic.
 
 Note that 'alphabetic' is determined by the current locale. For
 instance, in the default "C" locale characters such as umlaut-a (ä) will
@@ -8324,7 +8448,7 @@ not be converted.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 ### Return Values
@@ -8362,25 +8486,25 @@ Uppercase the first character of each word in a string
 
 <span class="type">string</span> <span class="methodname">ucwords</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> \[, <span class="methodparam"> <span
-class="type">string</span> `$delimiters`<span class="initializer"> = "
-\\t\\r\\n\\f\\v"</span> </span> \] )
+`$string`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$separators`<span class="initializer"> = "
+\\t\\r\\n\\f\\v"</span></span> \] )
 
-Returns a string with the first character of each word in `str`
+Returns a string with the first character of each word in `string`
 capitalized, if that character is alphabetic.
 
 The definition of a word is any string of characters that is immediately
-after any character listed in the `delimiters` parameter (By default
+after any character listed in the `separators` parameter (By default
 these are: space, form-feed, newline, carriage return, horizontal tab,
 and vertical tab).
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
-`delimiters`  
-The optional `delimiters` contains the word separator characters.
+`separators`  
+The optional `separators` contains the word separator characters.
 
 ### Return Values
 
@@ -8453,19 +8577,19 @@ Write a formatted string to a stream
 
 <span class="type">int</span> <span class="methodname">vfprintf</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$format`</span> , <span
-class="methodparam"><span class="type">array</span> `$args`</span> )
+class="methodparam"><span class="type">array</span> `$values`</span> )
 
 Write a string produced according to `format` to the stream resource
-specified by `handle`.
+specified by `stream`.
 
 Operates as <span class="function">fprintf</span> but accepts an array
 of arguments, rather than a variable number of arguments.
 
 ### Parameters
 
-`handle`  
+`stream`  
 
 `format`  
 The format string is composed of zero or more directives: ordinary
@@ -8608,7 +8732,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`args`  
+`values`  
 
 ### Return Values
 
@@ -8651,7 +8775,7 @@ Output a formatted string
 <span class="type">int</span> <span class="methodname">vprintf</span> (
 <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
-class="type">array</span> `$args`</span> )
+class="type">array</span> `$values`</span> )
 
 Display array values as a formatted string according to `format` (which
 is described in the documentation for <span
@@ -8803,7 +8927,7 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`args`  
+`values`  
 
 ### Return Values
 
@@ -9038,20 +9162,21 @@ Wraps a string to a given number of characters
 
 <span class="type">string</span> <span
 class="methodname">wordwrap</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
+class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$width`<span
 class="initializer"> = 75</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$break`<span
 class="initializer"> = "\\n"</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$cut`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="methodparam"><span class="type">bool</span>
+`$cut_long_words`<span class="initializer"> = **`FALSE`**</span></span>
+\]\]\] )
 
 Wraps a string to a given number of characters using a string break
 character.
 
 ### Parameters
 
-`str`  
+`string`  
 The input string.
 
 `width`  
@@ -9060,12 +9185,12 @@ The number of characters at which the string will be wrapped.
 `break`  
 The line is broken using the optional `break` parameter.
 
-`cut`  
-If the `cut` is set to **`TRUE`**, the string is always wrapped at or
-before the specified `width`. So if you have a word that is larger than
-the given width, it is broken apart. (See second example). When
-**`FALSE`** the function does not split the word even if the `width` is
-smaller than the word width.
+`cut_long_words`  
+If the `cut_long_words` is set to **`TRUE`**, the string is always
+wrapped at or before the specified `width`. So if you have a word that
+is larger than the given width, it is broken apart. (See second
+example). When **`FALSE`** the function does not split the word even if
+the `width` is smaller than the word width.
 
 ### Return Values
 

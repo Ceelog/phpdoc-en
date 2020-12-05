@@ -177,7 +177,8 @@ Other affected operations are:
     class="function">current</span>, etc. Use <span
     class="interfacename">Iterator</span> methods instead. </span>
 -   <span class="simpara"> Potentially others working on object
-    properties as a list. </span>
+    properties as a list, e.g. <span
+    class="function">array\_walk</span>. </span>
 
 *(array)* casts are not affected. They will continue to return either
 the wrapped array, or the <span class="classname">ArrayObject</span>

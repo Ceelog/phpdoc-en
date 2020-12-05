@@ -135,6 +135,12 @@ Language Reference
     -   [Generator syntax](/language/generators/syntax.html)
     -   [Comparing generators with Iterator
         objects](/language/generators/comparison.html)
+-   [Attributes](/language/attributes.html)
+    -   [Attributes overview](/language/attributes/overview.html)
+    -   [Attribute syntax](/language/attributes/syntax.html)
+    -   [Reading Attributes with the Reflection
+        API](/language/attributes/reflection.html)
+    -   [Declaring Attribute Classes](/language/attributes/classes.html)
 -   [References Explained](/language/references.html)
     -   [What References Are](/language/references/whatare.html)
     -   [What References Do](/language/references/whatdo.html)

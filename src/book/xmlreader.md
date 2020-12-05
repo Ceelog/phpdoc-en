@@ -720,7 +720,7 @@ String containing the prefix.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+The value of the namespace, or **`NULL`** if no namespace exists.
 
 ### Changelog
 

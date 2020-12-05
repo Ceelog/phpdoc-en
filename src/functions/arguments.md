@@ -45,6 +45,25 @@ function takes_many_args(
 ?>
 ```
 
+As of PHP 8.0.0, passing optional arguments after mandatory arguments is
+deprecated. This can generally be resolved by dropping the default
+value. One exception to this rule are arguments of the form
+`Type $param = null`, where the **`NULL`** default makes the type
+implicitly nullable. This usage remains allowed, though it is
+recommended to use an explicit nullable type instead.
+
+**Example \#3 Passing optional arguments after mandatory arguments**
+
+``` php
+<?php
+function foo($a = [], $b) {} // Before
+function foo($a, $b) {}      // After
+
+function bar(A $a = null, $b) {} // Still allowed
+function bar(?A $a, $b) {}       // Recommended
+?>
+```
+
 ### Passing arguments by reference
 
 By default, function arguments are passed by value (so that if the value
@@ -55,7 +74,7 @@ they must be passed by reference.
 To have an argument to a function always passed by reference, prepend an
 ampersand (&) to the argument name in the function definition:
 
-**Example \#3 Passing function parameters by reference**
+**Example \#4 Passing function parameters by reference**
 
 ``` php
 <?php
@@ -74,7 +93,7 @@ echo $str;    // outputs 'This is a string, and something extra.'
 A function may define C++-style default values for scalar arguments as
 follows:
 
-**Example \#4 Use of default parameters in functions**
+**Example \#5 Use of default parameters in functions**
 
 ``` php
 <?php
@@ -97,7 +116,7 @@ The above example will output:
 PHP also allows the use of <span class="type">array</span>s and the
 special type **`NULL`** as default values, for example:
 
-**Example \#5 Using non-scalar types as default values**
+**Example \#6 Using non-scalar types as default values**
 
 ``` php
 <?php
@@ -118,7 +137,7 @@ Note that when using default arguments, any defaults should be on the
 right side of any non-default arguments; otherwise, things will not work
 as expected. Consider the following code snippet:
 
-**Example \#6 Incorrect usage of default function arguments**
+**Example \#7 Incorrect usage of default function arguments**
 
 ``` php
 <?php
@@ -139,7 +158,7 @@ The above example will output:
 
 Now, compare the above with this:
 
-**Example \#7 Correct usage of default function arguments**
+**Example \#8 Correct usage of default function arguments**
 
 ``` php
 <?php
@@ -176,7 +195,7 @@ Argument lists may include the *...* token to denote that the function
 accepts a variable number of arguments. The arguments will be passed
 into the given variable as an array; for example:
 
-**Example \#8 Using *...* to access variable arguments**
+**Example \#9 Using *...* to access variable arguments**
 
 ``` php
 <?php
@@ -200,7 +219,7 @@ The above example will output:
 class="type">array</span> or <span class="classname">Traversable</span>
 variable or literal into the argument list:
 
-**Example \#9 Using *...* to provide arguments**
+**Example \#10 Using *...* to provide arguments**
 
 ``` php
 <?php
@@ -229,7 +248,7 @@ It is also possible to add a
 before the *...* token. If this is present, then all arguments captured
 by *...* must be objects of the hinted class.
 
-**Example \#10 Type declared variable arguments**
+**Example \#11 Type declared variable arguments**
 
 ``` php
 <?php
@@ -270,7 +289,7 @@ class="function">func\_get\_args</span>.
 The first example above would be implemented as follows in old versions
 of PHP:
 
-**Example \#11 Accessing variable arguments in old PHP versions**
+**Example \#12 Accessing variable arguments in old PHP versions**
 
 ``` php
 <?php
@@ -289,3 +308,83 @@ echo sum(1, 2, 3, 4);
 The above example will output:
 
     10
+
+### Named Arguments
+
+PHP 8.0.0 introduced named arguments as an extension of the existing
+positional parameters. Named arguments allow passing arguments to a
+function based on the parameter name, rather than the parameter
+position. This makes the meaning of the argument self-documenting, makes
+the arguments order-independent and allows skipping default values
+arbitrarily.
+
+Named arguments are passed by prefixing the value with the parameter
+name followed by a colon. Using reserved keywords as parameter names is
+allowed. The parameter name must be an identifier, specifying
+dynamically is not allowed.
+
+**Example \#13 Named argument syntax**
+
+``` php
+<?php
+myFunction(paramName: $value);
+array_foobar(array: $value);
+
+// NOT supported.
+function_name($variableStoringParamName: $value);
+?>
+```
+
+**Example \#14 Positional arguments versus named arguments**
+
+``` php
+<?php
+// Using positional arguments:
+array_fill(0, 100, 50);
+
+// Using named arguments:
+array_fill(start_index: 0, num: 100, value: 50);
+?>
+```
+
+The order in which the named arguments are passed does not matter.
+
+**Example \#15 Same example as above with a different order of
+parameters**
+
+``` php
+<?php
+array_fill(value: 50, num: 100, start_index: 0);
+?>
+```
+
+Named arguments can be combined with positional arguments. In this case,
+the named arguments must come after the positional arguments. It is also
+possible to specify only some of the optional arguments of a function,
+regardless of their order.
+
+**Example \#16 Combining named arguments with positional arguments**
+
+``` php
+<?php
+htmlspecialchars($string, double_encode: false);
+// Same as
+htmlspecialchars($string, ENT_COMPAT | ENT_HTML401, 'UTF-8', false);
+?>
+```
+
+Passing the same parameter multiple times results in an Error exception.
+
+**Example \#17 Error exception when passing the same parameter multiple
+times**
+
+``` php
+<?php
+function foo($param) { ... }
+
+foo(param: 1, param: 2);
+// Error: Named parameter $param overwrites previous argument
+foo(1, param: 2);
+// Error: Named parameter $param overwrites previous argument
+?>
+```
