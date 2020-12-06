@@ -1423,8 +1423,7 @@ is for. The default is *ENT\_COMPAT \| ENT\_HTML401*.
 
 `encoding`  
 Encoding to use. If omitted, the default value for this argument is
-ISO-8859-1 in versions of PHP prior to 5.4.0, and UTF-8 from PHP 5.4.0
-onwards.
+UTF-8.
 
 The following character sets are supported:
 
@@ -1675,15 +1674,12 @@ handle quotes and which document type to use. The default is
 An optional argument defining the encoding used when converting
 characters.
 
-If omitted, the default value of the `encoding` varies depending on the
-PHP version in use. In PHP 5.6 and later, the
+If omitted, `encoding` defaults to the value of the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
-configuration option is used as the default value. PHP 5.4 and 5.5 will
-use *UTF-8* as the default. Earlier versions of PHP use *ISO-8859-1*.
+configuration option.
 
 Although this argument is technically optional, you are highly
-encouraged to specify the correct value for your code if you are using
-PHP 5.5 or earlier, or if your
+encouraged to specify the correct value for your code if the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
 configuration option may be set incorrectly for the given input.
 
@@ -1810,15 +1806,12 @@ The default is *ENT\_COMPAT \| ENT\_HTML401*.
 An optional argument defining the encoding used when converting
 characters.
 
-If omitted, the default value of the `encoding` varies depending on the
-PHP version in use. In PHP 5.6 and later, the
+If omitted, `encoding` defaults to the value of the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
-configuration option is used as the default value. PHP 5.4 and 5.5 will
-use *UTF-8* as the default. Earlier versions of PHP use *ISO-8859-1*.
+configuration option.
 
 Although this argument is technically optional, you are highly
-encouraged to specify the correct value for your code if you are using
-PHP 5.5 or earlier, or if your
+encouraged to specify the correct value for your code if the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
 configuration option may be set incorrectly for the given input.
 
@@ -2044,15 +2037,12 @@ The default is *ENT\_COMPAT \| ENT\_HTML401*.
 An optional argument defining the encoding used when converting
 characters.
 
-If omitted, the default value of the `encoding` varies depending on the
-PHP version in use. In PHP 5.6 and later, the
+If omitted, `encoding` defaults to the value of the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
-configuration option is used as the default value. PHP 5.4 and 5.5 will
-use *UTF-8* as the default. Earlier versions of PHP use *ISO-8859-1*.
+configuration option.
 
 Although this argument is technically optional, you are highly
-encouraged to specify the correct value for your code if you are using
-PHP 5.5 or earlier, or if your
+encouraged to specify the correct value for your code if the
 <a href="/ini/core.html#ini.default-charset" class="link">default_charset</a>
 configuration option may be set incorrectly for the given input.
 
@@ -7866,8 +7856,7 @@ If `case_insensitive` is **`TRUE`**, comparison is case insensitive.
 Returns \< 0 if `haystack` from position `offset` is less than `needle`,
 \> 0 if it is greater than `needle`, and 0 if they are equal. If
 `offset` is equal to (prior to PHP 7.2.18, 7.3.5) or greater than the
-length of `haystack`, or the `length` is set and is less than 0, (or,
-prior to PHP 5.5.11, less than 1) <span
+length of `haystack`, or the `length` is set and is less than 0, <span
 class="function">substr\_compare</span> prints a warning and returns
 **`FALSE`**.
 
