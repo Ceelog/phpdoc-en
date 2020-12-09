@@ -34,7 +34,7 @@ var_dump($_SESSION[$key]);
 
 It is also possible to *cancel* the currently in-progress file upload,
 by setting the *$\_SESSION\[$key\]\["cancel\_upload"\]* key to
-**`TRUE`**. When uploading multiple files in the same request, this will
+**`true`**. When uploading multiple files in the same request, this will
 only cancel the currently in-progress file upload, and pending file
 uploads, but will not remove successfully completed uploads. When an
 upload is cancelled like this, the *error* key in `$_FILES` array will

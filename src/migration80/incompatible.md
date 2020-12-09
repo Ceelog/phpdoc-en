@@ -12,12 +12,12 @@ this means that `0 == "not-a-number"` is considered false now.
 
 | Comparison      | Before     | After       |
 |-----------------|------------|-------------|
-| `0 == "0"`      | **`TRUE`** | **`TRUE`**  |
-| `0 == "0.0"`    | **`TRUE`** | **`TRUE`**  |
-| `0 == "foo"`    | **`TRUE`** | **`FALSE`** |
-| `0 == ""`       | **`TRUE`** | **`FALSE`** |
-| `42 == "   42"` | **`TRUE`** | **`TRUE`**  |
-| `42 == "42foo"` | **`TRUE`** | **`FALSE`** |
+| `0 == "0"`      | **`true`** | **`true`**  |
+| `0 == "0.0"`    | **`true`** | **`true`**  |
+| `0 == "foo"`    | **`true`** | **`false`** |
+| `0 == ""`       | **`true`** | **`false`** |
+| `42 == "   42"` | **`true`** | **`true`**  |
+| `42 == "42foo"` | **`true`** | **`false`** |
 
 #### Other incompatible Changes
 
@@ -45,7 +45,7 @@ this means that `0 == "not-a-number"` is considered false now.
 
 -   The ability to define case-insensitive constants has been removed.
     The third argument to <span class="function">define</span> may no
-    longer be **`TRUE`**.
+    longer be **`true`**.
 
 -   The ability to specify an autoloader using an <span
     class="function">\_\_autoload</span> function has been removed.
@@ -147,10 +147,10 @@ this means that `0 == "not-a-number"` is considered false now.
     ?>
     ```
 
--   Arguments with a default value that resolves to **`NULL`** at
+-   Arguments with a default value that resolves to **`null`** at
     runtime will no longer implicitly mark the argument type as
     nullable. Either an explicit nullable type, or an explicit
-    **`NULL`** default value has to be used instead.
+    **`null`** default value has to be used instead.
 
     ``` php
     <?php
@@ -395,7 +395,7 @@ Several
 <a href="/language/types/resource.html" class="link">resource</a>s have
 been migrated to <span class="type">object</span>s. Return value checks
 using <span class="function">is\_resource</span> should be replaced with
-checks for **`FALSE`**.
+checks for **`false`**.
 
 -   <span class="function">curl\_init</span> will now return a <span
     class="classname">CurlHandle</span> object rather than a
@@ -560,7 +560,7 @@ removed in the latest version of the DOM standard:
 -   <span class="function">enchant\_broker\_list\_dicts</span>, <span
     class="function">enchant\_broker\_describe</span> and <span
     class="function">enchant\_dict\_suggest</span> will now return an
-    empty array instead of **`NULL`**.
+    empty array instead of **`null`**.
 
 ### Exif
 
@@ -629,7 +629,7 @@ errors are no longer supported.
 -   The interface of <span
     class="function">ldap\_set\_rebind\_proc</span> has changed; the
     `callback` parameter does not accept empty strings anymore;
-    **`NULL`** should be used instead.
+    **`null`** should be used instead.
 
 ### MBString
 
@@ -711,7 +711,7 @@ errors are no longer supported.
     (*ISO\_8859\_\** and *ISO8859\_\**) have also been removed.
 
 -   <span class="function">mb\_ereg</span> and <span
-    class="function">mb\_eregi</span> will now return boolean **`TRUE`**
+    class="function">mb\_eregi</span> will now return boolean **`true`**
     on a successfuly match. Previously they returned integer *1* if
     `matches` was not passed, or `max(1, strlen($matches[0]))` if
     `matches` was passed.
@@ -773,7 +773,7 @@ has been removed.
 actual transaction state of the connection, rather than an approximation
 maintained by PDO. If a query that is subject to "implicit commit" is
 executed, <span class="methodname">PDO::inTransaction</span> will
-subsequently return **`FALSE`**, as a transaction is no longer active.
+subsequently return **`false`**, as a transaction is no longer active.
 
 ### PostgreSQL
 
@@ -787,7 +787,7 @@ subsequently return **`FALSE`**, as a transaction is no longer active.
     connection should be passed as first argument instead.
 
 -   <span class="function">pg\_fetch\_all</span> will now return an
-    empty array instead of **`FALSE`** for result sets with zero rows.
+    empty array instead of **`false`** for result sets with zero rows.
 
 ### Phar
 
@@ -827,7 +827,7 @@ instantiation, autoloading, etc.
 
 -   <span class="methodname">ReflectionMethod::isConstructor</span> and
     <span class="methodname">ReflectionMethod::isDestructor</span> now
-    also return **`TRUE`** for
+    also return **`true`** for
     <a href="/language/oop5/decon.html#object.construct" class="link">__construct()</a>
     and
     <a href="/language/oop5/decon.html#object.destruct" class="link">__destruct()</a>
@@ -860,12 +860,12 @@ instantiation, autoloading, etc.
 -   <span class="methodname">SplDoublyLinkedList::push</span>, <span
     class="methodname">SplDoublyLinkedList::unshift</span> and <span
     class="methodname">SplQueue::enqueue</span> now return <span
-    class="type">void</span> instead of **`TRUE`**.
+    class="type">void</span> instead of **`true`**.
 
 -   <span class="function">spl\_autoload\_register</span> will now
     always throw a <span class="classname">TypeError</span> on invalid
     arguments, therefore the second argument `do_throw` is ignored and a
-    notice will be emitted if it is set to **`FALSE`**.
+    notice will be emitted if it is set to **`false`**.
 
 -   <span class="classname">SplFixedArray</span> is now an <span
     class="interfacename">IteratorAggregate</span> and not an <span
@@ -922,14 +922,14 @@ instantiation, autoloading, etc.
 -   The `length` argument for <span class="function">substr</span>,
     <span class="function">substr\_count</span>, <span
     class="function">substr\_compare</span>, and <span
-    class="function">iconv\_substr</span> can now be **`NULL`**.
-    **`NULL`** values will behave as if no length argument was provided
+    class="function">iconv\_substr</span> can now be **`null`**.
+    **`null`** values will behave as if no length argument was provided
     and will therefore return the remainder of the string instead of an
     empty string.
 
 -   The `length` argument for <span
-    class="function">array\_splice</span> can now be **`NULL`**.
-    **`NULL`** values will behave identically to omitting the argument,
+    class="function">array\_splice</span> can now be **`null`**.
+    **`null`** values will behave identically to omitting the argument,
     thus removing everything from the `offset` to the end of the array.
 
 -   The `args` argument of <span class="function">vsprintf</span>, <span
@@ -944,7 +944,7 @@ instantiation, autoloading, etc.
 
 -   The <span class="function">quotemeta</span> function will now return
     an empty string if an empty string was passed. Previously
-    **`FALSE`** was returned.
+    **`false`** was returned.
 
 -   The following functions have been removed:
 
@@ -971,7 +971,7 @@ instantiation, autoloading, etc.
     -   `http://example.com/foo?# → query = "",   fragment = ""`
 
     Previously all cases resulted in query and fragment being
-    **`NULL`**.
+    **`null`**.
 
 -   <span class="function">var\_dump</span> and <span
     class="function">debug\_zval\_dump</span> will now print
@@ -986,7 +986,7 @@ instantiation, autoloading, etc.
     <a href="/language/oop5/magic.html#object.sleep" class="link">__sleep()</a>
     contains non-existing properties, these are now silently ignored.
     Previously, such properties would have been serialized as if they
-    had the value **`NULL`**.
+    had the value **`null`**.
 
 -   The default locale on startup is now always *"C"*. No locales are
     inherited from the environment by default. Previously, **`LC_ALL`**
@@ -1040,7 +1040,7 @@ instantiation, autoloading, etc.
     class="function">iconv\_substr</span> and <span
     class="function">grapheme\_substr</span> now consistently clamp
     out-of-bounds offsets to the string boundary. Previously,
-    **`FALSE`** was returned instead of the empty string in some cases.
+    **`false`** was returned instead of the empty string in some cases.
 
 -   On Windows, the program execution functions (<span
     class="function">proc\_open</span>, <span

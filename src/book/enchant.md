@@ -56,3 +56,38 @@ Enchant spelling library
     -   [enchant\_dict\_suggest](/ref/enchant.html#enchant_dict_suggest)
         — Will return a list of values if any of those pre-conditions
         are not met
+-   [EnchantBroker](/class/enchantbroker.html) — The EnchantBroker class
+-   [EnchantDictionary](/class/enchantdictionary.html) — The
+    EnchantDictionary class
+
+Introduction
+------------
+
+A fully opaque class which replaces *enchant\_broker* resources as of
+PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**EnchantBroker**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**EnchantBroker** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *enchant\_dict* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**EnchantDictionary**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**EnchantDictionary** </span> {
+
+}

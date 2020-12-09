@@ -90,7 +90,7 @@ profiling.
 
 ### Return Values
 
-**`NULL`**
+**`null`**
 
 ### Changelog
 
@@ -201,7 +201,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`NULL`**
+**`null`**
 
 ### See Also
 

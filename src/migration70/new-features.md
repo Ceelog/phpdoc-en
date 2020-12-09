@@ -86,7 +86,7 @@ reference.
 The null coalescing operator (*??*) has been added as syntactic sugar
 for the common case of needing to use a ternary in conjunction with
 <span class="function">isset</span>. It returns its first operand if it
-exists and is not **`NULL`**; otherwise it returns its second operand.
+exists and is not **`null`**; otherwise it returns its second operand.
 
 ``` php
 <?php

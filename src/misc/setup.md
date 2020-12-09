@@ -41,7 +41,7 @@ For further details and definitions of the PHP\_INI\_\* modes, see the
 Here's a short explanation of the configuration directives.
 
 `ignore_user_abort` <span class="type">bool</span>  
-**`FALSE`** by default. If changed to **`TRUE`** scripts will not be
+**`false`** by default. If changed to **`true`** scripts will not be
 terminated after a client has aborted their connection.
 
 See also <span class="function">ignore\_user\_abort</span>.

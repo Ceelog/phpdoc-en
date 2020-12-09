@@ -25,7 +25,7 @@ Otherwise a 404 response code is returned.
 
 If a PHP file is given on the command line when the web server is
 started it is treated as a "router" script. The script is run at the
-start of each HTTP request. If this script returns **`FALSE`**, then the
+start of each HTTP request. If this script returns **`false`**, then the
 requested resource is returned as-is. Otherwise the script's output is
 returned to the browser.
 

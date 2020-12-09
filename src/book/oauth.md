@@ -362,7 +362,7 @@ class="methodparam">void</span> )
 
 Turns off verbose request information (off by default). Alternatively,
 the <a href="/class/oauth.html#" class="link">debug</a> property can be
-set to a **`FALSE`** value to turn debug off.
+set to a **`false`** value to turn debug off.
 
 ### Parameters
 
@@ -370,7 +370,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### Changelog
 
@@ -407,7 +407,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### See Also
 
@@ -426,7 +426,7 @@ class="methodparam">void</span> )
 
 Turns off the usual SSL peer certificate and host checks, this is not
 for production environments. Alternatively, the `sslChecks` member can
-be set to **`FALSE`** to turn SSL checks off.
+be set to **`false`** to turn SSL checks off.
 
 ### Parameters
 
@@ -434,7 +434,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### Changelog
 
@@ -459,7 +459,7 @@ class="methodparam">void</span> )
 
 Turns on verbose request information useful for debugging, the debug
 information is stored in the `debugInfo` member. Alternatively, the
-`debug` member can be set to a non-**`FALSE`** value to turn debug on.
+`debug` member can be set to a non-**`false`** value to turn debug on.
 
 ### Parameters
 
@@ -467,7 +467,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### Changelog
 
@@ -503,7 +503,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### See Also
 
@@ -522,7 +522,7 @@ class="methodparam">void</span> )
 
 Turns on the usual SSL peer certificate and host checks (enabled by
 default). Alternatively, the `sslChecks` member can be set to a
-non-**`FALSE`** value to turn SSL checks off.
+non-**`false`** value to turn SSL checks off.
 
 ### Parameters
 
@@ -530,7 +530,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### Changelog
 
@@ -582,13 +582,13 @@ HTTP client headers (such as User-Agent, Accept, etc.)
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
 | Version           | Description                                                        |
 |-------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0  | Previously returned **`null`** on failure, instead of **`false`**. |
 | PECL oauth 0.99.5 | The `http_method` parameter was added                              |
 | PECL oauth 0.99.8 | The `http_headers` parameter was added                             |
 
@@ -652,7 +652,7 @@ String or array of additional parameters.
 
 ### Return Values
 
-A string containing the generated signature or **`FALSE`** on failure
+A string containing the generated signature or **`false`** on failure
 
 OAuth::getAccessToken
 =====================
@@ -700,13 +700,13 @@ HTTP method to use, e.g. *GET* or *POST*.
 ### Return Values
 
 Returns an array containing the parsed OAuth response on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
 | Version           | Description                                                        |
 |-------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0  | Previously returned **`null`** on failure, instead of **`false`**. |
 | PECL oauth 0.99.9 | The `verifier_token` parameter was added                           |
 
 ### Examples
@@ -825,7 +825,7 @@ This function has no parameters.
 
 ### Return Values
 
-A string containing the last response's headers or **`FALSE`** on
+A string containing the last response's headers or **`false`** on
 failure
 
 OAuth::getLastResponseInfo
@@ -888,7 +888,7 @@ String or array of additional parameters.
 
 ### Return Values
 
-A string containing the generated request header or **`FALSE`** on
+A string containing the generated request header or **`false`** on
 failure
 
 OAuth::getRequestToken
@@ -924,13 +924,13 @@ HTTP method to use, e.g. *GET* or *POST*.
 ### Return Values
 
 Returns an array containing the parsed OAuth response on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
 | Version           | Description                                                        |
 |-------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0  | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0  | Previously returned **`null`** on failure, instead of **`false`**. |
 | PECL oauth 0.99.9 | The `callback_url` parameter was added                             |
 
 ### Examples
@@ -1003,14 +1003,14 @@ request body. </span>
 
 ### Return Values
 
-Returns **`TRUE`** if a parameter is correctly set, otherwise
-**`FALSE`** (e.g., if an invalid `auth_type` is passed in.)
+Returns **`true`** if a parameter is correctly set, otherwise
+**`false`** (e.g., if an invalid `auth_type` is passed in.)
 
 ### Changelog
 
 | Version          | Description                                                        |
 |------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0 | Previously returned **`null`** on failure, instead of **`false`**. |
 
 OAuth::setCAPath
 ================
@@ -1042,14 +1042,14 @@ The CA Info being set.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** if either `ca_path` or
+Returns **`true`** on success, or **`false`** if either `ca_path` or
 `ca_info` are considered invalid.
 
 ### Changelog
 
 | Version          | Description                                                        |
 |------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0 | Previously returned **`null`** on failure, instead of **`false`**. |
 
 ### See Also
 
@@ -1075,14 +1075,14 @@ The value for oauth\_nonce.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** if the `nonce` is
+Returns **`true`** on success, or **`false`** if the `nonce` is
 considered invalid.
 
 ### Changelog
 
 | Version          | Description                                                        |
 |------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0 | Previously returned **`null`** on failure, instead of **`false`**. |
 
 ### See Also
 
@@ -1168,14 +1168,14 @@ The RSA certificate.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure (e.g., the RSA
+Returns **`true`** on success, or **`false`** on failure (e.g., the RSA
 certificate cannot be parsed.)
 
 ### Changelog
 
 | Version          | Description                                                        |
 |------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0 | Previously returned **`null`** on failure, instead of **`false`**. |
 
 ### Examples
 
@@ -1218,7 +1218,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 OAuth::setTimestamp
 ===================
@@ -1246,14 +1246,14 @@ The timestamp.
 
 ### Return Values
 
-Returns **`TRUE`**, unless the `timestamp` is invalid, in which case
-**`FALSE`** is returned.
+Returns **`true`**, unless the `timestamp` is invalid, in which case
+**`false`** is returned.
 
 ### Changelog
 
 | Version          | Description                                                        |
 |------------------|--------------------------------------------------------------------|
-| PECL oauth 1.0.0 | Previously returned **`NULL`** on failure, instead of **`FALSE`**. |
+| PECL oauth 1.0.0 | Previously returned **`null`** on failure, instead of **`false`**. |
 
 ### See Also
 
@@ -1284,7 +1284,7 @@ The OAuth token secret.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### Examples
 
@@ -1317,7 +1317,7 @@ OAuth version, default value is always "1.0"
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Introduction
 ------------
@@ -1379,7 +1379,7 @@ class="methodparam"><span class="type">callable</span>
 <span class="methodname">generateToken</span> ( <span
 class="methodparam"><span class="type">int</span> `$size`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$strong`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">is2LeggedEndpoint</span> ( <span
@@ -1403,7 +1403,7 @@ class="methodparam"><span class="type">string</span>
 class="methodparam"><span class="type">string</span>
 `$oauthexception`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$send_headers`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">bool</span> <span class="methodname">setParam</span>
@@ -1455,7 +1455,7 @@ The required parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1746,7 +1746,7 @@ Generate a random token
 <span class="methodname">OAuthProvider::generateToken</span> ( <span
 class="methodparam"><span class="type">int</span> `$size`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$strong`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Generates a <span class="type">string</span> of pseudo-random bytes.
 
@@ -1756,7 +1756,7 @@ Generates a <span class="type">string</span> of pseudo-random bytes.
 The desired token length, in terms of bytes.
 
 `strong`  
-Setting to **`TRUE`** means */dev/random* will be used for entropy, as
+Setting to **`true`** means */dev/random* will be used for entropy, as
 otherwise the non-blocking */dev/urandom* is used. This parameter is
 ignored on Windows.
 
@@ -1766,7 +1766,7 @@ The generated token, as a <span class="type">string</span> of bytes.
 
 ### Errors/Exceptions
 
-If the `strong` parameter is **`TRUE`**, then an **`E_WARNING`** level
+If the `strong` parameter is **`true`**, then an **`E_WARNING`** level
 error will be emitted when the fallback <span
 class="function">rand</span> implementation is used to fill the
 remaining random bytes (e.g., when not enough random data was found,
@@ -1914,7 +1914,7 @@ The required parameter to be removed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1934,7 +1934,7 @@ Report a problem
 class="methodparam"><span class="type">string</span>
 `$oauthexception`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$send_headers`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Pass in a problem as an <span class="classname">OAuthException</span>,
 with possible problems listed in the
@@ -1991,11 +1991,11 @@ The parameter key.
 The optional parameter value.
 
 To exclude a parameter from signature verification, set its value to
-**`NULL`**.
+**`null`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2027,7 +2027,7 @@ The path.
 
 ### Return Values
 
-**`TRUE`**
+**`true`**
 
 ### See Also
 

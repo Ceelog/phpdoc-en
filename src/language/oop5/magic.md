@@ -49,7 +49,7 @@ function with the magic name
 If so, that function is executed prior to any serialization. It can
 clean up the object and is supposed to return an array with the names of
 all variables of that object that should be serialized. If the method
-doesn't return anything then **`NULL`** is serialized and **`E_NOTICE`**
+doesn't return anything then **`null`** is serialized and **`E_NOTICE`**
 is issued.
 
 > **Note**:

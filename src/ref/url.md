@@ -10,7 +10,7 @@ class="type">false</span></span> <span
 class="methodname">base64\_decode</span> ( <span
 class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$strict`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Decodes a base64 encoded `data`.
 
@@ -20,14 +20,14 @@ Decodes a base64 encoded `data`.
 The encoded data.
 
 `strict`  
-If the `strict` parameter is set to **`TRUE`** then the <span
-class="function">base64\_decode</span> function will return **`FALSE`**
+If the `strict` parameter is set to **`true`** then the <span
+class="function">base64\_decode</span> function will return **`false`**
 if the input contains character from outside the base64 alphabet.
 Otherwise invalid characters will be silently discarded.
 
 ### Return Values
 
-Returns the decoded data or **`FALSE`** on failure. The returned data
+Returns the decoded data or **`false`** on failure. The returned data
 may be binary.
 
 ### Examples
@@ -136,7 +136,7 @@ class="function">stream\_context\_create</span>.
 
 ### Return Values
 
-Returns an indexed or associative array with the headers, or **`FALSE`**
+Returns an indexed or associative array with the headers, or **`false`**
 on failure.
 
 ### Changelog
@@ -222,7 +222,7 @@ class="methodname">get\_meta\_tags</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Opens `filename` and parses it line by line for \<meta\> tags in the
 file. The parsing stops at *\</head\>*.
@@ -248,7 +248,7 @@ parses**
 input, so a Mac file won't work on Unix).
 
 `use_include_path`  
-Setting `use_include_path` to **`TRUE`** will result in PHP trying to
+Setting `use_include_path` to **`true`** will result in PHP trying to
 open the file along the standard include path as per the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 directive. This is used for local files, not URLs.
@@ -519,7 +519,7 @@ which case the return value will be an <span class="type">int</span>).
 ### Return Values
 
 On seriously malformed URLs, <span class="function">parse\_url</span>
-may return **`FALSE`**.
+may return **`false`**.
 
 If the `component` parameter is omitted, an associative <span
 class="type">array</span> is returned. At least one element will be
@@ -539,7 +539,7 @@ class="function">parse\_url</span> returns a <span
 class="type">string</span> (or an <span class="type">int</span>, in the
 case of **`PHP_URL_PORT`**) instead of an <span
 class="type">array</span>. If the requested component doesn't exist
-within the given URL, **`NULL`** will be returned.
+within the given URL, **`null`** will be returned.
 
 ### Examples
 

@@ -65,7 +65,7 @@ anywhere in a script without regard to scope. For more information on
 scope, read the manual section on
 <a href="/language/variables/scope.html" class="link">variable scope</a>.
 
-> **Note**: <span class="simpara"> As of PHP 7.4.0, class constant may
+> **Note**: <span class="simpara"> As of PHP 7.1.0, class constant may
 > declare a visibility of protected or private, making them only
 > available in the hierarchical scope of the class in which it is is
 > defined. </span>

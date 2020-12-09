@@ -17,7 +17,7 @@ This function has no parameters.
 
 ### Return Values
 
-It returns a string on success and **`FALSE`** on failure.
+It returns a string on success and **`false`** on failure.
 
 ### Errors/Exceptions
 

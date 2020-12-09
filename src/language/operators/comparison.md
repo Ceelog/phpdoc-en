@@ -8,15 +8,15 @@ as they show examples of various type related comparisons.
 
 | Example     | Name                     | Result                                                                                                                                           |
 |-------------|--------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------|
-| $a == $b    | Equal                    | **`TRUE`** if `$a` is equal to `$b` after type juggling.                                                                                         |
-| $a === $b   | Identical                | **`TRUE`** if `$a` is equal to `$b`, and they are of the same type.                                                                              |
-| $a != $b    | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                     |
-| $a \<\> $b  | Not equal                | **`TRUE`** if `$a` is not equal to `$b` after type juggling.                                                                                     |
-| $a !== $b   | Not identical            | **`TRUE`** if `$a` is not equal to `$b`, or they are not of the same type.                                                                       |
-| $a \< $b    | Less than                | **`TRUE`** if `$a` is strictly less than `$b`.                                                                                                   |
-| $a \> $b    | Greater than             | **`TRUE`** if `$a` is strictly greater than `$b`.                                                                                                |
-| $a \<= $b   | Less than or equal to    | **`TRUE`** if `$a` is less than or equal to `$b`.                                                                                                |
-| $a \>= $b   | Greater than or equal to | **`TRUE`** if `$a` is greater than or equal to `$b`.                                                                                             |
+| $a == $b    | Equal                    | **`true`** if `$a` is equal to `$b` after type juggling.                                                                                         |
+| $a === $b   | Identical                | **`true`** if `$a` is equal to `$b`, and they are of the same type.                                                                              |
+| $a != $b    | Not equal                | **`true`** if `$a` is not equal to `$b` after type juggling.                                                                                     |
+| $a \<\> $b  | Not equal                | **`true`** if `$a` is not equal to `$b` after type juggling.                                                                                     |
+| $a !== $b   | Not identical            | **`true`** if `$a` is not equal to `$b`, or they are not of the same type.                                                                       |
+| $a \< $b    | Less than                | **`true`** if `$a` is strictly less than `$b`.                                                                                                   |
+| $a \> $b    | Greater than             | **`true`** if `$a` is strictly greater than `$b`.                                                                                                |
+| $a \<= $b   | Less than or equal to    | **`true`** if `$a` is less than or equal to `$b`.                                                                                                |
+| $a \>= $b   | Greater than or equal to | **`true`** if `$a` is greater than or equal to `$b`.                                                                                             |
 | $a \<=\> $b | Spaceship                | An <span class="type">int</span> less than, equal to, or greater than zero when `$a` is less than, equal to, or greater than `$b`, respectively. |
 
 If both operands are
@@ -107,8 +107,8 @@ For various types, comparison is done according to the following table
 
 | Type of Operand 1                                                                                                                      | Type of Operand 2                                                                                                                      | Result                                                                                                                                                                                |
 |----------------------------------------------------------------------------------------------------------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| <span class="type">null</span> or <span class="type">string</span>                                                                     | <span class="type">string</span>                                                                                                       | Convert **`NULL`** to "", numerical or lexical comparison                                                                                                                             |
-| <span class="type">bool</span> or <span class="type">null</span>                                                                       | anything                                                                                                                               | Convert both sides to <span class="type">bool</span>, **`FALSE`** \< **`TRUE`**                                                                                                       |
+| <span class="type">null</span> or <span class="type">string</span>                                                                     | <span class="type">string</span>                                                                                                       | Convert **`null`** to "", numerical or lexical comparison                                                                                                                             |
+| <span class="type">bool</span> or <span class="type">null</span>                                                                       | anything                                                                                                                               | Convert both sides to <span class="type">bool</span>, **`false`** \< **`true`**                                                                                                       |
 | <span class="type">object</span>                                                                                                       | <span class="type">object</span>                                                                                                       | Built-in classes can define its own comparison, different classes are uncomparable, same class see <a href="/language/oop5/object-comparison.html" class="link">Object Comparison</a> |
 | <span class="type">string</span>, <span class="type">resource</span>, <span class="type">int</span> or <span class="type">float</span> | <span class="type">string</span>, <span class="type">resource</span>, <span class="type">int</span> or <span class="type">float</span> | Translate strings and resources to numbers, usual math                                                                                                                                |
 | <span class="type">array</span>                                                                                                        | <span class="type">array</span>                                                                                                        | Array with fewer members is smaller, if key from operand 1 is not found in operand 2 then arrays are uncomparable, otherwise - compare value by value (see following example)         |
@@ -193,14 +193,14 @@ if (empty($_POST['action'])) {
 
 The expression *(expr1) ? (expr2) : (expr3)* evaluates to <span
 class="replaceable">expr2</span> if <span
-class="replaceable">expr1</span> evaluates to **`TRUE`**, and <span
+class="replaceable">expr1</span> evaluates to **`true`**, and <span
 class="replaceable">expr3</span> if <span
-class="replaceable">expr1</span> evaluates to **`FALSE`**.
+class="replaceable">expr1</span> evaluates to **`false`**.
 
 It is possible to leave out the middle part of the ternary operator.
 Expression *expr1 ?: expr3* returns <span
 class="replaceable">expr1</span> if <span
-class="replaceable">expr1</span> evaluates to **`TRUE`**, and <span
+class="replaceable">expr1</span> evaluates to **`true`**, and <span
 class="replaceable">expr3</span> otherwise.
 
 > **Note**: <span class="simpara"> Please note that the ternary operator
@@ -260,7 +260,7 @@ if (isset($_POST['action'])) {
 
 The expression *(expr1) ?? (expr2)* evaluates to <span
 class="replaceable">expr2</span> if <span
-class="replaceable">expr1</span> is **`NULL`**, and <span
+class="replaceable">expr1</span> is **`null`**, and <span
 class="replaceable">expr1</span> otherwise.
 
 In particular, this operator does not emit a notice or warning if the

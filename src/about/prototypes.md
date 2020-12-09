@@ -47,8 +47,8 @@ class="function">in\_array</span>. Its prototype is as follows:
 
 What does this mean? in\_array() returns a
 <a href="/language/types/boolean.html" class="link">boolean</a> value,
-**`TRUE`** on success (if the `needle` was found in the `haystack`) or
-**`FALSE`** on failure (if the `needle` was not found in the
+**`true`** on success (if the `needle` was found in the `haystack`) or
+**`false`** on failure (if the `needle` was not found in the
 `haystack`). The first parameter is named `needle` and it can be of many
 different <a href="/language/types.html" class="link">types</a>, so we
 call it "*mixed*". This mixed `needle` (what we're looking for) can be
@@ -58,7 +58,7 @@ either a scalar value (string, integer, or
 (the array we're searching in) is the second parameter. The third
 *optional* parameter is named `strict`. All optional parameters are seen
 in *\[* brackets *\]*. The manual states that the `strict` parameter
-defaults to boolean **`FALSE`**. See the manual page on each function
+defaults to boolean **`false`**. See the manual page on each function
 for details on how they work.
 
 In addition the & (ampersand) symbol prepended to a function parameter

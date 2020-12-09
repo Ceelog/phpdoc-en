@@ -31,7 +31,7 @@ just query their current settings.
 | ASSERT\_WARNING     | assert.warning     | 1             | issue a PHP warning for each failed assertion                   |
 | ASSERT\_BAIL        | assert.bail        | 0             | terminate execution on failed assertions                        |
 | ASSERT\_QUIET\_EVAL | assert.quiet\_eval | 0             | disable error\_reporting during assertion expression evaluation |
-| ASSERT\_CALLBACK    | assert.callback    | (**`NULL`**)  | Callback to call on failed assertions                           |
+| ASSERT\_CALLBACK    | assert.callback    | (**`null`**)  | Callback to call on failed assertions                           |
 
 `value`  
 An optional new value for the option.
@@ -67,7 +67,7 @@ Passing an empty string as `value` resets the assert callback.
 
 ### Return Values
 
-Returns the original setting of any option or **`FALSE`** on errors.
+Returns the original setting of any option or **`false`** on errors.
 
 ### Examples
 
@@ -110,7 +110,7 @@ echo 'Never reached';
 assert
 ======
 
-Checks if assertion is **`FALSE`**
+Checks if assertion is **`false`**
 
 ### Description
 
@@ -129,7 +129,7 @@ PHP 7
 class="type">Throwable</span> `$exception`</span> \] )
 
 <span class="function">assert</span> will check the given `assertion`
-and take appropriate action if its result is **`FALSE`**.
+and take appropriate action if its result is **`false`**.
 
 #### Traditional assertions (PHP 5 and 7)
 
@@ -138,12 +138,12 @@ by <span class="function">assert</span>. If you pass a boolean condition
 as `assertion`, this condition will not show up as parameter to the
 assertion function which you may have defined with <span
 class="function">assert\_options</span>. The condition is converted to a
-string before calling that handler function, and the boolean **`FALSE`**
+string before calling that handler function, and the boolean **`false`**
 is converted as the empty string.
 
 Assertions should be used as a debugging feature only. You may use them
 for sanity-checks that test for conditions that should always be
-**`TRUE`** and that indicate some programming errors if not or to check
+**`true`** and that indicate some programming errors if not or to check
 for the presence of certain features like extension functions or certain
 system limits and features.
 
@@ -251,7 +251,7 @@ configuration directive is enabled.
 
 ### Return Values
 
-**`FALSE`** if the assertion is false, **`TRUE`** otherwise.
+**`false`** if the assertion is false, **`true`** otherwise.
 
 ### Changelog
 
@@ -430,7 +430,7 @@ This function has no parameters.
 
 ### Return Values
 
-Return a string with the current process title or **`NULL`** on error.
+Return a string with the current process title or **`null`** on error.
 
 ### Errors/Exceptions
 
@@ -474,7 +474,7 @@ The new title.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -564,12 +564,12 @@ Taking into account the above, the directory then defaults to
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If the
+Returns **`true`** on success or **`false`** on failure. If the
 functionality of loading modules is not available or has been disabled
 (by setting <a href="/info/setup.html#" class="link">enable_dl</a> off
 in `php.ini`) an **`E_ERROR`** is emitted and execution is stopped. If
 <span class="function">dl</span> fails because the specified library
-couldn't be loaded, in addition to **`FALSE`** an **`E_WARNING`**
+couldn't be loaded, in addition to **`false`** an **`E_WARNING`**
 message is emitted.
 
 ### Examples
@@ -654,8 +654,8 @@ extensions:
 
 ### Return Values
 
-Returns **`TRUE`** if the extension identified by `name` is loaded,
-**`FALSE`** otherwise.
+Returns **`true`** if the extension identified by `name` is loaded,
+**`false`** otherwise.
 
 ### Examples
 
@@ -775,7 +775,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the garbage collector is enabled, **`FALSE`**
+Returns **`true`** if the garbage collector is enabled, **`false`**
 otherwise.
 
 ### Examples
@@ -911,7 +911,7 @@ The configuration option name.
 ### Return Values
 
 Returns the current value of the PHP configuration variable specified by
-`option`, or **`FALSE`** if an error occurs.
+`option`, or **`false`** if an error occurs.
 
 ### See Also
 
@@ -968,7 +968,7 @@ their values
 <span class="type">array</span> <span
 class="methodname">get\_defined\_constants</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$categorize`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns the names and values of all the constants currently defined.
 This includes those created by extensions as well as those created with
@@ -1095,7 +1095,7 @@ The module name.
 
 ### Return Values
 
-Returns an array with all the functions, or **`FALSE`** if `module_name`
+Returns an array with all the functions, or **`false`** if `module_name`
 is not a valid extension.
 
 ### Examples
@@ -1259,7 +1259,7 @@ Returns an array with the names of all modules compiled and loaded
 <span class="type">array</span> <span
 class="methodname">get\_loaded\_extensions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$zend_extensions`<span class="initializer"> = **`FALSE`**</span></span>
+`$zend_extensions`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 This function returns the names of all the modules compiled and loaded
@@ -1269,7 +1269,7 @@ in the PHP interpreter.
 
 `zend_extensions`  
 Only return Zend extensions, if not then regular extensions, like mysqli
-are listed. Defaults to **`FALSE`** (return regular extensions).
+are listed. Defaults to **`false`** (return regular extensions).
 
 ### Return Values
 
@@ -1340,7 +1340,7 @@ For more information about magic\_quotes, see this
 ### Return Values
 
 Returns 0 if magic\_quotes\_gpc is off, 1 otherwise. Or always returns
-**`FALSE`** as of PHP 5.4.0.
+**`false`** as of PHP 5.4.0.
 
 ### Changelog
 
@@ -1404,7 +1404,7 @@ Returns the current active configuration setting of
 ### Return Values
 
 Returns 0 if magic\_quotes\_runtime is off, 1 otherwise. Or always
-returns **`FALSE`** as of PHP 5.4.0.
+returns **`false`** as of PHP 5.4.0.
 
 ### Changelog
 
@@ -1529,7 +1529,7 @@ Gets the value of an environment variable
 ( <span class="methodparam"><span class="type">string</span>
 `$varname`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$local_only`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="type">array</span> <span class="methodname">getenv</span> (
 <span class="methodparam">void</span> )
@@ -1553,7 +1553,7 @@ operating system or putenv).
 
 ### Return Values
 
-Returns the value of the environment variable `varname`, or **`FALSE`**
+Returns the value of the environment variable `varname`, or **`false`**
 if the environment variable `varname` does not exist. If `varname` is
 omitted, all environment variables are returned as associative <span
 class="type">array</span>.
@@ -1618,7 +1618,7 @@ different file, consider using <span class="function">filemtime</span>.
 
 Returns the time of the last modification of the current page. The value
 returned is a Unix timestamp, suitable for feeding to <span
-class="function">date</span>. Returns **`FALSE`** on error.
+class="function">date</span>. Returns **`false`** on error.
 
 ### Examples
 
@@ -1655,7 +1655,7 @@ Gets the group ID of the current script.
 
 ### Return Values
 
-Returns the group ID of the current script, or **`FALSE`** on error.
+Returns the group ID of the current script, or **`false`** on error.
 
 ### See Also
 
@@ -1679,7 +1679,7 @@ Gets the inode of the current script.
 
 ### Return Values
 
-Returns the current script's inode as an integer, or **`FALSE`** on
+Returns the current script's inode as an integer, or **`false`** on
 error.
 
 ### See Also
@@ -1704,7 +1704,7 @@ Gets the current PHP process ID.
 
 ### Return Values
 
-Returns the current PHP process ID, or **`FALSE`** on error.
+Returns the current PHP process ID, or **`false`** on error.
 
 ### Notes
 
@@ -1735,7 +1735,7 @@ Gets the user ID of the current script.
 
 ### Return Values
 
-Returns the user ID of the current script, or **`FALSE`** on error.
+Returns the user ID of the current script, or **`false`** on error.
 
 ### See Also
 
@@ -1806,7 +1806,7 @@ or not. See note.
 ### Return Values
 
 This function will return an array of option / argument pairs, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 > **Note**:
 >
@@ -2055,7 +2055,7 @@ Gets all configuration options
 class="methodname">ini\_get\_all</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$details`<span class="initializer"> = **`TRUE`**</span></span> \]\] )
+`$details`<span class="initializer"> = **`true`**</span></span> \]\] )
 
 Returns all the registered configuration options.
 
@@ -2067,20 +2067,20 @@ specific for that extension.
 
 `details`  
 Retrieve details settings or only the current value for each setting.
-Default is **`TRUE`** (retrieve details).
+Default is **`true`** (retrieve details).
 
 ### Return Values
 
 Returns an associative array with directive name as the array key.
-Returns **`FALSE`** and raises an **`E_WARNING`** level error if the
+Returns **`false`** and raises an **`E_WARNING`** level error if the
 `extension` doesn't exist.
 
-When `details` is **`TRUE`** (default) the array will contain
+When `details` is **`true`** (default) the array will contain
 *global\_value* (set in `php.ini`), *local\_value* (perhaps set with
 <span class="function">ini\_set</span> or `.htaccess`), and *access*
 (the access level).
 
-When `details` is **`FALSE`** the value will be the current value of the
+When `details` is **`false`** the value will be the current value of the
 option.
 
 See the
@@ -2203,7 +2203,7 @@ The configuration option name.
 ### Return Values
 
 Returns the value of the configuration option as a string on success, or
-an empty string for *null* values. Returns **`FALSE`** if the
+an empty string for *null* values. Returns **`false`** if the
 configuration option doesn't exist.
 
 ### Examples
@@ -2277,7 +2277,7 @@ The above example will output something similar to:
 > **Note**:
 >
 > <span class="function">ini\_get</span> can't read "array" ini options
-> such as pdo.dsn.\*, and returns **`FALSE`** in this case.
+> such as pdo.dsn.\*, and returns **`false`** in this case.
 
 ### See Also
 
@@ -2367,7 +2367,7 @@ The new value for the option.
 
 ### Return Values
 
-Returns the old value on success, **`FALSE`** on failure.
+Returns the old value on success, **`false`** on failure.
 
 ### Examples
 
@@ -2439,7 +2439,7 @@ Returns the peak of memory allocated by PHP
 <span class="type">int</span> <span
 class="methodname">memory\_get\_peak\_usage</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$real_usage`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns the peak of memory, in bytes, that's been allocated to your PHP
 script.
@@ -2447,8 +2447,8 @@ script.
 ### Parameters
 
 `real_usage`  
-Set this to **`TRUE`** to get the real size of memory allocated from
-system. If not set or **`FALSE`** only the memory used by *emalloc()* is
+Set this to **`true`** to get the real size of memory allocated from
+system. If not set or **`false`** only the memory used by *emalloc()* is
 reported.
 
 ### Return Values
@@ -2470,7 +2470,7 @@ Returns the amount of memory allocated to PHP
 <span class="type">int</span> <span
 class="methodname">memory\_get\_usage</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$real_usage`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns the amount of memory, in bytes, that's currently being allocated
 to your PHP script.
@@ -2478,8 +2478,8 @@ to your PHP script.
 ### Parameters
 
 `real_usage`  
-Set this to **`TRUE`** to get total memory allocated from system,
-including unused pages. If not set or **`FALSE`** only the used memory
+Set this to **`true`** to get total memory allocated from system,
+including unused pages. If not set or **`false`** only the used memory
 is reported.
 
 > **Note**:
@@ -2537,7 +2537,7 @@ This function has no parameters.
 
 ### Return Values
 
-The loaded `php.ini` path, or **`FALSE`** if one is not loaded.
+The loaded `php.ini` path, or **`false`** if one is not loaded.
 
 ### Examples
 
@@ -2591,7 +2591,7 @@ The returned configuration files include the full path.
 Returns a comma-separated string of .ini files on success. Each comma is
 followed by a newline. If the configure directive
 **--with-config-file-scan-dir** wasn't set and the `PHP_INI_SCAN_DIR`
-environment variable isn't set, **`FALSE`** is returned. If it was set
+environment variable isn't set, **`false`** is returned. If it was set
 and the directory was empty, an empty string is returned. If a file is
 unrecognizable, the file will still make it into the returned string but
 a PHP error will also result. This PHP error will be seen both at
@@ -2814,7 +2814,7 @@ parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2914,7 +2914,7 @@ values together with the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2981,7 +2981,7 @@ An optional extension name.
 
 If the optional `extension` parameter is specified, <span
 class="function">phpversion</span> returns the version of that
-extension, or **`FALSE`** if there is no version information associated
+extension, or **`false`** if there is no version information associated
 or the extension isn't enabled.
 
 ### Examples
@@ -3072,7 +3072,7 @@ The setting, like *"FOO=BAR"*
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3172,7 +3172,7 @@ The new value for the
 
 Returns the old
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
-on success or **`FALSE`** on failure.
+on success or **`false`** on failure.
 
 ### Examples
 
@@ -3239,7 +3239,7 @@ imposed.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure.
+Returns **`true`** on success, or **`false`** on failure.
 
 ### Notes
 
@@ -3358,8 +3358,8 @@ if the first version is lower than the second, *0* if they are equal,
 and *1* if the second is lower.
 
 When using the optional `operator` argument, the function will return
-**`TRUE`** if the relationship is the one specified by the operator,
-**`FALSE`** otherwise. If an unsupported `operator` is given, **`NULL`**
+**`true`** if the relationship is the one specified by the operator,
+**`false`** otherwise. If an unsupported `operator` is given, **`null`**
 is returned.
 
 ### Examples
@@ -3497,7 +3497,7 @@ The above example will output something similar to:
 
 -   [assert\_options](/ref/info.html#assert_options) — Set/get the
     various assert flags
--   [assert](/ref/info.html#assert) — Checks if assertion is FALSE
+-   [assert](/ref/info.html#assert) — Checks if assertion is false
 -   [cli\_get\_process\_title](/ref/info.html#cli_get_process_title) —
     Returns the current process title
 -   [cli\_set\_process\_title](/ref/info.html#cli_set_process_title) —

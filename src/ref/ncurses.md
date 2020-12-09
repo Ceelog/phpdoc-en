@@ -441,8 +441,8 @@ This function has no parameters.
 
 ### Return Values
 
-Return **`TRUE`** if the programmer can change color definitions,
-**`FALSE`** otherwise.
+Return **`true`** if the programmer can change color definitions,
+**`false`** otherwise.
 
 ### See Also
 
@@ -473,7 +473,7 @@ immediately available to the program.
 
 ### Return Values
 
-Returns **`TRUE`** or **`NCURSES_ERR`** if any error occurred.
+Returns **`true`** or **`NCURSES_ERR`** if any error occurred.
 
 ### See Also
 
@@ -505,7 +505,7 @@ class="function">ncurses\_erase</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -534,7 +534,7 @@ current background rendition.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -564,7 +564,7 @@ background rendition.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -726,7 +726,7 @@ Saves the current terminal modes for program (in curses) for use by
 
 ### Return Values
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### See Also
 
@@ -754,7 +754,7 @@ Saves the current terminal modes for shell (not in curses) for use by
 
 ### Return Values
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### See Also
 
@@ -862,7 +862,7 @@ does not change.
 
 ### Return Values
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### See Also
 
@@ -891,7 +891,7 @@ cleared. Cursor position does not change.
 
 ### Return Values
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### See Also
 
@@ -947,7 +947,7 @@ calls.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ncurses\_echo
 =============
@@ -971,7 +971,7 @@ class="function">ncurses\_getch</span>.
 
 ### Return Values
 
-Returns **`FALSE`** on success, **`TRUE`** if any error occurred.
+Returns **`false`** on success, **`true`** if any error occurred.
 
 ### See Also
 
@@ -1049,7 +1049,7 @@ class="function">ncurses\_bkgd</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1127,7 +1127,7 @@ Flashes the screen, and if its not possible, sends an audible alert
 
 ### Return Values
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ### See Also
 
@@ -1155,7 +1155,7 @@ by your program.
 
 ### Return Values
 
-Returns **`FALSE`** on success, otherwise **`TRUE`**.
+Returns **`false`** on success, otherwise **`true`**.
 
 ncurses\_getch
 ==============
@@ -1259,8 +1259,8 @@ On success an associative array with following keys will be delivered:
 
 ### Return Values
 
-Returns **`FALSE`** if a mouse event is actually visible in the given
-window, otherwise returns **`TRUE`**.
+Returns **`false`** if a mouse event is actually visible in the given
+window, otherwise returns **`true`**.
 
 ### Examples
 
@@ -1362,7 +1362,7 @@ This function has no parameters.
 
 ### Return Values
 
-Return **`TRUE`** if the terminal has color capabilities, **`FALSE`**
+Return **`true`** if the terminal has color capabilities, **`false`**
 otherwise.
 
 ### Examples
@@ -1416,8 +1416,8 @@ Checks whether the terminal has insert and delete capabilities.
 
 ### Return Values
 
-Returns **`TRUE`** if the terminal has insert/delete-capabilities,
-**`FALSE`** otherwise.
+Returns **`true`** if the terminal has insert/delete-capabilities,
+**`false`** otherwise.
 
 ### See Also
 
@@ -1444,8 +1444,8 @@ Checks whether the terminal has insert- and delete-line-capabilities.
 
 ### Return Values
 
-Returns **`TRUE`** if the terminal has insert/delete-line capabilities,
-**`FALSE`** otherwise.
+Returns **`true`** if the terminal has insert/delete-line capabilities,
+**`false`** otherwise.
 
 ### See Also
 
@@ -1862,9 +1862,9 @@ Checks if ncurses is in endwin mode.
 
 ### Return Values
 
-Returns **`TRUE`**, if <span class="function">ncurses\_end</span> has
+Returns **`true`**, if <span class="function">ncurses\_end</span> has
 been called without any subsequent calls to <span
-class="function">ncurses\_wrefresh</span>, **`FALSE`** otherwise.
+class="function">ncurses\_wrefresh</span>, **`false`** otherwise.
 
 ### See Also
 
@@ -1974,7 +1974,7 @@ Returns a verbose description of the terminal.
 ### Return Values
 
 Returns the description, as a string truncated to 128 characters. On
-errors, returns **`NULL`**.
+errors, returns **`null`**.
 
 ### See Also
 
@@ -2784,7 +2784,7 @@ class="function">ncurses\_nocbreak</span> explicitly.
 
 ### Return Values
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### See Also
 
@@ -2811,7 +2811,7 @@ Prevents echoing of user typed characters.
 
 ### Return Values
 
-Returns **`TRUE`** if any error occurred, **`FALSE`** otherwise.
+Returns **`true`** if any error occurred, **`false`** otherwise.
 
 ### See Also
 
@@ -2887,7 +2887,7 @@ uninterpreted, instead of generating a signal.
 
 ### Return Values
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### See Also
 
@@ -3165,7 +3165,7 @@ uninterpreted, instead of generating a signal.
 
 ### Return Values
 
-Returns **`TRUE`** if any error occurred, otherwise **`FALSE`**.
+Returns **`true`** if any error occurred, otherwise **`false`**.
 
 ### See Also
 
@@ -3277,7 +3277,7 @@ class="function">ncurses\_savetty</span>.
 
 ### Return Values
 
-Always returns **`FALSE`**.
+Always returns **`false`**.
 
 ### See Also
 
@@ -3305,7 +3305,7 @@ restored with <span class="function">ncurses\_resetty</span>.
 
 ### Return Values
 
-Always returns **`FALSE`**.
+Always returns **`false`**.
 
 ### See Also
 
@@ -3588,7 +3588,7 @@ soft label keys from screen.
 
 ### Return Values
 
-Returns **`TRUE`** on errors, **`FALSE`** otherwise.
+Returns **`true`** on errors, **`false`** otherwise.
 
 ncurses\_slk\_color
 ===================
@@ -3652,7 +3652,7 @@ index line will be created.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ncurses\_slk\_noutrefresh
 =========================
@@ -3906,7 +3906,7 @@ Returns terminals shortname.
 ### Return Values
 
 Returns the shortname of the terminal, truncated to 14 characters. On
-errors, returns **`NULL`**.
+errors, returns **`null`**.
 
 ### See Also
 
@@ -4048,7 +4048,7 @@ An associative array specifying the event options:
 
 ### Return Values
 
-Returns **`FALSE`** on success, **`TRUE`** otherwise.
+Returns **`false`** on success, **`true`** otherwise.
 
 ### See Also
 

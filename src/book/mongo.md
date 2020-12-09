@@ -405,9 +405,9 @@ Return a BSON\_LONG as an instance of <span
 class="classname">MongoInt64</span> (instead of a primitive type).
 
 `mongo.native_long` <span class="type">int</span>  
-*The default behavior for this has been changed to **`TRUE`** in 1.5.0,
+*The default behavior for this has been changed to **`true`** in 1.5.0,
 so make sure to set this variable to the value you want (probably
-**`TRUE`**) so that the driver's behavior doesn't suddenly change when
+**`true`**) so that the driver's behavior doesn't suddenly change when
 you upgrade.*
 
 On 64-bit platforms, the *mongo.native\_long* setting allows for 64-bit
@@ -3550,16 +3550,16 @@ Class synopsis
 /\* Properties \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$connected` <span class="initializer"> = **`FALSE`**</span> ;
+`$connected` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">public</span> <span class="type">string</span>
-`$status` <span class="initializer"> = **`NULL`**</span> ;
+`$status` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$server` <span class="initializer"> = **`NULL`**</span> ;
+`$server` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">bool</span>
-`$persistent` <span class="initializer"> = **`NULL`**</span> ;
+`$persistent` <span class="initializer"> = **`null`**</span> ;
 
 /\* Methods \*/
 
@@ -3569,7 +3569,7 @@ class="methodparam"><span class="type">string</span> `$server`<span
 class="initializer"> = "mongodb://localhost:27017"</span></span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`<span class="initializer"> = array("connect" =\>
-**`TRUE`**)</span></span> \[, <span class="methodparam"><span
+**`true`**)</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$driver_options`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -3692,16 +3692,16 @@ Fields
 ------
 
 `connected`  
-This property will be set to **`TRUE`** if we have a open connection to
-the database, **`FALSE`** otherwise. If the connection is to a replica
-set, this property will only be **`TRUE`** if the driver has a
+This property will be set to **`true`** if we have a open connection to
+the database, **`false`** otherwise. If the connection is to a replica
+set, this property will only be **`true`** if the driver has a
 connection to a node matching the current read preference. This property
 does not take authentication into account.
 
 This property is *deprecated* since version 1.5.0.
 
 `status`  
-This property is no longer used and will be set to **`NULL`** In driver
+This property is no longer used and will be set to **`null`** In driver
 versions 1.1.x and earlier, this may be set to a string value (e.g.
 *"recycled"*, *"new"*) when persistent connections are used.
 
@@ -3743,12 +3743,12 @@ circumstances.
 ### Parameters
 
 `connection`  
-If connection is not given, or **`FALSE`** then connection that would be
+If connection is not given, or **`false`** then connection that would be
 selected for writes would be closed. In a single-node configuration,
 that is then the whole connection, but if you are connected to a replica
 set, close() will *only* close the connection to the primary server.
 
-If connection is **`TRUE`** then all connections as known by the
+If connection is **`true`** then all connections as known by the
 connection manager will be closed. This can include connections that are
 not referenced in the connection string used to create the object that
 you are calling close on.
@@ -3857,7 +3857,7 @@ class="methodparam"><span class="type">string</span> `$server`<span
 class="initializer"> = "mongodb://localhost:27017"</span></span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$options`<span class="initializer"> = array("connect" =\>
-**`TRUE`**)</span></span> \[, <span class="methodparam"><span
+**`true`**)</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `$driver_options`</span> \]\]\] )
 
 If no parameters are passed, this connects to "localhost:27017" (or
@@ -3930,7 +3930,7 @@ include:
 -   *"connect"*
 
     If the constructor should connect before returning. Default is
-    **`TRUE`**. When set to **`FALSE`** the driver will *automatically*
+    **`true`**. When set to **`false`** the driver will *automatically*
     connect to the server whenever it is necessary to do a query.
     Alternatively, you can run <span
     class="function">MongoClient::connect</span> manually.
@@ -4360,7 +4360,7 @@ section of this manual for further information.
 <dd><p>The server name.</p>
 </dd>
 <dt><code class="parameter">connect</code></dt>
-<dd><p>Optional boolean parameter specifying if the constructor should connect to the database before returning. Defaults to <strong><code>TRUE</code></strong>.</p>
+<dd><p>Optional boolean parameter specifying if the constructor should connect to the database before returning. Defaults to <strong><code>true</code></strong>.</p>
 </dd>
 <dt><code class="parameter">persistent</code></dt>
 <dd><p>If the connection should be persistent.</p>
@@ -4836,8 +4836,8 @@ necessary on 32 bit platforms (and Windows).
 
 ### Return Values
 
-Returns **`TRUE`** if the method attempted to kill a cursor, and
-**`FALSE`** if there was something wrong with the arguments (such as a
+Returns **`true`** if the method attempted to kill a cursor, and
+**`false`** if there was something wrong with the arguments (such as a
 wrong `server_hash`). The return status does *not reflect* where the
 cursor was actually killed as the server does not provide that
 information.
@@ -5060,7 +5060,7 @@ of criteria used to match tags on replica set members.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -5124,7 +5124,7 @@ write concern.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -5340,9 +5340,9 @@ class="methodparam">void</span> )
 <span class="methodname">repair</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$preserve_cloned_files`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$backup_original_files`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">resetError</span> ( <span
@@ -5366,7 +5366,7 @@ class="type">array</span> `$tags`</span> \] )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setWriteConcern</span> ( <span
@@ -5937,9 +5937,9 @@ If the collection is fixed size, the maximum number of elements to store
 in the collection.
 
 `autoIndexId`  
-If capped is **`TRUE`** you can specify **`FALSE`** to disable the
+If capped is **`true`** you can specify **`false`** to disable the
 automatic index created on the *\_id* field. Before MongoDB 2.2, the
-default value for *autoIndexId* was **`FALSE`**.
+default value for *autoIndexId* was **`false`**.
 
 ### Return Values
 
@@ -6017,7 +6017,7 @@ sample log message \#99
 <td>PECL mongo 1.4.0</td>
 <td><p>In versions before 1.4.0, the options were all arguments to the method. The function synopsis in those older versions is:</p>
 <div class="methodsynopsis dc-description">
-<span class="modifier">public</span> <span class="type">MongoCollection</span> <span class="methodname">MongoDB::createCollection</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$name</code></span> [, <span class="methodparam"><span class="type">bool</span> <code class="parameter">$capped</code><span class="initializer"> = <strong><code>FALSE</code></strong></span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$size</code><span class="initializer"> = 0</span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$max</code><span class="initializer"> = 0</span></span> ]]] )
+<span class="modifier">public</span> <span class="type">MongoCollection</span> <span class="methodname">MongoDB::createCollection</span> ( <span class="methodparam"><span class="type">string</span> <code class="parameter">$name</code></span> [, <span class="methodparam"><span class="type">bool</span> <code class="parameter">$capped</code><span class="initializer"> = <strong><code>false</code></strong></span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$size</code><span class="initializer"> = 0</span></span> [, <span class="methodparam"><span class="type">int</span> <code class="parameter">$max</code><span class="initializer"> = 0</span></span> ]]] )
 </div>
 <p>The meaning of the options is the same as described under the <code class="parameter">options</code> argument above.</p></td>
 </tr>
@@ -6055,7 +6055,7 @@ given, it will be used as the reference ID.
 Returns a database reference array.
 
 If an array without an *\_id* field was provided as the
-*document\_or\_id* parameter, **`NULL`** will be returned.
+*document\_or\_id* parameter, **`null`** will be returned.
 
 ### Examples
 
@@ -6261,7 +6261,7 @@ $db->execute('"foo";');
 ?>
 ```
 
-However, these return **`NULL`**:
+However, these return **`null`**:
 
 ``` php
 <?php
@@ -6508,7 +6508,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -6626,7 +6626,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -7026,7 +7026,7 @@ Returns the error, if there was one.
 ### Examples
 
 **Example \#1 <span class="function">MongoDB::lastError</span>
-**`NULL`** error example**
+**`null`** error example**
 
 ``` php
 <?php
@@ -7119,7 +7119,7 @@ options include:
 
 -   *"includeSystemCollections"*
 
-    Boolean, defaults to **`FALSE`**. Determines whether system
+    Boolean, defaults to **`false`**. Determines whether system
     collections should be included in the result.
 
 The following option may be used with MongoDB 2.8+:
@@ -7225,9 +7225,9 @@ Repairs and compacts this database
 <span class="methodname">MongoDB::repair</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$preserve_cloned_files`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$backup_original_files`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This creates a fresh copy of all database data. It will remove any
 corrupt data and compact and large stretches of free space it finds.
@@ -7440,7 +7440,7 @@ of criteria used to match tags on replica set members.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -7485,7 +7485,7 @@ Change slaveOkay setting for this database
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoDB::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>
@@ -7539,7 +7539,7 @@ write concern.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -7620,7 +7620,7 @@ Class synopsis
 /\* Fields \*/
 
 <span class="modifier">public</span> <span class="type">MongoDB</span>
-`$db` <span class="initializer"> = **`NULL`**</span> ;
+`$db` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">public</span> <span class="type">int</span> `$w`
 ;
@@ -7802,7 +7802,7 @@ class="type">array</span> `$tags`</span> \] )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setWriteConcern</span> ( <span
@@ -7830,7 +7830,7 @@ class="methodparam"><span class="type">array</span> `$new_object`</span>
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">validate</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$scan_data`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -8550,7 +8550,7 @@ available options include:
 
 -   *"continueOnError"*
 
-    Boolean, defaults to **`FALSE`**. If set, the database will not stop
+    Boolean, defaults to **`false`**. If set, the database will not stop
     processing a bulk insert if one fails (eg due to duplicate IDs).
     This makes bulk insert behave similarly to a series of single
     inserts, except that calling <span
@@ -8570,10 +8570,10 @@ available options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -8583,8 +8583,8 @@ available options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -8642,8 +8642,8 @@ The following options are deprecated and should no longer be used:
 
 If the *w* parameter is set to acknowledge the write, returns an
 associative array with the status of the inserts ("ok") and any error
-that may have occurred ("err"). Otherwise, returns **`TRUE`** if the
-batch insert was successfully sent, **`FALSE`** otherwise.
+that may have occurred ("err"). Otherwise, returns **`true`** if the
+batch insert was successfully sent, **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -8967,7 +8967,7 @@ given, it will be used as the reference ID.
 Returns a database reference array.
 
 If an array without an *\_id* field was provided as the
-*document\_or\_id* parameter, **`NULL`** will be returned.
+*document\_or\_id* parameter, **`null`** will be returned.
 
 ### Examples
 
@@ -9035,14 +9035,14 @@ options include:
 
 -   *"unique"*
 
-    Specify **`TRUE`** to create a unique index. The default value is
-    **`FALSE`**. This option applies only to ascending/descending
+    Specify **`true`** to create a unique index. The default value is
+    **`false`**. This option applies only to ascending/descending
     indexes.
 
     > **Note**:
     >
     > When MongoDB indexes a field, if a document does not have a value
-    > for the field, a **`NULL`** value is indexed. If multiple
+    > for the field, a **`null`** value is indexed. If multiple
     > documents do not contain a field, a unique index will reject all
     > but the first of those documents. The *"sparse"* option may be
     > used to overcome this, since it will prevent documents without the
@@ -9050,9 +9050,9 @@ options include:
 
 -   *"sparse"*
 
-    Specify **`TRUE`** to create a sparse index, which only indexes
+    Specify **`true`** to create a sparse index, which only indexes
     documents containing a specified field. The default value is
-    **`FALSE`**.
+    **`false`**.
 
 -   *"expireAfterSeconds"*
 
@@ -9088,8 +9088,8 @@ options include:
 -   *"background"*
 
     Builds the index in the background so that building an index does
-    *not* block other database activities. Specify **`TRUE`** to build
-    in the background. The default value is **`FALSE`**.
+    *not* block other database activities. Specify **`true`** to build
+    in the background. The default value is **`false`**.
 
     **Warning**
     Prior to MongoDB 2.6.0, index builds on secondaries were executed as
@@ -9121,11 +9121,11 @@ The following options may be used with MongoDB versions before 2.8:
 
 -   *"dropDups"*
 
-    Specify **`TRUE`** to force creation of a unique index where the
+    Specify **`true`** to force creation of a unique index where the
     collection may contain duplicate values for a key. MongoDB will
     index the first occurrence of a key and delete all subsequent
     documents from the collection that contain a duplicate value for
-    that key. The default value is **`FALSE`**.
+    that key. The default value is **`false`**.
 
     **Warning**
     *"dropDups"* may delete data from your database. Use with extreme
@@ -9185,7 +9185,7 @@ present in lieu of *"numIndexesAfter"*.
 
 With MongoDB 2.4 and earlier, a status document is only returned if the
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is at least *1*. Otherwise, **`TRUE`** is returned. The fields in the
+is at least *1*. Otherwise, **`true`** is returned. The fields in the
 status document are different, except for the *"ok"* field, which
 signals whether the index creation was successful. Additional fields are
 described in the documentation for <span
@@ -9476,7 +9476,7 @@ An optional query parameters
 
 ### Return Values
 
-Returns an array of distinct values, or **`FALSE`** on failure
+Returns an array of distinct values, or **`false`** on failure
 
 ### Examples
 
@@ -9649,14 +9649,14 @@ include:
 
 -   *"unique"*
 
-    Specify **`TRUE`** to create a unique index. The default value is
-    **`FALSE`**. This option applies only to ascending/descending
+    Specify **`true`** to create a unique index. The default value is
+    **`false`**. This option applies only to ascending/descending
     indexes.
 
     > **Note**:
     >
     > When MongoDB indexes a field, if a document does not have a value
-    > for the field, a **`NULL`** value is indexed. If multiple
+    > for the field, a **`null`** value is indexed. If multiple
     > documents do not contain a field, a unique index will reject all
     > but the first of those documents. The *"sparse"* option may be
     > used to overcome this, since it will prevent documents without the
@@ -9664,9 +9664,9 @@ include:
 
 -   *"sparse"*
 
-    Specify **`TRUE`** to create a sparse index, which only indexes
+    Specify **`true`** to create a sparse index, which only indexes
     documents containing a specified field. The default value is
-    **`FALSE`**.
+    **`false`**.
 
 -   *"expireAfterSeconds"*
 
@@ -9702,8 +9702,8 @@ include:
 -   *"background"*
 
     Builds the index in the background so that building an index does
-    *not* block other database activities. Specify **`TRUE`** to build
-    in the background. The default value is **`FALSE`**.
+    *not* block other database activities. Specify **`true`** to build
+    in the background. The default value is **`false`**.
 
     **Warning**
     Prior to MongoDB 2.6.0, index builds on secondaries were executed as
@@ -9735,11 +9735,11 @@ The following options may be used with MongoDB versions before 2.8:
 
 -   *"dropDups"*
 
-    Specify **`TRUE`** to force creation of a unique index where the
+    Specify **`true`** to force creation of a unique index where the
     collection may contain duplicate values for a key. MongoDB will
     index the first occurrence of a key and delete all subsequent
     documents from the collection that contain a duplicate value for
-    that key. The default value is **`FALSE`**.
+    that key. The default value is **`false`**.
 
     **Warning**
     *"dropDups"* may delete data from your database. Use with extreme
@@ -9799,7 +9799,7 @@ present in lieu of *"numIndexesAfter"*.
 
 With MongoDB 2.4 and earlier, a status document is only returned if the
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is at least *1*. Otherwise, **`TRUE`** is returned. The fields in the
+is at least *1*. Otherwise, **`true`** is returned. The fields in the
 status document are different, except for the *"ok"* field, which
 signals whether the index creation was successful. Additional fields are
 described in the documentation for <span
@@ -10267,7 +10267,7 @@ result sets that are larger than memory!
 
 Also, certain system collections do not have an *\_id* field. If you are
 dealing with a collection that might have documents without *\_id*s,
-pass **`FALSE`** as the second argument to <span
+pass **`false`** as the second argument to <span
 class="function">iterator\_to\_array</span> (so that it will not try to
 use the non-existent *\_id* values as keys).
 
@@ -10317,10 +10317,10 @@ DB and return it.
 | Option                                   | Description                                                                                                                                                                                                                                                               |
 |------------------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | `sort` <span class="type">array</span>   | Determines which document the operation will modify if the query selects multiple documents. findAndModify will modify the first document in the sort order specified by this argument.                                                                                   |
-| `remove` <span class="type">bool</span>  | Optional if `update` field exists. When **`TRUE`**, removes the selected document. The default is **`FALSE`**.                                                                                                                                                            |
+| `remove` <span class="type">bool</span>  | Optional if `update` field exists. When **`true`**, removes the selected document. The default is **`false`**.                                                                                                                                                            |
 | `update` <span class="type">array</span> | Optional if `remove` field exists. Performs an update of the selected document.                                                                                                                                                                                           |
-| `new` <span class="type">bool</span>     | Optional. When **`TRUE`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`FALSE`**.                                                                                   |
-| `upsert` <span class="type">bool</span>  | Optional. Used in conjunction with the `update` field. When **`TRUE`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`NULL`** when upsert is **`TRUE`**. |
+| `new` <span class="type">bool</span>     | Optional. When **`true`**, returns the modified document rather than the original. The findAndModify method ignores the `new` option for remove operations. The default is **`false`**.                                                                                   |
+| `upsert` <span class="type">bool</span>  | Optional. Used in conjunction with the `update` field. When **`true`**, the findAndModify command creates a new document if the query returns no documents. The default is false. In MongoDB 2.2, the findAndModify command returns **`null`** when upsert is **`true`**. |
 | ``                                       |                                                                                                                                                                                                                                                                           |
 
 ### Return Values
@@ -10505,7 +10505,7 @@ This parameter is an associative array of the form *array("name" =\>
 
 ### Return Values
 
-Returns record matching the search or **`NULL`**.
+Returns record matching the search or **`null`**.
 
 ### Errors/Exceptions
 
@@ -11213,10 +11213,10 @@ options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -11226,8 +11226,8 @@ options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -11284,7 +11284,7 @@ The following options are deprecated and should no longer be used:
 ### Return Values
 
 Returns an array containing the status of the insertion if the *"w"*
-option is set. Otherwise, returns **`TRUE`** if the inserted array is
+option is set. Otherwise, returns **`true`** if the inserted array is
 not empty (a <span class="classname">MongoException</span> will be
 thrown if the inserted array is empty).
 
@@ -11624,16 +11624,16 @@ options include:
 
 -   *"justOne"*
 
-    Specify **`TRUE`** to limit deletion to just one document. If
-    **`FALSE`** or omitted, all documents matching the criteria will be
+    Specify **`true`** to limit deletion to just one document. If
+    **`false`** or omitted, all documents matching the criteria will be
     deleted.
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -11643,8 +11643,8 @@ options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -11701,7 +11701,7 @@ The following options are deprecated and should no longer be used:
 ### Return Values
 
 Returns an array containing the status of the removal if the *"w"*
-option is set. Otherwise, returns **`TRUE`**.
+option is set. Otherwise, returns **`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -11838,10 +11838,10 @@ Options for the save.
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -11851,8 +11851,8 @@ Options for the save.
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -12031,7 +12031,7 @@ of criteria used to match tags on replica set members.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -12077,7 +12077,7 @@ Change slaveOkay setting for this collection
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">MongoCollection::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>
@@ -12130,7 +12130,7 @@ write concern.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -12322,10 +12322,10 @@ options include:
 
 -   *"fsync"*
 
-    Boolean, defaults to **`FALSE`**. If journaling is enabled, it works
+    Boolean, defaults to **`false`**. If journaling is enabled, it works
     exactly like *"j"*. If journaling is not enabled, the write
     operation blocks until it is synced to database files on disk. If
-    **`TRUE`**, an acknowledged insert is implied and this option will
+    **`true`**, an acknowledged insert is implied and this option will
     override setting *"w"* to *0*.
 
     > **Note**: <span class="simpara">If journaling is enabled, users
@@ -12335,8 +12335,8 @@ options include:
 
 -   *"j"*
 
-    Boolean, defaults to **`FALSE`**. Forces the write operation to
-    block until it is synced to the journal on disk. If **`TRUE`**, an
+    Boolean, defaults to **`false`**. Forces the write operation to
+    block until it is synced to the journal on disk. If **`true`**, an
     acknowledged write is implied and this option will override setting
     *"w"* to *0*.
 
@@ -12393,7 +12393,7 @@ The following options are deprecated and should no longer be used:
 ### Return Values
 
 Returns an array containing the status of the update if the *"w"* option
-is set. Otherwise, returns **`TRUE`**.
+is set. Otherwise, returns **`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -12609,7 +12609,7 @@ Validates this collection
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">MongoCollection::validate</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$scan_data`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -12722,7 +12722,7 @@ class="oointerface">, <span class="interfacename">Iterator</span>
 /\* Static Fields \*/
 
 <span class="modifier">static</span> <span class="type">bool</span>
-`$slaveOkay` <span class="initializer"> = **`FALSE`**</span> ;
+`$slaveOkay` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">static</span> <span class="type">int</span>
 `$timeout` <span class="initializer"> = 30000</span> ;
@@ -12739,7 +12739,7 @@ class="methodparam"><span class="type">mixed</span> `$value`</span> )
 class="type">MongoCursor</span> <span
 class="methodname">awaitData</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$wait`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span
@@ -12759,7 +12759,7 @@ class="initializer"> = array()</span></span> \]\] )
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">count</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$foundOnly`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">current</span> ( <span
@@ -12801,7 +12801,7 @@ class="type">MongoCursor</span> <span class="methodname">hint</span> (
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">immortal</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$liveForever`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$liveForever`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">info</span> ( <span
@@ -12827,7 +12827,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">partial</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$okay`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$okay`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">reset</span> ( <span
@@ -12841,7 +12841,7 @@ class="methodparam">void</span> )
 class="type">MongoCursor</span> <span class="methodname">setFlag</span>
 ( <span class="methodparam"><span class="type">int</span> `$flag`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$set`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span
@@ -12858,7 +12858,7 @@ class="type">MongoCursor</span> <span class="methodname">skip</span> (
 class="type">MongoCursor</span> <span
 class="methodname">slaveOkay</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$okay`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">snapshot</span>
@@ -12872,7 +12872,7 @@ class="type">MongoCursor</span> <span class="methodname">sort</span> (
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">tailable</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$tail`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$tail`<span class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">MongoCursor</span> <span class="methodname">timeout</span>
@@ -13060,7 +13060,7 @@ return more data
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::awaitData</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$wait`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This method is to be used with tailable cursors. If we are at the end of
 the data, block for a while rather than returning no data. After a
@@ -13269,7 +13269,7 @@ Counts the number of results for this query
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">MongoCursor::count</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$foundOnly`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 This method does not affect the state of the cursor: if you haven't
 queried yet, you can still apply limits, skips, etc. If you have started
@@ -13333,7 +13333,7 @@ Returns the current element
 <span class="methodname">MongoCursor::current</span> ( <span
 class="methodparam">void</span> )
 
-This returns **`NULL`** until <span
+This returns **`null`** until <span
 class="function">MongoCursor::next</span> is called.
 
 ### Parameters
@@ -13342,7 +13342,7 @@ This function has no parameters.
 
 ### Return Values
 
-The current result document as an associative array. **`NULL`** will be
+The current result document as an associative array. **`null`** will be
 returned if there is no result.
 
 ### See Also
@@ -13366,10 +13366,10 @@ documents per response. This method checks if the database has more
 batches or if the result set has been exhausted.
 
 A cursor being "dead" does not mean that <span
-class="function">MongoCursor::hasNext</span> will return **`FALSE`**, it
+class="function">MongoCursor::hasNext</span> will return **`false`**, it
 only means that the database is done sending results to the client. The
 client should continue iterating through results until <span
-class="function">MongoCursor::hasNext</span> is **`FALSE`**.
+class="function">MongoCursor::hasNext</span> is **`false`**.
 
 ### Parameters
 
@@ -13377,8 +13377,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 ### See Also
 
@@ -13414,7 +13414,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`NULL`**.
+**`null`**.
 
 ### Errors/Exceptions
 
@@ -13569,10 +13569,10 @@ class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::fields</span> ( <span
 class="methodparam"><span class="type">array</span> `$f`</span> )
 
-Fields are specified by *"fieldname" : bool*. **`TRUE`** indicates that
-a field should be returned, **`FALSE`** indicates that it should not be
-returned. You can also use 1 and 0 instead of **`TRUE`** and
-**`FALSE`**.
+Fields are specified by *"fieldname" : bool*. **`true`** indicates that
+a field should be returned, **`false`** indicates that it should not be
+returned. You can also use 1 and 0 instead of **`true`** and
+**`false`**.
 
 Thus, to return only the "summary" field, one could say:
 
@@ -13773,7 +13773,7 @@ Sets whether this cursor will timeout
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::immortal</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$liveForever`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 After remaining idle on the server for some amount of time, cursors, by
 default, "die." This is generally the behavior one wants. The database
@@ -13787,7 +13787,7 @@ If, for some reason, you need a cursor to hang around for a long time,
 you can prevent the database from cleaning it up by using this method.
 However, if you make a cursor immortal, you need to iterate through all
 of its results (or at least until <span
-class="methodname">MongoCursor::dead</span> returns **`TRUE`**) or the
+class="methodname">MongoCursor::dead</span> returns **`true`**) or the
 cursor will hang around the database *forever*, taking up resources.
 
 ### Parameters
@@ -14097,7 +14097,7 @@ down
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::partial</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$okay`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This option allows *mongos* to send partial query results if a shard is
 unreachable. This is only applicable when running a sharded MongoDB
@@ -14146,7 +14146,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`NULL`**.
+**`null`**.
 
 MongoCursor::rewind
 ===================
@@ -14178,7 +14178,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`NULL`**.
+**`null`**.
 
 ### Errors/Exceptions
 
@@ -14204,7 +14204,7 @@ class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::setFlag</span> ( <span
 class="methodparam"><span class="type">int</span> `$flag`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$set`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 The <span class="classname">MongoCursor</span> class has several methods
 for setting flags on the query object. This method is available in case
@@ -14222,7 +14222,7 @@ this flag. For available flags, please refer to the wire protocol
 <a href="https://docs.mongodb.com/meta-driver/latest/legacy/mongodb-wire-protocol/#MongoWireProtocol-OPQUERY" class="link external">» documentation</a>.
 
 `set`  
-Whether the flag should be set (**`TRUE`**) or unset (**`FALSE`**).
+Whether the flag should be set (**`true`**) or unset (**`false`**).
 
 ### Return Values
 
@@ -14370,7 +14370,7 @@ Sets whether this query can be done on a secondary \[deprecated\]
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::slaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$okay`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 **Warning**
 
@@ -14564,7 +14564,7 @@ results
 class="type">MongoCursor</span> <span
 class="methodname">MongoCursor::tailable</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$tail`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Mongo has a feature known as tailable cursors which are similar to the
 Unix "tail -f" command.
@@ -14728,7 +14728,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current result is not null, and **`FALSE`** otherwise.
+**`true`** if the current result is not null, and **`false`** otherwise.
 
 ### See Also
 
@@ -14869,8 +14869,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 MongoCursorInterface::getReadPreference
 =======================================
@@ -15408,7 +15408,7 @@ Returns the current element
 <span class="methodname">MongoCommandCursor::current</span> ( <span
 class="methodparam">void</span> )
 
-This returns **`NULL`** until <span
+This returns **`null`** until <span
 class="function">MongoCommandCursor::rewind</span> is called.
 
 ### Parameters
@@ -15417,7 +15417,7 @@ This function has no parameters.
 
 ### Return Values
 
-The current result document as an associative array. **`NULL`** will be
+The current result document as an associative array. **`null`** will be
 returned if there is no result.
 
 ### See Also
@@ -15448,8 +15448,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if there are more results that have not yet been sent
-to the client, and **`FALSE`** otherwise.
+Returns **`true`** if there are more results that have not yet been sent
+to the client, and **`false`** otherwise.
 
 ### See Also
 
@@ -15723,7 +15723,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`NULL`**.
+**`null`**.
 
 ### Errors/Exceptions
 
@@ -16000,7 +16000,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current result is not null, and **`FALSE`** otherwise.
+**`true`** if the current result is not null, and **`false`** otherwise.
 
 ### See Also
 
@@ -16083,10 +16083,10 @@ of the basic PHP types, compound types (arrays, associative arrays, and
 objects), and a half-dozen classes provided by the MongoDB PHP driver
 (for regular expressions, dates, and other specialized applications).
 
-Booleans and **`NULL`**
+Booleans and **`null`**
 -----------------------
 
-**`TRUE`**, **`FALSE`**, and **`NULL`** can be used as-is.
+**`true`**, **`false`**, and **`null`** can be used as-is.
 
 Numbers
 -------
@@ -16366,7 +16366,7 @@ Class synopsis
 <span class="ooclass"> class **MongoId** </span> {
 
 <span class="modifier">public</span> <span class="type">string</span>
-`$$id` <span class="initializer"> = **`NULL`**</span> ;
+`$$id` <span class="initializer"> = **`null`**</span> ;
 
 /\* Methods \*/
 
@@ -16374,7 +16374,7 @@ Class synopsis
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">MongoId</span></span>
-`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$id`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -16447,7 +16447,7 @@ Creates a new id
 class="methodname">MongoId::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">MongoId</span></span>
-`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$id`<span class="initializer"> = **`null`**</span></span> \] )
 
 ### Parameters
 
@@ -16671,9 +16671,9 @@ The value to check for validity.
 
 ### Return Values
 
-Returns **`TRUE`** if `value` is a <span
+Returns **`true`** if `value` is a <span
 class="classname">MongoId</span> instance or a string consisting of
-exactly 24 hexadecimal characters; otherwise, **`FALSE`** is returned.
+exactly 24 hexadecimal characters; otherwise, **`false`** is returned.
 
 MongoId::\_\_set\_state
 =======================
@@ -17990,7 +17990,7 @@ Reference to fetch.
 
 ### Return Values
 
-Returns the document to which the reference refers or **`NULL`** if the
+Returns the document to which the reference refers or **`null`** if the
 document does not exist (the reference is broken).
 
 ### Examples
@@ -18048,7 +18048,7 @@ Array or object to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Warning**
 
@@ -18517,13 +18517,13 @@ Class synopsis
 
 <span class="modifier">public</span> <span
 class="type">MongoCollection</span> `$chunks` <span class="initializer">
-= **`NULL`**</span> ;
+= **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$filesName` <span class="initializer"> = **`NULL`**</span> ;
+`$filesName` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span class="type">string</span>
-`$chunksName` <span class="initializer"> = **`NULL`**</span> ;
+`$chunksName` <span class="initializer"> = **`null`**</span> ;
 
 /\* Methods \*/
 
@@ -18680,7 +18680,7 @@ class="methodparam"><span class="type">mixed</span> `$id`</span> )
 Returns an array containing the status of the removal (with respect to
 the *files* collection) if a
 <a href="/book/mongo.html#Write%20Concerns" class="link">write concern</a>
-is applied. Otherwise, returns **`TRUE`**.
+is applied. Otherwise, returns **`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -18764,7 +18764,7 @@ The filename or criteria for which to search.
 
 ### Return Values
 
-Returns a <span class="classname">MongoGridFSFile</span> or **`NULL`**.
+Returns a <span class="classname">MongoGridFSFile</span> or **`null`**.
 
 ### Examples
 
@@ -18841,7 +18841,7 @@ class="methodparam"><span class="type">mixed</span> `$id`</span> )
 
 ### Return Values
 
-Returns the file, if found, or **`NULL`**.
+Returns the file, if found, or **`null`**.
 
 MongoGridFS::put
 ================
@@ -18936,7 +18936,7 @@ these options.
 
 Returns an array containing the status of the removal (with respect to
 the *files* collection) if the *"w"* option is set. Otherwise, returns
-**`TRUE`**.
+**`true`**.
 
 Fields in the status array are described in the documentation for <span
 class="function">MongoCollection::insert</span>.
@@ -19256,11 +19256,11 @@ Class synopsis
 /\* Fields \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
-`$file` <span class="initializer"> = **`NULL`**</span> ;
+`$file` <span class="initializer"> = **`null`**</span> ;
 
 <span class="modifier">protected</span> <span
 class="type">MongoGridFS</span> `$gridfs` <span class="initializer"> =
-**`NULL`**</span> ;
+**`null`**</span> ;
 
 /\* Methods \*/
 
@@ -19289,7 +19289,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">write</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$filename`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 }
 
@@ -19452,7 +19452,7 @@ Writes this file to the filesystem
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">MongoGridFSFile::write</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$filename`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 ### Parameters
 
@@ -19496,7 +19496,7 @@ Class synopsis
 
 <span class="modifier">protected</span> <span
 class="type">MongoGridFS</span> `$gridfs` <span class="initializer"> =
-**`NULL`**</span> ;
+**`null`**</span> ;
 
 /\* Methods \*/
 
@@ -19841,7 +19841,7 @@ depends on the batch's operation type.
 <td><strong><code>MongoWriteBatch::COMMAND_UPDATE</code></strong></td>
 <td><p>Raw update operation.</p>
 <p>Required keys are <em>"q"</em> and <em>"u"</em>, which correspond to the <a href="/book/mongo.html#" class="link"><code class="parameter">$criteria</code></a> and <a href="/book/mongo.html#" class="link"><code class="parameter">$new_object</code></a> parameters of <span class="function">MongoCollection::update</span>, respectively.</p>
-<p>Optional keys are <em>"multi"</em> and <em>"upsert"</em>, which correspond to the <a href="/book/mongo.html#" class="link"><em>"multiple"</em></a> and <a href="/book/mongo.html#" class="link"><em>"upsert"</em></a> options for <span class="function">MongoCollection::update</span>, respectively. If unspecified, both options default to <strong><code>FALSE</code></strong>.</p></td>
+<p>Optional keys are <em>"multi"</em> and <em>"upsert"</em>, which correspond to the <a href="/book/mongo.html#" class="link"><em>"multiple"</em></a> and <a href="/book/mongo.html#" class="link"><em>"upsert"</em></a> options for <span class="function">MongoCollection::update</span>, respectively. If unspecified, both options default to <strong><code>false</code></strong>.</p></td>
 </tr>
 <tr class="odd">
 <td><strong><code>MongoWriteBatch::COMMAND_DELETE</code></strong></td>
@@ -19854,7 +19854,7 @@ depends on the batch's operation type.
 
 ### Return Values
 
-Returns **`TRUE`** on success and throws an exception on failure.
+Returns **`true`** on success and throws an exception on failure.
 
 ### Errors/Exceptions
 
@@ -20000,7 +20000,7 @@ An array of Write Options.
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | w (int\|string) | <a href="/book/mongo.html#Write%20Concerns" class="link">Write concern</a> value                                                                                                                                                                                             |
 | wtimeout (int)  | <a href="/book/mongo.html#Write%20Concerns" class="link">Maximum time to wait for replication</a>                                                                                                                                                                            |
-| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`TRUE`** |
+| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`true`** |
 | j (bool)        | Wait for journaling on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                      |
 | fsync (bool)    | Wait for fsync on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                           |
 
@@ -20043,7 +20043,7 @@ will aggregate the values from individual batches and return only the
 totals.
 
 If the batch was empty, an array containing only the 'ok' field is
-returned (as **`TRUE`**) although nothing will be shipped over the wire
+returned (as **`true`**) although nothing will be shipped over the wire
 (NOOP).
 
 | Array key | Value meaning                                    | Returned for batch type                |
@@ -20255,7 +20255,7 @@ An array of Write Options.
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | w (int\|string) | <a href="/book/mongo.html#Write%20Concerns" class="link">Write concern</a> value                                                                                                                                                                                             |
 | wtimeout (int)  | <a href="/book/mongo.html#Write%20Concerns" class="link">Maximum time to wait for replication</a>                                                                                                                                                                            |
-| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`TRUE`** |
+| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`true`** |
 | j (bool)        | Wait for journaling on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                      |
 | fsync (bool)    | Wait for fsync on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                           |
 
@@ -20333,7 +20333,7 @@ An array of Write Options.
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | w (int\|string) | <a href="/book/mongo.html#Write%20Concerns" class="link">Write concern</a> value                                                                                                                                                                                             |
 | wtimeout (int)  | <a href="/book/mongo.html#Write%20Concerns" class="link">Maximum time to wait for replication</a>                                                                                                                                                                            |
-| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`TRUE`** |
+| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`true`** |
 | j (bool)        | Wait for journaling on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                      |
 | fsync (bool)    | Wait for fsync on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                           |
 
@@ -20411,7 +20411,7 @@ An array of Write Options.
 |-----------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | w (int\|string) | <a href="/book/mongo.html#Write%20Concerns" class="link">Write concern</a> value                                                                                                                                                                                             |
 | wtimeout (int)  | <a href="/book/mongo.html#Write%20Concerns" class="link">Maximum time to wait for replication</a>                                                                                                                                                                            |
-| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`TRUE`** |
+| ordered         | Determines if MongoDB must apply this batch in order. Ordered writes execute serially (i.e. one at a time) and execution will stop after the first error. Unordered writes may execute in parallel and execution will not stop after the first error. Defaults to **`true`** |
 | j (bool)        | Wait for journaling on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                      |
 | fsync (bool)    | Wait for fsync on the primary. This value is discouraged, use WriteConcern instead                                                                                                                                                                                           |
 
@@ -20690,7 +20690,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the callback function, or **`FALSE`** if not set yet.
+Returns the callback function, or **`false`** if not set yet.
 
 ### Notes
 
@@ -20828,7 +20828,7 @@ class="methodparam"><span class="type">int</span> `$module`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -21312,7 +21312,7 @@ class="type">int</span> `$size`</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">switchSlave</span> ( <span
@@ -21541,7 +21541,7 @@ state of the object.
 
 When you create a connection to the database, the driver will not
 immediately decide on a secondary to use. Thus, after you connect, this
-function will return **`NULL`** even if there are secondaries available.
+function will return **`null`** even if there are secondaries available.
 When you first do a query with slaveOkay set, at that point the driver
 will choose a secondary for this connection. At that point, this
 function will return the chosen secondary.
@@ -21558,7 +21558,7 @@ This function has no parameters.
 
 The address of the secondary this connection is using for reads.
 
-This returns **`NULL`** if this is not connected to a replica set or not
+This returns **`null`** if this is not connected to a replica set or not
 yet initialized.
 
 ### Errors/Exceptions
@@ -21758,7 +21758,7 @@ Change slaveOkay setting for this connection
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">Mongo::setSlaveOkay</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$ok`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 See
 <a href="/book/mongo.html#Querying" class="link">the query section</a>

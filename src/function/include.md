@@ -220,7 +220,7 @@ echo $bar; // prints 1
 *$bar* is the value *1* because the include was successful. Notice the
 difference between the above examples. The first uses <span
 class="function">return</span> within the included file while the other
-does not. If the file can't be included, **`FALSE`** is returned and
+does not. If the file can't be included, **`false`** is returned and
 **`E_WARNING`** is issued.
 
 If there are functions defined in the included file, they can be used in

@@ -226,7 +226,7 @@ class="function">px\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -292,7 +292,7 @@ this is not done the field data is truncated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -361,7 +361,7 @@ y, m, n, d, j, L).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -428,7 +428,7 @@ as they are stored in the database. The first record has number 0.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 px\_delete
 ==========
@@ -451,7 +451,7 @@ class="function">px\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 px\_get\_field
 ==============
@@ -595,7 +595,7 @@ expected to be delivered in this encoding.
 
 ### Return Values
 
-Returns the value of the parameter or **`FALSE`** on failure.
+Returns the value of the parameter or **`false`** on failure.
 
 px\_get\_record
 ===============
@@ -715,7 +715,7 @@ The number of primary keys. Paradox databases always use the first
 
 ### Return Values
 
-Returns the value of the parameter or **`FALSE`** on failure.
+Returns the value of the parameter or **`false`** on failure.
 
 px\_insert\_record
 ==================
@@ -767,7 +767,7 @@ by <span class="function">px\_retrieve\_record</span>.
 
 ### Return Values
 
-Returns **`FALSE`** on failure or the record number in case of success.
+Returns **`false`** on failure or the record number in case of success.
 
 ### Examples
 
@@ -838,7 +838,7 @@ interface is used. Use *new paradox\_db()* instead.
 
 ### Return Values
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -965,7 +965,7 @@ writable if you plan to update or insert records.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1010,7 +1010,7 @@ parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 px\_retrieve\_record
 ====================
@@ -1107,7 +1107,7 @@ The name of the file. Its extension should be *.MB*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 px\_set\_parameter
 ==================
@@ -1152,7 +1152,7 @@ iso-8859-1, utf-8, cp850.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1189,7 +1189,7 @@ name of the database file.
 
 ### Return Values
 
-Returns **`NULL`** on success or **`FALSE`** on failure.
+Returns **`null`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1233,7 +1233,7 @@ fields is recoded into the targetencoding.
 
 ### Return Values
 
-Returns **`FALSE`** if the encoding could not be set, e.g. the encoding
+Returns **`false`** if the encoding could not be set, e.g. the encoding
 is unknown, or pxlib does not support recoding at all. In the second
 case a warning will be issued.
 
@@ -1274,7 +1274,7 @@ The number of primary keys. Paradox databases always use the first
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1317,7 +1317,7 @@ y, m, n, d, j, H, h, G, g, i, s, A, a, L).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1405,7 +1405,7 @@ as they are stored in the database. The first record has number 0.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 

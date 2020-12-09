@@ -350,7 +350,7 @@ support), YAR\_OPT\_TIMEOUT, YAR\_OPT\_CONNECT\_TIMEOUT YAR\_OPT\_HEADER
 
 ### Return Values
 
-Returns `$this` on success or **`FALSE`** on failure.
+Returns `$this` on success or **`false`** on failure.
 
 ### Examples
 

@@ -1094,9 +1094,9 @@ Imagick::CHANNEL\_DEFAULT</span></span> \] )
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">adaptiveSharpenImage</span> ( <span
@@ -1256,7 +1256,7 @@ class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">colorMatrixImage</span> ( <span
@@ -1338,7 +1338,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$legacy`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$legacy`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">Imagick</span>
 <span class="methodname">current</span> ( <span
@@ -1774,7 +1774,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> )
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">array</span>
@@ -1782,7 +1782,7 @@ class="methodparam"><span class="type">bool</span>
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -1969,7 +1969,7 @@ class="methodparam"><span class="type">string</span> `$embedText`</span>
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
+`$appendRawOutput`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -2303,7 +2303,7 @@ class="methodparam"><span class="type">string</span> `$image`</span> \[,
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">readImages</span> ( <span
@@ -2357,9 +2357,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 , <span class="methodparam"><span class="type">float</span>
 `$blur`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$bestfit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">rollImage</span> ( <span
@@ -2400,9 +2400,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 class="methodparam"><span class="type">int</span> `$cols`</span> , <span
 class="methodparam"><span class="type">int</span> `$rows`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$bestfit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">segmentImage</span> ( <span
@@ -2411,7 +2411,7 @@ class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> ,
 `$cluster_threshold`</span> , <span class="methodparam"><span
 class="type">float</span> `$smooth_threshold`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">selectiveBlurImage</span> ( <span
@@ -2886,11 +2886,11 @@ Imagick::CHANNEL\_DEFAULT</span></span> \] )
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$fill`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">tintImage</span> ( <span
@@ -2898,7 +2898,7 @@ class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">\_\_toString</span> ( <span
@@ -3154,7 +3154,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -3202,9 +3202,9 @@ Adaptively resize image with data dependent triangulation
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Adaptively resize image with data-dependent triangulation. Avoids
 blurring across sharp color changes. Most useful when used to shrink
@@ -3234,7 +3234,7 @@ Whether to fit the image inside a bounding box.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -3317,7 +3317,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3376,7 +3376,7 @@ The mean offset
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3418,7 +3418,7 @@ The source Imagick object
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -3456,7 +3456,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3495,7 +3495,7 @@ The affine matrix
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3550,7 +3550,7 @@ X server address
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -3593,7 +3593,7 @@ The string to draw
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3653,8 +3653,8 @@ Append a set of images into one larger image.
 ### Parameters
 
 `stack`  
-Whether to stack the images vertically. By default (or if **`FALSE`** is
-specified) images are stacked left-to-right. If `stack` is **`TRUE`**,
+Whether to stack the images vertically. By default (or if **`false`** is
+specified) images are stacked left-to-right. If `stack` is **`true`**,
 images are stacked top-to-bottom.
 
 ### Return Values
@@ -3718,7 +3718,7 @@ Which channel should the auto-levelling should be done on.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3785,7 +3785,7 @@ The threshold below which everything turns black
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -3831,7 +3831,7 @@ moonlight.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -3881,7 +3881,7 @@ constant. When not supplied, all channels are blurred.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -3942,7 +3942,7 @@ Border height
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -3995,7 +3995,7 @@ polynomical function to apply to the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -4039,7 +4039,7 @@ The standard deviation of the Gaussian, in pixels
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -4090,7 +4090,7 @@ Y origo of the chopped area
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4148,7 +4148,7 @@ Restricts the color range from 0 to the quantum depth.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Imagick::clear
 ==============
@@ -4165,7 +4165,7 @@ Clears all resources associated to Imagick object
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::clipImage
 ==================
@@ -4182,7 +4182,7 @@ Clips along the first path from the 8BIM profile, if present.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4241,12 +4241,12 @@ with \#, to work on a numbered path, e.g., "\#1" to use the first path.
 The name of the path
 
 `inside`  
-If **`TRUE`** later operations take effect inside clipping path.
+If **`true`** later operations take effect inside clipping path.
 Otherwise later operations take effect outside clipping path.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4326,7 +4326,7 @@ constant. When not supplied, default channels are replaced.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -4421,7 +4421,7 @@ Y start position of the floodfill
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4446,7 +4446,7 @@ class="methodparam"><span class="type">mixed</span> `$colorize`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Blends the fill color with each pixel in the image.
 
@@ -4461,7 +4461,7 @@ fully opaque and 0.0 is fully transparent.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4517,7 +4517,7 @@ offsets are normalized (divide Flash offset by 255)
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -4583,7 +4583,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4609,7 +4609,7 @@ The comment to add
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4703,7 +4703,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4835,7 +4835,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -4914,7 +4914,7 @@ The sharpen value
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -4974,7 +4974,7 @@ bitwise operators. **`Imagick::CHANNEL_ALL`**. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::convolveImage
 ======================
@@ -5004,7 +5004,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5087,7 +5087,7 @@ The Y coordinate of the cropped region's top left corner
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5121,7 +5121,7 @@ Creates a crop thumbnail
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$legacy`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$legacy`<span class="initializer"> = **`false`**</span></span> \] )
 
 Creates a fixed size thumbnail by first scaling the image up or down and
 cropping a specified area from the center.
@@ -5136,7 +5136,7 @@ The Height of the thumbnail
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5186,7 +5186,7 @@ The amount to displace the colormap.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5216,7 +5216,7 @@ The passphrase
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -5268,7 +5268,7 @@ The name of the artifact to delete
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5299,7 +5299,7 @@ The name of the property to delete.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::deskewImage
 ====================
@@ -5374,7 +5374,7 @@ original image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5413,7 +5413,7 @@ This method is deprecated in favour of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::displayImage
 =====================
@@ -5436,7 +5436,7 @@ The X server name
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5463,7 +5463,7 @@ The X server name
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5485,7 +5485,7 @@ class="type">bool</span> `$bestfit`</span> )
 
 Distorts an image using various distortion methods, by mapping color
 lookups of the source image to a new destination image usually of the
-same size as the source image, unless 'bestfit' is set to **`TRUE`**.
+same size as the source image, unless 'bestfit' is set to **`true`**.
 
 If 'bestfit' is enabled, and distortion allows it, the destination image
 is adjusted to ensure the whole source 'image' will just fit within the
@@ -5510,7 +5510,7 @@ Attempt to resize destination to fit distorted source
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5593,7 +5593,7 @@ The drawing operations to render on the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::edgeImage
 ==================
@@ -5616,7 +5616,7 @@ The radius of the operation.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5666,7 +5666,7 @@ The sigma of the effect
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5712,7 +5712,7 @@ The passphrase
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -5733,7 +5733,7 @@ Applies a digital filter that improves the quality of a noisy image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5770,7 +5770,7 @@ Equalizes the image histogram.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -5848,7 +5848,7 @@ echo $im;
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6007,7 +6007,7 @@ Y position for the new size
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -6052,7 +6052,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -6102,7 +6102,7 @@ layers into a single image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6124,7 +6124,7 @@ central x-axis.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6191,7 +6191,7 @@ X start position of the floodfill
 Y start position of the floodfill
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 `channel`  
 Provide any channel constant that is valid for your channel mode. To
@@ -6203,7 +6203,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -6266,7 +6266,7 @@ central y-axis.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6311,7 +6311,7 @@ image pair.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -6417,7 +6417,7 @@ The outer bevel width
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6490,7 +6490,7 @@ Array of arguments to pass to this function.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6593,7 +6593,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6652,7 +6652,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6710,7 +6710,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -6841,7 +6841,7 @@ has been compiled against ImageMagick version 6.3.7 or newer.
 
 ### Return Values
 
-Returns the string containing the font name or **`FALSE`** if not font
+Returns the string containing the font name or **`false`** if not font
 is set.
 
 ### See Also
@@ -7107,7 +7107,7 @@ Returns the image border color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -7138,7 +7138,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::getImageChannelDistortion
 ==================================
@@ -7174,7 +7174,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -7253,7 +7253,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -7371,7 +7371,7 @@ deviation.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::getImageClipMask
 =========================
@@ -7422,7 +7422,7 @@ The offset into the image colormap.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -7479,7 +7479,7 @@ Returns the composite operator associated with the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::getImageCompression
 ============================
@@ -8051,13 +8051,13 @@ function is highly discouraged.
 <span class="methodname">Imagick::getImageMatte</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the image has a matte channel otherwise false.
+Returns **`true`** if the image has a matte channel otherwise false.
 This method is available if Imagick has been compiled against
 ImageMagick version 6.2.9 or newer.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::getImageMatteColor
 ===========================
@@ -8219,10 +8219,10 @@ Returns the image profiles
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
-Returns all associated profiles that match the pattern. If **`FALSE`**
+Returns all associated profiles that match the pattern. If **`false`**
 is passed as second parameter only the profile names are returned. This
 method is available if Imagick has been compiled against ImageMagick
 version 6.3.6 or newer.
@@ -8233,7 +8233,7 @@ version 6.3.6 or newer.
 The pattern for profile names.
 
 `include_values`  
-Whether to return only profile names. If **`FALSE`** then only profile
+Whether to return only profile names. If **`false`** then only profile
 names will be returned.
 
 ### Return Values
@@ -8252,10 +8252,10 @@ Returns the image properties
 class="methodparam"><span class="type">string</span> `$pattern`<span
 class="initializer"> = "\*"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$include_values`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_values`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
-Returns all associated properties that match the pattern. If **`FALSE`**
+Returns all associated properties that match the pattern. If **`false`**
 is passed as second parameter only the property names are returned. This
 method is available if Imagick has been compiled against ImageMagick
 version 6.3.6 or newer.
@@ -8266,7 +8266,7 @@ version 6.3.6 or newer.
 The pattern for property names.
 
 `include_values`  
-Whether to return only property names. If **`FALSE`** then only property
+Whether to return only property names. If **`false`** then only property
 names will be returned.
 
 ### Return Values
@@ -9313,7 +9313,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9348,13 +9348,13 @@ Checks if the object has more images
 <span class="methodname">Imagick::hasNextImage</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the object has more images when traversing the
+Returns **`true`** if the object has more images when traversing the
 list in the forward direction.
 
 ### Return Values
 
-Returns **`TRUE`** if the object has more images when traversing the
-list in the forward direction, returns **`FALSE`** if there are none.
+Returns **`true`** if the object has more images when traversing the
+list in the forward direction, returns **`false`** if there are none.
 
 Imagick::hasPreviousImage
 =========================
@@ -9367,13 +9367,13 @@ Checks if the object has a previous image
 <span class="methodname">Imagick::hasPreviousImage</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the object has more images when traversing the
+Returns **`true`** if the object has more images when traversing the
 list in the reverse direction
 
 ### Return Values
 
-Returns **`TRUE`** if the object has more images when traversing the
-list in the reverse direction, returns **`FALSE`** if there are none.
+Returns **`true`** if the object has more images when traversing the
+list in the reverse direction, returns **`false`** if there are none.
 
 Imagick::identifyFormat
 =======================
@@ -9400,7 +9400,7 @@ unique colors: %k".
 
 ### Return Values
 
-Returns format or **`FALSE`** on failure.
+Returns format or **`false`** on failure.
 
 ### Examples
 
@@ -9425,7 +9425,7 @@ Identifies an image and fetches attributes
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">Imagick::identifyImage</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$appendRawOutput`<span class="initializer"> = **`FALSE`**</span></span>
+`$appendRawOutput`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Identifies an image and returns the attributes. Attributes include the
@@ -9434,7 +9434,7 @@ image width, height, size, and others.
 ### Parameters
 
 `appendRawOutput`  
-If **`TRUE`** then the raw output is appended to the array.
+If **`true`** then the raw output is appended to the array.
 
 ### Return Values
 
@@ -9494,7 +9494,7 @@ The radius of the implode
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9570,7 +9570,7 @@ The array of pixels
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9651,7 +9651,7 @@ image pair.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::labelImage
 ===================
@@ -9673,7 +9673,7 @@ The label to add
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::levelImage
 ===================
@@ -9719,7 +9719,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9771,7 +9771,7 @@ The image white point
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -9830,7 +9830,7 @@ Introduces a bias for non-straight seams. This parameter is typically 0.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -9875,7 +9875,7 @@ original size.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9924,7 +9924,7 @@ class="methodparam"><span class="type">Imagick</span> `$map`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -9978,7 +9978,7 @@ The starting y coordinate of the operation.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -10017,7 +10017,7 @@ The radius of the pixel neighborhood.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -10112,7 +10112,7 @@ its original size
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::modulateImage
 ======================
@@ -10144,7 +10144,7 @@ resulting in a rotation of 180 degrees.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -10204,7 +10204,7 @@ color is that of the thumbnail's matte color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::morphImages
 ====================
@@ -10269,7 +10269,7 @@ morphology method. Typically this is a value of 1.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -10719,7 +10719,7 @@ by the page offset of the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::motionBlurImage
 ========================
@@ -10764,7 +10764,7 @@ ImageMagick version 6.4.4 or greater.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -10811,7 +10811,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -10867,7 +10867,7 @@ Image format. This parameter was added in Imagick version 2.0.1.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -10927,7 +10927,7 @@ string containing pseudo image definition.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -10969,7 +10969,7 @@ Associates the next image in the image list with an Imagick object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::normalizeImage
 =======================
@@ -10996,7 +10996,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11039,7 +11039,7 @@ The radius of the circular neighborhood.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11092,7 +11092,7 @@ intensities of 100 and 102 respectively are now interpreted as the same
 color.
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 `channel`  
 Provide any channel constant that is valid for your channel mode. To
@@ -11104,7 +11104,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::optimizeImageLayers
 ============================
@@ -11125,7 +11125,7 @@ version 6.2.9 or newer.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11195,7 +11195,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11288,7 +11288,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::paintOpaqueImage
 =========================
@@ -11334,7 +11334,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11382,7 +11382,7 @@ consider two colors as the same.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11416,7 +11416,7 @@ The filename to read the information from.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::pingImageBlob
 ======================
@@ -11440,7 +11440,7 @@ A string containing the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11500,7 +11500,7 @@ Optional filename for this image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11556,7 +11556,7 @@ The polaroid angle
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11603,7 +11603,7 @@ Reduces the image to a limited number of color level.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -11647,7 +11647,7 @@ Preview type. See
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11668,7 +11668,7 @@ Assocates the previous image in an image list with the Imagick object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::profileImage
 =====================
@@ -11696,7 +11696,7 @@ image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11733,7 +11733,7 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11787,7 +11787,7 @@ class="methodparam"><span class="type">bool</span> `$dither`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -11988,7 +11988,7 @@ Radial blurs an image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12044,7 +12044,7 @@ effect.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12100,7 +12100,7 @@ bitwise operators. Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12144,7 +12144,7 @@ Reads image from filename
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::readImageBlob
 ======================
@@ -12167,7 +12167,7 @@ Reads image from a binary string
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12215,7 +12215,7 @@ Reads image from open filehandle
 class="methodparam"><span class="type">resource</span>
 `$filehandle`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$fileName`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Reads image from open filehandle
 
@@ -12227,7 +12227,7 @@ Reads image from open filehandle
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12254,7 +12254,7 @@ single Imagick object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::recolorImage
 =====================
@@ -12285,7 +12285,7 @@ The matrix containing the color values
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -12345,7 +12345,7 @@ of 0 and Imagick::reduceNoiseImage() selects a suitable radius for you.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12395,7 +12395,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12416,7 +12416,7 @@ Removes an image from the image list.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12462,7 +12462,7 @@ Renders all preceding drawing commands.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::resampleImage
 ======================
@@ -12494,7 +12494,7 @@ Resample image to desired resolution.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12535,7 +12535,7 @@ The page definition. For example *7168x5147+0+0*
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::resizeImage
 ====================
@@ -12552,9 +12552,9 @@ class="methodparam"><span class="type">int</span> `$columns`</span> ,
 , <span class="methodparam"><span class="type">float</span>
 `$blur`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$bestfit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Scales an image to the desired dimensions with a
 <a href="/imagick/constants.html#FILTER%20constants" class="link">filter</a>.
@@ -12587,7 +12587,7 @@ Optional fit parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -12659,7 +12659,7 @@ The Y offset.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12704,7 +12704,7 @@ number of degrees to rotate the image clockwise.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -12758,7 +12758,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -12846,7 +12846,7 @@ $image->writeImage("rounded.png");
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::sampleImage
 ====================
@@ -12872,7 +12872,7 @@ color into the scaled image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::scaleImage
 ===================
@@ -12886,9 +12886,9 @@ Scales the size of an image
 class="methodparam"><span class="type">int</span> `$cols`</span> , <span
 class="methodparam"><span class="type">int</span> `$rows`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$bestfit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Scales the size of an image to the given dimensions. The other parameter
 will be calculated if 0 is passed as either param.
@@ -12911,7 +12911,7 @@ will be calculated if 0 is passed as either param.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -12953,7 +12953,7 @@ class="methodparam"><span class="type">int</span> `$COLORSPACE`</span> ,
 `$cluster_threshold`</span> , <span class="methodparam"><span
 class="type">float</span> `$smooth_threshold`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Analyses the image and identifies units that are similar. This method is
 available if Imagick has been compiled against ImageMagick version 6.4.5
@@ -13033,7 +13033,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -13075,7 +13075,7 @@ indicate the 1st, 2nd and 3rd channels.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13123,7 +13123,7 @@ threshold of 80 is a good starting point for a reasonable tone.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13165,7 +13165,7 @@ Sets the object's default background color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -13196,7 +13196,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13225,7 +13225,7 @@ constants.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setCompressionQuality
 ==============================
@@ -13254,7 +13254,7 @@ compression, 100 low compression.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -13309,7 +13309,7 @@ Sets the filename before you read or write an image file.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setFirstIterator
 =========================
@@ -13326,7 +13326,7 @@ Sets the Imagick iterator to the first image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setFont
 ================
@@ -13354,7 +13354,7 @@ Font name or a filename
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -13402,7 +13402,7 @@ Sets the format of the Imagick object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setGravity
 ===================
@@ -13450,7 +13450,7 @@ The replace Imagick object
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13501,7 +13501,7 @@ One of the **`Imagick::ALPHACHANNEL_*`** constants
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13540,7 +13540,7 @@ The value of the artifact
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13605,7 +13605,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageBackgroundColor
 ================================
@@ -13627,7 +13627,7 @@ Sets the image background color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13664,7 +13664,7 @@ Imagick::ConvolveImage()).
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13747,7 +13747,7 @@ Sets the image chromaticity blue primary point.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13773,7 +13773,7 @@ The border color
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13808,7 +13808,7 @@ Sets the depth of a particular image channel.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13842,7 +13842,7 @@ The Imagick object containing the clip mask
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13913,7 +13913,7 @@ Sets the color of the specified colormap index.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13942,7 +13942,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13969,7 +13969,7 @@ method.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -13994,7 +13994,7 @@ One of the **`COMPRESSION`** constants
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14021,7 +14021,7 @@ The image compression quality as an integer
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14070,7 +14070,7 @@ value of 20 would be 20/100 of a second aka 1/5th of a second.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14123,7 +14123,7 @@ Sets the image depth.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14148,7 +14148,7 @@ Sets the image disposal method.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14176,7 +14176,7 @@ Sets the image size (i.e. columns & rows).
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14202,7 +14202,7 @@ Sets the filename of a particular image in a sequence.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14229,7 +14229,7 @@ ImageMagick installation.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageGamma
 ======================
@@ -14250,7 +14250,7 @@ Sets the image gamma.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14304,7 +14304,7 @@ Sets the image chromaticity green primary point.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14339,7 +14339,7 @@ The position to set the iterator to
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14365,7 +14365,7 @@ Sets the image compression.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14392,7 +14392,7 @@ The method is one of the **`Imagick::INTERPOLATE_*`** constants
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageIterations
 ===========================
@@ -14415,7 +14415,7 @@ continuously.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14461,7 +14461,7 @@ True activates the matte channel and false disables it.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageMatteColor
 ===========================
@@ -14487,7 +14487,7 @@ Sets the image matte color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14530,7 +14530,7 @@ transparent.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -14576,7 +14576,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -14624,7 +14624,7 @@ Sets the page geometry of the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14656,7 +14656,7 @@ profiles.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14707,7 +14707,7 @@ echo $image->getImageProperty('Exif:Make');
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageRedPrimary
 ===========================
@@ -14731,7 +14731,7 @@ Sets the image chromaticity red primary point.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14757,7 +14757,7 @@ Sets the image rendering intent.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14786,7 +14786,7 @@ Sets the image resolution.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14829,7 +14829,7 @@ Sets the image scene.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -14871,7 +14871,7 @@ per second.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -14932,7 +14932,7 @@ Sets the image type.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageUnits
 ======================
@@ -14953,7 +14953,7 @@ Sets the image units of resolution.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageVirtualPixelMethod
 ===================================
@@ -14975,7 +14975,7 @@ Sets the image virtual pixel method.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setImageWhitePoint
 ===========================
@@ -14999,7 +14999,7 @@ Sets the image chromaticity white point.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -15025,7 +15025,7 @@ Sets the image compression.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setIteratorIndex
 =========================
@@ -15049,7 +15049,7 @@ The position to set the iterator to
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15091,7 +15091,7 @@ Sets the Imagick iterator to the last image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setOption
 ==================
@@ -15116,7 +15116,7 @@ Associates one or more options with the wand.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15210,7 +15210,7 @@ Sets the page geometry of the Imagick object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setPointSize
 =====================
@@ -15235,7 +15235,7 @@ Point size
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -15302,7 +15302,7 @@ operation is not trivial.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15379,7 +15379,7 @@ creates temporary images e.g. while processing PDFs.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setResolution
 ======================
@@ -15406,7 +15406,7 @@ The vertical resolution.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Notes
 
@@ -15447,7 +15447,7 @@ The unit depends on the type of the resource being limited.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -15472,7 +15472,7 @@ Sets the image sampling factors.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15531,7 +15531,7 @@ format such as RGB, GRAY, or CMYK.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setSizeOffset
 ======================
@@ -15564,7 +15564,7 @@ The image offset.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::setType
 ================
@@ -15585,7 +15585,7 @@ Sets the image type attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::shadeImage
 ===================
@@ -15620,7 +15620,7 @@ Defines the light source direction.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -15671,7 +15671,7 @@ Simulates an image shadow.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15720,7 +15720,7 @@ for you.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15761,7 +15761,7 @@ for the new Image structure and returns a pointer to the new image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15815,7 +15815,7 @@ The number of degrees to shear on the y axis
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -15861,7 +15861,7 @@ function without saturating highlights or shadows. Contrast indicates
 how much to increase the contrast (0 is none; 3 is typical; 20 is
 pushing it); mid-point indicates where midtones fall in the resultant
 image (0 is white; 50 is middle-gray; 100 is black). Set sharpen to
-**`TRUE`** to increase the image contrast otherwise the contrast is
+**`true`** to increase the image contrast otherwise the contrast is
 reduced.
 
 See also
@@ -15885,7 +15885,7 @@ Which color channels the contrast will be applied to.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -15947,7 +15947,7 @@ Apply the effect along this angle.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16035,7 +16035,7 @@ the extent of the solarization.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16093,7 +16093,7 @@ Refer to this list of
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16287,7 +16287,7 @@ Splices a solid color into the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16325,7 +16325,7 @@ defined by the radius parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16378,7 +16378,7 @@ the specified width and height.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16430,7 +16430,7 @@ start position within the image to hide the watermark.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::stereoImage
 ====================
@@ -16453,7 +16453,7 @@ of a left and right image of a stereo pair.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16474,7 +16474,7 @@ Strips an image of all profiles and comments.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16559,7 +16559,7 @@ dramatic effect as the degrees move from 1 to 360.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16654,7 +16654,7 @@ image.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16684,15 +16684,15 @@ Changes the size of an image
 class="methodparam"><span class="type">int</span> `$columns`</span> ,
 <span class="methodparam"><span class="type">int</span> `$rows`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$bestfit`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$bestfit`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span> `$fill`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$legacy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 Changes the size of an image to the given dimensions and removes any
 associated profiles. The goal is to produce small, low cost thumbnail
-images suited for display on the Web. If **`TRUE`** is given as a third
+images suited for display on the Web. If **`true`** is given as a third
 parameter then columns and rows parameters are used as maximums for each
 side. Both sides will be scaled down until they match or are smaller
 than the parameter given for the side.
@@ -16718,7 +16718,7 @@ Whether to force maximum values
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16754,7 +16754,7 @@ class="methodparam"><span class="type">mixed</span> `$tint`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$opacity`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$legacy`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Applies a color vector to each pixel in the image. The length of the
 vector is 0 for black and white and at its maximum for the midtones. The
@@ -16768,7 +16768,7 @@ vector weighing function is f(x)=(1-(4.0\*((x-0.5)\*(x-0.5)))).
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -16912,7 +16912,7 @@ e.g. Imagick::COLORSPACE\_CMYK.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -16991,11 +16991,11 @@ intensities of 100 and 102 respectively are now interpreted as the same
 color.
 
 `invert`  
-If **`TRUE`** paints any pixel that does not match the target color.
+If **`true`** paints any pixel that does not match the target color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -17041,7 +17041,7 @@ if Imagick has been compiled against ImageMagick version 6.2.9 or newer.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -17080,7 +17080,7 @@ if Imagick has been compiled against ImageMagick version 6.2.9 or newer.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -17128,7 +17128,7 @@ range.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -17176,7 +17176,7 @@ Imagick has been compiled against ImageMagick version 6.2.9 or newer.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -17234,7 +17234,7 @@ Imagick::UnsharpMaskImage() selects a suitable radius for you.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -17271,7 +17271,7 @@ Checks if the current item is valid.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::vignetteImage
 ======================
@@ -17308,7 +17308,7 @@ Y offset of the ellipse
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### See Also
 
@@ -17357,7 +17357,7 @@ The length of the wave.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Errors/Exceptions
 
@@ -17410,7 +17410,7 @@ unchanged.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Changelog
 
@@ -17460,7 +17460,7 @@ using format: prefix, for example "jpg:test.png".
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::writeImageFile
 =======================
@@ -17486,7 +17486,7 @@ Filehandle where to write the image
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::writeImages
 ====================
@@ -17511,7 +17511,7 @@ Writes an image or image sequence.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Imagick::writeImagesFile
 ========================
@@ -17538,7 +17538,7 @@ Filehandle where to write the images
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Class synopsis
 --------------
@@ -18714,7 +18714,7 @@ the Imagick object where composition image is taken from
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -19199,7 +19199,7 @@ should be used.
 
 ### Return Values
 
-Returns **`TRUE`** if antialiasing is on and false if it is off.
+Returns **`true`** if antialiasing is on and false if it is off.
 
 ImagickDraw::getStrokeColor
 ===========================
@@ -19438,7 +19438,7 @@ text is antialiased. Text is antialiased by default.
 
 ### Return Values
 
-Returns **`TRUE`** if text is antialiased and false if not.
+Returns **`true`** if text is antialiased and false if not.
 
 ImagickDraw::getTextDecoration
 ==============================
@@ -19695,7 +19695,7 @@ PAINT\_ constant
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -20322,7 +20322,7 @@ a whole is rotated relative to the current coordinate system. The center
 (cx, cy) of the ellipse is calculated automatically to satisfy the
 constraints imposed by the other parameters. largeArcFlag and sweepFlag
 contribute to the automatic calculations and help determine how the arc
-is drawn. If largeArcFlag is **`TRUE`** then draw the larger of the
+is drawn. If largeArcFlag is **`true`** then draw the larger of the
 available arcs. If sweepFlag is true, then draw the arc matching a
 clock-wise rotation.
 
@@ -20384,7 +20384,7 @@ a whole is rotated relative to the current coordinate system. The center
 (cx, cy) of the ellipse is calculated automatically to satisfy the
 constraints imposed by the other parameters. largeArcFlag and sweepFlag
 contribute to the automatic calculations and help determine how the arc
-is drawn. If largeArcFlag is **`TRUE`** then draw the larger of the
+is drawn. If largeArcFlag is **`true`** then draw the larger of the
 available arcs. If sweepFlag is true, then draw the arc matching a
 clock-wise rotation.
 
@@ -20851,7 +20851,7 @@ multidimensional array like array( array( 'x' =\> 3, 'y' =\> 4 ), array(
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -20918,7 +20918,7 @@ array( 'x' =\> 8, 'y' =\> 10 ) )
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -20980,7 +20980,7 @@ is proper form to pop all ImagickDraws which have been pushed.
 
 ### Return Values
 
-Returns **`TRUE`** on success and false on failure.
+Returns **`true`** on success and false on failure.
 
 ImagickDraw::popClipPath
 ========================
@@ -21081,7 +21081,7 @@ Terminates a pattern definition.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ImagickDraw::push
 =================
@@ -21107,7 +21107,7 @@ equivalent Push.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -21244,7 +21244,7 @@ height of the pattern
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -21388,7 +21388,7 @@ Renders all preceding drawing commands onto the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ImagickDraw::resetVectorGraphics
 ================================
@@ -21409,7 +21409,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickDraw::rotate
 ===================
@@ -22012,7 +22012,7 @@ URL to use to obtain fill pattern.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ImagickDraw::setFillRule
 ========================
@@ -22128,7 +22128,7 @@ Sets the fully-specified font to use when annotating with text.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -22196,7 +22196,7 @@ the font family
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -22602,7 +22602,7 @@ Sets the resolution.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickDraw::setStrokeAlpha
 ===========================
@@ -22827,7 +22827,7 @@ array of floats
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -23548,7 +23548,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickDraw::setTextInterwordSpacing
 ====================================
@@ -23570,7 +23570,7 @@ Sets the text interword spacing.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickDraw::setTextKerning
 ===========================
@@ -23596,7 +23596,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickDraw::setTextUnderColor
 ==============================
@@ -23685,7 +23685,7 @@ xml containing the vector graphics
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -24118,7 +24118,7 @@ unsets any color associated with the object.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixel::\_\_construct
 ===========================
@@ -24229,7 +24229,7 @@ function has been called.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixel::getColor
 ======================
@@ -24644,7 +24644,7 @@ The theoretical maximum for this value is the square root of three
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixel::isPixelSimilarQuantum
 ===================================
@@ -24709,7 +24709,7 @@ The theoretical maximum for this value is the square root of three
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -24824,7 +24824,7 @@ object.
 
 ### Return Values
 
-Returns **`TRUE`** if the specified color was set, **`FALSE`**
+Returns **`true`** if the specified color was set, **`false`**
 otherwise.
 
 ### Examples
@@ -24877,7 +24877,7 @@ Sets the color count associated with this color.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixel::setColorValue
 ===========================
@@ -24907,7 +24907,7 @@ The value to set this channel to, ranging from 0 to 1.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -24968,7 +24968,7 @@ Imagick::getQuantum().
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25035,7 +25035,7 @@ at 1, with the full HS value at 0.5 luminosity.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25102,7 +25102,7 @@ Sets the colormap index of the pixel wand.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Class synopsis
 --------------
@@ -25194,7 +25194,7 @@ Clear resources associated with a PixelIterator.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25251,7 +25251,7 @@ The ImagickPixelIterator constructor
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25305,7 +25305,7 @@ Deallocates resources associated with a PixelIterator.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixelIterator::getCurrentIteratorRow
 ===========================================
@@ -25461,7 +25461,7 @@ Returns a new pixel iterator.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Throwing ImagickPixelIteratorException.
+Returns **`true`** on success. Throwing ImagickPixelIteratorException.
 
 ImagickPixelIterator::newPixelRegionIterator
 ============================================
@@ -25526,7 +25526,7 @@ pixels in a pixel container.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25601,7 +25601,7 @@ Sets the pixel iterator to the first pixel row.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixelIterator::setIteratorLastRow
 ========================================
@@ -25623,7 +25623,7 @@ Sets the pixel iterator to the last pixel row.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ImagickPixelIterator::setIteratorRow
 ====================================
@@ -25649,7 +25649,7 @@ Set the pixel iterator row.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 ### Examples
 
@@ -25703,7 +25703,7 @@ Syncs the pixel iterator.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 Introduction
 ------------

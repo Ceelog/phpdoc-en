@@ -161,7 +161,7 @@ matched.
 ### Return Values
 
 Returns the length of the matched string if a match for `pattern` was
-found in `string`, or **`FALSE`** if no matches were found or an error
+found in `string`, or **`false`** if no matches were found or an error
 occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -315,7 +315,7 @@ matched.
 ### Return Values
 
 Returns the length of the matched string if a match for `pattern` was
-found in `string`, or **`FALSE`** if no matches were found or an error
+found in `string`, or **`false`** if no matches were found or an error
 occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -402,7 +402,7 @@ If there are <span class="replaceable">n</span> occurrences of
 class="replaceable">n</span>+1* items. For example, if there is no
 occurrence of `pattern`, an array with only one element will be
 returned. Of course, this is also true if `string` is empty. If an error
-occurs, <span class="function">split</span> returns **`FALSE`**.
+occurs, <span class="function">split</span> returns **`false`**.
 
 ### Examples
 
@@ -517,7 +517,7 @@ If there are <span class="replaceable">n</span> occurrences of
 class="replaceable">n</span>+1* items. For example, if there is no
 occurrence of `pattern`, an array with only one element will be
 returned. Of course, this is also true if `string` is empty. If an error
-occurs, <span class="function">spliti</span> returns **`FALSE`**.
+occurs, <span class="function">spliti</span> returns **`false`**.
 
 ### Examples
 

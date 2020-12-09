@@ -22,7 +22,7 @@ class="type">Closure</span> `$handler`</span> \[, <span
 class="methodparam"><span class="type">int</span> `&$flags`<span
 class="initializer"> = ZEND\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$all`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 Adds a non-existent function or method.
 
@@ -46,7 +46,7 @@ Whether all classes that descend from `class` will also be affected.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -341,7 +341,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$function`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$all`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Deletes a previously added function or method.
 
@@ -358,7 +358,7 @@ Whether all classes that descend from `class` will also be affected.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -482,7 +482,7 @@ The name of the class to inherit
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -720,7 +720,7 @@ This function has no parameters.
 
 ### Return Values
 
-This function returns the last exit status, or **`NULL`** if <span
+This function returns the last exit status, or **`null`** if <span
 class="function">exit</span> has not been called.
 
 ### Examples
@@ -779,7 +779,7 @@ The name of the function or method.
 
 ### Return Values
 
-Returns the previously set hook on a function or method, or **`NULL`**
+Returns the previously set hook on a function or method, or **`null`**
 if no hook has been set.
 
 ### Examples
@@ -828,7 +828,7 @@ The name of the mocked class.
 ### Return Values
 
 Either a string containing the name of the mock, or an object, or
-**`NULL`** if no mock has been set.
+**`null`** if no mock has been set.
 
 ### Examples
 
@@ -897,7 +897,7 @@ The name of the property.
 
 ### Return Values
 
-Returns the value of the class or instance property, or **`NULL`** if
+Returns the value of the class or instance property, or **`null`** if
 the property is not defined.
 
 ### Examples
@@ -1005,7 +1005,7 @@ The name of the function or method.
 ### Return Values
 
 Returns an associative <span class="type">array</span> of variable names
-mapped to their current values on success, or **`NULL`** if the function
+mapped to their current values on success, or **`null`** if the function
 or method does not exist.
 
 ### Examples
@@ -1056,7 +1056,7 @@ Makes `class` implement `interface`
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1169,7 +1169,7 @@ variable
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1356,7 +1356,7 @@ A closure to execute when entering the function or method.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1601,7 +1601,7 @@ class="methodparam"><span class="type">string</span> `$function`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$execute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="type">bool</span> <span
 class="methodname">uopz\_set\_return</span> ( <span
@@ -1610,7 +1610,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> ,
 `$function`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$execute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Sets the return value of the `function` to `value`. If `value` is a
 Closure and `execute` is set, the Closure will be executed in place of
@@ -1781,7 +1781,7 @@ The name of an existing constant
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1831,7 +1831,7 @@ The name of the function or method.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

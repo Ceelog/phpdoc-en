@@ -9,6 +9,10 @@ Human Language and Character Encoding Support
     -   [Predefined Constants](/enchant/constants.html)
     -   [Examples](/enchant/examples.html)
     -   [Enchant Functions](/ref/enchant.html)
+    -   [EnchantBroker](/class/enchantbroker.html) — The EnchantBroker
+        class
+    -   [EnchantDictionary](/class/enchantdictionary.html) — The
+        EnchantDictionary class
 -   [Gender](/book/gender.html) — Determine gender of firstnames
     -   [Introduction](/intro/gender.html)
     -   [Installing/Configuring](/gender/setup.html)

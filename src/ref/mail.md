@@ -164,8 +164,8 @@ method. For sendmail users, this file is `/etc/mail/trusted-users`.
 
 ### Return Values
 
-Returns **`TRUE`** if the mail was successfully accepted for delivery,
-**`FALSE`** otherwise.
+Returns **`true`** if the mail was successfully accepted for delivery,
+**`false`** otherwise.
 
 It is important to note that just because the mail was accepted for
 delivery, it does NOT mean the mail will actually reach the intended

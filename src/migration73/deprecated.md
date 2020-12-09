@@ -6,7 +6,7 @@ Deprecated Features
 #### Case-Insensitive Constants
 
 The declaration of case-insensitive constants has been deprecated.
-Passing **`TRUE`** as the third argument to <span
+Passing **`true`** as the third argument to <span
 class="function">define</span> will now generate a deprecation warning.
 The use of case-insensitive constants with a case that differs from the
 declaration is also deprecated.

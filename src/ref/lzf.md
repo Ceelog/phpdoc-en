@@ -19,7 +19,7 @@ The string to compress.
 
 ### Return Values
 
-Returns the compressed data or **`FALSE`** if an error occurred.
+Returns the compressed data or **`false`** if an error occurred.
 
 ### See Also
 
@@ -46,7 +46,7 @@ The compressed string.
 
 ### Return Values
 
-Returns the decompressed data or **`FALSE`** if an error occurred.
+Returns the decompressed data or **`false`** if an error occurred.
 
 ### See Also
 

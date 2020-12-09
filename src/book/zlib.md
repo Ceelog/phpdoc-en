@@ -64,3 +64,39 @@ Zlib Compression
         the specified encoding
     -   [zlib\_get\_coding\_type](/ref/zlib.html#zlib_get_coding_type) —
         Returns the coding type used for output compression
+-   [DeflateContext](/class/deflatecontext.html) — The DeflateContext
+    class
+-   [InflateContext](/class/inflatecontext.html) — The InflateContext
+    class
+
+Introduction
+------------
+
+A fully opaque class which replaces *zlib.deflate* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**DeflateContext**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**DeflateContext** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *zlib.inflate* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**InflateContext**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**InflateContext** </span> {
+
+}

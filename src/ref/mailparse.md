@@ -95,19 +95,19 @@ Can be a file name or a valid stream resource.
 
 `callbackfunc`  
 If set, this must be either a valid callback that will be passed the
-extracted section, or **`NULL`** to make this function return the
+extracted section, or **`null`** to make this function return the
 extracted section.
 
 If not specified, the contents will be sent to "stdout".
 
 ### Return Values
 
-If `callbackfunc` is not **`NULL`** returns **`TRUE`** on success.
+If `callbackfunc` is not **`null`** returns **`true`** on success.
 
-If `callbackfunc` is set to **`NULL`**, returns the extracted section as
+If `callbackfunc` is set to **`null`**, returns the extracted section as
 a string.
 
-Returns **`FALSE`** on error.
+Returns **`false`** on error.
 
 ### See Also
 
@@ -214,7 +214,7 @@ class="function">mailparse\_msg\_parse\_file</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -318,7 +318,7 @@ through the parser.
 
 ### Return Values
 
-Returns a *MIME* resource representing the structure, or **`FALSE`** on
+Returns a *MIME* resource representing the structure, or **`false`** on
 error.
 
 ### See Also
@@ -357,7 +357,7 @@ A valid *MIME* resource.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 mailparse\_rfc822\_parse\_addresses
 ===================================
@@ -394,7 +394,7 @@ recipient:
 |-------------|-----------------------------------------------------------------------------------------------------------------------------------|
 | *display*   | The recipient name, for display purpose. If this part is not set for a recipient, this key will hold the same value as *address*. |
 | *address*   | The email address                                                                                                                 |
-| *is\_group* | **`TRUE`** if the recipient is a newsgroup, **`FALSE`** otherwise.                                                                |
+| *is\_group* | **`true`** if the recipient is a newsgroup, **`false`** otherwise.                                                                |
 
 ### Examples
 
@@ -466,7 +466,7 @@ One of the character encodings supported by the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

@@ -265,9 +265,9 @@ class="methodname">openFile</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$open_mode`<span class="initializer"> =
 "r"</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">setFileClass</span> (\[ <span
@@ -1000,7 +1000,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the path to the file, or **`FALSE`** if the file does not exist.
+Returns the path to the file, or **`false`** if the file does not exist.
 
 ### Examples
 
@@ -1136,7 +1136,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if a directory, **`FALSE`** otherwise.
+Returns **`true`** if a directory, **`false`** otherwise.
 
 ### Examples
 
@@ -1176,7 +1176,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if executable, **`FALSE`** otherwise.
+Returns **`true`** if executable, **`false`** otherwise.
 
 ### Examples
 
@@ -1222,8 +1222,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the file exists and is a regular file (not a
-link), **`FALSE`** otherwise.
+Returns **`true`** if the file exists and is a regular file (not a
+link), **`false`** otherwise.
 
 ### Examples
 
@@ -1265,7 +1265,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the file is a link, **`FALSE`** otherwise.
+Returns **`true`** if the file is a link, **`false`** otherwise.
 
 ### Examples
 
@@ -1304,7 +1304,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if readable, **`FALSE`** otherwise.
+Returns **`true`** if readable, **`false`** otherwise.
 
 ### Examples
 
@@ -1345,7 +1345,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if writable, **`FALSE`** otherwise;
+Returns **`true`** if writable, **`false`** otherwise;
 
 SplFileInfo::openFile
 =====================
@@ -1361,9 +1361,9 @@ class="methodparam"><span class="type">string</span> `$open_mode`<span
 class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 Creates an <span class="classname">SplFileObject</span> <span
 class="type">object</span> of the file. This is useful because <span
@@ -1380,7 +1380,7 @@ class="function">fopen</span> documentation for descriptions of possible
 modes. The default is read only.
 
 `use_include_path`  
-When set to **`TRUE`**, the filename is also searched for within the
+When set to **`true`**, the filename is also searched for within the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 
 `context`  
@@ -1617,7 +1617,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 `$open_mode`<span class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -1875,9 +1875,9 @@ class="methodparam"><span class="type">string</span> `$open_mode`<span
 class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SplFileInfo::setFileClass</span> (\[ <span
@@ -1932,7 +1932,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 `$open_mode`<span class="initializer"> = "r"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 Construct a new file object.
@@ -2082,7 +2082,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if file is at EOF, **`FALSE`** otherwise.
+Returns **`true`** if file is at EOF, **`false`** otherwise.
 
 ### Examples
 
@@ -2130,7 +2130,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2171,12 +2171,12 @@ This function has no parameters.
 ### Return Values
 
 Returns a string containing a single character read from the file or
-**`FALSE`** on EOF.
+**`false`** on EOF.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -2253,13 +2253,13 @@ class="methodname">SplFileObject::setCsvControl</span>. An empty string
 
 ### Return Values
 
-Returns an indexed array containing the fields read, or **`FALSE`** on
+Returns an indexed array containing the fields read, or **`false`** on
 error.
 
 > **Note**:
 >
 > A blank line in a CSV file will be returned as an array comprising a
-> single **`NULL`** field unless using
+> single **`null`** field unless using
 > **`SplFileObject::SKIP_EMPTY | SplFileObject::DROP_NEW_LINE`**, in
 > which case empty lines are skipped.
 
@@ -2340,7 +2340,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string containing the next line from the file, or **`FALSE`**
+Returns a string containing the next line from the file, or **`false`**
 on error.
 
 ### Errors/Exceptions
@@ -2403,7 +2403,7 @@ Optional parameter to specify tags which should not be stripped.
 ### Return Values
 
 Returns a string containing the next line of the file with HTML and PHP
-code stripped, or **`FALSE`** on error.
+code stripped, or **`false`** on error.
 
 ### Examples
 
@@ -2477,11 +2477,11 @@ above operations, if <span class="function">flock</span> should not
 block during the locking attempt.
 
 `wouldblock`  
-Set to **`TRUE`** if the lock would block (EWOULDBLOCK errno condition).
+Set to **`true`** if the lock would block (EWOULDBLOCK errno condition).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2605,9 +2605,9 @@ mechanism.
 
 ### Return Values
 
-Returns the length of the written string or **`FALSE`** on failure.
+Returns the length of the written string or **`false`** on failure.
 
-Returns **`FALSE`**, and does not write the CSV line to the file, if the
+Returns **`false`**, and does not write the CSV line to the file, if the
 `delimiter` or `enclosure` parameter is not a single character.
 
 ### Errors/Exceptions
@@ -2677,7 +2677,7 @@ The number of bytes to read.
 
 ### Return Values
 
-Returns the string read from the file or **`FALSE`** on failure.
+Returns the string read from the file or **`false`** on failure.
 
 ### Examples
 
@@ -3057,7 +3057,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the position of the file pointer as an integer, or **`FALSE`**
+Returns the position of the file pointer as an integer, or **`false`**
 on error.
 
 ### Examples
@@ -3107,7 +3107,7 @@ The size to truncate to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3164,13 +3164,13 @@ comes first.
 
 ### Return Values
 
-Returns the number of bytes written, or **`FALSE`** on error.
+Returns the number of bytes written, or **`false`** on error.
 
 ### Changelog
 
 | Version | Description                                                      |
 |---------|------------------------------------------------------------------|
-| 7.4.0   | The function now returns **`FALSE`** instead of zero on failure. |
+| 7.4.0   | The function now returns **`false`** instead of zero on failure. |
 
 ### Examples
 
@@ -3205,7 +3205,7 @@ No purpose
 class="methodparam">void</span> )
 
 An <span class="classname">SplFileObject</span> does not have children
-so this method returns **`NULL`**.
+so this method returns **`null`**.
 
 ### Parameters
 
@@ -3400,7 +3400,7 @@ SplFileObject does not have children
 class="methodparam">void</span> )
 
 An <span class="classname">SplFileObject</span> does not have children
-so this method always return **`FALSE`**.
+so this method always return **`false`**.
 
 ### Parameters
 
@@ -3408,7 +3408,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`FALSE`**
+Returns **`false`**
 
 ### See Also
 
@@ -3871,7 +3871,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if not reached EOF, **`FALSE`** otherwise.
+Returns **`true`** if not reached EOF, **`false`** otherwise.
 
 ### Examples
 

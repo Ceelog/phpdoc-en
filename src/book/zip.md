@@ -170,7 +170,7 @@ class="methodparam"><span class="type">string</span> `$dirname`</span>
 <span class="methodname">addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -515,7 +515,7 @@ behaviour of these constants is described on the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -554,7 +554,7 @@ Adds a file to a ZIP archive from the given path
 <span class="methodname">ZipArchive::addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$entryname`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$entryname`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$start`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$length`<span
@@ -594,7 +594,7 @@ described on the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -677,7 +677,7 @@ described on the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -765,7 +765,7 @@ An associative array of options. Available options are:
 
 -   *"remove\_all\_path"*
 
-    **`TRUE`** to use the file name only and add to the root of the
+    **`true`** to use the file name only and add to the root of the
     archive.
 
 -   *"flags"*
@@ -797,7 +797,7 @@ An associative array of options. Available options are:
 ### Return Values
 
 An <span class="type">array</span> of added files on success or
-**`FALSE`** on failure
+**`false`** on failure
 
 ### Changelog
 
@@ -869,7 +869,7 @@ class="methodname">ZipArchive::addGlob</span>.
 ### Return Values
 
 An <span class="type">array</span> of added files on success or
-**`FALSE`** on failure
+**`false`** on failure
 
 ### Examples
 
@@ -918,7 +918,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::count
 =================
@@ -959,7 +959,7 @@ Index of the entry to delete.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -998,7 +998,7 @@ Name of the entry to delete.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1052,7 +1052,7 @@ array of names.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1109,7 +1109,7 @@ unchanged comment is returned.
 
 ### Return Values
 
-Returns the Zip archive comment or **`FALSE`** on failure.
+Returns the Zip archive comment or **`false`** on failure.
 
 ### Examples
 
@@ -1156,7 +1156,7 @@ unchanged comment is returned.
 
 ### Return Values
 
-Returns the comment on success or **`FALSE`** on failure.
+Returns the comment on success or **`false`** on failure.
 
 ### Examples
 
@@ -1201,7 +1201,7 @@ unchanged comment is returned.
 
 ### Return Values
 
-Returns the comment on success or **`FALSE`** on failure.
+Returns the comment on success or **`false`** on failure.
 
 ### Examples
 
@@ -1255,7 +1255,7 @@ unchanged attributes are returned.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1320,7 +1320,7 @@ unchanged attributes are returned.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::getFromIndex
 ========================
@@ -1358,7 +1358,7 @@ to it.
 
 ### Return Values
 
-Returns the contents of the entry on success or **`FALSE`** on failure.
+Returns the contents of the entry on success or **`false`** on failure.
 
 ### Examples
 
@@ -1417,7 +1417,7 @@ The flags to use to find the entry. The following values may be ORed.
 
 ### Return Values
 
-Returns the contents of the entry on success or **`FALSE`** on failure.
+Returns the contents of the entry on success or **`false`** on failure.
 
 ### Examples
 
@@ -1479,7 +1479,7 @@ unchanged name is returned.
 
 ### Return Values
 
-Returns the name on success or **`FALSE`** on failure.
+Returns the name on success or **`false`** on failure.
 
 ### Examples
 
@@ -1518,7 +1518,7 @@ This function has no parameters.
 ### Return Values
 
 Returns a <span class="type">string</span> with the status message on
-success or **`FALSE`** on failure.
+success or **`false`** on failure.
 
 ### Changelog
 
@@ -1548,7 +1548,7 @@ The name of the entry to use.
 
 ### Return Values
 
-Returns a file pointer (resource) on success or **`FALSE`** on failure.
+Returns a file pointer (resource) on success or **`false`** on failure.
 
 ### Examples
 
@@ -1625,11 +1625,11 @@ Check if a compression method is supported by libzip.
 The compression method, one of the **`ZipArchive::CM_*`** constants.
 
 `encode`  
-If **`TRUE`** check for compression, else check for decompression.
+If **`true`** check for compression, else check for decompression.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1664,11 +1664,11 @@ Check if a compression method is supported by libzip.
 The encryption method, one of the **`ZipArchive::EM_*`** constants.
 
 `encode`  
-If **`TRUE`** check for encryption, else check for decryption.
+If **`true`** check for encryption, else check for decryption.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1712,7 +1712,7 @@ them.
 
 ### Return Values
 
-Returns the index of the entry on success or **`FALSE`** on failure.
+Returns the index of the entry on success or **`false`** on failure.
 
 ### Examples
 
@@ -1795,7 +1795,7 @@ The mode to use to open the archive.
 ### Return Values
 
 `Error codes`  
-Returns **`TRUE`** on success or the error code.
+Returns **`true`** on success or the error code.
 
 -   **`ZipArchive::ER_EXISTS`**
 
@@ -1908,7 +1908,7 @@ be cancelled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1965,7 +1965,7 @@ class="type">float</span> (from 0.0 to 1.0).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2019,7 +2019,7 @@ New name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2063,7 +2063,7 @@ New name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2130,7 +2130,7 @@ behaviour of these constants is described on the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2176,7 +2176,7 @@ The contents of the comment.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2222,7 +2222,7 @@ The contents of the comment.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2267,7 +2267,7 @@ The contents of the comment.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2317,7 +2317,7 @@ Compression level.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2371,7 +2371,7 @@ Compression level.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2441,7 +2441,7 @@ Optional password, default used when missing.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2483,7 +2483,7 @@ Optional password, default used when missing.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2552,7 +2552,7 @@ Optional flags. Currently unused.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::setExternalAttributesName
 =====================================
@@ -2588,7 +2588,7 @@ Optional flags. Currently unused.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2641,7 +2641,7 @@ Optional flags, unused for now.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2703,7 +2703,7 @@ Optional flags, unused for now.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2757,7 +2757,7 @@ The password to be used for the archive.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2804,7 +2804,7 @@ about the original file in the archive, ignoring any changes made.
 
 ### Return Values
 
-Returns an array containing the entry details or **`FALSE`** on failure.
+Returns an array containing the entry details or **`false`** on failure.
 
 ### Examples
 
@@ -2870,7 +2870,7 @@ about the original file in the archive, ignoring any changes made.
 
 ### Return Values
 
-Returns an array containing the entry details or **`FALSE`** on failure.
+Returns an array containing the entry details or **`false`** on failure.
 
 ### Examples
 
@@ -2921,7 +2921,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::unchangeArchive
 ===========================
@@ -2943,7 +2943,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::unchangeIndex
 =========================
@@ -2965,7 +2965,7 @@ Index of the entry.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ZipArchive::unchangeName
 ========================
@@ -2987,4 +2987,4 @@ Name of the entry.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.

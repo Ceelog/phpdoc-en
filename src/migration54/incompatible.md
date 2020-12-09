@@ -13,7 +13,7 @@ take note of some backward incompatible changes:
     be updated, to avoid security issues. </span> <span class="simpara">
     <span class="function">get\_magic\_quotes\_gpc</span> and <span
     class="function">get\_magic\_quotes\_runtime</span> now always
-    return **`FALSE`**. <span
+    return **`false`**. <span
     class="function">set\_magic\_quotes\_runtime</span> raises an
     **`E_CORE_ERROR`** level error on trying to enable
     <a href="/security/magicquotes.html" class="link">Magic quotes</a>.
@@ -80,7 +80,7 @@ take note of some backward incompatible changes:
 -   <span class="simpara"> Converting an array to a string will now
     generate an **`E_NOTICE`** level error, but the result of the cast
     will still be the string *"Array"*. </span>
--   <span class="simpara"> Turning **`NULL`**, **`FALSE`**, or an empty
+-   <span class="simpara"> Turning **`null`**, **`false`**, or an empty
     string into an object by adding a property will now emit an
     **`E_WARNING`** level error, instead of **`E_STRICT`**. </span>
 -   <span class="simpara"> Parameter names that shadow super globals now
@@ -95,7 +95,7 @@ take note of some backward incompatible changes:
     <a href="/ref/hash.html#Calculate%20pre%20PHP-5.4%20tiger%20hashes%20with%20PHP-5.4%20and%20higher" class="link">this example</a>
     to write code that is compatible with both PHP 5.3 and 5.4. </span>
 -   <span class="simpara"> <span class="function">array\_combine</span>
-    now returns *array()* instead of **`FALSE`** when two empty arrays
+    now returns *array()* instead of **`false`** when two empty arrays
     are provided as parameters. </span>
 -   <span class="simpara"> If you use <span
     class="function">htmlentities</span> with asian character sets, it
@@ -105,7 +105,7 @@ take note of some backward incompatible changes:
 -   <span class="simpara"> The third parameter of <span
     class="function">ob\_start</span> has changed from <span
     class="type">bool</span> `erase` to <span class="type">int</span>
-    `flags`. Note that code that explicitly set `erase` to **`FALSE`**
+    `flags`. Note that code that explicitly set `erase` to **`false`**
     will no longer behave as expected in PHP 5.4: please follow
     <a href="/ref/outcontrol.html#Creating%20an%20uneraseable%20output%20buffer%20in%20a%20way%20compatible%20with%20both%20PHP%205.3%20and%205.4" class="link">this example</a>
     to write code that is compatible with PHP 5.3 and 5.4. </span>

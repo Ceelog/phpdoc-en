@@ -5,7 +5,7 @@ New features
 
 Type declarations for parameters and return values can now be marked as
 nullable by prefixing the type name with a question mark. This signifies
-that as well as the specified type, **`NULL`** can be passed as an
+that as well as the specified type, **`null`** can be passed as an
 argument, or returned as a value, respectively.
 
 ``` php
@@ -48,7 +48,7 @@ The above example will output:
 A <span class="type">void</span> return type has been introduced.
 Functions declared with void as their return type must either omit their
 return statement altogether, or use an empty return statement.
-**`NULL`** is not a valid return value for a void function.
+**`null`** is not a valid return value for a void function.
 
 ``` php
 <?php
@@ -75,7 +75,7 @@ The above example will output:
     int(1)
 
 Attempting to use a void function's return value simply evaluates to
-**`NULL`**, with no warnings emitted. The reason for this is because
+**`null`**, with no warnings emitted. The reason for this is because
 warnings would implicate the use of generic higher order functions.
 
 ### Symmetric array destructuring

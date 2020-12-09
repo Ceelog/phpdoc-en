@@ -100,6 +100,7 @@ XML Manipulation
     -   [Character Encoding](/xml/encoding.html)
     -   [Examples](/xml/examples.html)
     -   [XML Parser Functions](/ref/xml.html)
+    -   [XmlParser](/class/xmlparser.html) — The XmlParser class
 -   [XMLReader](/book/xmlreader.html)
     -   [Introduction](/intro/xmlreader.html)
     -   [Installing/Configuring](/xmlreader/setup.html)

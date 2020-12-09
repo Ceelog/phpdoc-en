@@ -34,6 +34,12 @@ Cryptography Extensions
     -   [Key/Certificate parameters](/openssl/certparams.html)
     -   [Certificate Verification](/openssl/cert/verification.html)
     -   [OpenSSL Functions](/ref/openssl.html)
+    -   [OpenSSLCertificate](/class/opensslcertificate.html) — The
+        OpenSSLCertificate class
+    -   [OpenSSLCertificateSigningRequest](/class/opensslcertificatesigningrequest.html)
+        — The OpenSSLCertificateSigningRequest class
+    -   [OpenSSLAsymmetricKey](/class/opensslasymmetrickey.html) — The
+        OpenSSLAsymmetricKey class
 -   [Password Hashing](/book/password.html)
     -   [Introduction](/intro/password.html)
     -   [Installing/Configuring](/password/setup.html)

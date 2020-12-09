@@ -188,7 +188,7 @@ the process's *umask* setting as per usual.
 
 ### Return Values
 
-A file descriptor or **`FALSE`** on error.
+A file descriptor or **`false`** on error.
 
 ### Examples
 
@@ -359,7 +359,7 @@ Returns an associative array with the following keys:
 
 -   "ctime" - time of last change
 
-On error <span class="function">dio\_stat</span> returns **`NULL`**.
+On error <span class="function">dio\_stat</span> returns **`null`**.
 
 dio\_tcsetattr
 ==============
@@ -465,7 +465,7 @@ The offset in bytes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 

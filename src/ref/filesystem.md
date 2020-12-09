@@ -107,7 +107,7 @@ A group name or number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -200,7 +200,7 @@ chmod("/somedir/somefile", 0750);
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -247,7 +247,7 @@ A user name or number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -310,7 +310,7 @@ Clears file status cache
 class="methodname">clearstatcache</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$clear_realpath_cache`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \]\] )
 
 When you use <span class="function">stat</span>, <span
@@ -328,8 +328,8 @@ that PHP caches about a file.
 You should also note that PHP doesn't cache information about
 non-existent files. So, if you call <span
 class="function">file\_exists</span> on a file that doesn't exist, it
-will return **`FALSE`** until you create the file. If you create the
-file, it will return **`TRUE`** even if you then delete the file.
+will return **`false`** until you create the file. If you create the
+file, it will return **`true`** even if you then delete the file.
 However <span class="function">unlink</span> clears the cache
 automatically.
 
@@ -365,7 +365,7 @@ Whether to clear the realpath cache or not.
 
 `filename`  
 Clear the realpath and the stat cache for a specific filename only; only
-used if `clear_realpath_cache` is **`TRUE`**.
+used if `clear_realpath_cache` is **`true`**.
 
 ### Return Values
 
@@ -441,7 +441,7 @@ class="function">stream\_context\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -597,7 +597,7 @@ A directory of the filesystem or disk partition.
 
 ### Return Values
 
-Returns the number of available bytes as a float or **`FALSE`** on
+Returns the number of available bytes as a float or **`false`** on
 failure.
 
 ### Examples
@@ -649,7 +649,7 @@ A directory of the filesystem or disk partition.
 
 ### Return Values
 
-Returns the total number of bytes as a float or **`FALSE`** on failure.
+Returns the total number of bytes as a float or **`false`** on failure.
 
 ### Examples
 
@@ -709,7 +709,7 @@ class="function">fsockopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -753,8 +753,8 @@ class="function">fclose</span>).
 
 ### Return Values
 
-Returns **`TRUE`** if the file pointer is at EOF or an error occurs
-(including socket timeout); otherwise returns **`FALSE`**.
+Returns **`true`** if the file pointer is at EOF or an error occurs
+(including socket timeout); otherwise returns **`false`**.
 
 ### Notes
 
@@ -790,7 +790,7 @@ while(!safe_feof($fp, $start) && (microtime(true) - $start) < $timeout)
 **Warning**
 
 If the passed file pointer is not valid you may get an infinite loop,
-because <span class="function">feof</span> fails to return **`TRUE`**.
+because <span class="function">feof</span> fails to return **`true`**.
 
 **Example \#2 <span class="function">feof</span> example with an invalid
 file pointer**
@@ -832,7 +832,7 @@ class="function">fclose</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -881,12 +881,12 @@ class="function">fclose</span>).
 ### Return Values
 
 Returns a string containing a single character read from the file
-pointed to by `handle`. Returns **`FALSE`** on EOF.
+pointed to by `handle`. Returns **`false`** on EOF.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1002,8 +1002,8 @@ Returns an indexed array containing the fields read.
 > <a href="/filesystem/setup.html#" class="link">auto_detect_line_endings</a>
 > run-time configuration option may help resolve the problem.</span>
 
-<span class="function">fgetcsv</span> returns **`NULL`** if an invalid
-`handle` is supplied or **`FALSE`** on other errors, including end of
+<span class="function">fgetcsv</span> returns **`null`** if an invalid
+`handle` is supplied or **`false`** on other errors, including end of
 file.
 
 ### Changelog
@@ -1073,9 +1073,9 @@ reaches the end of the line.
 
 Returns a string of up to `length` - 1 bytes read from the file pointed
 to by `handle`. If there is no more data to read in the file pointer,
-then **`FALSE`** is returned.
+then **`false`** is returned.
 
-If an error occurs, **`FALSE`** is returned.
+If an error occurs, **`false`** is returned.
 
 ### Examples
 
@@ -1168,7 +1168,7 @@ details regarding `allowable_tags`.
 Returns a string of up to `length` - 1 bytes read from the file pointed
 to by `handle`, with all HTML and PHP code stripped.
 
-If an error occurs, returns **`FALSE`**.
+If an error occurs, returns **`false`**.
 
 ### Examples
 
@@ -1244,12 +1244,12 @@ On windows, use `//computername/share/filename` or
 
 ### Return Values
 
-Returns **`TRUE`** if the file or directory specified by `filename`
-exists; **`FALSE`** otherwise.
+Returns **`true`** if the file or directory specified by `filename`
+exists; **`false`** otherwise.
 
 > **Note**:
 >
-> This function will return **`FALSE`** for symlinks pointing to
+> This function will return **`false`** for symlinks pointing to
 > non-existing files.
 
 > **Note**:
@@ -1314,7 +1314,7 @@ class="methodname">file\_get\_contents</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \[, <span
@@ -1325,7 +1325,7 @@ This function is similar to <span class="function">file</span>, except
 that <span class="function">file\_get\_contents</span> returns the file
 in a <span class="type">string</span>, starting at the specified
 `offset` up to `maxlen` bytes. On failure, <span
-class="function">file\_get\_contents</span> will return **`FALSE`**.
+class="function">file\_get\_contents</span> will return **`false`**.
 
 <span class="function">file\_get\_contents</span> is the preferred way
 to read the contents of a file into a string. It will use memory mapping
@@ -1349,12 +1349,12 @@ Name of the file to read.
 > search. This is not possible if
 > <a href="/language/types/declarations.html#language.types.declarations.strict" class="link">strict typing</a>
 > is enabled, since **`FILE_USE_INCLUDE_PATH`** is an <span
-> class="type">int</span>. Use **`TRUE`** instead.
+> class="type">int</span>. Use **`true`** instead.
 
 `context`  
 A valid context resource created with <span
 class="function">stream\_context\_create</span>. If you don't need to
-use a custom context, you can skip this parameter by **`NULL`**.
+use a custom context, you can skip this parameter by **`null`**.
 
 `offset`  
 The offset where the reading starts on the original stream. Negative
@@ -1371,12 +1371,12 @@ the filters.
 
 ### Return Values
 
-The function returns the read data or **`FALSE`** on failure.
+The function returns the read data or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1550,12 +1550,12 @@ class="function">stream\_context\_create</span>.
 ### Return Values
 
 This function returns the number of bytes that were written to the file,
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1678,7 +1678,7 @@ class="function">stream\_context\_create</span> function.
 
 Returns the file in an array. Each element of the array corresponds to a
 line in the file, with the newline still attached. Upon failure, <span
-class="function">file</span> returns **`FALSE`**.
+class="function">file</span> returns **`false`**.
 
 > **Note**:
 >
@@ -1764,7 +1764,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the time the file was last accessed, or **`FALSE`** on failure.
+Returns the time the file was last accessed, or **`false`** on failure.
 The time is returned as a Unix timestamp.
 
 ### Examples
@@ -1844,7 +1844,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the time the file was last changed, or **`FALSE`** on failure.
+Returns the time the file was last changed, or **`false`** on failure.
 The time is returned as a Unix timestamp.
 
 ### Examples
@@ -1927,10 +1927,10 @@ Path to the file.
 
 ### Return Values
 
-Returns the group ID of the file, or **`FALSE`** if an error occurs. The
+Returns the group ID of the file, or **`false`** if an error occurs. The
 group ID is returned in numerical format, use <span
 class="function">posix\_getgrgid</span> to resolve it to a group name.
-Upon failure, **`FALSE`** is returned.
+Upon failure, **`false`** is returned.
 
 ### Examples
 
@@ -1987,7 +1987,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the inode number of the file, or **`FALSE`** on failure.
+Returns the inode number of the file, or **`false`** on failure.
 
 ### Examples
 
@@ -2047,7 +2047,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the time the file was last modified, or **`FALSE`** on failure.
+Returns the time the file was last modified, or **`false`** on failure.
 The time is returned as a Unix timestamp, which is suitable for the
 <span class="function">date</span> function.
 
@@ -2116,7 +2116,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the user ID of the owner of the file, or **`FALSE`** on failure.
+Returns the user ID of the owner of the file, or **`false`** on failure.
 The user ID is returned in numerical format, use <span
 class="function">posix\_getpwuid</span> to resolve it to a username.
 
@@ -2311,7 +2311,7 @@ Path to the file.
 
 ### Return Values
 
-Returns the size of the file in bytes, or **`FALSE`** (and generates an
+Returns the size of the file in bytes, or **`false`** (and generates an
 error of level **`E_WARNING`**) in case of an error.
 
 > **Note**: <span class="simpara"> Because PHP's integer type is signed
@@ -2378,7 +2378,7 @@ Path to the file.
 Returns the type of the file. Possible values are fifo, char, dir,
 block, link, file, socket and unknown.
 
-Returns **`FALSE`** if an error occurs. <span
+Returns **`false`** if an error occurs. <span
 class="function">filetype</span> will also produce an **`E_NOTICE`**
 message if the stat call fails or if the file type is unknown.
 
@@ -2477,7 +2477,7 @@ The optional third argument is set to 1 if the lock would block
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2562,7 +2562,7 @@ the same server instance!
 
 <span class="function">flock</span> is not supported on antiquated
 filesystems like *FAT* and its derivates and will therefore always
-return **`FALSE`** under these environments.
+return **`false`** under these environments.
 
 fnmatch
 =======
@@ -2610,7 +2610,7 @@ joined with the
 
 ### Return Values
 
-Returns **`TRUE`** if there is a match, **`FALSE`** otherwise.
+Returns **`true`** if there is a match, **`false`** otherwise.
 
 ### Examples
 
@@ -2652,7 +2652,7 @@ Opens file or URL
 class="type">string</span> `$mode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\] )
 
 <span class="function">fopen</span> binds a named resource, specified by
@@ -2711,7 +2711,7 @@ stream. It may be any of the following:
 | *'w+'* | Open for reading and writing; place the file pointer at the beginning of the file and truncate the file to zero length. If the file does not exist, attempt to create it.                                                                                                                                                                                                                                                                                                                                                                                                                         |
 | *'a'*  | Open for writing only; place the file pointer at the end of the file. If the file does not exist, attempt to create it. In this mode, <span class="function">fseek</span> has no effect, writes are always appended.                                                                                                                                                                                                                                                                                                                                                                              |
 | *'a+'* | Open for reading and writing; place the file pointer at the end of the file. If the file does not exist, attempt to create it. In this mode, <span class="function">fseek</span> only affects the reading position, writes are always appended.                                                                                                                                                                                                                                                                                                                                                   |
-| *'x'*  | Create and open for writing only; place the file pointer at the beginning of the file. If the file already exists, the <span class="function">fopen</span> call will fail by returning **`FALSE`** and generating an error of level **`E_WARNING`**. If the file does not exist, attempt to create it. This is equivalent to specifying *O\_EXCL\|O\_CREAT* flags for the underlying *open(2)* system call.                                                                                                                                                                                       |
+| *'x'*  | Create and open for writing only; place the file pointer at the beginning of the file. If the file already exists, the <span class="function">fopen</span> call will fail by returning **`false`** and generating an error of level **`E_WARNING`**. If the file does not exist, attempt to create it. This is equivalent to specifying *O\_EXCL\|O\_CREAT* flags for the underlying *open(2)* system call.                                                                                                                                                                                       |
 | *'x+'* | Create and open for reading and writing; otherwise it has the same behavior as *'x'*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | *'c'*  | Open the file for writing only. If the file does not exist, it is created. If it exists, it is neither truncated (as opposed to *'w'*), nor the call to this function fails (as is the case with *'x'*). The file pointer is positioned on the beginning of the file. This may be useful if it's desired to get an advisory lock (see <span class="function">flock</span>) before attempting to modify the file, as using *'w'* could truncate the file before the lock was obtained (if truncation is desired, <span class="function">ftruncate</span> can be used after the lock is requested). |
 | *'c+'* | Open the file for reading and writing; otherwise it has the same behavior as *'c'*.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                               |
@@ -2755,7 +2755,7 @@ stream. It may be any of the following:
 
 `use_include_path`  
 The optional third `use_include_path` parameter can be set to '1' or
-**`TRUE`** if you want to search for the file in the
+**`true`** if you want to search for the file in the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>,
 too.
 
@@ -2766,7 +2766,7 @@ too.
 
 ### Return Values
 
-Returns a file pointer resource on success, or **`FALSE`** on failure
+Returns a file pointer resource on success, or **`false`** on failure
 
 ### Errors/Exceptions
 
@@ -2871,7 +2871,7 @@ class="function">fclose</span>).
 ### Return Values
 
 If an error occurs, <span class="function">fpassthru</span> returns
-**`FALSE`**. Otherwise, <span class="function">fpassthru</span> returns
+**`false`**. Otherwise, <span class="function">fpassthru</span> returns
 the number of characters read from `handle` and passed through to the
 output.
 
@@ -2973,7 +2973,7 @@ mechanism.
 
 ### Return Values
 
-Returns the length of the written string or **`FALSE`** on failure.
+Returns the length of the written string or **`false`** on failure.
 
 ### Changelog
 
@@ -3071,7 +3071,7 @@ Up to `length` number of bytes read.
 
 ### Return Values
 
-Returns the read string or **`FALSE`** on failure.
+Returns the read string or **`false`** on failure.
 
 ### Examples
 
@@ -3575,7 +3575,7 @@ undefined results for append-only streams (opened with "a" flag).
 Returns the position of the file pointer referenced by `handle` as an
 integer; i.e., its offset into the file stream.
 
-If an error occurs, returns **`FALSE`**.
+If an error occurs, returns **`false`**.
 
 > **Note**: <span class="simpara"> Because PHP's integer type is signed
 > and many platforms use 32bit integers, some filesystem functions may
@@ -3644,7 +3644,7 @@ The size to truncate to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3711,7 +3711,7 @@ from `string`.
 ### Return Values
 
 <span class="function">fwrite</span> returns the number of bytes
-written, or **`FALSE`** on error.
+written, or **`false`** on error.
 
 ### Notes
 
@@ -3871,7 +3871,7 @@ Valid flags:
 ### Return Values
 
 Returns an array containing the matched files/directories, an empty
-array if no file matched or **`FALSE`** on error.
+array if no file matched or **`false`** on error.
 
 > **Note**:
 >
@@ -3939,8 +3939,8 @@ further restrictions may apply.
 
 ### Return Values
 
-Returns **`TRUE`** if the filename exists and is a directory,
-**`FALSE`** otherwise.
+Returns **`true`** if the filename exists and is a directory,
+**`false`** otherwise.
 
 ### Examples
 
@@ -4008,8 +4008,8 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** if the filename exists and is executable, or
-**`FALSE`** on error.
+Returns **`true`** if the filename exists and is executable, or
+**`false`** on error.
 
 ### Examples
 
@@ -4072,8 +4072,8 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** if the filename exists and is a regular file,
-**`FALSE`** otherwise.
+Returns **`true`** if the filename exists and is a regular file,
+**`false`** otherwise.
 
 > **Note**: <span class="simpara"> Because PHP's integer type is signed
 > and many platforms use 32bit integers, some filesystem functions may
@@ -4138,8 +4138,8 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** if the filename exists and is a symbolic link,
-**`FALSE`** otherwise.
+Returns **`true`** if the filename exists and is a symbolic link,
+**`false`** otherwise.
 
 ### Examples
 
@@ -4201,8 +4201,8 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** if the file or directory specified by `filename`
-exists and is readable, **`FALSE`** otherwise.
+Returns **`true`** if the file or directory specified by `filename`
+exists and is readable, **`false`** otherwise.
 
 ### Examples
 
@@ -4245,7 +4245,7 @@ family of functionality.
 >
 > The check is done using the real UID/GID instead of the effective one.
 
-This function may return **`TRUE`** for directories. Use <span
+This function may return **`true`** for directories. Use <span
 class="function">is\_dir</span> to distinguish file and directory.
 
 ### See Also
@@ -4266,7 +4266,7 @@ class="methodname">is\_uploaded\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
 
-Returns **`TRUE`** if the file named by `filename` was uploaded via HTTP
+Returns **`true`** if the file named by `filename` was uploaded via HTTP
 POST. This is useful to help ensure that a malicious user hasn't tried
 to trick the script into working on files upon which it should not be
 working--for instance, `/etc/passwd`.
@@ -4287,7 +4287,7 @@ The filename being checked.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4327,7 +4327,7 @@ Tells whether the filename is writable
 class="methodname">is\_writable</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
-Returns **`TRUE`** if the `filename` exists and is writable. The
+Returns **`true`** if the `filename` exists and is writable. The
 filename argument may be a directory name allowing you to check if a
 directory is writable.
 
@@ -4342,7 +4342,7 @@ The filename being checked.
 
 ### Return Values
 
-Returns **`TRUE`** if the `filename` exists and is writable.
+Returns **`true`** if the `filename` exists and is writable.
 
 ### Examples
 
@@ -4421,7 +4421,7 @@ The group specified by name or number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4480,7 +4480,7 @@ User name or number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4537,7 +4537,7 @@ The link name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -4602,7 +4602,7 @@ Path to the link.
 <span class="function">linkinfo</span> returns the *st\_dev* field of
 the Unix C stat structure returned by the *lstat* system call. Returns a
 non-negative integer on success, -1 in case the link was not found, or
-**`FALSE`** if an open.base\_dir violation occurs.
+**`false`** if an open.base\_dir violation occurs.
 
 ### Examples
 
@@ -4713,7 +4713,7 @@ Makes directory
 class="type">int</span> `$mode`<span class="initializer"> =
 0777</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\]\] )
 
 Attempts to create the directory specified by pathname.
@@ -4747,7 +4747,7 @@ Allows the creation of nested directories specified in the `pathname`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4822,15 +4822,15 @@ The destination of the moved file.
 
 ### Return Values
 
-Returns **`TRUE`** on success.
+Returns **`true`** on success.
 
 If `filename` is not a valid upload file, then no action will occur, and
 <span class="function">move\_uploaded\_file</span> will return
-**`FALSE`**.
+**`false`**.
 
 If `filename` is a valid upload file, but cannot be moved for some
 reason, no action will occur, and <span
-class="function">move\_uploaded\_file</span> will return **`FALSE`**.
+class="function">move\_uploaded\_file</span> will return **`false`**.
 Additionally, a warning will be issued.
 
 ### Examples
@@ -4889,7 +4889,7 @@ class="methodname">parse\_ini\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$process_sections`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$scanner_mode`<span class="initializer"> =
 INI\_SCANNER\_NORMAL</span></span> \]\] )
 
@@ -4907,9 +4907,9 @@ it is evaluated relative to the current working directory, then the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>.
 
 `process_sections`  
-By setting the `process_sections` parameter to **`TRUE`**, you get a
+By setting the `process_sections` parameter to **`true`**, you get a
 multidimensional array, with the section names and settings included.
-The default for `process_sections` is **`FALSE`**
+The default for `process_sections` is **`false`**
 
 `scanner_mode`  
 Can either be **`INI_SCANNER_NORMAL`** (default) or
@@ -4918,15 +4918,15 @@ values will not be parsed.
 
 As of PHP 5.6.1 can also be specified as **`INI_SCANNER_TYPED`**. In
 this mode boolean, null and integer types are preserved when possible.
-String values *"true"*, *"on"* and *"yes"* are converted to **`TRUE`**.
-*"false"*, *"off"*, *"no"* and *"none"* are considered **`FALSE`**.
-*"null"* is converted to **`NULL`** in typed mode. Also, all numeric
+String values *"true"*, *"on"* and *"yes"* are converted to **`true`**.
+*"false"*, *"off"*, *"no"* and *"none"* are considered **`false`**.
+*"null"* is converted to **`null`** in typed mode. Also, all numeric
 strings are converted to integer type if it is possible.
 
 ### Return Values
 
 The settings are returned as an associative <span
-class="type">array</span> on success, and **`FALSE`** on failure.
+class="type">array</span> on success, and **`false`** on failure.
 
 ### Examples
 
@@ -5152,7 +5152,7 @@ class="methodname">parse\_ini\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$ini`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
 `$process_sections`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$scanner_mode`<span class="initializer"> =
 INI\_SCANNER\_NORMAL</span></span> \]\] )
 
@@ -5167,9 +5167,9 @@ The structure of the ini string is the same as the `php.ini`'s.
 The contents of the ini file being parsed.
 
 `process_sections`  
-By setting the `process_sections` parameter to **`TRUE`**, you get a
+By setting the `process_sections` parameter to **`true`**, you get a
 multidimensional array, with the section names and settings included.
-The default for `process_sections` is **`FALSE`**
+The default for `process_sections` is **`false`**
 
 `scanner_mode`  
 Can either be **`INI_SCANNER_NORMAL`** (default) or
@@ -5178,15 +5178,15 @@ values will not be parsed.
 
 As of PHP 5.6.1 can also be specified as **`INI_SCANNER_TYPED`**. In
 this mode boolean, null and integer types are preserved when possible.
-String values *"true"*, *"on"* and *"yes"* are converted to **`TRUE`**.
-*"false"*, *"off"*, *"no"* and *"none"* are considered **`FALSE`**.
-*"null"* is converted to **`NULL`** in typed mode. Also, all numeric
+String values *"true"*, *"on"* and *"yes"* are converted to **`true`**.
+*"false"*, *"off"*, *"no"* and *"none"* are considered **`false`**.
+*"null"* is converted to **`null`** in typed mode. Also, all numeric
 strings are converted to integer type if it is possible.
 
 ### Return Values
 
 The settings are returned as an associative <span
-class="type">array</span> on success, and **`FALSE`** on failure.
+class="type">array</span> on success, and **`false`** on failure.
 
 ### Notes
 
@@ -5431,7 +5431,7 @@ class="function">fgets</span>, <span class="function">fgetss</span>, and
 file pointer equals to the STDOUT of the command, when the mode is 'w',
 the returned file pointer equals to the STDIN of the command.
 
-If an error occurs, returns **`FALSE`**.
+If an error occurs, returns **`false`**.
 
 ### Examples
 
@@ -5488,7 +5488,7 @@ class="methodname">readfile</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$use_include_path`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">resource</span> `$context`</span> \]\] )
 
 Reads a file and writes it to the output buffer.
@@ -5499,7 +5499,7 @@ Reads a file and writes it to the output buffer.
 The filename being read.
 
 `use_include_path`  
-You can use the optional second parameter and set it to **`TRUE`**, if
+You can use the optional second parameter and set it to **`true`**, if
 you want to search for the file in the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>,
 too.
@@ -5510,7 +5510,7 @@ A context stream <span class="type">resource</span>.
 ### Return Values
 
 Returns the number of bytes read from the file on success, or
-**`FALSE`** on failure
+**`false`** on failure
 
 ### Errors/Exceptions
 
@@ -5599,7 +5599,7 @@ The symbolic link path.
 
 ### Return Values
 
-Returns the contents of the symbolic link path or **`FALSE`** on error.
+Returns the contents of the symbolic link path or **`false`** on error.
 
 > **Note**: <span class="simpara"> The function fails if `path` is not a
 > symlink, except on Windows, where the normalized path will be
@@ -5755,14 +5755,14 @@ Returns the canonicalized absolute pathname on success. The resulting
 path will have no symbolic link, */./* or */../* components. Trailing
 delimiters, such as *\\* and */*, are also removed.
 
-<span class="function">realpath</span> returns **`FALSE`** on failure,
+<span class="function">realpath</span> returns **`false`** on failure,
 e.g. if the file does not exist.
 
 > **Note**:
 >
 > The running script must have executable permissions on all directories
 > in the hierarchy, otherwise <span class="function">realpath</span>
-> will return **`FALSE`**.
+> will return **`false`**.
 
 > **Note**:
 >
@@ -5871,7 +5871,7 @@ The new name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5917,7 +5917,7 @@ opened by <span class="function">fopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5977,7 +5977,7 @@ Path to the directory.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6084,7 +6084,7 @@ So for example a regular file could be **`0100644`** and a directory
 could be **`0040755`**.
 
 In case of error, <span class="function">stat</span> returns
-**`FALSE`**.
+**`false`**.
 
 > **Note**: <span class="simpara"> Because PHP's integer type is signed
 > and many platforms use 32bit integers, some filesystem functions may
@@ -6205,7 +6205,7 @@ The link name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -6266,7 +6266,7 @@ The prefix of the generated temporary filename.
 
 ### Return Values
 
-Returns the new temporary filename (with path), or **`FALSE`** on
+Returns the new temporary filename (with path), or **`false`** on
 failure.
 
 ### Examples
@@ -6327,7 +6327,7 @@ deleted.
 ### Return Values
 
 Returns a file handle, similar to the one returned by <span
-class="function">fopen</span>, for the new file or **`FALSE`** on
+class="function">fopen</span>, for the new file or **`false`** on
 failure.
 
 ### Examples
@@ -6389,7 +6389,7 @@ parameter. If neither are present, the current system time is used.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6512,7 +6512,7 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

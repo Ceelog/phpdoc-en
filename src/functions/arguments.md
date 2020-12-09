@@ -45,10 +45,10 @@ function takes_many_args(
 ?>
 ```
 
-As of PHP 8.0.0, passing optional arguments after mandatory arguments is
+As of PHP 8.0.0, passing mandatory arguments after optional arguments is
 deprecated. This can generally be resolved by dropping the default
 value. One exception to this rule are arguments of the form
-`Type $param = null`, where the **`NULL`** default makes the type
+`Type $param = null`, where the **`null`** default makes the type
 implicitly nullable. This usage remains allowed, though it is
 recommended to use an explicit nullable type instead.
 
@@ -114,7 +114,7 @@ The above example will output:
     Making a cup of espresso.
 
 PHP also allows the use of <span class="type">array</span>s and the
-special type **`NULL`** as default values, for example:
+special type **`null`** as default values, for example:
 
 **Example \#6 Using non-scalar types as default values**
 

@@ -10,7 +10,7 @@ information.
 > **Note**:
 >
 > If the <span class="function">return</span> is omitted the value
-> **`NULL`** will be returned.
+> **`null`** will be returned.
 
 ### Use of return
 

@@ -258,7 +258,7 @@ alters. In most cases this means you will increment `consumed` by
 `closing`  
 If the stream is in the process of closing (and therefore this is the
 last pass through the filterchain), the `closing` parameter will be set
-to **`TRUE`**.
+to **`true`**.
 
 ### Return Values
 
@@ -318,7 +318,7 @@ below.
 |----------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | *FilterClass-\>filtername* | A string containing the name the filter was instantiated with. Filters may be registered under multiple names or under wildcards. Use this property to determine which name was used. |
 | *FilterClass-\>params*     | The contents of the `params` parameter passed to <span class="function">stream\_filter\_append</span> or <span class="function">stream\_filter\_prepend</span>.                       |
-| *FilterClass-\>stream*     | The stream resource being filtered. Maybe available only during <span class="methodname">filter</span> calls when the *closing* parameter is set to **`FALSE`**.                      |
+| *FilterClass-\>stream*     | The stream resource being filtered. Maybe available only during <span class="methodname">filter</span> calls when the *closing* parameter is set to **`false`**.                      |
 
 ### Parameters
 
@@ -326,8 +326,8 @@ This function has no parameters.
 
 ### Return Values
 
-Your implementation of this method should return **`FALSE`** on failure,
-or **`TRUE`** on success.
+Your implementation of this method should return **`false`** on failure,
+or **`true`** on success.
 
 Introduction
 ------------
@@ -489,7 +489,7 @@ Properties
 
 resource `context`  
 The current <a href="/context.html" class="link">context</a>, or
-**`NULL`** if no context was passed to the caller function.
+**`null`** if no context was passed to the caller function.
 
 Use the <span class="function">stream\_context\_get\_options</span> to
 parse the context.
@@ -564,7 +564,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -602,7 +602,7 @@ class="function">opendir</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -631,7 +631,7 @@ This function has no parameters.
 ### Return Values
 
 Should return <span class="type">string</span> representing the next
-filename, or **`FALSE`** if there is no next file.
+filename, or **`false`** if there is no next file.
 
 > **Note**:
 >
@@ -778,7 +778,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -821,7 +821,7 @@ A bitwise mask of values, such as **`STREAM_MKDIR_RECURSIVE`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -874,7 +874,7 @@ The URL which the `path_from` should be renamed to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -924,7 +924,7 @@ A bitwise mask of values, such as **`STREAM_MKDIR_RECURSIVE`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -969,7 +969,7 @@ class="function">stream\_cast</span> or **`STREAM_CAST_AS_STREAM`** when
 ### Return Values
 
 Should return the underlying stream resource used by the wrapper, or
-**`FALSE`**.
+**`false`**.
 
 ### See Also
 
@@ -1024,8 +1024,8 @@ This function has no parameters.
 
 ### Return Values
 
-Should return **`TRUE`** if the read/write position is at the end of the
-stream and if no more data is available to be read, or **`FALSE`**
+Should return **`true`** if the read/write position is at the end of the
+stream and if no more data is available to be read, or **`false`**
 otherwise.
 
 ### Notes
@@ -1068,15 +1068,15 @@ This function has no parameters.
 
 ### Return Values
 
-Should return **`TRUE`** if the cached data was successfully stored (or
-if there was no data to store), or **`FALSE`** if the data could not be
+Should return **`true`** if the cached data was successfully stored (or
+if there was no data to store), or **`false`** if the data could not be
 stored.
 
 ### Notes
 
 > **Note**:
 >
-> If not implemented, **`FALSE`** is assumed as the return value.
+> If not implemented, **`false`** is assumed as the return value.
 
 ### See Also
 
@@ -1116,7 +1116,7 @@ when closing the stream (**`LOCK_UN`**).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1190,8 +1190,8 @@ If `option` is
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If `option` is
-not implemented, **`FALSE`** should be returned.
+Returns **`true`** on success or **`false`** on failure. If `option` is
+not implemented, **`false`** should be returned.
 
 ### See Also
 
@@ -1254,7 +1254,7 @@ file/resource that was actually opened.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1300,7 +1300,7 @@ How many bytes of data from the current position should be returned.
 ### Return Values
 
 If there are less than `count` bytes available, return as many as are
-available. If no more data is available, return either **`FALSE`** or an
+available. If no more data is available, return either **`false`** or an
 empty string.
 
 ### Errors/Exceptions
@@ -1374,13 +1374,13 @@ Possible values:
 
 ### Return Values
 
-Return **`TRUE`** if the position was updated, **`FALSE`** otherwise.
+Return **`true`** if the position was updated, **`false`** otherwise.
 
 ### Notes
 
 > **Note**:
 >
-> If not implemented, **`FALSE`** is assumed as the return value.
+> If not implemented, **`false`** is assumed as the return value.
 
 > **Note**:
 >
@@ -1389,7 +1389,7 @@ Return **`TRUE`** if the position was updated, **`FALSE`** otherwise.
 > directly after calling <span
 > class="methodname">streamWrapper::stream\_seek</span>. If <span
 > class="methodname">streamWrapper::stream\_tell</span> fails, the
-> return value to the caller function will be set to **`FALSE`**
+> return value to the caller function will be set to **`false`**
 
 > **Note**:
 >
@@ -1448,8 +1448,8 @@ If `option` is
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If `option` is
-not implemented, **`FALSE`** should be returned.
+Returns **`true`** on success or **`false`** on failure. If `option` is
+not implemented, **`false`** should be returned.
 
 ### See Also
 
@@ -1536,7 +1536,7 @@ The new size.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1617,7 +1617,7 @@ The file URL which should be deleted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 

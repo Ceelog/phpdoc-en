@@ -506,7 +506,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key already exists.
 
@@ -560,7 +560,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key already exists.
 
@@ -622,7 +622,7 @@ that server.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -672,7 +672,7 @@ Array of the servers to add to the pool.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -730,7 +730,7 @@ The string to append.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -795,7 +795,7 @@ The string to append.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -847,7 +847,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_DATA_EXISTS`** if the item you are trying to store has
 been modified since you last fetched it.
@@ -932,7 +932,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_DATA_EXISTS`** if the item you are trying to store has
 been modified since you last fetched it.
@@ -1027,7 +1027,7 @@ The expiry time to set on the item.
 
 ### Return Values
 
-Returns item's new value on success or **`FALSE`** on failure.
+Returns item's new value on success or **`false`** on failure.
 
 ### Examples
 
@@ -1118,7 +1118,7 @@ The expiry time to set on the item.
 
 ### Return Values
 
-Returns item's new value on success or **`FALSE`** on failure.
+Returns item's new value on success or **`false`** on failure.
 
 ### See Also
 
@@ -1160,7 +1160,7 @@ The amount of time the server will wait to delete the item.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTFOUND`** if the key does not exist.
 
@@ -1219,7 +1219,7 @@ The amount of time the server will wait to delete the item.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTFOUND`** if the key does not exist.
 
@@ -1313,7 +1313,7 @@ The amount of time the server will wait to delete the items.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTFOUND`** if the key does not exist.
 
@@ -1343,7 +1343,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the next result or **`FALSE`** otherwise. The <span
+Returns the next result or **`false`** otherwise. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_END`** if result set is exhausted.
 
@@ -1417,7 +1417,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the results or **`FALSE`** on failure. Use <span
+Returns the results or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -1499,7 +1499,7 @@ Number of seconds to wait before invalidating the items.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -1544,7 +1544,7 @@ may be specified via `cache_cb` parameter.
 The key of the item to retrieve.
 
 `cache_cb`  
-Read-through caching callback or **`NULL`**.
+Read-through caching callback or **`null`**.
 
 `flags`  
 Flags to control the returned result. When **`Memcached::GET_EXTENDED`**
@@ -1552,7 +1552,7 @@ is given, the function will also return the CAS token.
 
 ### Return Values
 
-Returns the value stored in the cache or **`FALSE`** otherwise. If the
+Returns the value stored in the cache or **`false`** otherwise. If the
 `flags` is set to **`Memcached::GET_EXTENDED`**, an array containing the
 value and the CAS token is returned instead of only the value. The <span
 class="methodname">Memcached::getResultCode</span> will return
@@ -1632,7 +1632,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the keys stored on all the servers on success or **`FALSE`** on
+Returns the keys stored on all the servers on success or **`false`** on
 failure.
 
 Memcached::getByKey
@@ -1669,7 +1669,7 @@ with multi operations.
 The key of the item to fetch.
 
 `cache_cb`  
-Read-through caching callback or **`NULL`**
+Read-through caching callback or **`null`**
 
 `flags`  
 Flags to control the returned result. When value of
@@ -1677,7 +1677,7 @@ Flags to control the returned result. When value of
 
 ### Return Values
 
-Returns the value stored in the cache or **`FALSE`** otherwise. The
+Returns the value stored in the cache or **`false`** otherwise. The
 <span class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTFOUND`** if the key does not exist.
 
@@ -1728,11 +1728,11 @@ Array of keys to request.
 Whether to request CAS token values also.
 
 `value_cb`  
-The result callback or **`NULL`**.
+The result callback or **`null`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -1825,11 +1825,11 @@ Array of keys to request.
 Whether to request CAS token values also.
 
 `value_cb`  
-The result callback or **`NULL`**.
+The result callback or **`null`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### See Also
@@ -1881,7 +1881,7 @@ The flags for the get operation.
 
 ### Return Values
 
-Returns the array of found items or **`FALSE`** on failure. Use <span
+Returns the array of found items or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -2080,7 +2080,7 @@ The flags for the get operation.
 
 ### Return Values
 
-Returns the array of found items or **`FALSE`** on failure. Use <span
+Returns the array of found items or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Changelog
@@ -2119,7 +2119,7 @@ One of the *Memcached::OPT\_\** constants.
 
 ### Return Values
 
-Returns the value of the requested option, or **`FALSE`** on error.
+Returns the value of the requested option, or **`false`** on error.
 
 ### Examples
 
@@ -2255,7 +2255,7 @@ with multi operations.
 ### Return Values
 
 Returns an array containing three keys of *host*, *port*, and *weight*
-on success or **`FALSE`** on failure. Use <span
+on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -2391,7 +2391,7 @@ This function has no parameters.
 
 ### Return Values
 
-Array of server statistics, one entry per server, or **`FALSE`** on
+Array of server statistics, one entry per server, or **`false`** on
 failure.
 
 ### Examples
@@ -2525,7 +2525,7 @@ The expiry time to set on the item.
 
 ### Return Values
 
-Returns new item's value on success or **`FALSE`** on failure.
+Returns new item's value on success or **`false`** on failure.
 
 ### Examples
 
@@ -2609,7 +2609,7 @@ The expiry time to set on the item.
 
 ### Return Values
 
-Returns new item's value on success or **`FALSE`** on failure.
+Returns new item's value on success or **`false`** on failure.
 
 ### See Also
 
@@ -2704,7 +2704,7 @@ The string to prepend.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -2769,7 +2769,7 @@ The string to prepend.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -2798,7 +2798,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Memcached::replace
 ==================
@@ -2833,7 +2833,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -2887,7 +2887,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The <span
+Returns **`true`** on success or **`false`** on failure. The <span
 class="methodname">Memcached::getResultCode</span> will return
 **`Memcached::RES_NOTSTORED`** if the key does not exist.
 
@@ -2917,7 +2917,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2962,7 +2962,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -3051,7 +3051,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -3104,7 +3104,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### Examples
@@ -3171,7 +3171,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### See Also
@@ -3207,7 +3207,7 @@ The options listed below require values specified via constants.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3257,7 +3257,7 @@ the value is the new value for the option.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3349,7 +3349,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### See Also
@@ -3394,7 +3394,7 @@ for more info.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Use <span
+Returns **`true`** on success or **`false`** on failure. Use <span
 class="methodname">Memcached::getResultCode</span> if necessary.
 
 ### See Also

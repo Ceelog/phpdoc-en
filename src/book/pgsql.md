@@ -583,7 +583,7 @@ class="function">pg\_convert</span>. Use SQL *NULL* in place of an empty
 
 **`PGSQL_CONV_IGNORE_NOT_NULL`** (<span class="type">int</span>)  
 <span class="simpara"> Passed to <span
-class="function">pg\_convert</span>. Ignore conversion of **`NULL`**
+class="function">pg\_convert</span>. Ignore conversion of **`null`**
 into SQL *NOT NULL* columns. </span>
 
 **`PGSQL_DML_NO_CONV`** (<span class="type">int</span>)  
@@ -794,7 +794,7 @@ Notes
 >
 > Most PostgreSQL functions accept `connection` as the optional first
 > parameter. If it is not provided, the last opened connection is used.
-> If it doesn't exist, functions return **`FALSE`**.
+> If it doesn't exist, functions return **`false`**.
 
 > **Note**:
 >
@@ -900,7 +900,7 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -974,7 +974,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-The client encoding, or **`FALSE`** on error.
+The client encoding, or **`false`** on error.
 
 ### Examples
 
@@ -1032,7 +1032,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1140,7 +1140,7 @@ class="function">pg\_connection\_status</span>.
 
 ### Return Values
 
-PostgreSQL connection resource on success, **`FALSE`** on failure.
+PostgreSQL connection resource on success, **`false`** on failure.
 
 ### Changelog
 
@@ -1206,7 +1206,7 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-Returns **`TRUE`** if the connection is busy, **`FALSE`** otherwise.
+Returns **`true`** if the connection is busy, **`false`** otherwise.
 
 ### Examples
 
@@ -1252,7 +1252,7 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1344,8 +1344,8 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-**`TRUE`** if no error occurred, or **`FALSE`** if there was an error.
-Note that **`TRUE`** does not necessarily indicate that input was
+**`true`** if no error occurred, or **`false`** if there was an error.
+Note that **`true`** does not necessarily indicate that input was
 waiting to be read.
 
 pg\_convert
@@ -1371,16 +1371,16 @@ existence of a table `table_name` which has at least as many columns as
 `assoc_array` has elements. The fieldnames in `table_name` must match
 the indices in `assoc_array` and the corresponding datatypes must be
 compatible. Returns an array with the converted values on success,
-**`FALSE`** otherwise.
+**`false`** otherwise.
 
 > **Note**:
 >
 > Since PHP 5.6.0, it accepts boolean values, converting them to
 > PostgreSQL booleans. String representations of boolean values are also
-> supported. **`NULL`** is converted to PostgreSQL NULL.
+> supported. **`null`** is converted to PostgreSQL NULL.
 >
 > Prior to PHP 5.6.0, if there are boolean fields in `table_name` don't
-> use the constant **`TRUE`** in `assoc_array`. It will be converted to
+> use the constant **`true`** in `assoc_array`. It will be converted to
 > the string 'TRUE' which is not a valid entry for boolean fields in
 > PostgreSQL. Use one of "t", "true", 1, "y", "yes" instead.
 
@@ -1402,7 +1402,7 @@ combined.
 
 ### Return Values
 
-An <span class="type">array</span> of converted values, or **`FALSE`**
+An <span class="type">array</span> of converted values, or **`false`**
 on error.
 
 ### Examples
@@ -1482,7 +1482,7 @@ How SQL *NULL* values are represented in the `rows`. Default is \\N
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1542,7 +1542,7 @@ How SQL *NULL* values are represented in the `rows`. Default is \\N
 ### Return Values
 
 An <span class="type">array</span> with one element for each line of
-*COPY* data. It returns **`FALSE`** on failure.
+*COPY* data. It returns **`false`** on failure.
 
 ### Examples
 
@@ -1589,7 +1589,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 A <span class="type">string</span> containing the name of the database
-the `connection` is to, or **`FALSE`** on error.
+the `connection` is to, or **`false`** on error.
 
 ### Examples
 
@@ -1660,7 +1660,7 @@ call <span class="function">pg\_convert</span> internally.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Returns <span
+Returns **`true`** on success or **`false`** on failure. Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -1687,7 +1687,7 @@ class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 
 | Version      | Description                                                                                                             |
 |--------------|-------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`TRUE`**/**`FALSE`** and **`NULL`** data type support. |
+| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`true`**/**`false`** and **`null`** data type support. |
 | 5.5.3/5.4.19 | Direct SQL injection to `table_name` and Indirect SQL injection to identifiers are fixed.                               |
 
 ### See Also
@@ -1724,7 +1724,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1921,7 +1921,7 @@ PostgreSQL database connection resource. When `connection` is not
 present, the default connection is used. The default connection is the
 last connection made by <span class="function">pg\_connect</span> or
 <span class="function">pg\_pconnect</span>. When there is no default
-connection, it raises *E\_WARNING* and returns **`FALSE`**.
+connection, it raises *E\_WARNING* and returns **`false`**.
 
 `data`  
 A <span class="type">string</span> containing text to be escaped.
@@ -2080,7 +2080,7 @@ Elements are converted to strings by calling this function.
 
 ### Return Values
 
-A query result resource on success or **`FALSE`** on failure.
+A query result resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -2128,7 +2128,7 @@ that contains all rows (records) in a particular column of the result
 resource.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Parameters
 
@@ -2146,7 +2146,7 @@ Defaults to the first column if not specified.
 
 An <span class="type">array</span> with all values in the result column.
 
-**`FALSE`** is returned if `column` is larger than the number of columns
+**`false`** is returned if `column` is larger than the number of columns
 in the result, or on any other error.
 
 ### Examples
@@ -2198,7 +2198,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 contains all rows (records) in the result resource.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Parameters
 
@@ -2213,7 +2213,7 @@ class="function">pg\_execute</span> (among others).
 An <span class="type">array</span> with all rows in the result. Each row
 is an array of field values indexed by field name.
 
-**`FALSE`** is returned if there are no rows in the result, or on any
+**`false`** is returned if there are no rows in the result, or on any
 other error.
 
 ### Examples
@@ -2297,7 +2297,7 @@ also store the data using associative indices (field name). It stores
 both indices by default.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 <span class="function">pg\_fetch\_array</span> is NOT significantly
 slower than using <span class="function">pg\_fetch\_row</span>, and is
@@ -2313,7 +2313,7 @@ class="function">pg\_execute</span> (among others).
 
 `row`  
 Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted or **`NULL`**, the next row is fetched.
+omitted or **`null`**, the next row is fetched.
 
 `result_type`  
 An optional parameter that controls how the returned <span
@@ -2331,9 +2331,9 @@ An <span class="type">array</span> indexed numerically (beginning with
 0) or associatively (indexed by field name), or both. Each value in the
 <span class="type">array</span> is represented as a <span
 class="type">string</span>. Database *NULL* values are returned as
-**`NULL`**.
+**`null`**.
 
-**`FALSE`** is returned if `row` exceeds the number of rows in the set,
+**`false`** is returned if `row` exceeds the number of rows in the set,
 there are no more rows, or on any other error.
 
 ### Examples
@@ -2402,7 +2402,7 @@ you need the numeric indices, use <span
 class="function">pg\_fetch\_row</span>.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 <span class="function">pg\_fetch\_assoc</span> is NOT significantly
 slower than using <span class="function">pg\_fetch\_row</span>, and is
@@ -2418,16 +2418,16 @@ class="function">pg\_execute</span> (among others).
 
 `row`  
 Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted or **`NULL`**, the next row is fetched.
+omitted or **`null`**, the next row is fetched.
 
 ### Return Values
 
 An <span class="type">array</span> indexed associatively (by field
 name). Each value in the <span class="type">array</span> is represented
 as a <span class="type">string</span>. Database *NULL* values are
-returned as **`NULL`**.
+returned as **`null`**.
 
-**`FALSE`** is returned if `row` exceeds the number of rows in the set,
+**`false`** is returned if `row` exceeds the number of rows in the set,
 there are no more rows, or on any other error.
 
 ### Examples
@@ -2493,7 +2493,7 @@ optionally instantiate an object of a specific class, and pass
 parameters to that class's constructor.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 Speed-wise, the function is identical to <span
 class="function">pg\_fetch\_array</span>, and almost as fast as <span
@@ -2510,7 +2510,7 @@ class="function">pg\_execute</span> (among others).
 
 `row`  
 Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted or **`NULL`**, the next row is fetched.
+omitted or **`null`**, the next row is fetched.
 
 `result_type`  
 Ignored and deprecated.
@@ -2527,9 +2527,9 @@ constructor for `class_name` objects.
 ### Return Values
 
 An <span class="type">object</span> with one attribute for each field
-name in the result. Database *NULL* values are returned as **`NULL`**.
+name in the result. Database *NULL* values are returned as **`null`**.
 
-**`FALSE`** is returned if `row` exceeds the number of rows in the set,
+**`false`** is returned if `row` exceeds the number of rows in the set,
 there are no more rows, or on any other error.
 
 ### Examples
@@ -2621,9 +2621,9 @@ upwards.
 Boolean is returned as "t" or "f". All other types, including arrays are
 returned as strings formatted in the same default PostgreSQL manner that
 you would see in the **psql** program. Database *NULL* values are
-returned as **`NULL`**.
+returned as **`null`**.
 
-**`FALSE`** is returned if `row` exceeds the number of rows in the set,
+**`false`** is returned if `row` exceeds the number of rows in the set,
 or on any other error.
 
 ### Examples
@@ -2668,7 +2668,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 from the result associated with the specified `result` resource.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Parameters
 
@@ -2680,15 +2680,15 @@ class="function">pg\_execute</span> (among others).
 
 `row`  
 Row number in result to fetch. Rows are numbered from 0 upwards. If
-omitted or **`NULL`**, the next row is fetched.
+omitted or **`null`**, the next row is fetched.
 
 ### Return Values
 
 An <span class="type">array</span>, indexed from 0 upwards, with each
 value represented as a <span class="type">string</span>. Database *NULL*
-values are returned as **`NULL`**.
+values are returned as **`null`**.
 
-**`FALSE`** is returned if `row` exceeds the number of rows in the set,
+**`false`** is returned if `row` exceeds the number of rows in the set,
 there are no more rows, or on any other error.
 
 ### Examples
@@ -2772,7 +2772,7 @@ the field name as a <span class="type">string</span>.
 ### Return Values
 
 Returns *1* if the field in the given row is SQL *NULL*, *0* if not.
-**`FALSE`** is returned if the row is out of range, or upon any other
+**`false`** is returned if the row is out of range, or upon any other
 error.
 
 ### Examples
@@ -2830,7 +2830,7 @@ Field number, starting from 0.
 
 ### Return Values
 
-The field name, or **`FALSE`** on error.
+The field name, or **`false`** on error.
 
 ### Examples
 
@@ -2959,7 +2959,7 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 <span class="function">pg\_field\_prtlen</span> returns the actual
 printed length (number of characters) of a specific value in a
 PostgreSQL `result`. Row numbering starts at 0. This function will
-return **`FALSE`** on an error.
+return **`false`** on an error.
 
 `field_name_or_number` can be passed either as an <span
 class="type">int</span> or as a <span class="type">string</span>. If it
@@ -2988,7 +2988,7 @@ current row is fetched.
 
 ### Return Values
 
-The field printed length, or **`FALSE`** on error.
+The field printed length, or **`false`** on error.
 
 ### Examples
 
@@ -3071,7 +3071,7 @@ Field number, starting from 0.
 ### Return Values
 
 The internal field storage size (in bytes). -1 indicates a variable
-length field. **`FALSE`** is returned on error.
+length field. **`false`** is returned on error.
 
 ### Examples
 
@@ -3132,11 +3132,11 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$field_number`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$oid_only`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">pg\_field\_table</span> returns the name of the
 table that field belongs to, or the table's oid if `oid_only` is
-**`TRUE`**.
+**`true`**.
 
 ### Parameters
 
@@ -3151,11 +3151,11 @@ Field number, starting from 0.
 
 `oid_only`  
 By default the tables name that field belongs to is returned but if
-`oid_only` is set to **`TRUE`**, then the oid will instead be returned.
+`oid_only` is set to **`true`**, then the oid will instead be returned.
 
 ### Return Values
 
-On success either the fields table name or oid. Or, **`FALSE`** on
+On success either the fields table name or oid. Or, **`false`** on
 failure.
 
 ### Examples
@@ -3236,7 +3236,7 @@ Field number, starting from 0.
 
 ### Return Values
 
-The OID of the field's base type. **`FALSE`** is returned on error.
+The OID of the field's base type. **`false`** is returned on error.
 
 ### Examples
 
@@ -3305,7 +3305,7 @@ Field number, starting from 0.
 ### Return Values
 
 A <span class="type">string</span> containing the base name of the
-field's type, or **`FALSE`** on error.
+field's type, or **`false`** on error.
 
 ### Examples
 
@@ -3353,9 +3353,9 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-Returns **`TRUE`** if the flush was successful or no data was waiting to
+Returns **`true`** if the flush was successful or no data was waiting to
 be flushed, *0* if part of the pending data was flushed but more remains
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 pg\_free\_result
 ================
@@ -3392,7 +3392,7 @@ class="function">pg\_execute</span> (among others).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3459,7 +3459,7 @@ both numerical and associative indices.
 An <span class="type">array</span> containing the *NOTIFY* message name
 and backend PID. As of PHP 5.4.0 and if supported by the server, the
 array also contains the server version and the payload. Otherwise if no
-*NOTIFY* is waiting, then **`FALSE`** is returned.
+*NOTIFY* is waiting, then **`false`** is returned.
 
 ### Examples
 
@@ -3565,7 +3565,7 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-The result <span class="type">resource</span>, or **`FALSE`** if no more
+The result <span class="type">resource</span>, or **`false`** if no more
 results are available.
 
 ### Examples
@@ -3629,7 +3629,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 A <span class="type">string</span> containing the name of the host the
-`connection` is to, or **`FALSE`** on error.
+`connection` is to, or **`false`** on error.
 
 ### Examples
 
@@ -3710,7 +3710,7 @@ call <span class="function">pg\_convert</span> internally.
 
 ### Return Values
 
-Returns the connection resource on success, or **`FALSE`** on failure.
+Returns the connection resource on success, or **`false`** on failure.
 Returns <span class="type">string</span> if **`PGSQL_DML_STRING`** is
 passed via `options`.
 
@@ -3737,8 +3737,8 @@ passed via `options`.
 
 | Version      | Description                                                                                                                 |
 |--------------|-----------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0        | Unless **`PGSQL_DML_STRING`** is passed, the function now returns the connection resource instead of **`TRUE`** on success. |
-| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`TRUE`**/**`FALSE`** and **`NULL`** data type support.     |
+| 5.6.0        | Unless **`PGSQL_DML_STRING`** is passed, the function now returns the connection resource instead of **`true`** on success. |
+| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`true`**/**`false`** and **`null`** data type support.     |
 | 5.5.3/5.4.19 | Direct SQL injection to `table_name` and Indirect SQL injection to identifiers are fixed.                                   |
 
 ### See Also
@@ -3786,7 +3786,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 A <span class="type">string</span> containing the last error message on
-the given `connection`, or **`FALSE`** on error.
+the given `connection`, or **`false`** on error.
 
 ### Examples
 
@@ -3853,7 +3853,7 @@ One of **`PGSQL_NOTICE_LAST`** (to return last notice),
 A <span class="type">string</span> containing the last notice on the
 given `connection` with **`PGSQL_NOTICE_LAST`**, an <span
 class="type">array</span> with **`PGSQL_NOTICE_ALL`**, a <span
-class="type">bool</span> with **`PGSQL_NOTICE_CLEAR`**, or **`FALSE`**
+class="type">bool</span> with **`PGSQL_NOTICE_CLEAR`**, or **`false`**
 on error.
 
 ### Examples
@@ -3933,7 +3933,7 @@ class="function">pg\_execute</span> (among others).
 ### Return Values
 
 A <span class="type">string</span> containing the OID assigned to the
-most recently inserted row in the specified `connection`, or **`FALSE`**
+most recently inserted row in the specified `connection`, or **`false`**
 on error or no available OID.
 
 ### Examples
@@ -3992,7 +3992,7 @@ class="function">pg\_lo\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4071,7 +4071,7 @@ first appeared in PostgreSQL 8.1.
 
 ### Return Values
 
-A large object `OID` or **`FALSE`** on error.
+A large object `OID` or **`false`** on error.
 
 ### Examples
 
@@ -4134,7 +4134,7 @@ object on the client filesystem.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4203,7 +4203,7 @@ first appeared in PostgreSQL 8.1.
 
 ### Return Values
 
-The `OID` of the newly created large object, or **`FALSE`** on failure.
+The `OID` of the newly created large object, or **`false`** on failure.
 
 ### Examples
 
@@ -4270,7 +4270,7 @@ write.
 
 ### Return Values
 
-A large object resource or **`FALSE`** on error.
+A large object resource or **`false`** on error.
 
 ### Examples
 
@@ -4327,7 +4327,7 @@ class="function">pg\_lo\_open</span>.
 
 ### Return Values
 
-Number of bytes read or **`FALSE`** on error.
+Number of bytes read or **`false`** on error.
 
 ### Examples
 
@@ -4386,7 +4386,7 @@ An optional maximum number of bytes to return.
 ### Return Values
 
 A <span class="type">string</span> containing `len` bytes from the large
-object, or **`FALSE`** on error.
+object, or **`false`** on error.
 
 ### Examples
 
@@ -4444,7 +4444,7 @@ One of the constants **`PGSQL_SEEK_SET`** (seek from object start),
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4566,7 +4566,7 @@ The number of bytes to truncate.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4609,7 +4609,7 @@ class="methodparam"><span class="type">resource</span>
 class="type">int</span> `$oid`</span> )
 
 <span class="function">pg\_lo\_unlink</span> deletes a large object with
-the `oid`. Returns **`TRUE`** on success or **`FALSE`** on failure.
+the `oid`. Returns **`true`** on success or **`false`** on failure.
 
 To use the large object interface, it is necessary to enclose it within
 a transaction block.
@@ -4632,7 +4632,7 @@ The `OID` of the large object in the database.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4696,7 +4696,7 @@ and no greater than the length of `data`. Defaults to the length of
 
 ### Return Values
 
-The number of bytes written to the large object, or **`FALSE`** on
+The number of bytes written to the large object, or **`false`** on
 error.
 
 ### Examples
@@ -4733,7 +4733,7 @@ class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
 class="type">string</span> `$table_name`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$extended`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">pg\_meta\_data</span> returns table definition
 for *table\_name* as an array.
@@ -4747,12 +4747,12 @@ PostgreSQL database connection resource.
 The name of the table.
 
 `extended`  
-Flag for returning extended meta data. Default to **`FALSE`**.
+Flag for returning extended meta data. Default to **`false`**.
 
 ### Return Values
 
 An <span class="type">array</span> of the table definition, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Examples
 
@@ -4962,7 +4962,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 A <span class="type">string</span> containing the `connection` options,
-or **`FALSE`** on error.
+or **`false`** on error.
 
 ### Examples
 
@@ -4998,7 +4998,7 @@ Certain parameter values are reported by the server automatically at
 connection startup or whenever their values change. <span
 class="function">pg\_parameter\_status</span> can be used to interrogate
 these settings. It returns the current value of a parameter if known, or
-**`FALSE`** if the parameter is not known.
+**`false`** if the parameter is not known.
 
 Parameters reported as of PostgreSQL 8.0 include *server\_version*,
 *server\_encoding*, *client\_encoding*, *is\_superuser*,
@@ -5038,7 +5038,7 @@ Possible `param_name` values include *server\_version*,
 ### Return Values
 
 A <span class="type">string</span> containing the value of the
-parameter, **`FALSE`** on failure or invalid `param_name`.
+parameter, **`false`** on failure or invalid `param_name`.
 
 ### Examples
 
@@ -5116,7 +5116,7 @@ connection.
 
 ### Return Values
 
-PostgreSQL connection resource on success, **`FALSE`** on failure.
+PostgreSQL connection resource on success, **`false`** on failure.
 
 ### Examples
 
@@ -5168,7 +5168,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5217,7 +5217,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 An <span class="type">int</span> containing the port number of the
-database server the `connection` is to, or **`FALSE`** on error.
+database server the `connection` is to, or **`false`** on error.
 
 ### Examples
 
@@ -5295,7 +5295,7 @@ parameters are used, they are referred to as $1, $2, etc.
 
 ### Return Values
 
-A query result resource on success or **`FALSE`** on failure.
+A query result resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -5376,7 +5376,7 @@ terminator is added automatically.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5427,7 +5427,7 @@ using earlier versions.
 If parameters are used, they are referred to in the `query` string as
 $1, $2, etc. The same parameter may appear more than once in the
 `query`; the same value will be used in that case. `params` specifies
-the actual values of the parameters. A **`NULL`** value in this array
+the actual values of the parameters. A **`null`** value in this array
 means the corresponding parameter is SQL *NULL*.
 
 The primary advantage of <span class="function">pg\_query\_params</span>
@@ -5471,7 +5471,7 @@ large object functions.
 
 ### Return Values
 
-A query result resource on success or **`FALSE`** on failure.
+A query result resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -5515,7 +5515,7 @@ specified database `connection`. <span
 class="function">pg\_query\_params</span> should be preferred in most
 cases.
 
-If an error occurs, and **`FALSE`** is returned, details of the error
+If an error occurs, and **`false`** is returned, details of the error
 can be retrieved using the <span class="function">pg\_last\_error</span>
 function if the connection is valid.
 
@@ -5560,7 +5560,7 @@ be
 
 ### Return Values
 
-A query result resource on success or **`FALSE`** on failure.
+A query result resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -5636,7 +5636,7 @@ is only available against a PostgreSQL 7.4 or above server. The error
 field is specified by the `fieldcode`.
 
 Because <span class="function">pg\_query</span> and <span
-class="function">pg\_query\_params</span> return **`FALSE`** if the
+class="function">pg\_query\_params</span> return **`false`** if the
 query fails, you must use <span class="function">pg\_send\_query</span>
 and <span class="function">pg\_get\_result</span> to get the result
 handle.
@@ -5663,7 +5663,7 @@ only), **`PGSQL_DIAG_CONTEXT`**, **`PGSQL_DIAG_SOURCE_FILE`**,
 ### Return Values
 
 A <span class="type">string</span> containing the contents of the error
-field, **`NULL`** if the field does not exist or **`FALSE`** on failure.
+field, **`null`** if the field does not exist or **`false`** on failure.
 
 ### Examples
 
@@ -5708,7 +5708,7 @@ The function <span class="function">pg\_result\_error\_field</span> can
 give much greater detail on result errors than <span
 class="function">pg\_result\_error</span>.
 
-Because <span class="function">pg\_query</span> returns **`FALSE`** if
+Because <span class="function">pg\_query</span> returns **`false`** if
 the query fails, you must use <span
 class="function">pg\_send\_query</span> and <span
 class="function">pg\_get\_result</span> to get the result handle.
@@ -5725,7 +5725,7 @@ class="function">pg\_execute</span> (among others).
 
 Returns a <span class="type">string</span>. Returns empty string if
 there is no error. If there is an error associated with the `result`
-parameter, returns **`FALSE`**.
+parameter, returns **`false`**.
 
 ### Examples
 
@@ -5783,7 +5783,7 @@ numbered starting from zero.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5946,7 +5946,7 @@ call <span class="function">pg\_convert</span> internally.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Returns <span
+Returns **`true`** on success or **`false`** on failure. Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -5975,7 +5975,7 @@ class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 | Version      | Description                                                                                                             |
 |--------------|-------------------------------------------------------------------------------------------------------------------------|
 | 7.1.0        | The `result_type` parameter was added.                                                                                  |
-| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`TRUE`**/**`FALSE`** and **`NULL`** data type support. |
+| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`true`**/**`false`** and **`null`** data type support. |
 | 5.5.3/5.4.19 | Direct SQL injection to `table_name` and Indirect SQL injection to identifiers are fixed.                               |
 
 ### See Also
@@ -6029,7 +6029,7 @@ elements in the array must match the number of placeholders.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** on failure. Use <span
+Returns **`true`** on success, **`false`** on failure. Use <span
 class="function">pg\_get\_result</span> to determine the query result.
 
 ### Examples
@@ -6087,8 +6087,8 @@ Sends a request to create a prepared statement with the given
 parameters, without waiting for completion.
 
 This is an asynchronous version of <span
-class="function">pg\_prepare</span>: it returns **`TRUE`** if it was
-able to dispatch the request, and **`FALSE`** if not. After a successful
+class="function">pg\_prepare</span>: it returns **`true`** if it was
+able to dispatch the request, and **`false`** if not. After a successful
 call, call <span class="function">pg\_get\_result</span> to determine
 whether the server successfully created the prepared statement. The
 function's parameters are handled identically to <span
@@ -6116,7 +6116,7 @@ parameters are used, they are referred to as $1, $2, etc.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** on failure. Use <span
+Returns **`true`** on success, **`false`** on failure. Use <span
 class="function">pg\_get\_result</span> to determine the query result.
 
 ### Examples
@@ -6200,7 +6200,7 @@ elements in the array must match the number of placeholders.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Use <span class="function">pg\_get\_result</span> to determine the query
 result.
@@ -6270,7 +6270,7 @@ Data inside the query should be
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Use <span class="function">pg\_get\_result</span> to determine the query
 result.
@@ -6494,7 +6494,7 @@ PostgreSQL database connection resource.
 
 ### Return Values
 
-A socket resource on success or **`FALSE`** on failure.
+A socket resource on success or **`false`** on failure.
 
 pg\_trace
 =========
@@ -6539,7 +6539,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6653,7 +6653,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 A <span class="type">string</span> containing the debug TTY of the
-`connection`, or **`FALSE`** on error.
+`connection`, or **`false`** on error.
 
 ### Examples
 
@@ -6766,7 +6766,7 @@ last connection made by <span class="function">pg\_connect</span> or
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### Examples
 
@@ -6858,7 +6858,7 @@ call <span class="function">pg\_convert</span> internally.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Returns <span
+Returns **`true`** on success or **`false`** on failure. Returns <span
 class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 `options`.
 
@@ -6886,7 +6886,7 @@ class="type">string</span> if **`PGSQL_DML_STRING`** is passed via
 
 | Version      | Description                                                                                                             |
 |--------------|-------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`TRUE`**/**`FALSE`** and **`NULL`** data type support. |
+| 5.6.0        | No longer experimental. Added **`PGSQL_DML_ESCAPE`** constant, **`true`**/**`false`** and **`null`** data type support. |
 | 5.5.3/5.4.19 | Direct SQL injection to `table_name` and Indirect SQL injection to identifiers are fixed.                               |
 
 ### See Also
@@ -6924,7 +6924,7 @@ last connection made by <span class="function">pg\_connect</span> or
 ### Return Values
 
 Returns an array with *client*, *protocol* and *server* keys and values
-(if available). Returns **`FALSE`** on error or invalid connection.
+(if available). Returns **`false`** on error or invalid connection.
 
 ### Examples
 

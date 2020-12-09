@@ -20,7 +20,7 @@ This function has no parameters.
 ### Return Values
 
 Returns the previous <span class="classname">Throwable</span> if
-available or **`NULL`** otherwise.
+available or **`null`** otherwise.
 
 ### Examples
 

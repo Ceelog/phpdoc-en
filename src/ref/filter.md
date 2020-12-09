@@ -22,7 +22,7 @@ Name of a variable to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 filter\_id
 ==========
@@ -43,7 +43,7 @@ Name of a filter to get.
 
 ### Return Values
 
-ID of a filter on success or **`FALSE`** if filter doesn't exist.
+ID of a filter on success or **`false`** if filter doesn't exist.
 
 ### See Also
 
@@ -65,7 +65,7 @@ class="type">array</span><span class="type">int</span></span>
 `$options`<span class="initializer"> =
 **`FILTER_DEFAULT`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add_empty`<span class="initializer"> =
-**`TRUE`**</span></span> \]\] )
+**`true`**</span></span> \]\] )
 
 This function is useful for retrieving many values without repetitively
 calling <span class="function">filter\_input</span>.
@@ -93,20 +93,20 @@ This parameter can be also an integer holding a
 all values in the input array are filtered by this filter.
 
 `add_empty`  
-Add missing keys as **`NULL`** to the return value.
+Add missing keys as **`null`** to the return value.
 
 ### Return Values
 
 An array containing the values of the requested variables on success. If
 the input array designated by `type` is not populated, the function
-returns **`NULL`** if the **`FILTER_NULL_ON_FAILURE`** flag is not
-given, or **`FALSE`** otherwise. For other failures, **`FALSE`** is
+returns **`null`** if the **`FILTER_NULL_ON_FAILURE`** flag is not
+given, or **`false`** otherwise. For other failures, **`false`** is
 returned.
 
-An array value will be **`FALSE`** if the filter fails, or **`NULL`** if
+An array value will be **`false`** if the filter fails, or **`null`** if
 the variable is not set. Or if the flag **`FILTER_NULL_ON_FAILURE`** is
-used, it returns **`FALSE`** if the variable is not set and **`NULL`**
-if the filter fails. If the `add_empty` parameter is **`FALSE`**, no
+used, it returns **`false`** if the variable is not set and **`null`**
+if the filter fails. If the `add_empty` parameter is **`false`**, no
 array element will be added for unset variables.
 
 ### Examples
@@ -236,10 +236,10 @@ accepts options, flags can be provided in "flags" field of array.
 
 ### Return Values
 
-Value of the requested variable on success, **`FALSE`** if the filter
-fails, or **`NULL`** if the `var_name` variable is not set. If the flag
-**`FILTER_NULL_ON_FAILURE`** is used, it returns **`FALSE`** if the
-variable is not set and **`NULL`** if the filter fails.
+Value of the requested variable on success, **`false`** if the filter
+fails, or **`null`** if the `var_name` variable is not set. If the flag
+**`FILTER_NULL_ON_FAILURE`** is used, it returns **`false`** if the
+variable is not set and **`null`** if the filter fails.
 
 ### Examples
 
@@ -334,7 +334,7 @@ class="type">array</span><span class="type">int</span></span>
 `$options`<span class="initializer"> =
 **`FILTER_DEFAULT`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add_empty`<span class="initializer"> =
-**`TRUE`**</span></span> \]\] )
+**`true`**</span></span> \]\] )
 
 This function is useful for retrieving many values without repetitively
 calling <span class="function">filter\_var</span>.
@@ -361,13 +361,13 @@ This parameter can be also an integer holding a
 all values in the input array are filtered by this filter.
 
 `add_empty`  
-Add missing keys as **`NULL`** to the return value.
+Add missing keys as **`null`** to the return value.
 
 ### Return Values
 
 An array containing the values of the requested variables on success, or
-**`FALSE`** on failure. An array value will be **`FALSE`** if the filter
-fails, or **`NULL`** if the variable is not set.
+**`false`** on failure. An array value will be **`false`** if the filter
+fails, or **`null`** if the variable is not set.
 
 ### Examples
 
@@ -520,7 +520,7 @@ $var = filter_var('Doe, Jane Sue', FILTER_CALLBACK, array('options' => 'foo'));
 
 ### Return Values
 
-Returns the filtered data, or **`FALSE`** if the filter fails.
+Returns the filtered data, or **`false`** if the filter fails.
 
 ### Examples
 

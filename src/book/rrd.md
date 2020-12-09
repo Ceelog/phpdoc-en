@@ -215,7 +215,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Introduction
 ------------
@@ -292,7 +292,7 @@ This function has no parameters.
 
 ### Return Values
 
-Array with information about generated image is returned, **`FALSE`** if
+Array with information about generated image is returned, **`false`** if
 error occurs.
 
 RRDGraph::saveVerbose
@@ -319,7 +319,7 @@ This function has no parameters.
 ### Return Values
 
 Array with detailed information about generated image is returned,
-optionally with image data, **`FALSE`** if error occurs.
+optionally with image data, **`false`** if error occurs.
 
 RRDGraph::setOptions
 ====================
@@ -479,7 +479,7 @@ current time.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 

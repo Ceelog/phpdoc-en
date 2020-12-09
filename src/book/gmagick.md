@@ -886,7 +886,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 `$filter`</span> , <span class="methodparam"><span
 class="type">float</span> `$blur`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">Gmagick</span>
 <span class="methodname">rollimage</span> ( <span
@@ -904,7 +904,7 @@ class="methodparam"><span class="type">mixed</span> `$color`</span> ,
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">Gmagick</span>
 <span class="methodname">separateimagechannel</span> ( <span
@@ -1069,7 +1069,7 @@ class="methodparam"><span class="type">float</span> `$degrees`</span> )
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">Gmagick</span>
 <span class="methodname">trimimage</span> ( <span
@@ -1079,7 +1079,7 @@ class="methodparam"><span class="type">float</span> `$fuzz`</span> )
 <span class="methodname">writeimage</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$all_frames`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$all_frames`<span class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -1647,7 +1647,7 @@ Destroys the Gmagick object and frees all resources associated with it
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -2476,8 +2476,8 @@ Check if the image has a matte channel
 class="methodname">Gmagick::getimagematte</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if the image has a matte channel, otherwise
-**`FALSE`**.
+Returns **`true`** if the image has a matte channel, otherwise
+**`false`**.
 
 ### Parameters
 
@@ -2485,8 +2485,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the image has a matte channel, otherwise
-**`FALSE`**.
+Returns **`true`** if the image has a matte channel, otherwise
+**`false`**.
 
 ### Errors/Exceptions
 
@@ -3328,7 +3328,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3408,7 +3408,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3972,7 +3972,7 @@ class="methodparam"><span class="type">int</span> `$width`</span> ,
 `$filter`</span> , <span class="methodparam"><span
 class="type">float</span> `$blur`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Scales an image to the desired dimensions with a filter.
 
@@ -4072,7 +4072,7 @@ Scales the size of an image
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Scales the size of an image to the given dimensions. The other parameter
 will be calculated if 0 is passed as either param.
@@ -5087,7 +5087,7 @@ Changes the size of an image
 class="methodparam"><span class="type">int</span> `$width`</span> ,
 <span class="methodparam"><span class="type">int</span> `$height`</span>
 \[, <span class="methodparam"><span class="type">bool</span> `$fit`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Changes the size of an image to the given dimensions and removes any
 associated profiles. The goal is to produce small low cost thumbnail
@@ -5163,7 +5163,7 @@ Writes an image to the specified filename
 <span class="methodname">Gmagick::writeimage</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$all_frames`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$all_frames`<span class="initializer"> = **`false`**</span></span> \] )
 
 Writes an image to the specified filename. If the filename parameter is
 NULL, the image is written to the filename set by Gmagick::ReadImage()
@@ -5587,7 +5587,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`FALSE`** if no font is set.
+Returns a string on success and **`false`** if no font is set.
 
 GmagickDraw::getfontsize
 ========================
@@ -5758,7 +5758,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string specifying the code set or **`FALSE`** if text encoding
+Returns a string specifying the code set or **`false`** if text encoding
 is not set.
 
 GmagickDraw::line
@@ -6292,9 +6292,9 @@ class="methodparam"><span class="type">string</span> `$color`</span> \]
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">getcolor</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$as_array`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$normalize_array`<span class="initializer"> = **`FALSE`**</span></span>
+`$normalize_array`<span class="initializer"> = **`false`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -6354,9 +6354,9 @@ Returns the color
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">GmagickPixel::getcolor</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$as_array`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$normalize_array`<span class="initializer"> = **`FALSE`**</span></span>
+`$normalize_array`<span class="initializer"> = **`false`**</span></span>
 \]\] )
 
 Returns the color described by the GmagickPixel object, as a <span
@@ -6367,16 +6367,16 @@ the list.
 ### Parameters
 
 `as_array`  
-**`TRUE`** to indicate return of <span class="type">array</span> instead
+**`true`** to indicate return of <span class="type">array</span> instead
 of <span class="type">string</span>.
 
 `normalize_array`  
-**`TRUE`** to normalize the color values.
+**`true`** to normalize the color values.
 
 ### Return Values
 
 A <span class="type">string</span> or an <span class="type">array</span>
-of channel values, each normalized if **`TRUE`** is given as
+of channel values, each normalized if **`true`** is given as
 `normalize_array`. Throws <span
 class="classname">GmagickPixelException</span> on error.
 

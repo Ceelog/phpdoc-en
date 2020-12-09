@@ -108,7 +108,7 @@ The following algorithms are currently supported:
     **`CRYPT_BLOWFISH`** algorithm to create the hash. This will produce
     a standard <span class="function">crypt</span> compatible hash using
     the "$2y$" identifier. The result will always be a 60 character
-    string, or **`FALSE`** on failure. </span>
+    string, or **`false`** on failure. </span>
 -   <span class="simpara"> **`PASSWORD_ARGON2I`** - Use the Argon2i
     hashing algorithm to create the hash. This algorithm is only
     available if PHP has been compiled with Argon2 support. </span>
@@ -178,7 +178,7 @@ used.
 
 ### Return Values
 
-Returns the hashed password, or **`FALSE`** on failure.
+Returns the hashed password, or **`false`** on failure.
 
 The used algorithm, cost and salt are returned as part of the hash.
 Therefore, all information that's needed to verify the hash is included
@@ -354,8 +354,8 @@ for documentation on the supported options for each algorithm.
 
 ### Return Values
 
-Returns **`TRUE`** if the hash should be rehashed to match the given
-`algo` and `options`, or **`FALSE`** otherwise.
+Returns **`true`** if the hash should be rehashed to match the given
+`algo` and `options`, or **`false`** otherwise.
 
 ### Changelog
 
@@ -424,7 +424,7 @@ A hash created by <span class="function">password\_hash</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the password and hash match, or **`FALSE`**
+Returns **`true`** if the password and hash match, or **`false`**
 otherwise.
 
 ### Examples

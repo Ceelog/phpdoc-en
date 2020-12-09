@@ -293,8 +293,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current entry can be iterated over, otherwise
-returns **`FALSE`**.
+Returns **`true`** if the current entry can be iterated over, otherwise
+returns **`false`**.
 
 ### See Also
 

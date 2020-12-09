@@ -33,7 +33,7 @@ Caches a variable in the data store, only if it's not already stored.
 Store the variable using this name. `key`s are cache-unique, so
 attempting to use <span class="function">apcu\_add</span> to store data
 with a key that already exists will not overwrite the existing data, and
-will instead return **`FALSE`**. (This is the only difference between
+will instead return **`false`**. (This is the only difference between
 <span class="function">apcu\_add</span> and <span
 class="function">apcu\_store</span>.)
 
@@ -94,20 +94,20 @@ Retrieves cached information from APCu's data store
 class="type">false</span></span> <span
 class="methodname">apcu\_cache\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves cached information and meta-data from APC's data store.
 
 ### Parameters
 
 `limited`  
-If `limited` is **`TRUE`**, the return value will exclude the individual
+If `limited` is **`true`**, the return value will exclude the individual
 list of cache entries. This is useful when trying to optimize calls for
 statistics gathering.
 
 ### Return Values
 
-Array of cached data (and meta-data) or **`FALSE`** on failure
+Array of cached data (and meta-data) or **`false`** on failure
 
 > **Note**: <span class="simpara"> <span
 > class="function">apcu\_cache\_info</span> will raise a warning if it
@@ -197,7 +197,7 @@ The new value to update to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -255,7 +255,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** always
+Returns **`true`** always
 
 ### See Also
 
@@ -298,7 +298,7 @@ decrementing an existing one).
 
 ### Return Values
 
-Returns the current value of `key`'s value on success, or **`FALSE`** on
+Returns the current value of `key`'s value on success, or **`false`** on
 failure
 
 ### Changelog
@@ -377,8 +377,8 @@ for several keys, or as an <span class="classname">APCUIterator</span>
 ### Return Values
 
 If `key` is an <span class="type">array</span>, an indexed <span
-class="type">array</span> of the keys is returned. Otherwise **`TRUE`**
-is returned on success, or **`FALSE`** on failure.
+class="type">array</span> of the keys is returned. Otherwise **`true`**
+is returned on success, or **`false`** on failure.
 
 ### Examples
 
@@ -425,8 +425,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** when APCu is usable in the current environment,
-**`FALSE`** otherwise.
+Returns **`true`** when APCu is usable in the current environment,
+**`false`** otherwise.
 
 apcu\_entry
 ===========
@@ -558,7 +558,7 @@ class="type">array</span> of strings, that contain keys.
 
 ### Return Values
 
-Returns **`TRUE`** if the key exists, otherwise **`FALSE`** Or if an
+Returns **`true`** if the key exists, otherwise **`false`** Or if an
 <span class="type">array</span> was passed to `keys`, then an array is
 returned that contains all existing keys, or an empty array if none
 exist.
@@ -636,11 +636,11 @@ class="function">apcu\_store</span>). If an array is passed then each
 element is fetched and returned.
 
 `success`  
-Set to **`TRUE`** in success and **`FALSE`** in failure.
+Set to **`true`** in success and **`false`** in failure.
 
 ### Return Values
 
-The stored variable or array of variables on success; **`FALSE`** on
+The stored variable or array of variables on success; **`false`** on
 failure
 
 ### Examples
@@ -708,7 +708,7 @@ incrementing an existing one).
 
 ### Return Values
 
-Returns the current value of `key`'s value on success, or **`FALSE`** on
+Returns the current value of `key`'s value on success, or **`false`** on
 failure
 
 ### Changelog
@@ -831,20 +831,20 @@ Retrieves APCu Shared Memory Allocation information
 <span class="type">array</span> <span
 class="methodname">apcu\_sma\_info</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$limited`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves APCu Shared Memory Allocation information.
 
 ### Parameters
 
 `limited`  
-When set to **`FALSE`** (default) <span
+When set to **`false`** (default) <span
 class="function">apcu\_sma\_info</span> will return a detailed
 information about each segment.
 
 ### Return Values
 
-Array of Shared Memory Allocation data; **`FALSE`** on failure.
+Array of Shared Memory Allocation data; **`false`** on failure.
 
 ### Examples
 
@@ -933,7 +933,7 @@ Names in key, variables in value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Second syntax
+Returns **`true`** on success or **`false`** on failure. Second syntax
 returns array with error keys.
 
 ### Examples

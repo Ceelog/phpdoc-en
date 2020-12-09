@@ -88,7 +88,7 @@ these messages be passed to the user.
 ### Return Values
 
 Returns an array of all of the IMAP alert messages generated or
-**`FALSE`** if no alert messages are available.
+**`false`** if no alert messages are available.
 
 ### See Also
 
@@ -108,9 +108,9 @@ class="methodparam"><span class="type">string</span> `$mailbox`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$message`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$options`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$internal_date`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Appends a string `message` to the specified `mailbox`.
 
@@ -144,7 +144,7 @@ rfc2060 specifications for a date\_time value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -347,7 +347,7 @@ Returns the information in an object with following properties:
 -   <span class="simpara"> **`Recent`** - number of recent messages in
     the mailbox </span>
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -420,7 +420,7 @@ The flags which you can unset are "\\\\Seen", "\\\\Answered",
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -454,7 +454,7 @@ class="function">imap\_expunge</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -502,7 +502,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -598,7 +598,7 @@ You can set the **`FT_UID`** which tells the function to treat the
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### Examples
 
@@ -673,7 +673,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -702,7 +702,7 @@ stack is subsequently cleared.
 
 This function returns an array of all of the IMAP error messages
 generated since the last <span class="function">imap\_errors</span>
-call, or the beginning of the page. Returns **`FALSE`** if no error
+call, or the beginning of the page. Returns **`false`** if no error
 messages are available.
 
 ### See Also
@@ -734,7 +734,7 @@ An IMAP stream returned by <span class="function">imap\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 imap\_fetch\_overview
 =====================
@@ -1012,25 +1012,25 @@ tells the function to treat the `msg_number` argument as a *UID*.
 ### Return Values
 
 Returns an object with properties listed in the table below, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 |               |                                                                                                                                                               |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | type          | Primary body type                                                                                                                                             |
 | encoding      | Body transfer encoding                                                                                                                                        |
-| ifsubtype     | **`TRUE`** if there is a subtype string                                                                                                                       |
+| ifsubtype     | **`true`** if there is a subtype string                                                                                                                       |
 | subtype       | MIME subtype                                                                                                                                                  |
-| ifdescription | **`TRUE`** if there is a description string                                                                                                                   |
+| ifdescription | **`true`** if there is a description string                                                                                                                   |
 | description   | Content description string                                                                                                                                    |
-| ifid          | **`TRUE`** if there is an identification string                                                                                                               |
+| ifid          | **`true`** if there is an identification string                                                                                                               |
 | id            | Identification string                                                                                                                                         |
 | lines         | Number of lines                                                                                                                                               |
 | bytes         | Number of bytes                                                                                                                                               |
-| ifdisposition | **`TRUE`** if there is a disposition string                                                                                                                   |
+| ifdisposition | **`true`** if there is a disposition string                                                                                                                   |
 | disposition   | Disposition string                                                                                                                                            |
-| ifdparameters | **`TRUE`** if the `dparameters` array exists                                                                                                                  |
+| ifdparameters | **`true`** if the `dparameters` array exists                                                                                                                  |
 | dparameters   | An array of objects where each object has an *"attribute"* and a *"value"* property corresponding to the parameters on the *Content-disposition* MIME header. |
-| ifparameters  | **`TRUE`** if the parameters array exists                                                                                                                     |
+| ifparameters  | **`true`** if the parameters array exists                                                                                                                     |
 | parameters    | An array of objects where each object has an *"attribute"* and a *"value"* property.                                                                          |
 | parts         | An array of objects identical in structure to the top-level object, each of which corresponds to a MIME body part.                                            |
 
@@ -1095,7 +1095,7 @@ following constants: **`IMAP_GC_ELT`** (message cache elements),
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1143,7 +1143,7 @@ the mailbox you wish to retrieve information about.
 Returns an array with integer values limit and usage for the given
 mailbox. The value of limit represents the total amount of space allowed
 for this mailbox. The usage value represents the mailboxes current level
-of capacity. Will return **`FALSE`** in the case of failure.
+of capacity. Will return **`false`** in the case of failure.
 
 As of PHP 4.3, the function more properly reflects the functionality as
 dictated by the
@@ -1246,7 +1246,7 @@ Returns an array of integer values pertaining to the specified user
 mailbox. All values contain a key based upon the resource name, and a
 corresponding array with the usage and limit values within.
 
-This function will return **`FALSE`** in the case of call failure, and
+This function will return **`false`** in the case of call failure, and
 an array of information about the connection upon an un-parsable
 response from the server.
 
@@ -1549,7 +1549,7 @@ class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$subjectlength`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$defaulthost`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Gets information about the given message number by reading its headers.
 
@@ -1573,7 +1573,7 @@ than or equal to zero.
 
 ### Return Values
 
-Returns **`FALSE`** on error or, if successful, the information in an
+Returns **`false`** on error or, if successful, the information in an
 object with following properties:
 
 -   <span class="simpara"> toaddress - full to: line, up to 1024
@@ -1691,7 +1691,7 @@ intervening errors, will return the same error.
 ### Return Values
 
 Returns the full text of the last IMAP error message that occurred on
-the current page. Returns **`FALSE`** if no error messages are
+the current page. Returns **`false`** if no error messages are
 available.
 
 ### See Also
@@ -1951,7 +1951,7 @@ are processed; these bodies constitute the bodies of the parts.
 ### Return Values
 
 Returns the MIME message as <span class="type">string</span>, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -2039,7 +2039,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2089,7 +2089,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2117,13 +2117,13 @@ class="methodparam"><span class="type">string</span> `$subject`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$message`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$additional_headers`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$cc`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$bcc`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$rpath`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 This function allows sending of emails with correct handling of Cc and
 Bcc receivers.
@@ -2159,7 +2159,7 @@ This is useful when using PHP as a mail client for multiple users.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2203,7 +2203,7 @@ Returns the information in an object with following properties:
 | Deleted | number of deleted messages             |
 | Size    | mailbox size                           |
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -2355,7 +2355,7 @@ A string encoded in modified UTF-7.
 
 ### Return Values
 
-Returns `in` converted to UTF-8, or **`FALSE`** on failure.
+Returns `in` converted to UTF-8, or **`false`** on failure.
 
 ### See Also
 
@@ -2383,7 +2383,7 @@ An IMAP stream returned by <span class="function">imap\_open</span>.
 ### Return Values
 
 Return the number of messages in the current mailbox, as an integer, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### See Also
 
@@ -2538,7 +2538,7 @@ or more connection parameters:
 
 ### Return Values
 
-Returns an IMAP stream on success or **`FALSE`** on error.
+Returns an IMAP stream on success or **`false`** on error.
 
 ### Examples
 
@@ -2628,7 +2628,7 @@ An IMAP stream returned by <span class="function">imap\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the stream is still alive, **`FALSE`** otherwise.
+Returns **`true`** if the stream is still alive, **`false`** otherwise.
 
 ### Examples
 
@@ -2728,7 +2728,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2789,7 +2789,7 @@ Number of maximum connect attempts
 
 ### Return Values
 
-Returns **`TRUE`** if the stream is reopened, **`FALSE`** otherwise.
+Returns **`true`** if the stream is reopened, **`false`** otherwise.
 
 ### Examples
 
@@ -3022,7 +3022,7 @@ A bitmask with one or more of the following:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3063,7 +3063,7 @@ class="methodparam"><span class="type">string</span> `$criteria`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$options`<span class="initializer"> = SE\_FREE</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$charset`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 This function performs a search on the mailbox currently opened in the
 given IMAP stream.
@@ -3142,7 +3142,7 @@ MIME character set to use when searching strings.
 
 Returns an array of message numbers or UIDs.
 
-Return **`FALSE`** if it does not understand the search `criteria` or no
+Return **`false`** if it does not understand the search `criteria` or no
 messages have been found.
 
 ### Examples
@@ -3225,7 +3225,7 @@ The maximum size (in KB) for the `quota_root`
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3296,7 +3296,7 @@ The rights to give to the user. Passing an empty string will delete acl.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -3349,7 +3349,7 @@ A bit mask that may contain the single option:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3391,9 +3391,9 @@ class="methodparam"><span class="type">int</span> `$criteria`</span> ,
 class="type">int</span> `$options`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$search_criteria`<span class="initializer">
-= **`NULL`**</span></span> \[, <span class="methodparam"><span
+= **`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$charset`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\] )
+**`null`**</span></span> \]\]\] )
 
 Gets and sorts message numbers by the given parameters.
 
@@ -3438,7 +3438,7 @@ MIME character set to use when sorting strings.
 ### Return Values
 
 Returns an array of message numbers sorted by the given parameters, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 imap\_status
 ============
@@ -3550,7 +3550,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3581,7 +3581,7 @@ An IMAP stream returned by <span class="function">imap\_open</span>.
 ### Return Values
 
 <span class="function">imap\_thread</span> returns an associative array
-containing a tree of messages threaded by *REFERENCES*, or **`FALSE`**
+containing a tree of messages threaded by *REFERENCES*, or **`false`**
 on error.
 
 Every message in the current mailbox will be represented by three
@@ -3646,8 +3646,8 @@ The timeout, in seconds.
 
 ### Return Values
 
-If the `timeout` parameter is set, this function returns **`TRUE`** on
-success and **`FALSE`** on failure.
+If the `timeout` parameter is set, this function returns **`true`** on
+success and **`false`** on failure.
 
 If `timeout` is not provided or evaluates to -1, the current timeout
 value of `timeout_type` is returned as an integer.
@@ -3737,7 +3737,7 @@ The message number
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3775,7 +3775,7 @@ disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3808,7 +3808,7 @@ section 5.1.3 (original UTF-7 was defined in
 ### Return Values
 
 Returns a string that is encoded in ISO-8859-1 and consists of the same
-sequence of characters in `text`, or **`FALSE`** if `text` contains
+sequence of characters in `text`, or **`false`** if `text` contains
 invalid modified UTF-7 sequence or `text` contains a character that is
 not part of ISO-8859-1 character set.
 
@@ -3875,7 +3875,7 @@ A UTF-8 encoded string.
 
 ### Return Values
 
-Returns `in` converted to modified UTF-7, or **`FALSE`** on failure.
+Returns `in` converted to modified UTF-7, or **`false`** on failure.
 
 ### See Also
 

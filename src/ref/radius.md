@@ -11,7 +11,7 @@ class="methodparam">void</span> )
 
 ### Return Values
 
-Returns a handle on success, **`FALSE`** on error. This function only
+Returns a handle on success, **`false`** on error. This function only
 fails if insufficient memory is available.
 
 ### Examples
@@ -81,7 +81,7 @@ passed into the `max_tries`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -114,7 +114,7 @@ class="methodparam">void</span> )
 
 ### Return Values
 
-Returns a handle on success, **`FALSE`** on error. This function only
+Returns a handle on success, **`false`** on error. This function only
 fails if insufficient memory is available.
 
 ### Examples
@@ -146,7 +146,7 @@ at the end of each request.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 radius\_config
 ==============
@@ -180,7 +180,7 @@ class="function">radius\_add\_server</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -216,7 +216,7 @@ Type is **`RADIUS_ACCESS_REQUEST`** or **`RADIUS_ACCOUNTING_REQUEST`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -391,7 +391,7 @@ will be a PPTP-MPPE implementation in PHP.
 
 ### Return Values
 
-Returns the demangled string, or **`FALSE`** on error.
+Returns the demangled string, or **`false`** on error.
 
 radius\_demangle
 ================
@@ -411,7 +411,7 @@ reasons, and must be demangled before you can use them.
 
 ### Return Values
 
-Returns the demangled string, or **`FALSE`** on error.
+Returns the demangled string, or **`false`** on error.
 
 radius\_get\_attr
 =================
@@ -489,7 +489,7 @@ The tagged attribute to be decoded.
 
 ### Return Values
 
-Returns the data from the tagged attribute or **`FALSE`** on failure.
+Returns the data from the tagged attribute or **`false`** on failure.
 
 ### Examples
 
@@ -544,7 +544,7 @@ The tagged attribute to be decoded.
 
 ### Return Values
 
-Returns the tag from the tagged attribute or **`FALSE`** on failure.
+Returns the tag from the tagged attribute or **`false`** on failure.
 
 ### Examples
 
@@ -594,7 +594,7 @@ determine the vendor.
 ### Return Values
 
 Returns an associative array containing the attribute-type, vendor and
-the data, or **`FALSE`** on error.
+the data, or **`false`** on error.
 
 ### Examples
 
@@ -682,7 +682,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -739,7 +739,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -819,7 +819,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -898,7 +898,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -977,7 +977,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1039,7 +1039,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1119,7 +1119,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1188,7 +1188,7 @@ option is set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1217,7 +1217,7 @@ passwords and encryption-keys.
 
 ### Return Values
 
-Returns the request authenticator as string, or **`FALSE`** on error.
+Returns the request authenticator as string, or **`false`** on error.
 
 ### See Also
 
@@ -1250,7 +1250,7 @@ The data to be salt-encrypted.
 
 ### Return Values
 
-Returns the salt-encrypted data or **`FALSE`** on failure.
+Returns the salt-encrypted data or **`false`** on failure.
 
 ### See Also
 
@@ -1285,7 +1285,7 @@ class="function">radius\_send\_request</span> returns the Radius code
 which specifies the type of the response. This will typically be
 **`RADIUS_ACCESS_ACCEPT`**, **`RADIUS_ACCESS_REJECT`**, or
 **`RADIUS_ACCESS_CHALLENGE`**. If no valid response is received, <span
-class="function">radius\_send\_request</span> returns **`FALSE`**.
+class="function">radius\_send\_request</span> returns **`false`**.
 
 ### See Also
 
@@ -1308,7 +1308,7 @@ passwords and encryption-keys.
 
 ### Return Values
 
-Returns the server's shared secret as string, or **`FALSE`** on error.
+Returns the server's shared secret as string, or **`false`** on error.
 
 radius\_strerror
 ================

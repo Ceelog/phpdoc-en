@@ -64,11 +64,11 @@ Whether lowercase all the path during the class autoloading.
 
 `yaf.use_spl_autoload` <span class="type">int</span>  
 When this value is On, if <span class="classname">Yaf\_Loader</span> can
-not find a class, it will return **`FALSE`**, then give chance to other
+not find a class, it will return **`false`**, then give chance to other
 auto load function to be called.
 
 When this value is Off, if <span class="classname">Yaf\_Loader</span>
-can not find a class, it will return **`TRUE`**, and make the class
+can not find a class, it will return **`true`**, and make the class
 autoloading failed immediately.
 
 > **Note**:
@@ -80,7 +80,7 @@ autoloading failed immediately.
 
 When this value is Off(default), <span
 class="methodname">Yaf\_Loader::autoload</span> will always return
-**`TRUE`**.
+**`true`**.
 
 `yaf.forward_limit` <span class="type">int</span>  
 The max forward count, default is 5. that means you can have a max value

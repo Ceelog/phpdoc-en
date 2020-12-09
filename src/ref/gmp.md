@@ -174,7 +174,7 @@ latter to a number.
 
 ### Return Values
 
-Returns the binomial coefficient C(n, k), or **`FALSE`** on failure.
+Returns the binomial coefficient C(n, k), or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -650,7 +650,7 @@ Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### Return Values
 
-Returns a string or **`FALSE`** on failure.
+Returns a string or **`false`** on failure.
 
 ### Examples
 
@@ -932,7 +932,7 @@ Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### Return Values
 
-Returns a GMP number or **`FALSE`** on failure.
+Returns a GMP number or **`false`** on failure.
 
 ### Examples
 
@@ -1106,7 +1106,7 @@ latter to a number.
 
 ### Return Values
 
-A GMP number on success or **`FALSE`** if an inverse does not exist.
+A GMP number on success or **`false`** if an inverse does not exist.
 
 ### Examples
 
@@ -1574,7 +1574,7 @@ latter to a number.
 
 ### Return Values
 
-Returns **`TRUE`** if `a` is a perfect power, **`FALSE`** otherwise.
+Returns **`true`** if `a` is a perfect power, **`false`** otherwise.
 
 ### See Also
 
@@ -1605,7 +1605,7 @@ latter to a number.
 
 ### Return Values
 
-Returns **`TRUE`** if `a` is a perfect square, **`FALSE`** otherwise.
+Returns **`true`** if `a` is a perfect square, **`false`** otherwise.
 
 ### Examples
 
@@ -1974,11 +1974,11 @@ latter to a number.
 
 ### Return Values
 
-Returns **`NULL`** on success or **`FALSE`** on failure.
+Returns **`null`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
-Issues an **`E_WARNING`** and returns **`FALSE`** if `seed` is not
+Issues an **`E_WARNING`** and returns **`false`** if `seed` is not
 valid.
 
 ### Examples
@@ -2255,7 +2255,7 @@ class="methodname">gmp\_setbit</span> ( <span class="methodparam"><span
 class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$bit_on`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Sets bit `index` in `a`.
 
@@ -2627,13 +2627,13 @@ The bit to test
 
 ### Return Values
 
-Returns **`TRUE`** if the bit is set in resource `$a`, otherwise
-**`FALSE`**.
+Returns **`true`** if the bit is set in resource `$a`, otherwise
+**`false`**.
 
 ### Errors/Exceptions
 
 An **`E_WARNING`** level error is issued when `index` is less than zero,
-and **`FALSE`** is returned.
+and **`false`** is returned.
 
 ### Examples
 

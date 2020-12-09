@@ -180,9 +180,21 @@ To get the output of the executed command, be sure to set and use the
 <?php
 // outputs the username that owns the running php/httpd process
 // (on a system with the "whoami" executable in the path)
-echo exec('whoami');
+$output=null;
+$retval=null;
+exec('whoami', $output, $retval);
+echo "Returned with status $retval and output:\n";
+print_r($output);
 ?>
 ```
+
+The above example will output something similar to:
+
+    Returned with status 0 and output:
+    Array
+    (
+        [0] => cmb
+    )
 
 ### Notes
 
@@ -336,19 +348,19 @@ class="type">resource</span> that will be evaluated.
 ### Return Values
 
 An <span class="type">array</span> of collected information on success,
-and **`FALSE`** on failure. The returned array contains the following
+and **`false`** on failure. The returned array contains the following
 elements:
 
 | element  | type                             | description                                                                                                                                                               |
 |----------|----------------------------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | command  | <span class="type">string</span> | The command string that was passed to <span class="function">proc\_open</span>.                                                                                           |
 | pid      | <span class="type">int</span>    | process id                                                                                                                                                                |
-| running  | <span class="type">bool</span>   | **`TRUE`** if the process is still running, **`FALSE`** if it has terminated.                                                                                             |
-| signaled | <span class="type">bool</span>   | **`TRUE`** if the child process has been terminated by an uncaught signal. Always set to **`FALSE`** on Windows.                                                          |
-| stopped  | <span class="type">bool</span>   | **`TRUE`** if the child process has been stopped by a signal. Always set to **`FALSE`** on Windows.                                                                       |
-| exitcode | <span class="type">int</span>    | The exit code returned by the process (which is only meaningful if *running* is **`FALSE`**). Only first call of this function return real value, next calls return *-1*. |
-| termsig  | <span class="type">int</span>    | The number of the signal that caused the child process to terminate its execution (only meaningful if *signaled* is **`TRUE`**).                                          |
-| stopsig  | <span class="type">int</span>    | The number of the signal that caused the child process to stop its execution (only meaningful if *stopped* is **`TRUE`**).                                                |
+| running  | <span class="type">bool</span>   | **`true`** if the process is still running, **`false`** if it has terminated.                                                                                             |
+| signaled | <span class="type">bool</span>   | **`true`** if the child process has been terminated by an uncaught signal. Always set to **`false`** on Windows.                                                          |
+| stopped  | <span class="type">bool</span>   | **`true`** if the child process has been stopped by a signal. Always set to **`false`** on Windows.                                                                       |
+| exitcode | <span class="type">int</span>    | The exit code returned by the process (which is only meaningful if *running* is **`false`**). Only first call of this function return real value, next calls return *-1*. |
+| termsig  | <span class="type">int</span>    | The number of the signal that caused the child process to terminate its execution (only meaningful if *signaled* is **`true`**).                                          |
+| stopsig  | <span class="type">int</span>    | The number of the signal that caused the child process to stop its execution (only meaningful if *stopped* is **`true`**).                                                |
 
 ### See Also
 
@@ -394,7 +406,7 @@ For Windows the `increment` parameter have the following meanings:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If an error
+Returns **`true`** on success or **`false`** on failure. If an error
 occurs, like the user lacks permission to change the priority, an error
 of level **`E_WARNING`** is also generated.
 
@@ -443,11 +455,11 @@ class="methodparam"><span class="type">array</span>
 `$descriptorspec`</span> , <span class="methodparam"><span
 class="type">array</span> `&$pipes`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$cwd`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$env`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span>
-`$other_options`<span class="initializer"> = **`NULL`**</span></span>
+`$other_options`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 <span class="function">proc\_open</span> is similar to <span
@@ -462,7 +474,7 @@ characters have to be properly escaped, and proper quoting has to be
 applied.
 
 > **Note**: <span class="simpara"> On *Windows*, unless *bypass\_shell*
-> is set to **`TRUE`** in `other_options`, the `cmd` is passed to
+> is set to **`true`** in `other_options`, the `cmd` is passed to
 > **cmd.exe** (actually, *%ComSpec%*) with the */c* flag as *unquoted*
 > string (i.e. exactly as has been given to <span
 > class="function">proc\_open</span>). This can cause **cmd.exe** to
@@ -513,12 +525,12 @@ PHP's end of any pipes that are created.
 
 `cwd`  
 The initial working dir for the command. This must be an *absolute*
-directory path, or **`NULL`** if you want to use the default value (the
+directory path, or **`null`** if you want to use the default value (the
 working dir of the current PHP process)
 
 `env`  
 An array with the environment variables for the command that will be
-run, or **`NULL`** to use the same environment as the current PHP
+run, or **`null`** to use the same environment as the current PHP
 process
 
 `other_options`  
@@ -526,13 +538,13 @@ Allows you to specify additional options. Currently supported options
 include:
 
 -   *suppress\_errors* (windows only): suppresses errors generated by
-    this function when it's set to **`TRUE`**
+    this function when it's set to **`true`**
 -   *bypass\_shell* (windows only): bypass *cmd.exe* shell when set to
-    **`TRUE`**
+    **`true`**
 -   *blocking\_pipes* (windows only): force blocking pipes when set to
-    **`TRUE`**
+    **`true`**
 -   *create\_process\_group* (windows only): allow the child process to
-    handle *CTRL* events when set to **`TRUE`**
+    handle *CTRL* events when set to **`true`**
 -   *create\_new\_console* (windows only): the new process has a new
     console, instead of inheriting its parent's console
 
@@ -540,7 +552,7 @@ include:
 
 Returns a resource representing the process, which should be freed using
 <span class="function">proc\_close</span> when you are finished with it.
-On failure returns **`FALSE`**.
+On failure returns **`false`**.
 
 ### Changelog
 
@@ -723,12 +735,12 @@ The command that will be executed.
 
 ### Return Values
 
-The output from the executed command or **`NULL`** if an error occurred
+The output from the executed command or **`null`** if an error occurred
 or the command produces no output.
 
 > **Note**:
 >
-> This function can return **`NULL`** both when an error occurs or the
+> This function can return **`null`** both when an error occurs or the
 > program produces no output. It is not possible to detect execution
 > failures using this function. <span class="function">exec</span>
 > should be used when access to the program exit code is required.
@@ -783,7 +795,7 @@ executed command will be written to this variable.
 
 ### Return Values
 
-Returns the last line of the command output on success, and **`FALSE`**
+Returns the last line of the command output on success, and **`false`**
 on failure.
 
 ### Examples

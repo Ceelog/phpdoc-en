@@ -1,5 +1,5 @@
-*if*
-----
+if
+--
 
 The *if* construct is one of the most important features of many
 languages, PHP included. It allows for conditional execution of code
@@ -12,9 +12,9 @@ As described in
 <a href="/language/expressions.html" class="link">the section about expressions</a>,
 <span class="replaceable">expression</span> is evaluated to its Boolean
 value. If <span class="replaceable">expression</span> evaluates to
-**`TRUE`**, PHP will execute <span class="replaceable">statement</span>,
-and if it evaluates to **`FALSE`** - it'll ignore it. More information
-about what values evaluate to **`FALSE`** can be found in the
+**`true`**, PHP will execute <span class="replaceable">statement</span>,
+and if it evaluates to **`false`** - it'll ignore it. More information
+about what values evaluate to **`false`** can be found in the
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">'Converting to boolean'</a>
 section.
 

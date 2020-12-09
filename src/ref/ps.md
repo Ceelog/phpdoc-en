@@ -111,7 +111,7 @@ The path of the program to be started, when the link is clicked on.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -177,7 +177,7 @@ be *fitpage*, *fitwidth*, *fitheight*, or *fitbbox*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -250,7 +250,7 @@ opening the document with a pdf viewer.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -321,7 +321,7 @@ be *fitpage*, *fitwidth*, *fitheight*, or *fitbbox*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -380,7 +380,7 @@ The url of the hyperlink to be opened when clicking on this link, e.g.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -434,7 +434,7 @@ The end angle given in degrees.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -486,7 +486,7 @@ The end angle given in degrees.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -560,7 +560,7 @@ The height of the page in pixel, e.g. 842 for A4 format.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -617,7 +617,7 @@ Must be 1 or 2.
 
 ### Return Values
 
-The identifier of the pattern or **`FALSE`** on failure.
+The identifier of the pattern or **`false`** on failure.
 
 ### Examples
 
@@ -701,7 +701,7 @@ The height of the template in pixel.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -783,7 +783,7 @@ The radius of the circle
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -812,7 +812,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -848,7 +848,7 @@ class="function">ps\_open\_image\_file</span>.
 
 ### Return Values
 
-Returns **`NULL`** on success or **`FALSE`** on failure.
+Returns **`null`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -884,7 +884,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -913,7 +913,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -941,7 +941,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -978,7 +978,7 @@ The text to output.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1032,7 +1032,7 @@ y-coordinate of third control point.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1065,7 +1065,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1096,7 +1096,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1125,7 +1125,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1154,7 +1154,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1182,7 +1182,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1211,7 +1211,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1232,7 +1232,7 @@ class="methodparam"><span class="type">string</span> `$fontname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$encoding`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$embed`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Loads a font for later use. Before text is output with a loaded font it
 must be set with <span class="function">ps\_setfont</span>. This
@@ -1276,7 +1276,7 @@ vector (which is currently not used but must be present) and a list of
 extra ligatures to extend the list of ligatures derived from the afm
 file.
 
-`encoding` can be **`NULL`** or the empty string if the default encoding
+`encoding` can be **`null`** or the empty string if the default encoding
 (TeXBase1) shall be used.
 
 If the encoding is set to *builtin* then there will be no reencoding and
@@ -1385,17 +1385,17 @@ they are numbered within the surrounding box.
 
 *linebreak*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** a carriage
+class="function">ps\_show\_boxed</span>. If set to **`true`** a carriage
 return will add a line break.
 
 *parbreak*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** a carriage
+class="function">ps\_show\_boxed</span>. If set to **`true`** a carriage
 return will start a new paragraph.
 
 *hyphenation*  
 Only used if text is output with <span
-class="function">ps\_show\_boxed</span>. If set to **`TRUE`** the
+class="function">ps\_show\_boxed</span>. If set to **`true`** the
 paragraph will be hyphenated if a hypen dictionary is set and exists.
 
 *hyphendict*  
@@ -1416,7 +1416,7 @@ size of an image. In such a case the resource id is passed.
 
 ### Return Values
 
-Returns the value of the parameter or **`FALSE`** on failure.
+Returns the value of the parameter or **`false`** on failure.
 
 ### See Also
 
@@ -1543,7 +1543,7 @@ to be retrieved. This can be the id of a font or an image.
 
 ### Return Values
 
-Returns the value of the parameter or **`FALSE`**.
+Returns the value of the parameter or **`false`**.
 
 ### See Also
 
@@ -1589,7 +1589,7 @@ place.
 ### Return Values
 
 An array of integers indicating the position of possible breaks in the
-text or **`FALSE`** on failure.
+text or **`false`** on failure.
 
 ### Examples
 
@@ -1647,7 +1647,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_lineto
 ==========
@@ -1680,7 +1680,7 @@ y-coordinate of the end point of the line.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1821,7 +1821,7 @@ y-coordinate of the point to move to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1846,7 +1846,7 @@ document.
 
 ### Return Values
 
-Resource of PostScript document or **`FALSE`** on failure. The return
+Resource of PostScript document or **`false`** on failure. The return
 value is passed to all other functions as the first argument.
 
 ### See Also
@@ -1883,7 +1883,7 @@ the browser.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2079,7 +2079,7 @@ resolution of 72 dpi, because each pixel is equivalent to 1 point.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2128,7 +2128,7 @@ The height of the image.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2161,7 +2161,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2192,7 +2192,7 @@ Angle of rotation in degree.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2280,7 +2280,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2315,7 +2315,7 @@ Scaling factor in vertical direction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2361,7 +2361,7 @@ The blue component of the border color.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2404,7 +2404,7 @@ The length of the gap between dashes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2447,7 +2447,7 @@ The line width of the border.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2510,7 +2510,7 @@ coordinates of the upper right corner.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2549,7 +2549,7 @@ The value of the parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2592,7 +2592,7 @@ y-coordinate of the new text position.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2675,7 +2675,7 @@ The value of the parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2741,7 +2741,7 @@ passed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_setdash
 ===========
@@ -2772,7 +2772,7 @@ The length of the gap between dashes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2806,7 +2806,7 @@ The `value` must be between 0.2 and 1.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_setfont
 ===========
@@ -2841,7 +2841,7 @@ The size of the font.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2873,7 +2873,7 @@ The value must be between 0 (white) and 1 (black).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2905,7 +2905,7 @@ The type of line ends. Possible values are *PS\_LINECAP\_BUTT*,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2939,7 +2939,7 @@ The way lines are joined. Possible values are *PS\_LINEJOIN\_MITER*,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2973,7 +2973,7 @@ The width of lines in points.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3012,7 +3012,7 @@ small angle. Keep the default unless you know what you are doing.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3047,7 +3047,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_setpolydash
 ===============
@@ -3078,7 +3078,7 @@ portion.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3148,7 +3148,7 @@ This argument is not currently used.
 
 ### Return Values
 
-The identifier of the pattern or **`FALSE`** on failure.
+The identifier of the pattern or **`false`** on failure.
 
 ### See Also
 
@@ -3210,7 +3210,7 @@ parameters *r0* and *r1* with the radius of the start and end circle.
 
 ### Return Values
 
-Returns the identifier of the pattern or **`FALSE`** on failure.
+Returns the identifier of the pattern or **`false`** on failure.
 
 ### See Also
 
@@ -3247,7 +3247,7 @@ class="function">ps\_shading</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3280,7 +3280,7 @@ Outputs a text in a given box. The lower left corner of the box is at
 spaces are treated as one. Tabulators are treated as spaces.
 
 The text will be hyphenated if the parameter `hyphenation` is set to
-**`TRUE`** and the parameter `hyphendict` contains a valid filename for
+**`true`** and the parameter `hyphendict` contains a valid filename for
 a hyphenation file. The line spacing is taken from the value *leading*.
 Paragraphs can be separated by an empty line just like in TeX. If the
 value *parindent* is set to value \> 0.0 then the first n lines will be
@@ -3430,7 +3430,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_show\_xy
 ============
@@ -3465,7 +3465,7 @@ y-coordinate of the lower left corner of the box surrounding the text.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3502,7 +3502,7 @@ The maximum number of characters to print.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ps\_show
 ========
@@ -3563,7 +3563,7 @@ The text to be output.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3689,7 +3689,7 @@ class="function">ps\_new</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3809,7 +3809,7 @@ The position of the glyph in the font encoding vector.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3845,7 +3845,7 @@ y-coordinate of the origin of the translated coordinate system.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

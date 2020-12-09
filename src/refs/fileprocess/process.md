@@ -113,6 +113,7 @@ Process Control Extensions
     -   [Predefined Constants](/shmop/constants.html)
     -   [Examples](/shmop/examples.html)
     -   [Shared Memory Functions](/ref/shmop.html)
+    -   [Shmop](/class/shmop.html) — The Shmop class
 -   [Sync](/book/sync.html) — Sync
     -   [Introduction](/intro/sync.html)
     -   [Installing/Configuring](/sync/setup.html)

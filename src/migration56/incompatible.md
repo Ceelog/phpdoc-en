@@ -77,10 +77,10 @@ context options.
 While not recommended in general, it is possible to disable peer
 certificate verification for a request by setting the
 <a href="/context/ssl.html#context.ssl.verify-peer" class="link"><code class="parameter">verify_peer</code></a>
-context option to **`FALSE`**, and to disable peer name validation by
+context option to **`false`**, and to disable peer name validation by
 setting the
 <a href="/context/ssl.html#context.ssl.verify-peer-name" class="link"><code class="parameter">verify_peer_name</code></a>
-context option to **`FALSE`**.
+context option to **`false`**.
 
 ### <a href="/book/gmp.html" class="link">GMP</a> resources are now objects
 
@@ -104,5 +104,5 @@ fail if an IV isn't provided.
 ### <a href="/book/curl.html" class="link">cURL</a> file uploads
 
 Uploads using the @file syntax now require CURLOPT\_SAFE\_UPLOAD to be
-set to **`FALSE`**. <span class="classname">CURLFile</span> should be
+set to **`false`**. <span class="classname">CURLFile</span> should be
 used instead.

@@ -78,14 +78,14 @@ types of dBase fields available are:
 | *N*   | Number     | A number                                                                      | You must declare a length and a precision (the number of digits after the decimal point).                                                                                                                 |
 | *F*   | Float      | A float number                                                                | Same as *N*. Available as of PHP 5.2.0                                                                                                                                                                    |
 | *C*   | String     | A string                                                                      | You must declare a length. When retrieving data, the string will be right-padded with spaces to fit the declared length. Overlong strings will be silently truncated when storing data.                   |
-| *L*   | Boolean    | *T* or *Y* for **`TRUE`**, *F* or *N* for **`FALSE`**, *?* for uninitialized. | As of dbase 7.0.0, returned as a <span class="type">bool</span> (**`TRUE`** or **`FALSE`**), or **`NULL`** for uninitialized fields. Formerly, returned as an <span class="type">int</span> (*1* or *0*). |
+| *L*   | Boolean    | *T* or *Y* for **`true`**, *F* or *N* for **`false`**, *?* for uninitialized. | As of dbase 7.0.0, returned as a <span class="type">bool</span> (**`true`** or **`false`**), or **`null`** for uninitialized fields. Formerly, returned as an <span class="type">int</span> (*1* or *0*). |
 
 > **Note**:
 >
 > As of dbase 7.0.0 nullable fields are supported for
 > **`DBASE_TYPE_FOXPRO`** databases. If a field is nullable, passing
-> **`NULL`** will set the respective flag, and on later retrieval the
-> field value will be **`NULL`**.
+> **`null`** will set the respective flag, and on later retrieval the
+> field value will be **`null`**.
 
 > **Note**:
 >
@@ -201,7 +201,7 @@ class="function">dbase\_add\_record</span> will fail.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -259,7 +259,7 @@ class="function">dbase\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -340,7 +340,7 @@ The type of database to be created. Either **`DBASE_TYPE_DBASE`** or
 ### Return Values
 
 Returns a database resource if the database is successfully created, or
-**`FALSE`** if an error occurred.
+**`false`** if an error occurred.
 
 ### Changelog
 
@@ -411,7 +411,7 @@ An integer which spans from 1 to the number of records in the database
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -479,7 +479,7 @@ offset
 <span class="simpara"> The byte offset of the column from the start of
 the row </span>
 
-If the database header information cannot be read, **`FALSE`** is
+If the database header information cannot be read, **`false`** is
 returned.
 
 ### Changelog
@@ -555,7 +555,7 @@ Each field is converted to the appropriate PHP type, except:
     converted to *1* or *0*. </span>
 
 On error, <span class="function">dbase\_get\_record\_with\_names</span>
-will return **`FALSE`**.
+will return **`false`**.
 
 ### Changelog
 
@@ -633,7 +633,7 @@ Each field is converted to the appropriate PHP type, except:
     converted to *1* or *0*. </span>
 
 On error, <span class="function">dbase\_get\_record</span> will return
-**`FALSE`**.
+**`false`**.
 
 ### Changelog
 
@@ -673,7 +673,7 @@ class="function">dbase\_create</span>.
 
 ### Return Values
 
-The number of fields in the database, or **`FALSE`** if an error occurs.
+The number of fields in the database, or **`false`** if an error occurs.
 
 ### Changelog
 
@@ -733,7 +733,7 @@ class="function">dbase\_create</span>.
 
 ### Return Values
 
-The number of records in the database, or **`FALSE`** if an error
+The number of records in the database, or **`false`** if an error
 occurs.
 
 ### Changelog
@@ -814,7 +814,7 @@ respectively, to specify the `mode`.
 
 ### Return Values
 
-Returns a database resource on success, or **`FALSE`** on failure.
+Returns a database resource on success, or **`false`** on failure.
 
 ### Changelog
 
@@ -871,7 +871,7 @@ class="function">dbase\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -945,7 +945,7 @@ An integer which spans from 1 to the number of records in the database
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

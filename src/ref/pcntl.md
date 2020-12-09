@@ -40,7 +40,7 @@ Enable/disable asynchronous signal handling or return the old setting
 <span class="type">bool</span> <span
 class="methodname">pcntl\_async\_signals</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$on`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 If the `on` parameter is omitted, <span
 class="function">pcntl\_async\_signals</span> returns whether
@@ -108,7 +108,7 @@ variable.
 
 ### Return Values
 
-Returns **`NULL`** on success or **`FALSE`** on failure.
+Returns **`null`** on success or **`false`** on failure.
 
 pcntl\_fork
 ===========
@@ -218,13 +218,13 @@ One of **`PRIO_PGRP`**, **`PRIO_USER`** or **`PRIO_PROCESS`**.
 ### Return Values
 
 <span class="function">pcntl\_getpriority</span> returns the priority of
-the process or **`FALSE`** on error. A lower numerical value causes more
+the process or **`false`** on error. A lower numerical value causes more
 favorable scheduling.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -271,7 +271,7 @@ One of **`PRIO_PGRP`**, **`PRIO_USER`** or **`PRIO_PROCESS`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -294,7 +294,7 @@ class="function">pcntl\_signal</span> for each pending signal.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -404,7 +404,7 @@ class="methodparam"><span class="type">int</span> `$signo`</span> ,
 class="type">callable</span><span class="type">int</span></span>
 `$handler`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$restart_syscalls`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 The <span class="function">pcntl\_signal</span> function installs a new
 signal handler or replaces the current signal handler for the signal
@@ -429,7 +429,7 @@ following signature:
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">int</span> `$signo`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$signinfo`</span> )
+`$siginfo`</span> )
 
 `signo`  
 <span class="simpara"> The signal being handled. </span>
@@ -451,13 +451,13 @@ arrives.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                                                                                                 |
-|---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | As of PHP 7.1.0 the handler callback is given a second argument containing the signinfo of the specific signal. This data is only supplied if the operating system has the signinfo\_t structure. If the OS does not implement siginfo\_t NULL is supplied. |
+| Version | Description                                                                                                                                                                                                                                               |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 7.1.0   | As of PHP 7.1.0 the handler callback is given a second argument containing the siginfo of the specific signal. This data is only supplied if the operating system has the siginfo\_t structure. If the OS does not implement siginfo\_t NULL is supplied. |
 
 ### Examples
 
@@ -558,7 +558,7 @@ previously blocked signals.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -728,7 +728,7 @@ available.
 
 ### Return Values
 
-Returns error description on success or **`FALSE`** on failure.
+Returns error description on success or **`false`** on failure.
 
 ### See Also
 
@@ -899,7 +899,7 @@ class="methodparam"><span class="type">int</span> `$status`</span> )
 
 Returns the return code of a terminated child. This function is only
 useful if <span class="function">pcntl\_wifexited</span> returned
-**`TRUE`**.
+**`true`**.
 
 ### Parameters
 
@@ -937,8 +937,8 @@ call to <span class="function">pcntl\_waitpid</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the child status code represents a normal exit,
-**`FALSE`** otherwise.
+Returns **`true`** if the child status code represents a normal exit,
+**`false`** otherwise.
 
 ### See Also
 
@@ -967,8 +967,8 @@ call to <span class="function">pcntl\_waitpid</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the child process exited because of a signal which
-was not caught, **`FALSE`** otherwise.
+Returns **`true`** if the child process exited because of a signal which
+was not caught, **`false`** otherwise.
 
 ### See Also
 
@@ -999,8 +999,8 @@ call to <span class="function">pcntl\_waitpid</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the child process which caused the return is
-currently stopped, **`FALSE`** otherwise.
+Returns **`true`** if the child process which caused the return is
+currently stopped, **`false`** otherwise.
 
 ### See Also
 
@@ -1019,7 +1019,7 @@ class="methodparam"><span class="type">int</span> `$status`</span> )
 
 Returns the number of the signal which caused the child to stop. This
 function is only useful if <span
-class="function">pcntl\_wifstopped</span> returned **`TRUE`**.
+class="function">pcntl\_wifstopped</span> returned **`true`**.
 
 ### Parameters
 
@@ -1049,7 +1049,7 @@ class="methodparam"><span class="type">int</span> `$status`</span> )
 
 Returns the number of the signal that caused the child process to
 terminate. This function is only useful if <span
-class="function">pcntl\_wifsignaled</span> returned **`TRUE`**.
+class="function">pcntl\_wifsignaled</span> returned **`true`**.
 
 ### Parameters
 

@@ -18,15 +18,15 @@ Returns an associative array.
 | Attribute          | Meaning                                                                                                                                                                                                                                                        |
 |--------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | GD Version         | <span class="type">string</span> value describing the installed *libgd* version.                                                                                                                                                                               |
-| FreeType Support   | <span class="type">bool</span> value. **`TRUE`** if FreeType Support is installed.                                                                                                                                                                             |
-| FreeType Linkage   | <span class="type">string</span> value describing the way in which FreeType was linked. Expected values are: 'with freetype', 'with TTF library', and 'with unknown library'. This element will only be defined if *FreeType Support* evaluated to **`TRUE`**. |
-| GIF Read Support   | <span class="type">bool</span> value. **`TRUE`** if support for *reading* *GIF* images is included.                                                                                                                                                            |
-| GIF Create Support | <span class="type">bool</span> value. **`TRUE`** if support for *creating* *GIF* images is included.                                                                                                                                                           |
-| JPEG Support       | <span class="type">bool</span> value. **`TRUE`** if *JPEG* support is included.                                                                                                                                                                                |
-| PNG Support        | <span class="type">bool</span> value. **`TRUE`** if *PNG* support is included.                                                                                                                                                                                 |
-| WBMP Support       | <span class="type">bool</span> value. **`TRUE`** if *WBMP* support is included.                                                                                                                                                                                |
-| XBM Support        | <span class="type">bool</span> value. **`TRUE`** if *XBM* support is included.                                                                                                                                                                                 |
-| WebP Support       | <span class="type">bool</span> value. **`TRUE`** if *WebP* support is included.                                                                                                                                                                                |
+| FreeType Support   | <span class="type">bool</span> value. **`true`** if FreeType Support is installed.                                                                                                                                                                             |
+| FreeType Linkage   | <span class="type">string</span> value describing the way in which FreeType was linked. Expected values are: 'with freetype', 'with TTF library', and 'with unknown library'. This element will only be defined if *FreeType Support* evaluated to **`true`**. |
+| GIF Read Support   | <span class="type">bool</span> value. **`true`** if support for *reading* *GIF* images is included.                                                                                                                                                            |
+| GIF Create Support | <span class="type">bool</span> value. **`true`** if support for *creating* *GIF* images is included.                                                                                                                                                           |
+| JPEG Support       | <span class="type">bool</span> value. **`true`** if *JPEG* support is included.                                                                                                                                                                                |
+| PNG Support        | <span class="type">bool</span> value. **`true`** if *PNG* support is included.                                                                                                                                                                                 |
+| WBMP Support       | <span class="type">bool</span> value. **`true`** if *WBMP* support is included.                                                                                                                                                                                |
+| XBM Support        | <span class="type">bool</span> value. **`true`** if *XBM* support is included.                                                                                                                                                                                 |
+| WebP Support       | <span class="type">bool</span> value. **`true`** if *WebP* support is included.                                                                                                                                                                                |
 
 ### Examples
 
@@ -193,7 +193,7 @@ be a bit confusing. As an example, GIF always uses 3 channels per pixel,
 but the number of bits per pixel cannot be calculated for an animated
 GIF with a global color table.
 
-On failure, **`FALSE`** is returned.
+On failure, **`false`** is returned.
 
 ### Errors/Exceptions
 
@@ -324,7 +324,7 @@ Get file extension for image type
 class="methodname">image\_type\_to\_extension</span> ( <span
 class="methodparam"><span class="type">int</span> `$imagetype`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$include_dot`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$include_dot`<span class="initializer"> = **`true`**</span></span> \] )
 
 Returns the extension for the given *IMAGETYPE\_XXX* constant.
 
@@ -334,7 +334,7 @@ Returns the extension for the given *IMAGETYPE\_XXX* constant.
 One of the *IMAGETYPE\_XXX* constant.
 
 `include_dot`  
-Whether to prepend a dot to the extension or not. Default to **`TRUE`**.
+Whether to prepend a dot to the extension or not. Default to **`true`**.
 
 ### Return Values
 
@@ -472,12 +472,12 @@ is black.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -533,7 +533,7 @@ Array with keys "x", "y", "width" and "height".
 
 ### Return Values
 
-Return affined image resource on success or **`FALSE`** on failure.
+Return affined image resource on success or **`false`** on failure.
 
 imageaffinematrixconcat
 =======================
@@ -565,7 +565,7 @@ values).
 ### Return Values
 
 An affine transformation matrix (an array with keys *0* to *5* and float
-values) or **`FALSE`** on failure.
+values) or **`false`** on failure.
 
 ### Examples
 
@@ -631,7 +631,7 @@ class="type">float</span> specifying the angle.
 ### Return Values
 
 An affine transformation matrix (an array with keys *0* to *5* and float
-values) or **`FALSE`** on failure.
+values) or **`false`** on failure.
 
 ### Examples
 
@@ -694,11 +694,11 @@ as <span class="function">imagecreatetruecolor</span>.
 
 `blendmode`  
 Whether to enable the blending mode or not. On true color images the
-default value is **`TRUE`** otherwise the default value is **`FALSE`**
+default value is **`true`** otherwise the default value is **`false`**
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -759,7 +759,7 @@ Whether to enable antialiasing or not.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -862,7 +862,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -920,9 +920,9 @@ Output a BMP image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$compressed`<span class="initializer"> =
-**`TRUE`**</span></span> \]\] )
+**`true`**</span></span> \]\] )
 
 Outputs or saves a BMP version of the given `image`.
 
@@ -935,11 +935,11 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 > **Note**:
 >
-> **`NULL`** is invalid if the `compressed` arguments is not used.
+> **`null`** is invalid if the `compressed` arguments is not used.
 
 `compressed`  
 Whether the BMP should be compressed with run-length encoding (RLE), or
@@ -947,12 +947,12 @@ not.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -1020,7 +1020,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1099,7 +1099,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1181,12 +1181,12 @@ These parameters are integers between 0 and 255 or hexadecimals between
 
 ### Return Values
 
-A color identifier or **`FALSE`** if the allocation failed.
+A color identifier or **`false`** if the allocation failed.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1265,12 +1265,12 @@ or hexadecimals between 0x00 and 0xFF.
 
 ### Return Values
 
-A color identifier or **`FALSE`** if the allocation failed.
+A color identifier or **`false`** if the allocation failed.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1386,12 +1386,12 @@ y-coordinate of the point.
 
 ### Return Values
 
-Returns the index of the color or **`FALSE`** on failure.
+Returns the index of the color or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1727,7 +1727,7 @@ The color identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1932,7 +1932,7 @@ A palette image resource pointing to an image that has the same size as
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2428,7 +2428,7 @@ Color offset.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2534,7 +2534,7 @@ Source height.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2627,7 +2627,7 @@ implements alpha transparency for true colour images.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2718,7 +2718,7 @@ implements alpha transparency for true colour images.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2817,7 +2817,7 @@ Source height.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2989,7 +2989,7 @@ Source height.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3084,7 +3084,7 @@ The image height.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3145,7 +3145,7 @@ Path to the BMP image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3195,7 +3195,7 @@ Path to the GD2 image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3275,7 +3275,7 @@ Source height.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3343,7 +3343,7 @@ Path to the GD file.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3415,7 +3415,7 @@ Path to the GIF image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3499,7 +3499,7 @@ Path to the JPEG image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3575,7 +3575,7 @@ Path to the PNG image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3641,7 +3641,7 @@ A string containing the image data.
 
 ### Return Values
 
-An image resource will be returned on success. **`FALSE`** is returned
+An image resource will be returned on success. **`false`** is returned
 if the image type is unsupported, the data is not in a recognised
 format, or the image is corrupt and cannot be loaded.
 
@@ -3729,7 +3729,7 @@ Path to the WBMP image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3801,7 +3801,7 @@ Path to the WebP image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3852,7 +3852,7 @@ Path to the XBM image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3903,7 +3903,7 @@ Path to the XPM image.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -3957,7 +3957,7 @@ Image height.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on errors.
+Returns an image resource identifier on success, **`false`** on errors.
 
 ### Examples
 
@@ -4012,7 +4012,7 @@ The cropping rectangle as <span class="type">array</span> with keys *x*,
 
 ### Return Values
 
-Return cropped image resource on success or **`FALSE`** on failure.
+Return cropped image resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -4106,9 +4106,9 @@ Used only in **`IMG_CROP_THRESHOLD`** mode.
 
 ### Return Values
 
-Returns a cropped image resource on success or **`FALSE`** on failure.
+Returns a cropped image resource on success or **`false`** on failure.
 If the complete image was cropped, <span
-class="function">imagecrop</span> returns **`FALSE`**.
+class="function">imagecrop</span> returns **`false`**.
 
 ### Changelog
 
@@ -4122,7 +4122,7 @@ class="function">imagecrop</span> returns **`FALSE`**.
 **Example \#1 Proper handling of auto-cropping**
 
 As noted in the return value section, <span
-class="function">imagecropauto</span> returns **`FALSE`** if the whole
+class="function">imagecropauto</span> returns **`false`** if the whole
 image was cropped. In this example we have an image resource *$im* which
 should be automatically cropped only if there is something to crop;
 otherwise we want to proceed with the original image.
@@ -4186,7 +4186,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4271,7 +4271,7 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4332,7 +4332,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4414,7 +4414,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4515,7 +4515,7 @@ should be connected to the center - this is a good way to outline
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4603,7 +4603,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4684,7 +4684,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4774,7 +4774,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4842,7 +4842,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4963,7 +4963,7 @@ as <span class="function">imagecreatetruecolor</span>.
 -   <span class="simpara"> **`IMG_FILTER_COLORIZE`**: Value of green
     component. </span>
 -   <span class="simpara"> **`IMG_FILTER_PIXELATE`**: Whether to use
-    advanced pixelation effect or not (defaults to **`FALSE`**). </span>
+    advanced pixelation effect or not (defaults to **`false`**). </span>
 -   <span class="simpara"> **`IMG_FILTER_SCATTER`**: Effect addition
     level. </span>
 
@@ -4980,7 +4980,7 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -5197,7 +5197,7 @@ Flip mode, this can be one of the **`IMG_FLIP_*`** constants:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5668,7 +5668,7 @@ The output gamma.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5716,7 +5716,7 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 `chunk_size`  
 Chunk size.
@@ -5727,12 +5727,12 @@ Either **`IMG_GD2_RAW`** or **`IMG_GD2_COMPRESSED`**. Default is
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -5813,16 +5813,16 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Changelog
 
@@ -5980,7 +5980,7 @@ Output image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="function">imagegif</span> creates the GIF file in `to` from
 the image `image`. The `image` argument is the return from the <span
@@ -5999,16 +5999,16 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -6166,7 +6166,7 @@ Grabs a screenshot of the whole screen.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on failure.
+Returns an image resource identifier on success, **`false`** on failure.
 
 ### Examples
 
@@ -6218,7 +6218,7 @@ Include the client area of the application window.
 
 ### Return Values
 
-Returns an image resource identifier on success, **`FALSE`** on failure.
+Returns an image resource identifier on success, **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -6341,7 +6341,7 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the `image` is truecolor, **`FALSE`** otherwise.
+Returns **`true`** if the `image` is truecolor, **`false`** otherwise.
 
 ### Examples
 
@@ -6388,7 +6388,7 @@ Output image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$quality`<span class="initializer"> =
 -1</span></span> \]\] )
 
@@ -6404,7 +6404,7 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 `quality`  
 `quality` is optional, and ranges from 0 (worst quality, smaller file)
@@ -6413,12 +6413,12 @@ IJG quality value (about 75).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -6524,11 +6524,11 @@ One of the following constants:
 
 **`IMG_EFFECT_REPLACE`**  
 <span class="simpara"> Use pixel replacement (equivalent of passing
-**`TRUE`** to <span class="function">imagealphablending</span>) </span>
+**`true`** to <span class="function">imagealphablending</span>) </span>
 
 **`IMG_EFFECT_ALPHABLEND`**  
 <span class="simpara"> Use normal pixel blending (equivalent of passing
-**`FALSE`** to <span class="function">imagealphablending</span>) </span>
+**`false`** to <span class="function">imagealphablending</span>) </span>
 
 **`IMG_EFFECT_NORMAL`**  
 <span class="simpara"> Same as **`IMG_EFFECT_ALPHABLEND`**. </span>
@@ -6544,7 +6544,7 @@ grey background pixels will take the colour of the foreground pixel.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -6626,7 +6626,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6700,7 +6700,7 @@ the machine you are running PHP on.
 ### Return Values
 
 The font identifier which is always bigger than 5 to avoid conflicts
-with built-in fonts or **`FALSE`** on errors.
+with built-in fonts or **`false`** on errors.
 
 ### Examples
 
@@ -6779,7 +6779,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6900,8 +6900,8 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the convertion was complete, or if the source
-image already is a true color image, otherwise **`FALSE`** is returned.
+Returns **`true`** if the convertion was complete, or if the source
+image already is a true color image, otherwise **`false`** is returned.
 
 ### Examples
 
@@ -6970,7 +6970,7 @@ Output a PNG image to either the browser or a file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$quality`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$filters`<span class="initializer"> =
@@ -6987,11 +6987,11 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 > **Note**:
 >
-> **`NULL`** is invalid if the `quality` and `filters` arguments are not
+> **`null`** is invalid if the `quality` and `filters` arguments are not
 > used.
 
 `quality`  
@@ -7011,12 +7011,12 @@ The `filters` parameter is ignored by system libgd.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -7082,7 +7082,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7168,7 +7168,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7248,9 +7248,9 @@ The vertical resolution in DPI.
 ### Return Values
 
 When used as getter (first signature), it returns an indexed array of
-the horizontal and vertical resolution on success, or **`FALSE`** on
-failure. When used as setter (second signature), it returns **`TRUE`**
-on success, or **`FALSE`** on failure.
+the horizontal and vertical resolution on success, or **`false`** on
+failure. When used as setter (second signature), it returns **`true`**
+on success, or **`false`** on failure.
 
 ### Examples
 
@@ -7319,7 +7319,7 @@ This parameter is unused.
 
 ### Return Values
 
-Returns an image resource for the rotated image, or **`FALSE`** on
+Returns an image resource for the rotated image, or **`false`** on
 failure.
 
 ### Examples
@@ -7394,11 +7394,11 @@ An image resource, returned by one of the image creation functions, such
 as <span class="function">imagecreatetruecolor</span>.
 
 `saveflag`  
-Whether to save the alpha channel or not. Defaults to **`FALSE`**.
+Whether to save the alpha channel or not. Defaults to **`false`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7478,7 +7478,7 @@ two pass).
 
 ### Return Values
 
-Return the scaled image resource on success or **`FALSE`** on failure.
+Return the scaled image resource on success or **`false`** on failure.
 
 ### See Also
 
@@ -7522,7 +7522,7 @@ An image resource.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7597,7 +7597,7 @@ The y-coordinate of the lower right corner.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7668,7 +7668,7 @@ The interpolation method, which can be one of the following:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7738,7 +7738,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7816,7 +7816,7 @@ empty <span class="type">array</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7889,7 +7889,7 @@ Thickness, in pixels.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7964,7 +7964,7 @@ The image resource to be used as a tile.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8042,7 +8042,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8123,7 +8123,7 @@ class="function">imagecolorallocate</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8174,7 +8174,7 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Return the width of the `image` or **`FALSE`** on errors.
+Return the width of the `image` or **`false`** on errors.
 
 ### Examples
 
@@ -8218,7 +8218,7 @@ as <span class="function">imagecreatetruecolor</span>.
 
 ### Return Values
 
-Return the height of the `image` or **`FALSE`** on errors.
+Return the height of the `image` or **`false`** on errors.
 
 ### Examples
 
@@ -8271,7 +8271,7 @@ An image resource, returned by one of the image creation functions, such
 as <span class="function">imagecreatetruecolor</span>.
 
 `dither`  
-Indicates if the image should be dithered - if it is **`TRUE`** then
+Indicates if the image should be dithered - if it is **`true`** then
 dithering will be used which will result in a more speckled image but
 with better color approximation.
 
@@ -8281,7 +8281,7 @@ palette.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8374,7 +8374,7 @@ The string to be measured.
 
 <span class="function">imagettfbbox</span> returns an array with 8
 elements representing four points making the bounding box of the text on
-success and **`FALSE`** on error.
+success and **`false`** on error.
 
 | key | contents                       |
 |-----|--------------------------------|
@@ -8560,7 +8560,7 @@ Returns an array with 8 elements representing four points making the
 bounding box of the text. The order of the points is lower left, lower
 right, upper right, upper left. The points are relative to the text
 regardless of the angle, so "upper left" means in the top left-hand
-corner when you see the text horizontally. Returns **`FALSE`** on error.
+corner when you see the text horizontally. Returns **`false`** on error.
 
 ### Examples
 
@@ -8668,7 +8668,7 @@ Output image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$foreground`</span> \]\] )
 
 <span class="function">imagewbmp</span> outputs or save a WBMP version
@@ -8683,7 +8683,7 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 `foreground`  
 You can set the foreground color with this parameter by setting an
@@ -8693,12 +8693,12 @@ is black.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -8782,7 +8782,7 @@ Output a WebP image to browser or file
 ( <span class="methodparam"><span class="type">resource</span>
 `$image`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$to`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$quality`<span class="initializer"> =
 80</span></span> \]\] )
 
@@ -8797,7 +8797,7 @@ as <span class="function">imagecreatetruecolor</span>.
 `to`  
 The path or an open stream resource (which is automatically being closed
 after this function returns) to save the file to. If not set or
-**`NULL`**, the raw image stream will be outputted directly.
+**`null`**, the raw image stream will be outputted directly.
 
 `quality`  
 `quality` ranges from 0 (worst quality, smaller file) to 100 (best
@@ -8805,12 +8805,12 @@ quality, biggest file).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -8861,12 +8861,12 @@ as <span class="function">imagecreatetruecolor</span>.
 
 `filename`  
 The path to save the file to, given as <span class="type">string</span>.
-If **`NULL`**, the raw image stream will be output directly.
+If **`null`**, the raw image stream will be output directly.
 
 The `filename` (without the .xbm extension) is also used for the C
 identifiers of the XBM, whereby non alphanumeric characters of the
 current locale are substituted by underscores. If `filename` is set to
-**`NULL`**, *image* is used to build the C identifiers.
+**`null`**, *image* is used to build the C identifiers.
 
 `foreground`  
 You can set the foreground color with this parameter by setting an
@@ -8876,12 +8876,12 @@ is black. All other colors are treated as background.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Changelog
 
@@ -8961,8 +8961,8 @@ returned as a string. Otherwise the JPEG will be printed to STDOUT.
 
 ### Return Values
 
-If `spool` is less than 2, the JPEG will be returned, or **`FALSE`** on
-failure. Otherwise returns **`TRUE`** on success or **`FALSE`** on
+If `spool` is less than 2, the JPEG will be returned, or **`false`** on
+failure. Otherwise returns **`true`** on success or **`false`** on
 failure.
 
 ### Examples
@@ -9052,7 +9052,7 @@ A binary IPTC block.
 ### Return Values
 
 Returns an array using the tagmarker as an index and the value as the
-value. It returns **`FALSE`** on error or if no IPTC data was found.
+value. It returns **`false`** on error or if no IPTC data was found.
 
 ### Examples
 
@@ -9120,12 +9120,12 @@ Threshold value, between 0 and 8 (inclusive).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 
@@ -9192,12 +9192,12 @@ Threshold value, between 0 and 8 (inclusive).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Caution**
 
 However, if libgd fails to output the image, this function returns
-**`TRUE`**.
+**`true`**.
 
 ### Examples
 

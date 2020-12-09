@@ -787,7 +787,7 @@ The above example will output:
 
 When using <span class="function">iterator\_to\_array</span> to copy the
 values of the AppendIterator into an array, you have to set the optional
-`use_key` argument to **`FALSE`**. When `use_key` is not **`FALSE`** any
+`use_key` argument to **`false`**. When `use_key` is not **`false`** any
 keys reoccuring in inner iterators will get overwritten in the returned
 array. There is no way to preserve the original keys.
 
@@ -814,7 +814,7 @@ This function has no parameters.
 
 ### Return Values
 
-The current value if it is valid or **`NULL`** otherwise.
+The current value if it is valid or **`null`** otherwise.
 
 ### See Also
 
@@ -872,7 +872,7 @@ This function has no parameters.
 
 ### Return Values
 
-The current inner iterator, or **`NULL`** if there is not one.
+The current inner iterator, or **`null`** if there is not one.
 
 ### Examples
 
@@ -988,7 +988,7 @@ This function has no parameters.
 
 ### Return Values
 
-The current key if it is valid or **`NULL`** otherwise.
+The current key if it is valid or **`null`** otherwise.
 
 ### Examples
 
@@ -1122,7 +1122,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current iteration is valid, **`FALSE`**
+Returns **`true`** if the current iteration is valid, **`false`**
 otherwise.
 
 ### See Also
@@ -1754,7 +1754,7 @@ The offset being checked.
 
 ### Return Values
 
-**`TRUE`** if the offset exists, otherwise **`FALSE`**
+**`true`** if the offset exists, otherwise **`false`**
 
 ### See Also
 
@@ -2140,7 +2140,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the iterator is valid, otherwise **`FALSE`**
+Returns **`true`** if the iterator is valid, otherwise **`false`**
 
 ### Examples
 
@@ -2532,7 +2532,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 CachingIterator::key
 ====================
@@ -2605,8 +2605,8 @@ The index being checked.
 
 ### Return Values
 
-Returns **`TRUE`** if an entry referenced by the offset exists,
-**`FALSE`** otherwise.
+Returns **`true`** if an entry referenced by the offset exists,
+**`false`** otherwise.
 
 CachingIterator::offsetGet
 ==========================
@@ -2792,7 +2792,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Introduction
 ------------
@@ -2923,8 +2923,8 @@ class="methodparam">void</span> )
 This method calls the callback with the current value, current key and
 the inner iterator.
 
-The callback is expected to return **`TRUE`** if the current item is to
-be accepted, or **`FALSE`** otherwise.
+The callback is expected to return **`true`** if the current item is to
+be accepted, or **`false`** otherwise.
 
 ### Parameters
 
@@ -2932,7 +2932,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** to accept the current item, or **`FALSE`** otherwise.
+Returns **`true`** to accept the current item, or **`false`** otherwise.
 
 ### See Also
 
@@ -2962,8 +2962,8 @@ items are accepted or rejected.
 The iterator to be filtered.
 
 `callback`  
-The callback, which should return **`TRUE`** to accept the current item
-or **`FALSE`** otherwise. See
+The callback, which should return **`true`** to accept the current item
+or **`false`** otherwise. See
 <a href="/spl/iterators.html#Examples" class="link">Examples</a>.
 
 May be any valid <span class="type">callable</span> value.
@@ -4014,7 +4014,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if it is a directory, otherwise **`FALSE`**
+Returns **`true`** if it is a directory, otherwise **`false`**
 
 ### Examples
 
@@ -4071,7 +4071,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the entry is *.* or *..*, otherwise **`FALSE`**
+**`true`** if the entry is *.* or *..*, otherwise **`false`**
 
 ### Examples
 
@@ -4125,7 +4125,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the entry is executable, otherwise **`FALSE`**
+Returns **`true`** if the entry is executable, otherwise **`false`**
 
 ### Examples
 
@@ -4177,8 +4177,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the file exists and is a regular file (not a
-*link* or *dir*), otherwise **`FALSE`**
+Returns **`true`** if the file exists and is a regular file (not a
+*link* or *dir*), otherwise **`false`**
 
 ### Examples
 
@@ -4233,7 +4233,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the item is a symbolic link, otherwise **`FALSE`**
+Returns **`true`** if the item is a symbolic link, otherwise **`false`**
 
 ### Examples
 
@@ -4294,7 +4294,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the file is readable, otherwise **`FALSE`**
+Returns **`true`** if the file is readable, otherwise **`false`**
 
 ### Examples
 
@@ -4345,8 +4345,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the file/directory is writable, otherwise
-**`FALSE`**
+Returns **`true`** if the file/directory is writable, otherwise
+**`false`**
 
 ### Examples
 
@@ -4661,7 +4661,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the position is valid, otherwise **`FALSE`**
+Returns **`true`** if the position is valid, otherwise **`false`**
 
 ### Examples
 
@@ -4866,7 +4866,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`FALSE`**
+**`false`**
 
 Introduction
 ------------
@@ -5574,7 +5574,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current element is acceptable, otherwise **`FALSE`**.
+**`true`** if the current element is acceptable, otherwise **`false`**.
 
 ### Examples
 
@@ -5814,7 +5814,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current element is valid, otherwise **`FALSE`**
+**`true`** if the current element is valid, otherwise **`false`**
 
 Introduction
 ------------
@@ -6426,7 +6426,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the iterator is valid, otherwise **`FALSE`**
+Returns **`true`** if the iterator is valid, otherwise **`false`**
 
 ### See Also
 
@@ -6623,7 +6623,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the current element or **`NULL`** if there is none.
+Returns the current element or **`null`** if there is none.
 
 ### See Also
 
@@ -6859,7 +6859,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7000,7 +7000,7 @@ The new iterator to attach.
 `infos`  
 The associative information for the Iterator, which must be an <span
 class="type">int</span>, a <span class="type">string</span>, or
-**`NULL`**.
+**`null`**.
 
 ### Return Values
 
@@ -7182,7 +7182,7 @@ The iterator to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7244,14 +7244,14 @@ This function has no parameters.
 ### Return Values
 
 An <span class="type">array</span> containing the current values of each
-attached iterator, or **`FALSE`** if no iterators are attached.
+attached iterator, or **`false`** if no iterators are attached.
 
 ### Errors/Exceptions
 
 A <span class="classname">RuntimeException</span> if mode
 **`MIT_NEED_ALL`** is set and at least one attached iterator is not
 valid. Or an <span class="classname">IllegalValueException</span> if a
-key is **`NULL`** and **`MIT_KEYS_ASSOC`** is set.
+key is **`null`** and **`MIT_KEYS_ASSOC`** is set.
 
 ### See Also
 
@@ -7346,7 +7346,7 @@ This function has no parameters.
 ### Return Values
 
 An <span class="type">array</span> of all registered iterator instances,
-or **`FALSE`** if no sub iterator is attached.
+or **`false`** if no sub iterator is attached.
 
 ### Errors/Exceptions
 
@@ -7480,8 +7480,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if one or all sub iterators are valid depending on
-flags, otherwise **`FALSE`**
+Returns **`true`** if one or all sub iterators are valid depending on
+flags, otherwise **`false`**
 
 ### See Also
 
@@ -7824,7 +7824,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7910,7 +7910,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current element is acceptable, otherwise **`FALSE`**.
+**`true`** if the current element is acceptable, otherwise **`false`**.
 
 ### See Also
 
@@ -7997,7 +7997,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ParentIterator::next
 ====================
@@ -8308,9 +8308,9 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current entry is an <span
+Returns **`true`** if the current entry is an <span
 class="type">array</span> or an <span class="type">object</span>,
-otherwise **`FALSE`** is returned.
+otherwise **`false`** is returned.
 
 ### Examples
 
@@ -8579,7 +8579,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the inner iterator has children, otherwise **`FALSE`**
+**`true`** if the inner iterator has children, otherwise **`false`**
 
 Introduction
 ------------
@@ -8649,7 +8649,7 @@ function my_callback($current, $key, $iterator) {
 
 Filtering a recursive iterator generally involves two conditions. The
 first is that, to allow recursion, the callback function should return
-**`TRUE`** if the current iterator item has children. The second is the
+**`true`** if the current iterator item has children. The second is the
 normal filter condition, such as a file size or extension check as in
 the example below.
 
@@ -8703,8 +8703,8 @@ determine which items are accepted or rejected.
 The recursive iterator to be filtered.
 
 `callback`  
-The callback, which should return **`TRUE`** to accept the current item
-or **`FALSE`** otherwise. See
+The callback, which should return **`true`** to accept the current item
+or **`false`** otherwise. See
 <a href="/spl/iterators.html#Examples" class="link">Examples</a>.
 
 May be any valid <span class="type">callable</span> value.
@@ -8769,7 +8769,7 @@ Check whether the inner iterator's current element has children
 class="methodname">RecursiveCallbackFilterIterator::hasChildren</span> (
 <span class="methodparam">void</span> )
 
-Returns **`TRUE`** if the current element has children, **`FALSE`**
+Returns **`true`** if the current element has children, **`false`**
 otherwise.
 
 ### Parameters
@@ -8778,7 +8778,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current element has children, **`FALSE`**
+Returns **`true`** if the current element has children, **`false`**
 otherwise.
 
 ### Examples
@@ -8904,7 +8904,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">hasChildren</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$allow_links`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">key</span> ( <span
@@ -9196,7 +9196,7 @@ Returns whether current entry is a directory and not '.' or '..'
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">RecursiveDirectoryIterator::hasChildren</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$allow_links`<span class="initializer"> = **`FALSE`**</span></span> \]
+`$allow_links`<span class="initializer"> = **`false`**</span></span> \]
 )
 
 **Warning**
@@ -9513,7 +9513,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the inner iterator has children, otherwise **`FALSE`**
+**`true`** if the inner iterator has children, otherwise **`false`**
 
 ### See Also
 
@@ -9762,7 +9762,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the element has children, otherwise **`FALSE`**
+**`true`** if the element has children, otherwise **`false`**
 
 RecursiveIteratorIterator::\_\_construct
 ========================================
@@ -9949,7 +9949,7 @@ End Iteration
 
 Called when the iteration ends (when <span
 class="methodname">RecursiveIteratorIterator::valid</span> first returns
-**`FALSE`**.
+**`false`**.
 
 **Warning**
 
@@ -10039,7 +10039,7 @@ This function has no parameters.
 
 ### Return Values
 
-The maximum accepted depth, or **`FALSE`** if any depth is allowed.
+The maximum accepted depth, or **`false`** if any depth is allowed.
 
 ### See Also
 
@@ -10225,7 +10225,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current position is valid, otherwise **`FALSE`**
+**`true`** if the current position is valid, otherwise **`false`**
 
 Introduction
 ------------
@@ -10513,8 +10513,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if an iterator can be obtained for the current entry,
-otherwise returns **`FALSE`**.
+Returns **`true`** if an iterator can be obtained for the current entry,
+otherwise returns **`false`**.
 
 ### Examples
 
@@ -10910,7 +10910,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if there are children, otherwise **`FALSE`**
+**`true`** if there are children, otherwise **`false`**
 
 RecursiveTreeIterator::\_\_construct
 ====================================
@@ -11029,7 +11029,7 @@ End iteration
 
 Called when the iteration ends (when <span
 class="methodname">RecursiveTreeIterator::valid</span> first returns
-**`FALSE`**)
+**`false`**)
 
 **Warning**
 
@@ -11313,7 +11313,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current position is valid, otherwise **`FALSE`**
+**`true`** if the current position is valid, otherwise **`false`**
 
 Introduction
 ------------
@@ -11489,7 +11489,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a match, **`FALSE`** otherwise.
+**`true`** if a match, **`false`** otherwise.
 
 ### Examples
 

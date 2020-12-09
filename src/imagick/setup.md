@@ -53,9 +53,9 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 | Name                                                                       | Default     | Changeable       | Changelog                     |
 |----------------------------------------------------------------------------|-------------|------------------|-------------------------------|
-| <a href="/imagick/setup.html#" class="link">imagick.locale_fix</a>         | **`FALSE`** | PHP\_INI\_ALL    | Available since Imagick 2.1.0 |
-| <a href="/imagick/setup.html#" class="link">imagick.progress_monitor</a>   | **`FALSE`** | PHP\_INI\_SYSTEM | Available since Imagick 2.2.2 |
-| <a href="/imagick/setup.html#" class="link">imagick.skip_version_check</a> | **`FALSE`** | PHP\_INI\_SYSTEM | Available since Imagick 3.3.0 |
+| <a href="/imagick/setup.html#" class="link">imagick.locale_fix</a>         | **`false`** | PHP\_INI\_ALL    | Available since Imagick 2.1.0 |
+| <a href="/imagick/setup.html#" class="link">imagick.progress_monitor</a>   | **`false`** | PHP\_INI\_SYSTEM | Available since Imagick 2.2.2 |
+| <a href="/imagick/setup.html#" class="link">imagick.skip_version_check</a> | **`false`** | PHP\_INI\_SYSTEM | Available since Imagick 3.3.0 |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.

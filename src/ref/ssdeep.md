@@ -25,7 +25,7 @@ The second fuzzy hash signature string.
 
 ### Return Values
 
-Returns an integer from 0 to 100 on success, **`FALSE`** otherwise.
+Returns an integer from 0 to 100 on success, **`false`** otherwise.
 
 ssdeep\_fuzzy\_hash\_filename
 =============================
@@ -51,7 +51,7 @@ The filename of the file to hash.
 
 ### Return Values
 
-Returns a string on success, **`FALSE`** otherwise.
+Returns a string on success, **`false`** otherwise.
 
 ssdeep\_fuzzy\_hash
 ===================
@@ -76,7 +76,7 @@ The input string.
 
 ### Return Values
 
-Returns a string on success, **`FALSE`** otherwise.
+Returns a string on success, **`false`** otherwise.
 
 **Table of Contents**
 

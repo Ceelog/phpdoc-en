@@ -250,8 +250,8 @@ The behaviour of these functions is affected by settings in `php.ini`.
 | Name                                                                                  | Default    | Changeable    | Changelog |
 |---------------------------------------------------------------------------------------|------------|---------------|-----------|
 | <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.default_timeout</a>      | 2.0        | PHP\_INI\_ALL |           |
-| <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.session_salt</a>         | **`NULL`** | PHP\_INI\_ALL |           |
-| <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.key_prefix</a>           | **`NULL`** | PHP\_INI\_ALL |           |
+| <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.session_salt</a>         | **`null`** | PHP\_INI\_ALL |           |
+| <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.key_prefix</a>           | **`null`** | PHP\_INI\_ALL |           |
 | <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.allow_failover</a>       | 1          | PHP\_INI\_ALL |           |
 | <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.fail_threshold</a>       | 5          | PHP\_INI\_ALL |           |
 | <a href="/book/tokyo-tyrant.html#" class="link">tokyo_tyrant.health_check_divisor</a> | 1000       | PHP\_INI\_ALL |           |
@@ -562,7 +562,7 @@ class="methodparam"><span class="type">string</span> `$log_dir`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">setMaster</span> ( <span
@@ -571,7 +571,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">size</span> ( <span class="methodparam"><span
@@ -847,7 +847,7 @@ The port. Default: 1978
 
 `options`  
 Connection options: timeout (default: 5.0), reconnect (default:
-**`TRUE`**) and persistent (default: **`TRUE`**)
+**`true`**) and persistent (default: **`true`**)
 
 ### Return Values
 
@@ -931,14 +931,14 @@ database
 ### Parameters
 
 `host`  
-The hostname. Default: **`NULL`**
+The hostname. Default: **`null`**
 
 `port`  
 port number. Default: 1978
 
 `options`  
 Connection options: timeout (default: 5.0), reconnect (default:
-**`TRUE`**) and persistent (default: **`TRUE`**)
+**`true`**) and persistent (default: **`true`**)
 
 ### Return Values
 
@@ -1627,7 +1627,7 @@ class="methodparam"><span class="type">string</span> `$log_dir`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 Restore the database from the update log.
 
@@ -1644,7 +1644,7 @@ Directory where the log is
 Beginning timestamp with microseconds
 
 `check_consistency`  
-Whether to check consistency: Default: **`TRUE`**
+Whether to check consistency: Default: **`true`**
 
 ### Return Values
 
@@ -1665,7 +1665,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 Sets the replication master of the database
 
@@ -1676,7 +1676,7 @@ This method is not supported on 32bit platforms.
 ### Parameters
 
 `host`  
-Hostname of the replication master. If **`NULL`** the replication is
+Hostname of the replication master. If **`null`** the replication is
 disabled.
 
 `port`  
@@ -2120,7 +2120,7 @@ class="methodparam"><span class="type">string</span> `$log_dir`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">TokyoTyrant::setMaster</span> ( <span
@@ -2129,7 +2129,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">TokyoTyrant::size</span> ( <span
@@ -2466,7 +2466,7 @@ class="methodparam"><span class="type">string</span> `$key`</span> ,
 `$columns`</span> )
 
 Puts a new row into the database. This method parameters are `key` which
-is the primary key of the row, passing **`NULL`** will generate a new
+is the primary key of the row, passing **`null`** will generate a new
 unique id. `value` is an array containing the row contents which is
 usually key value pairs.
 
@@ -2546,7 +2546,7 @@ row. Passing null as key will generate a new row.
 ### Parameters
 
 `key`  
-The primary key of the row or **`NULL`**
+The primary key of the row or **`null`**
 
 `columns`  
 Array of row contents
@@ -2619,7 +2619,7 @@ method throws an exception indicating that the records exists.
 ### Parameters
 
 `key`  
-The primary key of the row or **`NULL`**
+The primary key of the row or **`null`**
 
 `columns`  
 Array of the row contents
@@ -3452,7 +3452,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`**
+Returns **`true`**
 
 ### Examples
 
@@ -3651,7 +3651,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current item is valid and **`FALSE`** if not.
+Returns **`true`** if the current item is valid and **`false`** if not.
 
 ### Examples
 
@@ -3846,7 +3846,7 @@ class="methodparam"><span class="type">string</span> `$log_dir`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">TokyoTyrant::setMaster</span> ( <span
@@ -3855,7 +3855,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> ,
 <span class="methodparam"><span class="type">int</span>
 `$timestamp`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$check_consistency`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">TokyoTyrant::size</span> ( <span
@@ -4078,7 +4078,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current item is valid and **`FALSE`** if not.
+Returns **`true`** if the current item is valid and **`false`** if not.
 
 ### See Also
 

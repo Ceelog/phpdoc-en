@@ -475,7 +475,7 @@ The options to set for `stream_or_context`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 stream\_context\_set\_params
 ============================
@@ -514,7 +514,7 @@ An array of parameters to set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -559,7 +559,7 @@ The offset where to start to copy data
 
 ### Return Values
 
-Returns the total count of bytes copied, or **`FALSE`** on failure.
+Returns the total count of bytes copied, or **`false`** on failure.
 
 ### Examples
 
@@ -625,11 +625,11 @@ class="function">stream\_filter\_prepend</span>.
 
 ### Return Values
 
-Returns a resource on success or **`FALSE`** on failure. The resource
+Returns a resource on success or **`false`** on failure. The resource
 can be used to refer to this filter instance during a call to <span
 class="function">stream\_filter\_remove</span>.
 
-**`FALSE`** is returned if `stream` is not a resource or if `filtername`
+**`false`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
 
 ### Examples
@@ -742,11 +742,11 @@ class="function">stream\_filter\_append</span>.
 
 ### Return Values
 
-Returns a resource on success or **`FALSE`** on failure. The resource
+Returns a resource on success or **`false`** on failure. The resource
 can be used to refer to this filter instance during a call to <span
 class="function">stream\_filter\_remove</span>.
 
-**`FALSE`** is returned if `stream` is not a resource or if `filtername`
+**`false`** is returned if `stream` is not a resource or if `filtername`
 cannot be located.
 
 ### Notes
@@ -810,10 +810,10 @@ will lead to undefined behaviour.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 <span class="function">stream\_filter\_register</span> will return
-**`FALSE`** if the `filtername` is already defined.
+**`false`** if the `filtername` is already defined.
 
 ### Examples
 
@@ -968,7 +968,7 @@ The stream filter to be removed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1038,7 +1038,7 @@ no seeking will occur and reading will start from the current position.
 
 ### Return Values
 
-Returns a string or **`FALSE`** on failure.
+Returns a string or **`false`** on failure.
 
 ### Examples
 
@@ -1160,7 +1160,7 @@ An optional string delimiter.
 Returns a string of up to `length` bytes read from the file pointed to
 by `handle`.
 
-If an error occurs, returns **`FALSE`**.
+If an error occurs, returns **`false`**.
 
 ### See Also
 
@@ -1193,16 +1193,16 @@ and <span class="function">pfsockopen</span>.
 
 The result array contains the following items:
 
--   *timed\_out* (bool) - **`TRUE`** if the stream timed out while
+-   *timed\_out* (bool) - **`true`** if the stream timed out while
     waiting for data on the last call to <span
     class="function">fread</span> or <span
     class="function">fgets</span>.
 
--   *blocked* (bool) - **`TRUE`** if the stream is in blocking IO mode.
+-   *blocked* (bool) - **`true`** if the stream is in blocking IO mode.
     See <span class="function">stream\_set\_blocking</span>.
 
--   *eof* (bool) - **`TRUE`** if the stream has reached end-of-file.
-    Note that for socket streams this member can be **`TRUE`** even when
+-   *eof* (bool) - **`true`** if the stream has reached end-of-file.
+    Note that for socket streams this member can be **`true`** even when
     *unread\_bytes* is non-zero. To determine if there is more data to
     be read, use <span class="function">feof</span> instead of reading
     this item.
@@ -1421,7 +1421,7 @@ The stream <span class="type">resource</span> or URL to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1464,7 +1464,7 @@ too.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1735,7 +1735,7 @@ The filename to resolve.
 ### Return Values
 
 Returns a <span class="type">string</span> containing the resolved
-absolute filename, or **`FALSE`** on failure.
+absolute filename, or **`false`** on failure.
 
 ### Examples
 
@@ -1811,7 +1811,7 @@ class="function">stream\_select</span> will not wait for data - instead
 it will return immediately, indicating the current status of the
 streams.
 
-If `tv_sec` is **`NULL`** <span class="function">stream\_select</span>
+If `tv_sec` is **`null`** <span class="function">stream\_select</span>
 can block indefinitely, returning only when an event on one of the
 watched streams occurs (or if a signal interrupts the system call).
 
@@ -1838,7 +1838,7 @@ See `tv_sec` description.
 On success <span class="function">stream\_select</span> returns the
 number of stream resources contained in the modified arrays, which may
 be zero if the timeout expires before anything interesting happens. On
-error **`FALSE`** is returned and a warning raised (this can happen if
+error **`false`** is returned and a warning raised (this can happen if
 the system call is interrupted by an incoming signal).
 
 ### Examples
@@ -1868,7 +1868,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 > **Note**:
 >
 > Due to a limitation in the current Zend Engine it is not possible to
-> pass a constant modifier like **`NULL`** directly as a parameter to a
+> pass a constant modifier like **`null`** directly as a parameter to a
 > function which expects this parameter to be passed by reference.
 > Instead use a temporary variable or an expression with the leftmost
 > member being a temporary variable:
@@ -1884,7 +1884,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 >
 > Be sure to use the *===* operator when checking for an error. Since
 > the <span class="function">stream\_select</span> may return 0 the
-> comparison with *==* would evaluate to **`TRUE`**:
+> comparison with *==* would evaluate to **`true`**:
 >
 > ``` php
 > <?php
@@ -1910,7 +1910,7 @@ if (false === ($num_changed_streams = stream_select($read, $write, $except, 0)))
 >
 > Use of <span class="function">stream\_select</span> on file
 > descriptors returned by <span class="function">proc\_open</span> will
-> fail and return **`FALSE`** under Windows.
+> fail and return **`false`** under Windows.
 >
 > **`STDIN`** from a console changes status as soon as *any* input
 > events are available, but reading from the stream may still block.
@@ -1943,8 +1943,8 @@ This function works for any stream that supports non-blocking mode
 The stream.
 
 `mode`  
-If `mode` is **`FALSE`**, the given stream will be switched to
-non-blocking mode, and if **`TRUE`**, it will be switched to blocking
+If `mode` is **`false`**, the given stream will be switched to
+non-blocking mode, and if **`true`**, it will be switched to blocking
 mode. This affects calls like <span class="function">fgets</span> and
 <span class="function">fread</span> that read from the stream. In
 non-blocking mode an <span class="function">fgets</span> call will
@@ -1953,7 +1953,7 @@ become available on the stream.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2000,7 +2000,7 @@ The desired new chunk size.
 
 Returns the previous chunk size on success.
 
-Will return **`FALSE`** if `chunk_size` is less than 1 or greater than
+Will return **`false`** if `chunk_size` is less than 1 or greater than
 **`PHP_INT_MAX`**.
 
 ### Errors/Exceptions
@@ -2064,7 +2064,7 @@ and `microseconds`.
 
 When the stream times out, the 'timed\_out' key of the array returned by
 <span class="function">stream\_get\_meta\_data</span> is set to
-**`TRUE`**, although no error/warning is generated.
+**`true`**, although no error/warning is generated.
 
 ### Parameters
 
@@ -2079,7 +2079,7 @@ The microseconds part of the timeout to be set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2227,7 +2227,7 @@ included and available from the selected transport.
 
 ### Return Values
 
-Returns a stream to the accepted socket connection or **`FALSE`** on
+Returns a stream to the accepted socket connection or **`false`** on
 failure.
 
 ### Notes
@@ -2326,14 +2326,14 @@ On success a stream resource is returned which may be used together with
 the other file functions (such as <span class="function">fgets</span>,
 <span class="function">fgetss</span>, <span
 class="function">fwrite</span>, <span class="function">fclose</span>,
-and <span class="function">feof</span>), **`FALSE`** on failure.
+and <span class="function">feof</span>), **`false`** on failure.
 
 ### Errors/Exceptions
 
 On failure the `errno` and `errstr` arguments will be populated with the
 actual system level error that occurred in the system-level *connect()*
 call. If the value returned in `errno` is *0* and the function returned
-**`FALSE`**, it is an indication that the error occurred before the
+**`false`**, it is an indication that the error occurred before the
 *connect()* call. This is most likely due to a problem initializing the
 socket. Note that the `errno` and `errstr` arguments will always be
 passed by reference.
@@ -2432,7 +2432,7 @@ class="methodparam"><span class="type">resource</span>
 Enable or disable encryption on the stream.
 
 Once the crypto settings are established, cryptography can be turned on
-and off dynamically by passing **`TRUE`** or **`FALSE`** in the `enable`
+and off dynamically by passing **`true`** or **`false`** in the `enable`
 parameter.
 
 ### Parameters
@@ -2479,7 +2479,7 @@ Seed the stream with settings from `session_stream`.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** if negotiation has failed or
+Returns **`true`** on success, **`false`** if negotiation has failed or
 *0* if there isn't enough data and you should try again (only for
 non-blocking sockets).
 
@@ -2546,8 +2546,8 @@ Returns the local or remote name of a given socket connection.
 The socket to get the name of.
 
 `want_peer`  
-If set to **`TRUE`** the *remote* socket name will be returned, if set
-to **`FALSE`** the *local* socket name will be returned.
+If set to **`true`** the *remote* socket name will be returned, if set
+to **`false`** the *local* socket name will be returned.
 
 ### Return Values
 
@@ -2598,7 +2598,7 @@ The protocol to be used: **`STREAM_IPPROTO_ICMP`**,
 ### Return Values
 
 Returns an <span class="type">array</span> with the two socket resources
-on success, or **`FALSE`** on failure.
+on success, or **`false`** on failure.
 
 ### Examples
 
@@ -2853,7 +2853,7 @@ for a list of bulitin transports.
 If the optional `errno` and `errstr` arguments are present they will be
 set to indicate the actual system level error that occurred in the
 system-level *socket()*, *bind()*, and *listen()* calls. If the value
-returned in `errno` is *0* and the function returned **`FALSE`**, it is
+returned in `errno` is *0* and the function returned **`false`**, it is
 an indication that the error occurred before the *bind()* call. This is
 most likely due to a problem initializing the socket. Note that the
 `errno` and `errstr` arguments will always be passed by reference.
@@ -2874,7 +2874,7 @@ flags.
 
 ### Return Values
 
-Returns the created stream, or **`FALSE`** on error.
+Returns the created stream, or **`false`** on error.
 
 ### Examples
 
@@ -2970,7 +2970,7 @@ receptions), **`STREAM_SHUT_WR`** (disable further transmissions) or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3024,7 +3024,7 @@ The stream to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3064,10 +3064,10 @@ Default is 0, local stream.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 <span class="function">stream\_wrapper\_register</span> will return
-**`FALSE`** if the `protocol` already has a handler.
+**`false`** if the `protocol` already has a handler.
 
 ### Examples
 
@@ -3143,7 +3143,7 @@ class="function">stream\_wrapper\_unregister</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 stream\_wrapper\_unregister
 ===========================
@@ -3169,7 +3169,7 @@ class="function">stream\_wrapper\_restore</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Table of Contents**
 

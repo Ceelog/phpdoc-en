@@ -170,7 +170,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setArrayResult</span> ( <span
 class="methodparam"><span class="type">bool</span> `$array_result`<span
-class="initializer"> = **`FALSE`**</span></span> )
+class="initializer"> = **`false`**</span></span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setConnectTimeout</span> ( <span
@@ -186,7 +186,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">array</span>
 `$values`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$exclude`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setFilterFloatRange</span> ( <span
@@ -195,7 +195,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 `$min`</span> , <span class="methodparam"><span
 class="type">float</span> `$max`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$exclude`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setFilterRange</span> ( <span
@@ -203,7 +203,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">int</span> `$min`</span>
 , <span class="methodparam"><span class="type">int</span> `$max`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$exclude`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$exclude`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setGeoAnchor</span> ( <span
@@ -296,7 +296,7 @@ class="methodparam"><span class="type">string</span> `$index`</span> ,
 `$attributes`</span> , <span class="methodparam"><span
 class="type">array</span> `$values`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$mva`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -380,12 +380,12 @@ Associative array of additional highlighting options (see below).
 | "chunk\_separator" | A string to insert between snippet chunks (passages). Default is " ... ".                                             |
 | "limit"            | Maximum snippet size, in symbols (codepoints). Integer, default is 256.                                               |
 | "around"           | How much words to pick around each matching keywords block. Integer, default is 5.                                    |
-| "exact\_phrase"    | Whether to highlight exact query phrase matches only instead of individual keywords. Boolean, default is **`FALSE`**. |
-| "single\_passage"  | Whether to extract single best passage only. Boolean, default is **`FALSE`**.                                         |
+| "exact\_phrase"    | Whether to highlight exact query phrase matches only instead of individual keywords. Boolean, default is **`false`**. |
+| "single\_passage"  | Whether to extract single best passage only. Boolean, default is **`false`**.                                         |
 
 ### Return Values
 
-Returns array of snippets on success or **`FALSE`** on failure.
+Returns array of snippets on success or **`false`** on failure.
 
 SphinxClient::buildKeywords
 ===========================
@@ -445,7 +445,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -573,7 +573,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -692,7 +692,7 @@ obtains and returns the result sets.
 
 ### Return Values
 
-Returns **`FALSE`** on failure and array of result sets on success.
+Returns **`false`** on failure and array of result sets on success.
 
 ### See Also
 
@@ -709,7 +709,7 @@ Change the format of result set array
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SphinxClient::setArrayResult</span> ( <span
 class="methodparam"><span class="type">bool</span> `$array_result`<span
-class="initializer"> = **`FALSE`**</span></span> )
+class="initializer"> = **`false`**</span></span> )
 
 Controls the format of search results set arrays (whether matches should
 be returned as an array or a hash).
@@ -717,14 +717,14 @@ be returned as an array or a hash).
 ### Parameters
 
 `array_result`  
-If `array_result` is **`FALSE`**, matches are returned as a hash with
+If `array_result` is **`false`**, matches are returned as a hash with
 document IDs as keys, and other information (weight, attributes) as
-values. If `array_result` is **`TRUE`**, matches are returned as a plain
+values. If `array_result` is **`true`**, matches are returned as a plain
 array with complete per-match information including document IDs.
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 SphinxClient::setConnectTimeout
 ===============================
@@ -746,7 +746,7 @@ Timeout in seconds.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -781,7 +781,7 @@ Associative array of field names and field weights.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -800,7 +800,7 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">array</span>
 `$values`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$exclude`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Adds new integer values set filter to the existing list of filters.
 
@@ -813,12 +813,12 @@ An attribute name.
 Plain array of integer values.
 
 `exclude`  
-If set to **`TRUE`**, matching documents are excluded from the result
+If set to **`true`**, matching documents are excluded from the result
 set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -840,12 +840,12 @@ Add new float range filter
 class="type">float</span> `$min`</span> , <span
 class="methodparam"><span class="type">float</span> `$max`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$exclude`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Adds new float range filter to the existing list of filters. Only those
 documents which have `attribute` value stored in the index between `min`
 and `max` (including values that are exactly equal to `min` or `max`)
-will be matched (or rejected, if `exclude` is **`TRUE`**).
+will be matched (or rejected, if `exclude` is **`true`**).
 
 ### Parameters
 
@@ -859,12 +859,12 @@ Minimum value.
 Maximum value.
 
 `exclude`  
-If set to **`TRUE`**, matching documents are excluded from the result
+If set to **`true`**, matching documents are excluded from the result
 set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -885,12 +885,12 @@ class="methodparam"><span class="type">string</span> `$attribute`</span>
 , <span class="methodparam"><span class="type">int</span> `$min`</span>
 , <span class="methodparam"><span class="type">int</span> `$max`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$exclude`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$exclude`<span class="initializer"> = **`false`**</span></span> \] )
 
 Adds new integer range filter to the existing list of filters. Only
 those documents which have `attribute` value stored in the index between
 `min` and `max` (including values that are exactly equal to `min` or
-`max`) will be matched (or rejected, if `exclude` is **`TRUE`**).
+`max`) will be matched (or rejected, if `exclude` is **`true`**).
 
 ### Parameters
 
@@ -904,12 +904,12 @@ Minimum value.
 Maximum value.
 
 `exclude`  
-If set to **`TRUE`**, matching documents are excluded from the result
+If set to **`true`**, matching documents are excluded from the result
 set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -955,7 +955,7 @@ Anchor longitude in radians.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1001,7 +1001,7 @@ An optional clause controlling how the groups are sorted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1034,7 +1034,7 @@ A string containing group-by attribute name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1069,7 +1069,7 @@ Maximum ID value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setIndexWeights
 =============================
@@ -1093,7 +1093,7 @@ Default is empty array, i.e. weighting summing is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setLimits
 =======================
@@ -1134,7 +1134,7 @@ search query once `cutoff` matches have been found and processed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setMatchMode
 ==========================
@@ -1167,7 +1167,7 @@ Matching mode.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1195,7 +1195,7 @@ Default value is 0, i.e. no limit.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setOverride
 =========================
@@ -1236,7 +1236,7 @@ values.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setRankingMode
 ============================
@@ -1265,7 +1265,7 @@ Ranking mode.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1303,7 +1303,7 @@ Delay between retries, in milliseconds.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setSelect
 =======================
@@ -1332,7 +1332,7 @@ SQL-like clause.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setServer
 =======================
@@ -1360,7 +1360,7 @@ Port number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SphinxClient::setSortMode
 =========================
@@ -1395,7 +1395,7 @@ Sorting mode.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1428,7 +1428,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an associative array of search server statistics or **`FALSE`**
+Returns an associative array of search server statistics or **`false`**
 on failure.
 
 SphinxClient::updateAttributes
@@ -1445,7 +1445,7 @@ class="methodparam"><span class="type">string</span> `$index`</span> ,
 `$attributes`</span> , <span class="methodparam"><span
 class="type">array</span> `$values`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$mva`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Instantly updates given attribute values in given documents.
 
@@ -1464,4 +1464,4 @@ values as values.
 ### Return Values
 
 Returns number of actually updated documents (0 or more) on success, or
-**`FALSE`** on failure.
+**`false`** on failure.

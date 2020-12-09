@@ -28,7 +28,7 @@ A local file handle <span class="type">resource</span> for the `output`
 
 ### Return Values
 
-Returns **`FALSE`**, if unable to comply, **`TRUE`** otherwise.
+Returns **`false`**, if unable to comply, **`true`** otherwise.
 
 ### Examples
 
@@ -76,7 +76,7 @@ The <span class="type">string</span> to be recoded
 
 ### Return Values
 
-Returns the recoded <span class="type">string</span> or **`FALSE`**, if
+Returns the recoded <span class="type">string</span> or **`false`**, if
 unable to perform the recode request.
 
 ### Examples

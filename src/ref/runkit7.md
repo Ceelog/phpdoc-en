@@ -28,7 +28,7 @@ of the **`RUNKIT7_ACC_*`** constants.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -65,7 +65,7 @@ default. One of the **`RUNKIT7_ACC_*`** constants.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -92,7 +92,7 @@ Name of the constant to remove. Either the name of a global constant, or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -116,9 +116,9 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 class="type">string</span> `$code`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$return_by_reference`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_strict`</span>
 \]\]\]\] )
@@ -129,7 +129,7 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 , <span class="methodparam"><span class="type">Closure</span>
 `$closure`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_strict`</span>
 \]\]\] )
@@ -163,7 +163,7 @@ Whether the function should behave as if it were declared in a file with
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -214,7 +214,7 @@ Name of the new function to copy the definition to
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -259,9 +259,9 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 class="type">string</span> `$code`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$return_by_reference`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$is_strict`</span>
 \]\]\]\] )
@@ -272,7 +272,7 @@ class="methodparam"><span class="type">string</span> `$funcname`</span>
 , <span class="methodparam"><span class="type">Closure</span>
 `$closure`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$doc_comment`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$return_type`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$is_strict`</span>
 \]\]\] )
@@ -311,7 +311,7 @@ Whether the function behaves as if it was declared in a file with
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -366,7 +366,7 @@ Name of the function to be deleted
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -403,7 +403,7 @@ New function name
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -443,7 +443,7 @@ Bitwise OR of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 runkit7\_method\_add
 ====================
@@ -462,7 +462,7 @@ class="methodparam"><span class="type">string</span> `$code`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -476,7 +476,7 @@ class="type">Closure</span> `$closure`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -515,7 +515,7 @@ Whether the method behaves as if it were declared in a file with
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -646,7 +646,7 @@ class="methodparam"><span class="type">string</span> `$code`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -660,7 +660,7 @@ class="type">Closure</span> `$closure`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = RUNKIT7\_ACC\_PUBLIC</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$doc_comment`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `$return_type`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_strict`</span> \]\]\]\] )
@@ -699,7 +699,7 @@ Whether the method behaves as if it was declared in a file with
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -773,7 +773,7 @@ The name of the method to remove
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -845,7 +845,7 @@ The new name to give to the renamed method
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

@@ -31,7 +31,7 @@ Disable the ability to load external entities
 <span class="type">bool</span> <span
 class="methodname">libxml\_disable\_entity\_loader</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$disable`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Disable/enable the ability to load external entities. Note that
 disabling the loading of external entities may cause general issues with
@@ -42,7 +42,7 @@ external entities.
 ### Parameters
 
 `disable`  
-Disable (**`TRUE`**) or enable (**`FALSE`**) libxml extensions (such as
+Disable (**`true`**) or enable (**`false`**) libxml extensions (such as
 <a href="/book/dom.html" class="xref">DOM</a>,
 <a href="/book/xmlwriter.html" class="xref">XMLWriter</a> and
 <a href="/book/xmlreader.html" class="xref">XMLReader</a>) to load
@@ -173,7 +173,7 @@ Retrieve last error from libxml.
 ### Return Values
 
 Returns a <span class="type">LibXMLError</span> object if there is any
-error in the buffer, **`FALSE`** otherwise.
+error in the buffer, **`false`** otherwise.
 
 ### See Also
 
@@ -201,11 +201,11 @@ Changes the default external entity loader.
 A <span class="type">callable</span> that takes three arguments. Two
 strings, a public id and system id, and a context (an array with four
 keys) as the third argument. This callback should return a resource, a
-string from which a resource can be opened, or **`NULL`**.
+string from which a resource can be opened, or **`null`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -321,7 +321,7 @@ needed
 class="methodname">libxml\_use\_internal\_errors</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">bool</span><span class="type">null</span></span>
-`$use_errors`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$use_errors`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">libxml\_use\_internal\_errors</span> allows you
 to disable standard libxml errors and enable user error handling.
@@ -329,7 +329,7 @@ to disable standard libxml errors and enable user error handling.
 ### Parameters
 
 `use_errors`  
-Enable (**`TRUE`**) user error handling or disable (**`FALSE`**) user
+Enable (**`true`**) user error handling or disable (**`false`**) user
 error handling. Disabling will also clear any existing libxml errors.
 
 ### Return Values
@@ -340,7 +340,7 @@ This function returns the previous value of `use_errors`.
 
 | Version | Description                                                            |
 |---------|------------------------------------------------------------------------|
-| 8.0.0   | `use_errors` is nullable now. Previously, its default was **`FALSE`**. |
+| 8.0.0   | `use_errors` is nullable now. Previously, its default was **`false`**. |
 
 ### Examples
 

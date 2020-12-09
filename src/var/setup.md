@@ -26,7 +26,7 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 | Name                                                                  | Default    | Changeable    | Changelog |
 |-----------------------------------------------------------------------|------------|---------------|-----------|
-| <a href="/var/setup.html#" class="link">unserialize_callback_func</a> | **`NULL`** | PHP\_INI\_ALL |           |
+| <a href="/var/setup.html#" class="link">unserialize_callback_func</a> | **`null`** | PHP\_INI\_ALL |           |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.

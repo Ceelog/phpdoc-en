@@ -564,8 +564,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if change logging is on, otherwise returns
-**`FALSE`**.
+Returns **`true`** if change logging is on, otherwise returns
+**`false`**.
 
 SDO\_DAS\_DataFactory::addPropertyToType
 ========================================
@@ -953,8 +953,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if the property was set prior to being modified,
-otherwise returns **`FALSE`**.
+Returns **`true`** if the property was set prior to being modified,
+otherwise returns **`false`**.
 
 SDO\_DataFactory::create
 ========================
@@ -1015,7 +1015,7 @@ future release of PHP. This function should be used at your own risk.
 
 Clear an SDO\_DataObject's properties. Read-only properties are
 unaffected. Subsequent calls to isset() for the data object will return
-**`FALSE`**.
+**`false`**.
 
 ### Parameters
 
@@ -1385,8 +1385,8 @@ name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
 Test to see if the property corresponds to a containment relationship.
-Returns **`TRUE`** if the property defines a containment relationship,
-or **`FALSE`** if it is reference.
+Returns **`true`** if the property defines a containment relationship,
+or **`false`** if it is reference.
 
 ### Parameters
 
@@ -1394,8 +1394,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if the property defines a containment relationship,
-or **`FALSE`** if it is reference.
+Returns **`true`** if the property defines a containment relationship,
+or **`false`** if it is reference.
 
 SDO\_Model\_Property::isMany
 ============================
@@ -1414,8 +1414,8 @@ This function is *EXPERIMENTAL*. The behaviour of this function, its
 name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
-Test to see if the property is many-valued. Returns **`TRUE`** if this
-is a many-valued property, otherwise returns **`FALSE`**.
+Test to see if the property is many-valued. Returns **`true`** if this
+is a many-valued property, otherwise returns **`false`**.
 
 ### Parameters
 
@@ -1423,8 +1423,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if this is a many-valued property, otherwise returns
-**`FALSE`**.
+Returns **`true`** if this is a many-valued property, otherwise returns
+**`false`**.
 
 SDO\_Model\_ReflectionDataObject::\_\_construct
 ===============================================
@@ -1482,7 +1482,7 @@ name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
 Get a string describing the SDO\_DataObject. The default behaviour is to
-print the output, but if **`TRUE`** is specified for return, it is
+print the output, but if **`true`** is specified for return, it is
 returned as a string.
 
 ### Parameters
@@ -1491,7 +1491,7 @@ returned as a string.
 An SDO\_Model\_ReflectionDataObject.
 
 `return`  
-If **`TRUE`**, return the output as a string, otherwise print it.
+If **`true`**, return the output as a string, otherwise print it.
 
 ### Return Values
 
@@ -1526,7 +1526,7 @@ None.
 ### Return Values
 
 Returns the container's SDO\_Model\_Property which references the
-SDO\_DataObject, or **`NULL`** if it is a root SDO\_DataObject.
+SDO\_DataObject, or **`null`** if it is a root SDO\_DataObject.
 
 SDO\_Model\_ReflectionDataObject::getInstanceProperties
 =======================================================
@@ -1607,7 +1607,7 @@ future release of PHP. This function should be used at your own risk.
 
 Get the base type for this type. Returns the SDO\_Model\_Type for the
 base type if this type inherits from another, otherwise returns
-**`NULL`**. An example of when base types occur is when a type defined
+**`null`**. An example of when base types occur is when a type defined
 in XML schema inherits from another type by using
 
 ``` description
@@ -1623,7 +1623,7 @@ None.
 ### Return Values
 
 Returns the SDO\_Model\_Type for the base type if this type inherits
-from another, otherwise returns **`NULL`**.
+from another, otherwise returns **`null`**.
 
 SDO\_Model\_Type::getName
 =========================
@@ -1758,7 +1758,7 @@ name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
 Test to see if this SDO\_Model\_Type is an abstract data type. Returns
-**`TRUE`** if this type is abstract, that is, no SDO\_DataObject of this
+**`true`** if this type is abstract, that is, no SDO\_DataObject of this
 type can be instantiated, though other types may inherit from it.
 
 ### Parameters
@@ -1767,8 +1767,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if this type is an abstract data type, otherwise
-returns **`FALSE`**.
+Returns **`true`** if this type is an abstract data type, otherwise
+returns **`false`**.
 
 SDO\_Model\_Type::isDataType
 ============================
@@ -1788,8 +1788,8 @@ name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
 Test to see if this SDO\_Model\_Type is a primitive data type. Returns
-**`TRUE`** if this type is a primitive data type, otherwise returns
-**`FALSE`**.
+**`true`** if this type is a primitive data type, otherwise returns
+**`false`**.
 
 ### Parameters
 
@@ -1797,8 +1797,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if this type is a primitive data type, otherwise
-returns **`FALSE`**.
+Returns **`true`** if this type is a primitive data type, otherwise
+returns **`false`**.
 
 SDO\_Model\_Type::isInstance
 ============================
@@ -1819,8 +1819,8 @@ name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
 Test for an SDO\_DataObject being an instance of this SDO\_Model\_Type.
-Returns **`TRUE`** if the SDO\_DataObject provided is an instance of
-this SDO\_Model\_Type, or a derived type, otherwise returns **`FALSE`**.
+Returns **`true`** if the SDO\_DataObject provided is an instance of
+this SDO\_Model\_Type, or a derived type, otherwise returns **`false`**.
 
 ### Parameters
 
@@ -1829,8 +1829,8 @@ The SDO\_DataObject to be tested.
 
 ### Return Values
 
-Returns **`TRUE`** if the SDO\_DataObject provided is an instance of
-this SDO\_Model\_Type, or a derived type, otherwise returns **`FALSE`**.
+Returns **`true`** if the SDO\_DataObject provided is an instance of
+this SDO\_Model\_Type, or a derived type, otherwise returns **`false`**.
 
 SDO\_Model\_Type::isOpenType
 ============================
@@ -1849,8 +1849,8 @@ This function is *EXPERIMENTAL*. The behaviour of this function, its
 name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
-Test to see if this type is open. Returns **`TRUE`** if this type is
-open, otherwise returns **`FALSE`**. An SDO\_DataObject whose type is
+Test to see if this type is open. Returns **`true`** if this type is
+open, otherwise returns **`false`**. An SDO\_DataObject whose type is
 open can have properties added to them which are not described by the
 type. This capability is used to support working with XML documents
 whose schema support open content, such as that defined by an
@@ -1867,7 +1867,7 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if this type is open, otherwise returns **`FALSE`**.
+Returns **`true`** if this type is open, otherwise returns **`false`**.
 
 SDO\_Model\_Type::isSequencedType
 =================================
@@ -1886,8 +1886,8 @@ This function is *EXPERIMENTAL*. The behaviour of this function, its
 name, and surrounding documentation may change without notice in a
 future release of PHP. This function should be used at your own risk.
 
-Test to see if this is a sequenced type. Returns **`TRUE`** if this type
-is sequence, otherwise returns **`FALSE`**. Sequenced types can have the
+Test to see if this is a sequenced type. Returns **`true`** if this type
+is sequence, otherwise returns **`false`**. Sequenced types can have the
 ordering across properties preserved and can contain unstructured text.
 For more information on sequenced types see the section on
 <a href="/sdo/examples.html#Working%20with%20Sequenced%20Data%20Objects" class="link">Working with Sequenced Data Objects</a>.
@@ -1898,8 +1898,8 @@ None.
 
 ### Return Values
 
-Returns **`TRUE`** if this type is sequence, otherwise return
-**`FALSE`**.
+Returns **`true`** if this type is sequence, otherwise return
+**`false`**.
 
 SDO\_Sequence::getProperty
 ==========================

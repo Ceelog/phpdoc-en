@@ -109,7 +109,7 @@ Some numeric operations can result in a value represented by the
 constant **`NAN`**. This result represents an undefined or
 unrepresentable value in floating-point calculations. Any loose or
 strict comparisons of this value against any other value, including
-itself, but except **`TRUE`**, will have a result of **`FALSE`**.
+itself, but except **`true`**, will have a result of **`false`**.
 
 Because **`NAN`** represents any number of different values, **`NAN`**
 should not be compared to other values, including itself, and instead

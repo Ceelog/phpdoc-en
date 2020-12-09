@@ -18,7 +18,7 @@ The line to be added in the history.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 readline\_callback\_handler\_install
 ====================================
@@ -53,7 +53,7 @@ The `callback` function takes one parameter; the user input returned.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -118,8 +118,8 @@ settings.
 
 ### Return Values
 
-Returns **`TRUE`** if a previously installed callback handler was
-removed, or **`FALSE`** if one could not be found.
+Returns **`true`** if a previously installed callback handler was
+removed, or **`false`** if one could not be found.
 
 ### Examples
 
@@ -177,7 +177,7 @@ This function clears the entire command line history.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 readline\_completion\_function
 ==============================
@@ -202,7 +202,7 @@ command line and returns an array of possible matches.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 readline\_info
 ==============
@@ -215,11 +215,11 @@ Gets/sets various internal readline variables
 class="methodname">readline\_info</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$var_name`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$var_name`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">string</span><span
 class="type">bool</span><span class="type">null</span></span>
-`$value`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$value`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Gets or sets various internal readline variables.
 
@@ -293,7 +293,7 @@ Reads the history
 class="methodname">readline\_read\_history</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$filename`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$filename`<span class="initializer"> = **`null`**</span></span> \] )
 
 This function reads a command history from a file.
 
@@ -304,7 +304,7 @@ Path to the filename containing the command history.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -340,7 +340,7 @@ Writes the history
 class="methodname">readline\_write\_history</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$filename`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$filename`<span class="initializer"> = **`null`**</span></span> \] )
 
 This function writes the command history to a file.
 
@@ -351,7 +351,7 @@ Path to the saved file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -371,7 +371,7 @@ class="type">false</span></span> <span
 class="methodname">readline</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$prompt`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Reads a single line from the user. You must add this line to the history
 yourself using <span class="function">readline\_add\_history</span>.
@@ -384,7 +384,7 @@ You may specify a string with which to prompt the user.
 ### Return Values
 
 Returns a single string from the user. The line returned has the ending
-newline removed. If there is no more data to read, then **`FALSE`** is
+newline removed. If there is no more data to read, then **`false`** is
 returned.
 
 ### Examples

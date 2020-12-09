@@ -54,7 +54,7 @@ class="function">zip\_entry\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -240,7 +240,7 @@ class="function">fopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 > **Note**:
 >
@@ -291,7 +291,7 @@ The number of bytes to return.
 
 ### Return Values
 
-Returns the data read, empty string on end of a file, or **`FALSE`** on
+Returns the data read, empty string on end of a file, or **`false`** on
 error.
 
 ### Changelog
@@ -329,7 +329,7 @@ The file name of the ZIP archive to open.
 
 Returns a resource handle for later use with <span
 class="function">zip\_read</span> and <span
-class="function">zip\_close</span> or returns either **`FALSE`** or the
+class="function">zip\_close</span> or returns either **`false`** or the
 number of error if `filename` does not exist or in case of other error.
 
 ### Changelog
@@ -365,7 +365,7 @@ class="function">zip\_open</span>.
 ### Return Values
 
 Returns a directory entry resource for later use with the
-*zip\_entry\_...* functions, or **`FALSE`** if there are no more entries
+*zip\_entry\_...* functions, or **`false`** if there are no more entries
 to read, or an error code if an error occurred.
 
 ### Changelog

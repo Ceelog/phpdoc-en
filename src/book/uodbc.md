@@ -469,7 +469,7 @@ class="methodname">odbc\_autocommit</span> ( <span
 class="methodparam"><span class="type">resource</span>
 `$connection_id`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$OnOff`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Toggles autocommit behaviour.
 
@@ -483,17 +483,17 @@ The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
 `OnOff`  
-If `OnOff` is **`TRUE`**, auto-commit is enabled, if it is **`FALSE`**
+If `OnOff` is **`true`**, auto-commit is enabled, if it is **`false`**
 auto-commit is disabled.
 
 ### Return Values
 
 Without the `OnOff` parameter, this function returns auto-commit status
 for `connection_id`. Non-zero is returned if auto-commit is on, 0 if it
-is off, or **`FALSE`** if an error occurs.
+is off, or **`false`** if an error occurs.
 
-If `OnOff` is set, this function returns **`TRUE`** on success and
-**`FALSE`** on failure.
+If `OnOff` is set, this function returns **`true`** on success and
+**`false`** on failure.
 
 ### See Also
 
@@ -567,7 +567,7 @@ Possible values for `mode` are:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 odbc\_close\_all
 ================
@@ -674,7 +674,7 @@ character.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure. This result
+Returns an ODBC result identifier or **`false`** on failure. This result
 identifier can be used to fetch a list of columns and associated
 privileges.
 
@@ -769,7 +769,7 @@ character.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -862,7 +862,7 @@ class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 odbc\_connect
 =============
@@ -918,7 +918,7 @@ cursortype: </span>
 
 ### Return Values
 
-Returns an ODBC connection or (**`FALSE`**) on error.
+Returns an ODBC connection or (**`false`**) on error.
 
 ### Examples
 
@@ -996,8 +996,8 @@ the first time this function is called, thereafter use the
 
 ### Return Values
 
-Returns **`FALSE`** on error, an <span class="type">array</span> upon
-success, and **`NULL`** after fetching the last available DSN.
+Returns **`false`** on error, an <span class="type">array</span> upon
+success, and **`null`** after fetching the last available DSN.
 
 ### Examples
 
@@ -1063,7 +1063,7 @@ If `connection_id` is specified, the last state of that connection is
 returned, else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
-(i.e. <span class="function">odbc\_exec</span> returned **`FALSE`**).
+(i.e. <span class="function">odbc\_exec</span> returned **`false`**).
 
 ### See Also
 
@@ -1097,7 +1097,7 @@ If `connection_id` is specified, the last state of that connection is
 returned, else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
-(i.e. <span class="function">odbc\_exec</span> returned **`FALSE`**).
+(i.e. <span class="function">odbc\_exec</span> returned **`false`**).
 
 ### See Also
 
@@ -1135,7 +1135,7 @@ This parameter is currently not used.
 ### Return Values
 
 Returns an ODBC result identifier if the SQL command was executed
-successfully, or **`FALSE`** on error.
+successfully, or **`false`** on error.
 
 ### See Also
 
@@ -1183,14 +1183,14 @@ class="function">odbc\_exec</span>). </span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
 **Example \#1 <span class="function">odbc\_execute</span> and <span
 class="function">odbc\_prepare</span> example**
 
-In the following code, `$success` will only be **`TRUE`** if all three
+In the following code, `$success` will only be **`true`** if all three
 parameters to myproc are IN parameters:
 
 ``` php
@@ -1238,7 +1238,7 @@ Optionally choose which row number to retrieve.
 
 ### Return Values
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows.
 
 ### Notes
@@ -1284,7 +1284,7 @@ The row number.
 
 ### Return Values
 
-Returns the number of columns in the result; **`FALSE`** on error.
+Returns the number of columns in the result; **`false`** on error.
 
 ### Examples
 
@@ -1329,7 +1329,7 @@ Optionally choose which row number to retrieve.
 
 ### Return Values
 
-Returns an object that corresponds to the fetched row, or **`FALSE`** if
+Returns an object that corresponds to the fetched row, or **`false`** if
 there are no more rows.
 
 ### Notes
@@ -1383,7 +1383,7 @@ rows by number, the `row_number` parameter is ignored.
 
 ### Return Values
 
-Returns **`TRUE`** if there was a row, **`FALSE`** otherwise.
+Returns **`true`** if there was a row, **`false`** otherwise.
 
 odbc\_field\_len
 ================
@@ -1411,7 +1411,7 @@ The field number. Field numbering starts at 1.
 
 ### Return Values
 
-Returns the field length, or **`FALSE`** on error.
+Returns the field length, or **`false`** on error.
 
 ### See Also
 
@@ -1444,7 +1444,7 @@ The field number. Field numbering starts at 1.
 
 ### Return Values
 
-Returns the field name as a string, or **`FALSE`** on error.
+Returns the field name as a string, or **`false`** on error.
 
 odbc\_field\_num
 ================
@@ -1472,7 +1472,7 @@ The field name.
 
 ### Return Values
 
-Returns the field number as a integer, or **`FALSE`** on error. Field
+Returns the field number as a integer, or **`false`** on error. Field
 numbering starts at 1.
 
 odbc\_field\_precision
@@ -1516,7 +1516,7 @@ The field number. Field numbering starts at 1.
 
 ### Return Values
 
-Returns the field scale as a integer, or **`FALSE`** on error.
+Returns the field scale as a integer, or **`false`** on error.
 
 odbc\_field\_type
 =================
@@ -1544,7 +1544,7 @@ The field number. Field numbering starts at 1.
 
 ### Return Values
 
-Returns the field type as a string, or **`FALSE`** on error.
+Returns the field type as a string, or **`false`** on error.
 
 odbc\_foreignkeys
 =================
@@ -1597,7 +1597,7 @@ The foreign key table.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -1670,7 +1670,7 @@ The result identifier.
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### Notes
 
@@ -1708,7 +1708,7 @@ data type.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -1761,7 +1761,7 @@ class="function">odbc\_result</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1795,7 +1795,7 @@ The result identifier.
 
 ### Return Values
 
-Returns **`TRUE`** if there are more result sets, **`FALSE`** otherwise.
+Returns **`true`** if there are more result sets, **`false`** otherwise.
 
 ### Examples
 
@@ -1951,7 +1951,7 @@ See <span class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-Returns an ODBC connection id or 0 (**`FALSE`**) on error.
+Returns an ODBC connection id or 0 (**`false`**) on error.
 
 ### Notes
 
@@ -1997,14 +1997,14 @@ The query string statement being prepared.
 ### Return Values
 
 Returns an ODBC result identifier if the SQL command was prepared
-successfully. Returns **`FALSE`** on error.
+successfully. Returns **`false`** on error.
 
 ### Examples
 
 **Example \#1 <span class="function">odbc\_execute</span> and <span
 class="function">odbc\_prepare</span> example**
 
-In the following code, `$success` will only be **`TRUE`** if all three
+In the following code, `$success` will only be **`true`** if all three
 parameters to myproc are IN parameters:
 
 ``` php
@@ -2063,7 +2063,7 @@ The schema ('owner' in ODBC 2 parlance).
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2163,7 +2163,7 @@ match zero or more characters, and *\_* to match a single character.
 
 Returns the list of input and output parameters, as well as the columns
 that make up the result set for the specified procedures. Returns an
-ODBC result identifier or **`FALSE`** on failure.
+ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2282,7 +2282,7 @@ match zero or more characters, and *\_* to match a single character.
 ### Return Values
 
 Returns an ODBC result identifier containing the information or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 The result set has the following columns:
 
@@ -2365,7 +2365,7 @@ Additional overall table formatting.
 
 ### Return Values
 
-Returns the number of rows in the result or **`FALSE`** on error.
+Returns the number of rows in the result or **`false`** on error.
 
 odbc\_result
 ============
@@ -2393,8 +2393,8 @@ containing the name of the field.
 
 ### Return Values
 
-Returns the string contents of the field, **`FALSE`** on error,
-**`NULL`** for NULL data, or **`TRUE`** for binary data.
+Returns the string contents of the field, **`false`** on error,
+**`null`** for NULL data, or **`true`** for binary data.
 
 ### Examples
 
@@ -2445,7 +2445,7 @@ class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 odbc\_setoption
 ===============
@@ -2497,7 +2497,7 @@ The value for the given `option`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2579,7 +2579,7 @@ One of **`SQL_NO_NULLS`** or **`SQL_NULLABLE `**.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2647,7 +2647,7 @@ available from the server.
 
 ### Return Values
 
-Returns an ODBC result identifier or **`FALSE`** on failure.
+Returns an ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2748,7 +2748,7 @@ match zero or more characters, and *\_* to match a single character.
 
 ### Return Values
 
-An ODBC result identifier or **`FALSE`** on failure.
+An ODBC result identifier or **`false`** on failure.
 
 The result set has the following columns:
 
@@ -2863,7 +2863,7 @@ not return any results for that type.
 ### Return Values
 
 Returns an ODBC result identifier containing the information or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 The result set has the following columns:
 

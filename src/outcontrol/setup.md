@@ -65,7 +65,7 @@ handler automatically turns on output buffering.
 > defined functions, use <span class="function">ob\_start</span>.
 
 `implicit_flush` <span class="type">bool</span>  
-**`FALSE`** by default. Changing this to **`TRUE`** tells PHP to tell
+**`false`** by default. Changing this to **`true`** tells PHP to tell
 the output layer to flush itself automatically after every output block.
 This is equivalent to calling the PHP function <span
 class="function">flush</span> after each and every call to <span
@@ -74,7 +74,7 @@ each and every *HTML* block.
 
 When using PHP within an web environment, turning this option on has
 serious performance implications and is generally recommended for
-debugging purposes only. This value defaults to **`TRUE`** when
+debugging purposes only. This value defaults to **`true`** when
 operating under the *CLI SAPI*.
 
 See also <span class="function">ob\_implicit\_flush</span>.

@@ -69,7 +69,7 @@ should pay attention to the following backward incompatible changes:
     values are returned exactly as they're declared (case-sensitive).
     </span>
 -   <span class="simpara"> <span class="function">ip2long</span> now
-    returns **`FALSE`** when an invalid IP address is passed as argument
+    returns **`false`** when an invalid IP address is passed as argument
     to the function, and no longer *-1*. </span>
 -   <span class="simpara"> If there are functions defined in the
     included file, they can be used in the main file independent if they

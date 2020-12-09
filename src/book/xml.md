@@ -71,3 +71,19 @@ XML Parser
         — Set up start namespace declaration handler
     -   [xml\_set\_unparsed\_entity\_decl\_handler](/ref/xml.html#xml_set_unparsed_entity_decl_handler)
         — Set up unparsed entity declaration handler
+-   [XmlParser](/class/xmlparser.html) — The XmlParser class
+
+Introduction
+------------
+
+A fully opaque class which replaces *xml* resources as of PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**XmlParser**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**XmlParser** </span> {
+
+}

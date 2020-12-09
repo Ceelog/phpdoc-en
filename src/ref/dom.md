@@ -24,7 +24,7 @@ The <span class="classname">SimpleXMLElement</span> node.
 
 ### Return Values
 
-The <span class="classname">DOMElement</span> node added or **`FALSE`**
+The <span class="classname">DOMElement</span> node added or **`false`**
 if any errors occur.
 
 ### Examples

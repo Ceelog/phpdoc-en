@@ -81,10 +81,10 @@ searches a string for another string. In this case we are looking for
 *'MSIE'* (so-called needle) inside `$_SERVER['HTTP_USER_AGENT']`
 (so-called haystack). If the needle is found inside the haystack, the
 function returns the position of the needle relative to the start of the
-haystack. Otherwise, it returns **`FALSE`**. If it does not return
-**`FALSE`**, the
+haystack. Otherwise, it returns **`false`**. If it does not return
+**`false`**, the
 <a href="/control-structures/if.html" class="link">if</a> expression
-evaluates to **`TRUE`** and the code within its {braces} is executed.
+evaluates to **`true`** and the code within its {braces} is executed.
 Otherwise, the code is not run. Feel free to create similar examples,
 with <a href="/control-structures/if.html" class="link">if</a>,
 <a href="/control-structures/else.html" class="link">else</a>, and other

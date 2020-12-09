@@ -30,10 +30,10 @@ $a = "new string";
 In this case, the new symbol name, *a*, is created in the current scope,
 and a new variable container is created with the type <span
 class="type">string</span> and the value *new string*. The "is\_ref" bit
-is by default set to **`FALSE`** because no user-land reference has been
+is by default set to **`false`** because no user-land reference has been
 created. The "refcount" is set to *1* as there is only one symbol that
 makes use of this variable container. Note that if "refcount" is *1*,
-"is\_ref" is always **`FALSE`**. If you have
+"is\_ref" is always **`false`**. If you have
 <a href="http://xdebug.org/" class="link external">» Xdebug</a>
 installed, you can display this information by calling <span
 class="function">xdebug\_debug\_zval</span>.

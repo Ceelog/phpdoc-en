@@ -17,7 +17,7 @@ This function has no parameters.
 
 ### Return Values
 
-A string that describes the error, or **`NULL`** if no error occurred.
+A string that describes the error, or **`null`** if no error occurred.
 
 ### Examples
 

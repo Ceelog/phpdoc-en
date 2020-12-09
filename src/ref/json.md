@@ -10,7 +10,7 @@ class="methodname">json\_decode</span> ( <span class="methodparam"><span
 class="type">string</span> `$json`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">bool</span><span class="type">null</span></span>
-`$associative`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$associative`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$depth`<span
 class="initializer"> = 512</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
@@ -31,9 +31,9 @@ This function only works with UTF-8 encoded strings.
 > <a href="http://www.faqs.org/rfcs/rfc7159" class="link external">» RFC 7159</a>.
 
 `associative`  
-When **`TRUE`**, JSON objects will be returned as associative <span
-class="type">array</span>s; when **`FALSE`**, JSON objects will be
-returned as <span class="type">object</span>s. When **`NULL`**, JSON
+When **`true`**, JSON objects will be returned as associative <span
+class="type">array</span>s; when **`false`**, JSON objects will be
+returned as <span class="type">object</span>s. When **`null`**, JSON
 objects will be returned as associative <span class="type">array</span>s
 or <span class="type">object</span>s depending on whether
 **`JSON_OBJECT_AS_ARRAY`** is set in the `flags`.
@@ -51,8 +51,8 @@ page.
 ### Return Values
 
 Returns the value encoded in `json` in appropriate PHP type. Values
-*true*, *false* and *null* are returned as **`TRUE`**, **`FALSE`** and
-**`NULL`** respectively. **`NULL`** is returned if the `json` cannot be
+*true*, *false* and *null* are returned as **`true`**, **`false`** and
+**`null`** respectively. **`null`** is returned if the `json` cannot be
 decoded or if the encoded data is deeper than the recursion limit.
 
 ### Changelog
@@ -295,7 +295,7 @@ Set the maximum depth. Must be greater than zero.
 ### Return Values
 
 Returns a JSON encoded <span class="type">string</span> on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 

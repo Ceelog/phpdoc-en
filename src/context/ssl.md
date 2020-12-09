@@ -16,18 +16,18 @@ based on the hostname used when opening the stream.
 `verify_peer` <span class="type">bool</span>  
 Require verification of SSL certificate used.
 
-Defaults to **`TRUE`**.
+Defaults to **`true`**.
 
 `verify_peer_name` <span class="type">bool</span>  
 Require verification of peer name.
 
-Defaults to **`TRUE`**.
+Defaults to **`true`**.
 
 `allow_self_signed` <span class="type">bool</span>  
 Allow self-signed certificates. Requires
 <a href="/context/ssl.html#context.ssl.verify-peer" class="link"><code class="parameter">verify_peer</code></a>.
 
-Defaults to **`FALSE`**
+Defaults to **`false`**
 
 `cafile` <span class="type">string</span>  
 Location of Certificate Authority file on local filesystem which should
@@ -65,15 +65,15 @@ described in
 Defaults to *DEFAULT*.
 
 `capture_peer_cert` <span class="type">bool</span>  
-If set to **`TRUE`** a *peer\_certificate* context option will be
+If set to **`true`** a *peer\_certificate* context option will be
 created containing the peer certificate.
 
 `capture_peer_cert_chain` <span class="type">bool</span>  
-If set to **`TRUE`** a *peer\_certificate\_chain* context option will be
+If set to **`true`** a *peer\_certificate\_chain* context option will be
 created containing the certificate chain.
 
 `SNI_enabled` <span class="type">bool</span>  
-If set to **`TRUE`** server name indication will be enabled. Enabling
+If set to **`true`** server name indication will be enabled. Enabling
 SNI allows multiple certificates on the same IP address.
 
 `disable_compression` <span class="type">bool</span>  

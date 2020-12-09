@@ -110,7 +110,7 @@ work.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Reasons for
+Returns **`true`** on success or **`false`** on failure. Reasons for
 failure are first that you called the function without an active buffer
 or that for some reason a buffer could not be deleted (possible for
 special buffer).
@@ -173,7 +173,7 @@ work.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Reasons for
+Returns **`true`** on success or **`false`** on failure. Reasons for
 failure are first that you called the function without an active buffer
 or that for some reason a buffer could not be deleted (possible for
 special buffer).
@@ -261,7 +261,7 @@ work.
 ### Return Values
 
 Returns the contents of the output buffer and end output buffering. If
-output buffering isn't active then **`FALSE`** is returned.
+output buffering isn't active then **`false`** is returned.
 
 ### Examples
 
@@ -307,7 +307,7 @@ Gets the contents of the output buffer without clearing it.
 
 ### Return Values
 
-This will return the contents of the output buffer or **`FALSE`**, if
+This will return the contents of the output buffer or **`false`**, if
 output buffering isn't active.
 
 ### Examples
@@ -371,7 +371,7 @@ work.
 
 ### Return Values
 
-Returns the output buffer or **`FALSE`** if no buffering is active.
+Returns the output buffer or **`false`** if no buffering is active.
 
 ### Examples
 
@@ -423,7 +423,7 @@ bytes.
 ### Return Values
 
 Returns the length of the output buffer contents, in bytes, or
-**`FALSE`** if no buffering is active.
+**`false`** if no buffering is active.
 
 ### Examples
 
@@ -495,18 +495,18 @@ class="initializer"> = FALSE</span></span> \] )
 
 <span class="function">ob\_get\_status</span> returns status information
 on either the top level output buffer or all active output buffer levels
-if `full_status` is set to **`TRUE`**.
+if `full_status` is set to **`true`**.
 
 ### Parameters
 
 `full_status`  
-**`TRUE`** to return all active output buffer levels. If **`FALSE`** or
+**`true`** to return all active output buffer levels. If **`false`** or
 not set, only the top level output buffer is returned.
 
 ### Return Values
 
 If called without the `full_status` parameter or with `full_status` =
-**`FALSE`** a simple array with the following elements is returned:
+**`false`** a simple array with the following elements is returned:
 
 ``` returnvalues
 Array
@@ -527,7 +527,7 @@ Array
 | name   | Name of active output handler or ' default output handler' if none is set                                     |
 | del    | Erase-flag as set by <span class="function">ob\_start</span>                                                  |
 
-If called with `full_status` = **`TRUE`** an array with one element for
+If called with `full_status` = **`true`** an array with one element for
 each active output buffer level is returned. The output level is used as
 key of the top level array and each array element itself is another
 array holding status information on one active output level.
@@ -593,7 +593,7 @@ encoding the browser will accept ("gzip", "deflate" or none at all) and
 will return its output accordingly. All browsers are supported since
 it's up to the browser to send the correct header saying that it accepts
 compressed web pages. If a browser doesn't support compressed pages this
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### Parameters
 
@@ -748,7 +748,7 @@ Turn on output buffering
 
 <span class="type">bool</span> <span class="methodname">ob\_start</span>
 (\[ <span class="methodparam"><span class="type">callable</span>
-`$output_callback`<span class="initializer"> = **`NULL`**</span></span>
+`$output_callback`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$chunk_size`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
@@ -792,7 +792,7 @@ output buffer is flushed to the browser at the end of the request. When
 `output_callback` is called, it will receive the contents of the output
 buffer as its parameter and is expected to return a new output buffer as
 a result, which will be sent to the browser. If the `output_callback` is
-not a callable function, this function will return **`FALSE`**. This is
+not a callable function, this function will return **`false`**. This is
 the callback signature:
 
 <span class="type">string</span> <span class="methodname"><span
@@ -809,10 +809,10 @@ class="methodparam"><span class="type">string</span> `$buffer`</span>
 <a href="/outcontrol/constants.html" class="link"><strong><code>PHP_OUTPUT_HANDLER_*</code></strong> constants</a>.
 </span>
 
-If `output_callback` returns **`FALSE`** original input is sent to the
+If `output_callback` returns **`false`** original input is sent to the
 browser.
 
-The `output_callback` parameter may be bypassed by passing a **`NULL`**
+The `output_callback` parameter may be bypassed by passing a **`null`**
 value.
 
 <span class="function">ob\_end\_clean</span>, <span
@@ -862,7 +862,7 @@ Each flag controls access to a set of functions, as described below:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -967,7 +967,7 @@ The variable value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1039,7 +1039,7 @@ class="function">output\_add\_rewrite\_var</span> function.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

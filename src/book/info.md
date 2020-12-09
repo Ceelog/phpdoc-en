@@ -14,7 +14,7 @@ PHP Options and Information
 -   [PHP Options/Info Functions](/ref/info.html)
     -   [assert\_options](/ref/info.html#assert_options) — Set/get the
         various assert flags
-    -   [assert](/ref/info.html#assert) — Checks if assertion is FALSE
+    -   [assert](/ref/info.html#assert) — Checks if assertion is false
     -   [cli\_get\_process\_title](/ref/info.html#cli_get_process_title)
         — Returns the current process title
     -   [cli\_set\_process\_title](/ref/info.html#cli_set_process_title)

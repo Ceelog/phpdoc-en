@@ -167,7 +167,7 @@ The above example will output:
 
 As of PHP 7.1.0, type declarations can be marked nullable by prefixing
 the type name with a question mark (*?*). This signifies that the value
-can be of the specified type or **`NULL`**.
+can be of the specified type or **`null`**.
 
 **Example \#5 Nullable argument type declaration**
 

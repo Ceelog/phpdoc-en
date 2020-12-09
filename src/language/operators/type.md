@@ -138,7 +138,7 @@ The above example will output:
     bool(false)
 
 instanceof does not throw any error if the variable being tested is not
-an object, it simply returns **`FALSE`**. Constants, however, were not
+an object, it simply returns **`false`**. Constants, however, were not
 allowed prior to PHP 7.3.0.
 
 **Example \#6 Using *instanceof* to test other variables**

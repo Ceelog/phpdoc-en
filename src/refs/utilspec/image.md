@@ -14,6 +14,7 @@ Image Processing and Generation
     -   [Predefined Constants](/image/constants.html)
     -   [Examples](/image/examples.html)
     -   [GD and Image Functions](/ref/image.html)
+    -   [GdImage](/class/gdimage.html) — The GdImage class
 -   [Gmagick](/book/gmagick.html) — Gmagick
     -   [Introduction](/intro/gmagick.html)
     -   [Installing/Configuring](/gmagick/setup.html)

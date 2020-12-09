@@ -9,6 +9,11 @@ Other Services
     -   [Predefined Constants](/curl/constants.html)
     -   [Examples](/curl/examples.html)
     -   [cURL Functions](/ref/curl.html)
+    -   [CurlHandle](/class/curlhandle.html) — The CurlHandle class
+    -   [CurlMultiHandle](/class/curlmultihandle.html) — The
+        CurlMultiHandle class
+    -   [CurlShareHandle](/class/curlsharehandle.html) — The
+        CurlShareHandle class
     -   [CURLFile](/class/curlfile.html) — The CURLFile class
 -   [Event](/book/event.html) — Event
     -   [Introduction](/intro/event.html)
@@ -122,6 +127,8 @@ Other Services
     -   [Examples](/sockets/examples.html)
     -   [Socket Errors](/sockets/errors.html)
     -   [Socket Functions](/ref/sockets.html)
+    -   [Socket](/class/socket.html) — The Socket class
+    -   [AddressInfo](/class/addressinfo.html) — The AddressInfo class
 -   [SSH2](/book/ssh2.html) — Secure Shell2
     -   [Introduction](/intro/ssh2.html)
     -   [Installing/Configuring](/ssh2/setup.html)

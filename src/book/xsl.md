@@ -79,7 +79,7 @@ class="methodparam"><span class="type">object</span>
 class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$functions`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">removeParameter</span> ( <span
@@ -111,7 +111,7 @@ class="type">DOMDocument</span><span class="type">false</span></span>
 class="methodparam"><span class="type">object</span> `$document`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$returnClass`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$returnClass`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="type">int</span> <span
 class="methodname">transformToURI</span> ( <span
@@ -195,7 +195,7 @@ The local name of the XSLT parameter.
 
 ### Return Values
 
-The value of the parameter (as a string), or **`FALSE`** if it's not
+The value of the parameter (as a string), or **`false`** if it's not
 set.
 
 ### See Also
@@ -242,7 +242,7 @@ This method determines if PHP was built with the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -284,7 +284,7 @@ or <span class="classname">SimpleXMLElement</span> object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 XSLTProcessor::registerPHPFunctions
 ===================================
@@ -298,7 +298,7 @@ Enables the ability to use PHP functions as XSLT functions
 <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$functions`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 This method enables the ability to use PHP functions as XSLT functions
 within XSL stylesheets.
@@ -389,7 +389,7 @@ The local name of the XSLT parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -436,7 +436,7 @@ An array of *name =\> value* pairs.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -497,7 +497,7 @@ Path to the file to dump profiling information.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -571,7 +571,7 @@ class="type">DOMDocument</span><span class="type">false</span></span>
 class="methodparam"><span class="type">object</span> `$document`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$returnClass`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$returnClass`<span class="initializer"> = **`null`**</span></span> \] )
 
 Transforms the source node to a <span
 class="classname">DOMDocument</span> applying the stylesheet given by
@@ -585,7 +585,7 @@ The node to be transformed.
 
 ### Return Values
 
-The resulting <span class="classname">DOMDocument</span> or **`FALSE`**
+The resulting <span class="classname">DOMDocument</span> or **`false`**
 on error.
 
 ### Examples
@@ -647,7 +647,7 @@ The target URI for the transformation.
 
 ### Return Values
 
-Returns the number of bytes written or **`FALSE`** if an error occurred.
+Returns the number of bytes written or **`false`** if an error occurred.
 
 ### Examples
 
@@ -703,7 +703,7 @@ class="type">SimpleXMLElement</span> object to be transformed.
 
 ### Return Values
 
-The result of the transformation as a string or **`FALSE`** on error.
+The result of the transformation as a string or **`false`** on error.
 
 ### Examples
 

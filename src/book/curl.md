@@ -77,6 +77,11 @@ Client URL Library
         given URL encoded string
     -   [curl\_version](/ref/curl.html#curl_version) — Gets cURL version
         information
+-   [CurlHandle](/class/curlhandle.html) — The CurlHandle class
+-   [CurlMultiHandle](/class/curlmultihandle.html) — The CurlMultiHandle
+    class
+-   [CurlShareHandle](/class/curlsharehandle.html) — The CurlShareHandle
+    class
 -   [CURLFile](/class/curlfile.html) — The CURLFile class
     -   [CURLFile::\_\_construct](/class/curlfile.html#CURLFile::__construct)
         — Create a CURLFile object
@@ -90,6 +95,53 @@ Client URL Library
         — Set MIME type
     -   [CURLFile::setPostFilename](/class/curlfile.html#CURLFile::setPostFilename)
         — Set file name for POST
+
+Introduction
+------------
+
+A fully opaque class which replaces *curl* resources as of PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**CurlHandle**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**CurlHandle** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *curl\_multi* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**CurlMultiHandle**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**CurlMultiHandle** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *curl\_share* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**CurlShareHandle**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**CurlShareHandle** </span> {
+
+}
 
 Introduction
 ------------
@@ -126,10 +178,10 @@ class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$mime_type`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+`$posted_filename`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -191,10 +243,10 @@ class="methodname">CURLFile::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$mime_type`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+`$posted_filename`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 Procedural style
@@ -204,10 +256,10 @@ class="methodname">curl\_file\_create</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$mime_type`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$mime_type`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$posted_filename`<span class="initializer"> = **`NULL`**</span></span>
+`$posted_filename`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 Creates a <span class="classname">CURLFile</span> object, used to upload

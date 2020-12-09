@@ -1,5 +1,5 @@
-*break*
--------
+break
+-----
 
 *break* ends execution of the current *for*, *foreach*, *while*,
 *do-while* or *switch* structure.

@@ -34,7 +34,7 @@ of the file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -86,7 +86,7 @@ class="function">posix\_get\_last\_error</span>
 ### Return Values
 
 Upon successful completion, returns <span class="type">string</span> of
-the pathname to the current controlling terminal. Otherwise **`FALSE`**
+the pathname to the current controlling terminal. Otherwise **`false`**
 is returned and errno is set, which can be checked with <span
 class="function">posix\_get\_last\_error</span>.
 
@@ -174,7 +174,7 @@ class="function">posix\_get\_last\_error</span>
 ### Return Values
 
 Returns a <span class="type">string</span> of the absolute pathname on
-success. On error, returns **`FALSE`** and sets errno which can be
+success. On error, returns **`false`** and sets errno which can be
 checked with <span class="function">posix\_get\_last\_error</span>.
 
 ### Examples
@@ -416,7 +416,7 @@ The name of the group
 
 ### Return Values
 
-Returns an <span class="type">array</span> on success, or **`FALSE`** on
+Returns an <span class="type">array</span> on success, or **`false`** on
 failure. The array elements returned are:
 
 | Element | Description                                                                                                                                                                                                                                           |
@@ -563,7 +563,7 @@ class="type">false</span></span> <span
 class="methodname">posix\_getpgid</span> ( <span
 class="methodparam"><span class="type">int</span> `$pid`</span> )
 
-Returns the process group identifier of the process `pid` or **`FALSE`**
+Returns the process group identifier of the process `pid` or **`false`**
 on failure.
 
 ### Parameters
@@ -708,7 +708,7 @@ An alphanumeric username.
 ### Return Values
 
 On success an array with the following elements is returned, else
-**`FALSE`** is returned:
+**`false`** is returned:
 
 | Element | Description                                                                                                                                                                                                                                                                                                                                                                         |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -920,7 +920,7 @@ is the process group id of the session leader.
 
 `pid`  
 The process identifier. If set to 0, the current process is assumed. If
-an invalid `pid` is specified, then **`FALSE`** is returned and an error
+an invalid `pid` is specified, then **`false`** is returned and an error
 is set which can be checked with <span
 class="function">posix\_get\_last\_error</span>.
 
@@ -1004,7 +1004,7 @@ Typically the group number from the password file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1037,8 +1037,8 @@ class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if `fd` is an open descriptor connected to a terminal
-and **`FALSE`** otherwise.
+Returns **`true`** if `fd` is an open descriptor connected to a terminal
+and **`false`** otherwise.
 
 ### See Also
 
@@ -1070,7 +1070,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1108,7 +1108,7 @@ permissions of the created file are (mode & \~umask).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 posix\_mknod
 ============
@@ -1148,7 +1148,7 @@ The minor device kernel identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1196,7 +1196,7 @@ The group id.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1241,7 +1241,7 @@ The user id.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1278,7 +1278,7 @@ The group id.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1324,7 +1324,7 @@ The process group id.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1371,7 +1371,7 @@ The hard limit, in whatever unit the resource limit requires, or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1422,7 +1422,7 @@ The user id.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1585,7 +1585,7 @@ class="type">resource</span>.
 ### Return Values
 
 On success, returns a <span class="type">string</span> of the absolute
-path of the `fd`. On failure, returns **`FALSE`**
+path of the `fd`. On failure, returns **`false`**
 
 posix\_uname
 ============

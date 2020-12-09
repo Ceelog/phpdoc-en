@@ -31,7 +31,7 @@ If an <span class="type">object</span> is converted to an <span
 class="type">object</span>, it is not modified. If a value of any other
 type is converted to an <span class="type">object</span>, a new instance
 of the *stdClass* built-in class is created. If the value was
-**`NULL`**, the new instance will be empty. An <span
+**`null`**, the new instance will be empty. An <span
 class="type">array</span> converts to an <span
 class="type">object</span> with properties named by keys and
 corresponding values. Note that in this case before PHP 7.2.0 numeric

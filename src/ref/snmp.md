@@ -14,7 +14,7 @@ quick\_print is off by default.
 
 ### Return Values
 
-Returns **`TRUE`** if quick\_print is on, **`FALSE`** otherwise.
+Returns **`true`** if quick\_print is on, **`false`** otherwise.
 
 ### Examples
 
@@ -436,7 +436,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error.
+Returns SNMP object value on success or **`false`** on error.
 
 ### Examples
 
@@ -493,7 +493,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### Examples
@@ -554,7 +554,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### Examples
@@ -676,7 +676,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If the SNMP host rejects the data type, an E\_WARNING message like
 "Warning: Error in packet. Reason: (badValue) The value given has the
@@ -738,7 +738,7 @@ The SNMP agent (server).
 The read community.
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -753,7 +753,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an array of SNMP object values starting from the `object_id` as
-root or **`FALSE`** on error.
+root or **`false`** on error.
 
 ### Examples
 
@@ -839,7 +839,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error.
+Returns SNMP object value on success or **`false`** on error.
 
 ### Examples
 
@@ -918,7 +918,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### Examples
@@ -1000,7 +1000,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### Examples
@@ -1147,7 +1147,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If the SNMP host rejects the data type, an E\_WARNING message like
 "Warning: Error in packet. Reason: (badValue) The value given has the
@@ -1230,7 +1230,7 @@ the privacy protocol (DES or AES)
 the privacy pass phrase
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -1245,7 +1245,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an array of SNMP object values starting from the `object_id` as
-root or **`FALSE`** on error.
+root or **`false`** on error.
 
 ### Examples
 
@@ -1313,7 +1313,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error.
+Returns SNMP object value on success or **`false`** on error.
 
 ### Examples
 
@@ -1369,7 +1369,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns SNMP object value on success or **`FALSE`** on error. In case of
+Returns SNMP object value on success or **`false`** on error. In case of
 an error, an E\_WARNING message is shown.
 
 ### Examples
@@ -1430,7 +1430,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. In case of an error, an E\_WARNING
+success or **`false`** on error. In case of an error, an E\_WARNING
 message is shown.
 
 ### Examples
@@ -1553,7 +1553,7 @@ The number of times to retry if timeouts occur.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If the SNMP host rejects the data type, an E\_WARNING message like
 "Warning: Error in packet. Reason: (badValue) The value given has the
@@ -1614,7 +1614,7 @@ The SNMP agent (server).
 The read community.
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -1629,7 +1629,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an array of SNMP object values starting from the `object_id` as
-root or **`FALSE`** on error.
+root or **`false`** on error.
 
 ### Examples
 
@@ -1689,7 +1689,7 @@ The SNMP agent.
 The read community.
 
 `object_id`  
-If **`NULL`**, `object_id` is taken as the root of the SNMP objects tree
+If **`null`**, `object_id` is taken as the root of the SNMP objects tree
 and all objects under that tree are returned as an array.
 
 If `object_id` is specified, all the SNMP objects below that `object_id`
@@ -1704,7 +1704,7 @@ The number of times to retry if timeouts occur.
 ### Return Values
 
 Returns an associative array with object ids and their respective object
-value starting from the `object_id` as root or **`FALSE`** on error.
+value starting from the `object_id` as root or **`false`** on error.
 
 ### Examples
 

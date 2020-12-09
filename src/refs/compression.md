@@ -51,3 +51,7 @@ Compression and Archive Extensions
     -   [Predefined Constants](/zlib/constants.html)
     -   [Examples](/zlib/examples.html)
     -   [Zlib Functions](/ref/zlib.html)
+    -   [DeflateContext](/class/deflatecontext.html) — The
+        DeflateContext class
+    -   [InflateContext](/class/inflatecontext.html) — The
+        InflateContext class

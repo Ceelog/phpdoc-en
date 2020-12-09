@@ -154,8 +154,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the reference was valid and could be turned into a
-strong reference, **`FALSE`** otherwise.
+Returns **`true`** if the reference was valid and could be turned into a
+strong reference, **`false`** otherwise.
 
 ### Examples
 
@@ -330,7 +330,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the object if the reference is still valid, **`NULL`**
+Returns the object if the reference is still valid, **`null`**
 otherwise.
 
 ### See Also
@@ -363,8 +363,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the reference was previously acquired and thus
-could be released, **`FALSE`** otherwise.
+Returns **`true`** if the reference was previously acquired and thus
+could be released, **`false`** otherwise.
 
 ### Examples
 
@@ -425,8 +425,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the object still exists and is thus still
-accessible via <span class="methodname">Weakref::get</span>, **`FALSE`**
+Returns **`true`** if the object still exists and is thus still
+accessible via <span class="methodname">Weakref::get</span>, **`false`**
 otherwise.
 
 ### See Also
@@ -658,7 +658,7 @@ Object to check for.
 
 ### Return Values
 
-Returns **`TRUE`** if the object is contained in the map, **`FALSE`**
+Returns **`true`** if the object is contained in the map, **`false`**
 otherwise.
 
 WeakMap::offsetGet
@@ -682,7 +682,7 @@ Some object contained as key in the map.
 ### Return Values
 
 Returns the value associated to the object passed as argument,
-**`NULL`** otherwise.
+**`null`** otherwise.
 
 WeakMap::offsetSet
 ==================
@@ -774,5 +774,5 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the iterator is on a valid element that can be
-accessed, **`FALSE`** otherwise.
+Returns **`true`** if the iterator is on a valid element that can be
+accessed, **`false`** otherwise.

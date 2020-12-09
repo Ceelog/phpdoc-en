@@ -33,7 +33,7 @@ within the script code.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -132,7 +132,7 @@ PDF document with data.
 
 ### Return Values
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### Examples
 
@@ -269,7 +269,7 @@ The appearance will be stored in this parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 fdf\_get\_attachment
 ====================
@@ -636,7 +636,7 @@ class="function">fdf\_save\_string</span>.
 
 ### Return Values
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### Examples
 
@@ -682,7 +682,7 @@ PDF form or created using <span class="function">fdf\_create</span> and
 
 ### Return Values
 
-Returns a FDF document handle, or **`FALSE`** on error.
+Returns a FDF document handle, or **`false`** on error.
 
 ### Examples
 
@@ -752,7 +752,7 @@ class="function">fdf\_open\_string</span>.
 
 ### Return Values
 
-Returns the document as a string, or **`FALSE`** on error.
+Returns the document as a string, or **`false`** on error.
 
 ### Examples
 
@@ -825,7 +825,7 @@ stream.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -872,7 +872,7 @@ The possible values **`FDFNormalAP`**, **`FDFRolloverAP`** and
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 fdf\_set\_encoding
 ==================
@@ -906,7 +906,7 @@ An empty string resets the encoding to the default
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 fdf\_set\_file
 ==============
@@ -944,7 +944,7 @@ displayed. You can also set the default value for this parameter using
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1012,7 +1012,7 @@ Name of the FDF field, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1053,7 +1053,7 @@ Name of the FDF field, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1122,7 +1122,7 @@ Name of the FDF field, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1156,7 +1156,7 @@ class="function">fdf\_open\_string</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1200,7 +1200,7 @@ Name of the FDF field, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1235,7 +1235,7 @@ The frame name, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1287,7 +1287,7 @@ case all array elements will be stored as a value array.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1332,7 +1332,7 @@ The version number. For the current FDF toolkit 5.0, this may be either
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 

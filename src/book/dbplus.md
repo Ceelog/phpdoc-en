@@ -389,7 +389,7 @@ A relation opened by <span class="function">dbplus\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
+Returns **`true`** on success or **`DBPLUS_ERR_UNKNOWN`** on failure.
 
 ### Notes
 
@@ -1161,7 +1161,7 @@ class="function">dbplus\_open</span>.
 
 `overwrite`  
 An existing relation by the same `name` will only be overwritten if this
-parameter is set to **`TRUE`** and no other process is currently using
+parameter is set to **`true`** and no other process is currently using
 the relation.
 
 ### Return Values
@@ -1204,7 +1204,7 @@ class="function">dbplus\_open</span>.
 
 `overwrite`  
 An existing relation by the same `name` will only be overwritten if this
-parameter is set to **`TRUE`** and no other process is currently using
+parameter is set to **`true`** and no other process is currently using
 the relation.
 
 ### Return Values
@@ -1243,7 +1243,7 @@ The relation name.
 ### Return Values
 
 Returns an array containing these values under the keys *sid*, *host*
-and *host\_path* or **`FALSE`** on error.
+and *host\_path* or **`false`** on error.
 
 ### Notes
 

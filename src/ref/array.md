@@ -30,7 +30,7 @@ Either **`CASE_UPPER`** or **`CASE_LOWER`** (default)
 
 ### Return Values
 
-Returns an array with its keys lower or uppercased, or **`FALSE`** if
+Returns an array with its keys lower or uppercased, or **`false`** if
 `array` is not an array.
 
 ### Errors/Exceptions
@@ -77,7 +77,7 @@ class="methodname">array\_chunk</span> ( <span class="methodparam"><span
 class="type">array</span> `$array`</span> , <span
 class="methodparam"><span class="type">int</span> `$length`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$preserve_keys`<span class="initializer"> = **`FALSE`**</span></span>
+`$preserve_keys`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Chunks an array into arrays with `length` elements. The last chunk may
@@ -92,7 +92,7 @@ The array to work on
 The size of each chunk
 
 `preserve_keys`  
-When set to **`TRUE`** keys will be preserved. Default is **`FALSE`**
+When set to **`true`** keys will be preserved. Default is **`false`**
 which will reindex the chunk numerically
 
 ### Return Values
@@ -102,7 +102,7 @@ zero, with each dimension containing `length` elements.
 
 ### Errors/Exceptions
 
-If `length` is less than 1 **`E_WARNING`** will be thrown and **`NULL`**
+If `length` is less than 1 **`E_WARNING`** will be thrown and **`null`**
 returned.
 
 ### Examples
@@ -180,7 +180,7 @@ class="type">null</span></span> `$column_key`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">string</span><span
 class="type">null</span></span> `$index_key`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="function">array\_column</span> returns the values from a
 single column of the `array`, identified by the `column_key`.
@@ -201,7 +201,7 @@ class="function">\_\_isset</span> magic methods.
 `column_key`  
 The column of values to return. This value may be an integer key of the
 column you wish to retrieve, or it may be a string key name for an
-associative array or property name. It may also be **`NULL`** to return
+associative array or property name. It may also be **`null`** to return
 complete arrays or objects (this is useful together with `index_key` to
 reindex the array).
 
@@ -406,7 +406,7 @@ Array of keys to be used. Illegal values for key will be converted to
 
 ### Return Values
 
-Returns the combined <span class="type">array</span>, **`FALSE`** if the
+Returns the combined <span class="type">array</span>, **`false`** if the
 number of elements for each array isn't equal.
 
 ### Errors/Exceptions
@@ -1176,12 +1176,12 @@ class="methodname">array\_filter</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">callable</span><span class="type">null</span></span>
-`$callback`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$callback`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> = 0</span></span> \]\] )
 
 Iterates over each value in the `array` passing them to the `callback`
-function. If the `callback` function returns **`TRUE`**, the current
+function. If the `callback` function returns **`true`**, the current
 value from `array` is returned into the result <span
 class="type">array</span>.
 
@@ -1371,7 +1371,7 @@ An array of key/value pairs to be flipped.
 
 ### Return Values
 
-Returns the flipped array on success and **`NULL`** on failure.
+Returns the flipped array on success and **`null`** on failure.
 
 ### Examples
 
@@ -1815,7 +1815,7 @@ class="type">string</span><span class="type">int</span></span>
 `$key`</span> , <span class="methodparam"><span
 class="type">array</span> `$array`</span> )
 
-<span class="function">array\_key\_exists</span> returns **`TRUE`** if
+<span class="function">array\_key\_exists</span> returns **`true`** if
 the given `key` is set in the array. `key` can be any value possible for
 an array index.
 
@@ -1829,7 +1829,7 @@ An array with keys to check.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 > **Note**:
 >
@@ -1853,8 +1853,8 @@ if (array_key_exists('first', $search_array)) {
 **Example \#2 <span class="function">array\_key\_exists</span> vs <span
 class="function">isset</span>**
 
-<span class="function">isset</span> does not return **`TRUE`** for array
-keys that correspond to a **`NULL`** value, while <span
+<span class="function">isset</span> does not return **`true`** for array
+keys that correspond to a **`null`** value, while <span
 class="function">array\_key\_exists</span> does.
 
 ``` php
@@ -1874,7 +1874,7 @@ array_key_exists('first', $search_array);
 > **Note**:
 >
 > For backward compatibility reasons, <span
-> class="function">array\_key\_exists</span> will also return **`TRUE`**
+> class="function">array\_key\_exists</span> will also return **`true`**
 > if `key` is a property defined within an <span
 > class="type">object</span> given as `array`. This behaviour should not
 > be relied upon, and care should be taken to ensure that `array` is an
@@ -1912,7 +1912,7 @@ An array.
 
 ### Return Values
 
-Returns the first key of `array` if the array is not empty; **`NULL`**
+Returns the first key of `array` if the array is not empty; **`null`**
 otherwise.
 
 ### Examples
@@ -1986,7 +1986,7 @@ An array.
 
 ### Return Values
 
-Returns the last key of `array` if the array is not empty; **`NULL`**
+Returns the last key of `array` if the array is not empty; **`null`**
 otherwise.
 
 ### See Also
@@ -2011,7 +2011,7 @@ class="type">array</span> `$array`</span> , <span
 class="methodparam"><span class="type">mixed</span>
 `$search_value`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$strict`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">array\_keys</span> returns the keys, numeric and
 string, from the `array`.
@@ -2106,7 +2106,7 @@ of arrays passed to <span class="function">array\_map</span>.
 A <span class="type">callable</span> to run for each element in each
 array.
 
-**`NULL`** can be passed as a value to `callback` to perform a zip
+**`null`** can be passed as a value to `callback` to perform a zip
 operation on multiple arrays. If only `array` is provided, <span
 class="methodname">array\_map</span> will return the input array.
 
@@ -2252,7 +2252,7 @@ ones will be extended with empty elements to match the length of the
 longest.
 
 An interesting use of this function is to construct an array of arrays,
-which can be easily performed by using **`NULL`** as the name of the
+which can be easily performed by using **`null`** as the name of the
 callback function
 
 **Example \#4 Performing a zip operation of arrays**
@@ -2309,7 +2309,7 @@ The above example will output:
 
     )
 
-**Example \#5 **`NULL`** `callback` with only `array`**
+**Example \#5 **`null`** `callback` with only `array`**
 
 ``` php
 <?php
@@ -2676,7 +2676,7 @@ other words, the sort is lexicographical.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2941,7 +2941,7 @@ The array to get the value from.
 ### Return Values
 
 Returns the value of the last element of `array`. If `array` is empty
-(or is not an array), **`NULL`** will be returned.
+(or is not an array), **`null`** will be returned.
 
 ### Errors/Exceptions
 
@@ -3175,7 +3175,7 @@ class="methodparam"><span class="type">array</span> `$array`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$initial`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="function">array\_reduce</span> applies iteratively the
 `callback` function to the elements of the `array`, so as to reduce the
@@ -3209,7 +3209,7 @@ of the process, or as a final result in case the array is empty.
 Returns the resulting value.
 
 If the array is empty and `initial` is not passed, <span
-class="function">array\_reduce</span> returns **`NULL`**.
+class="function">array\_reduce</span> returns **`null`**.
 
 ### Examples
 
@@ -3287,7 +3287,7 @@ Arrays from which elements will be extracted.
 
 ### Return Values
 
-Returns an <span class="type">array</span>, or **`NULL`** if an error
+Returns an <span class="type">array</span>, or **`null`** if an error
 occurs.
 
 ### Examples
@@ -3413,7 +3413,7 @@ overwrite the previous values.
 
 ### Return Values
 
-Returns an <span class="type">array</span>, or **`NULL`** if an error
+Returns an <span class="type">array</span>, or **`null`** if an error
 occurs.
 
 ### Examples
@@ -3458,7 +3458,7 @@ Return an array with elements in reverse order
 class="methodname">array\_reverse</span> ( <span
 class="methodparam"><span class="type">array</span> `$array`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$preserve_keys`<span class="initializer"> = **`FALSE`**</span></span>
+`$preserve_keys`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Takes an input `array` and returns a new array with the order of the
@@ -3470,7 +3470,7 @@ elements reversed.
 The input array.
 
 `preserve_keys`  
-If set to **`TRUE`** numeric keys are preserved. Non-numeric keys are
+If set to **`true`** numeric keys are preserved. Non-numeric keys are
 not affected by this setting and will always be preserved.
 
 ### Return Values
@@ -3548,7 +3548,7 @@ class="methodparam"><span class="type">mixed</span> `$needle`</span> ,
 <span class="methodparam"><span class="type">array</span>
 `$haystack`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$strict`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Searches for `needle` in `haystack`.
 
@@ -3566,7 +3566,7 @@ The searched value.
 The array.
 
 `strict`  
-If the third parameter `strict` is set to **`TRUE`** then the <span
+If the third parameter `strict` is set to **`true`** then the <span
 class="function">array\_search</span> function will search for
 *identical* elements in the `haystack`. This means it will also perform
 a <a href="/language/types.html" class="link">strict type comparison</a>
@@ -3575,7 +3575,7 @@ instance.
 
 ### Return Values
 
-Returns the key for `needle` if it is found in the array, **`FALSE`**
+Returns the key for `needle` if it is found in the array, **`false`**
 otherwise.
 
 If `needle` is found in `haystack` more than once, the first matching
@@ -3585,8 +3585,8 @@ parameter instead.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -3640,7 +3640,7 @@ The input array.
 
 ### Return Values
 
-Returns the shifted value, or **`NULL`** if `array` is empty or is not
+Returns the shifted value, or **`null`** if `array` is empty or is not
 an array.
 
 ### Examples
@@ -3685,9 +3685,9 @@ class="type">array</span> `$array`</span> , <span
 class="methodparam"><span class="type">int</span> `$offset`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="function">array\_slice</span> returns the sequence of
 elements from the array `array` as specified by the `offset` and
@@ -3727,7 +3727,7 @@ up until the end of the `array`.
 >
 > <span class="function">array\_slice</span> will reorder and reset the
 > integer array indices by default. This behaviour can be changed by
-> setting `preserve_keys` to **`TRUE`**. String keys are always
+> setting `preserve_keys` to **`true`**. String keys are always
 > preserved, regardless of this parameter.
 
 ### Return Values
@@ -3829,7 +3829,7 @@ class="methodparam"><span class="type">array</span> `&$array`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$replacement`<span
 class="initializer"> = \[\]</span></span> \]\] )
 
@@ -3845,7 +3845,7 @@ array, if supplied.
 > will be
 > <a href="/language/types/array.html#language.types.array.casting" class="link">typecast</a>
 > to one (i.e. `(array) $replacement`). This may result in unexpected
-> behavior when using an object or **`NULL`** `replacement`. </span>
+> behavior when using an object or **`null`** `replacement`. </span>
 
 ### Parameters
 
@@ -3889,7 +3889,7 @@ specified by the `offset`.
 
 If `replacement` is just one element it is not necessary to put
 *array()* or square brackets around it, unless the element is an array
-itself, an object or **`NULL`**.
+itself, an object or **`null`**.
 
 ### Return Values
 
@@ -4936,7 +4936,7 @@ class="type">array</span><span class="type">object</span></span>
 `&$array`</span> , <span class="methodparam"><span
 class="type">callable</span> `$callback`</span> \[, <span
 class="methodparam"><span class="type">mixed</span> `$userdata`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 Applies the user-defined `callback` function to each element of the
 `array`. This function will recurse into deeper arrays.
@@ -4964,7 +4964,7 @@ the third parameter to the `callback`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5013,7 +5013,7 @@ class="type">object</span></span> `&$array`</span> , <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> \[, <span class="methodparam"><span
 class="type">mixed</span> `$userdata`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Applies the user-defined `callback` function to each element of the
 `array` array.
@@ -5058,7 +5058,7 @@ the third parameter to the `callback`.
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### Errors/Exceptions
 
@@ -5286,7 +5286,7 @@ You may modify the behavior of the sort using the optional parameter
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5352,7 +5352,7 @@ You may modify the behavior of the sort using the optional parameter
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5526,7 +5526,7 @@ than may be expected.
 Returns the number of elements in `value`. When the parameter is neither
 an array nor an object with implemented <span
 class="classname">Countable</span> interface, *1* will be returned.
-There is one exception, if `value` is **`NULL`**, *0* will be returned.
+There is one exception, if `value` is **`null`**, *0* will be returned.
 
 ### Examples
 
@@ -5617,12 +5617,12 @@ The <span class="function">current</span> function simply returns the
 value of the array element that's currently being pointed to by the
 internal pointer. It does not move the pointer in any way. If the
 internal pointer points beyond the end of the elements list or the array
-is empty, <span class="function">current</span> returns **`FALSE`**.
+is empty, <span class="function">current</span> returns **`false`**.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -5663,14 +5663,14 @@ var_dump(current($arr)); // array(0) { }
 > **Note**: <span class="simpara"> The results of calling <span
 > class="function">current</span> on an empty array and on an array,
 > whose internal pointer points beyond the end of the elements, are
-> indistinguishable from a <span class="type">bool</span> **`FALSE`**
-> element. To properly traverse an array which may contain **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`false`**
+> element. To properly traverse an array which may contain **`false`**
 > elements, see the <span class="function">foreach</span> function.
 > </span> <span class="simpara"> To still use <span
 > class="function">current</span> and properly check if the value is
 > really an element of the array, the <span class="function">key</span>
 > of the <span class="function">current</span> element should be checked
-> to be strictly different from **`NULL`**. </span>
+> to be strictly different from **`null`**. </span>
 
 ### See Also
 
@@ -5720,7 +5720,7 @@ is returned in a four-element array, with the keys *0*, *1*, *key*, and
 element, and *1* and *value* contain the data.
 
 If the internal pointer for the array points past the end of the array
-contents, <span class="function">each</span> returns **`FALSE`**.
+contents, <span class="function">each</span> returns **`false`**.
 
 ### Examples
 
@@ -5834,7 +5834,7 @@ by reference.
 
 ### Return Values
 
-Returns the value of the last element or **`FALSE`** for empty array.
+Returns the value of the last element or **`false`** for empty array.
 
 ### Examples
 
@@ -6085,7 +6085,7 @@ Checks if a value exists in an array
 `$needle`</span> , <span class="methodparam"><span
 class="type">array</span> `$haystack`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$strict`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Searches for `needle` in `haystack` using loose comparison unless
 `strict` is set.
@@ -6104,14 +6104,14 @@ The searched value.
 The array.
 
 `strict`  
-If the third parameter `strict` is set to **`TRUE`** then the <span
+If the third parameter `strict` is set to **`true`** then the <span
 class="function">in\_array</span> function will also check the
 <a href="/language/types.html" class="link">types</a> of the `needle` in
 the `haystack`.
 
 ### Return Values
 
-Returns **`TRUE`** if `needle` is found in the array, **`FALSE`**
+Returns **`true`** if `needle` is found in the array, **`false`**
 otherwise.
 
 ### Examples
@@ -6226,7 +6226,7 @@ The <span class="function">key</span> function simply returns the key of
 the array element that's currently being pointed to by the internal
 pointer. It does not move the pointer in any way. If the internal
 pointer points beyond the end of the elements list or the array is
-empty, <span class="function">key</span> returns **`NULL`**.
+empty, <span class="function">key</span> returns **`null`**.
 
 ### Changelog
 
@@ -6297,7 +6297,7 @@ You may modify the behavior of the sort using the optional parameter
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6354,7 +6354,7 @@ You may modify the behavior of the sort using the optional parameter
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6646,7 +6646,7 @@ The input array.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6732,7 +6732,7 @@ The input array.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6874,12 +6874,12 @@ The <span class="type">array</span> being affected.
 ### Return Values
 
 Returns the array value in the next place that's pointed to by the
-internal array pointer, or **`FALSE`** if there are no more elements.
+internal array pointer, or **`false`** if there are no more elements.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -6905,13 +6905,13 @@ $mode = end($transport);     // $mode = 'plane';
 ### Notes
 
 > **Note**: <span class="simpara"> The end of an array is
-> indistinguishable from a <span class="type">bool</span> **`FALSE`**
-> element. To properly traverse an array which may contain **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`false`**
+> element. To properly traverse an array which may contain **`false`**
 > elements, see the <span class="function">foreach</span> function.
 > </span> <span class="simpara"> To still use <span
 > class="function">next</span> and properly check if the end of the
 > array has been reached, verify that the <span
-> class="function">key</span> is **`NULL`**. </span>
+> class="function">key</span> is **`null`**. </span>
 
 ### See Also
 
@@ -6956,12 +6956,12 @@ The input array.
 ### Return Values
 
 Returns the array value in the previous place that's pointed to by the
-internal array pointer, or **`FALSE`** if there are no more elements.
+internal array pointer, or **`false`** if there are no more elements.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -6987,10 +6987,10 @@ $mode = end($transport);     // $mode = 'plane';
 ### Notes
 
 > **Note**: <span class="simpara"> The beginning of an array is
-> indistinguishable from a <span class="type">bool</span> **`FALSE`**
+> indistinguishable from a <span class="type">bool</span> **`false`**
 > element. To make the distinction, check that the <span
 > class="function">key</span> of the <span class="function">prev</span>
-> element is not **`NULL`**. </span>
+> element is not **`null`**. </span>
 
 ### See Also
 
@@ -7101,13 +7101,13 @@ The input array.
 
 ### Return Values
 
-Returns the value of the first array element, or **`FALSE`** if the
+Returns the value of the first array element, or **`false`** if the
 array is empty.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -7142,11 +7142,11 @@ echo current($array) . "<br />\n"; // "step one"
 
 > **Note**: <span class="simpara"> The return value for an empty array
 > is indistinguishable from the return value in case of an array which
-> has a <span class="type">bool</span> **`FALSE`** first element. To
+> has a <span class="type">bool</span> **`false`** first element. To
 > properly check the value of the first element of an array which may
-> contain **`FALSE`** elements, first check the <span
+> contain **`false`** elements, first check the <span
 > class="function">count</span> of the array, or check that <span
-> class="function">key</span> is not **`NULL`**, after calling <span
+> class="function">key</span> is not **`null`**, after calling <span
 > class="function">reset</span>. </span>
 
 ### See Also
@@ -7189,7 +7189,7 @@ You may modify the behavior of the sort using the optional parameter
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7249,7 +7249,7 @@ The array.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -7344,7 +7344,7 @@ Sorting type flags:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7461,7 +7461,7 @@ functions.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7557,7 +7557,7 @@ class="methodparam"><span class="type">mixed</span> `$b`</span> )
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7644,7 +7644,7 @@ will compare such values as equal.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

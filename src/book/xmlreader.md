@@ -214,7 +214,7 @@ class="type">DOMNode</span><span class="type">false</span></span> <span
 class="methodname">expand</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">DOMNode</span><span
 class="type">null</span></span> `$baseNode`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">null</span></span> <span
@@ -276,7 +276,7 @@ class="methodparam">void</span> )
 <span class="methodname">next</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$name`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type"><span
@@ -285,7 +285,7 @@ class="methodname">open</span> ( <span class="methodparam"><span
 class="type">string</span> `$uri`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -334,7 +334,7 @@ class="type">XMLReader</span></span> <span class="methodname">XML</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$source`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -475,7 +475,7 @@ Closes the input the XMLReader object is currently parsing.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -494,7 +494,7 @@ class="type">DOMNode</span><span class="type">false</span></span> <span
 class="methodname">XMLReader::expand</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">DOMNode</span><span class="type">null</span></span>
-`$baseNode`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$baseNode`<span class="initializer"> = **`null`**</span></span> \] )
 
 This method copies the current node and returns the appropriate DOM
 object.
@@ -507,7 +507,7 @@ class="classname">DOMDocument</span> for the created DOM object.
 
 ### Return Values
 
-The resulting <span class="classname">DOMNode</span> or **`FALSE`** on
+The resulting <span class="classname">DOMNode</span> or **`false`** on
 error.
 
 XMLReader::getAttribute
@@ -522,7 +522,7 @@ class="type">string</span><span class="type">null</span></span> <span
 class="methodname">XMLReader::getAttribute</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
-Returns the value of a named attribute or **`NULL`** if the attribute
+Returns the value of a named attribute or **`null`** if the attribute
 does not exist or not positioned on an element node.
 
 ### Parameters
@@ -534,11 +534,11 @@ The name of the attribute.
 
 | Version | Description                                     |
 |---------|-------------------------------------------------|
-| 8.0.0   | This function can no longer return **`FALSE`**. |
+| 8.0.0   | This function can no longer return **`false`**. |
 
 ### Return Values
 
-The value of the attribute, or **`NULL`** if no attribute with the given
+The value of the attribute, or **`null`** if no attribute with the given
 `name` is found or not positioned on an element node.
 
 ### See Also
@@ -569,14 +569,14 @@ The position of the attribute.
 ### Return Values
 
 The value of the attribute, or an empty string (before PHP 5.6) or
-**`NULL`** (from PHP 5.6 onwards) if no attribute exists at `index` or
+**`null`** (from PHP 5.6 onwards) if no attribute exists at `index` or
 is not positioned on the element.
 
 ### Changelog
 
 | Version | Description                                                                                                      |
 |---------|------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | <span class="methodname">XMLReader::getAttributeNo</span> now returns **`NULL`** if the attribute doesn't exist. |
+| 5.6.0   | <span class="methodname">XMLReader::getAttributeNo</span> now returns **`null`** if the attribute doesn't exist. |
 
 ### See Also
 
@@ -611,15 +611,15 @@ The namespace URI.
 ### Return Values
 
 The value of the attribute, or an empty string (before PHP 5.6) or
-**`NULL`** (from PHP 5.6 onwards) if no attribute with the given `name`
+**`null`** (from PHP 5.6 onwards) if no attribute with the given `name`
 and `namespace` is found or not positioned of element.
 
 ### Changelog
 
 | Version | Description                                                                                                      |
 |---------|------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | This function can no longer return **`FALSE`**.                                                                  |
-| 5.6.0   | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`NULL`** if the attribute doesn't exist. |
+| 8.0.0   | This function can no longer return **`false`**.                                                                  |
+| 5.6.0   | <span class="methodname">XMLReader::getAttributeNS</span> now returns **`null`** if the attribute doesn't exist. |
 
 ### See Also
 
@@ -647,7 +647,7 @@ One of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -669,7 +669,7 @@ valid.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -720,13 +720,13 @@ String containing the prefix.
 
 ### Return Values
 
-The value of the namespace, or **`NULL`** if no namespace exists.
+The value of the namespace, or **`null`** if no namespace exists.
 
 ### Changelog
 
 | Version | Description                                     |
 |---------|-------------------------------------------------|
-| 8.0.0   | This function can no longer return **`FALSE`**. |
+| 8.0.0   | This function can no longer return **`false`**. |
 
 XMLReader::moveToAttribute
 ==========================
@@ -748,7 +748,7 @@ The name of the attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -777,7 +777,7 @@ The position of the attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -811,7 +811,7 @@ The namespace URI.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -835,7 +835,7 @@ Moves cursor to the parent Element of current Attribute.
 
 ### Return Values
 
-Returns **`TRUE`** if successful and **`FALSE`** if it fails or not
+Returns **`true`** if successful and **`false`** if it fails or not
 positioned on Attribute when this method is called.
 
 ### See Also
@@ -860,7 +860,7 @@ Moves cursor to the first Attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -886,7 +886,7 @@ moves to first attribute if positioned on an Element.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -907,7 +907,7 @@ Move cursor to next node skipping all subtrees
 <span class="methodname">XMLReader::next</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$name`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$name`<span class="initializer"> = **`null`**</span></span> \] )
 
 Positions cursor on the next node skipping all subtrees.
 
@@ -918,7 +918,7 @@ The name of the next node to move to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -946,7 +946,7 @@ class="methodname">XMLReader::open</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -958,7 +958,7 @@ Set the URI containing the XML document to be parsed.
 URI pointing to the document.
 
 `encoding`  
-The document encoding or **`NULL`**.
+The document encoding or **`null`**.
 
 `flags`  
 A bitmask of the
@@ -966,9 +966,9 @@ A bitmask of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns an <span class="classname">XMLReader</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1001,7 +1001,7 @@ Moves cursor to the next node in the document.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1140,12 +1140,12 @@ One of the
 <a href="/class/xmlreader.html#Predefined%20Constants" class="link">parser option constants</a>.
 
 `value`  
-If set to **`TRUE`** the option will be enabled otherwise will be
+If set to **`true`** the option will be enabled otherwise will be
 disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 XMLReader::setRelaxNGSchema
 ===========================
@@ -1169,7 +1169,7 @@ filename or URI pointing to a RelaxNG Schema.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1199,7 +1199,7 @@ String containing the RelaxNG Schema.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1230,7 +1230,7 @@ The filename of the XSD schema.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1264,7 +1264,7 @@ class="methodname">XMLReader::XML</span> ( <span
 class="methodparam"><span class="type">string</span> `$source`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -1276,7 +1276,7 @@ Set the data containing the XML to parse.
 String containing the XML to be parsed.
 
 `encoding`  
-The document encoding or **`NULL`**.
+The document encoding or **`null`**.
 
 `flags`  
 A bitmask of the
@@ -1284,9 +1284,9 @@ A bitmask of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns an <span class="classname">XMLReader</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 

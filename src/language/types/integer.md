@@ -143,7 +143,7 @@ See also
 
 #### From <a href="/language/types/boolean.html" class="link">booleans</a>
 
-**`FALSE`** will yield *0* (zero), and **`TRUE`** will yield *1* (one).
+**`false`** will yield *0* (zero), and **`true`** will yield *1* (one).
 
 #### From <a href="/language/types/float.html" class="link">floating point numbers</a>
 
@@ -185,7 +185,7 @@ value, otherwise it is converted to zero (*0*).
 
 #### From <span class="type">NULL</span>
 
-**`NULL`** is always converted to zero (*0*).
+**`null`** is always converted to zero (*0*).
 
 #### From other types
 

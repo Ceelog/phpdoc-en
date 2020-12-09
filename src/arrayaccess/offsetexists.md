@@ -21,7 +21,7 @@ class="classname">ArrayAccess</span>.
 > When using <span class="function">empty</span> <span
 > class="function">ArrayAccess::offsetGet</span> will be called and
 > checked if empty only if <span
-> class="function">ArrayAccess::offsetExists</span> returns **`TRUE`**.
+> class="function">ArrayAccess::offsetExists</span> returns **`true`**.
 
 ### Parameters
 
@@ -30,7 +30,7 @@ An offset to check for.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 > **Note**:
 >

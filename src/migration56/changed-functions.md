@@ -17,7 +17,7 @@ Changed functions
 
 -   <span class="simpara"> Uploads using the *@file* syntax are now only
     supported if the **`CURLOPT_SAFE_UPLOAD`** option is set to
-    **`FALSE`**. <span class="classname">CURLFile</span> should be used
+    **`false`**. <span class="classname">CURLFile</span> should be used
     instead. </span>
 
 ### <a href="/book/mcrypt.html" class="link">Mcrypt</a>
@@ -59,5 +59,5 @@ Changed functions
 -   <span class="simpara"> <span
     class="methodname">XMLReader::getAttributeNs</span> and <span
     class="methodname">XMLReader::getAttributeNo</span> now return
-    **`NULL`** if the attribute could not be found, like <span
+    **`null`** if the attribute could not be found, like <span
     class="methodname">XMLReader::getAttribute</span>. </span>

@@ -5,7 +5,7 @@ PHP supports C-style pre- and post-increment and decrement operators.
 
 > **Note**: <span class="simpara"> The increment/decrement operators
 > only affect numbers and strings. Arrays, objects, booleans and
-> resources are not affected. Decrementing **`NULL`** values has no
+> resources are not affected. Decrementing **`null`** values has no
 > effect too, but incrementing them results in *1*. </span>
 
 | Example | Name           | Effect                                     |

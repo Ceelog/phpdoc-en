@@ -996,7 +996,7 @@ The index being checked.
 
 ### Return Values
 
-**`TRUE`** if the requested index exists, otherwise **`FALSE`**
+**`true`** if the requested index exists, otherwise **`false`**
 
 ### Examples
 
@@ -1036,7 +1036,7 @@ The index with the value.
 
 ### Return Values
 
-The value at the specified index or **`NULL`**.
+The value at the specified index or **`null`**.
 
 ### Errors/Exceptions
 

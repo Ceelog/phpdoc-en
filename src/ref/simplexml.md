@@ -31,13 +31,13 @@ class="type">SimpleXMLElement</span> class.
 
 ### Return Values
 
-Returns a <span class="type">SimpleXMLElement</span> or **`FALSE`** on
+Returns a <span class="type">SimpleXMLElement</span> or **`false`** on
 failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -91,7 +91,7 @@ class="type">int</span> `$options`<span class="initializer"> =
 class="type">string</span> `$ns`<span class="initializer"> =
 ""</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_prefix`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Convert the well-formed XML document in the given file to an object.
 
@@ -123,19 +123,19 @@ parameter to specify
 Namespace prefix or URI.
 
 `is_prefix`  
-**`TRUE`** if `ns` is a prefix, **`FALSE`** if it's a URI; defaults to
-**`FALSE`**.
+**`true`** if `ns` is a prefix, **`false`** if it's a URI; defaults to
+**`false`**.
 
 ### Return Values
 
 Returns an <span class="type">object</span> of class <span
 class="type">SimpleXMLElement</span> with properties containing the data
-held within the XML document, or **`FALSE`** on failure.
+held within the XML document, or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -217,7 +217,7 @@ class="type">int</span> `$options`<span class="initializer"> =
 class="type">string</span> `$ns`<span class="initializer"> =
 ""</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_prefix`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Takes a well-formed XML string and returns it as an object.
 
@@ -241,19 +241,19 @@ parameter to specify
 Namespace prefix or URI.
 
 `is_prefix`  
-**`TRUE`** if `ns` is a prefix, **`FALSE`** if it's a URI; defaults to
-**`FALSE`**.
+**`true`** if `ns` is a prefix, **`false`** if it's a URI; defaults to
+**`false`**.
 
 ### Return Values
 
 Returns an <span class="type">object</span> of class <span
 class="type">SimpleXMLElement</span> with properties containing the data
-held within the xml document, or **`FALSE`** on failure.
+held within the xml document, or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use

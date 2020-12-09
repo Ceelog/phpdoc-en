@@ -1,5 +1,5 @@
-*foreach*
----------
+foreach
+-------
 
 The *foreach* construct provides an easy way to iterate over arrays.
 *foreach* works only on arrays and objects, and will issue an error when

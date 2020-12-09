@@ -26,7 +26,7 @@ Delay in seconds
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -38,7 +38,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -65,7 +65,7 @@ The request resource
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -161,7 +161,7 @@ The new permissions. E.g. **`0644`**.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -189,7 +189,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_chmod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -233,7 +233,7 @@ Group ID. Is ignored when equal to -1.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -261,7 +261,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_chown</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -293,7 +293,7 @@ Stream, Socket resource, or numeric file descriptor
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -321,7 +321,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_close</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -366,7 +366,7 @@ modifications `result` value returned by `execute`
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -394,7 +394,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_custom</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -469,7 +469,7 @@ Target stream, Socket resource, or numeric file descriptor
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -497,7 +497,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_dup2</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_event\_loop
 ================
@@ -519,8 +519,8 @@ This function has no parameters.
 
 ### Return Values
 
-<span class="function">eio\_event\_loop</span> returns **`TRUE`** on
-success or **`FALSE`** on error.
+<span class="function">eio\_event\_loop</span> returns **`true`** on
+success or **`false`** on error.
 
 ### Examples
 
@@ -606,7 +606,7 @@ Specifies length the byte range.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -634,7 +634,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_fallocate</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_fchmod
 ===========
@@ -668,7 +668,7 @@ The new permissions. E.g. 0644.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -696,7 +696,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_fchmod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -738,7 +738,7 @@ Group ID. Is ignored when equal to -1.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -795,7 +795,7 @@ Stream, Socket resource, or numeric file descriptor, e.g. returned by
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -823,7 +823,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_fdatasync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_fstat
 ==========
@@ -849,7 +849,7 @@ Stream, Socket resource, or numeric file descriptor.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -877,7 +877,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -982,7 +982,7 @@ A file descriptor of a file within the mounted file system.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1010,7 +1010,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_fstatvfs</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -1042,7 +1042,7 @@ Stream, Socket resource, or numeric file descriptor.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1070,7 +1070,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_fsync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -1109,7 +1109,7 @@ Offset from beginning of the file
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1137,7 +1137,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_ftruncate</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -1179,7 +1179,7 @@ Modification time
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1207,7 +1207,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_futime</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -1237,7 +1237,7 @@ This function has no parameters.
 ### Return Values
 
 <span class="function">eio\_get\_event\_stream</span> returns stream on
-success; otherwise, **`NULL`**
+success; otherwise, **`null`**
 
 ### Examples
 
@@ -1531,7 +1531,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_grp</span> returns request group resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -1664,7 +1664,7 @@ Target file path.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1769,7 +1769,7 @@ The file path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1797,7 +1797,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_lstat</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -1893,7 +1893,7 @@ Access mode, e.g. 0755
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -1921,7 +1921,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_mkdir</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -2008,7 +2008,7 @@ details*.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2036,7 +2036,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_mknod</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -2150,7 +2150,7 @@ the whole request cycle. Could be useful in debugging.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2178,7 +2178,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_nop</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -2370,7 +2370,7 @@ C header file. Required, if a file is created. Otherwise ignored.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2543,7 +2543,7 @@ Offset within the file.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2667,7 +2667,7 @@ Number of bytes to be read.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2695,7 +2695,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_readahead</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_readdir
 ============
@@ -2729,7 +2729,7 @@ Combination of *EIO\_READDIR\_\** constants.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -2757,7 +2757,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_readdir</span> returns request resource on
-success, or **`FALSE`** on error. Sets `result` argument of `callback`
+success, or **`false`** on error. Sets `result` argument of `callback`
 function according to `flags`:
 
 **`EIO_READDIR_DENTS`** (<span class="type">int</span>)  
@@ -2982,7 +2982,7 @@ Source symbolic link path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3010,7 +3010,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_readlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -3149,7 +3149,7 @@ Target path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3177,7 +3177,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_rename</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -3235,7 +3235,7 @@ Directory path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3263,7 +3263,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_rmdir</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -3338,7 +3338,7 @@ Number of bytes to be read.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3366,7 +3366,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_seek</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_sendfile
 =============
@@ -3408,7 +3408,7 @@ Number of bytes to copy.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3436,7 +3436,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_sendfile</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_set\_max\_idle
 ===================
@@ -3585,7 +3585,7 @@ The file path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3613,7 +3613,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_stat</span> returns request resource on
-success or **`FALSE`** on error. On success assigns `result` argument of
+success or **`false`** on error. On success assigns `result` argument of
 `callback` to an array.
 
 ### Examples
@@ -3704,7 +3704,7 @@ Pathname of any file within the mounted file system
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3732,7 +3732,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_statvfs</span> returns request resource on
-success or **`FALSE`** on error. On success assigns `result` argument of
+success or **`false`** on error. On success assigns `result` argument of
 `callback` to an array.
 
 ### Examples
@@ -3815,7 +3815,7 @@ Target path
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3843,7 +3843,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_symlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### Examples
 
@@ -3934,7 +3934,7 @@ man page).
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -3962,7 +3962,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_sync\_file\_range</span> returns request
-resource on success or **`FALSE`** on error.
+resource on success or **`false`** on error.
 
 eio\_sync
 =========
@@ -3987,7 +3987,7 @@ This function has no parameters.
 ### Return Values
 
 <span class="function">eio\_sync</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_syncfs
 ===========
@@ -4013,7 +4013,7 @@ File descriptor
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -4041,7 +4041,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_syncfs</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_truncate
 =============
@@ -4075,7 +4075,7 @@ Offset from beginning of the file.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -4103,7 +4103,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_busy</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -4136,7 +4136,7 @@ Path to file
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -4164,7 +4164,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_unlink</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 eio\_utime
 ==========
@@ -4199,7 +4199,7 @@ Modification time
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -4227,7 +4227,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_utime</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 
@@ -4275,7 +4275,7 @@ Offset from the beginning of file.
 
 `pri`  
 The request priority: **`EIO_PRI_DEFAULT`**, **`EIO_PRI_MIN`**,
-**`EIO_PRI_MAX`**, or **`NULL`**. If **`NULL`** passed, `pri` internally
+**`EIO_PRI_MAX`**, or **`null`**. If **`null`** passed, `pri` internally
 is set to **`EIO_PRI_DEFAULT`**.
 
 `callback`  
@@ -4303,7 +4303,7 @@ Arbitrary variable passed to `callback`.
 ### Return Values
 
 <span class="function">eio\_write</span> returns request resource on
-success or **`FALSE`** on error.
+success or **`false`** on error.
 
 ### See Also
 

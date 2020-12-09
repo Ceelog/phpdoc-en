@@ -34,7 +34,7 @@ been aborted and the shutdown function is called. This shutdown function
 will also get called at the end of your script terminating normally, so
 to do something different in case of a client disconnect you can use the
 <span class="function">connection\_aborted</span> function. This
-function will return **`TRUE`** if the connection was aborted.
+function will return **`true`** if the connection was aborted.
 
 Your script can also be terminated by the built-in script timer. The
 default timeout is 30 seconds. It can be changed using the

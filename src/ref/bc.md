@@ -11,7 +11,7 @@ Add two arbitrary precision numbers
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Sums `num1` and `num2`.
 
@@ -72,7 +72,7 @@ Compare two arbitrary precision numbers
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Compares the `num1` to the `num2` and returns the result as an integer.
 
@@ -126,7 +126,7 @@ Divide two arbitrary precision numbers
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Divides the `num1` by the `num2`.
 
@@ -146,7 +146,7 @@ fallback to *0* if this has not been set.
 
 ### Return Values
 
-Returns the result of the division as a string, or **`NULL`** if `num2`
+Returns the result of the division as a string, or **`null`** if `num2`
 is *0*.
 
 ### Changelog
@@ -184,7 +184,7 @@ Get modulus of an arbitrary precision number
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Get the remainder of dividing `num1` by `num2`. Unless `num2` is zero,
 the result has the same sign as `num1`.
@@ -199,7 +199,7 @@ The divisor, as a string.
 
 ### Return Values
 
-Returns the modulus as a string, or **`NULL`** if `num2` is *0*.
+Returns the modulus as a string, or **`null`** if `num2` is *0*.
 
 ### Changelog
 
@@ -249,7 +249,7 @@ Multiply two arbitrary precision numbers
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Multiply the `num1` by the `num2`.
 
@@ -323,7 +323,7 @@ Raise an arbitrary precision number to another
 `$exponent`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">int</span><span
 class="type">null</span></span> `$scale`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Raise `num` to the power `exponent`.
 
@@ -402,7 +402,7 @@ class="methodparam"><span class="type">string</span> `$exponent`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$modulus`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Use the fast-exponentiation method to raise `num` to the power
 `exponent` with respect to the modulus `modulus`.
@@ -427,7 +427,7 @@ fallback to *0* if this has not been set.
 
 ### Return Values
 
-Returns the result as a string, or **`FALSE`** if `modulus` is *0* or
+Returns the result as a string, or **`false`** if `modulus` is *0* or
 `exponent` is negative.
 
 ### Notes
@@ -481,7 +481,7 @@ functions that do not explicitly specify a scale parameter.
 
 <span class="type">int</span> <span class="methodname">bcscale</span>
 (\[ <span class="methodparam"><span class="type">null</span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Gets the current scale factor.
 
@@ -500,7 +500,7 @@ is returned.
 | Version | Description                                                                                                                                                                                                                                            |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `scale` is now nullable.                                                                                                                                                                                                                               |
-| 7.3.0   | <span class="function">bcscale</span> can now be used to get the current scale factor; when used as setter, it now returns the old scale value. Formerly, `scale` was mandatory, and <span class="function">bcscale</span> always returned **`TRUE`**. |
+| 7.3.0   | <span class="function">bcscale</span> can now be used to get the current scale factor; when used as setter, it now returns the old scale value. Formerly, `scale` was mandatory, and <span class="function">bcscale</span> always returned **`true`**. |
 
 ### Examples
 
@@ -530,7 +530,7 @@ Get the square root of an arbitrary precision number
 ( <span class="methodparam"><span class="type">string</span>
 `$num`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Return the square root of the `num`.
 
@@ -547,7 +547,7 @@ fallback to *0* if this has not been set.
 
 ### Return Values
 
-Returns the square root as a string, or **`NULL`** if `num` is negative.
+Returns the square root as a string, or **`null`** if `num` is negative.
 
 ### Changelog
 
@@ -584,7 +584,7 @@ Subtract one arbitrary precision number from another
 class="type">string</span> `$num2`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$scale`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$scale`<span class="initializer"> = **`null`**</span></span> \] )
 
 Subtracts the `num2` from the `num1`.
 

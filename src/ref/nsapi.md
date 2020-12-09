@@ -121,7 +121,7 @@ The URI of the script.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Table of Contents**
 

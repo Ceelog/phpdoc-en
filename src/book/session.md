@@ -328,7 +328,7 @@ session_start();
 > Since this class' methods are designed to be called internally by PHP
 > as part of the normal session workflow, child class calls to parent
 > methods (i.e. the actual internal native handlers) will return
-> **`FALSE`** unless the session has actually been started (either
+> **`false`** unless the session has actually been started (either
 > automatically, or by explicit <span
 > class="function">session\_start</span>. This is important to consider
 > when writing unit tests where the class methods might be invoked
@@ -370,7 +370,7 @@ This function has no parameters.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 SessionHandler::create\_sid
@@ -408,7 +408,7 @@ class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called internally by PHP with <span
 class="function">session\_regenerate\_id</span> (assuming the `$destroy`
-is set to **`TRUE`**, by <span class="function">session\_destroy</span>
+is set to **`true`**, by <span class="function">session\_destroy</span>
 or when <span class="function">session\_decode</span> fails.
 
 This method wraps the internal PHP save handler defined in the
@@ -432,7 +432,7 @@ The session ID being destroyed.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 SessionHandler::gc
@@ -477,14 +477,14 @@ be removed.
 
 ### Return Values
 
-Returns the number of deleted sessions on success, or **`FALSE`** on
+Returns the number of deleted sessions on success, or **`false`** on
 failure. Note this value is returned internally to PHP for processing.
 
 ### Changelog
 
 | Version | Description                                                         |
 |---------|---------------------------------------------------------------------|
-| 7.1.0   | Prior to this version, the function returned **`TRUE`** on success. |
+| 7.1.0   | Prior to this version, the function returned **`true`** on success. |
 
 SessionHandler::open
 ====================
@@ -527,7 +527,7 @@ The session name.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 ### See Also
@@ -632,7 +632,7 @@ serialization method.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 ### See Also
@@ -800,7 +800,7 @@ This function has no parameters.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 SessionHandlerInterface::destroy
@@ -817,7 +817,7 @@ class="methodparam"><span class="type">string</span> `$id`</span> )
 
 Destroys a session. Called by <span
 class="function">session\_regenerate\_id</span> (with $destroy =
-**`TRUE`**), <span class="function">session\_destroy</span> and when
+**`true`**), <span class="function">session\_destroy</span> and when
 <span class="function">session\_decode</span> fails.
 
 ### Parameters
@@ -827,7 +827,7 @@ The session ID being destroyed.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 SessionHandlerInterface::gc
@@ -860,14 +860,14 @@ be removed.
 
 ### Return Values
 
-Returns the number of deleted sessions on success, or **`FALSE`** on
+Returns the number of deleted sessions on success, or **`false`** on
 failure. Note this value is returned internally to PHP for processing.
 
 ### Changelog
 
 | Version | Description                                                         |
 |---------|---------------------------------------------------------------------|
-| 7.1.0   | Prior to this version, the function returned **`TRUE`** on success. |
+| 7.1.0   | Prior to this version, the function returned **`true`** on success. |
 
 SessionHandlerInterface::open
 =============================
@@ -897,7 +897,7 @@ The session name.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 ### See Also
@@ -1003,7 +1003,7 @@ serialization method.
 
 ### Return Values
 
-The return value (usually **`TRUE`** on success, **`FALSE`** on
+The return value (usually **`true`** on success, **`false`** on
 failure). Note this value is returned internally to PHP for processing.
 
 ### See Also
@@ -1133,7 +1133,7 @@ The session data.
 
 ### Return Values
 
-Returns **`TRUE`** if the timestamp was updated, **`FALSE`** otherwise.
+Returns **`true`** if the timestamp was updated, **`false`** otherwise.
 Note that this value is returned internally to PHP for processing.
 
 SessionUpdateTimestampHandlerInterface::validateId
@@ -1162,5 +1162,5 @@ The session ID.
 
 ### Return Values
 
-Returns **`TRUE`** for valid ID, **`FALSE`** otherwise. Note that this
+Returns **`true`** for valid ID, **`false`** otherwise. Note that this
 value is returned internally to PHP for processing.

@@ -373,13 +373,13 @@ The above example will output:
 >
 > ``` php
 > <?php
-> print Some\Class\DoesNot\Exist::class;
+> print Does\Not\Exist::class;
 > ?>
 > ```
 >
 > The above example will output:
 >
->     Some\Class\Does\Not\Exist
+>     Does\Not\Exist
 
 As of PHP 8.0.0, the *::class* constant may also be used on objects.
 This resolution happens at runtime, not compile time. Its effect is the
@@ -407,7 +407,7 @@ The above example will output:
 As of PHP 8.0.0, properties and methods may also be accessed with the
 "nullsafe" operator instead: *?-\>*. The nullsafe operator works the
 same as property or method access as above, except that if the object
-being dereferenced is **`NULL`** then **`NULL`** will be returned rather
+being dereferenced is **`null`** then **`null`** will be returned rather
 than an exception thrown. If the dereference is part of a chain, the
 rest of the chain is skipped.
 

@@ -21,7 +21,7 @@ the first will be used. If there are no pending connections, <span
 class="function">socket\_accept</span> will block until a connection
 becomes present. If `socket` has been made non-blocking using <span
 class="function">socket\_set\_blocking</span> or <span
-class="function">socket\_set\_nonblock</span>, **`FALSE`** will be
+class="function">socket\_set\_nonblock</span>, **`false`** will be
 returned.
 
 The socket resource returned by <span
@@ -37,7 +37,7 @@ class="function">socket\_create</span>.
 
 ### Return Values
 
-Returns a new socket resource on success, or **`FALSE`** on error. The
+Returns a new socket resource on success, or **`false`** on error. The
 actual error code can be retrieved by calling <span
 class="function">socket\_last\_error</span>. This error code may be
 passed to <span class="function">socket\_strerror</span> to get a
@@ -74,7 +74,7 @@ class="function">socket\_addrinfo\_lookup</span>.
 
 ### Return Values
 
-Returns a Socket resource on success or **`NULL`** on failure.
+Returns a Socket resource on success or **`null`** on failure.
 
 ### See Also
 
@@ -106,7 +106,7 @@ class="function">socket\_addrinfo\_lookup</span>
 
 ### Return Values
 
-Returns a Socket resource on success or **`NULL`** on failure.
+Returns a Socket resource on success or **`null`** on failure.
 
 ### See Also
 
@@ -224,7 +224,7 @@ and designates the port on which to listen for connections.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 The error code can be retrieved with <span
 class="function">socket\_last\_error</span>. This code may be passed to
@@ -424,7 +424,7 @@ the remote host to which a connection should be made.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The error code
+Returns **`true`** on success or **`false`** on failure. The error code
 can be retrieved with <span class="function">socket\_last\_error</span>.
 This code may be passed to <span
 class="function">socket\_strerror</span> to get a textual explanation of
@@ -432,7 +432,7 @@ the error.
 
 > **Note**:
 >
-> If the socket is non-blocking then this function returns **`FALSE`**
+> If the socket is non-blocking then this function returns **`false`**
 > with an error *Operation now in progress*.
 
 ### See Also
@@ -477,7 +477,7 @@ information.
 ### Return Values
 
 <span class="function">socket\_create\_listen</span> returns a new
-socket resource on success or **`FALSE`** on error. The error code can
+socket resource on success or **`false`** on error. The error code can
 be retrieved with <span class="function">socket\_last\_error</span>.
 This code may be passed to <span
 class="function">socket\_strerror</span> to get a textual explanation of
@@ -550,7 +550,7 @@ inserted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -691,7 +691,7 @@ also be used.
 ### Return Values
 
 <span class="function">socket\_create</span> returns a socket resource
-on success, or **`FALSE`** on error. The actual error code can be
+on success, or **`false`** on error. The actual error code can be
 retrieved by calling <span class="function">socket\_last\_error</span>.
 This error code may be passed to <span
 class="function">socket\_strerror</span> to get a textual explanation of
@@ -738,7 +738,7 @@ available.
 
 ### Return Values
 
-Return resource or **`FALSE`** on failure.
+Return resource or **`false`** on failure.
 
 socket\_get\_option
 ===================
@@ -941,7 +941,7 @@ class="function">getprotobyname</span> function.
 
 ### Return Values
 
-Returns the value of the given option, or **`FALSE`** on errors.
+Returns the value of the given option, or **`false`** on errors.
 
 ### Examples
 
@@ -1016,8 +1016,8 @@ If given, this will hold the port associated to `address`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. <span
-class="function">socket\_getpeername</span> may also return **`FALSE`**
+Returns **`true`** on success or **`false`** on failure. <span
+class="function">socket\_getpeername</span> may also return **`false`**
 if the socket type is not any of **`AF_INET`**, **`AF_INET6`**, or
 **`AF_UNIX`**, in which case the last socket error code is *not*
 updated.
@@ -1092,8 +1092,8 @@ If provided, this will hold the associated port.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. <span
-class="function">socket\_getsockname</span> may also return **`FALSE`**
+Returns **`true`** on success or **`false`** on failure. <span
+class="function">socket\_getsockname</span> may also return **`false`**
 if the socket type is not any of **`AF_INET`**, **`AF_INET6`**, or
 **`AF_UNIX`**, in which case the last socket error code is *not*
 updated.
@@ -1126,7 +1126,7 @@ The stream resource to import.
 
 ### Return Values
 
-Returns **`FALSE`** or **`NULL`** on failure.
+Returns **`false`** or **`null`** on failure.
 
 ### Examples
 
@@ -1251,7 +1251,7 @@ ignored so that retries may succeed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. The error code
+Returns **`true`** on success or **`false`** on failure. The error code
 can be retrieved with <span class="function">socket\_last\_error</span>.
 This code may be passed to <span
 class="function">socket\_strerror</span> to get a textual explanation of
@@ -1308,7 +1308,7 @@ Optional `type` parameter is a named constant:
 ### Return Values
 
 <span class="function">socket\_read</span> returns the data as a string
-on success, or **`FALSE`** on error (including if the remote host has
+on success, or **`false`** on error (including if the remote host has
 closed the connection). The error code can be retrieved with <span
 class="function">socket\_last\_error</span>. This code may be passed to
 <span class="function">socket\_strerror</span> to get a textual
@@ -1363,7 +1363,7 @@ socket\_create().
 `buf`  
 The data received will be fetched to the variable specified with `buf`.
 If an error occurs, if the connection is reset, or if no data is
-available, `buf` will be set to **`NULL`**.
+available, `buf` will be set to **`null`**.
 
 `len`  
 Up to `len` bytes will be fetched from remote host.
@@ -1382,7 +1382,7 @@ joined with the binary OR (*\|*) operator.
 ### Return Values
 
 <span class="function">socket\_recv</span> returns the number of bytes
-received, or **`FALSE`** if there was an error. The actual error code
+received, or **`false`** if there was an error. The actual error code
 can be retrieved by calling <span
 class="function">socket\_last\_error</span>. This error code may be
 passed to <span class="function">socket\_strerror</span> to get a
@@ -1494,7 +1494,7 @@ can be specified to modify the behaviour of the function.
 The `name` and `port` must be passed by reference. If the socket is not
 connection-oriented, `name` will be set to the internet protocol address
 of the remote host or the path to the UNIX socket. If the socket is
-connection-oriented, `name` is **`NULL`**. Additionally, the `port` will
+connection-oriented, `name` is **`null`**. Additionally, the `port` will
 contain the port of the remote host in the case of an unconnected
 **`AF_INET`** or **`AF_INET6`** socket.
 
@@ -1526,17 +1526,17 @@ joined with the binary OR (*\|*) operator.
 `name`  
 If the socket is of the type **`AF_UNIX`** type, `name` is the path to
 the file. Else, for unconnected sockets, `name` is the IP address of,
-the remote host, or **`NULL`** if the socket is connection-oriented.
+the remote host, or **`null`** if the socket is connection-oriented.
 
 `port`  
 This argument only applies to **`AF_INET`** and **`AF_INET6`** sockets,
 and specifies the remote port from which the data is received. If the
-socket is connection-oriented, `port` will be **`NULL`**.
+socket is connection-oriented, `port` will be **`null`**.
 
 ### Return Values
 
 <span class="function">socket\_recvfrom</span> returns the number of
-bytes received, or **`FALSE`** if there was an error. The actual error
+bytes received, or **`false`** if there was an error. The actual error
 code can be retrieved by calling <span
 class="function">socket\_last\_error</span>. This error code may be
 passed to <span class="function">socket\_strerror</span> to get a
@@ -1651,7 +1651,7 @@ The `tv_sec` and `tv_usec` together form the *timeout* parameter. The
 *timeout* is an upper bound on the amount of time elapsed before <span
 class="function">socket\_select</span> return. `tv_sec` may be zero ,
 causing <span class="function">socket\_select</span> to return
-immediately. This is useful for polling. If `tv_sec` is **`NULL`** (no
+immediately. This is useful for polling. If `tv_sec` is **`null`** (no
 timeout), <span class="function">socket\_select</span> can block
 indefinitely.
 
@@ -1664,19 +1664,19 @@ actually changed status.
 
 You do not need to pass every array to <span
 class="function">socket\_select</span>. You can leave it out and use an
-empty array or **`NULL`** instead. Also do not forget that those arrays
+empty array or **`null`** instead. Also do not forget that those arrays
 are passed *by reference* and will be modified after <span
 class="function">socket\_select</span> returns.
 
 > **Note**:
 >
 > Due a limitation in the current Zend Engine it is not possible to pass
-> a constant modifier like **`NULL`** directly as a parameter to a
+> a constant modifier like **`null`** directly as a parameter to a
 > function which expects this parameter to be passed by reference.
 > Instead use a temporary variable or an expression with the leftmost
 > member being a temporary variable:
 >
-> **Example \#1 Using **`NULL`** with <span
+> **Example \#1 Using **`null`** with <span
 > class="function">socket\_select</span>**
 >
 > ``` php
@@ -1691,14 +1691,14 @@ class="function">socket\_select</span> returns.
 On success <span class="function">socket\_select</span> returns the
 number of socket resources contained in the modified arrays, which may
 be zero if the timeout expires before anything interesting happens. On
-error **`FALSE`** is returned. The error code can be retrieved with
+error **`false`** is returned. The error code can be retrieved with
 <span class="function">socket\_last\_error</span>.
 
 > **Note**:
 >
 > Be sure to use the *===* operator when checking for an error. Since
 > the <span class="function">socket\_select</span> may return 0 the
-> comparison with *==* would evaluate to **`TRUE`**:
+> comparison with *==* would evaluate to **`true`**:
 >
 > **Example \#2 Understanding <span
 > class="function">socket\_select</span>'s result**
@@ -1813,7 +1813,7 @@ joined with the binary OR (*\|*) operator.
 ### Return Values
 
 <span class="function">socket\_send</span> returns the number of bytes
-sent, or **`FALSE`** on error.
+sent, or **`false`** on error.
 
 ### See Also
 
@@ -1850,7 +1850,7 @@ available.
 
 ### Return Values
 
-Returns the number of bytes sent, or **`FALSE`** on failure.
+Returns the number of bytes sent, or **`false`** on failure.
 
 ### See Also
 
@@ -1911,7 +1911,7 @@ IP address of the remote host.
 ### Return Values
 
 <span class="function">socket\_sendto</span> returns the number of bytes
-sent to the remote host, or **`FALSE`** if an error occurred.
+sent to the remote host, or **`false`** if an error occurred.
 
 ### Examples
 
@@ -1962,7 +1962,7 @@ class="function">socket\_accept</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2018,7 +2018,7 @@ class="function">socket\_accept</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2089,7 +2089,7 @@ The option value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2178,7 +2178,7 @@ The value of `how` can be one of the following:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 socket\_strerror
 ================
@@ -2275,7 +2275,7 @@ it is silently truncated to the length of the buffer.
 ### Return Values
 
 Returns the number of bytes successfully written to the socket or
-**`FALSE`** on failure. The error code can be retrieved with <span
+**`false`** on failure. The error code can be retrieved with <span
 class="function">socket\_last\_error</span>. This code may be passed to
 <span class="function">socket\_strerror</span> to get a textual
 explanation of the error.
@@ -2284,7 +2284,7 @@ explanation of the error.
 >
 > It is perfectly valid for <span class="function">socket\_write</span>
 > to return zero which means no bytes have been written. Be sure to use
-> the *===* operator to check for **`FALSE`** in case of an error.
+> the *===* operator to check for **`false`** in case of an error.
 
 ### Notes
 
@@ -2337,7 +2337,7 @@ The ID of the process which will import the socket.
 
 ### Return Values
 
-Returns an identifier to be used for the import, or **`FALSE`** on
+Returns an identifier to be used for the import, or **`false`** on
 failure
 
 ### See Also
@@ -2370,7 +2370,7 @@ class="function">socket\_wsaprotocol\_info\_export</span>.
 
 ### Return Values
 
-Returns the socket resource, or **`FALSE`** on failure
+Returns the socket resource, or **`false`** on failure
 
 ### See Also
 
@@ -2400,7 +2400,7 @@ class="function">socket\_wsaprotocol\_info\_export</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 

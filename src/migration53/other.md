@@ -15,7 +15,7 @@ Other changes
 -   <span class="simpara"> <span class="function">var\_dump</span>
     output now includes private object properties. </span>
 -   <span class="simpara"> <span class="function">session\_start</span>
-    now returns **`FALSE`** when session startup fails. </span>
+    now returns **`false`** when session startup fails. </span>
 -   <span class="simpara"> <span
     class="function">property\_exists</span> now checks the existence of
     a property independent of accessibility (like <span

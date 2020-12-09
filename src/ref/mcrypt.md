@@ -122,7 +122,7 @@ Note that the default value of this parameter was
 
 ### Return Values
 
-Returns the initialization vector, or **`FALSE`** on error.
+Returns the initialization vector, or **`false`** on error.
 
 ### Examples
 
@@ -175,7 +175,7 @@ algorithm as string.
 `key`  
 The key with which the data was encrypted. If the provided key size is
 not supported by the cipher, the function will emit a warning and return
-**`FALSE`**
+**`false`**
 
 `data`  
 The data that will be decrypted with the given `cipher` and `mode`. If
@@ -190,17 +190,17 @@ strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 Used for the initialization in CBC, CFB, OFB modes, and in some
 algorithms in STREAM mode. If the provided IV size is not supported by
 the chaining mode or no IV was provided, but the chaining mode requires
-one, the function will emit a warning and return **`FALSE`**.
+one, the function will emit a warning and return **`false`**.
 
 ### Return Values
 
-Returns the decrypted data as a string or **`FALSE`** on failure.
+Returns the decrypted data as a string or **`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                                                                                                                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | Invalid `key` and `iv` sizes are no longer accepted. <span class="function">mcrypt\_decrypt</span> will now throw a warning and return **`FALSE`** if the inputs are invalid. Previously keys and IVs were padded with '*\\0*' bytes to the next valid size. |
+| 5.6.0   | Invalid `key` and `iv` sizes are no longer accepted. <span class="function">mcrypt\_decrypt</span> will now throw a warning and return **`false`** if the inputs are invalid. Previously keys and IVs were padded with '*\\0*' bytes to the next valid size. |
 
 ### See Also
 
@@ -494,7 +494,7 @@ class="methodname">mcrypt\_enc\_is\_block\_algorithm\_mode</span> (
 `$td`</span> )
 
 Tells whether the algorithm of the opened mode works on blocks (e.g.
-**`FALSE`** for stream, and **`TRUE`** for cbc, cfb, ofb)..
+**`false`** for stream, and **`true`** for cbc, cfb, ofb)..
 
 ### Parameters
 
@@ -503,8 +503,8 @@ The encryption descriptor.
 
 ### Return Values
 
-Returns **`TRUE`** if the mode is for use with block algorithms,
-otherwise it returns **`FALSE`**.
+Returns **`true`** if the mode is for use with block algorithms,
+otherwise it returns **`false`**.
 
 mcrypt\_enc\_is\_block\_algorithm
 =================================
@@ -531,7 +531,7 @@ The encryption descriptor.
 
 ### Return Values
 
-Returns **`TRUE`** if the algorithm is a block algorithm or **`FALSE`**
+Returns **`true`** if the algorithm is a block algorithm or **`false`**
 if it is a stream one.
 
 mcrypt\_enc\_is\_block\_mode
@@ -550,8 +550,8 @@ PHP 7.2.0. Relying on this function is highly discouraged.
 class="methodname">mcrypt\_enc\_is\_block\_mode</span> ( <span
 class="methodparam"><span class="type">resource</span> `$td`</span> )
 
-Tells whether the opened mode outputs blocks (e.g. **`TRUE`** for cbc
-and ecb, and **`FALSE`** for cfb and stream).
+Tells whether the opened mode outputs blocks (e.g. **`true`** for cbc
+and ecb, and **`false`** for cfb and stream).
 
 ### Parameters
 
@@ -560,7 +560,7 @@ The encryption descriptor.
 
 ### Return Values
 
-Returns **`TRUE`** if the mode outputs blocks of bytes, or **`FALSE`**
+Returns **`true`** if the mode outputs blocks of bytes, or **`false`**
 if it outputs just bytes.
 
 mcrypt\_enc\_self\_test
@@ -625,7 +625,7 @@ algorithm as string.
 `key`  
 The key with which the data will be encrypted. If the provided key size
 is not supported by the cipher, the function will emit a warning and
-return **`FALSE`**
+return **`false`**
 
 `data`  
 The data that will be encrypted with the given `cipher` and `mode`. If
@@ -643,17 +643,17 @@ strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 Used for the initialization in CBC, CFB, OFB modes, and in some
 algorithms in STREAM mode. If the provided IV size is not supported by
 the chaining mode or no IV was provided, but the chaining mode requires
-one, the function will emit a warning and return **`FALSE`**.
+one, the function will emit a warning and return **`false`**.
 
 ### Return Values
 
-Returns the encrypted data as a string or **`FALSE`** on failure.
+Returns the encrypted data as a string or **`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                                                                                                                                                                                                  |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 5.6.0   | Invalid `key` and `iv` sizes are no longer accepted. <span class="function">mcrypt\_encrypt</span> will now throw a warning and return **`FALSE`** if the inputs are invalid. Previously keys and IVs were padded with '*\\0*' bytes to the next valid size. |
+| 5.6.0   | Invalid `key` and `iv` sizes are no longer accepted. <span class="function">mcrypt\_encrypt</span> will now throw a warning and return **`false`** if the inputs are invalid. Previously keys and IVs were padded with '*\\0*' bytes to the next valid size. |
 
 ### Examples
 
@@ -756,7 +756,7 @@ The encryption descriptor.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -791,7 +791,7 @@ frees.
 
 This function terminates encryption specified by the encryption
 descriptor (`td`). Actually it clears all buffers, and closes all the
-modules used. Returns **`FALSE`** on error, or **`TRUE`** on success.
+modules used. Returns **`false`** on error, or **`true`** on success.
 
 mcrypt\_generic\_init
 =====================
@@ -840,7 +840,7 @@ zeros, but this is not recommended.
 The function returns a negative value on error: -3 when the key length
 was incorrect, -4 when there was a memory allocation problem and any
 other return value is an unknown error. If an error occurs a warning
-will be displayed accordingly. **`FALSE`** is returned if incorrect
+will be displayed accordingly. **`false`** is returned if incorrect
 parameters were passed.
 
 ### See Also
@@ -959,7 +959,7 @@ strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 
 ### Return Values
 
-Returns the algorithm block size in bytes or **`FALSE`** on failure.
+Returns the algorithm block size in bytes or **`false`** on failure.
 
 ### Examples
 
@@ -1009,7 +1009,7 @@ the name of the specified cipher.
 <span class="function">mcrypt\_get\_cipher\_name</span> takes the cipher
 number as an argument (libmcrypt 2.2.x) or takes the cipher name as an
 argument (libmcrypt 2.4.x or higher) and returns the name of the cipher
-or **`FALSE`**, if the cipher does not exist.
+or **`false`**, if the cipher does not exist.
 
 ### Parameters
 
@@ -1019,7 +1019,7 @@ algorithm as string.
 
 ### Return Values
 
-This function returns the name of the cipher or **`FALSE`** if the
+This function returns the name of the cipher or **`false`** if the
 cipher does not exist.
 
 ### Examples
@@ -1083,7 +1083,7 @@ decryption stages, otherwise your encryption will fail.
 ### Return Values
 
 Returns the size of the Initialization Vector (IV) in bytes. On error
-the function returns **`FALSE`**. If the IV is ignored in the specified
+the function returns **`false`**. If the IV is ignored in the specified
 cipher/mode combination zero is returned.
 
 ### Examples
@@ -1154,7 +1154,7 @@ strings: "ecb", "cbc", "cfb", "ofb", "nofb" or "stream".
 ### Return Values
 
 Returns the maximum supported key size of the algorithm in bytes or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -1322,7 +1322,7 @@ The encryption descriptor.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1457,9 +1457,9 @@ class="methodname">mcrypt\_module\_is\_block\_algorithm\_mode</span> (
 `$mode`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$lib_dir`</span> \] )
 
-This function returns **`TRUE`** if the mode is for use with block
-algorithms, otherwise it returns **`FALSE`**. (e.g. **`FALSE`** for
-stream, and **`TRUE`** for cbc, cfb, ofb).
+This function returns **`true`** if the mode is for use with block
+algorithms, otherwise it returns **`false`**. (e.g. **`false`** for
+stream, and **`true`** for cbc, cfb, ofb).
 
 ### Parameters
 
@@ -1472,9 +1472,9 @@ algorithm module is on the system.
 
 ### Return Values
 
-This function returns **`TRUE`** if the mode is for use with block
-algorithms, otherwise it returns **`FALSE`**. (e.g. **`FALSE`** for
-stream, and **`TRUE`** for cbc, cfb, ofb).
+This function returns **`true`** if the mode is for use with block
+algorithms, otherwise it returns **`false`**. (e.g. **`false`** for
+stream, and **`true`** for cbc, cfb, ofb).
 
 mcrypt\_module\_is\_block\_algorithm
 ====================================
@@ -1495,8 +1495,8 @@ class="methodparam"><span class="type">string</span> `$algorithm`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$lib_dir`</span> \] )
 
-This function returns **`TRUE`** if the specified algorithm is a block
-algorithm, or **`FALSE`** if it is a stream one.
+This function returns **`true`** if the specified algorithm is a block
+algorithm, or **`false`** if it is a stream one.
 
 ### Parameters
 
@@ -1509,8 +1509,8 @@ algorithm module is on the system.
 
 ### Return Values
 
-This function returns **`TRUE`** if the specified algorithm is a block
-algorithm, or **`FALSE`** if it is a stream one.
+This function returns **`true`** if the specified algorithm is a block
+algorithm, or **`false`** if it is a stream one.
 
 mcrypt\_module\_is\_block\_mode
 ===============================
@@ -1530,9 +1530,9 @@ class="methodparam"><span class="type">string</span> `$mode`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$lib_dir`</span> \] )
 
-This function returns **`TRUE`** if the mode outputs blocks of bytes or
-**`FALSE`** if it outputs just bytes. (e.g. **`TRUE`** for cbc and ecb,
-and **`FALSE`** for cfb and stream).
+This function returns **`true`** if the mode outputs blocks of bytes or
+**`false`** if it outputs just bytes. (e.g. **`true`** for cbc and ecb,
+and **`false`** for cfb and stream).
 
 ### Parameters
 
@@ -1546,9 +1546,9 @@ algorithm module is on the system.
 
 ### Return Values
 
-This function returns **`TRUE`** if the mode outputs blocks of bytes or
-**`FALSE`** if it outputs just bytes. (e.g. **`TRUE`** for cbc and ecb,
-and **`FALSE`** for cfb and stream).
+This function returns **`true`** if the mode outputs blocks of bytes or
+**`false`** if it outputs just bytes. (e.g. **`true`** for cbc and ecb,
+and **`false`** for cfb and stream).
 
 mcrypt\_module\_open
 ====================
@@ -1604,7 +1604,7 @@ used is the one that was compiled-in into libmcrypt (usually
 
 ### Return Values
 
-Normally it returns an encryption descriptor, or **`FALSE`** on error.
+Normally it returns an encryption descriptor, or **`false`** on error.
 
 ### Examples
 
@@ -1706,8 +1706,8 @@ algorithm module is on the system.
 
 ### Return Values
 
-The function returns **`TRUE`** if the self test succeeds, or
-**`FALSE`** when it fails.
+The function returns **`true`** if the self test succeeds, or
+**`false`** when it fails.
 
 ### Examples
 

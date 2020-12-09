@@ -27,7 +27,7 @@ The added word.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -77,7 +77,7 @@ The added word.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 pspell\_check
 =============
@@ -104,7 +104,7 @@ The tested word.
 
 ### Return Values
 
-Returns **`TRUE`** if the spelling is correct, **`FALSE`** if not.
+Returns **`true`** if the spelling is correct, **`false`** if not.
 
 ### Examples
 
@@ -144,7 +144,7 @@ class="function">pspell\_save\_wordlist</span>, nothing happens.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -219,7 +219,7 @@ untested, so be careful when using.
 
 ### Return Values
 
-Returns a pspell config identifier, or **`FALSE`** on error.
+Returns a pspell config identifier, or **`false`** on error.
 
 ### Examples
 
@@ -254,7 +254,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 pspell\_config\_dict\_dir
 =========================
@@ -276,7 +276,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 pspell\_config\_ignore
 ======================
@@ -304,7 +304,7 @@ Words less than `min_length` characters will be skipped.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -353,7 +353,7 @@ are several modes available:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -402,7 +402,7 @@ The file should be writable by whoever PHP runs as (e.g. nobody).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -458,7 +458,7 @@ The file should be writable by whoever PHP runs as (e.g. nobody).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -510,12 +510,12 @@ class="function">pspell\_new\_config</span>.
 `config`  
 
 `allow`  
-**`TRUE`** if run-together words should be treated as legal compounds,
-**`FALSE`** otherwise.
+**`true`** if run-together words should be treated as legal compounds,
+**`false`** otherwise.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -563,11 +563,11 @@ class="function">pspell\_new\_config</span>.
 `config`  
 
 `save`  
-**`TRUE`** if replacement pairs should be saved, **`FALSE`** otherwise.
+**`true`** if replacement pairs should be saved, **`false`** otherwise.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -605,7 +605,7 @@ created.
 
 ### Return Values
 
-Returns a dictionary link identifier on success, or **`FALSE`** on
+Returns a dictionary link identifier on success, or **`false`** on
 failure.
 
 ### Examples
@@ -798,7 +798,7 @@ only one of them.
 
 ### Return Values
 
-Returns the dictionary link identifier on success or **`FALSE`** on
+Returns the dictionary link identifier on success or **`false`** on
 failure.
 
 ### Examples
@@ -836,7 +836,7 @@ class="function">pspell\_new\_personal</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -900,7 +900,7 @@ The fixed spelling for the `misspelled` word.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

@@ -110,7 +110,7 @@ class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = ''</span></span> \[, <span
 class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$recv_timeout`<span class="initializer"> = 10000</span></span> \]\]\] )
 
@@ -120,7 +120,7 @@ class="methodparam"><span class="type">string</span> `$scheme`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$cert`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$completion_cb`<span class="initializer">
-= **`NULL`**</span></span> \] )
+= **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">close</span> ( <span
@@ -130,7 +130,7 @@ class="methodparam">void</span> )
 <span class="methodname">connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$recv_timeout`<span class="initializer"> = 10000</span></span> \]\] )
 
@@ -140,7 +140,7 @@ class="type">string</span> `$path`</span> , <span
 class="methodparam"><span class="type">string</span> `$value`</span> ,
 <span class="methodparam"><span class="type">array</span> `$acls`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$flags`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$flags`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">delete</span> ( <span class="methodparam"><span
@@ -152,15 +152,15 @@ class="initializer"> = -1</span></span> \] )
 <span class="methodname">exists</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">get</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$max_size`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
@@ -172,7 +172,7 @@ class="type">string</span> `$path`</span> )
 <span class="methodname">getChildren</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getClientId</span> ( <span
@@ -202,7 +202,7 @@ class="methodparam"><span class="type">string</span> `$value`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$version`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setAcl</span> ( <span class="methodparam"><span
@@ -636,7 +636,7 @@ class="methodparam"><span class="type">string</span> `$scheme`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$cert`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$completion_cb`<span class="initializer">
-= **`NULL`**</span></span> \] )
+= **`null`**</span></span> \] )
 
 The application calls this function to specify its credentials for
 purposes of authentication. The server will use the security provider
@@ -661,7 +661,7 @@ completed successfully - ZAUTHFAILED authentication failed
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -741,7 +741,7 @@ Create a handle to used communicate with zookeeper
 <span class="methodname">Zookeeper::connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$host`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$recv_timeout`<span class="initializer"> = 10000</span></span> \]\] )
 
@@ -791,7 +791,7 @@ class="methodname">Zookeeper::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$host`<span
 class="initializer"> = ''</span></span> \[, <span
 class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$recv_timeout`<span class="initializer"> = 10000</span></span> \]\]\] )
 
@@ -843,7 +843,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 `$value`</span> , <span class="methodparam"><span
 class="type">array</span> `$acls`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 This method will create a node in ZooKeeper. A node can only be created
 if it does not already exists. The Create Flags affect the creation of
@@ -947,7 +947,7 @@ the version check will not take place.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -999,7 +999,7 @@ Checks the existence of a node in zookeeper synchronously
 <span class="methodname">Zookeeper::exists</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \] )
 
 ### Parameters
 
@@ -1065,9 +1065,9 @@ Gets the data associated with a node synchronously
 <span class="methodname">Zookeeper::get</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$max_size`<span
 class="initializer"> = 0</span></span> \]\]\] )
 
@@ -1265,7 +1265,7 @@ Lists the children of a node synchronously
 <span class="methodname">Zookeeper::getChildren</span> ( <span
 class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \] )
 
 ### Parameters
 
@@ -1492,7 +1492,7 @@ class="methodparam"><span class="type">string</span> `$path`</span> ,
 class="type">int</span> `$version`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `&$stat`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 ### Parameters
 
@@ -1513,7 +1513,7 @@ If not NULL, will hold the value of stat for the path on return.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1582,7 +1582,7 @@ The acl to be set on the path.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1662,7 +1662,7 @@ ZooKeeper log level constants.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1726,7 +1726,7 @@ Disable/enable quorum endpoint order randomization.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1767,7 +1767,7 @@ The stream to be used by the library for logging.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1804,7 +1804,7 @@ changes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1842,14 +1842,14 @@ class="type">string</span> `$members`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$version`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">get</span> (\[ <span class="methodparam"><span
 class="type">callable</span> `$watcher_cb`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">array</span> `&$stat`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">remove</span> ( <span class="methodparam"><span
@@ -1857,7 +1857,7 @@ class="type">string</span> `$id_list`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$version`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">set</span> ( <span class="methodparam"><span
@@ -1865,7 +1865,7 @@ class="type">string</span> `$members`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$version`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 }
 
@@ -1882,7 +1882,7 @@ class="methodparam"><span class="type">string</span> `$members`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$version`<span class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### Parameters
 
@@ -1952,9 +1952,9 @@ known to the server to which the client is connected, synchronously
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">ZookeeperConfig::get</span> (\[ <span
 class="methodparam"><span class="type">callable</span>
-`$watcher_cb`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$watcher_cb`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### Parameters
 
@@ -2021,7 +2021,7 @@ class="methodparam"><span class="type">string</span> `$id_list`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$version`<span class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### Parameters
 
@@ -2091,7 +2091,7 @@ class="methodparam"><span class="type">string</span> `$members`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$version`<span class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `&$stat`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### Parameters
 

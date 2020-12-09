@@ -92,11 +92,11 @@ class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$data_is_url`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$ns`<span
 class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">addAttribute</span> ( <span
@@ -122,16 +122,16 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 class="type">SimpleXMLElement</span> <span
 class="methodname">attributes</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$ns`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$is_prefix`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">SimpleXMLElement</span> <span
 class="methodname">children</span> (\[ <span class="methodparam"><span
 class="type">string</span> `$ns`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">count</span> ( <span class="methodparam">void</span>
@@ -140,9 +140,9 @@ class="methodname">count</span> ( <span class="methodparam">void</span>
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getDocNamespaces</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$recursive`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$from_root`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">getName</span> ( <span
@@ -151,7 +151,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getNamespaces</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$recursive`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">registerXPathNamespace</span> ( <span
@@ -420,9 +420,9 @@ returning it.
 ### Return Values
 
 If the `filename` isn't specified, this function returns a <span
-class="type">string</span> on success and **`FALSE`** on error. If the
-parameter is specified, it returns **`TRUE`** if the file was written
-successfully and **`FALSE`** otherwise.
+class="type">string</span> on success and **`false`** on error. If the
+parameter is specified, it returns **`true`** if the file was written
+successfully and **`false`** otherwise.
 
 ### Examples
 
@@ -500,9 +500,9 @@ Identifies an element's attributes
 class="type">SimpleXMLElement</span> <span
 class="methodname">SimpleXMLElement::attributes</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This function provides the attributes and values defined within an xml
 tag.
@@ -518,14 +518,14 @@ tag.
 An optional namespace for the retrieved attributes
 
 `is_prefix`  
-Default to **`FALSE`**
+Default to **`false`**
 
 ### Return Values
 
 Returns a <span class="classname">SimpleXMLElement</span> object that
 can be iterated over to loop through the attributes on the tag.
 
-Returns **`NULL`** if called on a <span
+Returns **`null`** if called on a <span
 class="classname">SimpleXMLElement</span> object that already represents
 an attribute and not a tag.
 
@@ -575,7 +575,7 @@ class="type">SimpleXMLElement</span> <span
 class="methodname">SimpleXMLElement::children</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$is_prefix`<span class="initializer"> = **`FALSE`**</span></span> \]\]
+`$is_prefix`<span class="initializer"> = **`false`**</span></span> \]\]
 )
 
 This method finds the children of an element. The result follows normal
@@ -592,8 +592,8 @@ iteration rules.
 An XML namespace.
 
 `is_prefix`  
-If `is_prefix` is **`TRUE`**, `ns` will be regarded as a prefix. If
-**`FALSE`**, `ns` will be regarded as a namespace URL.
+If `is_prefix` is **`true`**, `ns` will be regarded as a prefix. If
+**`false`**, `ns` will be regarded as a namespace URL.
 
 ### Return Values
 
@@ -699,11 +699,11 @@ class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$data_is_url`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$ns`<span
 class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\]\] )
 
 Creates a new <span class="classname">SimpleXMLElement</span> object.
 
@@ -711,7 +711,7 @@ Creates a new <span class="classname">SimpleXMLElement</span> object.
 
 `data`  
 A well-formed XML string or the path or URL to an XML document if
-`data_is_url` is **`TRUE`**.
+`data_is_url` is **`true`**.
 
 `options`  
 Optionally used to specify
@@ -725,7 +725,7 @@ of XML documents (e.g. **`LIBXML_NOEMPTYTAG`**) are silently ignored.
 > process deeply nested XML or very large text nodes.
 
 `data_is_url`  
-By default, `data_is_url` is **`FALSE`**. Use **`TRUE`** to specify that
+By default, `data_is_url` is **`false`**. Use **`true`** to specify that
 `data` is a path or URL to an XML document instead of <span
 class="type">string</span> data.
 
@@ -733,8 +733,8 @@ class="type">string</span> data.
 Namespace prefix or URI.
 
 `is_prefix`  
-**`TRUE`** if `ns` is a prefix, **`FALSE`** if it's a URI; defaults to
-**`FALSE`**.
+**`true`** if `ns` is a prefix, **`false`** if it's a URI; defaults to
+**`false`**.
 
 ### Return Values
 
@@ -873,9 +873,9 @@ Returns namespaces declared in document
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SimpleXMLElement::getDocNamespaces</span> (\[
 <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$recursive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$from_root`<span class="initializer"> = **`TRUE`**</span></span> \]\] )
+`$from_root`<span class="initializer"> = **`true`**</span></span> \]\] )
 
 Returns namespaces declared in document
 
@@ -1023,7 +1023,7 @@ Returns namespaces used in document
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SimpleXMLElement::getNamespaces</span> (\[
 <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$recursive`<span class="initializer"> = **`false`**</span></span> \] )
 
 Returns namespaces used in document
 
@@ -1107,7 +1107,7 @@ return any results.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1240,7 +1240,7 @@ An XPath path
 ### Return Values
 
 Returns an <span class="type">array</span> of SimpleXMLElement objects
-or **`FALSE`** in case of an error.
+or **`false`** in case of an error.
 
 ### Examples
 
@@ -1352,11 +1352,11 @@ class="methodparam"><span class="type">string</span> `$data`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$options`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$data_is_url`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$ns`<span
 class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">SimpleXMLElement::addAttribute</span> ( <span
@@ -1382,16 +1382,16 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 class="type">SimpleXMLElement</span> <span
 class="methodname">SimpleXMLElement::attributes</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_prefix`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">SimpleXMLElement</span> <span
 class="methodname">SimpleXMLElement::children</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$ns`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$is_prefix`<span class="initializer"> = **`FALSE`**</span></span> \]\]
+`$is_prefix`<span class="initializer"> = **`false`**</span></span> \]\]
 )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -1401,9 +1401,9 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SimpleXMLElement::getDocNamespaces</span> (\[
 <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$recursive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$from_root`<span class="initializer"> = **`TRUE`**</span></span> \]\] )
+`$from_root`<span class="initializer"> = **`true`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">SimpleXMLElement::getName</span> ( <span
@@ -1412,7 +1412,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SimpleXMLElement::getNamespaces</span> (\[
 <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$recursive`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SimpleXMLElement::registerXPathNamespace</span>
@@ -1442,7 +1442,7 @@ Returns the current element
 class="methodparam">void</span> )
 
 This method returns the current element as a <span
-class="classname">SimpleXMLIterator</span> object or **`NULL`**.
+class="classname">SimpleXMLIterator</span> object or **`null`**.
 
 ### Parameters
 
@@ -1451,7 +1451,7 @@ This function has no parameters.
 ### Return Values
 
 Returns the current element as a <span
-class="classname">SimpleXMLIterator</span> object or **`NULL`** on
+class="classname">SimpleXMLIterator</span> object or **`null`** on
 failure.
 
 ### Examples
@@ -1559,8 +1559,8 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the current element has sub-elements, otherwise
-**`FALSE`**
+**`true`** if the current element has sub-elements, otherwise
+**`false`**
 
 ### Examples
 
@@ -1616,7 +1616,7 @@ This function has no parameters.
 ### Return Values
 
 Returns the XML tag name of the element referenced by the current <span
-class="classname">SimpleXMLIterator</span> object or **`FALSE`**
+class="classname">SimpleXMLIterator</span> object or **`false`**
 
 ### Examples
 
@@ -1744,8 +1744,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the current element is valid, otherwise
-**`FALSE`**
+Returns **`true`** if the current element is valid, otherwise
+**`false`**
 
 ### Examples
 

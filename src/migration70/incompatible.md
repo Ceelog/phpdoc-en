@@ -47,7 +47,7 @@ function handler(Throwable $e) { ... }
 
 #### Internal constructors always throw exceptions on failure
 
-Previously, some internal classes would return **`NULL`** or an unusable
+Previously, some internal classes would return **`null`** or an unusable
 object when the constructor failed. All internal classes will now throw
 an <span class="classname">Exception</span> in this case in the same way
 that user classes already had to.
@@ -603,9 +603,9 @@ traits:
 -   <span class="simpara"><span class="type">int</span></span>
 -   <span class="simpara"><span class="type">float</span></span>
 -   <span class="simpara"><span class="type">string</span></span>
--   <span class="simpara">**`NULL`**</span>
--   <span class="simpara">**`TRUE`**</span>
--   <span class="simpara">**`FALSE`**</span>
+-   <span class="simpara">**`null`**</span>
+-   <span class="simpara">**`true`**</span>
+-   <span class="simpara">**`false`**</span>
 
 Furthermore, the following names should not be used. Although they will
 not generate an error in PHP 7.0, they are reserved for future use and
@@ -772,12 +772,12 @@ Finally, an empty string is no longer considered valid JSON.
 Previously, internal functions would silently truncate numbers produced
 from float-to-integer coercions when the float was too large to
 represent as an integer. Now, an E\_WARNING will be emitted and
-**`NULL`** will be returned.
+**`null`** will be returned.
 
 #### Fixes to custom session handler return values
 
 Any predicate functions implemented by custom session handlers that
-return either **`FALSE`** or *-1* will be fatal errors. If any value
+return either **`false`** or *-1* will be fatal errors. If any value
 from these functions other than a boolean, *-1*, or *0* is returned,
 then it will fail and an E\_WARNING will be emitted.
 

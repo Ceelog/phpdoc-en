@@ -47,7 +47,7 @@ Variable handling
         contents of a variable is an iterable value
     -   [is\_long](/ref/var.html#is_long) — Alias of is\_int
     -   [is\_null](/ref/var.html#is_null) — Finds whether a variable is
-        NULL
+        null
     -   [is\_numeric](/ref/var.html#is_numeric) — Finds whether a
         variable is a number or a numeric string
     -   [is\_object](/ref/var.html#is_object) — Finds whether a variable
@@ -60,7 +60,7 @@ Variable handling
     -   [is\_string](/ref/var.html#is_string) — Find whether the type of
         a variable is string
     -   [isset](/ref/var.html#isset) — Determine if a variable is
-        declared and is different than NULL
+        declared and is different than null
     -   [print\_r](/ref/var.html#print_r) — Prints human-readable
         information about a variable
     -   [serialize](/ref/var.html#serialize) — Generates a storable

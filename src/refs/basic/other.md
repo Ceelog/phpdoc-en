@@ -170,6 +170,7 @@ Other Basic Extensions
     -   [Installing/Configuring](/tokenizer/setup.html)
     -   [Predefined Constants](/tokenizer/constants.html)
     -   [Examples](/tokenizer/examples.html)
+    -   [PhpToken](/class/phptoken.html) — The PhpToken class
     -   [Tokenizer Functions](/ref/tokenizer.html)
 -   [URLs](/book/url.html)
     -   [Introduction](/intro/url.html)

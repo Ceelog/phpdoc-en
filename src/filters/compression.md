@@ -113,7 +113,7 @@ setting. A work factor of 0 instructs the bzip library to use an
 internal default. The *bzip2.decompress* filter only accepts one
 parameter, which can be passed as either an ordinary boolean value, or
 as the `small` element of an associative array. `small`, when set to a
-**`TRUE`** value, instructs the bzip library to perform decompression in
+**`true`** value, instructs the bzip library to perform decompression in
 a minimal memory footprint at the cost of speed.
 
 bzip2.\* compression filters are available if

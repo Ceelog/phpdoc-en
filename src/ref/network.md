@@ -26,7 +26,7 @@ NAPTR, TXT or ANY.
 
 ### Return Values
 
-Returns **`TRUE`** if any records are found; returns **`FALSE`** if no
+Returns **`true`** if any records are found; returns **`false`** if no
 records were found or if an error occurred.
 
 ### Notes
@@ -63,7 +63,7 @@ class="function">closelog</span> is optional.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -195,7 +195,7 @@ class="methodparam"><span class="type">array</span> `&$authns`</span>
 \[, <span class="methodparam"><span class="type">array</span>
 `&$addtl`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$raw`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\] )
+**`false`**</span></span> \]\]\]\] )
 
 Fetch DNS Resource Records associated with the given `hostname`.
 
@@ -249,7 +249,7 @@ which needs to be manually parsed.
 
 ### Return Values
 
-This function returns an array of associative arrays, or **`FALSE`** on
+This function returns an array of associative arrays, or **`false`** on
 failure. Each associative array contains *at minimum* the following
 keys:
 
@@ -520,7 +520,7 @@ If provided, holds the system level error number that occurred in the
 system-level *connect()* call.
 
 If the value returned in `errno` is *0* and the function returned
-**`FALSE`**, it is an indication that the error occurred before the
+**`false`**, it is an indication that the error occurred before the
 *connect()* call. This is most likely due to a problem initializing the
 socket.
 
@@ -544,7 +544,7 @@ be used together with the other file functions (such as <span
 class="function">fgets</span>, <span class="function">fgetss</span>,
 <span class="function">fwrite</span>, <span
 class="function">fclose</span>, and <span class="function">feof</span>).
-If the call fails, it will return **`FALSE`**
+If the call fails, it will return **`false`**
 
 ### Errors/Exceptions
 
@@ -646,7 +646,7 @@ The host IP address.
 ### Return Values
 
 Returns the host name on success, the unmodified `ip_address` on
-failure, or **`FALSE`** on malformed input.
+failure, or **`false`** on malformed input.
 
 ### Examples
 
@@ -732,7 +732,7 @@ The host name.
 
 ### Return Values
 
-Returns an array of IPv4 addresses or **`FALSE`** if `hostname` could
+Returns an array of IPv4 addresses or **`false`** if `hostname` could
 not be resolved.
 
 ### Examples
@@ -777,7 +777,7 @@ for the local machine.
 
 ### Return Values
 
-Returns a string with the hostname on success, otherwise **`FALSE`** is
+Returns a string with the hostname on success, otherwise **`false`** is
 returned.
 
 ### Examples
@@ -830,7 +830,7 @@ information gathered.
 
 ### Return Values
 
-Returns **`TRUE`** if any records are found; returns **`FALSE`** if no
+Returns **`true`** if any records are found; returns **`false`** if no
 records were found or if an error occurred.
 
 ### Notes
@@ -882,7 +882,7 @@ The protocol name.
 
 ### Return Values
 
-Returns the protocol number, or **`FALSE`** on failure.
+Returns the protocol number, or **`false`** on failure.
 
 ### Examples
 
@@ -926,7 +926,7 @@ The protocol number.
 
 ### Return Values
 
-Returns the protocol name as a string, or **`FALSE`** on failure.
+Returns the protocol name as a string, or **`false`** on failure.
 
 ### See Also
 
@@ -959,7 +959,7 @@ The Internet service name, as a string.
 
 ### Return Values
 
-Returns the port number, or **`FALSE`** if `service` or `protocol` is
+Returns the port number, or **`false`** if `service` or `protocol` is
 not found.
 
 ### Examples
@@ -1043,7 +1043,7 @@ and the return value is ignored.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1175,7 +1175,7 @@ Send a raw HTTP header
 <span class="methodparam"><span class="type">string</span>
 `$header`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$replace`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$http_response_code`</span> \]\] )
 
 <span class="function">header</span> is used to send a raw HTTP header.
@@ -1237,7 +1237,7 @@ exit;
 `replace`  
 The optional `replace` parameter indicates whether the header should
 replace a previous similar header, or add a second header of the same
-type. By default it will replace, but if you pass in **`FALSE`** as the
+type. By default it will replace, but if you pass in **`false`** as the
 second argument you can force multiple headers of the same type. For
 example:
 
@@ -1479,8 +1479,8 @@ The line number where the output started.
 
 ### Return Values
 
-<span class="function">headers\_sent</span> will return **`FALSE`** if
-no HTTP headers have already been sent or **`TRUE`** otherwise.
+<span class="function">headers\_sent</span> will return **`false`** if
+no HTTP headers have already been sent or **`true`** otherwise.
 
 ### Examples
 
@@ -1556,9 +1556,9 @@ returned. If `response_code` is not provided, then the current status
 code will be returned. Both of these values will default to a *200*
 status code if used in a web server environment.
 
-**`FALSE`** will be returned if `response_code` is not provided and it
+**`false`** will be returned if `response_code` is not provided and it
 is not invoked in a web server environment (such as from a CLI
-application). **`TRUE`** will be returned if `response_code` is provided
+application). **`true`** will be returned if `response_code` is provided
 and it is not invoked in a web server environment (but only when no
 previous response status has been set).
 
@@ -1634,7 +1634,7 @@ A 32bit IPv4, or 128bit IPv6 address.
 
 ### Return Values
 
-Returns a string representation of the address or **`FALSE`** on
+Returns a string representation of the address or **`false`** on
 failure.
 
 ### Examples
@@ -1687,7 +1687,7 @@ A human readable IPv4 or IPv6 address.
 ### Return Values
 
 Returns the *in\_addr* representation of the given `address`, or
-**`FALSE`** if a syntactically invalid `address` is given (for example,
+**`false`** if a syntactically invalid `address` is given (for example,
 an IPv4 address without dots or an IPv6 address without colons).
 
 ### Examples
@@ -1736,7 +1736,7 @@ A standard format address.
 
 ### Return Values
 
-Returns the long integer or **`FALSE`** if `ip_address` is invalid.
+Returns the long integer or **`false`** if `ip_address` is invalid.
 
 ### Examples
 
@@ -1784,7 +1784,7 @@ if ($long == -1 || $long === FALSE) {
 
 > **Note**:
 >
-> <span class="function">ip2long</span> will return **`FALSE`** for the
+> <span class="function">ip2long</span> will return **`false`** for the
 > IP *255.255.255.255* in PHP 5 \<= 5.0.2, and *-1* on 64-bits systems
 > in PHP 5 \<=5.2.4. It was fixed in PHP 5.2.5 where it returns
 > *4294967295*. 32-bit systems will return *-1* due to the integer value
@@ -1857,7 +1857,7 @@ logger for a program.
 
 The use of <span class="function">openlog</span> is optional. It will
 automatically be called by <span class="function">syslog</span> if
-necessary, in which case `ident` will default to **`FALSE`**.
+necessary, in which case `ident` will default to **`false`**.
 
 ### Parameters
 
@@ -1909,7 +1909,7 @@ be handled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1967,9 +1967,11 @@ class="type">string</span> `$path`<span class="initializer"> =
 class="type">string</span> `$domain`<span class="initializer"> =
 ""</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$secure`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$httponly`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\]\]\] )
+**`false`**</span></span> \]\]\]\]\]\] )
+
+Alternative signature available as of PHP 7.3.0:
 
 <span class="type">bool</span> <span class="methodname">setcookie</span>
 ( <span class="methodparam"><span class="type">string</span>
@@ -2040,18 +2042,18 @@ may require a leading *.* to match all subdomains.
 
 `secure`  
 Indicates that the cookie should only be transmitted over a secure HTTPS
-connection from the client. When set to **`TRUE`**, the cookie will only
+connection from the client. When set to **`true`**, the cookie will only
 be set if a secure connection exists. On the server-side, it's on the
 programmer to send this kind of cookie only on secure connection (e.g.
 with respect to `$_SERVER["HTTPS"]`).
 
 `httponly`  
-When **`TRUE`** the cookie will be made accessible only through the HTTP
+When **`true`** the cookie will be made accessible only through the HTTP
 protocol. This means that the cookie won't be accessible by scripting
 languages, such as JavaScript. It has been suggested that this setting
 can effectively help to reduce identity theft through XSS attacks
 (although it is not supported by all browsers), but that claim is often
-disputed. **`TRUE`** or **`FALSE`**
+disputed. **`true`** or **`false`**
 
 `options`  
 An associative <span class="type">array</span> which may have any of the
@@ -2067,9 +2069,9 @@ no SameSite cookie attribute is set.
 ### Return Values
 
 If output exists prior to calling this function, <span
-class="function">setcookie</span> will fail and return **`FALSE`**. If
+class="function">setcookie</span> will fail and return **`false`**. If
 <span class="function">setcookie</span> successfully runs, it will
-return **`TRUE`**. This does not indicate whether the user accepted the
+return **`true`**. This does not indicate whether the user accepted the
 cookie.
 
 ### Examples
@@ -2191,15 +2193,15 @@ Common Pitfalls:
     cookies is by simply calling *print\_r($\_COOKIE);*. </span>
 -   <span class="simpara"> Cookies must be deleted with the same
     parameters as they were set with. If the value argument is an empty
-    string, or **`FALSE`**, and all other arguments match a previous
+    string, or **`false`**, and all other arguments match a previous
     call to setcookie, then the cookie with the specified name will be
     deleted from the remote client. This is internally achieved by
     setting value to 'deleted' and expiration time to one year in past.
     </span>
 -   <span class="simpara"> Because setting a cookie with a value of
-    **`FALSE`** will try to delete the cookie, you should not use
-    boolean values. Instead, use *0* for **`FALSE`** and *1* for
-    **`TRUE`**. </span>
+    **`false`** will try to delete the cookie, you should not use
+    boolean values. Instead, use *0* for **`false`** and *1* for
+    **`true`**. </span>
 -   <span class="simpara"> Cookies names can be set as array names and
     will be available to your PHP scripts as arrays but separate cookies
     are stored on the user's system. Consider <span
@@ -2236,9 +2238,9 @@ class="methodparam"><span class="type">string</span> `$path`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$domain`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$secure`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$httponly`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\]\]\]\] )
+**`false`**</span></span> \]\]\]\]\]\] )
 
 <span class="type">bool</span> <span
 class="methodname">setrawcookie</span> ( <span class="methodparam"><span
@@ -2258,7 +2260,7 @@ class="function">setcookie</span> documentation.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2347,7 +2349,7 @@ present value of <span class="errortype">errno</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

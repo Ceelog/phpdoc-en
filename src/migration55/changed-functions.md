@@ -5,8 +5,8 @@ Changed Functions
 
 -   <span class="simpara"> <span
     class="function">set\_error\_handler</span> can now be called with
-    **`NULL`** as an argument to reset the error handler. </span>
--   <span class="simpara"> When called with **`NULL`**, <span
+    **`null`** as an argument to reset the error handler. </span>
+-   <span class="simpara"> When called with **`null`**, <span
     class="function">set\_error\_handler</span> and <span
     class="function">set\_exception\_handler</span> now return the
     previous error or exception handler, respectively. </span>

@@ -128,6 +128,7 @@ Without the **`TOKEN_PARSE`** flag, the penultimate token
 
 ### See Also
 
+-   <span class="function">PhpToken::tokenize</span>
 -   <span class="function">token\_name</span>
 
 token\_name
@@ -170,6 +171,10 @@ echo token_name(T_FUNCTION); // -> "T_FUNCTION"
 ### See Also
 
 -   <a href="/tokens.html" class="link">List of Parser Tokens</a>
+
+### See Also
+
+-   <span class="function">PhpToken::getTokenName</span>
 
 **Table of Contents**
 

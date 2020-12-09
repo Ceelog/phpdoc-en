@@ -11,7 +11,7 @@ class="methodparam">void</span> )
 
 Calling <span class="methodname">Generator::next</span> has the same
 effect as calling <span class="methodname">Generator::send</span> with
-**`NULL`** as argument.
+**`null`** as argument.
 
 ### Parameters
 

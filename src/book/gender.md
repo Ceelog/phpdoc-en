@@ -453,7 +453,7 @@ class="classname">Gender\\Gender</span> class constant.
 ### Return Values
 
 Returns an array with the short and full names of the country on success
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 ### Examples
 
@@ -531,7 +531,7 @@ is used.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Gender\\Gender::similarNames
 ============================

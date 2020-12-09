@@ -13,7 +13,7 @@ class="methodparam">void</span> )
 
 Returns an
 <a href="/openal/setup.html#Resource%20Types" class="link">Open AL(Buffer)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### See Also
 
@@ -55,7 +55,7 @@ Frequency of `data` given in Hz.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -84,7 +84,7 @@ class="function">openal\_buffer\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -119,7 +119,7 @@ Specific property, one of: **`AL_FREQUENCY`**, **`AL_BITS`**,
 ### Return Values
 
 Returns an integer value appropriate to the `property` requested or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -151,7 +151,7 @@ Path to `.wav` file on *local* file system.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -182,7 +182,7 @@ class="function">openal\_device\_open</span>).
 
 Returns an
 <a href="/openal/setup.html#Resource%20Types" class="link">Open AL(Context)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### See Also
 
@@ -211,7 +211,7 @@ class="function">openal\_context\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -239,7 +239,7 @@ class="function">openal\_context\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -267,7 +267,7 @@ class="function">openal\_context\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -297,7 +297,7 @@ class="function">openal\_context\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -327,7 +327,7 @@ class="function">openal\_device\_open</span>) to be closed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -356,7 +356,7 @@ used.
 
 Returns an
 <a href="/openal/setup.html#Resource%20Types" class="link">Open AL(Device)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### See Also
 
@@ -383,7 +383,7 @@ and **`AL_ORIENTATION`** (array(float,float,float)).
 
 ### Return Values
 
-Returns a float or array of floats (as appropriate) or **`FALSE`** on
+Returns a float or array of floats (as appropriate) or **`false`** on
 failure.
 
 ### See Also
@@ -415,7 +415,7 @@ Value to set, either float, or an array of floats as appropriate.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -436,7 +436,7 @@ class="methodparam">void</span> )
 
 Returns an
 <a href="/openal/setup.html#Resource%20Types" class="link">Open AL(Source)</a>
-resource on success or **`FALSE`** on failure.
+resource on success or **`false`** on failure.
 
 ### See Also
 
@@ -466,7 +466,7 @@ class="function">openal\_source\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -507,7 +507,7 @@ Property to get, one of: **`AL_SOURCE_RELATIVE`** (int),
 ### Return Values
 
 Returns the type associated with the property being retrieved or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -537,7 +537,7 @@ class="function">openal\_source\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -567,7 +567,7 @@ class="function">openal\_source\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -597,7 +597,7 @@ class="function">openal\_source\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -645,7 +645,7 @@ Value to assign to specified `property`. Refer to the description of
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -675,7 +675,7 @@ class="function">openal\_source\_create</span>).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -715,7 +715,7 @@ Frequency of data to stream given in Hz.
 
 ### Return Values
 
-Returns a stream resource on success or **`FALSE`** on failure.
+Returns a stream resource on success or **`false`** on failure.
 
 ### See Also
 

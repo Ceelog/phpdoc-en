@@ -37,12 +37,12 @@ URI specifying address of proxy server. (e.g.
 *tcp://proxy.example.com:5100*).
 
 `request_fulluri` <span class="type">bool</span>  
-When set to **`TRUE`**, the entire URI will be used when constructing
+When set to **`true`**, the entire URI will be used when constructing
 the request. (i.e. *GET http://www.example.com/path/to/file.html
 HTTP/1.0*). While this is a non-standard request format, some proxy
 servers require it.
 
-Defaults to **`FALSE`**.
+Defaults to **`false`**.
 
 `follow_location` <span class="type">int</span>  
 Follow *Location* header redirects. Set to *0* to disable.
@@ -71,7 +71,7 @@ By default the
 `ignore_errors` <span class="type">bool</span>  
 Fetch the content even on failure status codes.
 
-Defaults to **`FALSE`**.
+Defaults to **`false`**.
 
 ### Examples
 

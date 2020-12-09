@@ -55,7 +55,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -107,7 +107,7 @@ class="function">fann\_set\_train\_stop\_function</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -134,7 +134,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_copy
 ==========
@@ -156,7 +156,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Returns a copy of neural network resource on success, or **`FALSE`** on
+Returns a copy of neural network resource on success, or **`false`** on
 error
 
 ### Notes
@@ -193,7 +193,7 @@ The configuration file path.
 ### Return Values
 
 Returns a neural network <span class="type">resource</span> on success,
-or **`FALSE`** on error.
+or **`false`** on error.
 
 ### See Also
 
@@ -227,7 +227,7 @@ An array of layers sizes.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -276,7 +276,7 @@ Number of neurons in other layers.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -319,7 +319,7 @@ An array of layer sizes.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -371,7 +371,7 @@ Number of neurons in other layers.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -412,7 +412,7 @@ An array of layer sizes.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -461,7 +461,7 @@ Number of neurons in other layers.
 
 ### Return Values
 
-Returns a neural network resource on success, or **`FALSE`** on error.
+Returns a neural network resource on success, or **`false`** on error.
 
 ### See Also
 
@@ -514,7 +514,7 @@ The function should return an associative array with keys *input* and
 ### Return Values
 
 Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Examples
 
@@ -584,7 +584,7 @@ The number of ouputs per training data
 ### Return Values
 
 Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Notes
 
@@ -627,7 +627,7 @@ Input vector that will be descaled
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -661,7 +661,7 @@ Output vector that will be descaled
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -693,7 +693,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -721,7 +721,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_destroy
 =============
@@ -745,7 +745,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_duplicate\_train\_data
 ============================
@@ -769,7 +769,7 @@ Neural network training data <span class="type">resource</span>.
 ### Return Values
 
 Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 fann\_get\_activation\_function
 ===============================
@@ -810,7 +810,7 @@ Neuron number.
 
 <a href="/fann/constants.html#Training%20algorithms" class="link">Learning functions</a>
 constant or -1 if the neuron is not defined in the neural network, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### See Also
 
@@ -867,7 +867,7 @@ Neuron number
 ### Return Values
 
 The activation steepness for the neuron or -1 if the neuron is not
-defined in the neural network, or **`FALSE`** on error.
+defined in the neural network, or **`false`** on error.
 
 ### See Also
 
@@ -934,7 +934,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The bit fail limit, or **`FALSE`** on error.
+The bit fail limit, or **`false`** on error.
 
 ### See Also
 
@@ -970,7 +970,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of bits fail, or **`FALSE`** on error.
+The number of bits fail, or **`false`** on error.
 
 ### See Also
 
@@ -1005,7 +1005,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of cascade activation functions, or **`FALSE`** on error.
+The number of cascade activation functions, or **`false`** on error.
 
 ### See Also
 
@@ -1045,7 +1045,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The cascade activation functions, or **`FALSE`** on error.
+The cascade activation functions, or **`false`** on error.
 
 ### See Also
 
@@ -1078,7 +1078,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of activation steepnesses, or **`FALSE`** on error.
+The number of activation steepnesses, or **`false`** on error.
 
 ### See Also
 
@@ -1115,7 +1115,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The cascade activation steepnesses, or **`FALSE`** on error.
+The cascade activation steepnesses, or **`false`** on error.
 
 ### See Also
 
@@ -1165,7 +1165,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The cascade candidate change fraction, or **`FALSE`** on error.
+The cascade candidate change fraction, or **`false`** on error.
 
 ### See Also
 
@@ -1202,7 +1202,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The candidate limit, or **`FALSE`** on error.
+The candidate limit, or **`false`** on error.
 
 ### See Also
 
@@ -1237,7 +1237,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of cascade candidate stagnation epochs, or **`FALSE`** on
+The number of cascade candidate stagnation epochs, or **`false`** on
 error.
 
 ### See Also
@@ -1271,7 +1271,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The maximum candidate epochs, or **`FALSE`** on error.
+The maximum candidate epochs, or **`false`** on error.
 
 ### See Also
 
@@ -1300,7 +1300,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The maximum out epochs, or **`FALSE`** on error.
+The maximum out epochs, or **`false`** on error.
 
 ### See Also
 
@@ -1330,7 +1330,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The minimum candidate epochs, or **`FALSE`** on error.
+The minimum candidate epochs, or **`false`** on error.
 
 ### Notes
 
@@ -1366,7 +1366,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The minimum out epochs, or **`FALSE`** on error.
+The minimum out epochs, or **`false`** on error.
 
 ### Notes
 
@@ -1410,7 +1410,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of candidate groups, or **`FALSE`** on error.
+The number of candidate groups, or **`false`** on error.
 
 ### See Also
 
@@ -1460,7 +1460,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of candidates used during training, or **`FALSE`** on error.
+The number of candidates used during training, or **`false`** on error.
 
 ### See Also
 
@@ -1516,7 +1516,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The cascade output change fraction, or **`FALSE`** on error.
+The cascade output change fraction, or **`false`** on error.
 
 ### See Also
 
@@ -1555,7 +1555,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of cascade output stagnation epochs, or **`FALSE`** on error.
+The number of cascade output stagnation epochs, or **`false`** on error.
 
 ### See Also
 
@@ -1589,7 +1589,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The weight multiplier, or **`FALSE`** on error.
+The weight multiplier, or **`false`** on error.
 
 ### See Also
 
@@ -1637,7 +1637,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The connection rate used when the network was created, or **`FALSE`** on
+The connection rate used when the network was created, or **`false`** on
 error.
 
 fann\_get\_errno
@@ -1662,7 +1662,7 @@ network trainining data <span class="type">resource</span>.
 
 ### Return Values
 
-The error number, or **`FALSE`** on error.
+The error number, or **`false`** on error.
 
 ### See Also
 
@@ -1691,7 +1691,7 @@ network trainining data <span class="type">resource</span>.
 
 ### Return Values
 
-The last error string, or **`FALSE`** on error.
+The last error string, or **`false`** on error.
 
 ### See Also
 
@@ -1748,9 +1748,9 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
-The learning momentum, or **`FALSE`** on error.
+The learning momentum, or **`false`** on error.
 
 ### See Also
 
@@ -1782,7 +1782,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The learning rate, or **`FALSE`** on error.
+The learning rate, or **`false`** on error.
 
 ### See Also
 
@@ -1813,7 +1813,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The mean square error, or **`FALSE`** on error.
+The mean square error, or **`false`** on error.
 
 ### See Also
 
@@ -1840,7 +1840,7 @@ Neural network <span class="type">resource</span>.
 ### Return Values
 
 <a href="/fann/constants.html#Definition%20of%20network%20types%20used%20by%20fann_get_network_type" class="link">Network type</a>
-constant, or **`FALSE`** on error.
+constant, or **`false`** on error.
 
 fann\_get\_num\_input
 =====================
@@ -1862,7 +1862,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Number of input neurons, or **`FALSE`** on error
+Number of input neurons, or **`false`** on error
 
 fann\_get\_num\_layers
 ======================
@@ -1884,7 +1884,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The number of leayers in the neural network, or **`FALSE`** on error.
+The number of leayers in the neural network, or **`false`** on error.
 
 fann\_get\_num\_output
 ======================
@@ -1906,7 +1906,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Number of output neurons, or **`FALSE`** on error
+Number of output neurons, or **`false`** on error
 
 fann\_get\_quickprop\_decay
 ===========================
@@ -1934,7 +1934,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The decay, or **`FALSE`** on error.
+The decay, or **`false`** on error.
 
 ### See Also
 
@@ -1965,7 +1965,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The mu factor, or **`FALSE`** on error.
+The mu factor, or **`false`** on error.
 
 ### See Also
 
@@ -1994,7 +1994,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The decrease factor, or **`FALSE`** on error.
+The decrease factor, or **`false`** on error.
 
 ### See Also
 
@@ -2023,7 +2023,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The maximum step-size, or **`FALSE`** on error.
+The maximum step-size, or **`false`** on error.
 
 ### See Also
 
@@ -2053,7 +2053,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The minimum step-size, or **`FALSE`** on error.
+The minimum step-size, or **`false`** on error.
 
 ### See Also
 
@@ -2082,7 +2082,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The initial step-size, or **`FALSE`** on error.
+The initial step-size, or **`false`** on error.
 
 ### See Also
 
@@ -2113,7 +2113,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The increase factor, or **`FALSE`** on error.
+The increase factor, or **`false`** on error.
 
 ### See Also
 
@@ -2141,7 +2141,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The sarprop step error shift , or **`FALSE`** on error.
+The sarprop step error shift , or **`false`** on error.
 
 ### Notes
 
@@ -2177,7 +2177,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The sarprop step error threshold factor, or **`FALSE`** on error.
+The sarprop step error threshold factor, or **`false`** on error.
 
 ### Notes
 
@@ -2213,7 +2213,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The sarprop temperature, or **`FALSE`** on error.
+The sarprop temperature, or **`false`** on error.
 
 ### Notes
 
@@ -2249,7 +2249,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-The sarprop weight decay shift, or **`FALSE`** on error.
+The sarprop weight decay shift, or **`false`** on error.
 
 ### Notes
 
@@ -2283,7 +2283,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Total number of connections in the entire network, or **`FALSE`** on
+Total number of connections in the entire network, or **`false`** on
 error
 
 fann\_get\_total\_neurons
@@ -2308,7 +2308,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Total number of neurons in the entire network, or **`FALSE`** on error.
+Total number of neurons in the entire network, or **`false`** on error.
 
 fann\_get\_train\_error\_function
 =================================
@@ -2338,7 +2338,7 @@ Neural network <span class="type">resource</span>.
 
 The
 <a href="/fann/constants.html#Error%20function%20used%20during%20training" class="link">error function</a>
-constant, or **`FALSE`** on error.
+constant, or **`false`** on error.
 
 ### See Also
 
@@ -2372,7 +2372,7 @@ Neural network <span class="type">resource</span>.
 
 The
 <a href="/fann/constants.html#Stop%20criteria%20used%20during%20training" class="link">stop function</a>
-constant, or **`FALSE`** on error.
+constant, or **`false`** on error.
 
 ### See Also
 
@@ -2405,7 +2405,7 @@ Neural network <span class="type">resource</span>.
 ### Return Values
 
 <a href="/fann/constants.html#Training%20algorithms" class="link">Training algorithm</a>
-constant, or **`FALSE`** on error.
+constant, or **`false`** on error.
 
 ### See Also
 
@@ -2448,7 +2448,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2477,7 +2477,7 @@ Neural network training data <span class="type">resource</span>.
 ### Return Values
 
 Number of elements in the train data <span class="type">resource</span>,
-or **`FALSE`** on error.
+or **`false`** on error.
 
 fann\_merge\_train\_data
 ========================
@@ -2505,7 +2505,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-New merged train data <span class="type">resource</span>, or **`FALSE`**
+New merged train data <span class="type">resource</span>, or **`false`**
 on error.
 
 fann\_num\_input\_train\_data
@@ -2530,7 +2530,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-The number of inputs, or **`FALSE`** on error.
+The number of inputs, or **`false`** on error.
 
 ### See Also
 
@@ -2559,7 +2559,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-The number of outputs, or **`FALSE`** on error.
+The number of outputs, or **`false`** on error.
 
 ### See Also
 
@@ -2626,7 +2626,7 @@ Maximum weight value
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2667,7 +2667,7 @@ outputdata seperated by space
 ### Return Values
 
 Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Examples
 
@@ -2783,7 +2783,7 @@ Neural network <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2817,7 +2817,7 @@ Array of input values
 
 ### Return Values
 
-Array of output values, or **`FALSE`** on error
+Array of output values, or **`false`** on error
 
 fann\_save\_train
 =================
@@ -2845,7 +2845,7 @@ The file name of the file where training data is saved to.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2889,7 +2889,7 @@ The configuration file path.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2924,7 +2924,7 @@ New maximum after scaling inputs in training data.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2958,7 +2958,7 @@ Input vector that will be scaled
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -2994,7 +2994,7 @@ New maximum after scaling outputs in training data.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3028,7 +3028,7 @@ Output vector that will be scaled
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3066,7 +3066,7 @@ New maximum after scaling inputs and outputs in training data.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3098,7 +3098,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3132,7 +3132,7 @@ constant.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3177,7 +3177,7 @@ Layer number.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3215,7 +3215,7 @@ constant.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3277,7 +3277,7 @@ Neuron number.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3316,7 +3316,7 @@ The activation steepness.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3362,7 +3362,7 @@ Layer number.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3399,7 +3399,7 @@ The activation steepness.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3459,7 +3459,7 @@ Neuron number.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3497,7 +3497,7 @@ The bit fail limit.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3530,7 +3530,7 @@ The supplied callback function takes following parameters:
 
 -   *ann* - The neural network <span class="type">resource</span>
 -   *train* - The train data <span class="type">resource</span> or
-    **`NULL`** if called from <span
+    **`null`** if called from <span
     class="function">fann\_train\_on\_file</span>
 -   *max\_epochs* - The maximum number of epochs the training should
     continue
@@ -3543,12 +3543,12 @@ The supplied callback function takes following parameters:
     class="function">fann\_set\_train\_stop\_function</span>
 -   *epochs* - The current epoch
 
-The callback should return **`TRUE`**. If it returns **`FALSE`**, the
+The callback should return **`true`**. If it returns **`false`**, the
 training will terminate.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3584,7 +3584,7 @@ The array of cascade candidate activation functions.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3623,7 +3623,7 @@ The array of cascade candidate activation steepnesses.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3657,7 +3657,7 @@ The cascade candidate change fraction.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3689,7 +3689,7 @@ The candidate limit.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3720,7 +3720,7 @@ The number of cascade candidate stagnation epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3752,7 +3752,7 @@ The max candidate epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3783,7 +3783,7 @@ The maximum out epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3814,7 +3814,7 @@ The minimum candidate epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -3852,7 +3852,7 @@ The minimum out epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -3890,7 +3890,7 @@ The number of candidate groups.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3922,7 +3922,7 @@ The cascade output change fraction.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3954,7 +3954,7 @@ The number of cascade output stagnation epochs.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -3986,7 +3986,7 @@ The weight multiplier.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4057,7 +4057,7 @@ followed)
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4091,7 +4091,7 @@ The learning momentum.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4126,7 +4126,7 @@ The learning rate.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4171,7 +4171,7 @@ followed)
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4202,7 +4202,7 @@ The quickprop decay factor.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4233,7 +4233,7 @@ The mu factor.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4264,7 +4264,7 @@ The decrease factor.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4296,7 +4296,7 @@ The maximum step-size.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4329,7 +4329,7 @@ The minimum step-size.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4361,7 +4361,7 @@ The initial step-size.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4394,7 +4394,7 @@ The increase factor.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4425,7 +4425,7 @@ The sarprop step error shift.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -4464,7 +4464,7 @@ The sarprop step error threshold factor.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -4503,7 +4503,7 @@ The sarprop temperature.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -4541,7 +4541,7 @@ The sarprop weight decay shift.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### Notes
 
@@ -4604,7 +4604,7 @@ followed)
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4642,7 +4642,7 @@ constant
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4679,7 +4679,7 @@ constant.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4714,7 +4714,7 @@ constant
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -4748,7 +4748,7 @@ An array of <span class="classname">FANNConnection</span> objects
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_set\_weight
 =================
@@ -4783,7 +4783,7 @@ Connection weight
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_shuffle\_train\_data
 ==========================
@@ -4807,7 +4807,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 fann\_subset\_train\_data
 =========================
@@ -4845,7 +4845,7 @@ The number of copied elements.
 ### Return Values
 
 Returns a train data <span class="type">resource</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### See Also
 
@@ -4879,7 +4879,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-The updated MSE, or **`FALSE`** on error.
+The updated MSE, or **`false`** on error.
 
 ### See Also
 
@@ -4922,7 +4922,7 @@ class="function">fann\_get\_num\_output</span> long.
 
 ### Return Values
 
-Returns test outputs on success, or **`FALSE`** on error.
+Returns test outputs on success, or **`false`** on error.
 
 ### See Also
 
@@ -4966,7 +4966,7 @@ Neural network training data <span class="type">resource</span>.
 
 ### Return Values
 
-The MSE, or **`FALSE`** on error.
+The MSE, or **`false`** on error.
 
 ### See Also
 
@@ -5021,7 +5021,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -5081,7 +5081,7 @@ class="function">fann\_set\_train\_stop\_function</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 
@@ -5126,7 +5126,7 @@ class="function">fann\_get\_num\_output</span> long.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** otherwise.
+Returns **`true`** on success, or **`false`** otherwise.
 
 ### See Also
 

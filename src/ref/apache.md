@@ -22,11 +22,11 @@ Netscape/iPlanet/SunONE webservers.
 
 ### Return Values
 
-Returns **`TRUE`** if PHP is running as an Apache 1 module, the Apache
+Returns **`true`** if PHP is running as an Apache 1 module, the Apache
 version is non-multithreaded, and the
 <a href="/apache/setup.html#" class="link">child_terminate</a> PHP
 directive is enabled (disabled by default). If these conditions are not
-met, **`FALSE`** is returned and an error of level **`E_WARNING`** is
+met, **`false`** is returned and an error of level **`E_WARNING`** is
 generated.
 
 ### Notes
@@ -94,7 +94,7 @@ Fetch the Apache version.
 
 ### Return Values
 
-Returns the Apache version on success or **`FALSE`** on failure.
+Returns the Apache version on success or **`false`** on failure.
 
 ### Examples
 
@@ -127,7 +127,7 @@ Get an Apache subprocess\_env variable
 class="methodname">apache\_getenv</span> ( <span
 class="methodparam"><span class="type">string</span> `$variable`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$walk_to_top`<span class="initializer"> = **`FALSE`**</span></span> \]
+`$walk_to_top`<span class="initializer"> = **`false`**</span></span> \]
 )
 
 Retrieve an Apache environment variable specified by `variable`.
@@ -144,7 +144,7 @@ Whether to get the top-level variable available to all Apache layers.
 
 ### Return Values
 
-The value of the Apache environment variable on success, or **`FALSE`**
+The value of the Apache environment variable on success, or **`false`**
 on failure
 
 ### Examples
@@ -300,7 +300,7 @@ The value of the note.
 If called with one argument, it returns the current value of note
 *note\_name*. If called with two arguments, it sets the value of note
 *note\_name* to *note\_value* and returns the previous value of note
-*note\_name*. If the note cannot be retrieved, **`FALSE`** is returned.
+*note\_name*. If the note cannot be retrieved, **`false`** is returned.
 
 ### Examples
 
@@ -368,7 +368,7 @@ Netscape/iPlanet/SunONE webservers.
 ### Return Values
 
 An associative array of all the HTTP headers in the current request, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -435,7 +435,7 @@ This function requires Apache 1.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -460,7 +460,7 @@ Netscape/iPlanet/SunONE webservers.
 
 ### Return Values
 
-An array of all Apache response headers on success or **`FALSE`** on
+An array of all Apache response headers on success or **`false`** on
 failure.
 
 ### Examples
@@ -501,7 +501,7 @@ class="methodparam"><span class="type">string</span> `$variable`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$value`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$walk_to_top`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">apache\_setenv</span> sets the value of the
 Apache environment variable specified by `variable`.
@@ -524,7 +524,7 @@ Whether to set the top-level variable available to all Apache layers.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -571,7 +571,7 @@ information on how this function works.
 ### Return Values
 
 An associative array of all the HTTP headers in the current request, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -630,7 +630,7 @@ The file that the virtual command will be performed on.
 
 ### Return Values
 
-Performs the virtual command on success, or returns **`FALSE`** on
+Performs the virtual command on success, or returns **`false`** on
 failure.
 
 ### Examples

@@ -1323,7 +1323,7 @@ The user's password.
 
 ### Return Values
 
-Returns **`TRUE`** if the password and hash match, or **`FALSE`**
+Returns **`true`** if the password and hash match, or **`false`**
 otherwise.
 
 ### Notes
@@ -1382,7 +1382,7 @@ paired with the matching opslimit values.
 
 ### Return Values
 
-Returns the hashed password, or **`FALSE`** on failure.
+Returns the hashed password, or **`false`** on failure.
 
 In order to produce the same password hash from the same password, the
 same values for `opslimit` and `memlimit` must be used. These are
@@ -1495,7 +1495,7 @@ representing the Argon2id algorithm version 1.3.
 
 ### Return Values
 
-Returns the derived key, or **`FALSE`** on failure. The return value is
+Returns the derived key, or **`false`** on failure. The return value is
 a binary string of the hash, not an ASCII-encoded representation, and
 does not contain additional information about the parameters used to
 create the hash, so you will need to keep that information if you are

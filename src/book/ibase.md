@@ -648,7 +648,7 @@ class="function">fbird\_blob\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1267,7 +1267,7 @@ The last name of the new database user.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1321,7 +1321,7 @@ class="methodparam"><span class="type">string</span> `$dest_file`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$options`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This function passes the arguments to the (remote) database server.
 There it starts a new backup process. Therefore you won't get any
@@ -1355,11 +1355,11 @@ any chance to get its output. This argument is useless.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Since the backup process is done on the (remote) server, this function
 just passes the arguments to it. While the arguments are legal, you
-won't get **`FALSE`**.
+won't get **`false`**.
 
 ### Examples
 
@@ -1463,7 +1463,7 @@ class="function">ibase\_blob\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1496,10 +1496,10 @@ class="function">ibase\_blob\_open</span>.
 
 ### Return Values
 
-If the BLOB was being read, this function returns **`TRUE`** on success,
+If the BLOB was being read, this function returns **`true`** on success,
 if the BLOB was being written to, this function returns a string
 containing the BLOB id that has been assigned to it by the database. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### See Also
 
@@ -1517,7 +1517,7 @@ Create a new blob for adding data
 class="type">false</span></span> <span
 class="methodname">ibase\_blob\_create</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
-`$link_identifier`<span class="initializer"> = **`NULL`**</span></span>
+`$link_identifier`<span class="initializer"> = **`null`**</span></span>
 \] )
 
 <span class="function">ibase\_blob\_create</span> creates a new BLOB for
@@ -1532,7 +1532,7 @@ assumed.
 ### Return Values
 
 Returns a BLOB handle for later use with <span
-class="function">ibase\_blob\_add</span> or **`FALSE`** on failure.
+class="function">ibase\_blob\_add</span> or **`false`** on failure.
 
 ### See Also
 
@@ -1571,7 +1571,7 @@ assumed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1611,7 +1611,7 @@ Size of returned data.
 
 ### Return Values
 
-Returns at most `len` bytes from the BLOB, or **`FALSE`** on failure.
+Returns at most `len` bytes from the BLOB, or **`false`** on failure.
 
 ### Examples
 
@@ -1670,7 +1670,7 @@ class="function">fopen</span>.
 
 ### Return Values
 
-Returns the BLOB id on success, or **`FALSE`** on error.
+Returns the BLOB id on success, or **`false`** on error.
 
 ### Examples
 
@@ -1778,7 +1778,7 @@ A BLOB id.
 ### Return Values
 
 Returns a BLOB handle for later use with <span
-class="function">ibase\_blob\_get</span> or **`FALSE`** on failure.
+class="function">ibase\_blob\_get</span> or **`false`** on failure.
 
 ### See Also
 
@@ -1796,7 +1796,7 @@ Close a connection to an InterBase database
 <span class="type">bool</span> <span
 class="methodname">ibase\_close</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
-`$connection_id`<span class="initializer"> = **`NULL`**</span></span> \]
+`$connection_id`<span class="initializer"> = **`null`**</span></span> \]
 )
 
 Closes the link to an InterBase database that's associated with a
@@ -1813,7 +1813,7 @@ is assumed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1831,7 +1831,7 @@ Commit a transaction without closing it
 class="methodname">ibase\_commit\_ret</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_or_trans_identifier`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Commits a transaction without closing it.
 
@@ -1848,7 +1848,7 @@ will not be invalidated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_commit
 =============
@@ -1861,7 +1861,7 @@ Commit a transaction
 class="methodname">ibase\_commit</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_or_trans_identifier`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Commits a transaction.
 
@@ -1876,7 +1876,7 @@ corresponding transaction will be committed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_connect
 ==============
@@ -1945,7 +1945,7 @@ Functional only with InterBase 5 and up.
 
 ### Return Values
 
-Returns an Firebird/InterBase link identifier on success, or **`FALSE`**
+Returns an Firebird/InterBase link identifier on success, or **`false`**
 on error.
 
 ### Errors/Exceptions
@@ -2024,7 +2024,7 @@ The login name of the user you want to delete from the database.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2041,7 +2041,7 @@ Drops a database
 <span class="type">bool</span> <span
 class="methodname">ibase\_drop\_db</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
-`$connection`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$connection`<span class="initializer"> = **`null`**</span></span> \] )
 
 This functions drops a database that was opened by either <span
 class="function">ibase\_connect</span> or <span
@@ -2056,7 +2056,7 @@ assumed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2079,7 +2079,7 @@ function call.
 
 ### Return Values
 
-Returns the error code as an integer, or **`FALSE`** if no error
+Returns the error code as an integer, or **`false`** if no error
 occurred.
 
 ### See Also
@@ -2102,7 +2102,7 @@ function call.
 
 ### Return Values
 
-Returns the error message as a string, or **`FALSE`** if no error
+Returns the error message as a string, or **`false`** if no error
 occurred.
 
 ### See Also
@@ -2139,17 +2139,17 @@ class="function">ibase\_prepare</span>.
 
 ### Return Values
 
-If the query raises an error, returns **`FALSE`**. If it is successful
+If the query raises an error, returns **`false`**. If it is successful
 and there is a (possibly empty) result set (such as with a SELECT
 query), returns a result identifier. If the query was successful and
-there were no results, returns **`TRUE`**.
+there were no results, returns **`true`**.
 
 > **Note**:
 >
 > This function returns the number of rows affected by the query (if \>
 > 0 and applicable to the statement type). A query that succeeded, but
 > did not affect any rows (e.g. an UPDATE of a non-existent record) will
-> return **`TRUE`**.
+> return **`true`**.
 
 ### Examples
 
@@ -2218,7 +2218,7 @@ as Unix timestamps instead of as formatted strings.
 
 Returns an associative array that corresponds to the fetched row.
 Subsequent calls will return the next row in the result set, or
-**`FALSE`** if there are no more rows.
+**`false`** if there are no more rows.
 
 ### See Also
 
@@ -2260,7 +2260,7 @@ as Unix timestamps instead of as formatted strings.
 
 ### Return Values
 
-Returns an object with the next row information, or **`FALSE`** if there
+Returns an object with the next row information, or **`false`** if there
 are no more rows.
 
 ### Examples
@@ -2303,7 +2303,7 @@ class="type">int</span> `$fetch_flag`<span class="initializer"> =
 from the given result set.
 
 Subsequent calls to <span class="function">ibase\_fetch\_row</span>
-return the next row in the result set, or **`FALSE`** if there are no
+return the next row in the result set, or **`false`** if there are no
 more rows.
 
 ### Parameters
@@ -2320,7 +2320,7 @@ as Unix timestamps instead of as formatted strings.
 
 ### Return Values
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows. Each result column is stored in an array offset,
 starting at offset 0.
 
@@ -2404,7 +2404,7 @@ class="function">ibase\_set\_event\_handler</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2430,7 +2430,7 @@ A query prepared with <span class="function">ibase\_prepare</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_free\_result
 ===================
@@ -2454,7 +2454,7 @@ A result set created by <span class="function">ibase\_query</span> or
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_gen\_id
 ==============
@@ -2469,7 +2469,7 @@ class="methodparam"><span class="type">string</span> `$generator`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$increment`<span class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">resource</span>
-`$link_identifier`<span class="initializer"> = **`NULL`**</span></span>
+`$link_identifier`<span class="initializer"> = **`null`**</span></span>
 \]\] )
 
 **Warning**
@@ -2505,7 +2505,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_modify\_user
 ===================
@@ -2548,7 +2548,7 @@ The user's new last name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2581,7 +2581,7 @@ The name to be assigned.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2787,7 +2787,7 @@ Functional only with InterBase 5 and up.
 
 ### Return Values
 
-Returns an InterBase link identifier on success, or **`FALSE`** on
+Returns an InterBase link identifier on success, or **`false`** on
 error.
 
 ### See Also
@@ -2839,7 +2839,7 @@ omitted, the default transaction of the connection is assumed.
 
 ### Return Values
 
-Returns a prepared query handle, or **`FALSE`** on error.
+Returns a prepared query handle, or **`false`** on error.
 
 ibase\_query
 ============
@@ -2871,16 +2871,16 @@ An InterBase query.
 
 ### Return Values
 
-If the query raises an error, returns **`FALSE`**. If it is successful
+If the query raises an error, returns **`false`**. If it is successful
 and there is a (possibly empty) result set (such as with a SELECT
 query), returns a result identifier. If the query was successful and
-there were no results, returns **`TRUE`**.
+there were no results, returns **`true`**.
 
 > **Note**:
 >
 > In PHP 5.0.0 and up, this function will return the number of rows
 > affected by the query for INSERT, UPDATE and DELETE statements. In
-> order to retain backward compatibility, it will return **`TRUE`** for
+> order to retain backward compatibility, it will return **`true`** for
 > these statements if the query succeeded without affecting any rows.
 
 ### Errors/Exceptions
@@ -2931,7 +2931,7 @@ class="methodparam"><span class="type">string</span> `$dest_db`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$options`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$verbose`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 This function passes the arguments to the (remote) database server.
 There it starts a new restore process. Therefore you won't get any
@@ -2967,11 +2967,11 @@ any chance to get its output. This argument is useless.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Since the restore process is done on the (remote) server, this function
 just passes the arguments to it. While the arguments are legal, you
-won't get **`FALSE`**.
+won't get **`false`**.
 
 ### Examples
 
@@ -3027,7 +3027,7 @@ Roll back a transaction without closing it
 class="methodname">ibase\_rollback\_ret</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_or_trans_identifier`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Rolls back a transaction without closing it.
 
@@ -3044,7 +3044,7 @@ will not be invalidated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_rollback
 ===============
@@ -3057,7 +3057,7 @@ Roll back a transaction
 class="methodname">ibase\_rollback</span> (\[ <span
 class="methodparam"><span class="type">resource</span>
 `$link_or_trans_identifier`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Rolls back a transaction.
 
@@ -3072,7 +3072,7 @@ corresponding transaction will be rolled back.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ibase\_server\_info
 ===================
@@ -3193,7 +3193,7 @@ The user's password.
 
 ### Return Values
 
-Returns a Interbase / Firebird link identifier on success or **`FALSE`**
+Returns a Interbase / Firebird link identifier on success or **`false`**
 on failure.
 
 ### Examples
@@ -3283,7 +3283,7 @@ A previously created connection to the database server.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3354,7 +3354,7 @@ The callback is called with the event name and the link resource as
 arguments whenever one of the specified events is posted by the
 database.
 
-The callback must return **`FALSE`** if the event handler should be
+The callback must return **`false`** if the event handler should be
 canceled. Any other return value is ignored. This function accepts up to
 15 event arguments.
 
@@ -3456,7 +3456,7 @@ assumed.
 
 ### Return Values
 
-Returns a transaction handle, or **`FALSE`** on error.
+Returns a transaction handle, or **`false`** on error.
 
 ibase\_wait\_event
 ==================

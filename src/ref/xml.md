@@ -127,7 +127,7 @@ An error code from <span class="function">xml\_get\_error\_code</span>.
 ### Return Values
 
 Returns a string with a textual description of the error `error_code`,
-or **`FALSE`** if no description was found.
+or **`false`** if no description was found.
 
 ### See Also
 
@@ -154,7 +154,7 @@ A reference to the XML parser to get byte index from.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser, or else it returns which byte index the parser is currently at
 in its data buffer (starting at 0).
 
@@ -197,7 +197,7 @@ A reference to the XML parser to get column number from.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser, or else it returns which column on the current line (as given by
 <span class="function">xml\_get\_current\_line\_number</span>) the
 parser is currently at.
@@ -234,7 +234,7 @@ A reference to the XML parser to get line number from.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser, or else it returns which line the parser is currently at in its
 data buffer.
 
@@ -270,7 +270,7 @@ A reference to the XML parser to get error code from.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser, or else it returns one of the error codes listed in the
 <a href="/xml/error-codes.html" class="link">error codes section</a>.
 
@@ -298,7 +298,7 @@ class="methodparam"><span class="type">XMLParser</span> `$parser`</span>
 `$data`</span> , <span class="methodparam"><span
 class="type">array</span> `&$values`</span> \[, <span
 class="methodparam"><span class="type">array</span> `&$index`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 This function parses an XML string into 2 parallel array structures, one
 (`index`) containing pointers to the location of the appropriate values
@@ -323,8 +323,8 @@ in the $values.
 ### Return Values
 
 <span class="function">xml\_parse\_into\_struct</span> returns 0 for
-failure and 1 for success. This is not the same as **`FALSE`** and
-**`TRUE`**, be careful with operators such as ===.
+failure and 1 for success. This is not the same as **`false`** and
+**`true`**, be careful with operators such as ===.
 
 ### Changelog
 
@@ -533,7 +533,7 @@ Start parsing an XML document
 `$parser`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_final`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">xml\_parse</span> parses an XML document. The
 handlers for the configured events are called as many times as
@@ -547,11 +547,11 @@ A reference to the XML parser to use.
 `data`  
 Chunk of data to parse. A document may be parsed piece-wise by calling
 <span class="function">xml\_parse</span> several times with new data, as
-long as the `is_final` parameter is set and **`TRUE`** when the last
+long as the `is_final` parameter is set and **`true`** when the last
 data is parsed.
 
 `is_final`  
-If set and **`TRUE`**, `data` is the last piece of data sent in this
+If set and **`true`**, `data` is the last piece of data sent in this
 parse.
 
 ### Return Values
@@ -568,7 +568,7 @@ class="function">xml\_get\_current\_byte\_index</span>.
 > **Note**:
 >
 > Some errors (such as entity errors) are reported at the end of the
-> data, thus only if `is_final` is set and **`TRUE`**.
+> data, thus only if `is_final` is set and **`true`**.
 
 ### Changelog
 
@@ -608,7 +608,7 @@ Create an XML parser with namespace support
 class="methodname">xml\_parser\_create\_ns</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$separator`<span class="initializer"> = ":"</span></span> \]\] )
 
@@ -639,7 +639,7 @@ Returns a new <span class="classname">XMLParser</span> instance.
 
 | Version | Description                                                                                                                                                               |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`FALSE`** on failure. |
+| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`false`** on failure. |
 | 8.0.0   | `encoding` is nullable now.                                                                                                                                               |
 
 ### See Also
@@ -658,7 +658,7 @@ Create an XML parser
 class="methodname">xml\_parser\_create</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">xml\_parser\_create</span> creates a new XML
 parser and returns a <span class="classname">XMLParser</span> instance
@@ -685,7 +685,7 @@ Returns a new <span class="classname">XMLParser</span> instance.
 
 | Version | Description                                                                                                                                                               |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`FALSE`** on failure. |
+| 8.0.0   | This function returns an <span class="classname">XMLParser</span> instance now; previously, a <span class="type">resource</span> was returned, or **`false`** on failure. |
 | 8.0.0   | `encoding` is nullable now.                                                                                                                                               |
 
 ### See Also
@@ -722,7 +722,7 @@ references that parser resource.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -761,7 +761,7 @@ for their description. </span>
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser or if `option` isn't valid (generates also a **`E_WARNING`**).
 Else the option's value is returned.
 
@@ -811,9 +811,9 @@ The option's new value.
 
 ### Return Values
 
-This function returns **`FALSE`** if `parser` does not refer to a valid
+This function returns **`false`** if `parser` does not refer to a valid
 parser, or if the option could not be set. Else the option is set and
-**`TRUE`** is returned.
+**`true`** is returned.
 
 ### Changelog
 
@@ -865,7 +865,7 @@ Character data handler is called for every piece of a text in the XML
 document. It can be called multiple times inside each fragment (e.g. for
 non-ASCII strings).
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -874,7 +874,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -924,7 +924,7 @@ character data.This may be the XML declaration, document type
 declaration, entities or other data for which no other handler exists.
 </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -939,7 +939,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 xml\_set\_element\_handler
 ==========================
@@ -1025,12 +1025,12 @@ of the element for which this handler is called.If
 effect for this parser, the element name will be in uppercase letters.
 </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1072,7 +1072,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 
 The function named by `handler` must accept two parameters, and should
 return an integer value. If the value returned from the handler is
-**`FALSE`** (which it will be if no value is returned), the XML parser
+**`false`** (which it will be if no value is returned), the XML parser
 will stop parsing and <span
 class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
@@ -1091,7 +1091,7 @@ calling the handler. </span>
 <span class="simpara"> The prefix is a string used to reference the
 namespace within an XML object. </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1100,7 +1100,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1141,7 +1141,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 
 The function named by `handler` must accept five parameters, and should
 return an integer value.If the value returned from the handler is
-**`FALSE`** (which it will be if no value is returned), the XML parser
+**`false`** (which it will be if no value is returned), the XML parser
 will stop parsing and <span
 class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
@@ -1181,7 +1181,7 @@ identifier as specified in the entity declaration, or an empty string if
 none was specified; the whitespace in the public identifier will have
 been normalized as required by the XML spec. </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1190,7 +1190,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1270,7 +1270,7 @@ declaration. </span>
 <span class="simpara"> Public identifier of the external notation
 declaration. </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1279,7 +1279,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1315,7 +1315,7 @@ The object where to use the XML parser.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1447,7 +1447,7 @@ target. </span>
 <span class="simpara"> The third parameter, `data`, contains the PI
 data. </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1456,7 +1456,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1493,7 +1493,7 @@ when <span class="function">xml\_parse</span> is called for `parser`.
 
 The function named by `handler` must accept three parameters, and should
 return an integer value. If the value returned from the handler is
-**`FALSE`** (which it will be if no value is returned), the XML parser
+**`false`** (which it will be if no value is returned), the XML parser
 will stop parsing and <span
 class="function">xml\_get\_error\_code</span> will return
 **`XML_ERROR_EXTERNAL_ENTITY_HANDLING`**.
@@ -1517,7 +1517,7 @@ namespace within an XML object. </span>
 <span class="simpara"> Uniform Resource Identifier (URI) of namespace.
 </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1526,7 +1526,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1616,7 +1616,7 @@ will always be set to an empty string. </span>
 <span class="simpara"> Name of the notation of this entity (see <span
 class="function">xml\_set\_notation\_decl\_handler</span>). </span>
 
-If a handler function is set to an empty string, or **`FALSE`**, the
+If a handler function is set to an empty string, or **`false`**, the
 handler in question is disabled.
 
 > **Note**: <span class="simpara">Instead of a function name, an array
@@ -1625,7 +1625,7 @@ handler in question is disabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

@@ -74,7 +74,7 @@ The constant name.
 
 ### Return Values
 
-Returns the value of the constant, or **`NULL`** if the constant is not
+Returns the value of the constant, or **`null`** if the constant is not
 defined.
 
 ### Errors/Exceptions
@@ -131,7 +131,7 @@ Defines a named constant
 class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$case_insensitive`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Defines a named constant at runtime.
 
@@ -151,7 +151,7 @@ The name of the constant.
 The value of the constant. In PHP 5, `value` must be a <span
 class="type">scalar</span> value (<span class="type">int</span>, <span
 class="type">float</span>, <span class="type">string</span>, <span
-class="type">bool</span>, or **`NULL`**). In PHP 7, <span
+class="type">bool</span>, or **`null`**). In PHP 7, <span
 class="type">array</span> values are also accepted.
 
 **Warning**
@@ -159,7 +159,7 @@ While it is possible to define <span class="type">resource</span>
 constants, it is not recommended and may cause unpredictable behavior.
 
 `case_insensitive`  
-If set to **`TRUE`**, the constant will be defined case-insensitive. The
+If set to **`true`**, the constant will be defined case-insensitive. The
 default behavior is case-sensitive; i.e. *CONSTANT* and *Constant*
 represent different values.
 
@@ -172,7 +172,7 @@ Defining case-insensitive constants is deprecated as of PHP 7.3.0.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -266,8 +266,8 @@ The constant name.
 
 ### Return Values
 
-Returns **`TRUE`** if the named constant given by `name` has been
-defined, **`FALSE`** otherwise.
+Returns **`true`** if the named constant given by `name` has been
+defined, **`false`** otherwise.
 
 ### Examples
 
@@ -351,12 +351,12 @@ terminates.
 
 ### Return Values
 
-<span class="function">eval</span> returns **`NULL`** unless *return* is
+<span class="function">eval</span> returns **`null`** unless *return* is
 called in the evaluated code, in which case the value passed to *return*
 is returned. As of PHP 7, if there is a parse error in the evaluated
 code, <span class="function">eval</span> throws a ParseError exception.
 Before PHP 7, in this case <span class="function">eval</span> returned
-**`FALSE`** and execution of the following code continued normally. It
+**`false`** and execution of the following code continued normally. It
 is not possible to catch a parse error in <span
 class="function">eval</span> using <span
 class="function">set\_error\_handler</span>.
@@ -532,7 +532,7 @@ class="methodname">get\_browser</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$user_agent`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return_array`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Attempts to determine the capabilities of the user's browser, by looking
 up the browser's information in the `browscap.ini` file.
@@ -544,10 +544,10 @@ The User Agent to be analyzed. By default, the value of HTTP User-Agent
 header is used; however, you can alter this (i.e., look up another
 browser's info) by passing this parameter.
 
-You can bypass this parameter with a **`NULL`** value.
+You can bypass this parameter with a **`null`** value.
 
 `return_array`  
-If set to **`TRUE`**, this function will return an <span
+If set to **`true`**, this function will return an <span
 class="type">array</span> instead of an <span
 class="type">object</span>.
 
@@ -555,7 +555,7 @@ class="type">object</span>.
 
 The information is returned in an object or an array which will contain
 various data elements representing, for instance, the browser's major
-and minor version numbers and ID string; **`TRUE`**/**`FALSE`** values
+and minor version numbers and ID string; **`true`**/**`false`** values
 for features such as frames, JavaScript, and cookies; and so forth.
 
 The *cookies* value simply means that the browser itself is capable of
@@ -690,7 +690,7 @@ Syntax highlighting of a file
 class="methodname">highlight\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$return`<span class="initializer"> = **`false`**</span></span> \] )
 
 Prints out or returns a syntax highlighted version of the code contained
 in `filename` using the colors defined in the built-in syntax
@@ -711,14 +711,14 @@ AddType application/x-httpd-php-source .phps
 Path to the PHP file to be highlighted.
 
 `return`  
-Set this parameter to **`TRUE`** to make this function return the
+Set this parameter to **`true`** to make this function return the
 highlighted code.
 
 ### Return Values
 
-If `return` is set to **`TRUE`**, returns the highlighted code as a
-string instead of printing it out. Otherwise, it will return **`TRUE`**
-on success, **`FALSE`** on failure.
+If `return` is set to **`true`**, returns the highlighted code as a
+string instead of printing it out. Otherwise, it will return **`true`**
+on success, **`false`** on failure.
 
 ### Notes
 
@@ -752,7 +752,7 @@ Syntax highlighting of a string
 class="methodname">highlight\_string</span> ( <span
 class="methodparam"><span class="type">string</span> `$str`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Outputs or returns html markup for a syntax highlighted version of the
 given PHP code using the colors defined in the built-in syntax
@@ -764,14 +764,14 @@ highlighter for PHP.
 The PHP code to be highlighted. This should include the opening tag.
 
 `return`  
-Set this parameter to **`TRUE`** to make this function return the
+Set this parameter to **`true`** to make this function return the
 highlighted code.
 
 ### Return Values
 
-If `return` is set to **`TRUE`**, returns the highlighted code as a
-string instead of printing it out. Otherwise, it will return **`TRUE`**
-on success, **`FALSE`** on failure.
+If `return` is set to **`true`**, returns the highlighted code as a
+string instead of printing it out. Otherwise, it will return **`true`**
+on success, **`false`** on failure.
 
 ### Examples
 
@@ -814,7 +814,7 @@ Get the system's high resolution time
 
 <span class="type">mixed</span> <span class="methodname">hrtime</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$get_as_number`<span class="initializer"> = **`FALSE`**</span></span>
+`$get_as_number`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Returns the system's high resolution time, counted from an arbitrary
@@ -877,7 +877,7 @@ Sets whether a client disconnect should cause a script to be aborted.
 When running PHP as a command line script, and the script's tty goes
 away without the script being terminated then the script will die the
 next time it tries to write anything, unless `value` is set to
-**`TRUE`**
+**`true`**
 
 ### Parameters
 
@@ -1017,7 +1017,7 @@ Currently implemented formats are:
 
 ### Return Values
 
-Returns a binary string containing data, or **`FALSE`** on failure.
+Returns a binary string containing data, or **`false`** on failure.
 
 ### Changelog
 
@@ -1172,7 +1172,7 @@ The string to convert.
 
 ### Return Values
 
-The `subject` string converted to `out_codepage`, or **`NULL`** on
+The `subject` string converted to `out_codepage`, or **`null`** on
 failure.
 
 ### Errors/Exceptions
@@ -1262,7 +1262,7 @@ A codepage identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1295,7 +1295,7 @@ the event is sent to all processes of the process group.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1340,7 +1340,7 @@ class="methodname">sapi\_windows\_set\_ctrl\_handler</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$callable`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$add`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Sets or removes a *CTRL* event handler, which allows Windows CLI
 processes to intercept or ignore *CTRL+C* and *CTRL+BREAK* events. Note
@@ -1363,16 +1363,16 @@ supposed to have the following signature:
 **`PHP_WINDOWS_EVENT_CTRL_C`** or **`PHP_WINDOWS_EVENT_CTRL_BREAK`**.
 </span>
 
-Setting a **`NULL`** `callable` causes the process to ignore *CTRL+C*
+Setting a **`null`** `callable` causes the process to ignore *CTRL+C*
 events, but not *CTRL+BREAK* events.
 
 `add`  
-If **`TRUE`**, the handler is set. If **`FALSE`**, the handler is
+If **`true`**, the handler is set. If **`false`**, the handler is
 removed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1418,13 +1418,13 @@ class="methodparam"><span class="type">resource</span> `$stream`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$enable`</span> \] )
 
-If `enable` is omitted, the function returns **`TRUE`** if the stream
-`stream` has VT100 control codes enabled, **`FALSE`** otherwise.
+If `enable` is omitted, the function returns **`true`** if the stream
+`stream` has VT100 control codes enabled, **`false`** otherwise.
 
 If `enable` is specified, the function will try to enable or disable the
 VT100 features of the stream `stream`. If the feature has been
-successfully enabled (or disabled), the function will return **`TRUE`**,
-or **`FALSE`** otherwise.
+successfully enabled (or disabled), the function will return **`true`**,
+or **`false`** otherwise.
 
 At startup, PHP tries to enable the VT100 feature of the
 **`STDOUT`**/**`STDERR`** streams. By the way, if those streams are
@@ -1447,15 +1447,15 @@ available on older Windows versions.
 The stream on which the function will operate.
 
 `enable`  
-If specified, the VT100 feature will be enabled (if **`TRUE`**) or
-disabled (if **`FALSE`**).
+If specified, the VT100 feature will be enabled (if **`true`**) or
+disabled (if **`false`**).
 
 ### Return Values
 
-If `enable` is not specified: returns **`TRUE`** if the VT100 feature is
-enabled, **`FALSE`** otherwise.
+If `enable` is not specified: returns **`true`** if the VT100 feature is
+enabled, **`false`** otherwise.
 
-If `enable` is specified: Returns **`TRUE`** on success or **`FALSE`**
+If `enable` is specified: Returns **`true`** on success or **`false`**
 on failure.
 
 ### Examples
@@ -1548,7 +1548,7 @@ Halt time in seconds.
 
 ### Return Values
 
-Returns zero on success, or **`FALSE`** on error.
+Returns zero on success, or **`false`** on error.
 
 If the call was interrupted by a signal, <span
 class="function">sleep</span> returns a non-zero value. On Windows, this
@@ -1661,7 +1661,7 @@ Must be a non-negative integer less than 1 billion.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If the delay was interrupted by a signal, an associative array will be
 returned with the components:
@@ -1731,7 +1731,7 @@ The timestamp when the script should wake.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1778,7 +1778,7 @@ Generate a unique ID
 (\[ <span class="methodparam"><span class="type">string</span>
 `$prefix`<span class="initializer"> = ""</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$more_entropy`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Gets a prefixed unique identifier based on the current time in
 microseconds.
@@ -1808,10 +1808,10 @@ on several hosts that might happen to generate the identifier at the
 same microsecond.
 
 With an empty `prefix`, the returned string will be 13 characters long.
-If `more_entropy` is **`TRUE`**, it will be 23 characters.
+If `more_entropy` is **`true`**, it will be 23 characters.
 
 `more_entropy`  
-If set to **`TRUE`**, <span class="function">uniqid</span> will add
+If set to **`true`**, <span class="function">uniqid</span> will add
 additional entropy (using the combined linear congruential generator) at
 the end of the return value, which increases the likelihood that the
 result will be unique.
@@ -1854,7 +1854,7 @@ printf("uniqid('', true): %s\r\n", uniqid('', true));
 
 > **Note**:
 >
-> Under Cygwin, the `more_entropy` must be set to **`TRUE`** for this
+> Under Cygwin, the `more_entropy` must be set to **`true`** for this
 > function to work.
 
 unpack
@@ -1895,7 +1895,7 @@ The offset to begin unpacking from.
 ### Return Values
 
 Returns an associative array containing unpacked elements of binary
-string, or **`FALSE`** on failure.
+string, or **`false`** on failure.
 
 ### Changelog
 

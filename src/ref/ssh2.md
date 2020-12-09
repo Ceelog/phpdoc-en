@@ -29,7 +29,7 @@ Remote user name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -93,7 +93,7 @@ used for it.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -149,7 +149,7 @@ Remote user name.
 
 ### Return Values
 
-Returns **`TRUE`** if the server does accept "none" as an authentication
+Returns **`true`** if the server does accept "none" as an authentication
 method, or an array of accepted authentication methods on failure.
 
 ### Examples
@@ -199,7 +199,7 @@ Password for `username`
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -258,7 +258,7 @@ must be provided.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -357,12 +357,12 @@ parameters.
 |------------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|-------------------------------------------------------|
 | ignore     | Name of function to call when an **`SSH2_MSG_IGNORE`** packet is received                                                                                                                                     | void ignore\_cb($message)                             |
 | debug      | Name of function to call when an **`SSH2_MSG_DEBUG`** packet is received                                                                                                                                      | void debug\_cb($message, $language, $always\_display) |
-| macerror   | Name of function to call when a packet is received but the message authentication code failed. If the callback returns **`TRUE`**, the mismatch will be ignored, otherwise the connection will be terminated. | bool macerror\_cb($packet)                            |
+| macerror   | Name of function to call when a packet is received but the message authentication code failed. If the callback returns **`true`**, the mismatch will be ignored, otherwise the connection will be terminated. | bool macerror\_cb($packet)                            |
 | disconnect | Name of function to call when an **`SSH2_MSG_DISCONNECT`** packet is received                                                                                                                                 | void disconnect\_cb($reason, $message, $language)     |
 
 ### Return Values
 
-Returns a resource on success, or **`FALSE`** on error.
+Returns a resource on success, or **`false`** on error.
 
 ### Examples
 
@@ -426,7 +426,7 @@ class="function">ssh2\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -483,7 +483,7 @@ Height of the virtual terminal.
 
 ### Return Values
 
-Returns a stream on success or **`FALSE`** on failure.
+Returns a stream on success or **`false`** on failure.
 
 ### Examples
 
@@ -670,7 +670,7 @@ class="methodparam"><span class="type">resource</span> `$pkey`</span> ,
 `$algoname`</span> , <span class="methodparam"><span
 class="type">string</span> `$blob`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$attributes`</span>
 \]\] )
 
@@ -705,7 +705,7 @@ abort the add process.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -754,7 +754,7 @@ client to manage the list of authorized public keys stored on the target
 server in an implementation agnostic manner. If the remote server does
 not support the publickey subsystem, the <span
 class="function">ssh2\_publickey\_init</span> function will return
-**`FALSE`**.
+**`false`**.
 
 ### Parameters
 
@@ -763,7 +763,7 @@ class="function">ssh2\_publickey\_init</span> function will return
 ### Return Values
 
 Returns an *SSH2 Publickey Subsystem* resource for use with all other
-ssh2\_publickey\_\*() methods or **`FALSE`** on failure.
+ssh2\_publickey\_\*() methods or **`false`** on failure.
 
 ### Notes
 
@@ -892,7 +892,7 @@ Publickey blob as raw binary data
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -940,7 +940,7 @@ Path to the local file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -996,7 +996,7 @@ The file will be created with the mode specified by `create_mode`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1048,7 +1048,7 @@ more details on this parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1147,7 +1147,7 @@ class="methodparam"><span class="type">resource</span> `$sftp`</span> ,
 class="type">int</span> `$mode`<span class="initializer"> =
 0777</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Creates a directory on the remote file server with permissions set to
 `mode`.
@@ -1169,12 +1169,12 @@ Path of the new directory.
 Permissions on the new directory.
 
 `recursive`  
-If `recursive` is **`TRUE`** any parent directories required for
+If `recursive` is **`true`** any parent directories required for
 `dirname` will be automatically created as well.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1323,7 +1323,7 @@ The new file name that replaces `from`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1372,7 +1372,7 @@ class="function">ssh2\_sftp</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1484,7 +1484,7 @@ Target of the symbolic link.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1530,7 +1530,7 @@ class="function">ssh2\_sftp</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1575,7 +1575,7 @@ class="function">ssh2\_connect</span>.
 This method returns an *SSH2 SFTP* resource for use with all other
 ssh2\_sftp\_\*() methods and the
 <a href="/wrappers/ssh2.html" class="link">ssh2.sftp://</a> fopen
-wrapper, or **`FALSE`** on failure.
+wrapper, or **`false`** on failure.
 
 ### Examples
 

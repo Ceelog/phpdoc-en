@@ -36,7 +36,7 @@ class="methodname">streamWrapper::stream\_set\_option</span> will be
 invoked with the **`STREAM_OPTION_READ_BUFFER`** option. Custom stream
 wrapper implementations may need to implement the <span
 class="methodname">streamWrapper::stream\_set\_option</span> method to
-avoid a warning (always returning **`FALSE`** is a sufficient
+avoid a warning (always returning **`false`** is a sufficient
 implementation).
 
 #### Serialization
@@ -50,7 +50,7 @@ Password hashing algorithm identifiers are now nullable strings rather
 than integers.
 
 -   <span class="simpara"> **`PASSWORD_DEFAULT`** was int 1; now is
-    **`NULL`** </span>
+    **`null`** </span>
 -   <span class="simpara"> **`PASSWORD_BCRYPT`** was int 1; now is
     string '2y' </span>
 -   <span class="simpara"> **`PASSWORD_ARGON2I`** was int 2; now is
@@ -72,7 +72,7 @@ is equivalent to <span class="function">htmlspecialchars</span>.
 #### <span class="function">fread</span> and <span class="function">fwrite</span> function
 
 <span class="function">fread</span> and <span
-class="function">fwrite</span> will now return **`FALSE`** if the
+class="function">fwrite</span> will now return **`false`** if the
 operation failed. Previously an empty string or 0 was returned.
 EAGAIN/EWOULDBLOCK are not considered failures.
 
@@ -107,7 +107,7 @@ behind accessible properties on the object.
 
 Comparison of <span class="classname">DateInterval</span> objects (using
 *==*, *\<*, and so on) will now generate a warning and always return
-**`FALSE`**. Previously all <span class="classname">DateInterval</span>
+**`false`**. Previously all <span class="classname">DateInterval</span>
 objects were considered equal, unless they had properties.
 
 ### Intl
@@ -135,13 +135,13 @@ class="classname">Error</span> is thrown if the number of requested
 bytes is less than or equal to zero, and an <span
 class="classname">Exception</span> is thrown if sufficient randomness
 cannot be gathered. The *$crypto\_strong output* argument is guaranteed
-to always be **`TRUE`** if the function does not throw, so explicitly
+to always be **`true`** if the function does not throw, so explicitly
 checking it is not necessary.
 
 ### Regular Expressions (Perl-Compatible)
 
 When **`PREG_UNMATCHED_AS_NULL`** mode is used, trailing unmatched
-capturing groups will now also be set to **`NULL`** (or *\[null, -1\]*
+capturing groups will now also be set to **`null`** (or *\[null, -1\]*
 if offset capture is enabled). This means that the size of the
 *$matches* will always be the same.
 

@@ -52,7 +52,7 @@ PHP Core:
     class="function">stream\_context\_set\_default</span> - Set the
     default stream context. </span>
 -   <span class="simpara"> <span
-    class="function">stream\_supports\_lock</span> - Return **`TRUE`**
+    class="function">stream\_supports\_lock</span> - Return **`true`**
     if the stream supports locking. </span>
 -   <span class="simpara"> <span
     class="function">stream\_context\_get\_params</span> - Retrieve

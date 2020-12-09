@@ -1,5 +1,5 @@
-*while*
--------
+while
+-----
 
 *while* loops are the simplest type of loop in PHP. They behave just
 like their C counterparts. The basic form of a *while* statement is:
@@ -9,11 +9,11 @@ like their C counterparts. The basic form of a *while* statement is:
 
 The meaning of a *while* statement is simple. It tells PHP to execute
 the nested statement(s) repeatedly, as long as the *while* expression
-evaluates to **`TRUE`**. The value of the expression is checked each
+evaluates to **`true`**. The value of the expression is checked each
 time at the beginning of the loop, so even if this value changes during
 the execution of the nested statement(s), execution will not stop until
 the end of the iteration (each time PHP runs the statements in the loop
-is one iteration). If the *while* expression evaluates to **`FALSE`**
+is one iteration). If the *while* expression evaluates to **`false`**
 from the very beginning, the nested statement(s) won't even be run once.
 
 Like with the *if* statement, you can group multiple statements within

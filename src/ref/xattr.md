@@ -36,7 +36,7 @@ The name of the attribute.
 
 ### Return Values
 
-Returns a string containing the value or **`FALSE`** if the attribute
+Returns a string containing the value or **`false`** if the attribute
 doesn't exist.
 
 ### Examples
@@ -161,7 +161,7 @@ The name of the attribute to remove.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -231,7 +231,7 @@ The value of the attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -283,8 +283,8 @@ The path of the tested file.
 
 ### Return Values
 
-This function returns **`TRUE`** if filesystem supports extended
-attributes, **`FALSE`** if it doesn't and **`NULL`** if it can't be
+This function returns **`true`** if filesystem supports extended
+attributes, **`false`** if it doesn't and **`null`** if it can't be
 determined (for example wrong path or lack of permissions to file).
 
 ### Examples

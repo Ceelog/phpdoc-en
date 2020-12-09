@@ -7,7 +7,7 @@ Other changes
     configuration directive. </span>
 -   <span class="simpara">
     <a href="/book/snmp.html" class="link">SNMP</a> now has an OOP API.
-    </span> <span class="simpara"> Functions now return **`FALSE`** on
+    </span> <span class="simpara"> Functions now return **`false`** on
     every error condition including SNMP-related (no such instance, end
     of MIB, etc). Thus, in particular, breaks previous behavior of
     get/walk functions returning an empty string on SNMP-related errors.

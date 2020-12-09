@@ -62,7 +62,7 @@ class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -72,7 +72,7 @@ class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">set\_flags</span> ( <span
@@ -96,7 +96,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function is an alias of:
 <a href="/ref/fileinfo.html#finfo_buffer" class="link">finfo_buffer()</a>
@@ -133,7 +133,7 @@ class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function is an alias of:
 <a href="/ref/fileinfo.html#finfo_file" class="link">finfo_file()</a>

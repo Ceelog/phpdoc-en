@@ -24,7 +24,7 @@ The parameters to be passed to the callback, as an indexed array.
 
 ### Return Values
 
-Returns the return value of the callback, or **`FALSE`** on error.
+Returns the return value of the callback, or **`false`** on error.
 
 ### Examples
 
@@ -136,7 +136,7 @@ The above example will output:
 > this does not apply to internal functions, for which the function
 > signature is honored. Passing by value when the function expects a
 > parameter by reference results in a warning and having <span
-> class="function">call\_user\_func</span> return **`FALSE`** (there is,
+> class="function">call\_user\_func</span> return **`false`** (there is,
 > however, an exception for passed values with reference count = 1, such
 > as in literals, as these can be turned into references without ill
 > effects — but also without writes to that value having any effect —;
@@ -369,7 +369,7 @@ The function code.
 
 ### Return Values
 
-Returns a unique function name as a string, or **`FALSE`** on error.
+Returns a unique function name as a string, or **`false`** on error.
 
 ### Examples
 
@@ -559,7 +559,7 @@ One parameter, gathering all the method parameter in one array.
 
 ### Return Values
 
-Returns the function result, or **`FALSE`** on error.
+Returns the function result, or **`false`** on error.
 
 ### Examples
 
@@ -642,7 +642,7 @@ Zero or more parameters to be passed to the function.
 
 ### Return Values
 
-Returns the function result, or **`FALSE`** on error.
+Returns the function result, or **`false`** on error.
 
 ### Examples
 
@@ -721,7 +721,7 @@ The argument offset. Function arguments are counted starting from zero.
 
 ### Return Values
 
-Returns the specified argument, or **`FALSE`** on error.
+Returns the specified argument, or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -1124,7 +1124,7 @@ Output in PHP 5.3 and later will be something similar to:
 function\_exists
 ================
 
-Return **`TRUE`** if the given function has been defined
+Return **`true`** if the given function has been defined
 
 ### Description
 
@@ -1143,12 +1143,12 @@ The function name, as a string.
 
 ### Return Values
 
-Returns **`TRUE`** if `function_name` exists and is a function,
-**`FALSE`** otherwise.
+Returns **`true`** if `function_name` exists and is a function,
+**`false`** otherwise.
 
 > **Note**:
 >
-> This function will return **`FALSE`** for constructs, such as <span
+> This function will return **`false`** for constructs, such as <span
 > class="function">include\_once</span> and <span
 > class="function">echo</span>.
 
@@ -1194,7 +1194,7 @@ Returns an array of all defined functions
 class="methodname">get\_defined\_functions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$exclude_disabled`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Gets an array of all defined functions.
 
@@ -1378,7 +1378,7 @@ The function to register.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1457,7 +1457,7 @@ No value is returned.
     array comprising a function's argument list
 -   [func\_num\_args](/ref/funchand.html#func_num_args) — Returns the
     number of arguments passed to the function
--   [function\_exists](/ref/funchand.html#function_exists) — Return TRUE
+-   [function\_exists](/ref/funchand.html#function_exists) — Return true
     if the given function has been defined
 -   [get\_defined\_functions](/ref/funchand.html#get_defined_functions)
     — Returns an array of all defined functions

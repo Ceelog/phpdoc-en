@@ -6,10 +6,10 @@ take note of some backward incompatible changes:
 
 -   <span class="simpara"> The newer internal parameter parsing API has
     been applied across all the extensions bundled with PHP 5.3.x. This
-    parameter parsing API causes functions to return **`NULL`** when
+    parameter parsing API causes functions to return **`null`** when
     passed incompatible parameters. There are some exceptions to this
     rule, such as the <span class="function">get\_class</span> function,
-    which will continue to return **`FALSE`** on error. </span>
+    which will continue to return **`false`** on error. </span>
 -   <span class="simpara"> <span class="function">clearstatcache</span>
     no longer clears the realpath cache by default. </span>
 -   <span class="simpara"> <span class="function">realpath</span> is now

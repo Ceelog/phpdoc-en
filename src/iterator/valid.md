@@ -22,4 +22,4 @@ This function has no parameters.
 ### Return Values
 
 The return value will be casted to <span class="type">bool</span> and
-then evaluated. Returns **`TRUE`** on success or **`FALSE`** on failure.
+then evaluated. Returns **`true`** on success or **`false`** on failure.

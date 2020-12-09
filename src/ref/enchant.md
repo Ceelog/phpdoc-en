@@ -29,7 +29,7 @@ providers with their details.
 | Version | Description                                                                                                                                                                  |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">resource</a> was expected. |
-| 8.0.0   | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                         |
+| 8.0.0   | Prior to this version, the function returned **`false`** on failure.                                                                                                         |
 
 ### Examples
 
@@ -106,7 +106,7 @@ non-empty tag in the LOCALE format, ex: us\_US, ch\_DE, etc.
 
 ### Return Values
 
-Returns **`TRUE`** when the tag exist or **`FALSE`** when not.
+Returns **`true`** when the tag exist or **`false`** when not.
 
 ### Changelog
 
@@ -156,7 +156,7 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -191,7 +191,7 @@ class="function">enchant\_broker\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -231,7 +231,7 @@ The type of the dictionaries, i.e. **`ENCHANT_MYSPELL`** or
 
 ### Return Values
 
-Returns the path of the dictionary directory on success or **`FALSE`**
+Returns the path of the dictionary directory on success or **`false`**
 on failure.
 
 ### Changelog
@@ -267,7 +267,7 @@ class="function">enchant\_broker\_init</span>.
 
 ### Return Values
 
-Return the msg string if an error was found or **`FALSE`**
+Return the msg string if an error was found or **`false`**
 
 ### Changelog
 
@@ -291,7 +291,7 @@ class="methodparam">void</span> )
 
 ### Return Values
 
-Returns a broker resource on success or **`FALSE`**.
+Returns a broker resource on success or **`false`**.
 
 ### Changelog
 
@@ -333,7 +333,7 @@ with their details.
 | Version | Description                                                                                                                                                                  |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `broker` expects an <span class="classname">EnchantBroker</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">resource</a> was expected. |
-| 8.0.0   | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                         |
+| 8.0.0   | Prior to this version, the function returned **`false`** on failure.                                                                                                         |
 
 ### Examples
 
@@ -433,7 +433,7 @@ A tag describing the locale, for example en\_US, de\_DE
 
 ### Return Values
 
-Returns a dictionary resource on success or **`FALSE`** on failure.
+Returns a dictionary resource on success or **`false`** on failure.
 
 ### Changelog
 
@@ -495,7 +495,7 @@ created if possible.
 
 ### Return Values
 
-Returns a dictionary resource on success or **`FALSE`** on failure.
+Returns a dictionary resource on success or **`false`** on failure.
 
 ### Changelog
 
@@ -541,7 +541,7 @@ The path of the dictionary directory.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -590,7 +590,7 @@ Comma delimited list of provider names
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -625,7 +625,7 @@ The word to add
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -709,8 +709,8 @@ class="methodparam"><span class="type">EnchantDictionary</span>
 `$dictionary`</span> , <span class="methodparam"><span
 class="type">string</span> `$word`</span> )
 
-If the word is correctly spelled return **`TRUE`**, otherwise return
-**`FALSE`**
+If the word is correctly spelled return **`true`**, otherwise return
+**`false`**
 
 ### Parameters
 
@@ -724,7 +724,7 @@ The word to check
 
 ### Return Values
 
-Returns **`TRUE`** if the word is spelled correctly, **`FALSE`** if not.
+Returns **`true`** if the word is spelled correctly, **`false`** if not.
 
 ### Changelog
 
@@ -755,14 +755,14 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                                                                                                                          |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `dictionary` expects an <span class="classname">EnchantDictionary</span> instance now; previoulsy, a <a href="/language/types/resource.html" class="link">resource</a> was expected. |
-| 8.0.0   | Prior to this version, the function returned **`FALSE`** on failure.                                                                                                                 |
+| 8.0.0   | Prior to this version, the function returned **`false`** on failure.                                                                                                                 |
 
 ### Examples
 
@@ -819,7 +819,7 @@ class="function">enchant\_broker\_request\_pwl\_dict</span>.
 
 ### Return Values
 
-Returns the error message as string or **`FALSE`** if no error occurred.
+Returns the error message as string or **`false`** if no error occurred.
 
 ### Changelog
 
@@ -854,7 +854,7 @@ The word to lookup
 
 ### Return Values
 
-Returns **`TRUE`** if the word exists or **`FALSE`**
+Returns **`true`** if the word exists or **`false`**
 
 ### Changelog
 
@@ -879,10 +879,10 @@ class="methodparam"><span class="type">EnchantDictionary</span>
 `$dictionary`</span> , <span class="methodparam"><span
 class="type">string</span> `$word`</span> \[, <span
 class="methodparam"><span class="type">array</span> `&$suggestions`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
-If the word is correctly spelled return **`TRUE`**, otherwise return
-**`FALSE`**, if suggestions variable is provided, fill it with spelling
+If the word is correctly spelled return **`true`**, otherwise return
+**`false`**, if suggestions variable is provided, fill it with spelling
 alternatives.
 
 ### Parameters
@@ -901,7 +901,7 @@ array of suggestions.
 
 ### Return Values
 
-Returns **`TRUE`** if the word is correctly spelled or **`FALSE`**
+Returns **`true`** if the word is correctly spelled or **`false`**
 
 ### Changelog
 
@@ -997,7 +997,7 @@ The correct word
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

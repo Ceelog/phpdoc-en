@@ -120,7 +120,7 @@ available.
 
 ### Return Values
 
-Returns `$this` or **`NULL`** on failure.
+Returns `$this` or **`null`** on failure.
 
 ### Examples
 
@@ -190,8 +190,8 @@ Whether to use *self*
 
 ### Return Values
 
-Returns result of the called function, **`NULL`** for wrong arguments or
-**`FALSE`** on other failure.
+Returns result of the called function, **`null`** for wrong arguments or
+**`false`** on other failure.
 
 ### Examples
 
@@ -268,8 +268,8 @@ available.
 
 ### Return Values
 
-Returns result of evaled code, **`NULL`** for wrong arguments or
-**`FALSE`** on other failure.
+Returns result of evaled code, **`null`** for wrong arguments or
+**`false`** on other failure.
 
 ### Examples
 
@@ -335,8 +335,8 @@ available.
 
 ### Return Values
 
-Returns result of included code, **`NULL`** for wrong arguments or
-**`FALSE`** on other failure.
+Returns result of included code, **`null`** for wrong arguments or
+**`false`** on other failure.
 
 Lua::registerCallback
 =====================
@@ -362,7 +362,7 @@ A valid PHP function callback
 
 ### Return Values
 
-Returns `$this`, **`NULL`** for wrong arguments or **`FALSE`** on other
+Returns `$this`, **`null`** for wrong arguments or **`false`** on other
 failure.
 
 ### Examples

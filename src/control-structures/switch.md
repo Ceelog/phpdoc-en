@@ -1,5 +1,5 @@
-*switch*
---------
+switch
+------
 
 The *switch* statement is similar to a series of IF statements on the
 same expression. In many occasions, you may want to compare the same

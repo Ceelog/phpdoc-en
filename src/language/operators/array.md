@@ -4,11 +4,11 @@ Array Operators
 | Example    | Name         | Result                                                                                             |
 |------------|--------------|----------------------------------------------------------------------------------------------------|
 | $a + $b    | Union        | Union of `$a` and `$b`.                                                                            |
-| $a == $b   | Equality     | **`TRUE`** if `$a` and `$b` have the same key/value pairs.                                         |
-| $a === $b  | Identity     | **`TRUE`** if `$a` and `$b` have the same key/value pairs in the same order and of the same types. |
-| $a != $b   | Inequality   | **`TRUE`** if `$a` is not equal to `$b`.                                                           |
-| $a \<\> $b | Inequality   | **`TRUE`** if `$a` is not equal to `$b`.                                                           |
-| $a !== $b  | Non-identity | **`TRUE`** if `$a` is not identical to `$b`.                                                       |
+| $a == $b   | Equality     | **`true`** if `$a` and `$b` have the same key/value pairs.                                         |
+| $a === $b  | Identity     | **`true`** if `$a` and `$b` have the same key/value pairs in the same order and of the same types. |
+| $a != $b   | Inequality   | **`true`** if `$a` is not equal to `$b`.                                                           |
+| $a \<\> $b | Inequality   | **`true`** if `$a` is not equal to `$b`.                                                           |
+| $a !== $b  | Non-identity | **`true`** if `$a` is not identical to `$b`.                                                       |
 
 The *+* operator returns the right-hand array appended to the left-hand
 array; for keys that exist in both arrays, the elements from the

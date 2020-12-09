@@ -87,7 +87,7 @@ $bar = &test();    // Invalid.
 It is not necessary to initialize variables in PHP however it is a very
 good practice. Uninitialized variables have a default value of their
 type depending on the context in which they are used - booleans default
-to **`FALSE`**, integers and floats default to zero, strings (e.g. used
+to **`false`**, integers and floats default to zero, strings (e.g. used
 in <span class="function">echo</span>) are set as an empty string and
 arrays become to an empty array.
 

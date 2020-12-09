@@ -271,7 +271,7 @@ with the same user name
 
 `ingres.scrollable` <span class="type">bool</span>  
 Enables support for scrollable cursors. When fetching CLOB or BLOB data,
-this should be set to **`FALSE`**. Available with Ingres 9.2.0 or later.
+this should be set to **`false`**. Available with Ingres 9.2.0 or later.
 
 `ingres.trace` <span class="type">bool</span>  
 Enables simple tracing using **`E_NOTICE`** messages
@@ -590,7 +590,7 @@ The connection link identifier
 
 ### Return Values
 
-Returns **`TRUE`** if autocommit is enabled or **`FALSE`** when
+Returns **`true`** if autocommit is enabled or **`false`** when
 autocommit is disabled
 
 ### See Also
@@ -635,7 +635,7 @@ The connection link identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -720,7 +720,7 @@ The connection link identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -760,7 +760,7 @@ The connection link identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -969,7 +969,7 @@ The password associated with `username`
 
 ### Return Values
 
-Returns a Ingres link resource on success or **`FALSE`** on failure
+Returns a Ingres link resource on success or **`false`** on failure
 
 ### Examples
 
@@ -1317,7 +1317,7 @@ See the <a href="/book/ingres.html#" class="link">types</a> parameter in
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1399,7 +1399,7 @@ enumerated array, **`INGRES_ASSOC`** for associative array, or
 
 ### Return Values
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### Examples
@@ -1473,7 +1473,7 @@ The query result identifier
 ### Return Values
 
 Returns an associative array that corresponds to the fetched row, or
-**`FALSE`** if there are no more rows
+**`false`** if there are no more rows
 
 ### Examples
 
@@ -1544,7 +1544,7 @@ following values: **`INGRES_ASSOC`**, **`INGRES_NUM`**, and
 
 ### Return Values
 
-Returns an object that corresponds to the fetched row, or **`FALSE`** if
+Returns an object that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### Examples
@@ -1603,7 +1603,7 @@ The result identifier for a query
 ### Return Values
 
 Returns an <span class="type">int</span> if there is a return value
-otherwise it will return **`NULL`**.
+otherwise it will return **`null`**.
 
 ### Examples
 
@@ -1653,12 +1653,12 @@ class="methodparam"><span class="type">resource</span> `$result`</span>
 )
 
 <span class="function">ingres\_fetch\_row</span> returns an array that
-corresponds to the fetched row, or **`FALSE`** if there are no more
+corresponds to the fetched row, or **`false`** if there are no more
 rows. Each result column is stored in an array offset, starting at
 offset 1.
 
 Subsequent calls to <span class="function">ingres\_fetch\_row</span>
-return the next row in the result set, or **`FALSE`** if there are no
+return the next row in the result set, or **`false`** if there are no
 more rows.
 
 By default, arrays created by <span
@@ -1683,7 +1683,7 @@ The query result identifier
 
 ### Return Values
 
-Returns an array that corresponds to the fetched row, or **`FALSE`** if
+Returns an array that corresponds to the fetched row, or **`false`** if
 there are no more rows
 
 ### Examples
@@ -1809,7 +1809,7 @@ class="function">ingres\_num\_fields</span> *- 1*.
 
 ### Return Values
 
-Returns the name of a field in a query result or **`FALSE`** on failure
+Returns the name of a field in a query result or **`false`** on failure
 
 ### See Also
 
@@ -1861,8 +1861,8 @@ class="function">ingres\_num\_fields</span> *- 1*.
 
 ### Return Values
 
-<span class="function">ingres\_field\_nullable</span> returns **`TRUE`**
-if the field can be set to the **`NULL`** value and **`FALSE`** if it
+<span class="function">ingres\_field\_nullable</span> returns **`true`**
+if the field can be set to the **`null`** value and **`false`** if it
 cannot
 
 ### See Also
@@ -2027,7 +2027,7 @@ class="function">ingres\_num\_fields</span> *- 1*.
 ### Return Values
 
 <span class="function">ingres\_field\_type</span> returns the type of a
-field in a query result or **`FALSE`** on failure. Examples of types
+field in a query result or **`false`** on failure. Examples of types
 returned are *IIAPI\_BYTE\_TYPE*, *IIAPI\_CHA\_TYPE*,
 *IIAPI\_DTE\_TYPE*, *IIAPI\_FLT\_TYPE*, *IIAPI\_INT\_TYPE*,
 *IIAPI\_VCH\_TYPE*. Some of these types can map to more than one SQL
@@ -2064,7 +2064,7 @@ The query result identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2109,7 +2109,7 @@ call to <span class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span> or <span
 class="function">ingres\_errsqlstate</span> to get the respective error
 number, error text, or SQL STATE. While <span
-class="function">ingres\_next\_error</span> returns **`TRUE`**, there
+class="function">ingres\_next\_error</span> returns **`true`**, there
 are more errors to fetch.
 
 ### Parameters
@@ -2119,8 +2119,8 @@ The connection link identifier
 
 ### Return Values
 
-<span class="function">ingres\_next\_error</span> returns **`TRUE`** if
-there is another error to retrieve or **`FALSE`** when there are no more
+<span class="function">ingres\_next\_error</span> returns **`true`** if
+there is another error to retrieve or **`false`** when there are no more
 errors
 
 ### See Also
@@ -2188,7 +2188,7 @@ fetch for a SELECT statement.
 > result's data and the script will be unable to get them.
 >
 > Instead, you should retrieve the result's data using one of these
-> fetch functions in a loop until it returns **`FALSE`**, indicating
+> fetch functions in a loop until it returns **`false`**, indicating
 > that no more results are available.
 
 ### Parameters
@@ -2261,7 +2261,7 @@ options that can be passed
 
 ### Return Values
 
-Returns an Ingres link resource on success or **`FALSE`** on failure
+Returns an Ingres link resource on success or **`false`** on failure
 
 ### See Also
 
@@ -2438,7 +2438,7 @@ fetches the expected parameter types from the server.
 ### Return Values
 
 <span class="function">ingres\_query</span> returns a query result
-identifier on success else it returns **`FALSE`**. To see if an error
+identifier on success else it returns **`false`**. To see if an error
 occurred use <span class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span> or <span
 class="function">ingres\_errsqlstate</span>.
@@ -2565,7 +2565,7 @@ is set to 0, then the first row is 0, else it is 1
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2628,7 +2628,7 @@ The connection link identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2760,7 +2760,7 @@ pairs. The following table lists the option name and the expected type
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2875,7 +2875,7 @@ See the <a href="/book/ingres.html#" class="link">types</a> parameter in
 
 <span class="function">ingres\_unbuffered\_query</span> returns a query
 result identifier when there are rows to fetch; else it returns
-**`FALSE`** when there are no rows, as is the case of an INSERT, UPDATE,
+**`false`** when there are no rows, as is the case of an INSERT, UPDATE,
 or DELETE statement. To see if an error occurred, use <span
 class="function">ingres\_errno</span>, <span
 class="function">ingres\_error</span>, or <span

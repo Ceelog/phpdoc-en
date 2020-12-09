@@ -10,7 +10,7 @@ class="methodname">Counter::getNamed</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> )
 
 <span class="function">counter\_get\_named</span> returns an existing
-counter by name if that name exists, or **`NULL`** otherwise.
+counter by name if that name exists, or **`null`** otherwise.
 
 ### Parameters
 
@@ -20,4 +20,4 @@ counter by name if that name exists, or **`NULL`** otherwise.
 ### Return Values
 
 <span class="function">counter\_get\_name</span> returns an existing
-counter by name if that name exists, or **`NULL`** otherwise.
+counter by name if that name exists, or **`null`** otherwise.

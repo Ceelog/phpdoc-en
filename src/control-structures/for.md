@@ -1,5 +1,5 @@
-*for*
------
+for
+---
 
 *for* loops are the most complex loops in PHP. They behave like their C
 counterparts. The syntax of a *for* loop is:
@@ -11,8 +11,8 @@ The first expression (`expr1`) is evaluated (executed) once
 unconditionally at the beginning of the loop.
 
 In the beginning of each iteration, `expr2` is evaluated. If it
-evaluates to **`TRUE`**, the loop continues and the nested statement(s)
-are executed. If it evaluates to **`FALSE`**, the execution of the loop
+evaluates to **`true`**, the loop continues and the nested statement(s)
+are executed. If it evaluates to **`false`**, the execution of the loop
 ends.
 
 At the end of each iteration, `expr3` is evaluated (executed).
@@ -21,7 +21,7 @@ Each of the expressions can be empty or contain multiple expressions
 separated by commas. In `expr2`, all expressions separated by a comma
 are evaluated but the result is taken from the last part. `expr2` being
 empty means the loop should be run indefinitely (PHP implicitly
-considers it as **`TRUE`**, like C). This may not be as useless as you
+considers it as **`true`**, like C). This may not be as useless as you
 might think, since often you'd want to end the loop using a conditional
 <a href="/control-structures/break.html" class="link"><em>break</em></a>
 statement instead of using the *for* truth expression.

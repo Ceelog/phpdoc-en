@@ -618,7 +618,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the collection is empty, **`FALSE`** otherwise.
+Returns **`true`** if the collection is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -765,7 +765,7 @@ instance of the same class.
 
 ### Return Values
 
-**`TRUE`** if equal, **`FALSE`** otherwise.
+**`true`** if equal, **`false`** otherwise.
 
 Ds\\Hashable::hash
 ==================
@@ -784,7 +784,7 @@ Returns a scalar value to be used as the hash value of the objects.
 While the hash value does not define equality, all objects that are
 equal according to <span class="function">Ds\\Hashable::equals</span>
 must have the same hash value. Hash values of equal objects don't have
-to be unique, for example you could just return **`TRUE`** for all
+to be unique, for example you could just return **`true`** for all
 objects and nothing would break - the only implication would be that
 hash tables then turn into linked lists because all your objects will be
 hashed to the same bucket. It's therefore very important that you pick a
@@ -1204,8 +1204,8 @@ Values to check.
 
 ### Return Values
 
-**`FALSE`** if any of the provided `values` are not in the sequence,
-**`TRUE`** otherwise.
+**`false`** if any of the provided `values` are not in the sequence,
+**`true`** otherwise.
 
 ### Examples
 
@@ -1264,17 +1264,17 @@ determine which values to include.
 class="replaceable">callback</span></span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Optional <span class="type">callable</span> which returns **`TRUE`** if
-the value should be included, **`FALSE`** otherwise.
+Optional <span class="type">callable</span> which returns **`true`** if
+the value should be included, **`false`** otherwise.
 
-If a callback is not provided, only values which are **`TRUE`** (see
+If a callback is not provided, only values which are **`true`** (see
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
 will be included.
 
 ### Return Values
 
 A new sequence containing all the values for which either the `callback`
-returned **`TRUE`**, or all values that convert to **`TRUE`** if a
+returned **`true`**, or all values that convert to **`true`** if a
 `callback` was not provided.
 
 ### Examples
@@ -1335,7 +1335,7 @@ class="modifier">public</span> <span class="type">mixed</span> <span
 class="methodname">Ds\\Sequence::find</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Returns the index of the `value`, or **`FALSE`** if not found.
+Returns the index of the `value`, or **`false`** if not found.
 
 ### Parameters
 
@@ -1344,7 +1344,7 @@ The value to find.
 
 ### Return Values
 
-The index of the value, or **`FALSE`** if not found.
+The index of the value, or **`false`** if not found.
 
 > **Note**:
 >
@@ -1917,7 +1917,7 @@ first iteration.
 The value of the current iteration.
 
 `initial`  
-The initial value of the carry value. Can be **`NULL`**.
+The initial value of the carry value. Can be **`null`**.
 
 ### Return Values
 
@@ -3156,8 +3156,8 @@ Values to check.
 
 ### Return Values
 
-**`FALSE`** if any of the provided `values` are not in the vector,
-**`TRUE`** otherwise.
+**`false`** if any of the provided `values` are not in the vector,
+**`true`** otherwise.
 
 ### Examples
 
@@ -3278,17 +3278,17 @@ determine which values to include.
 class="replaceable">callback</span></span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Optional <span class="type">callable</span> which returns **`TRUE`** if
-the value should be included, **`FALSE`** otherwise.
+Optional <span class="type">callable</span> which returns **`true`** if
+the value should be included, **`false`** otherwise.
 
-If a callback is not provided, only values which are **`TRUE`** (see
+If a callback is not provided, only values which are **`true`** (see
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
 will be included.
 
 ### Return Values
 
 A new vector containing all the values for which either the `callback`
-returned **`TRUE`**, or all values that convert to **`TRUE`** if a
+returned **`true`**, or all values that convert to **`true`** if a
 `callback` was not provided.
 
 ### Examples
@@ -3348,7 +3348,7 @@ Attempts to find a value's index
 <span class="methodname">Ds\\Vector::find</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Returns the index of the `value`, or **`FALSE`** if not found.
+Returns the index of the `value`, or **`false`** if not found.
 
 ### Parameters
 
@@ -3357,7 +3357,7 @@ The value to find.
 
 ### Return Values
 
-The index of the value, or **`FALSE`** if not found.
+The index of the value, or **`false`** if not found.
 
 > **Note**:
 >
@@ -3583,7 +3583,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the vector is empty, **`FALSE`** otherwise.
+Returns **`true`** if the vector is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -3970,7 +3970,7 @@ first iteration.
 The value of the current iteration.
 
 `initial`  
-The initial value of the carry value. Can be **`NULL`**.
+The initial value of the carry value. Can be **`null`**.
 
 ### Return Values
 
@@ -5252,8 +5252,8 @@ Values to check.
 
 ### Return Values
 
-**`FALSE`** if any of the provided `values` are not in the deque,
-**`TRUE`** otherwise.
+**`false`** if any of the provided `values` are not in the deque,
+**`true`** otherwise.
 
 ### Examples
 
@@ -5371,17 +5371,17 @@ determine which values to include.
 class="replaceable">callback</span></span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Optional <span class="type">callable</span> which returns **`TRUE`** if
-the value should be included, **`FALSE`** otherwise.
+Optional <span class="type">callable</span> which returns **`true`** if
+the value should be included, **`false`** otherwise.
 
-If a callback is not provided, only values which are **`TRUE`** (see
+If a callback is not provided, only values which are **`true`** (see
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
 will be included.
 
 ### Return Values
 
 A new deque containing all the values for which either the `callback`
-returned **`TRUE`**, or all values that convert to **`TRUE`** if a
+returned **`true`**, or all values that convert to **`true`** if a
 `callback` was not provided.
 
 ### Examples
@@ -5441,7 +5441,7 @@ Attempts to find a value's index
 <span class="methodname">Ds\\Deque::find</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Returns the index of the `value`, or **`FALSE`** if not found.
+Returns the index of the `value`, or **`false`** if not found.
 
 ### Parameters
 
@@ -5450,7 +5450,7 @@ The value to find.
 
 ### Return Values
 
-The index of the value, or **`FALSE`** if not found.
+The index of the value, or **`false`** if not found.
 
 > **Note**:
 >
@@ -5676,7 +5676,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the deque is empty, **`FALSE`** otherwise.
+Returns **`true`** if the deque is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -6060,7 +6060,7 @@ first iteration.
 The value of the current iteration.
 
 `initial`  
-The initial value of the carry value. Can be **`NULL`**.
+The initial value of the carry value. Can be **`null`**.
 
 ### Return Values
 
@@ -7511,17 +7511,17 @@ class="methodparam"><span class="type">mixed</span> `$key`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> )
 
-Optional <span class="type">callable</span> which returns **`TRUE`** if
-the pair should be included, **`FALSE`** otherwise.
+Optional <span class="type">callable</span> which returns **`true`** if
+the pair should be included, **`false`** otherwise.
 
-If a callback is not provided, only values which are **`TRUE`** (see
+If a callback is not provided, only values which are **`true`** (see
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
 will be included.
 
 ### Return Values
 
 A new map containing all the pairs for which either the `callback`
-returned **`TRUE`**, or all values that convert to **`TRUE`** if a
+returned **`true`**, or all values that convert to **`true`** if a
 `callback` was not provided.
 
 ### Examples
@@ -7741,7 +7741,7 @@ The key to look for.
 
 ### Return Values
 
-Returns **`TRUE`** if the key could found, **`FALSE`** otherwise.
+Returns **`true`** if the key could found, **`false`** otherwise.
 
 ### Examples
 
@@ -7781,7 +7781,7 @@ The value to look for.
 
 ### Return Values
 
-Returns **`TRUE`** if the value could found, **`FALSE`** otherwise.
+Returns **`true`** if the value could found, **`false`** otherwise.
 
 ### Examples
 
@@ -7888,7 +7888,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the map is empty, **`FALSE`** otherwise.
+Returns **`true`** if the map is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -8780,7 +8780,7 @@ The key of the current iteration.
 The value of the current iteration.
 
 `initial`  
-The initial value of the carry value. Can be **`NULL`**.
+The initial value of the carry value. Can be **`null`**.
 
 ### Return Values
 
@@ -9892,7 +9892,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the pair is empty, **`FALSE`** otherwise.
+Returns **`true`** if the pair is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -10508,8 +10508,8 @@ Values to check.
 
 ### Return Values
 
-**`FALSE`** if any of the provided `values` are not in the set,
-**`TRUE`** otherwise.
+**`false`** if any of the provided `values` are not in the set,
+**`true`** otherwise.
 
 ### Examples
 
@@ -10674,17 +10674,17 @@ determine which values to include.
 class="replaceable">callback</span></span> ( <span
 class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
-Optional <span class="type">callable</span> which returns **`TRUE`** if
-the value should be included, **`FALSE`** otherwise.
+Optional <span class="type">callable</span> which returns **`true`** if
+the value should be included, **`false`** otherwise.
 
-If a callback is not provided, only values which are **`TRUE`** (see
+If a callback is not provided, only values which are **`true`** (see
 <a href="/language/types/boolean.html#language.types.boolean.casting" class="link">converting to boolean</a>)
 will be included.
 
 ### Return Values
 
 A new set containing all the values for which either the `callback`
-returned **`TRUE`**, or all values that convert to **`TRUE`** if a
+returned **`true`**, or all values that convert to **`true`** if a
 `callback` was not provided.
 
 ### Examples
@@ -10909,7 +10909,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the set is empty, **`FALSE`** otherwise.
+Returns **`true`** if the set is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -11132,7 +11132,7 @@ first iteration.
 The value of the current iteration.
 
 `initial`  
-The initial value of the carry value. Can be **`NULL`**.
+The initial value of the carry value. Can be **`null`**.
 
 ### Return Values
 
@@ -12116,7 +12116,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the stack is empty, **`FALSE`** otherwise.
+Returns **`true`** if the stack is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -12692,7 +12692,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the queue is empty, **`FALSE`** otherwise.
+Returns **`true`** if the queue is empty, **`false`** otherwise.
 
 ### Examples
 
@@ -13239,7 +13239,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the queue is empty, **`FALSE`** otherwise.
+Returns **`true`** if the queue is empty, **`false`** otherwise.
 
 ### Examples
 

@@ -33,7 +33,7 @@ function foo(iterable $iterable) {
 ?>
 ```
 
-Parameters declared as iterable may use **`NULL`** or an array as a
+Parameters declared as iterable may use **`null`** or an array as a
 default value.
 
 **Example \#2 Iterable parameter default value example**

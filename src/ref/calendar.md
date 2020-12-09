@@ -260,7 +260,7 @@ Get Unix timestamp for midnight on Easter of a given year
 class="methodname">easter\_date</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$year`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$year`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> = **`CAL_EASTER_DEFAULT`**</span></span> \]\] )
 
@@ -288,7 +288,7 @@ correction factors are added to make the cycle more accurate.
 ### Parameters
 
 `year`  
-The year as a number between 1970 an 2037. If omitted or **`NULL`**,
+The year as a number between 1970 an 2037. If omitted or **`null`**,
 defaults to the current year according to the local time.
 
 `mode`  
@@ -380,7 +380,7 @@ Get number of days after March 21 on which Easter falls for a given year
 class="methodname">easter\_days</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$year`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$year`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$mode`<span
 class="initializer"> = **`CAL_EASTER_DEFAULT`**</span></span> \]\] )
 
@@ -407,7 +407,7 @@ correction factors are added to make the cycle more accurate.
 ### Parameters
 
 `year`  
-The year as a positive number. If omitted or **`NULL`**, defaults to the
+The year as a positive number. If omitted or **`null`**, defaults to the
 current year according to the local time.
 
 `mode`  
@@ -702,7 +702,7 @@ Converts a Julian day count to a Jewish calendar date
 class="methodname">jdtojewish</span> ( <span class="methodparam"><span
 class="type">int</span> `$julian_day`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$hebrew`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -714,7 +714,7 @@ Converts a Julian Day Count to the Jewish Calendar.
 A julian day number as integer
 
 `hebrew`  
-If the `hebrew` parameter is set to **`TRUE`**, the `flags` parameter is
+If the `hebrew` parameter is set to **`true`**, the `flags` parameter is
 used for Hebrew, ISO-8859-8 encoded string based, output format.
 
 `flags`  
@@ -815,7 +815,7 @@ class="classname">ValueError</span> is thrown.
 
 | Version        | Description                                                                                                             |
 |----------------|-------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0          | This function no longer returns **`FALSE`** on failure, but raises a <span class="classname">ValueError</span> instead. |
+| 8.0.0          | This function no longer returns **`false`** on failure, but raises a <span class="classname">ValueError</span> instead. |
 | 7.3.24, 7.4.12 | The upper limit of `julian_day` has been extended. Previously, it was *2465342* regardless of the architecture.         |
 
 ### See Also
@@ -923,7 +923,7 @@ class="type">false</span></span> <span
 class="methodname">unixtojd</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">int</span><span
 class="type">null</span></span> `$timestamp`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Return the Julian Day for a Unix `timestamp` (seconds since 1.1.1970),
 or for the current day if no `timestamp` is given. Either way, the time
@@ -936,7 +936,7 @@ A unix timestamp to convert.
 
 ### Return Values
 
-A julian day number as integer, or **`FALSE`** on failure.
+A julian day number as integer, or **`false`** on failure.
 
 ### Changelog
 

@@ -27,7 +27,7 @@ As of 5.3.6, this parameter is a bitmask for the following options:
 | DEBUG\_BACKTRACE\_PROVIDE\_OBJECT | Whether or not to populate the "object" index.                                                       |
 | DEBUG\_BACKTRACE\_IGNORE\_ARGS    | Whether or not to omit the "args" index, and thus all the function/method arguments, to save memory. |
 
-Before 5.3.6, the only values recognized are **`TRUE`** or **`FALSE`**,
+Before 5.3.6, the only values recognized are **`true`** or **`false`**,
 which are the same as setting or not setting the
 **`DEBUG_BACKTRACE_PROVIDE_OBJECT`** option respectively.
 
@@ -258,7 +258,7 @@ Gets information about the last error that occurred.
 Returns an associative array describing the last error with keys "type",
 "message", "file" and "line". If the error has been caused by a PHP
 internal function then the "message" begins with its name. Returns
-**`NULL`** if there hasn't been an error yet.
+**`null`** if there hasn't been an error yet.
 
 ### Examples
 
@@ -337,7 +337,7 @@ class="function">mail</span> does.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -491,7 +491,7 @@ error handler (which could be the built-in or a user defined function).
 
 ### Return Values
 
-This function always returns **`TRUE`**.
+This function always returns **`true`**.
 
 ### Examples
 
@@ -544,7 +544,7 @@ defined function).
 
 ### Return Values
 
-This function always returns **`TRUE`**.
+This function always returns **`true`**.
 
 ### Examples
 
@@ -607,7 +607,7 @@ class="function">trigger\_error</span>).
 
 It is important to remember that the standard PHP error handler is
 completely bypassed for the error types specified by `error_types`
-unless the callback function returns **`FALSE`**. <span
+unless the callback function returns **`false`**. <span
 class="function">error\_reporting</span> settings will have no effect
 and your error handler will be called regardless - however you are still
 able to read the current value of
@@ -635,7 +635,7 @@ time.
 ### Parameters
 
 `error_handler`  
-A callback with the following signature. **`NULL`** may be passed
+A callback with the following signature. **`null`** may be passed
 instead, to reset this handler to its default state. Instead of a
 function name, an array containing an object reference and a method name
 can also be supplied.
@@ -678,7 +678,7 @@ User error handler must not modify error context. </span>
 This parameter has been *DEPRECATED* as of PHP 7.2.0. Relying on it is
 highly discouraged.
 
-If the function returns **`FALSE`** then the normal error handler
+If the function returns **`false`** then the normal error handler
 continues.
 
 `error_types`  
@@ -694,8 +694,8 @@ setting.
 ### Return Values
 
 Returns a string containing the previously defined error handler (if
-any). If the built-in error handler is used **`NULL`** is returned.
-**`NULL`** is also returned in case of an error such as an invalid
+any). If the built-in error handler is used **`null`** is returned.
+**`null`** is also returned in case of an error such as an invalid
 callback. If the previous error handler was a class method, this
 function will return an indexed array with the class and the method
 name.
@@ -887,7 +887,7 @@ signature since PHP 7:
 class="replaceable">handler</span></span> ( <span
 class="methodparam"><span class="type">Throwable</span> `$ex`</span> )
 
-**`NULL`** may be passed instead, to reset this handler to its default
+**`null`** may be passed instead, to reset this handler to its default
 state.
 
 **Caution**
@@ -898,7 +898,7 @@ the changed exception hierarchy in PHP 7.
 ### Return Values
 
 Returns the name of the previously defined exception handler, or
-**`NULL`** on error. If no previous handler was defined, **`NULL`** is
+**`null`** on error. If no previous handler was defined, **`null`** is
 also returned.
 
 ### Changelog
@@ -906,7 +906,7 @@ also returned.
 | Version | Description                                                                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 7.0.0   | The type of parameter passed into `exception_handler` changed from <span class="classname">Exception</span> to <span class="classname">Throwable</span> |
-| 5.5.0   | Previously, if **`NULL`** was passed then this function returned **`TRUE`**. It returns the previous handler since PHP 5.5.0.                           |
+| 5.5.0   | Previously, if **`null`** was passed then this function returned **`true`**. It returns the previous handler since PHP 5.5.0.                           |
 
 ### Examples
 
@@ -968,8 +968,8 @@ family of constants, and will default to **`E_USER_NOTICE`**.
 
 ### Return Values
 
-This function returns **`FALSE`** if wrong `error_type` is specified,
-**`TRUE`** otherwise.
+This function returns **`false`** if wrong `error_type` is specified,
+**`true`** otherwise.
 
 ### Examples
 

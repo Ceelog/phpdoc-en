@@ -78,8 +78,8 @@ evaluates to the original value of $variable, before it was incremented
 
 A very common type of expressions are
 <a href="/language/operators/comparison.html" class="link">comparison</a>
-expressions. These expressions evaluate to either **`FALSE`** or
-**`TRUE`**. PHP supports \> (bigger than), \>= (bigger than or equal
+expressions. These expressions evaluate to either **`false`** or
+**`true`**. PHP supports \> (bigger than), \>= (bigger than or equal
 to), == (equal), != (not equal), \< (smaller than) and \<= (smaller than
 or equal to). The language also supports a set of strict equivalence
 operators: === (equal to and same type) and !== (not equal to or not
@@ -115,7 +115,7 @@ $first ? $second : $third
 ?>
 ```
 
-If the value of the first subexpression is **`TRUE`** (non-zero), then
+If the value of the first subexpression is **`true`** (non-zero), then
 the second subexpression is evaluated, and that is the result of the
 conditional expression. Otherwise, the third subexpression is evaluated,
 and that is the value.
@@ -157,8 +157,8 @@ statement.
 One last thing worth mentioning is the truth value of expressions. In
 many events, mainly in conditional execution and loops, you're not
 interested in the specific value of the expression, but only care about
-whether it means **`TRUE`** or **`FALSE`**. The constants **`TRUE`** and
-**`FALSE`** (case-insensitive) are the two possible boolean values. When
+whether it means **`true`** or **`false`**. The constants **`true`** and
+**`false`** (case-insensitive) are the two possible boolean values. When
 necessary, an expression is automatically converted to boolean. See the
 <a href="/language/types/type-juggling.html#language.types.typecasting" class="link">section about type-casting</a>
 for details about how.

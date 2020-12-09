@@ -537,7 +537,7 @@ them using the bitwise OR operator (“\|”):
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::addServer
 ========================
@@ -566,7 +566,7 @@ The job server port.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -612,7 +612,7 @@ A comma-separated list of servers, each server specified in the format
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -673,7 +673,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### Examples
@@ -797,7 +797,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### Examples
@@ -1008,7 +1008,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### Examples
@@ -1106,7 +1106,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### See Also
@@ -1157,7 +1157,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### Examples
@@ -1255,7 +1255,7 @@ A unique ID used to identify a particular task
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> object or **`FALSE`** if
+A <span class="classname">GearmanTask</span> object or **`false`** if
 the task could not be added.
 
 ### See Also
@@ -1396,7 +1396,7 @@ This function has no parameters.
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -1429,7 +1429,7 @@ This function has no parameters.
 
 ### Return Values
 
-A <span class="classname">GearmanClient</span> on success, **`FALSE`**
+A <span class="classname">GearmanClient</span> on success, **`false`**
 on failure.
 
 GearmanClient::\_\_construct
@@ -2436,7 +2436,7 @@ Some arbitrary serialized data to be echo back
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 GearmanClient::error
 ====================
@@ -2597,7 +2597,7 @@ Some arbitrary serialized data to be echo back
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 GearmanClient::removeOptions
 ============================
@@ -2619,7 +2619,7 @@ The options to be removed (unset)
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::returnCode
 =========================
@@ -2668,7 +2668,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2703,7 +2703,7 @@ A function or method to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2745,7 +2745,7 @@ A function to be called
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2778,7 +2778,7 @@ Arbitrary context data
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -2807,7 +2807,7 @@ A function to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2845,7 +2845,7 @@ Sets some arbitrary application data that can later be retrieved by
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -2874,7 +2874,7 @@ A function or method to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2908,7 +2908,7 @@ Function to call when the worker throws an exception
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2943,7 +2943,7 @@ A function to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2975,7 +2975,7 @@ The options to be set
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::setStatusCallback
 ================================
@@ -3000,7 +3000,7 @@ A function to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3032,7 +3032,7 @@ An interval of time in milliseconds
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 GearmanClient::setWarningCallback
 =================================
@@ -3057,7 +3057,7 @@ A function to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3094,7 +3094,7 @@ A function to call
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3259,7 +3259,7 @@ Serialized result data.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3314,7 +3314,7 @@ Arbitrary serialized data.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3348,7 +3348,7 @@ An exception description.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3382,7 +3382,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3487,7 +3487,7 @@ Serialized result data.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3514,7 +3514,7 @@ Arbitrary serialized data.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3542,7 +3542,7 @@ An exception description.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3570,7 +3570,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3605,7 +3605,7 @@ The denominator of the precentage completed expressed as a fraction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3633,7 +3633,7 @@ A warning message.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3696,7 +3696,7 @@ The denominator of the precentage completed expressed as a fraction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3757,7 +3757,7 @@ A warning messages.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3947,7 +3947,7 @@ This function has no parameters.
 
 ### Return Values
 
-A <span class="classname">GearmanTask</span> oject or **`FALSE`** on
+A <span class="classname">GearmanTask</span> oject or **`false`** on
 failure.
 
 GearmanTask::data
@@ -3969,7 +3969,7 @@ This function has no parameters.
 
 ### Return Values
 
-The serialized data, or **`FALSE`** if no data is present.
+The serialized data, or **`false`** if no data is present.
 
 ### See Also
 
@@ -3994,7 +3994,7 @@ This function has no parameters.
 
 ### Return Values
 
-The data size, or **`FALSE`** if there is no data.
+The data size, or **`false`** if there is no data.
 
 ### See Also
 
@@ -4070,7 +4070,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the task is known, **`FALSE`** otherwise.
+**`true`** if the task is known, **`false`** otherwise.
 
 GearmanTask::isRunning
 ======================
@@ -4091,7 +4091,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the task is running, **`FALSE`** otherwise.
+**`true`** if the task is running, **`false`** otherwise.
 
 GearmanTask::jobHandle
 ======================
@@ -4146,7 +4146,7 @@ Length of data to be read.
 ### Return Values
 
 An array whose first element is the length of data read and the second
-is the data buffer. Returns **`FALSE`** if the read failed.
+is the data buffer. Returns **`false`** if the read failed.
 
 ### See Also
 
@@ -4201,7 +4201,7 @@ Data to send to the worker.
 
 ### Return Values
 
-The length of data sent, or **`FALSE`** if the send failed.
+The length of data sent, or **`false`** if the send failed.
 
 ### See Also
 
@@ -4231,7 +4231,7 @@ Data to send to the worker.
 
 ### Return Values
 
-The length of data sent, or **`FALSE`** if the send failed.
+The length of data sent, or **`false`** if the send failed.
 
 ### See Also
 
@@ -4257,7 +4257,7 @@ This function has no parameters.
 
 ### Return Values
 
-A number between 0 and 100, or **`FALSE`** if cannot be determined.
+A number between 0 and 100, or **`false`** if cannot be determined.
 
 ### See Also
 
@@ -4283,7 +4283,7 @@ This function has no parameters.
 
 ### Return Values
 
-A number between 0 and 100, or **`FALSE`** if cannot be determined.
+A number between 0 and 100, or **`false`** if cannot be determined.
 
 ### See Also
 
@@ -4310,7 +4310,7 @@ This function has no parameters.
 
 ### Return Values
 
-The unique identifier, or **`FALSE`** if no identifier is assigned.
+The unique identifier, or **`false`** if no identifier is assigned.
 
 ### See Also
 
@@ -4344,7 +4344,7 @@ This function has no parameters.
 
 ### Return Values
 
-The unique identifier, or **`FALSE`** if no identifier is assigned.
+The unique identifier, or **`false`** if no identifier is assigned.
 
 ### See Also
 
@@ -4499,7 +4499,7 @@ An interval of time in seconds
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4563,7 +4563,7 @@ The options to be added
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -4598,7 +4598,7 @@ The job server port.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4639,7 +4639,7 @@ port is specified, it defaults to 4730.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4864,7 +4864,7 @@ The options to be removed (unset)
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -4919,7 +4919,7 @@ A string identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4963,7 +4963,7 @@ The options to be set
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### See Also
 
@@ -4993,7 +4993,7 @@ infinite timeout.
 
 ### Return Values
 
-Always returns **`TRUE`**.
+Always returns **`true`**.
 
 ### Examples
 
@@ -5160,7 +5160,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5242,7 +5242,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

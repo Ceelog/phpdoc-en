@@ -66,7 +66,7 @@ class="function">shmop\_open</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -147,7 +147,7 @@ The size of the shared memory block you wish to create in bytes
 
 On success <span class="function">shmop\_open</span> will return a <span
 class="classname">Shmop</span> instance that you can use to access the
-shared memory segment you've created. **`FALSE`** is returned on
+shared memory segment you've created. **`false`** is returned on
 failure.
 
 ### Changelog
@@ -206,7 +206,7 @@ bytes.
 
 ### Return Values
 
-Returns the data or **`FALSE`** on failure.
+Returns the data or **`false`** on failure.
 
 ### Changelog
 
@@ -312,7 +312,7 @@ The size of the written `data`.
 
 | Version | Description                                                                                                                         |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | Prior to PHP 8.0.0, **`FALSE`** was returned on failure.                                                                            |
+| 8.0.0   | Prior to PHP 8.0.0, **`false`** was returned on failure.                                                                            |
 | 8.0.0   | `shmop` expects a <span class="classname">Shmop</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### Examples

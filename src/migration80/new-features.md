@@ -5,14 +5,21 @@ New Features
 
 #### Named Arguments
 
+Support for
+<a href="/functions/arguments.html#functions.named-arguments" class="link">Named Arguments</a>
+has been added.
+
 #### Attributes
 
-Support for Attributes has been added.
+Support for
+<a href="/language/attributes.html" class="link">Attributes</a> has been
+added.
 
 #### Constructor Property Promotion
 
-Support for constructor property promotion (declaring properties in the
-constructor signature) has been added.
+Support for
+<a href="/language/oop5/decon.html#language.oop5.decon.constructor.promotion" class="link">constructor property promotion</a>
+(declaring properties in the constructor signature) has been added.
 
 #### Union Types
 
@@ -28,7 +35,9 @@ has been added.
 
 #### Nullsafe Operator
 
-Support for the nullsafe operator (*?-\>*) has been added.
+Support for the
+<a href="/language/oop5/basic.html#language.oop5.basic.nullsafe" class="link">nullsafe operator</a>
+(*?-\>*) has been added.
 
 #### Other new Features
 

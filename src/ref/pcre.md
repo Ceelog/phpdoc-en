@@ -18,7 +18,7 @@ class="type">array</span></span> `$subject`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$count`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">preg\_filter</span> is identical to <span
 class="function">preg\_replace</span> except it only returns the
@@ -34,7 +34,7 @@ class="type">string</span> otherwise.
 
 If no matches are found or an error occurred, an empty <span
 class="type">array</span> is returned when `subject` is an <span
-class="type">array</span> or **`NULL`** otherwise.
+class="type">array</span> or **`null`** otherwise.
 
 ### Examples
 
@@ -255,7 +255,7 @@ class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$subject`</span> \[, <span class="methodparam"><span
 class="type">array</span> `&$matches`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 **`PREG_PATTERN_ORDER`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -414,7 +414,7 @@ The above example will output:
 
 **`PREG_UNMATCHED_AS_NULL`**  
 If this flag is passed, unmatched subpatterns are reported as
-**`NULL`**; otherwise they are reported as an empty <span
+**`null`**; otherwise they are reported as an empty <span
 class="type">string</span>.
 
 If no order flag is given, **`PREG_PATTERN_ORDER`** is assumed.
@@ -435,7 +435,7 @@ place from which to start the search (in bytes).
 ### Return Values
 
 Returns the number of full pattern matches (which might be zero), or
-**`FALSE`** if an error occurred.
+**`false`** if an error occurred.
 
 ### Changelog
 
@@ -575,7 +575,7 @@ class="methodname">preg\_match</span> ( <span class="methodparam"><span
 class="type">string</span> `$pattern`</span> , <span
 class="methodparam"><span class="type">string</span> `$subject`</span>
 \[, <span class="methodparam"><span class="type">array</span>
-`&$matches`<span class="initializer"> = **`NULL`**</span></span> \[,
+`&$matches`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
@@ -647,7 +647,7 @@ The above example will output:
 
 **`PREG_UNMATCHED_AS_NULL`**  
 If this flag is passed, unmatched subpatterns are reported as
-**`NULL`**; otherwise they are reported as an empty <span
+**`null`**; otherwise they are reported as an empty <span
 class="type">string</span>.
 
 ``` php
@@ -740,13 +740,13 @@ place from which to start the search (in bytes).
 ### Return Values
 
 <span class="function">preg\_match</span> returns 1 if the `pattern`
-matches given `subject`, 0 if it does not, or **`FALSE`** if an error
+matches given `subject`, 0 if it does not, or **`false`** if an error
 occurred.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -872,7 +872,7 @@ class="methodname">preg\_quote</span> ( <span class="methodparam"><span
 class="type">string</span> `$str`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$delimiter`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$delimiter`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">preg\_quote</span> takes `str` and puts a
 backslash in front of every character that is part of the regular
@@ -966,7 +966,7 @@ class="type">string</span><span class="type">array</span></span>
 class="type">int</span> `$limit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `&$count`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 0</span></span> \]\]\] )
 
@@ -1001,7 +1001,7 @@ class="function">preg\_match</span> for more details.
 
 <span class="function">preg\_replace\_callback\_array</span> returns an
 array if the `subject` parameter is an array, or a string otherwise. On
-errors the return value is **`NULL`**
+errors the return value is **`null`**
 
 If matches are found, the new subject will be returned, otherwise
 `subject` will be returned unchanged.
@@ -1069,7 +1069,7 @@ class="type">string</span><span class="type">array</span></span>
 class="type">int</span> `$limit`<span class="initializer"> =
 -1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `&$count`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
 0</span></span> \]\]\] )
 
@@ -1146,7 +1146,7 @@ class="function">preg\_match</span> for more details.
 
 <span class="function">preg\_replace\_callback</span> returns an array
 if the `subject` parameter is an array, or a string otherwise. On errors
-the return value is **`NULL`**
+the return value is **`null`**
 
 If matches are found, the new subject will be returned, otherwise
 `subject` will be returned unchanged.
@@ -1243,7 +1243,7 @@ class="type">array</span></span> `$subject`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$limit`<span
 class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `&$count`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 Searches `subject` for matches to `pattern` and replaces them with
 `replacement`.
@@ -1316,7 +1316,7 @@ replacements done.
 `subject` parameter is an array, or a string otherwise.
 
 If matches are found, the new `subject` will be returned, otherwise
-`subject` will be returned unchanged or **`NULL`** if an error occurred.
+`subject` will be returned unchanged or **`null`** if an error occurred.
 
 ### Errors/Exceptions
 
@@ -1495,7 +1495,7 @@ string at offset *0* and its string offset into `subject` at offset *1*.
 ### Return Values
 
 Returns an array containing substrings of `subject` split along
-boundaries matched by `pattern`, or **`FALSE`** on failure.
+boundaries matched by `pattern`, or **`false`** on failure.
 
 ### Examples
 

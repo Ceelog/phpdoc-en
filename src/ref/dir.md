@@ -24,7 +24,7 @@ The new current directory
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -95,7 +95,7 @@ The path to change the root directory to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -190,7 +190,7 @@ Directory to open
 ### Return Values
 
 Returns an instance of <span class="classname">Directory</span>, or
-**`NULL`** with wrong parameters, or **`FALSE`** in case of another
+**`null`** with wrong parameters, or **`false`** in case of another
 error.
 
 ### Examples
@@ -202,8 +202,8 @@ class="function">Directory::read</span>'s return value is checked in the
 example below. We are explicitly testing whether the return value is
 identical to (equal to and of the same type as - see
 <a href="/language/operators/comparison.html" class="link">Comparison Operators</a>
-for more information) **`FALSE`** since otherwise, any directory entry
-whose name evaluates to **`FALSE`** will stop the loop.
+for more information) **`false`** since otherwise, any directory entry
+whose name evaluates to **`false`** will stop the loop.
 
 ``` php
 <?php
@@ -248,11 +248,11 @@ Gets the current working directory.
 
 ### Return Values
 
-Returns the current working directory on success, or **`FALSE`** on
+Returns the current working directory on success, or **`false`** on
 failure.
 
 On some Unix variants, <span class="function">getcwd</span> will return
-**`FALSE`** if any one of the parent directories does not have the
+**`false`** if any one of the parent directories does not have the
 readable or search mode set, even if the current directory does. See
 <span class="function">chmod</span> for more information on modes and
 permissions.
@@ -324,7 +324,7 @@ manual.
 ### Return Values
 
 Returns a directory handle <span class="type">resource</span> on
-success, or **`FALSE`** on failure
+success, or **`false`** on failure
 
 ### Errors/Exceptions
 
@@ -393,12 +393,12 @@ class="function">opendir</span> is assumed.
 
 ### Return Values
 
-Returns the entry name on success or **`FALSE`** on failure.
+Returns the entry name on success or **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -414,8 +414,8 @@ return value is checked in the examples below. We are explicitly testing
 whether the return value is identical to (equal to and of the same type
 as--see
 <a href="/language/operators/comparison.html" class="link">Comparison Operators</a>
-for more information) **`FALSE`** since otherwise, any directory entry
-whose name evaluates to **`FALSE`** will stop the loop (e.g. a directory
+for more information) **`false`** since otherwise, any directory entry
+whose name evaluates to **`false`** will stop the loop (e.g. a directory
 named "0").
 
 ``` php
@@ -487,7 +487,7 @@ class="function">opendir</span> is assumed.
 
 ### Return Values
 
-Returns **`NULL`** on success or **`FALSE`** on failure.
+Returns **`null`** on success or **`false`** on failure.
 
 scandir
 =======
@@ -526,8 +526,8 @@ manual.
 ### Return Values
 
 Returns an <span class="type">array</span> of filenames on success, or
-**`FALSE`** on failure. If `directory` is not a directory, then boolean
-**`FALSE`** is returned, and an error of level **`E_WARNING`** is
+**`false`** on failure. If `directory` is not a directory, then boolean
+**`false`** is returned, and an error of level **`E_WARNING`** is
 generated.
 
 ### Examples

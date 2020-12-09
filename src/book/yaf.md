@@ -725,7 +725,7 @@ This function has no parameters.
 ### Return Values
 
 A Yaf\_Application instance, if no Yaf\_Application was initialized
-before, **`NULL`** will be returned.
+before, **`null`** will be returned.
 
 ### See Also
 
@@ -1688,11 +1688,11 @@ class="methodparam"><span class="type">bool</span> `$flag`</span> \] )
 
 <span class="classname">Yaf\_Dispatcher</span> will render automatically
 after dispatches a incoming request, you can prevent the rendering by
-calling this method with `flag` **`TRUE`**
+calling this method with `flag` **`true`**
 
 > **Note**:
 >
-> you can simply return **`FALSE`** in a action to prevent the
+> you can simply return **`false`** in a action to prevent the
 > auto-rendering of that action
 
 ### Parameters
@@ -1836,7 +1836,7 @@ disable view engine, used in some app that user will output by theirself
 
 > **Note**:
 >
-> you can simply return **`FALSE`** in a action to prevent the
+> you can simply return **`false`** in a action to prevent the
 > auto-rendering of that action
 
 ### Parameters
@@ -2283,8 +2283,8 @@ class="methodname">Yaf\_Dispatcher::setView</span> ( <span
 class="methodparam"><span class="type">Yaf\_View\_Interface</span>
 `$view`</span> )
 
-This method proviods a solution for that if you want use a custom view
-engine instead of <span class="classname">Yaf\_View\_Simple</span>
+This method provides a solution if you want use a custom view engine
+instead of <span class="classname">Yaf\_View\_Simple</span>
 
 ### Parameters
 
@@ -2719,8 +2719,8 @@ the section from which data are to be inherited.
 > Yaf\_Config\_Ini utilizes the » parse\_ini\_file() PHP function.
 > Please review this documentation to be aware of its specific
 > behaviors, which propagate to Yaf\_Config\_Ini, such as how the
-> special values of "**`TRUE`**", "**`FALSE`**", "yes", "no", and
-> "**`NULL`**" are handled.
+> special values of "**`true`**", "**`false`**", "yes", "no", and
+> "**`null`**" are handled.
 
 Class synopsis
 --------------
@@ -5317,9 +5317,9 @@ registers itself with spl\_autoload. You retrieve an instance using the
 one shot, if failed, depend on
 <a href="/yaf/setup.html#" class="link">yaf.use_spl_auload</a>, if this
 config is On <span class="methodname">Yaf\_Loader::autoload</span> will
-return **`FALSE`**, thus give the chance to other autoload function. if
+return **`false`**, thus give the chance to other autoload function. if
 it is Off (by default), <span
-class="methodname">Yaf\_Loader::autoload</span> will return **`TRUE`**,
+class="methodname">Yaf\_Loader::autoload</span> will return **`true`**,
 and more important is that a very useful warning will be triggered (very
 useful to find out why a class could not be loaded).
 
@@ -5502,7 +5502,7 @@ class="methodparam">void</span> )
 class="type">Yaf\_Loader</span> <span
 class="methodname">getLibraryPath</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$is_global`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">getLocalNamespace</span> ( <span
@@ -5542,7 +5542,7 @@ class="type">Yaf\_Loader</span> <span
 class="methodname">setLibraryPath</span> ( <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$is_global`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$is_global`<span class="initializer"> = **`false`**</span></span> \] )
 
 }
 
@@ -5662,7 +5662,7 @@ Get the library path
 class="type">Yaf\_Loader</span> <span
 class="methodname">Yaf\_Loader::getLibraryPath</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$is_global`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 **Warning**
 
@@ -5719,7 +5719,7 @@ a string of namespace.
 ### Return Values
 
 <span class="type">string</span> path, if the namespace is not
-registered, then **`NULL`** default library will be returned
+registered, then **`null`** default library will be returned
 
 ### Examples
 
@@ -5938,7 +5938,7 @@ class="type">Yaf\_Loader</span> <span
 class="methodname">Yaf\_Loader::setLibraryPath</span> ( <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$is_global`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$is_global`<span class="initializer"> = **`false`**</span></span> \] )
 
 **Warning**
 
@@ -7300,7 +7300,7 @@ style, like "index" or "foo\_bar"
 
 `format_name`  
 this is introduced in Yaf 3.2.0, by default Yaf will format the name
-into lower case style, if this is set to **`FALSE`** , Yaf will set the
+into lower case style, if this is set to **`false`** , Yaf will set the
 original name to request.
 
 ### Return Values
@@ -7363,7 +7363,7 @@ camel style, like "Index" or "Foo\_Bar"
 
 `format_name`  
 this is introduced in Yaf 3.2.0, by default Yaf will format the name
-into camel mode, if this is set to **`FALSE`** , Yaf will set the
+into camel mode, if this is set to **`false`** , Yaf will set the
 original name to request.
 
 ### Return Values
@@ -7415,7 +7415,7 @@ style, like "Index" or "Foo\_Bar"
 
 `format_name`  
 this is introduced in Yaf 3.2.0, by default Yaf will format the name
-into camel mode, if this is set to **`FALSE`** , Yaf will set the
+into camel mode, if this is set to **`false`** , Yaf will set the
 original name to request.
 
 ### Return Values
@@ -8728,7 +8728,7 @@ Retrieve a exists content
 `key`  
 the content key, if you don't specific, then
 Yaf\_Response\_Abstract::DEFAULT\_BODY will be used. if you pass in a
-**`NULL`**, then all contents will be returned as a array
+**`null`**, then all contents will be returned as a array
 
 > **Note**:
 >
@@ -9141,7 +9141,7 @@ method that a custom route should implement.
 > since of 2.3.0, there is another method should also be implemented,
 > see <span class="methodname">Yaf\_Route\_Interface::assemble</span>.
 
-if this method return **`TRUE`**, then the route process will be end.
+if this method return **`true`**, then the route process will be end.
 otherwise, <span class="classname">Yaf\_Router</span> will call next
 route in the route stack to route request.
 
@@ -9209,7 +9209,7 @@ class="methodparam"><span class="type">array</span> `$info`</span> \[,
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$controller_prefer`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$delimiter`<span class="initializer"> =
 ""</span></span> \]\] )
 
@@ -9305,7 +9305,7 @@ The \_\_construct purpose
 class="methodname">Yaf\_Route\_Map::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span>
 `$controller_prefer`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$delimiter`<span class="initializer"> =
 ""</span></span> \]\] )
 
@@ -9582,7 +9582,7 @@ class="methodparam"><span class="type">array</span> `$verify`</span> \[,
 `match`  
 A complete Regex pattern, will be used to match a request uri, if
 doesn't matched, <span class="classname">Yaf\_Route\_Regex</span> will
-return **`FALSE`**.
+return **`false`**.
 
 `route`  
 When the match pattern matches the request uri, <span
@@ -9739,7 +9739,7 @@ available.
 
 If the pattern given by the first parameter of <span
 class="methodname">Yaf\_Route\_Regex::\_construct</span> matche the
-request uri, return **`TRUE`**, otherwise return **`FALSE`**.
+request uri, return **`true`**, otherwise return **`false`**.
 
 Introduction
 ------------
@@ -9888,7 +9888,7 @@ class="type">array</span> `$verify`</span> \] )
 `match`  
 A pattern, will be used to match a request uri, if it doesn't match,
 <span class="classname">Yaf\_Route\_Rewrite</span> will return
-**`FALSE`**.
+**`false`**.
 
 You can use :name style to name segments matched, and use \* to match
 the rest of the URL segments.
@@ -10354,7 +10354,7 @@ class="classname">Yaf\_Route\_Static</span> as its defualt route. you
 can add new routes into router's route stack by calling this method.
 
 the newer route will be called before the older(route stack), and if the
-newer router return **`TRUE`**, the router process will be end.
+newer router return **`true`**, the router process will be end.
 otherwise, the older one will be called.
 
 ### Parameters
@@ -10454,7 +10454,7 @@ Get the name of the route which is effective in the route process.
 > **Note**:
 >
 > You should call this method after the route process finished, since
-> before that, this method will always return **`NULL`**.
+> before that, this method will always return **`null`**.
 
 ### Parameters
 
@@ -10624,7 +10624,7 @@ class="classname">Yaf\_Route\_Simple</span> what key in the $\_GET is
 module, what key is controller, and what key is action.
 
 <span class="methodname">Yaf\_Route\_Simple::route</span> will always
-return **`TRUE`**, so it is important put <span
+return **`true`**, so it is important put <span
 class="classname">Yaf\_Route\_Simple</span> in the front of the Route
 stack, otherwise all the other routes will not be called.
 
@@ -10768,7 +10768,7 @@ the key name of the action info.
 
 ### Return Values
 
-Always return **`TRUE`**.
+Always return **`true`**.
 
 ### Examples
 
@@ -10826,7 +10826,7 @@ available.
 
 ### Return Values
 
-always be **`TRUE`**
+always be **`true`**
 
 ### See Also
 
@@ -10990,7 +10990,7 @@ available.
 
 ### Return Values
 
-always be **`TRUE`**
+always be **`true`**
 
 ### Examples
 
@@ -11225,7 +11225,7 @@ available.
 
 If there is a key(which was defined in <span
 class="methodname">Yaf\_Route\_Supervar::\_\_construct</span>) in
-$\_GET, return **`TRUE`**. otherwise return **`FALSE`**.
+$\_GET, return **`true`**. otherwise return **`false`**.
 
 Introduction
 ------------

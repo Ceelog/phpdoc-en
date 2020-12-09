@@ -36,7 +36,7 @@ encoded. Available as of PHP 5.3.3. </span>
 <span class="simpara"> The object or array passed to <span
 class="function">json\_encode</span> include recursive references and
 cannot be encoded. If the **`JSON_PARTIAL_OUTPUT_ON_ERROR`** option was
-given, **`NULL`** will be encoded in the place of the recursive
+given, **`null`** will be encoded in the place of the recursive
 reference. Available as of PHP 5.5.0. </span>
 
 **`JSON_ERROR_INF_OR_NAN`** (<span class="type">int</span>)  
@@ -53,7 +53,7 @@ encoded in the place of these special numbers. Available as of PHP
 <span class="simpara"> A value of an unsupported type was given to <span
 class="function">json\_encode</span>, such as a
 <a href="/language/types/resource.html" class="link">resource</a>. If
-the **`JSON_PARTIAL_OUTPUT_ON_ERROR`** option was given, **`NULL`** will
+the **`JSON_PARTIAL_OUTPUT_ON_ERROR`** option was given, **`null`** will
 be encoded in the place of the unsupported value. Available as of PHP
 5.5.0. </span>
 
@@ -79,7 +79,7 @@ value. Available as of PHP 5.4.0. </span>
 <span class="simpara"> Decodes JSON objects as PHP array. This option
 can be added automatically by calling <span
 class="function">json\_decode</span> with the second parameter equal to
-**`TRUE`**. Available as of PHP 5.4.0. </span>
+**`true`**. Available as of PHP 5.4.0. </span>
 
 The following constants can be combined to form options for <span
 class="function">json\_encode</span>.

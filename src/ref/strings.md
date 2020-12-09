@@ -444,7 +444,7 @@ The uuencoded data.
 
 ### Return Values
 
-Returns the decoded data as a string or **`FALSE`** on failure.
+Returns the decoded data as a string or **`false`** on failure.
 
 ### Examples
 
@@ -499,7 +499,7 @@ Returns the uuencoded data.
 
 | Version | Description                                                                                             |
 |---------|---------------------------------------------------------------------------------------------------------|
-| 8.0.0   | Prior to this version, trying to convert an empty string returned **`FALSE`** for no particular reason. |
+| 8.0.0   | Prior to this version, trying to convert an empty string returned **`false`** for no particular reason. |
 
 ### Examples
 
@@ -568,7 +568,7 @@ one of the following:
 
 | Version | Description                                                          |
 |---------|----------------------------------------------------------------------|
-| 8.0.0   | Prior to this version, the function returned **`FALSE`** on failure. |
+| 8.0.0   | Prior to this version, the function returned **`false`** on failure. |
 
 ### Examples
 
@@ -1048,7 +1048,7 @@ class="type">string</span>s created by splitting the `string` parameter
 on boundaries formed by the `separator`.
 
 If `separator` is an empty <span class="type">string</span> (""), <span
-class="function">explode</span> will return **`FALSE`**. If `separator`
+class="function">explode</span> will return **`false`**. If `separator`
 contains a value that is not contained in `string` and a negative
 `limit` is used, then an empty <span class="type">array</span> will be
 returned, otherwise an <span class="type">array</span> containing
@@ -1594,7 +1594,7 @@ Hexadecimal representation of data.
 
 ### Return Values
 
-Returns the binary representation of the given data or **`FALSE`** on
+Returns the binary representation of the given data or **`false`** on
 failure.
 
 ### Errors/Exceptions
@@ -1636,7 +1636,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">html\_entity\_decode</span> is the opposite of
 <span class="function">htmlentities</span> in that it converts HTML
@@ -1766,9 +1766,9 @@ class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`ENT_COMPAT`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$double_encode`<span class="initializer"> = **`TRUE`**</span></span>
+`$double_encode`<span class="initializer"> = **`true`**</span></span>
 \]\]\] )
 
 This function is identical to <span
@@ -1981,9 +1981,9 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$flags`<span class="initializer"> = **`ENT_COMPAT`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$double_encode`<span class="initializer"> = **`TRUE`**</span></span>
+`$double_encode`<span class="initializer"> = **`true`**</span></span>
 \]\]\] )
 
 Certain characters have special significance in HTML, and should be
@@ -2474,19 +2474,19 @@ associative array that is returned contains the following fields:
 </tr>
 <tr class="odd">
 <td>p_cs_precedes</td>
-<td><strong><code>TRUE</code></strong> if currency_symbol precedes a positive value, <strong><code>FALSE</code></strong> if it succeeds one</td>
+<td><strong><code>true</code></strong> if currency_symbol precedes a positive value, <strong><code>false</code></strong> if it succeeds one</td>
 </tr>
 <tr class="even">
 <td>p_sep_by_space</td>
-<td><strong><code>TRUE</code></strong> if a space separates currency_symbol from a positive value, <strong><code>FALSE</code></strong> otherwise</td>
+<td><strong><code>true</code></strong> if a space separates currency_symbol from a positive value, <strong><code>false</code></strong> otherwise</td>
 </tr>
 <tr class="odd">
 <td>n_cs_precedes</td>
-<td><strong><code>TRUE</code></strong> if currency_symbol precedes a negative value, <strong><code>FALSE</code></strong> if it succeeds one</td>
+<td><strong><code>true</code></strong> if currency_symbol precedes a negative value, <strong><code>false</code></strong> if it succeeds one</td>
 </tr>
 <tr class="even">
 <td>n_sep_by_space</td>
-<td><strong><code>TRUE</code></strong> if a space separates currency_symbol from a negative value, <strong><code>FALSE</code></strong> otherwise</td>
+<td><strong><code>true</code></strong> if a space separates currency_symbol from a negative value, <strong><code>false</code></strong> otherwise</td>
 </tr>
 <tr class="odd">
 <td>p_sign_posn</td>
@@ -2676,7 +2676,7 @@ class="type">false</span></span> <span
 class="methodname">md5\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$binary`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Calculates the MD5 hash of the file specified by the `filename`
 parameter using the
@@ -2689,12 +2689,12 @@ and returns that hash. The hash is a 32-character hexadecimal number.
 The filename
 
 `binary`  
-When **`TRUE`**, returns the digest in raw binary format with a length
+When **`true`**, returns the digest in raw binary format with a length
 of 16.
 
 ### Return Values
 
-Returns a string on success, **`FALSE`** otherwise.
+Returns a string on success, **`false`** otherwise.
 
 ### Examples
 
@@ -2732,7 +2732,7 @@ for details and best practices.
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$binary`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Calculates the MD5 hash of `string` using the
 <a href="http://www.faqs.org/rfcs/rfc1321" class="link external">» RSA Data Security, Inc. MD5 Message-Digest Algorithm</a>,
@@ -2744,7 +2744,7 @@ and returns that hash.
 The string.
 
 `binary`  
-If the optional `binary` is set to **`TRUE`**, then the md5 digest is
+If the optional `binary` is set to **`true`**, then the md5 digest is
 instead returned in raw binary format with a length of 16.
 
 ### Return Values
@@ -2819,7 +2819,7 @@ Returns the metaphone key as a string.
 
 | Version | Description                                   |
 |---------|-----------------------------------------------|
-| 8.0.0   | The function returned **`FALSE`** on failure. |
+| 8.0.0   | The function returned **`false`** on failure. |
 
 ### Examples
 
@@ -2993,7 +2993,7 @@ The number to be formatted.
 
 Returns the formatted string. Characters before and after the formatting
 string will be returned unchanged. Non-numeric `number` causes returning
-**`NULL`** and emitting **`E_WARNING`**.
+**`null`** and emitting **`E_WARNING`**.
 
 ### Changelog
 
@@ -3108,7 +3108,7 @@ Constant
 
 ### Return Values
 
-Returns the element as a string, or **`FALSE`** if `item` is not valid.
+Returns the element as a string, or **`false`** if `item` is not valid.
 
 ### Notes
 
@@ -3131,7 +3131,7 @@ Inserts HTML line breaks before all newlines in a string
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_xhtml`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Returns `string` with `<br />` or `<br>` inserted before all newlines
 (*\\r\\n*, *\\n\\r*, *\\n* and *\\r*).
@@ -3908,7 +3908,7 @@ The input string.
 
 ### Return Values
 
-Returns the string with meta characters quoted, or **`FALSE`** if an
+Returns the string with meta characters quoted, or **`false`** if an
 empty string is given as `string`.
 
 ### Notes
@@ -4074,7 +4074,7 @@ affected by the locale setting:
     (available if PHP was compiled with *libintl*) </span>
 
 `locale`  
-If `locale` is **`NULL`** or the empty string *""*, the locale names
+If `locale` is **`null`** or the empty string *""*, the locale names
 will be set from the values of environment variables with the same names
 as the above categories, or from "LANG".
 
@@ -4098,7 +4098,7 @@ success.)
 
 ### Return Values
 
-Returns the new current locale, or **`FALSE`** if the locale
+Returns the new current locale, or **`false`** if the locale
 functionality is not implemented on your platform, the specified locale
 does not exist or the category name is invalid.
 
@@ -4172,7 +4172,7 @@ class="type">false</span></span> <span
 class="methodname">sha1\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$binary`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Calculates the sha1 hash of the file specified by `filename` using the
 <a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» US Secure Hash Algorithm 1</a>,
@@ -4184,12 +4184,12 @@ and returns that hash. The hash is a 40-character hexadecimal number.
 The filename of the file to hash.
 
 `binary`  
-When **`TRUE`**, returns the digest in raw binary format with a length
+When **`true`**, returns the digest in raw binary format with a length
 of 20.
 
 ### Return Values
 
-Returns a string on success, **`FALSE`** otherwise.
+Returns a string on success, **`false`** otherwise.
 
 ### Examples
 
@@ -4233,7 +4233,7 @@ for details and best practices.
 <span class="methodparam"><span class="type">string</span>
 `$string`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$binary`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Calculates the sha1 hash of `string` using the
 <a href="http://www.faqs.org/rfcs/rfc3174" class="link external">» US Secure Hash Algorithm 1</a>.
@@ -4244,7 +4244,7 @@ Calculates the sha1 hash of `string` using the
 The input string.
 
 `binary`  
-If the optional `binary` is set to **`TRUE`**, then the sha1 digest is
+If the optional `binary` is set to **`true`**, then the sha1 digest is
 instead returned in raw binary format with a length of 20, otherwise the
 returned value is a 40-character hexadecimal number.
 
@@ -4288,7 +4288,7 @@ class="methodparam"><span class="type">string</span> `$string1`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$string2`</span> \[, <span class="methodparam"><span
 class="type">float</span> `&$percent`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 This calculates the similarity between two strings as described in
 Programming Classics: Implementing the World's Best Algorithms by Oliver
@@ -4388,7 +4388,7 @@ Returns the soundex key as a <span class="type">string</span>.
 
 | Version | Description                                                                                                     |
 |---------|-----------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | Prior to this version, calling the function with an empty string returned **`FALSE`** for no particular reason. |
+| 8.0.0   | Prior to this version, calling the function with an empty string returned **`false`** for no particular reason. |
 
 ### Examples
 
@@ -4574,7 +4574,7 @@ Variables will be co-erced to a suitable type for the specifier:
 ### Return Values
 
 Returns a string produced according to the formatting string `format`,
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 ### Examples
 
@@ -4772,7 +4772,7 @@ passed, the function will return the number of assigned values. The
 optional parameters must be passed by reference.
 
 If there are more substrings expected in the `format` than there are
-available within `string`, **`NULL`** will be returned.
+available within `string`, **`null`** will be returned.
 
 ### Examples
 
@@ -4845,7 +4845,7 @@ The substring to search for in the `haystack`.
 
 ### Return Values
 
-Returns **`TRUE`** if `needle` is in `haystack`, **`FALSE`** otherwise.
+Returns **`true`** if `needle` is in `haystack`, **`false`** otherwise.
 
 ### Examples
 
@@ -4929,7 +4929,7 @@ The substring to search for in the `haystack`.
 
 ### Return Values
 
-Returns **`TRUE`** if `haystack` ends with `needle`, **`FALSE`**
+Returns **`true`** if `haystack` ends with `needle`, **`false`**
 otherwise.
 
 ### Examples
@@ -5069,7 +5069,7 @@ class="type">array</span><span class="type">string</span></span>
 class="type">string</span><span class="type">array</span></span>
 `$subject`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$count`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 This function returns a string or an array with all occurrences of
 `search` in `subject` (ignoring case) replaced with the given `replace`
@@ -5270,7 +5270,7 @@ class="type">array</span><span class="type">string</span></span>
 class="type">string</span><span class="type">array</span></span>
 `$subject`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$count`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 This function returns a string or an array with all occurrences of
 `search` in `subject` replaced with the given `replace` value.
@@ -5519,7 +5519,7 @@ If the optional `length` parameter is specified, the returned array will
 be broken down into chunks with each being `length` in length, otherwise
 each chunk will be one character in length.
 
-**`FALSE`** is returned if `length` is less than 1. If the `length`
+**`false`** is returned if `length` is less than 1. If the `length`
 length exceeds the length of `string`, the entire string is returned as
 the first (and only) array element.
 
@@ -5609,7 +5609,7 @@ The substring to search for in the `haystack`.
 
 ### Return Values
 
-Returns **`TRUE`** if `haystack` begins with `needle`, **`FALSE`**
+Returns **`true`** if `haystack` begins with `needle`, **`false`**
 otherwise.
 
 ### Examples
@@ -5683,7 +5683,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$format`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$characters`<span class="initializer"> = **`NULL`**</span></span> \]\]
+`$characters`<span class="initializer"> = **`null`**</span></span> \]\]
 )
 
 Counts the number of words inside `string`. If the optional `format` is
@@ -5957,7 +5957,7 @@ class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$length`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns the length of the initial segment of `string` which does *not*
 contain any of the characters in `characters`.
@@ -6067,7 +6067,7 @@ class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">string</span><span
 class="type">null</span></span> `$allowed_tags`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 This function tries to return a string with all NULL bytes, HTML and PHP
 tags stripped from a given `string`. It uses the same tag stripping
@@ -6243,12 +6243,12 @@ Returns the position of where the needle exists relative to the
 beginnning of the `haystack` string (independent of offset). Also note
 that string positions start at 0, and not 1.
 
-Returns **`FALSE`** if the needle was not found.
+Returns **`false`** if the needle was not found.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -6411,7 +6411,7 @@ class="type">false</span></span> <span class="methodname">stristr</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns all of `haystack` starting from and including the first
 occurrence of `needle` to the end.
@@ -6430,7 +6430,7 @@ explicitly cast to string, or an explicit call to <span
 class="function">chr</span> should be performed.
 
 `before_needle`  
-If **`TRUE`**, <span class="function">stristr</span> returns the part of
+If **`true`**, <span class="function">stristr</span> returns the part of
 the `haystack` before the first occurrence of the `needle` (excluding
 needle).
 
@@ -6439,7 +6439,7 @@ needle).
 ### Return Values
 
 Returns the matched substring. If `needle` is not found, returns
-**`FALSE`**.
+**`false`**.
 
 ### Changelog
 
@@ -6539,7 +6539,7 @@ echo strlen($str); // 7
 
 > **Note**:
 >
-> <span class="function">strlen</span> returns **`NULL`** when executed
+> <span class="function">strlen</span> returns **`null`** when executed
 > on arrays, and an **`E_WARNING`** level error is emitted.
 
 ### See Also
@@ -6794,7 +6794,7 @@ This parameter is case sensitive.
 
 ### Return Values
 
-Returns a string starting from the character found, or **`FALSE`** if it
+Returns a string starting from the character found, or **`false`** if it
 is not found.
 
 ### Examples
@@ -6862,12 +6862,12 @@ Returns the position of where the needle exists relative to the
 beginning of the `haystack` string (independent of offset). Also note
 that string positions start at 0, and not 1.
 
-Returns **`FALSE`** if the needle was not found.
+Returns **`false`** if the needle was not found.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -6985,7 +6985,7 @@ class="function">chr</span> should be performed.
 
 ### Return Values
 
-This function returns the portion of string, or **`FALSE`** if `needle`
+This function returns the portion of string, or **`false`** if `needle`
 is not found.
 
 ### Changelog
@@ -7108,12 +7108,12 @@ of the `haystack` string (independent of search direction or offset).
 > **Note**: <span class="simpara"> String positions start at 0, and not
 > 1. </span>
 
-Returns **`FALSE`** if the needle was not found.
+Returns **`false`** if the needle was not found.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -7213,12 +7213,12 @@ of the `haystack` string (independent of search direction or offset).
 > **Note**: <span class="simpara"> String positions start at 0, and not
 > 1. </span>
 
-Returns **`FALSE`** if the needle was not found.
+Returns **`false`** if the needle was not found.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -7313,7 +7313,7 @@ class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$length`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Finds the length of the initial segment of `string` that contains *only*
 characters from `characters`.
@@ -7427,7 +7427,7 @@ class="type">false</span></span> <span class="methodname">strstr</span>
 `$haystack`</span> , <span class="methodparam"><span
 class="type">string</span> `$needle`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$before_needle`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns part of `haystack` string starting from and including the first
 occurrence of `needle` to the end of `haystack`.
@@ -7457,13 +7457,13 @@ explicitly cast to string, or an explicit call to <span
 class="function">chr</span> should be performed.
 
 `before_needle`  
-If **`TRUE`**, <span class="function">strstr</span> returns the part of
+If **`true`**, <span class="function">strstr</span> returns the part of
 the `haystack` before the first occurrence of the `needle` (excluding
 the needle).
 
 ### Return Values
 
-Returns the portion of string, or **`FALSE`** if `needle` is not found.
+Returns the portion of string, or **`false`** if `needle` is not found.
 
 ### Changelog
 
@@ -7575,8 +7575,8 @@ The above example will output:
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -7747,9 +7747,9 @@ which case it's an <span class="type">array</span> in the form
 Returns the translated <span class="type">string</span>.
 
 If `replace_pairs` contains a key which is an empty <span
-class="type">string</span> (*""*), **`FALSE`** will be returned. If the
+class="type">string</span> (*""*), **`false`** will be returned. If the
 `str` is not a scalar then it is not typecasted into a string, instead a
-warning is raised and **`NULL`** is returned.
+warning is raised and **`null`** is returned.
 
 ### Examples
 
@@ -7823,10 +7823,10 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 class="type">int</span> `$offset`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
 `$case_insensitive`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 <span class="function">substr\_compare</span> compares `haystack` from
 position `offset` with `needle` up to `length` characters.
@@ -7849,7 +7849,7 @@ length of the `needle` compared to the length of `haystack` minus the
 `offset`.
 
 `case_insensitive`  
-If `case_insensitive` is **`TRUE`**, comparison is case insensitive.
+If `case_insensitive` is **`true`**, comparison is case insensitive.
 
 ### Return Values
 
@@ -7858,7 +7858,7 @@ Returns \< 0 if `haystack` from position `offset` is less than `needle`,
 `offset` is equal to (prior to PHP 7.2.18, 7.3.5) or greater than the
 length of `haystack`, or the `length` is set and is less than 0, <span
 class="function">substr\_compare</span> prints a warning and returns
-**`FALSE`**.
+**`false`**.
 
 ### Changelog
 
@@ -7902,7 +7902,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 class="type">int</span> `$offset`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$length`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">substr\_count</span> returns the number of times
 the `needle` substring occurs in the `haystack` string. Please note that
@@ -7995,7 +7995,7 @@ class="type">array</span><span class="type">int</span></span>
 `$offset`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">array</span><span class="type">int</span><span
 class="type">null</span></span> `$length`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 <span class="function">substr\_replace</span> replaces a copy of
 `string` delimited by the `offset` and (optionally) `length` parameters
@@ -8118,7 +8118,7 @@ Return part of a string
 class="type">int</span> `$offset`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$length`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns the portion of `string` specified by the `offset` and `length`
 parameters.
@@ -8137,7 +8137,7 @@ character at position *2* is '*c*', and so forth.
 If `offset` is negative, the returned string will start at the
 `offset`'th character from the end of `string`.
 
-If `string` is less than `offset` characters long, **`FALSE`** will be
+If `string` is less than `offset` characters long, **`false`** will be
 returned.
 
 **Example \#1 Using a negative `offset`**
@@ -8158,9 +8158,9 @@ length of `string`).
 If `length` is given and is negative, then that many characters will be
 omitted from the end of `string` (after the start position has been
 calculated when a `offset` is negative). If `offset` denotes the
-position of this truncation or beyond, **`FALSE`** will be returned.
+position of this truncation or beyond, **`false`** will be returned.
 
-If `length` is given and is *0*, **`FALSE`** or **`NULL`**, an empty
+If `length` is given and is *0*, **`false`** or **`null`**, an empty
 string will be returned.
 
 If `length` is omitted, the substring starting from `offset` until the
@@ -8179,7 +8179,7 @@ $rest = substr("abcdef", -3, -1); // returns "de"
 
 ### Return Values
 
-Returns the extracted part of `string`; or **`FALSE`** on failure, or an
+Returns the extracted part of `string`; or **`false`** on failure, or an
 empty string.
 
 ### Changelog
@@ -8187,7 +8187,7 @@ empty string.
 | Version | Description                                                             |
 |---------|-------------------------------------------------------------------------|
 | 8.0.0   | `length` is nullable now.                                               |
-| 8.0.0   | The function returns an empty where it previously returned **`FALSE`**. |
+| 8.0.0   | The function returns an empty where it previously returned **`false`**. |
 
 ### Examples
 
@@ -8253,7 +8253,7 @@ Output of the above example in PHP 5:
 
 ### Errors/Exceptions
 
-Returns **`FALSE`** on error.
+Returns **`false`** on error.
 
 ``` php
 <?php
@@ -9113,7 +9113,7 @@ Variables will be co-erced to a suitable type for the specifier:
 ### Return Values
 
 Return array values as a formatted string according to `format`, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -9157,7 +9157,7 @@ class="initializer"> = 75</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$break`<span
 class="initializer"> = "\\n"</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$cut_long_words`<span class="initializer"> = **`FALSE`**</span></span>
+`$cut_long_words`<span class="initializer"> = **`false`**</span></span>
 \]\]\] )
 
 Wraps a string to a given number of characters using a string break
@@ -9175,10 +9175,10 @@ The number of characters at which the string will be wrapped.
 The line is broken using the optional `break` parameter.
 
 `cut_long_words`  
-If the `cut_long_words` is set to **`TRUE`**, the string is always
+If the `cut_long_words` is set to **`true`**, the string is always
 wrapped at or before the specified `width`. So if you have a word that
 is larger than the given width, it is broken apart. (See second
-example). When **`FALSE`** the function does not split the word even if
+example). When **`false`** the function does not split the word even if
 the `width` is smaller than the word width.
 
 ### Return Values

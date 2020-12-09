@@ -42,7 +42,7 @@ class="methodname">class\_alias</span> ( <span class="methodparam"><span
 class="type">string</span> `$original`</span> , <span
 class="methodparam"><span class="type">string</span> `$alias`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autoload`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$autoload`<span class="initializer"> = **`true`**</span></span> \] )
 
 Creates an alias named `alias` based on the user defined class
 `original`. The aliased class is exactly the same as the original class.
@@ -60,7 +60,7 @@ Whether to autoload if the original class is not found.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -117,7 +117,7 @@ class="methodname">class\_exists</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$class_name`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$autoload`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 This function checks whether or not the given class has been defined.
 
@@ -133,7 +133,7 @@ default.
 
 ### Return Values
 
-Returns **`TRUE`** if `class_name` is a defined class, **`FALSE`**
+Returns **`true`** if `class_name` is a defined class, **`false`**
 otherwise.
 
 ### Examples
@@ -192,7 +192,7 @@ Gets the name of the class the static method is called in.
 
 ### Return Values
 
-Returns the class name. Returns **`FALSE`** if called from outside a
+Returns the class name. Returns **`false`** if called from outside a
 class.
 
 ### Examples
@@ -250,7 +250,7 @@ The class name or an object instance
 ### Return Values
 
 Returns an array of method names defined for the class specified by
-`class_name`. In case of an error, it returns **`NULL`**.
+`class_name`. In case of an error, it returns **`null`**.
 
 ### Examples
 
@@ -327,7 +327,7 @@ The class name
 Returns an associative array of declared properties visible from the
 current scope, with their default value. The resulting array elements
 are in the form of *varname =\> value*. In case of an error, it returns
-**`FALSE`**.
+**`false`**.
 
 ### Examples
 
@@ -434,17 +434,17 @@ Gets the name of the class of the given `object`.
 `object`  
 The tested object. This parameter may be omitted when inside a class.
 
-> **Note**: <span class="simpara"> Explicitly passing **`NULL`** as the
+> **Note**: <span class="simpara"> Explicitly passing **`null`** as the
 > `object` is no longer allowed as of PHP 7.2.0. </span> <span
 > class="simpara"> The parameter is still optional and calling <span
 > class="function">get\_class</span> without a parameter from inside a
-> class will work, but passing **`NULL`** now emits an **`E_WARNING`**
+> class will work, but passing **`null`** now emits an **`E_WARNING`**
 > notice. </span>
 
 ### Return Values
 
 Returns the name of the class of which `object` is an instance. Returns
-**`FALSE`** if `object` is not an object.
+**`false`** if `object` is not an object.
 
 If `object` is omitted when inside a class, the name of that class is
 returned.
@@ -461,7 +461,7 @@ other than an object, an **`E_WARNING`** level error is raised.
 
 | Version | Description                                                                                                                                                                                                                 |
 |---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | Prior to this version the default value for `object` was **`NULL`** and it had the same effect as not passing any value. Now **`NULL`** has been removed as the default value for `object`, and is no longer a valid input. |
+| 7.2.0   | Prior to this version the default value for `object` was **`null`** and it had the same effect as not passing any value. Now **`null`** has been removed as the default value for `object`, and is no longer a valid input. |
 
 ### Examples
 
@@ -678,7 +678,7 @@ This function has no parameters.
 ### Return Values
 
 Returns an array with names of all declared traits in values. Returns
-**`NULL`** in case of a failure.
+**`null`** in case of a failure.
 
 ### See Also
 
@@ -788,10 +788,10 @@ an instance or the name.
 > **Note**:
 >
 > If the object does not have a parent or the class given does not exist
-> **`FALSE`** will be returned.
+> **`false`** will be returned.
 
 If called without parameter outside object, this function returns
-**`FALSE`**.
+**`false`**.
 
 ### Examples
 
@@ -850,7 +850,7 @@ class="methodname">interface\_exists</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$interface_name`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$autoload`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Checks if the given interface has been defined.
 
@@ -866,8 +866,8 @@ not by default.
 
 ### Return Values
 
-Returns **`TRUE`** if the interface given by `interface_name` has been
-defined, **`FALSE`** otherwise.
+Returns **`true`** if the interface given by `interface_name` has been
+defined, **`false`** otherwise.
 
 ### Examples
 
@@ -905,7 +905,7 @@ parents
 `$object`</span> , <span class="methodparam"><span
 class="type">string</span> `$class_name`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$allow_string`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Checks if the given `object` is of this class or has this class as one
 of its parents.
@@ -919,14 +919,14 @@ A class name or an object instance.
 The class name
 
 `allow_string`  
-If this parameter set to **`FALSE`**, string class name as `object` is
+If this parameter set to **`false`**, string class name as `object` is
 not allowed. This also prevents from calling autoloader if the class
 doesn't exist.
 
 ### Return Values
 
-Returns **`TRUE`** if the object is of this class or has this class as
-one of its parents, **`FALSE`** otherwise.
+Returns **`true`** if the object is of this class or has this class as
+one of its parents, **`false`** otherwise.
 
 ### Examples
 
@@ -979,7 +979,7 @@ class="methodparam"><span class="type">mixed</span> `$object`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$class_name`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$allow_string`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Checks if the given `object` has the class `class_name` as one of its
 parents or implements it.
@@ -1000,8 +1000,8 @@ exist.
 
 ### Return Values
 
-This function returns **`TRUE`** if the object `object`, belongs to a
-class which is a subclass of `class_name`, **`FALSE`** otherwise.
+This function returns **`true`** if the object `object`, belongs to a
+class which is a subclass of `class_name`, **`false`** otherwise.
 
 ### Examples
 
@@ -1141,8 +1141,8 @@ The method name
 
 ### Return Values
 
-Returns **`TRUE`** if the method given by `method_name` has been defined
-for the given `object`, **`FALSE`** otherwise.
+Returns **`true`** if the method given by `method_name` has been defined
+for the given `object`, **`false`** otherwise.
 
 ### Notes
 
@@ -1205,8 +1205,8 @@ class.
 > **Note**:
 >
 > As opposed with <span class="function">isset</span>, <span
-> class="function">property\_exists</span> returns **`TRUE`** even if
-> the property has the value **`NULL`**.
+> class="function">property\_exists</span> returns **`true`** even if
+> the property has the value **`null`**.
 
 ### Parameters
 
@@ -1218,8 +1218,8 @@ The name of the property
 
 ### Return Values
 
-Returns **`TRUE`** if the property exists, **`FALSE`** if it doesn't
-exist or **`NULL`** in case of an error.
+Returns **`true`** if the property exists, **`false`** if it doesn't
+exist or **`null`** in case of an error.
 
 ### Notes
 
@@ -1290,7 +1290,7 @@ Whether to autoload if not already loaded.
 
 ### Return Values
 
-Returns **`TRUE`** if trait exists, **`FALSE`** if not, **`NULL`** in
+Returns **`true`** if trait exists, **`false`** if not, **`null`** in
 case of an error.
 
 **Table of Contents**

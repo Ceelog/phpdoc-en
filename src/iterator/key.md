@@ -18,7 +18,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="type">scalar</span> on success, or **`NULL`** on
+Returns <span class="type">scalar</span> on success, or **`null`** on
 failure.
 
 ### Errors/Exceptions

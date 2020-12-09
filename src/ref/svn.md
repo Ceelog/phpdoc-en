@@ -9,9 +9,9 @@ Schedules the addition of an item in a working directory
 ( <span class="methodparam"><span class="type">string</span>
 `$path`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recursive`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$force`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Adds the file, directory or symbolic link at `path` to the working
 directory. The item will be added to the repository the next time you
@@ -29,16 +29,16 @@ Path of item to add.
 
 `recursive`  
 If item is directory, whether or not to recursively add all of its
-contents. Default is **`TRUE`**
+contents. Default is **`true`**
 
 `force`  
 If true, Subversion will recurse into already versioned directories in
 order to add unversioned files that may be hiding in those directories.
-Default is **`FALSE`**
+Default is **`false`**
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -97,7 +97,7 @@ defined by this extension to specify a key.
 
 ### Return Values
 
-Returns the string value of the parameter at `key`; returns **`NULL`**
+Returns the string value of the parameter at `key`; returns **`null`**
 if parameter does not exist.
 
 ### Notes
@@ -263,7 +263,7 @@ revision.
 ### Return Values
 
 Returns the string contents of the item from the repository on success,
-and **`FALSE`** on failure.
+and **`false`** on failure.
 
 ### Notes
 
@@ -332,7 +332,7 @@ Any combination of **`SVN_NON_RECURSIVE`** and
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -395,7 +395,7 @@ String path to local working directory to cleanup
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -477,12 +477,12 @@ class="methodname">svn\_commit</span> ( <span class="methodparam"><span
 class="type">string</span> `$log`</span> , <span
 class="methodparam"><span class="type">array</span> `$targets`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$recursive`<span class="initializer"> = **`true`**</span></span> \] )
 
 Commits changes made in the local working copy files enumerated in the
 `targets` array to the repository, with the log message `log`.
 Directories in the `targets` array will be recursively committed unless
-`recursive` is set to **`FALSE`**.
+`recursive` is set to **`false`**.
 
 > **Note**: <span class="simpara"> This function does not have any
 > parameters for specifying authentication, so a username and password
@@ -508,7 +508,7 @@ acceptable.
 
 `recursive`  
 Boolean flag to disable recursive committing of directories in the
-`targets` array. Default is **`TRUE`**.
+`targets` array. Default is **`true`**.
 
 ### Return Values
 
@@ -522,7 +522,7 @@ array(
 )
 ```
 
-Returns **`FALSE`** on failure.
+Returns **`false`** on failure.
 
 ### Notes
 
@@ -572,7 +572,7 @@ Delete items from a working copy or repository
 class="methodname">svn\_delete</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$force`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Deletes the file, directory or symbolic link at `path` from the working
 directory. The item will be deleted from the repository the next time
@@ -589,13 +589,13 @@ Path of item to delete.
 > class="function">realpath</span> or dirname(\_\_FILE\_\_).</span>
 
 `force`  
-If **`TRUE`**, the file will be deleted even if it has local
+If **`true`**, the file will be deleted even if it has local
 modifications. Otherwise, local modifications will result in a failure.
-Default is **`FALSE`**
+Default is **`false`**
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -660,8 +660,8 @@ Second path's revision number. See `rev1` for description.
 
 Returns an array-list consisting of two streams: the first is the diff
 output and the second contains error stream output. The streams can be
-read using <span class="function">fread</span>. Returns **`FALSE`** or
-**`NULL`** on error.
+read using <span class="function">fread</span>. Returns **`false`** or
+**`null`** on error.
 
 The diff output will, by default, be in the form of Subversion's custom
 unified diff format, but an
@@ -754,7 +754,7 @@ class="methodname">svn\_export</span> ( <span class="methodparam"><span
 class="type">string</span> `$frompath`</span> , <span
 class="methodparam"><span class="type">string</span> `$topath`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$working_copy`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$working_copy`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$revision_no`<span class="initializer"> = -1</span></span> \]\] )
 
@@ -770,11 +770,11 @@ The path to the current repository.
 The path to the new repository.
 
 `working_copy`  
-If **`TRUE`**, it will export uncommitted files from the working copy.
+If **`true`**, it will export uncommitted files from the working copy.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1434,7 +1434,7 @@ class="methodparam"><span class="type">string</span> `$url`</span> ,
 `$nonrecursive`</span> )
 
 Commits unversioned `path` into repository at `url`. If `path` is a
-directory and `nonrecursive` is **`FALSE`**, the directory will be
+directory and `nonrecursive` is **`false`**, the directory will be
 imported recursively.
 
 ### Parameters
@@ -1455,7 +1455,7 @@ Whether or not to refrain from recursively processing directories.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1629,9 +1629,9 @@ revision number
 class="type">int</span> `$revision_no`<span class="initializer"> =
 SVN\_REVISION\_HEAD</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$recurse`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$peg`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 This function queries the repository URL and returns a list of files and
 directories, optionally from a specific revision. This is equivalent to
@@ -1746,7 +1746,7 @@ The path to the working copy or repository.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1956,7 +1956,7 @@ Revert changes to the working copy
 class="methodname">svn\_revert</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$recursive`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Revert any local changes to the path in a working copy.
 
@@ -1970,7 +1970,7 @@ Optionally make recursive changes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -2039,7 +2039,7 @@ for possible values. </span>
 
 `repos_text_status`  
 <span class="simpara"> Status of item's text in repository. Only
-accurate if `update` was set to **`TRUE`**. Refer to
+accurate if `update` was set to **`true`**. Refer to
 <a href="/svn/constants.html#Working%20copy%20status%20constants" class="link">status constants</a>
 for possible values. </span>
 
@@ -2050,21 +2050,21 @@ for possible values. </span>
 
 `repos_prop_status`  
 <span class="simpara"> Status of item's property in repository. Only
-accurate if `update` was set to **`TRUE`**. Refer to
+accurate if `update` was set to **`true`**. Refer to
 <a href="/svn/constants.html#Working%20copy%20status%20constants" class="link">status constants</a>
 for possible values. </span>
 
 `locked`  
 <span class="simpara"> Whether or not the item is locked. (Only set if
-**`TRUE`**.) </span>
+**`true`**.) </span>
 
 `copied`  
 <span class="simpara"> Whether or not the item was copied (scheduled for
-addition with history). (Only set if **`TRUE`**.) </span>
+addition with history). (Only set if **`true`**.) </span>
 
 `switched`  
 <span class="simpara"> Whether or not the item was switched using the
-switch command. (Only set if **`TRUE`**) </span>
+switch command. (Only set if **`true`**) </span>
 
 These keys are only set if the item is versioned:
 
@@ -2103,16 +2103,16 @@ if (!defined('svn_wc_schedule_normal')) {
 
 `deleted`  
 <span class="simpara"> Whether or not the item was deleted, but parent
-revision lags behind. (Only set if **`TRUE`**.) </span>
+revision lags behind. (Only set if **`true`**.) </span>
 
 `absent`  
 <span class="simpara"> Whether or not the item is absent, that is,
 Subversion knows that there should be something there but there isn't.
-(Only set if **`TRUE`**.) </span>
+(Only set if **`true`**.) </span>
 
 `incomplete`  
 <span class="simpara"> Whether or not the entries file for a directory
-is incomplete. (Only set if **`TRUE`**.) </span>
+is incomplete. (Only set if **`true`**.) </span>
 
 `cmt_date`  
 <span class="simpara"> Integer Unix timestamp of last commit date.
@@ -2196,7 +2196,7 @@ class="type">string</span> `$path`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$revno`<span
 class="initializer"> = SVN\_REVISION\_HEAD</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$recurse`<span
-class="initializer"> = **`TRUE`**</span></span> \]\] )
+class="initializer"> = **`true`**</span></span> \]\] )
 
 Update working copy at `path` to revision `revno`. If `recurse` is true,
 directories will be recursively updated.
@@ -2219,7 +2219,7 @@ Whether or not to recursively update directories.
 
 ### Return Values
 
-Returns new revision number on success, returns **`FALSE`** on failure.
+Returns new revision number on success, returns **`false`** on failure.
 
 ### Notes
 

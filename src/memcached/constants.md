@@ -10,7 +10,7 @@ Enables or disables payload compression. When enabled, item values
 longer than a certain threshold (currently 100 bytes) will be compressed
 during storage and decompressed during retrieval transparently.
 
-Type: *boolean*, default: **`TRUE`**.
+Type: *boolean*, default: **`true`**.
 
 **`Memcached::OPT_SERIALIZER`**  
 Specifies the serializer to use for serializing non-scalar values. The
@@ -103,7 +103,7 @@ server configuration will be able to access the keys transparently.
 > consistent hashing, and it may be enabled by default in future
 > releases.
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_BUFFER_WRITES`**  
 Enables or disables buffered I/O. Enabling buffered I/O causes storage
@@ -112,25 +112,25 @@ data causes this buffer to be sent to the remote connection. Quitting
 the connection or closing down the connection will also cause the
 buffered data to be pushed to the remote connection.
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_BINARY_PROTOCOL`**  
 Enable the use of the binary protocol. Please note that you cannot
 toggle this option on an open connection.
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_NO_BLOCK`**  
 Enables or disables asynchronous I/O. This is the fastest transport
 available for storage functions.
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_TCP_NODELAY`**  
 Enables or disables the no-delay feature for connecting sockets (may be
 faster in some environments).
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_SOCKET_SEND_SIZE`**  
 The maximum socket send buffer in bytes.
@@ -176,7 +176,7 @@ Type: *integer*, default: *1000*.
 **`Memcached::OPT_CACHE_LOOKUPS`**  
 Enables or disables caching of DNS lookups.
 
-Type: *boolean*, default: **`FALSE`**.
+Type: *boolean*, default: **`false`**.
 
 **`Memcached::OPT_SERVER_FAILURE_LIMIT`**  
 Specifies the failure limit for server connection attempts. The server

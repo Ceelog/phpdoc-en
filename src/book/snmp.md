@@ -139,7 +139,7 @@ class="methodparam">void</span> )
 <span class="methodname">get</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$object_id`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getErrno</span> ( <span
@@ -178,7 +178,7 @@ class="type">string</span> `$contextEngineID`<span class="initializer">
 <span class="methodname">walk</span> ( <span class="methodparam"><span
 class="type">string</span> `$object_id`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$suffix_as_key`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span>
 `$max_repetitions`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$non_repeaters`</span> \]\]\] )
@@ -279,7 +279,7 @@ and can cause <span class="methodname">SNMP::walk</span> to loop
 indefinitely until memory limit will be reached. PHP SNMP library by
 default performs OID increasing check and stops walking on OID tree when
 it detects possible loop with issuing warning about non-increasing OID
-faced. Set `oid_increasing_check` to **`FALSE`** to disable this check.
+faced. Set `oid_increasing_check` to **`false`** to disable this check.
 
 `exceptions_enabled`  
 Controls which failures will raise SNMPException instead of warning. Use
@@ -349,7 +349,7 @@ Frees previously allocated SNMP session object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -470,7 +470,7 @@ Fetch an SNMP object
 <span class="methodname">SNMP::get</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$object_id`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$preserve_keys`<span class="initializer"> = **`FALSE`**</span></span>
+`$preserve_keys`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 Fetch an SNMP object specified in `object_id` using GET query.
@@ -486,7 +486,7 @@ as associative array of the SNMP object ids and their values.
 The SNMP object (OID) or objects
 
 `preserve_keys`  
-When `object_id` is a array and `preserve_keys` set to **`TRUE`** keys
+When `object_id` is a array and `preserve_keys` set to **`true`** keys
 in results will be taken exactly as in `object_id`, otherwise
 `SNMP::oid_output_format` property is used to determinate the form of
 keys.
@@ -494,7 +494,7 @@ keys.
 ### Return Values
 
 Returns SNMP objects requested as string or array depending on
-`object_id` type or **`FALSE`** on error.
+`object_id` type or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -656,7 +656,7 @@ The SNMP object (OID) or objects
 ### Return Values
 
 Returns SNMP objects requested as string or array depending on
-`object_id` type or **`FALSE`** on error.
+`object_id` type or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -800,7 +800,7 @@ The new value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -898,7 +898,7 @@ the context EngineID
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -927,7 +927,7 @@ Fetch SNMP object subtree
 <span class="methodname">SNMP::walk</span> ( <span
 class="methodparam"><span class="type">string</span> `$object_id`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$suffix_as_key`<span class="initializer"> = **`FALSE`**</span></span>
+`$suffix_as_key`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$max_repetitions`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$non_repeaters`</span> \]\]\] )
@@ -942,7 +942,7 @@ Root of subtree to be fetched
 
 `suffix_as_key`  
 By default full OID notation is used for keys in output array. If set to
-**`TRUE`** subtree prefix will be removed from keys leaving only suffix
+**`true`** subtree prefix will be removed from keys leaving only suffix
 of object\_id.
 
 `non_repeaters`  
@@ -956,7 +956,7 @@ variables. The default is to use this value from SNMP object.
 ### Return Values
 
 Returns an associative array of the SNMP object ids and their values on
-success or **`FALSE`** on error. When a SNMP error occures <span
+success or **`false`** on error. When a SNMP error occures <span
 class="methodname">SNMP::getErrno</span> and <span
 class="methodname">SNMP::getError</span> can be used for retrieving
 error number (specific to SNMP extension, see class constants) and error

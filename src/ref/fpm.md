@@ -15,7 +15,7 @@ leaving the connection to the client open.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Table of Contents**
 

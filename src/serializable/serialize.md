@@ -18,12 +18,12 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the string representation of the object or **`NULL`**
+Returns the string representation of the object or **`null`**
 
 ### Errors/Exceptions
 
 Throws <span class="classname">Exception</span> when returning other
-types than strings and **`NULL`**.
+types than strings and **`null`**.
 
 ### See Also
 

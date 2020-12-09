@@ -73,5 +73,5 @@ Changed functions
 ### Session
 
 -   <span class="simpara"> <span class="function">session\_start</span>
-    now returns **`FALSE`** and no longer initializes `$_SESSION` when
+    now returns **`false`** and no longer initializes `$_SESSION` when
     it failed to start the session. </span>

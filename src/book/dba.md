@@ -76,7 +76,7 @@ install supported dba-Handlers.
 | *cdb*       | Cdb is "a fast, reliable, lightweight package for creating and reading constant databases." It is from the author of qmail and can be found at <a href="http://cr.yp.to/cdb.html" class="link external">» http://cr.yp.to/cdb.html</a>. Since it is constant, we support only reading operations. We support writing (not updating) through the internal cdb library.                                                                                                                                                                                           |
 | *cdb\_make* | We support creation (not updating) of cdb files when the bundled cdb library is used.                                                                                                                                                                                                                                                                                                                                                                                                                                                                           |
 | *flatfile*  | This is available for compatibility with the deprecated *dbm* extension only and should be avoided. However you may use this where files were created in this format. That happens when configure could not find any external library.                                                                                                                                                                                                                                                                                                                          |
-| *inifile*   | This is available to be able to modify php.ini files from within PHP scripts. When working with ini files you can pass arrays of the form array(0=\>group,1=\>value\_name) or strings of the form "\[group\]value\_name" where group is optional. As the functions <span class="function">dba\_firstkey</span> and <span class="function">dba\_nextkey</span> return string representations of the key there is the function <span class="function">dba\_key\_split</span> which allows to convert the string keys into array keys without loosing **`FALSE`**. |
+| *inifile*   | This is available to be able to modify php.ini files from within PHP scripts. When working with ini files you can pass arrays of the form array(0=\>group,1=\>value\_name) or strings of the form "\[group\]value\_name" where group is optional. As the functions <span class="function">dba\_firstkey</span> and <span class="function">dba\_nextkey</span> return string representations of the key there is the function <span class="function">dba\_key\_split</span> which allows to convert the string keys into array keys without loosing **`false`**. |
 | *qdbm*      | The qdbm library can be downloaded from <a href="http://fallabs.com/qdbm/index.html" class="link external">» http://fallabs.com/qdbm/index.html</a>.                                                                                                                                                                                                                                                                                                                                                                                                            |
 | *tcadb*     | This is available since PHP 5.4.0. The Tokyo Cabinet library can be downloaded from <a href="http://fallabs.com/tokyocabinet/" class="link external">» http://fallabs.com/tokyocabinet/</a>.                                                                                                                                                                                                                                                                                                                                                                    |
 | *lmdb*      | This is available since PHP 7.2.0. The Lightning Memory-Mapped Database library can be downloaded from <a href="https://symas.com/lmdb/" class="link external">» https://symas.com/lmdb/</a>.                                                                                                                                                                                                                                                                                                                                                                   |
@@ -377,7 +377,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -414,7 +414,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the key exists, **`FALSE`** otherwise.
+Returns **`true`** if the key exists, **`false`** otherwise.
 
 ### See Also
 
@@ -469,7 +469,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns the associated string if the key/data pair is found, **`FALSE`**
+Returns the associated string if the key/data pair is found, **`false`**
 otherwise.
 
 ### See Also
@@ -506,7 +506,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns the key on success or **`FALSE`** on failure.
+Returns the key on success or **`false`** on failure.
 
 ### See Also
 
@@ -525,7 +525,7 @@ List all the handlers available
 <span class="type">array</span> <span
 class="methodname">dba\_handlers</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$full_info`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">dba\_handlers</span> list all the handlers
 supported by this extension.
@@ -538,7 +538,7 @@ Turns on/off full information display in the result.
 ### Return Values
 
 Returns an array of database handlers. If `full_info` is set to
-**`TRUE`**, the array will be associative with the handlers names as
+**`true`**, the array will be associative with the handlers names as
 keys, and their version information as value. Otherwise, the result will
 be an indexed array of handlers names.
 
@@ -608,7 +608,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -639,8 +639,8 @@ The key in string representation.
 ### Return Values
 
 Returns an array of the form *array(0 =\> group, 1 =\> value\_name)*.
-This function will return **`FALSE`** if `key` is **`NULL`** or
-**`FALSE`**.
+This function will return **`false`** if `key` is **`null`** or
+**`false`**.
 
 ### See Also
 
@@ -689,7 +689,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns the key on success or **`FALSE`** on failure.
+Returns the key on success or **`false`** on failure.
 
 ### See Also
 
@@ -790,7 +790,7 @@ parameter is supported as of PHP 7.3.14 and 7.4.2, respectively.
 
 ### Return Values
 
-Returns a positive handle on success or **`FALSE`** on failure.
+Returns a positive handle on success or **`false`** on failure.
 
 ### Changelog
 
@@ -827,7 +827,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -890,7 +890,7 @@ parameter is supported as of PHP 7.3.14 and 7.4.2, respectively.
 
 ### Return Values
 
-Returns a positive handle on success or **`FALSE`** on failure.
+Returns a positive handle on success or **`false`** on failure.
 
 ### See Also
 
@@ -930,7 +930,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -962,7 +962,7 @@ class="function">dba\_popen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 

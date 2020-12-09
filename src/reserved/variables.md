@@ -672,7 +672,7 @@ configuration option is turned on (it defaults to off).
 
 If a user defined error handler (<span
 class="function">set\_error\_handler</span>) is set `$php_errormsg` is
-only set if the error handler returns **`FALSE`**.
+only set if the error handler returns **`false`**.
 
 ### Changelog
 

@@ -76,9 +76,9 @@ The above example will output:
     int(1)
     int(1)
 
-### Disallow passing **`NULL`** to <span class="function">get\_class</span>
+### Disallow passing **`null`** to <span class="function">get\_class</span>
 
-Previously, passing **`NULL`** to the <span
+Previously, passing **`null`** to the <span
 class="function">get\_class</span> function would output the name of the
 enclosing class. This behaviour has now been removed, where an
 **`E_WARNING`** will be output instead. To achieve the same behaviour as
@@ -147,7 +147,7 @@ resource would return a string of *"unknown type"*. Now, a string of
 
 Previously, using <span class="function">is\_object</span> on the <span
 class="classname">\_\_PHP\_Incomplete\_Class</span> class would return
-**`FALSE`**. Now, **`TRUE`** will be returned.
+**`false`**. Now, **`true`** will be returned.
 
 ### Promote the error level of undefined constants
 
@@ -202,7 +202,7 @@ longer accept non-cryptographic hashes.
 
 The <span class="function">json\_decode</span> function option,
 **`JSON_OBJECT_AS_ARRAY`**, is now used if the second parameter (assoc)
-is **`NULL`**. Previously, **`JSON_OBJECT_AS_ARRAY`** was always
+is **`null`**. Previously, **`JSON_OBJECT_AS_ARRAY`** was always
 ignored.
 
 ### <span class="function">rand</span> and <span class="function">mt\_rand</span> output

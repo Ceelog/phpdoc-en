@@ -477,7 +477,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">export</span> ( <span class="methodparam"><span
 class="type">Reflector</span> `$reflector`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">array</span> <span
@@ -504,7 +504,7 @@ class="methodname">Reflection::export</span> ( <span
 class="methodparam"><span class="type">Reflector</span>
 `$reflector`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Exports a reflection.
 
@@ -519,13 +519,13 @@ available.
 The reflection to export.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### See Also
@@ -648,7 +648,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">export</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$argument`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">getConstant</span> ( <span
@@ -1015,7 +1015,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">ReflectionClass::export</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$argument`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$return`<span class="initializer"> = **`false`**</span></span> \] )
 
 Exports a reflected class.
 
@@ -1025,13 +1025,13 @@ Exports a reflected class.
 The reflection to export.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### Examples
@@ -1109,7 +1109,7 @@ The name of the class constant to get.
 
 ### Return Values
 
-Value of the constant with the name `name`. Returns **`FALSE`** if the
+Value of the constant with the name `name`. Returns **`false`** if the
 constant was not found in the class.
 
 ### Examples
@@ -1190,7 +1190,7 @@ This function has no parameters.
 ### Return Values
 
 A <span class="classname">ReflectionMethod</span> object reflecting the
-class' constructor, or **`NULL`** if the class has no constructor.
+class' constructor, or **`null`** if the class has no constructor.
 
 ### Examples
 
@@ -1245,7 +1245,7 @@ This function has no parameters.
 
 An <span class="type">array</span> of default properties, with the key
 being the name of the property and the value being the default value of
-the property or **`NULL`** if the property doesn't have a default value.
+the property or **`null`** if the property doesn't have a default value.
 The function does not distinguish between static and non static
 properties and does not take visibility modifiers into account.
 
@@ -1315,7 +1315,7 @@ This function has no parameters.
 
 ### Return Values
 
-The doc comment if it exists, otherwise **`FALSE`**
+The doc comment if it exists, otherwise **`false`**
 
 ### Examples
 
@@ -1369,7 +1369,7 @@ This function has no parameters.
 
 ### Return Values
 
-The ending line number of the user defined class, or **`FALSE`** if
+The ending line number of the user defined class, or **`false`** if
 unknown.
 
 ### Examples
@@ -1419,7 +1419,7 @@ This function has no parameters.
 ### Return Values
 
 A <span class="classname">ReflectionExtension</span> object representing
-the extension which defined the class, or **`NULL`** for user-defined
+the extension which defined the class, or **`null`** for user-defined
 classes.
 
 ### Examples
@@ -1465,7 +1465,7 @@ This function has no parameters.
 
 ### Return Values
 
-The name of the extension which defined the class, or **`FALSE`** for
+The name of the extension which defined the class, or **`false`** for
 user-defined classes.
 
 ### Examples
@@ -1509,7 +1509,7 @@ This function has no parameters.
 ### Return Values
 
 Returns the filename of the file in which the class has been defined. If
-the class is defined in the PHP core or in a PHP extension, **`FALSE`**
+the class is defined in the PHP core or in a PHP extension, **`false`**
 is returned.
 
 ### See Also
@@ -1996,7 +1996,7 @@ This function has no parameters.
 
 ### Return Values
 
-A <span class="classname">ReflectionClass</span> or **`FALSE`** if
+A <span class="classname">ReflectionClass</span> or **`false`** if
 there's no parent.
 
 ### See Also
@@ -2161,7 +2161,7 @@ The class constant name.
 
 ### Return Values
 
-A <span class="classname">ReflectionClassConstant</span>, or **`FALSE`**
+A <span class="classname">ReflectionClassConstant</span>, or **`false`**
 on failure.
 
 ### See Also
@@ -2461,7 +2461,7 @@ This function has no parameters.
 ### Return Values
 
 Returns an array with new method names in keys and original names (in
-the format *"TraitName::original"*) in values. Returns **`NULL`** in
+the format *"TraitName::original"*) in values. Returns **`null`** in
 case of an error.
 
 ReflectionClass::getTraitNames
@@ -2486,7 +2486,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array with trait names in values. Returns **`NULL`** in case
+Returns an array with trait names in values. Returns **`null`** in case
 of an error.
 
 ReflectionClass::getTraits
@@ -2512,7 +2512,7 @@ This function has no parameters.
 ### Return Values
 
 Returns an array with trait names in keys and instances of trait's <span
-class="classname">ReflectionClass</span> in values. Returns **`NULL`**
+class="classname">ReflectionClass</span> in values. Returns **`null`**
 in case of an error.
 
 ReflectionClass::hasConstant
@@ -2535,7 +2535,7 @@ The name of the constant being checked for.
 
 ### Return Values
 
-**`TRUE`** if the constant is defined, otherwise **`FALSE`**.
+**`true`** if the constant is defined, otherwise **`false`**.
 
 ### Examples
 
@@ -2585,7 +2585,7 @@ Name of the method being checked for.
 
 ### Return Values
 
-**`TRUE`** if it has the method, otherwise **`FALSE`**
+**`true`** if it has the method, otherwise **`false`**
 
 ### Examples
 
@@ -2664,7 +2664,7 @@ Name of the property being checked for.
 
 ### Return Values
 
-**`TRUE`** if it has the property, otherwise **`FALSE`**
+**`true`** if it has the property, otherwise **`false`**
 
 ### Examples
 
@@ -2723,7 +2723,7 @@ The interface name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -2757,7 +2757,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2822,7 +2822,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2871,7 +2871,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2920,7 +2920,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the class is cloneable, **`FALSE`** otherwise.
+Returns **`true`** if the class is cloneable, **`false`** otherwise.
 
 ### Examples
 
@@ -2972,7 +2972,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3023,7 +3023,7 @@ The object being compared to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3083,7 +3083,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3171,7 +3171,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3217,7 +3217,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3265,7 +3265,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3348,7 +3348,7 @@ against.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3379,8 +3379,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if this is a trait, **`FALSE`** otherwise. Returns
-**`NULL`** in case of an error.
+Returns **`true`** if this is a trait, **`false`** otherwise. Returns
+**`null`** in case of an error.
 
 ReflectionClass::isUserDefined
 ==============================
@@ -3401,7 +3401,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3841,8 +3841,8 @@ The reflection to export.
 The class constant name.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
@@ -3892,7 +3892,7 @@ This function has no parameters.
 
 ### Return Values
 
-The doc comment if it exists, otherwise **`FALSE`**
+The doc comment if it exists, otherwise **`false`**
 
 ReflectionClassConstant::getModifiers
 =====================================
@@ -3980,7 +3980,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the class constant is private, otherwise **`FALSE`**
+**`true`** if the class constant is private, otherwise **`false`**
 
 ### See Also
 
@@ -4006,7 +4006,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the class constant is protected, otherwise **`FALSE`**
+**`true`** if the class constant is protected, otherwise **`false`**
 
 ### See Also
 
@@ -4032,7 +4032,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the class constant is public, otherwise **`FALSE`**
+**`true`** if the class constant is public, otherwise **`false`**
 
 ### See Also
 
@@ -4381,7 +4381,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">export</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getClasses</span> ( <span
@@ -4531,7 +4531,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">ReflectionExtension::export</span> ( <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$return`<span class="initializer"> = **`false`**</span></span> \] )
 
 Exports a reflected extension. The output format of this function is the
 same as the CLI argument *--re \[extension\]*.
@@ -4542,13 +4542,13 @@ same as the CLI argument *--re \[extension\]*.
 The reflection to export.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### See Also
@@ -5083,9 +5083,9 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** for extensions loaded by
+Returns **`true`** for extensions loaded by
 <a href="/ini/core.html#ini.extension" class="link"><em>extension</em></a>,
-**`FALSE`** otherwise.
+**`false`** otherwise.
 
 ### See Also
 
@@ -5113,8 +5113,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** for extensions loaded by <span
-class="function">dl</span>, **`FALSE`** otherwise.
+Returns **`true`** for extensions loaded by <span
+class="function">dl</span>, **`false`** otherwise.
 
 ### See Also
 
@@ -5134,7 +5134,7 @@ To string
 Exports a reflected extension and returns it as a <span
 class="type">string</span>. This is the same as the <span
 class="methodname">ReflectionExtension::export</span> with the `return`
-set to **`TRUE`**.
+set to **`true`**.
 
 ### Parameters
 
@@ -5502,13 +5502,13 @@ Exports a Reflected function.
 The reflection to export.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### See Also
@@ -5538,7 +5538,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns <span class="classname">Closure</span>. Returns **`NULL`** in
+Returns <span class="classname">Closure</span>. Returns **`null`** in
 case of an error.
 
 ReflectionFunction::invoke
@@ -5716,7 +5716,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's disable, otherwise **`FALSE`**
+**`true`** if it's disable, otherwise **`false`**
 
 ### See Also
 
@@ -5974,7 +5974,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the class on success or **`NULL`** on failure.
+Returns the class on success or **`null`** on failure.
 
 ReflectionFunctionAbstract::getClosureThis
 ==========================================
@@ -5999,7 +5999,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns `$this` pointer. Returns **`NULL`** in case of an error.
+Returns `$this` pointer. Returns **`null`** in case of an error.
 
 ReflectionFunctionAbstract::getDocComment
 =========================================
@@ -6026,7 +6026,7 @@ This function has no parameters.
 
 ### Return Values
 
-The doc comment if it exists, otherwise **`FALSE`**
+The doc comment if it exists, otherwise **`false`**
 
 ### See Also
 
@@ -6057,7 +6057,7 @@ This function has no parameters.
 
 ### Return Values
 
-The ending line number of the user defined function, or **`FALSE`** if
+The ending line number of the user defined function, or **`false`** if
 unknown.
 
 ### See Also
@@ -6347,7 +6347,7 @@ This function has no parameters.
 ### Return Values
 
 Returns a <span class="classname">ReflectionType</span> object if a
-return type is specified, **`NULL`** otherwise.
+return type is specified, **`null`** otherwise.
 
 ### Examples
 
@@ -6509,8 +6509,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the function is a specified return type, otherwise
-**`FALSE`**.
+Returns **`true`** if the function is a specified return type, otherwise
+**`false`**.
 
 ### Examples
 
@@ -6580,7 +6580,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's in a namespace, otherwise **`FALSE`**
+**`true`** if it's in a namespace, otherwise **`false`**
 
 ### See Also
 
@@ -6608,8 +6608,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the function is a <span
-class="classname">Closure</span>, otherwise **`FALSE`**.
+Returns **`true`** if the function is a <span
+class="classname">Closure</span>, otherwise **`false`**.
 
 ### Examples
 
@@ -6660,7 +6660,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's deprecated, otherwise **`FALSE`**
+**`true`** if it's deprecated, otherwise **`false`**
 
 ### Examples
 
@@ -6706,8 +6706,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the function is generator, **`FALSE`** if it is
-not or **`NULL`** on failure.
+Returns **`true`** if the function is generator, **`false`** if it is
+not or **`null`** on failure.
 
 ReflectionFunctionAbstract::isInternal
 ======================================
@@ -6733,7 +6733,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's internal, otherwise **`FALSE`**
+**`true`** if it's internal, otherwise **`false`**
 
 ### See Also
 
@@ -6765,7 +6765,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's user-defined, otherwise false;
+**`true`** if it's user-defined, otherwise false;
 
 ### See Also
 
@@ -6792,7 +6792,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the function is variadic, otherwise **`FALSE`**.
+Returns **`true`** if the function is variadic, otherwise **`false`**.
 
 ReflectionFunctionAbstract::returnsReference
 ============================================
@@ -6819,7 +6819,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it returns a reference, otherwise **`FALSE`**
+**`true`** if it returns a reference, otherwise **`false`**
 
 ### See Also
 
@@ -6918,7 +6918,7 @@ class="methodname">export</span> ( <span class="methodparam"><span
 class="type">string</span> `$class`</span> , <span
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">Closure</span>
 <span class="methodname">getClosure</span> ( <span
@@ -7295,7 +7295,7 @@ class="methodparam"><span class="type">string</span> `$class`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Exports a ReflectionMethod.
 
@@ -7313,13 +7313,13 @@ The class name.
 The name of the method.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### See Also
@@ -7354,7 +7354,7 @@ Forbidden for static methods, required for other methods.
 
 ### Return Values
 
-Returns <span class="classname">Closure</span>. Returns **`NULL`** in
+Returns <span class="classname">Closure</span>. Returns **`null`** in
 case of an error.
 
 ReflectionMethod::getDeclaringClass
@@ -7717,7 +7717,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is abstract, otherwise **`FALSE`**
+**`true`** if the method is abstract, otherwise **`false`**
 
 ### See Also
 
@@ -7742,7 +7742,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is a constructor, otherwise **`FALSE`**
+**`true`** if the method is a constructor, otherwise **`false`**
 
 ### See Also
 
@@ -7769,7 +7769,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is a destructor, otherwise **`FALSE`**
+**`true`** if the method is a destructor, otherwise **`false`**
 
 ### See Also
 
@@ -7794,7 +7794,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is final, otherwise **`FALSE`**
+**`true`** if the method is final, otherwise **`false`**
 
 ### See Also
 
@@ -7824,7 +7824,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is private, otherwise **`FALSE`**
+**`true`** if the method is private, otherwise **`false`**
 
 ### See Also
 
@@ -7849,7 +7849,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is protected, otherwise **`FALSE`**
+**`true`** if the method is protected, otherwise **`false`**
 
 ### See Also
 
@@ -7874,7 +7874,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is public, otherwise **`FALSE`**
+**`true`** if the method is public, otherwise **`false`**
 
 ### See Also
 
@@ -7899,7 +7899,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the method is static, otherwise **`FALSE`**
+**`true`** if the method is static, otherwise **`false`**
 
 ### See Also
 
@@ -7923,7 +7923,7 @@ private methods to be invoked.
 ### Parameters
 
 `accessible`  
-**`TRUE`** to allow accessibility, or **`FALSE`**.
+**`true`** to allow accessibility, or **`false`**.
 
 ### Return Values
 
@@ -8105,7 +8105,7 @@ class="modifier">static</span> <span class="type">string</span> <span
 class="methodname">ReflectionClass::export</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$argument`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$return`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$return`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">ReflectionClass::getConstant</span> ( <span
@@ -8391,13 +8391,13 @@ available.
 The reflection to export.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
-If the `return` parameter is set to **`TRUE`**, then the export is
-returned as a <span class="type">string</span>, otherwise **`NULL`** is
+If the `return` parameter is set to **`true`**, then the export is
+returned as a <span class="type">string</span>, otherwise **`null`** is
 returned.
 
 ### See Also
@@ -8551,7 +8551,7 @@ Checks if null is allowed
 <span class="methodname">ReflectionParameter::allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-Checks whether the parameter allows **`NULL`**.
+Checks whether the parameter allows **`null`**.
 
 **Warning**
 
@@ -8564,7 +8564,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if **`NULL`** is allowed, otherwise **`FALSE`**
+**`true`** if **`null`** is allowed, otherwise **`false`**
 
 ### See Also
 
@@ -8592,8 +8592,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the parameter can be passed by value, **`FALSE`**
-otherwise. Returns **`NULL`** in case of an error.
+Returns **`true`** if the parameter can be passed by value, **`false`**
+otherwise. Returns **`null`** in case of an error.
 
 ReflectionParameter::\_\_clone
 ==============================
@@ -8764,8 +8764,8 @@ The function name.
 The parameter name.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
@@ -8854,7 +8854,7 @@ This function has no parameters.
 
 ### Return Values
 
-A <span class="classname">ReflectionClass</span> object or **`NULL`** if
+A <span class="classname">ReflectionClass</span> object or **`null`** if
 called on function.
 
 ### Examples
@@ -9015,7 +9015,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns string on success or **`NULL`** on failure.
+Returns string on success or **`null`** on failure.
 
 ### Changelog
 
@@ -9132,7 +9132,7 @@ This function has no parameters.
 ### Return Values
 
 Returns a <span class="classname">ReflectionType</span> object if a
-parameter type is specified, **`NULL`** otherwise.
+parameter type is specified, **`null`** otherwise.
 
 ### Examples
 
@@ -9215,7 +9215,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a type is specified, **`FALSE`** otherwise.
+**`true`** if a type is specified, **`false`** otherwise.
 
 ### Examples
 
@@ -9261,8 +9261,8 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if an <span class="type">array</span> is expected,
-**`FALSE`** otherwise.
+**`true`** if an <span class="type">array</span> is expected,
+**`false`** otherwise.
 
 ### See Also
 
@@ -9290,8 +9290,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the parameter is <span
-class="type">callable</span>, **`FALSE`** if it is not or **`NULL`** on
+Returns **`true`** if the parameter is <span
+class="type">callable</span>, **`false`** if it is not or **`null`** on
 failure.
 
 ReflectionParameter::isDefaultValueAvailable
@@ -9314,7 +9314,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a default value is available, otherwise **`FALSE`**
+**`true`** if a default value is available, otherwise **`false`**
 
 ### See Also
 
@@ -9343,7 +9343,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the default value is constant, and **`FALSE`**
+Returns **`true`** if the default value is constant, and **`false`**
 otherwise.
 
 ### See Also
@@ -9372,7 +9372,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the parameter is optional, otherwise **`FALSE`**
+**`true`** if the parameter is optional, otherwise **`false`**
 
 ### See Also
 
@@ -9402,8 +9402,8 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the parameter is passed in by reference, otherwise
-**`FALSE`**
+**`true`** if the parameter is passed in by reference, otherwise
+**`false`**
 
 ### See Also
 
@@ -9429,7 +9429,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the parameter is variadic, otherwise **`FALSE`**.
+Returns **`true`** if the parameter is variadic, otherwise **`false`**.
 
 ReflectionParameter::\_\_toString
 =================================
@@ -9825,8 +9825,8 @@ The reflection to export.
 The property name.
 
 `return`  
-Setting to **`TRUE`** will return the export, as opposed to emitting it.
-Setting to **`FALSE`** (the default) will do the opposite.
+Setting to **`true`** will return the export, as opposed to emitting it.
+Setting to **`false`** (the default) will do the opposite.
 
 ### Return Values
 
@@ -9885,8 +9885,8 @@ This function has no parameters.
 ### Return Values
 
 The default value if the property has any default value (including
-**`NULL`**). If there is no default value, then **`NULL`** is returned.
-It is not possible to differentiate between a **`NULL`** default value
+**`null`**). If there is no default value, then **`null`** is returned.
+It is not possible to differentiate between a **`null`** default value
 and an unitialized typed property. Use <span
 class="methodname">ReflectionClass::hasDefaultValue</span> to detect the
 difference.
@@ -10082,7 +10082,7 @@ This function has no parameters.
 ### Return Values
 
 Returns a <span class="classname">ReflectionType</span> if the property
-has a type, and **`NULL`** otherwise.
+has a type, and **`null`** otherwise.
 
 ### Examples
 
@@ -10195,7 +10195,7 @@ Checks if property has a default value declared
 <span class="methodparam">void</span> )
 
 Checks whether the property was declared with a default value, including
-an implicit **`NULL`** default value. Only returns **`FALSE`** for typed
+an implicit **`null`** default value. Only returns **`false`** for typed
 properties without default value (or dynamic properties).
 
 ### Parameters
@@ -10204,9 +10204,9 @@ This function has no parameters.
 
 ### Return Values
 
-If the property has any default value (including **`NULL`**) **`TRUE`**
+If the property has any default value (including **`null`**) **`true`**
 is returned; if the property is typed without a default value declared
-or is a dynamic property, **`FALSE`** is returned.
+or is a dynamic property, **`false`** is returned.
 
 ### Examples
 
@@ -10257,7 +10257,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a type is specified, **`FALSE`** otherwise.
+**`true`** if a type is specified, **`false`** otherwise.
 
 ### Examples
 
@@ -10305,7 +10305,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the property was declared at compile-time, or **`FALSE`**
+**`true`** if the property was declared at compile-time, or **`false`**
 if it was created at run-time.
 
 ### Examples
@@ -10360,9 +10360,9 @@ property from.
 
 ### Return Values
 
-Returns **`FALSE`** for typed properties prior to initialization, and
+Returns **`false`** for typed properties prior to initialization, and
 for properties that have been explicitly <span
-class="function">unset</span>. For all other properties **`TRUE`** will
+class="function">unset</span>. For all other properties **`true`** will
 be returned.
 
 ### Errors/Exceptions
@@ -10420,7 +10420,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the property is private, **`FALSE`** otherwise.
+**`true`** if the property is private, **`false`** otherwise.
 
 ### See Also
 
@@ -10447,7 +10447,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the property is protected, **`FALSE`** otherwise.
+**`true`** if the property is protected, **`false`** otherwise.
 
 ### See Also
 
@@ -10474,7 +10474,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the property is public, **`FALSE`** otherwise.
+**`true`** if the property is public, **`false`** otherwise.
 
 ### See Also
 
@@ -10501,7 +10501,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the property is static, **`FALSE`** otherwise.
+**`true`** if the property is static, **`false`** otherwise.
 
 ### See Also
 
@@ -10527,7 +10527,7 @@ and private properties to be accessed.
 ### Parameters
 
 `accessible`  
-**`TRUE`** to allow accessibility, or **`FALSE`**.
+**`true`** to allow accessibility, or **`false`**.
 
 ### Return Values
 
@@ -10690,7 +10690,7 @@ Checks if null is allowed
 <span class="methodname">ReflectionType::allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-Checks whether the parameter allows **`NULL`**.
+Checks whether the parameter allows **`null`**.
 
 ### Parameters
 
@@ -10698,7 +10698,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if **`NULL`** is allowed, otherwise **`FALSE`**
+**`true`** if **`null`** is allowed, otherwise **`false`**
 
 ### Examples
 
@@ -10746,7 +10746,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if it's a built-in type, otherwise **`FALSE`**
+**`true`** if it's a built-in type, otherwise **`false`**
 
 ### Examples
 
@@ -11208,7 +11208,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the *$this* value, or **`NULL`** if the generator was not
+Returns the *$this* value, or **`null`** if the generator was not
 created in a class context.
 
 ### Examples
@@ -11395,7 +11395,7 @@ class="type">string</span>.
 ### Return Values
 
 Returns a <span class="classname">ReflectionReference </span> instance
-if *$array\[$key\]* is a reference, or **`NULL`** otherwise.
+if *$array\[$key\]* is a reference, or **`null`** otherwise.
 
 ### Errors/Exceptions
 

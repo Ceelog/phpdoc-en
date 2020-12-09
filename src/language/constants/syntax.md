@@ -24,7 +24,7 @@ Use <span class="function">get\_defined\_constants</span> to get a list
 of all defined constants.
 
 > **Note**: <span class="simpara"> Constants and (global) variables are
-> in a different namespace. This implies that for example **`TRUE`** and
+> in a different namespace. This implies that for example **`true`** and
 > `$TRUE` are generally different. </span>
 
 If an undefined constant is used an <span class="classname">Error</span>

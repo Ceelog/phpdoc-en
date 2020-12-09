@@ -50,8 +50,8 @@ The behaviour of these functions is affected by settings in `php.ini`.
 
 | Name                                                                 | Default    | Changeable    | Changelog |
 |----------------------------------------------------------------------|------------|---------------|-----------|
-| <a href="/mcrypt/setup.html#" class="link">mcrypt.algorithms_dir</a> | **`NULL`** | PHP\_INI\_ALL |           |
-| <a href="/mcrypt/setup.html#" class="link">mcrypt.modes_dir</a>      | **`NULL`** | PHP\_INI\_ALL |           |
+| <a href="/mcrypt/setup.html#" class="link">mcrypt.algorithms_dir</a> | **`null`** | PHP\_INI\_ALL |           |
+| <a href="/mcrypt/setup.html#" class="link">mcrypt.modes_dir</a>      | **`null`** | PHP\_INI\_ALL |           |
 
 For further details and definitions of the PHP\_INI\_\* modes, see the
 <a href="/configuration/changes/modes.html" class="xref">Where a configuration setting may be set</a>.

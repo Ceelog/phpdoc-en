@@ -35,7 +35,7 @@ naming the variables or another array, etc.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 wddx\_deserialize
 =================
@@ -130,7 +130,7 @@ An optional comment string.
 
 ### Return Values
 
-Returns a packet ID for use in later functions, or **`FALSE`** on error.
+Returns a packet ID for use in later functions, or **`false`** on error.
 
 wddx\_serialize\_value
 ======================
@@ -161,7 +161,7 @@ An optional comment string that appears in the packet header.
 
 ### Return Values
 
-Returns the WDDX packet, or **`FALSE`** on error.
+Returns the WDDX packet, or **`false`** on error.
 
 wddx\_serialize\_vars
 =====================
@@ -195,7 +195,7 @@ naming the variables or another array, etc.
 
 ### Return Values
 
-Returns the WDDX packet, or **`FALSE`** on error.
+Returns the WDDX packet, or **`false`** on error.
 
 ### Examples
 

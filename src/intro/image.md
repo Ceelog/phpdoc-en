@@ -36,14 +36,14 @@ GD and notes to their availability including read/write support.
 
 | Format | Read support | Write support | Notes                                  |
 |--------|--------------|---------------|----------------------------------------|
-| JPEG   | **`TRUE`**   | **`TRUE`**    |                                        |
-| PNG    | **`TRUE`**   | **`TRUE`**    |                                        |
-| GIF    | **`TRUE`**   | **`TRUE`**    |                                        |
-| XBM    | **`TRUE`**   | **`TRUE`**    |                                        |
-| XPM    | **`TRUE`**   | **`FALSE`**   |                                        |
-| WBMP   | **`TRUE`**   | **`TRUE`**    |                                        |
-| WebP   | **`TRUE`**   | **`TRUE`**    |                                        |
-| BMP    | **`TRUE`**   | **`TRUE`**    | Available as of GD 2.1.0 and PHP 7.2.0 |
+| JPEG   | **`true`**   | **`true`**    |                                        |
+| PNG    | **`true`**   | **`true`**    |                                        |
+| GIF    | **`true`**   | **`true`**    |                                        |
+| XBM    | **`true`**   | **`true`**    |                                        |
+| XPM    | **`true`**   | **`false`**   |                                        |
+| WBMP   | **`true`**   | **`true`**    |                                        |
+| WebP   | **`true`**   | **`true`**    |                                        |
+| BMP    | **`true`**   | **`true`**    | Available as of GD 2.1.0 and PHP 7.2.0 |
 
 Despite most formats being available for both reading and writing in the
 above table, doesn't mean that PHP was compiled with support for them.

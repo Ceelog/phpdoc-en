@@ -642,9 +642,9 @@ BLOB/CLOB).
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Changelog
 
@@ -769,7 +769,7 @@ Request identifier.
 
 ### Return Values
 
-Return **`TRUE`** on success.
+Return **`true`** on success.
 
 ### Examples
 
@@ -823,7 +823,7 @@ Request identifier.
 
 ### Return Values
 
-Return **`TRUE`** on success.
+Return **`true`** on success.
 
 ### Examples
 
@@ -888,7 +888,7 @@ Attribute name that you want to read from the instance.
 Array (0-based numerical array) containing the elements you requested,
 when process is successful;
 
-**`FALSE`** (to distinguish the error from the situation of attribute
+**`false`** (to distinguish the error from the situation of attribute
 having empty collection or NULL, in case of error, a warning message is
 shown; in such case you can check the error by using <span
 class="function">cubrid\_error\_code</span>), when process is
@@ -968,7 +968,7 @@ Name of the attribute that you want to work with.
 
 Number of elements, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Changelog
 
@@ -1041,7 +1041,7 @@ Request identifier.
 Array of string values containing the column names, when process is
 successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1108,7 +1108,7 @@ Request identifier.
 Array of string values containing the column types, when process is
 successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1181,9 +1181,9 @@ Connection identifier.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1275,7 +1275,7 @@ class="methodparam"><span class="type">string</span> `$conn_url`</span>
 `$userid`</span> \[, <span class="methodparam"><span
 class="type">string</span> `$passwd`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$new_link`<span
-class="initializer"> = **`FALSE`**</span></span> \]\]\] )
+class="initializer"> = **`false`**</span></span> \]\]\] )
 
 The <span class="function">cubrid\_connect\_with\_url</span> function is
 used to establish the environment for connecting to your server by using
@@ -1381,7 +1381,7 @@ with the same parameters.
 
 Connection identifier, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1457,7 +1457,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> ,
 class="type">string</span> `$userid`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$passwd`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$new_link`<span class="initializer"> = **`FALSE`**</span></span> \]\]\]
+`$new_link`<span class="initializer"> = **`false`**</span></span> \]\]\]
 )
 
 The <span class="function">cubrid\_connect</span> function is used to
@@ -1498,7 +1498,7 @@ with the same parameters.
 
 Connection identifier, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1589,7 +1589,7 @@ Request identifier.
 
 Oid of current cursor location, when process is successful
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1646,9 +1646,9 @@ Connection identifier.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -1711,9 +1711,9 @@ Oid of the instance that you want to delete.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -2063,10 +2063,10 @@ CUBRID\_EXEC\_QUERY\_ALL.
 ### Return Values
 
 Request identifier, when process is successful and first param is
-conn\_identifier; **`TRUE`**, when process is successful and first
+conn\_identifier; **`true`**, when process is successful and first
 argument is request\_identifier.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Changelog
 
@@ -2150,7 +2150,7 @@ can use CUBRID\_LOB.
 
 Result array or object, when process is successful.
 
-**`FALSE`**, when there are no more rows; NULL, when process is
+**`false`**, when there are no more rows; NULL, when process is
 unsuccessful.
 
 The result can be received either as an array or as an object, and you
@@ -2237,9 +2237,9 @@ This is the request identifier.
 
 ### Return Values
 
-**`TRUE`** on success.
+**`true`** on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -2303,11 +2303,11 @@ Connection identifier.
 
 ### Return Values
 
-**`TRUE`**, when auto-commit is on.
+**`true`**, when auto-commit is on.
 
-**`FALSE`**, when auto-commit is off.
+**`false`**, when auto-commit is off.
 
-**`NULL`** on error.
+**`null`** on error.
 
 ### See Also
 
@@ -2339,7 +2339,7 @@ The CUBRID connection.
 
 A string that represents the CUBRID connection charset; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -2397,7 +2397,7 @@ OID of the instance that you want to check the existence.
 
 Class name when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -2447,7 +2447,7 @@ version.
 
 A string that represents the client library version; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -2555,7 +2555,7 @@ assumed.
 
 An associative array with CUBRID database parameters; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -2711,7 +2711,7 @@ The CUBRID connection.
 
 A string that represents the CUBRID server version; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -2807,7 +2807,7 @@ when `attr` is set with array data type (0-based numerical array), then
 the result is returned in associative array. When `attr` is omitted,
 then all attributes are received in array form.
 
-**`FALSE`** when process is unsuccessful or result is NULL (If error
+**`false`** when process is unsuccessful or result is NULL (If error
 occurs to distinguish empty string from NULL, then it prints the warning
 message. You can check the error by using <span
 class="function">cubrid\_error\_code</span>)
@@ -2912,7 +2912,7 @@ the previous query, on success.
 
 0, if the previous query does not generate new rows.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -3041,9 +3041,9 @@ LOB identifier array return from cubrid\_lob\_get.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -3106,9 +3106,9 @@ Path name of the file.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -3171,7 +3171,7 @@ SQL statement to be executed.
 
 Return an array of LOB resources, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -3228,9 +3228,9 @@ LOB identifier.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -3283,7 +3283,7 @@ LOB identifier.
 
 A string representing LOB data size, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Changelog
 
@@ -3355,9 +3355,9 @@ given, the default value is "BLOB".
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -3420,9 +3420,9 @@ class="function">cubrid\_lob2\_new</span> or get from the result set.
 
 ### Return Values
 
-**`TRUE`**, on success.
+**`true`**, on success.
 
-**`FALSE`**, on failure.
+**`false`**, on failure.
 
 ### See Also
 
@@ -3460,7 +3460,7 @@ the file.
 
 ### Return Values
 
-**`TRUE`** if the process is successful and **`FALSE`** for failure.
+**`true`** if the process is successful and **`false`** for failure.
 
 ### Examples
 
@@ -3531,7 +3531,7 @@ of the file.
 
 ### Return Values
 
-**`TRUE`** if the process is successful and **`FALSE`** for failure.
+**`true`** if the process is successful and **`false`** for failure.
 
 ### Examples
 
@@ -3601,7 +3601,7 @@ value is "BLOB".
 
 Lob identifier when it is successful.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -3636,7 +3636,7 @@ Length from buffer you want to read from the lob data.
 
 Returns the contents as a string.
 
-**`FALSE`** when there is no more data.
+**`false`** when there is no more data.
 
 NULL on failure.
 
@@ -3777,7 +3777,7 @@ CUBRID\_CURSOR\_LAST: move backward at the end of LOB object.
 
 ### Return Values
 
-**`TRUE`** if the process is successful and **`FALSE`** for failure.
+**`true`** if the process is successful and **`false`** for failure.
 
 ### Examples
 
@@ -3877,7 +3877,7 @@ CUBRID\_CURSOR\_LAST: move backward at the end of LOB object.
 
 ### Return Values
 
-**`TRUE`** if the process is successful and **`FALSE`** for failure.
+**`true`** if the process is successful and **`false`** for failure.
 
 ### Examples
 
@@ -3948,7 +3948,7 @@ class="function">cubrid\_lob2\_new</span> or get from the result set.
 It will return the size of the LOB object as a string when it processes
 successfully.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -3986,7 +3986,7 @@ class="function">cubrid\_lob2\_new</span> or get from the result set.
 It will return the size of the LOB object when it processes
 successfully.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -4026,7 +4026,7 @@ class="function">cubrid\_lob2\_new</span> or get from the result set.
 It will return the cursor position on the LOB object as a string when it
 processes successfully.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -4064,7 +4064,7 @@ class="function">cubrid\_lob2\_new</span> or get from the result set.
 It will return the cursor position on the LOB object when it processes
 successfully.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### See Also
 
@@ -4104,7 +4104,7 @@ Data that need to be written to the lob object.
 
 ### Return Values
 
-**`TRUE`** if the process is successful and **`FALSE`** for failure.
+**`true`** if the process is successful and **`false`** for failure.
 
 ### Examples
 
@@ -4204,9 +4204,9 @@ OID of the instance that you want to put read lock on.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -4299,9 +4299,9 @@ OID of the instance that you want to put write lock on.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -4404,9 +4404,9 @@ CUBRID\_CURSOR\_CURRENT, CUBRID\_CURSOR\_LAST.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsucceful.
+**`false`**, when process is unsucceful.
 
 ### Examples
 
@@ -4486,9 +4486,9 @@ class="function">cubrid\_execute</span>
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -4617,7 +4617,7 @@ Result.
 
 Number of columns, when process is successful.
 
-**`FALSE`**, if SQL statement is not SELECT.
+**`false`**, if SQL statement is not SELECT.
 
 ### Examples
 
@@ -4686,7 +4686,7 @@ Number of rows, when process is successful.
 
 -1, if SQL statement is not SELECT.
 
-**`FALSE`** when process is unsuccessful.
+**`false`** when process is unsuccessful.
 
 ### Examples
 
@@ -4836,7 +4836,7 @@ User password.
 
 Connection identifier, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -4952,7 +4952,7 @@ User password.
 
 Connection identifier, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5059,7 +5059,7 @@ OID return option CUBRID\_INCLUDE\_OID.
 
 Request identifier, if process is successful;
 
-**`FALSE`**, if process is unsuccessful.
+**`false`**, if process is unsuccessful.
 
 ### Examples
 
@@ -5151,9 +5151,9 @@ New value that you want to assign to the attribute.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5241,9 +5241,9 @@ Connection identifier.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5426,7 +5426,7 @@ Attribute you want to know the schema of.
 
 Array containing the schema information, when process is successful;
 
-**`FALSE`**, when process is unsuccessful
+**`false`**, when process is unsuccessful
 
 ### Changelog
 
@@ -5613,9 +5613,9 @@ Index of the element that you want to delete (1-based).
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5713,9 +5713,9 @@ Content of the element that you want to insert.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5818,9 +5818,9 @@ New content that you want to use for the update.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -5916,9 +5916,9 @@ Content of the element you want to insert.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -6009,9 +6009,9 @@ Auto-commit mode. The following constants can be used:
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### See Also
 
@@ -6060,9 +6060,9 @@ Isolation level value (1-6) or lock timeout (in seconds) value.
 
 ### Return Values
 
-**`TRUE`** on success.
+**`true`** on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -6150,9 +6150,9 @@ Content of the element you want to delete.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -6231,9 +6231,9 @@ Timeout time, unit of msec.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### See Also
 
@@ -6503,7 +6503,7 @@ successful.
 
 -1, when SQL statement is not INSERT, DELETE or UPDATE.
 
-**`FALSE`**, when the request identifier is not specified, and there is
+**`false`**, when the request identifier is not specified, and there is
 no last request.
 
 ### Examples
@@ -6570,7 +6570,7 @@ assumed.
 
 A string that represents the CUBRID connection charset; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -6626,9 +6626,9 @@ class="function">cubrid\_connect</span> is assumed.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -6686,7 +6686,7 @@ This is the desired row number of the new result pointer.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -6763,8 +6763,8 @@ The index into the result set.
 
 ### Return Values
 
-Returns the database name on success, and **`FALSE`** on failure. If
-**`FALSE`** is returned, use <span class="function">cubrid\_error</span>
+Returns the database name on success, and **`false`** on failure. If
+**`false`** is returned, use <span class="function">cubrid\_error</span>
 to determine the nature of the error.
 
 ### Examples
@@ -6941,7 +6941,7 @@ CUBRID\_LOB.
 Returns an array of strings that corresponds to the fetched row, when
 process is successful.
 
-**`FALSE`**, when there are no more rows; NULL, when process is
+**`false`**, when there are no more rows; NULL, when process is
 unsuccessful.
 
 The type of returned array depends on how type is defined. By using
@@ -7029,7 +7029,7 @@ need to operate the lob object.
 
 Associative array, when process is successful.
 
-**`FALSE`**, when there are no more rows; NULL, when process is
+**`false`**, when there are no more rows; NULL, when process is
 unsuccessful.
 
 ### Examples
@@ -7148,7 +7148,7 @@ The `field_offset` starts at 0.
 Object with certain properties of the specific column, when process is
 successful.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7246,7 +7246,7 @@ class="function">cubrid\_execute</span>
 
 An numeric array, when process is successful.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7334,7 +7334,7 @@ need to operate the lob object.
 
 An object, when process is successful.
 
-**`FALSE`**, when there are no more rows; NULL, when process is
+**`false`**, when there are no more rows; NULL, when process is
 unsuccessful.
 
 ### Examples
@@ -7449,7 +7449,7 @@ need to operate the lob object.
 
 A numerical array, when process is successful.
 
-**`FALSE`**, when there are no more rows; NULL, when process is
+**`false`**, when there are no more rows; NULL, when process is
 unsuccessful.
 
 ### Examples
@@ -7529,7 +7529,7 @@ issued.
 
 A string with flags, when process is successful.
 
-**`FALSE`** when invalid field\_offset value.
+**`false`** when invalid field\_offset value.
 
 -1 if SQL sentence is not SELECT.
 
@@ -7596,7 +7596,7 @@ issued.
 
 Maximum length, when process is successful.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7662,7 +7662,7 @@ issued.
 
 Name of specified field index, on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7727,9 +7727,9 @@ issued.
 
 ### Return Values
 
-**`TRUE`** on success.
+**`true`** on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7818,7 +7818,7 @@ issued.
 
 Name of the table of the specified field, on success.
 
-**`FALSE`** when invalid field\_offset value.
+**`false`** when invalid field\_offset value.
 
 -1 if SQL sentence is not SELECT.
 
@@ -7882,7 +7882,7 @@ issued.
 
 Type of the column, on success.
 
-**`FALSE`** when invalid field\_offset value.
+**`false`** when invalid field\_offset value.
 
 -1 if SQL sentence is not SELECT.
 
@@ -7938,7 +7938,7 @@ The CUBRID connection.
 
 An numeric array with all existing Cubrid databases; on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -7991,7 +7991,7 @@ Number of columns, on success.
 
 -1 if SQL sentence is not SELECT.
 
-**`FALSE`** when process is unsuccessful.
+**`false`** when process is unsuccessful.
 
 ### Examples
 
@@ -8041,8 +8041,8 @@ class="function">cubrid\_connect</span> is assumed.
 
 ### Return Values
 
-Returns **`TRUE`** if the connection to the server CUBRID server is
-working, otherwise **`FALSE`**.
+Returns **`true`** if the connection to the server CUBRID server is
+working, otherwise **`false`**.
 
 ### Examples
 
@@ -8109,11 +8109,11 @@ class="function">cubrid\_connect</span> is assumed.
 
 For SELECT, SHOW, DESCRIBE, EXPLAIN and other statements returning
 resultset, <span class="function">cubrid\_query</span> returns a <span
-class="type">resource</span> on success, or **`FALSE`** on error.
+class="type">resource</span> on success, or **`false`** on error.
 
 For other type of SQL statements, INSERT, UPDATE, DELETE, DROP, etc,
-<span class="function">cubrid\_query</span> returns **`TRUE`** on
-success or **`FALSE`** on error.
+<span class="function">cubrid\_query</span> returns **`true`** on
+success or **`false`** on error.
 
 The returned result resource should be passed to <span
 class="function">cubrid\_fetch\_array</span>, and other functions for
@@ -8125,7 +8125,7 @@ class="function">cubrid\_affected\_rows</span> to find out how many rows
 were affected by a DELETE, INSERT, REPLACE, or UPDATE statement.
 
 <span class="function">cubrid\_query</span> will also fail and return
-**`FALSE`** if the user does not have permission to access the table(s)
+**`false`** if the user does not have permission to access the table(s)
 referenced by the query.
 
 ### Examples
@@ -8133,7 +8133,7 @@ referenced by the query.
 **Example \#1 Invalid Query**
 
 The following query is syntactically invalid, so <span
-class="function">cubrid\_query</span> fails and returns **`FALSE`**.
+class="function">cubrid\_query</span> fails and returns **`false`**.
 
 ``` php
 <?php
@@ -8246,7 +8246,7 @@ class="function">cubrid\_connect</span> is assumed.
 
 Escaped string version of the given string, on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -8321,7 +8321,7 @@ undefined, the first field is retrieved.
 
 Value of a specific field, on success (NULL if value if null).
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -8386,9 +8386,9 @@ For SELECT, SHOW, DESCRIBE or EXPLAIN statements returns a request
 identifier resource on success.
 
 For other type of SQL statements, UPDATE, DELETE, DROP, etc, returns
-**`TRUE`** on success.
+**`true`** on success.
 
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Notes
 
@@ -8513,9 +8513,9 @@ Name of the file where you want to save the data in.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -8587,7 +8587,7 @@ The file name that you want to save in the newly created glo.
 
 Oid of the instance created, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -8656,9 +8656,9 @@ The name of the file that you want to save.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 
@@ -8722,9 +8722,9 @@ Oid of the glo instance that you want to read data from.
 
 ### Return Values
 
-**`TRUE`**, when process is successful.
+**`true`**, when process is successful.
 
-**`FALSE`**, when process is unsuccessful.
+**`false`**, when process is unsuccessful.
 
 ### Examples
 

@@ -30,7 +30,7 @@ No value is returned.
 
 > **Note**:
 >
-> The `offset` parameter will be set to **`NULL`** if another value is
+> The `offset` parameter will be set to **`null`** if another value is
 > not available, like in the following example.
 >
 > ``` php

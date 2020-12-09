@@ -23,7 +23,7 @@ whole list of options.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 rrd\_error
 ==========
@@ -99,7 +99,7 @@ The index number of the RRA that is to be examined. Default value is 0.
 
 ### Return Values
 
-Integer number of unix timestamp, **`FALSE`** if some error occurs.
+Integer number of unix timestamp, **`false`** if some error occurs.
 
 rrd\_graph
 ==========
@@ -128,7 +128,7 @@ allowed.
 
 ### Return Values
 
-Array with information about generated image is returned, **`FALSE`**
+Array with information about generated image is returned, **`false`**
 when error occurs.
 
 rrd\_info
@@ -151,7 +151,7 @@ RRD database file name.
 
 ### Return Values
 
-Array with information about requsted RRD file, **`FALSE`** when error
+Array with information about requsted RRD file, **`false`** when error
 occurs.
 
 rrd\_last
@@ -199,7 +199,7 @@ RRD database file name.
 
 ### Return Values
 
-Array of information about last update, **`FALSE`** when error occurs.
+Array of information about last update, **`false`** when error occurs.
 
 rrd\_restore
 ============
@@ -230,7 +230,7 @@ Array of options for restoring. See man page for rrd restore.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** otherwise.
+Returns **`true`** on success, **`false`** otherwise.
 
 rrd\_tune
 =========
@@ -258,7 +258,7 @@ tune man page for details.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** otherwise.
+Returns **`true`** on success, **`false`** otherwise.
 
 rrd\_update
 ===========
@@ -286,7 +286,7 @@ page of rrd update for whole list of options.
 
 ### Return Values
 
-Returns **`TRUE`** on success, **`FALSE`** when error occurs.
+Returns **`true`** on success, **`false`** when error occurs.
 
 rrd\_version
 ============
@@ -331,7 +331,7 @@ Array of options for the export, see rrd xport man page.
 
 ### Return Values
 
-Array with information about RRD database file, **`FALSE`** when error
+Array with information about RRD database file, **`false`** when error
 occurs.
 
 rrdc\_disconnect

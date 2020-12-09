@@ -45,7 +45,7 @@ The pass phrase.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -94,7 +94,7 @@ The fingerprint key.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -148,7 +148,7 @@ The pass phrase.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -193,7 +193,7 @@ class="classname">gnupg</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -238,7 +238,7 @@ class="classname">gnupg</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -283,7 +283,7 @@ class="classname">gnupg</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -337,7 +337,7 @@ The text being decrypted.
 ### Return Values
 
 On success, this function returns the decrypted text. On failure, this
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### Examples
 
@@ -399,7 +399,7 @@ The parameter `plaintext` gets filled with the decrypted text.
 
 On success, this function returns information about the signature and
 fills the `plaintext` parameter with the decrypted text. On failure,
-this function returns **`FALSE`**.
+this function returns **`false`**.
 
 ### Examples
 
@@ -459,7 +459,7 @@ The text being encrypted.
 ### Return Values
 
 On success, this function returns the encrypted text. On failure, this
-function returns **`FALSE`**.
+function returns **`false`**.
 
 ### Examples
 
@@ -519,7 +519,7 @@ The text being encrypted.
 ### Return Values
 
 On success, this function returns the encrypted and signed text. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### Examples
 
@@ -577,7 +577,7 @@ The fingerprint key.
 ### Return Values
 
 On success, this function returns the keydata. On failure, this function
-returns **`FALSE`**.
+returns **`false`**.
 
 ### Examples
 
@@ -622,7 +622,7 @@ class="classname">gnupg</span>.
 
 ### Return Values
 
-Returns an errortext, if an error has occurred, otherwise **`FALSE`**.
+Returns an errortext, if an error has occurred, otherwise **`false`**.
 
 ### Examples
 
@@ -720,7 +720,7 @@ The data key that is being imported.
 ### Return Values
 
 On success, this function returns and info-array about the
-importprocess. On failure, this function returns **`FALSE`**.
+importprocess. On failure, this function returns **`false`**.
 
 ### Examples
 
@@ -811,7 +811,7 @@ The pattern being checked against the keys.
 ### Return Values
 
 Returns an array with information about all keys that matches the given
-pattern or **`FALSE`**, if an error has occurred.
+pattern or **`false`**, if an error has occurred.
 
 ### Examples
 
@@ -864,7 +864,7 @@ Pass a non-zero integer-value to this function to enable armored-output
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -978,7 +978,7 @@ produced. The possible values are **`GNUPG_SIG_MODE_NORMAL`**,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1034,7 +1034,7 @@ The plain text being signed.
 ### Return Values
 
 On success, this function returns the signed text or the signature. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### Examples
 
@@ -1092,7 +1092,7 @@ The signed text.
 
 `signature`  
 The signature. To verify a clearsigned text, set signature to
-**`FALSE`**.
+**`false`**.
 
 `plaintext`  
 The plain text. If this optional parameter is passed, it is filled with
@@ -1101,7 +1101,7 @@ the plain text.
 ### Return Values
 
 On success, this function returns information about the signature. On
-failure, this function returns **`FALSE`**.
+failure, this function returns **`false`**.
 
 ### Examples
 

@@ -67,7 +67,7 @@ class="function">property\_exists</span> should be used.
 
 The <span class="function">get\_magic\_quotes\_gpc</span> and <span
 class="function">get\_magic\_quotes\_runtime</span> functions are
-deprecated. They always return **`FALSE`**.
+deprecated. They always return **`false`**.
 
 #### <span class="function">hebrevc</span> function
 

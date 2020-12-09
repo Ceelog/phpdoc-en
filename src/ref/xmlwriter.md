@@ -33,7 +33,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -83,7 +83,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -131,7 +131,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -179,7 +179,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -226,7 +226,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -274,7 +274,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -322,7 +322,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -376,7 +376,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -418,7 +418,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -466,7 +466,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -495,7 +495,7 @@ Object oriented style
 class="type">string</span><span class="type">int</span></span> <span
 class="methodname">XMLWriter::flush</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$empty`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Procedural style
 
@@ -504,7 +504,7 @@ class="type">int</span></span> <span
 class="methodname">xmlwriter\_flush</span> ( <span
 class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$empty`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$empty`<span class="initializer"> = **`true`**</span></span> \] )
 
 Flushes the current buffer.
 
@@ -517,7 +517,7 @@ instance that is being modified. This object is returned from a call to
 class="function">xmlwriter\_open\_memory</span>.
 
 `empty`  
-Whether to empty the buffer or not. Default is **`TRUE`**.
+Whether to empty the buffer or not. Default is **`true`**.
 
 ### Return Values
 
@@ -530,7 +530,7 @@ return the number of written bytes.
 | Version | Description                                                                                                                               |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `writer` expects an <span class="classname">XMLWriter</span> instance now; previously, a <span class="type">resource</span> was expected. |
-| 8.0.0   | This function can no longer return **`FALSE`**.                                                                                           |
+| 8.0.0   | This function can no longer return **`false`**.                                                                                           |
 
 XMLWriter::fullEndElement
 =========================
@@ -568,7 +568,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -610,11 +610,11 @@ string output.
 
 ### Return Values
 
-Object oriented style: Returns **`TRUE`** on success or **`FALSE`** on
+Object oriented style: Returns **`true`** on success or **`false`** on
 failure.
 
 Procedural style: Returns a new <span class="classname">XMLWriter</span>
-for later use with the xmlwriter functions on success, or **`FALSE`** on
+for later use with the xmlwriter functions on success, or **`false`** on
 failure.
 
 ### Changelog
@@ -660,12 +660,12 @@ The URI of the resource for the output.
 
 ### Return Values
 
-Object oriented style: Returns **`TRUE`** on success or **`FALSE`** on
+Object oriented style: Returns **`true`** on success or **`false`** on
 failure.
 
 Procedural style: Returns a new <span class="classname">XMLWriter</span>
 instance for later use with the xmlwriter functions on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -713,7 +713,7 @@ Object oriented style
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">XMLWriter::outputMemory</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$flush`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 Procedural style
 
@@ -721,7 +721,7 @@ Procedural style
 class="methodname">xmlwriter\_output\_memory</span> ( <span
 class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$flush`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$flush`<span class="initializer"> = **`true`**</span></span> \] )
 
 Returns the current buffer.
 
@@ -734,7 +734,7 @@ instance that is being modified. This object is returned from a call to
 class="function">xmlwriter\_open\_memory</span>.
 
 `flush`  
-Whether to flush the output buffer or not. Default is **`TRUE`**.
+Whether to flush the output buffer or not. Default is **`true`**.
 
 ### Return Values
 
@@ -791,7 +791,7 @@ The indentation string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -848,7 +848,7 @@ Whether indentation is enabled.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -948,12 +948,12 @@ The namespace prefix.
 The attribute name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1008,7 +1008,7 @@ The attribute name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1081,7 +1081,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1129,7 +1129,7 @@ class="function">xmlwriter\_open\_memory</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1161,10 +1161,10 @@ class="type">string</span><span class="type">null</span></span>
 `$version`<span class="initializer"> = "1.0"</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+`$standalone`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 Procedural style
@@ -1177,10 +1177,10 @@ class="type">string</span><span class="type">null</span></span>
 `$version`<span class="initializer"> = "1.0"</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$standalone`<span class="initializer"> = **`NULL`**</span></span>
+`$standalone`<span class="initializer"> = **`null`**</span></span>
 \]\]\] )
 
 Starts a document.
@@ -1204,7 +1204,7 @@ The encoding of the document as part of the XML declaration.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1255,7 +1255,7 @@ The attribute list name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1308,7 +1308,7 @@ The qualified name of the document type to create.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1365,7 +1365,7 @@ The name of the entity.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1396,10 +1396,10 @@ class="methodparam"><span class="type">string</span>
 `$qualifiedName`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Procedural style
 
@@ -1410,10 +1410,10 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 `$qualifiedName`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Starts a DTD.
 
@@ -1436,7 +1436,7 @@ The external subset system identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1495,19 +1495,19 @@ instance that is being modified. This object is returned from a call to
 class="function">xmlwriter\_open\_memory</span>.
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The element name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1559,7 +1559,7 @@ The element name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1611,7 +1611,7 @@ The target of the processing instruction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1668,7 +1668,7 @@ has to be used.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1724,14 +1724,14 @@ instance that is being modified. This object is returned from a call to
 class="function">xmlwriter\_open\_memory</span>.
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The attribute name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 `value`  
@@ -1739,7 +1739,7 @@ The attribute value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1799,7 +1799,7 @@ The value of the attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1880,7 +1880,7 @@ The contents of the CDATA.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1967,7 +1967,7 @@ The contents of the comment.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2025,7 +2025,7 @@ The content of the DTD attribute list.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2083,7 +2083,7 @@ The content of the element.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2114,16 +2114,16 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$content`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$isParam`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$publicId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$systemId`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$notationData`<span
-class="initializer"> = **`NULL`**</span></span> \]\]\]\] )
+class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 Procedural style
 
@@ -2134,16 +2134,16 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 `$name`</span> , <span class="methodparam"><span
 class="type">string</span> `$content`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$isParam`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$notationData`<span class="initializer"> = **`NULL`**</span></span>
+`$notationData`<span class="initializer"> = **`null`**</span></span>
 \]\]\]\] )
 
 Writes a full DTD entity.
@@ -2164,7 +2164,7 @@ The content of the entity.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2195,13 +2195,13 @@ Object oriented style
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$content`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Procedural style
 
@@ -2211,13 +2211,13 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$systemId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$content`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Writes a full DTD.
 
@@ -2243,7 +2243,7 @@ The content of the DTD.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2279,7 +2279,7 @@ class="type">string</span><span class="type">null</span></span>
 `$namespace`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$content`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Procedural style
 
@@ -2295,7 +2295,7 @@ class="type">string</span><span class="type">null</span></span>
 `$namespace`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$content`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Writes a full namespaced element tag.
 
@@ -2308,14 +2308,14 @@ instance that is being modified. This object is returned from a call to
 class="function">xmlwriter\_open\_memory</span>.
 
 `prefix`  
-The namespace prefix. If `prefix` is **`NULL`**, the namespace will be
+The namespace prefix. If `prefix` is **`null`**, the namespace will be
 omitted.
 
 `name`  
 The element name.
 
 `namespace`  
-The namespace URI. If `namespace` is **`NULL`**, the namespace
+The namespace URI. If `namespace` is **`null`**, the namespace
 declaration will be omitted.
 
 `content`  
@@ -2323,7 +2323,7 @@ The element contents.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2354,7 +2354,7 @@ Object oriented style
 class="methodparam"><span class="type">string</span> `$name`</span> \[,
 <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$content`<span class="initializer"> = **`null`**</span></span> \] )
 
 Procedural style
 
@@ -2364,7 +2364,7 @@ class="methodparam"><span class="type">XMLWriter</span> `$writer`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$name`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$content`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$content`<span class="initializer"> = **`null`**</span></span> \] )
 
 Writes a full element tag.
 
@@ -2384,7 +2384,7 @@ The element contents.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2443,7 +2443,7 @@ The content of the processing instruction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2495,7 +2495,7 @@ The text string to write.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

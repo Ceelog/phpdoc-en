@@ -21,7 +21,7 @@ Check if strings are valid for the specified encoding
 <span class="type">bool</span> <span
 class="methodname">mb\_check\_encoding</span> (\[ <span
 class="methodparam"><span class="type">mixed</span> `$var`<span
-class="initializer"> = **`NULL`**</span></span> \[, <span
+class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`<span
 class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
@@ -42,7 +42,7 @@ The expected encoding.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -76,7 +76,7 @@ available.
 
 ### Return Values
 
-Returns a specific character or **`FALSE`** on failure.
+Returns a specific character or **`false`** on failure.
 
 ### See Also
 
@@ -365,7 +365,7 @@ Additional `var`s.
 
 ### Return Values
 
-The character encoding before conversion for success, or **`FALSE`** for
+The character encoding before conversion for success, or **`false`** for
 failure.
 
 ### Examples
@@ -424,7 +424,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> ,
 class="type">string</span> `$encoding`<span class="initializer"> =
 mb\_internal\_encoding()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_hex`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Convert numeric string reference of <span class="type">string</span>
 `str` in a specified block to character.
@@ -548,7 +548,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> \[,
 `$encoding_list`<span class="initializer"> =
 mb\_detect\_order()</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$strict`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Detects character encoding in <span class="type">string</span> `str`.
 
@@ -565,11 +565,11 @@ If `encoding_list` is omitted, detect\_order is used.
 
 `strict`  
 `strict` specifies whether to use the strict encoding detection or not.
-Default is **`FALSE`**.
+Default is **`false`**.
 
 ### Return Values
 
-The detected character encoding or **`FALSE`** if the encoding cannot be
+The detected character encoding or **`false`** if the encoding cannot be
 detected from the given string.
 
 ### Examples
@@ -643,8 +643,8 @@ always.
 
 ### Return Values
 
-When setting the encoding detection order, **`TRUE`** is returned on
-success or **`FALSE`** on failure.
+When setting the encoding detection order, **`true`** is returned on
+success or **`false`** on failure.
 
 When getting the encoding detection order, an ordered array of the
 encodings is returned.
@@ -782,7 +782,7 @@ class="methodparam"><span class="type">string</span> `$str`</span> ,
 class="type">string</span> `$encoding`<span class="initializer"> =
 mb\_internal\_encoding()</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$is_hex`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Converts specified character codes in <span class="type">string</span>
 `str` from character code to HTML numeric character reference.
@@ -879,7 +879,7 @@ The encoding type being checked, for aliases.
 ### Return Values
 
 Returns a numerically indexed array of encoding aliases on success, or
-**`FALSE`** on failure
+**`false`** on failure
 
 ### Errors/Exceptions
 
@@ -959,8 +959,8 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### Return Values
 
-Returns **`TRUE`** if `string` matches the regular expression `pattern`,
-**`FALSE`** if not.
+Returns **`true`** if `string` matches the regular expression `pattern`,
+**`false`** if not.
 
 ### Notes
 
@@ -1031,7 +1031,7 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 ### Return Values
 
 The resultant <span class="type">string</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Notes
 
@@ -1137,7 +1137,7 @@ class="function">mb\_regex\_set\_options</span> for explanation. </span>
 ### Return Values
 
 The resultant <span class="type">string</span> on success, or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Changelog
 
@@ -1231,7 +1231,7 @@ class="function">mb\_ereg\_search\_regs</span>. If there are some
 matches, the first element will have the matched sub-string, the second
 element will have the first part grouped with brackets, the third
 element will have the second part grouped with brackets, and so on. It
-returns **`FALSE`** on error;
+returns **`false`** on error;
 
 ### Notes
 
@@ -1282,7 +1282,7 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1334,7 +1334,7 @@ element is the offset, in bytes, where the match begins relative to the
 start of the search string, and the second element is the length in
 bytes of the match.
 
-If an error occurs, **`FALSE`** is returned.
+If an error occurs, **`false`** is returned.
 
 ### Notes
 
@@ -1380,7 +1380,7 @@ multibyte regular expression match, and if there are some matched part,
 it returns an <span class="type">array</span> including substring of
 matched part as first element, the first grouped part with brackets as
 second element, the second grouped part as third element, and so on. It
-returns **`FALSE`** on error.
+returns **`false`** on error.
 
 ### Notes
 
@@ -1417,7 +1417,7 @@ string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1465,8 +1465,8 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### Return Values
 
-<span class="function">mb\_ereg\_search</span> returns **`TRUE`** if the
-multibyte string matches with the regular expression, or **`FALSE`**
+<span class="function">mb\_ereg\_search</span> returns **`true`** if the
+multibyte string matches with the regular expression, or **`false`**
 otherwise. The <span class="type">string</span> for matching is set by
 <span class="function">mb\_ereg\_search\_init</span>. If `pattern` is
 not specified, the previous one is used.
@@ -1521,7 +1521,7 @@ matched.
 ### Return Values
 
 Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`FALSE`** if no matches were found or an
+was found in `string`, or **`false`** if no matches were found or an
 error occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -1583,7 +1583,7 @@ class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### Return Values
 
-The resultant <span class="type">string</span> or **`FALSE`** on error.
+The resultant <span class="type">string</span> or **`false`** on error.
 
 ### Changelog
 
@@ -1650,7 +1650,7 @@ matched.
 ### Return Values
 
 Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`FALSE`** if no matches were found or an
+was found in `string`, or **`false`** if no matches were found or an
 error occurred.
 
 If the optional parameter `regs` was not passed or the length of the
@@ -1738,7 +1738,7 @@ returns the last input type processed.
 
 The character encoding name, as per the `type`. If <span
 class="function">mb\_http\_input</span> does not process specified HTTP
-input, it returns **`FALSE`**.
+input, it returns **`false`**.
 
 ### See Also
 
@@ -1775,7 +1775,7 @@ returns the current HTTP output character encoding.
 
 If `encoding` is omitted, <span class="function">mb\_http\_output</span>
 returns the current HTTP output character encoding. Otherwise, Returns
-**`TRUE`** on success or **`FALSE`** on failure.
+**`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -1808,7 +1808,7 @@ encoding is totally different from the one for multibyte regex.
 
 ### Return Values
 
-If `encoding` is set, then Returns **`TRUE`** on success or **`FALSE`**
+If `encoding` is set, then Returns **`true`** on success or **`false`**
 on failure. In this case, the character encoding for multibyte regex is
 NOT changed. If `encoding` is omitted, then the current character
 encoding name is returned.
@@ -1876,8 +1876,8 @@ setting to encode e-mail.
 
 ### Return Values
 
-If `language` is set and `language` is valid, it returns **`TRUE`**.
-Otherwise, it returns **`FALSE`**. When `language` is omitted, it
+If `language` is set and `language` is valid, it returns **`true`**.
+Otherwise, it returns **`false`**. When `language` is omitted, it
 returns the language name as a <span class="type">string</span>.
 
 ### See Also
@@ -2014,7 +2014,7 @@ available.
 
 ### Return Values
 
-Returns a code point of character or **`FALSE`** on failure.
+Returns a code point of character or **`false`** on failure.
 
 ### See Also
 
@@ -2111,7 +2111,7 @@ encoded converted values.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2186,7 +2186,7 @@ the internal character encoding value will be used.
 
 ### Return Values
 
-If `encoding` is set, then Returns **`TRUE`** on success or **`FALSE`**
+If `encoding` is set, then Returns **`true`** on success or **`false`**
 on failure. In this case, the internal character encoding is NOT
 changed. If `encoding` is omitted, then the current character encoding
 name for a multibyte regex is returned.
@@ -2304,9 +2304,9 @@ class="methodparam"><span class="type">string</span> `$to`</span> ,
 class="type">string</span> `$message`</span> \[, <span
 class="methodparam"><span class="type">mixed</span>
 `$additional_headers`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">string</span> `$additional_parameter`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 Sends email. Headers and messages are converted and encoded according to
 the <span class="function">mb\_language</span> setting. It's a wrapper
@@ -2379,7 +2379,7 @@ method. For sendmail users, this file is `/etc/mail/trusted-users`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2425,7 +2425,7 @@ will be split in `limit` elements as maximum. </span>
 
 ### Return Values
 
-The result as an <span class="type">array</span>, or **`FALSE`** on
+The result as an <span class="type">array</span>, or **`false`** on
 failure.
 
 ### Notes
@@ -2483,7 +2483,7 @@ A string specifying one of the supported encodings.
 ### Return Values
 
 <span class="function">mb\_str\_split</span> returns an array of
-strings, or **`FALSE`** on failure.
+strings, or **`false`** on failure.
 
 ### See Also
 
@@ -2642,7 +2642,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 of the first occurrence of `needle` in the `haystack` string. Unlike
 <span class="function">mb\_strpos</span>, <span
 class="function">mb\_stripos</span> is case-insensitive. If `needle` is
-not found, it returns **`FALSE`**.
+not found, it returns **`false`**.
 
 ### Parameters
 
@@ -2664,7 +2664,7 @@ encoding is used.
 ### Return Values
 
 Return the numeric position of the first occurrence of `needle` in the
-`haystack` string, or **`FALSE`** if `needle` is not found.
+`haystack` string, or **`false`** if `needle` is not found.
 
 ### Changelog
 
@@ -2690,7 +2690,7 @@ class="methodname">mb\_stristr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$before_needle`<span class="initializer"> = **`FALSE`**</span></span>
+`$before_needle`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`<span class="initializer"> =
 mb\_internal\_encoding()</span></span> \]\] )
@@ -2699,7 +2699,7 @@ mb\_internal\_encoding()</span></span> \]\] )
 `needle` in `haystack` and returns the portion of `haystack`. Unlike
 <span class="function">mb\_strstr</span>, <span
 class="function">mb\_stristr</span> is case-insensitive. If `needle` is
-not found, it returns **`FALSE`**.
+not found, it returns **`false`**.
 
 ### Parameters
 
@@ -2711,8 +2711,8 @@ The string to find in `haystack`
 
 `before_needle`  
 Determines which portion of `haystack` this function returns. If set to
-**`TRUE`**, it returns all of `haystack` from the beginning to the first
-occurrence of `needle` (excluding needle). If set to **`FALSE`**, it
+**`true`**, it returns all of `haystack` from the beginning to the first
+occurrence of `needle` (excluding needle). If set to **`false`**, it
 returns all of `haystack` from the first occurrence of `needle` to the
 end (including needle).
 
@@ -2722,7 +2722,7 @@ encoding is used.
 
 ### Return Values
 
-Returns the portion of `haystack`, or **`FALSE`** if `needle` is not
+Returns the portion of `haystack`, or **`false`** if `needle` is not
 found.
 
 ### See Also
@@ -2819,7 +2819,7 @@ the internal character encoding value will be used.
 
 Returns the numeric position of the first occurrence of `needle` in the
 `haystack` <span class="type">string</span>. If `needle` is not found,
-it returns **`FALSE`**.
+it returns **`false`**.
 
 ### Changelog
 
@@ -2844,13 +2844,13 @@ class="methodname">mb\_strrchr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$part`<span class="initializer"> = **`FALSE`**</span></span> \[, <span
+`$part`<span class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`<span
 class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
 <span class="function">mb\_strrchr</span> finds the last occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. If
-`needle` is not found, it returns **`FALSE`**.
+`needle` is not found, it returns **`false`**.
 
 ### Parameters
 
@@ -2862,8 +2862,8 @@ The string to find in `haystack`
 
 `part`  
 Determines which portion of `haystack` this function returns. If set to
-**`TRUE`**, it returns all of `haystack` from the beginning to the last
-occurrence of `needle`. If set to **`FALSE`**, it returns all of
+**`true`**, it returns all of `haystack` from the beginning to the last
+occurrence of `needle`. If set to **`false`**, it returns all of
 `haystack` from the last occurrence of `needle` to the end,
 
 `encoding`  
@@ -2872,7 +2872,7 @@ encoding is used.
 
 ### Return Values
 
-Returns the portion of `haystack`. or **`FALSE`** if `needle` is not
+Returns the portion of `haystack`. or **`false`** if `needle` is not
 found.
 
 ### See Also
@@ -2894,7 +2894,7 @@ class="methodname">mb\_strrichr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$part`<span class="initializer"> = **`FALSE`**</span></span> \[, <span
+`$part`<span class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$encoding`<span
 class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 
@@ -2902,7 +2902,7 @@ class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
 `needle` in `haystack` and returns the portion of `haystack`. Unlike
 <span class="function">mb\_strrchr</span>, <span
 class="function">mb\_strrichr</span> is case-insensitive. If `needle` is
-not found, it returns **`FALSE`**.
+not found, it returns **`false`**.
 
 ### Parameters
 
@@ -2914,8 +2914,8 @@ The string to find in `haystack`
 
 `part`  
 Determines which portion of `haystack` this function returns. If set to
-**`TRUE`**, it returns all of `haystack` from the beginning to the last
-occurrence of `needle`. If set to **`FALSE`**, it returns all of
+**`true`**, it returns all of `haystack` from the beginning to the last
+occurrence of `needle`. If set to **`false`**, it returns all of
 `haystack` from the last occurrence of `needle` to the end,
 
 `encoding`  
@@ -2924,7 +2924,7 @@ encoding is used.
 
 ### Return Values
 
-Returns the portion of `haystack`. or **`FALSE`** if `needle` is not
+Returns the portion of `haystack`. or **`false`** if `needle` is not
 found.
 
 ### See Also
@@ -2975,7 +2975,7 @@ encoding is used.
 ### Return Values
 
 Return the numeric position of the last occurrence of `needle` in the
-`haystack` string, or **`FALSE`** if `needle` is not found.
+`haystack` string, or **`false`** if `needle` is not found.
 
 ### See Also
 
@@ -3027,7 +3027,7 @@ the internal character encoding value will be used.
 
 Returns the numeric position of the last occurrence of `needle` in the
 `haystack` <span class="type">string</span>. If `needle` is not found,
-it returns **`FALSE`**.
+it returns **`false`**.
 
 ### Notes
 
@@ -3054,14 +3054,14 @@ class="methodname">mb\_strstr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$before_needle`<span class="initializer"> = **`FALSE`**</span></span>
+`$before_needle`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$encoding`<span class="initializer"> =
 mb\_internal\_encoding()</span></span> \]\] )
 
 <span class="function">mb\_strstr</span> finds the first occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. If
-`needle` is not found, it returns **`FALSE`**.
+`needle` is not found, it returns **`false`**.
 
 ### Parameters
 
@@ -3073,8 +3073,8 @@ The string to find in `haystack`
 
 `before_needle`  
 Determines which portion of `haystack` this function returns. If set to
-**`TRUE`**, it returns all of `haystack` from the beginning to the first
-occurrence of `needle` (excluding needle). If set to **`FALSE`**, it
+**`true`**, it returns all of `haystack` from the beginning to the first
+occurrence of `needle` (excluding needle). If set to **`false`**, it
 returns all of `haystack` from the first occurrence of `needle` to the
 end (including needle).
 
@@ -3084,7 +3084,7 @@ encoding is used.
 
 ### Return Values
 
-Returns the portion of `haystack`, or **`FALSE`** if `needle` is not
+Returns the portion of `haystack`, or **`false`** if `needle` is not
 found.
 
 ### See Also
@@ -3293,7 +3293,7 @@ class="initializer"> = mb\_substitute\_character()</span></span> \] )
 
 Specifies a substitution character when input character encoding is
 invalid or character code does not exist in output character encoding.
-Invalid characters may be substituted **`NULL`** (no output), <span
+Invalid characters may be substituted **`null`** (no output), <span
 class="type">string</span> or <span class="type">int</span> value
 (Unicode character code value).
 
@@ -3317,8 +3317,8 @@ of the following <span class="type">string</span>s:
 
 ### Return Values
 
-If `substchar` is set, it returns **`TRUE`** for success, otherwise
-returns **`FALSE`**. If `substchar` is not set, it returns the current
+If `substchar` is set, it returns **`true`** for success, otherwise
+returns **`false`**. If `substchar` is not set, it returns the current
 setting.
 
 ### Examples

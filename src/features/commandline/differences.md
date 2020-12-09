@@ -37,12 +37,12 @@ Remarkable differences of the CLI SAPI compared to other SAPIs:
     <tbody>
     <tr class="odd">
     <td><a href="/errorfunc/setup.html#" class="link">html_errors</a></td>
-    <td><strong><code>FALSE</code></strong></td>
-    <td>Defaults to <strong><code>FALSE</code></strong>, as it can be quite hard to read error messages in the shell environment when they are cluttered up with uninterpreted HTML tags.</td>
+    <td><strong><code>false</code></strong></td>
+    <td>Defaults to <strong><code>false</code></strong>, as it can be quite hard to read error messages in the shell environment when they are cluttered up with uninterpreted HTML tags.</td>
     </tr>
     <tr class="even">
     <td><a href="/outcontrol/setup.html#" class="link">implicit_flush</a></td>
-    <td><strong><code>TRUE</code></strong></td>
+    <td><strong><code>true</code></strong></td>
     <td>In a shell environment, it is usually desirable for output, such as from <span class="function">print</span>, <span class="function">echo</span> and friends, to be displayed immediately, and not held in a buffer. Nonetheless, it is still possible to use <a href="/ref/outcontrol.html" class="link">output buffering</a> to defer or manipulate standard output.</td>
     </tr>
     <tr class="odd">
@@ -52,18 +52,18 @@ Remarkable differences of the CLI SAPI compared to other SAPIs:
     </tr>
     <tr class="even">
     <td><a href="/ini/core.html#ini.register-argc-argv" class="link">register_argc_argv</a></td>
-    <td><strong><code>TRUE</code></strong></td>
-    <td><p>Setting this to <strong><code>TRUE</code></strong> means that scripts executed via the CLI SAPI always have access to <em>argc</em> (number of arguments passed to the application) and <em>argv</em> (array of the actual arguments).</p>
+    <td><strong><code>true</code></strong></td>
+    <td><p>Setting this to <strong><code>true</code></strong> means that scripts executed via the CLI SAPI always have access to <em>argc</em> (number of arguments passed to the application) and <em>argv</em> (array of the actual arguments).</p>
     <p>The PHP variables <var class="varname">$argc</var> and <var class="varname">$argv</var> are automatically set to the appropriate values when using the CLI SAPI. These values can also be found in the <var class="varname">$_SERVER</var> array, for example: <var class="varname">$_SERVER['argv']</var>.</p></td>
     </tr>
     <tr class="odd">
     <td><a href="/outcontrol/setup.html#" class="link">output_buffering</a></td>
-    <td><strong><code>FALSE</code></strong></td>
-    <td><p>Although the <var class="filename">php.ini</var> setting is hardcoded to <strong><code>FALSE</code></strong>, the <a href="/book/outcontrol.html" class="link">Output buffering</a> functions are available.</p></td>
+    <td><strong><code>false</code></strong></td>
+    <td><p>Although the <var class="filename">php.ini</var> setting is hardcoded to <strong><code>false</code></strong>, the <a href="/book/outcontrol.html" class="link">Output buffering</a> functions are available.</p></td>
     </tr>
     <tr class="even">
     <td><a href="/info/setup.html#" class="link">max_input_time</a></td>
-    <td><strong><code>FALSE</code></strong></td>
+    <td><strong><code>false</code></strong></td>
     <td><p>The PHP CLI does not support GET, POST or file uploads.</p></td>
     </tr>
     </tbody>

@@ -26,7 +26,7 @@ The anonymous functions to bind.
 
 `newthis`  
 The object to which the given anonymous function should be bound, or
-**`NULL`** for the closure to be unbound.
+**`null`** for the closure to be unbound.
 
 `newscope`  
 The class scope to which the closure is to be associated, or 'static' to
@@ -38,7 +38,7 @@ internal class as this parameter.
 ### Return Values
 
 Returns a new <span class="classname">Closure</span> object or
-**`FALSE`** on failure
+**`false`** on failure
 
 ### Examples
 

@@ -150,3 +150,57 @@ OpenSSL
     -   [openssl\_x509\_verify](/ref/openssl.html#openssl_x509_verify) —
         Verifies digital signature of x509 certificate against a public
         key
+-   [OpenSSLCertificate](/class/opensslcertificate.html) — The
+    OpenSSLCertificate class
+-   [OpenSSLCertificateSigningRequest](/class/opensslcertificatesigningrequest.html)
+    — The OpenSSLCertificateSigningRequest class
+-   [OpenSSLAsymmetricKey](/class/opensslasymmetrickey.html) — The
+    OpenSSLAsymmetricKey class
+
+Introduction
+------------
+
+A fully opaque class which replaces *OpenSSL X.509* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**OpenSSLCertificate**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**OpenSSLCertificate** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *OpenSSL X.509 CSR* resources as of
+PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**OpenSSLCertificateSigningRequest**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**OpenSSLCertificateSigningRequest** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *OpenSSL key* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**OpenSSLAsymmetricKey**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**OpenSSLAsymmetricKey** </span> {
+
+}

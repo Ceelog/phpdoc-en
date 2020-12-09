@@ -951,7 +951,7 @@ This is the query string to be escaped.
 
 ### Return Values
 
-Returns the escaped string or **`FALSE`** on failure.
+Returns the escaped string or **`false`** on failure.
 
 SolrUtils::getSolrVersion
 =========================
@@ -1120,7 +1120,7 @@ class="methodparam">void</span> )
 <span class="methodname">merge</span> ( <span class="methodparam"><span
 class="type">SolrInputDocument</span> `$sourceDoc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">reset</span> ( <span
@@ -1423,7 +1423,7 @@ can still pass values less than 1.0 but they must be greater than zero.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::clear
 ========================
@@ -1445,7 +1445,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::\_\_clone
 ============================
@@ -1511,7 +1511,7 @@ The name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::\_\_destruct
 ===============================
@@ -1555,7 +1555,7 @@ Name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** if the field was found and **`FALSE`** if it was not
+Returns **`true`** if the field was found and **`false`** if it was not
 found.
 
 SolrInputDocument::getBoost
@@ -1577,7 +1577,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns the boost value on success and **`FALSE`** on failure.
+Returns the boost value on success and **`false`** on failure.
 
 SolrInputDocument::getChildDocuments
 ====================================
@@ -1654,7 +1654,7 @@ The name of the field.
 
 ### Return Values
 
-Returns a SolrDocumentField object on success and **`FALSE`** on
+Returns a SolrDocumentField object on success and **`false`** on
 failure.
 
 SolrInputDocument::getFieldBoost
@@ -1678,7 +1678,7 @@ The name of the field.
 
 ### Return Values
 
-Returns the boost value for the field or **`FALSE`** if there was an
+Returns the boost value for the field or **`false`** if there was an
 error.
 
 SolrInputDocument::getFieldCount
@@ -1701,7 +1701,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success or **`FALSE`** on failure.
+Returns an integer on success or **`false`** on failure.
 
 SolrInputDocument::getFieldNames
 ================================
@@ -1722,7 +1722,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`FALSE`** on failure.
+Returns an array on success and **`false`** on failure.
 
 SolrInputDocument::hasChildDocuments
 ====================================
@@ -1763,7 +1763,7 @@ Merges one input document into another
 class="methodparam"><span class="type">SolrInputDocument</span>
 `$sourceDoc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Merges one input document into another.
 
@@ -1773,12 +1773,12 @@ Merges one input document into another.
 The source document.
 
 `overwrite`  
-If this is **`TRUE`** it will replace matching fields in the destination
+If this is **`true`** it will replace matching fields in the destination
 document.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. In the future,
+Returns **`true`** on success or **`false`** on failure. In the future,
 this will be modified to return the number of fields in the new
 document.
 
@@ -1801,7 +1801,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::setBoost
 ===========================
@@ -1824,7 +1824,7 @@ The index-time boost value for this document.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::setFieldBoost
 ================================
@@ -1892,7 +1892,7 @@ The sort direction
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrInputDocument::toArray
 ==========================
@@ -1913,7 +1913,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array containing the fields. It returns **`FALSE`** on
+Returns an array containing the fields. It returns **`false`** on
 failure.
 
 Introduction
@@ -2042,7 +2042,7 @@ class="methodparam">void</span> )
 <span class="methodname">merge</span> ( <span class="methodparam"><span
 class="type">SolrDocument</span> `$sourceDoc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">void</span>
 <span class="methodname">next</span> ( <span
@@ -2159,7 +2159,7 @@ The value of the field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::clear
 ===================
@@ -2181,7 +2181,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::\_\_clone
 =======================
@@ -2266,7 +2266,7 @@ Name of the field
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::\_\_destruct
 ==========================
@@ -2308,7 +2308,7 @@ The name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** if the field is present and **`FALSE`** if it does
+Returns **`true`** if the field is present and **`false`** if it does
 not.
 
 SolrDocument::\_\_get
@@ -2405,7 +2405,7 @@ Name of the field.
 
 ### Return Values
 
-Returns a SolrDocumentField on success and **`FALSE`** on failure.
+Returns a SolrDocumentField on success and **`false`** on failure.
 
 SolrDocument::getFieldCount
 ===========================
@@ -2427,7 +2427,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`FALSE`** on failure.
+Returns an integer on success and **`false`** on failure.
 
 SolrDocument::getFieldNames
 ===========================
@@ -2471,7 +2471,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a SolrInputDocument on success and **`NULL`** on failure.
+Returns a SolrInputDocument on success and **`null`** on failure.
 
 SolrDocument::hasChildDocuments
 ===============================
@@ -2518,7 +2518,7 @@ Name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::key
 =================
@@ -2553,7 +2553,7 @@ Merges source to the current SolrDocument
 class="methodparam"><span class="type">SolrDocument</span>
 `$sourceDoc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Merges source to the current SolrDocument.
 
@@ -2563,12 +2563,12 @@ Merges source to the current SolrDocument.
 The source document.
 
 `overwrite`  
-If this is **`TRUE`** then fields with the same name in the destination
+If this is **`true`** then fields with the same name in the destination
 document will be overwritten.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::next
 ==================
@@ -2613,7 +2613,7 @@ The name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::offsetGet
 =======================
@@ -2666,7 +2666,7 @@ The value for this field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::offsetUnset
 =========================
@@ -2710,7 +2710,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::rewind
 ====================
@@ -2780,7 +2780,7 @@ Field value.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::sort
 ==================
@@ -2826,7 +2826,7 @@ The sort direction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::toArray
 =====================
@@ -2966,7 +2966,7 @@ The name of the field.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrDocument::valid
 ===================
@@ -2988,7 +2988,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success and **`FALSE`** if the current position is
+Returns **`true`** on success and **`false`** if the current position is
 no longer valid.
 
 Introduction
@@ -3241,7 +3241,7 @@ The name of the property.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrObject::offsetGet
 =====================
@@ -3318,7 +3318,7 @@ The name of the property.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3409,7 +3409,7 @@ class="type">SolrUpdateResponse</span> <span
 class="methodname">addDocument</span> ( <span class="methodparam"><span
 class="type">SolrInputDocument</span> `$doc`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$overwrite`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$commitWithin`<span
 class="initializer"> = 0</span></span> \]\] )
 
@@ -3417,7 +3417,7 @@ class="initializer"> = 0</span></span> \]\] )
 <span class="methodname">addDocuments</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$overwrite`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$overwrite`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$commitWithin`<span class="initializer"> = 0</span></span> \]\] )
 
@@ -3425,11 +3425,11 @@ class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 class="type">SolrUpdateResponse</span> <span
 class="methodname">commit</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$softCommit`<span class="initializer"> =
-**`FALSE`**</span></span> \[, <span class="methodparam"><span
+**`false`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$waitSearcher`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$expungeDeletes`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="methodname">\_\_construct</span> ( <span
@@ -3484,9 +3484,9 @@ class="methodname">optimize</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$maxSegments`<span class="initializer"> =
 1</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$softCommit`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$waitSearcher`<span class="initializer"> =
-**`TRUE`**</span></span> \]\]\] )
+**`true`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="type">SolrPingResponse</span> <span
@@ -3581,7 +3581,7 @@ class="methodname">SolrClient::addDocument</span> ( <span
 class="methodparam"><span class="type">SolrInputDocument</span>
 `$doc`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$commitWithin`<span class="initializer"> =
 0</span></span> \]\] )
 
@@ -3593,7 +3593,7 @@ This method adds a document to the index.
 The SolrInputDocument instance.
 
 `overwrite`  
-Whether to overwrite existing document or not. If **`FALSE`** there will
+Whether to overwrite existing document or not. If **`false`** there will
 be duplicates (several documents with the same ID).
 
 **Warning**
@@ -3730,7 +3730,7 @@ Adds a collection of SolrInputDocument instances to the index
 <span class="methodname">SolrClient::addDocuments</span> ( <span
 class="methodparam"><span class="type">array</span> `$docs`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$overwrite`<span class="initializer"> = **`TRUE`**</span></span> \[,
+`$overwrite`<span class="initializer"> = **`true`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$commitWithin`<span class="initializer"> = 0</span></span> \]\] )
 
@@ -3743,7 +3743,7 @@ An array containing the collection of SolrInputDocument instances. This
 array must be an actual variable.
 
 `overwrite`  
-Whether to overwrite existing documents or not. If **`FALSE`** there
+Whether to overwrite existing documents or not. If **`false`** there
 will be duplicates (several documents with the same ID).
 
 **Warning**
@@ -3842,11 +3842,11 @@ Finalizes all add/deletes made to the index
 class="type">SolrUpdateResponse</span> <span
 class="methodname">SolrClient::commit</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$softCommit`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$waitSearcher`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$expungeDeletes`<span class="initializer"> = **`FALSE`**</span></span>
+`$expungeDeletes`<span class="initializer"> = **`false`**</span></span>
 \]\]\] )
 
 This method finalizes all add/deletes made to the index.
@@ -4495,9 +4495,9 @@ class="methodname">SolrClient::optimize</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$maxSegments`<span
 class="initializer"> = 1</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$softCommit`<span
-class="initializer"> = **`TRUE`**</span></span> \[, <span
+class="initializer"> = **`true`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$waitSearcher`<span
-class="initializer"> = **`TRUE`**</span></span> \]\]\] )
+class="initializer"> = **`true`**</span></span> \]\]\] )
 
 Defragments the index for faster search performance.
 
@@ -4944,7 +4944,7 @@ The new value for the servlet
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrClient::system
 ==================
@@ -5367,7 +5367,7 @@ SolrObjects.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 SolrResponse::success
 =====================
@@ -5388,7 +5388,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if it was successful and **`FALSE`** if it was not.
+Returns **`true`** if it was successful and **`false`** if it was not.
 
 Introduction
 ------------
@@ -6188,7 +6188,7 @@ class="type">string</span> `$value`</span> )
 <span class="type">string</span> <span
 class="methodname">toString</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$url_encode`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
@@ -6252,7 +6252,7 @@ Value of parameter
 
 ### Return Values
 
-Returns a SolrParam object on success and **`FALSE`** on failure.
+Returns a SolrParam object on success and **`false`** on failure.
 
 SolrParams::get
 ===============
@@ -6424,7 +6424,7 @@ Value of the parameter
 
 ### Return Values
 
-Returns a SolrParam object on success and **`FALSE`** on value.
+Returns a SolrParam object on success and **`false`** on value.
 
 ### Examples
 
@@ -6454,7 +6454,7 @@ Returns all the name-value pair parameters in the object
 <span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Returns all the name-value pair parameters in the object
 
@@ -6465,7 +6465,7 @@ Whether to return URL-encoded values
 
 ### Return Values
 
-Returns a string on success and **`FALSE`** on failure.
+Returns a string on success and **`false`** on failure.
 
 SolrParams::unserialize
 =======================
@@ -6578,7 +6578,7 @@ class="methodparam"><span class="type">string</span> `$name`</span> ,
 <span class="type">string</span> <span
 class="methodname">SolrParams::toString</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$url_encode`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">final</span> <span class="modifier">public</span>
 <span class="type">void</span> <span
@@ -8611,7 +8611,7 @@ Returns true if group expanding is enabled
 <span class="methodname">SolrQuery::getExpand</span> ( <span
 class="methodparam">void</span> )
 
-Returns **`TRUE`** if group expanding is enabled
+Returns **`true`** if group expanding is enabled
 
 SolrQuery::getExpandFilterQueries
 =================================
@@ -8684,7 +8684,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set
+Returns a boolean on success and **`null`** if not set
 
 SolrQuery::getFacetDateEnd
 ==========================
@@ -8708,7 +8708,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateFields
 =============================
@@ -8729,7 +8729,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns all the facet.date fields as an array or **`NULL`** if none was
+Returns all the facet.date fields as an array or **`null`** if none was
 set
 
 SolrQuery::getFacetDateGap
@@ -8754,7 +8754,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateHardEnd
 ==============================
@@ -8778,7 +8778,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetDateOther
 ============================
@@ -8802,7 +8802,7 @@ The name of the field
 
 ### Return Values
 
-Returns an <span class="type">array</span> on success and **`NULL`** if
+Returns an <span class="type">array</span> on success and **`null`** if
 not set.
 
 SolrQuery::getFacetDateStart
@@ -8828,7 +8828,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetFields
 =========================
@@ -8849,7 +8849,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array of all the fields and **`NULL`** if none was set
+Returns an array of all the fields and **`null`** if none was set
 
 SolrQuery::getFacetLimit
 ========================
@@ -8874,7 +8874,7 @@ The name of the field to override for
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetMethod
 =========================
@@ -8898,7 +8898,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set
+Returns a string on success and **`null`** if not set
 
 SolrQuery::getFacetMinCount
 ===========================
@@ -8923,7 +8923,7 @@ The name of the field
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetMissing
 ==========================
@@ -8947,7 +8947,7 @@ The name of the field
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set
+Returns a boolean on success and **`null`** if not set
 
 SolrQuery::getFacetOffset
 =========================
@@ -8971,7 +8971,7 @@ The name of the field to override for.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set
+Returns an integer on success and **`null`** if not set
 
 SolrQuery::getFacetPrefix
 =========================
@@ -8994,7 +8994,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getFacetQueries
 ==========================
@@ -9015,7 +9015,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getFacetSort
 =======================
@@ -9040,7 +9040,7 @@ The name of the field
 ### Return Values
 
 Returns an integer (SolrQuery::FACET\_SORT\_INDEX or
-SolrQuery::FACET\_SORT\_COUNT) on success or **`NULL`** if not set.
+SolrQuery::FACET\_SORT\_COUNT) on success or **`null`** if not set.
 
 SolrQuery::getFields
 ====================
@@ -9061,7 +9061,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getFilterQueries
 ===========================
@@ -9084,7 +9084,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getGroup
 ===================
@@ -9407,7 +9407,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightAlternateField
 =====================================
@@ -9431,7 +9431,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFields
 =============================
@@ -9454,7 +9454,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getHighlightFormatter
 ================================
@@ -9477,7 +9477,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFragmenter
 =================================
@@ -9501,7 +9501,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightFragsize
 ===============================
@@ -9527,7 +9527,7 @@ The name of the field
 
 ### Return Values
 
-Returns an integer on success or **`NULL`** if not set.
+Returns an integer on success or **`null`** if not set.
 
 SolrQuery::getHighlightHighlightMultiTerm
 =========================================
@@ -9551,7 +9551,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightMaxAlternateFieldLength
 ==============================================
@@ -9574,7 +9574,7 @@ The name of the field
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightMaxAnalyzedChars
 =======================================
@@ -9597,7 +9597,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightMergeContiguous
 ======================================
@@ -9622,7 +9622,7 @@ The name of the field
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexMaxAnalyzedChars
 ============================================
@@ -9645,7 +9645,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexPattern
 ===================================
@@ -9666,7 +9666,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightRegexSlop
 ================================
@@ -9688,7 +9688,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a double on success and **`NULL`** if not set.
+Returns a double on success and **`null`** if not set.
 
 SolrQuery::getHighlightRequireFieldMatch
 ========================================
@@ -9711,7 +9711,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getHighlightSimplePost
 =================================
@@ -9735,7 +9735,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightSimplePre
 ================================
@@ -9759,7 +9759,7 @@ The name of the field
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getHighlightSnippets
 ===============================
@@ -9783,7 +9783,7 @@ The name of the field
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getHighlightUsePhraseHighlighter
 ===========================================
@@ -9806,7 +9806,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMlt
 =================
@@ -9827,7 +9827,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMltBoost
 ======================
@@ -9850,7 +9850,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getMltCount
 ======================
@@ -9871,7 +9871,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltFields
 =======================
@@ -9892,7 +9892,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getMltMaxNumQueryTerms
 =================================
@@ -9915,7 +9915,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMaxNumTokens
 =============================
@@ -9938,7 +9938,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMaxWordLength
 ==============================
@@ -9959,7 +9959,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinDocFrequency
 ================================
@@ -9982,7 +9982,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinTermFrequency
 =================================
@@ -10005,7 +10005,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltMinWordLength
 ==============================
@@ -10026,7 +10026,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getMltQueryFields
 ============================
@@ -10047,7 +10047,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getQuery
 ===================
@@ -10068,7 +10068,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getRows
 ==================
@@ -10090,7 +10090,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getSortFields
 ========================
@@ -10111,7 +10111,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if none of the parameters was
+Returns an array on success and **`null`** if none of the parameters was
 set.
 
 SolrQuery::getStart
@@ -10134,7 +10134,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getStats
 ===================
@@ -10155,7 +10155,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getStatsFacets
 =========================
@@ -10176,7 +10176,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getStatsFields
 =========================
@@ -10197,7 +10197,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an array on success and **`NULL`** if not set.
+Returns an array on success and **`null`** if not set.
 
 SolrQuery::getTerms
 ===================
@@ -10218,7 +10218,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsField
 ========================
@@ -10239,7 +10239,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsIncludeLowerBound
 ====================================
@@ -10260,7 +10260,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsIncludeUpperBound
 ====================================
@@ -10281,7 +10281,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsLimit
 ========================
@@ -10302,7 +10302,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsLowerBound
 =============================
@@ -10323,7 +10323,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsMaxCount
 ===========================
@@ -10344,7 +10344,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsMinCount
 ===========================
@@ -10365,7 +10365,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsPrefix
 =========================
@@ -10387,7 +10387,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTermsReturnRaw
 ============================
@@ -10409,7 +10409,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a boolean on success and **`NULL`** if not set.
+Returns a boolean on success and **`null`** if not set.
 
 SolrQuery::getTermsSort
 =======================
@@ -10432,7 +10432,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns an integer on success and **`NULL`** if not set.
+Returns an integer on success and **`null`** if not set.
 
 SolrQuery::getTermsUpperBound
 =============================
@@ -10453,7 +10453,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a string on success and **`NULL`** if not set.
+Returns a string on success and **`null`** if not set.
 
 SolrQuery::getTimeAllowed
 =========================
@@ -10474,7 +10474,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns and integer on success and **`NULL`** if it is not set.
+Returns and integer on success and **`null`** if it is not set.
 
 SolrQuery::removeExpandFilterQuery
 ==================================
@@ -10825,7 +10825,7 @@ to the client for debugging purposes.
 ### Parameters
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### Return Values
 
@@ -11022,7 +11022,7 @@ Enables or disables faceting.
 ### Parameters
 
 `value`  
-**`TRUE`** enables faceting and **`FALSE`** disables it.
+**`true`** enables faceting and **`false`** disables it.
 
 ### Return Values
 
@@ -11268,7 +11268,7 @@ field should be computed
 ### Parameters
 
 `flag`  
-**`TRUE`** turns this feature on. **`FALSE`** disables it.
+**`true`** turns this feature on. **`false`** disables it.
 
 `field_override`  
 The name of the field.
@@ -11708,10 +11708,10 @@ Enables or disables highlighting
 <span class="methodname">SolrQuery::setHighlight</span> ( <span
 class="methodparam"><span class="type">bool</span> `$flag`</span> )
 
-Setting it to **`TRUE`** enables highlighted snippets to be generated in
+Setting it to **`true`** enables highlighted snippets to be generated in
 the query response.
 
-Setting it to **`FALSE`** disables highlighting
+Setting it to **`false`** disables highlighting
 
 ### Parameters
 
@@ -11871,7 +11871,7 @@ class="methodname">SolrQuery::setHighlightMaxAlternateFieldLength</span>
 class="type">string</span> `$field_override`</span> \] )
 
 If SolrQuery::setHighlightAlternateField() was passed the value
-**`TRUE`**, this parameter specifies the maximum number of characters of
+**`true`**, this parameter specifies the maximum number of characters of
 the field to return
 
 Any value less than or equal to 0 means unlimited.
@@ -12029,16 +12029,16 @@ Require field matching during highlighting
 ( <span class="methodparam"><span class="type">bool</span>
 `$flag`</span> )
 
-If **`TRUE`**, then a field will only be highlighted if the query
+If **`true`**, then a field will only be highlighted if the query
 matched in this particular field.
 
 This will only work if SolrQuery::setHighlightUsePhraseHighlighter() was
-set to **`TRUE`**
+set to **`true`**
 
 ### Parameters
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### Return Values
 
@@ -12172,7 +12172,7 @@ Enables or disables moreLikeThis
 ### Parameters
 
 `flag`  
-**`TRUE`** enables it and **`FALSE`** turns it off.
+**`true`** enables it and **`false`** turns it off.
 
 ### Return Values
 
@@ -12194,7 +12194,7 @@ Set if the query will be boosted by the interesting term relevance
 ### Parameters
 
 `value`  
-Sets to **`TRUE`** or **`FALSE`**
+Sets to **`true`** or **`false`**
 
 ### Return Values
 
@@ -12380,7 +12380,7 @@ Exclude the header from the returned results.
 ### Parameters
 
 `flag`  
-**`TRUE`** excludes the header from the result.
+**`true`** excludes the header from the result.
 
 ### Return Values
 
@@ -12446,7 +12446,7 @@ Whether to show debug info
 ### Parameters
 
 `flag`  
-Whether to show debug info. **`TRUE`** or **`FALSE`**
+Whether to show debug info. **`true`** or **`false`**
 
 ### Return Values
 
@@ -12490,7 +12490,7 @@ Enables or disables the Stats component.
 ### Parameters
 
 `flag`  
-**`TRUE`** turns on the stats component and **`FALSE`** disables it.
+**`true`** turns on the stats component and **`false`** disables it.
 
 ### Return Values
 
@@ -12512,7 +12512,7 @@ Enables or disables the TermsComponent
 ### Parameters
 
 `flag`  
-**`TRUE`** enables it. **`FALSE`** turns it off
+**`true`** enables it. **`false`** turns it off
 
 ### Return Values
 
@@ -12581,7 +12581,7 @@ Include the upper bound term in the result set.
 ### Parameters
 
 `flag`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### Return Values
 
@@ -12716,7 +12716,7 @@ it is human readable
 ### Parameters
 
 `value`  
-**`TRUE`** or **`FALSE`**
+**`true`** or **`false`**
 
 ### Return Values
 

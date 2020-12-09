@@ -66,7 +66,7 @@ in environments with this setting enabled, it has now been deprecated.
 
 ### *(unset)* cast
 
-Casting any expression to this type will always result in **`NULL`**,
+Casting any expression to this type will always result in **`null`**,
 and so this superfluous casting type has now been deprecated.
 
 ### <span class="function">parse\_str</span> without a second argument

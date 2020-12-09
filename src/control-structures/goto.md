@@ -1,5 +1,5 @@
-*goto*
-------
+goto
+----
 
 <img src="images/0baa1b9fae6aec55bbb73037f3016001-xkcd-goto.png" width="740" height="201" alt="What&#39;s the worse thing that could happen if you use goto?" />
 

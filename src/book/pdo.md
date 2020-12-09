@@ -376,7 +376,7 @@ class constructor is never called if this flag is set. </span>
 Available since PHP 5.2.0. </span>
 
 **`PDO::ATTR_AUTOCOMMIT`** (<span class="type">int</span>)  
-<span class="simpara"> If this value is **`FALSE`**, PDO attempts to
+<span class="simpara"> If this value is **`false`**, PDO attempts to
 disable autocommit so that the connection begins a transaction. </span>
 
 **`PDO::ATTR_PREFETCH`** (<span class="type">int</span>)  
@@ -656,14 +656,14 @@ Upon successful connection to the database, an instance of the PDO class
 is returned to your script. The connection remains active for the
 lifetime of that PDO object. To close the connection, you need to
 destroy the object by ensuring that all remaining references to it are
-deleted—you do this by assigning **`NULL`** to the variable that holds
+deleted—you do this by assigning **`null`** to the variable that holds
 the object. If you don't do this explicitly, PHP will automatically
 close the connection when your script ends.
 
 > **Note**: <span class="simpara"> If there are still other references
 > to this PDO instance (such as from a PDOStatement instance, or from
 > other variables referencing the same PDO instance), these have to be
-> removed also (for instance, by assigning **`NULL`** to the variable
+> removed also (for instance, by assigning **`null`** to the variable
 > that references the PDOStatement). </span>
 
 **Example \#3 Closing a connection**
@@ -764,7 +764,7 @@ success of the code you run during the transaction.
 PDO only checks for transaction capabilities on driver level. If certain
 runtime conditions mean that transactions are unavailable, <span
 class="methodname">PDO::beginTransaction</span> will still return
-**`TRUE`** without error if the database server accepts the request to
+**`true`** without error if the database server accepts the request to
 start a transaction.
 
 An example of this would be trying to use transactions on MyISAM tables
@@ -1240,7 +1240,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">lastInsertId</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="type">PDOStatement</span> <span class="methodname">prepare</span>
@@ -1298,7 +1298,7 @@ boundary.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1358,7 +1358,7 @@ class="function">PDO::beginTransaction</span> starts a new transaction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1611,7 +1611,7 @@ reflect that error. You must call <span
 class="function">PDOStatement::errorCode</span> to return the error code
 for an operation performed on a particular statement handle.
 
-Returns **`NULL`** if no operation has been run on the database handle.
+Returns **`null`** if no operation has been run on the database handle.
 
 ### Examples
 
@@ -1663,7 +1663,7 @@ The array consists of at least the following fields:
 > **Note**:
 >
 > If the SQLSTATE error code is not set or there is no driver-specific
-> error, the elements following element 0 will be set to **`NULL`**.
+> error, the elements following element 0 will be set to **`null`**.
 
 <span class="function">PDO::errorInfo</span> only retrieves error
 information for operations performed directly on the database handle. If
@@ -1746,8 +1746,8 @@ were affected, <span class="function">PDO::exec</span> returns *0*.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -1929,7 +1929,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if a transaction is currently active, and **`FALSE`**
+Returns **`true`** if a transaction is currently active, and **`false`**
 if not.
 
 PDO::lastInsertId
@@ -1942,7 +1942,7 @@ Returns the ID of the last inserted row or sequence value
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">PDO::lastInsertId</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$name`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 Returns the ID of the last inserted row, or the last value from a
 sequence object, depending on the underlying driver. For example,
@@ -2056,7 +2056,7 @@ If the database server successfully prepares the statement, <span
 class="function">PDO::prepare</span> returns a <span
 class="classname">PDOStatement</span> object. If the database server
 cannot successfully prepare the statement, <span
-class="function">PDO::prepare</span> returns **`FALSE`** or emits <span
+class="function">PDO::prepare</span> returns **`false`** or emits <span
 class="classname">PDOException</span> (depending on
 <a href="/book/pdo.html#Errors%20and%20error%20handling" class="link">error handling</a>).
 
@@ -2178,7 +2178,7 @@ Data inside the query should be
 ### Return Values
 
 <span class="function">PDO::query</span> returns a PDOStatement object,
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 ### Examples
 
@@ -2265,7 +2265,7 @@ styles.
 ### Return Values
 
 Returns a quoted string that is theoretically safe to pass into an SQL
-statement. Returns **`FALSE`** if the driver does not support quoting in
+statement. Returns **`false`** if the driver does not support quoting in
 this way.
 
 ### Examples
@@ -2354,7 +2354,7 @@ boundary.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -2438,7 +2438,7 @@ driver specific attributes.
     -   *PDO::NULL\_NATURAL*: No conversion.
 
     -   *PDO::NULL\_EMPTY\_STRING*: Empty string is converted to
-        **`NULL`**.
+        **`null`**.
 
     -   *PDO::NULL\_TO\_STRING*: NULL is converted to an empty string.
 
@@ -2464,8 +2464,8 @@ driver specific attributes.
     prepared statements. Some drivers do not support native prepared
     statements or have limited support for them. Use this setting to
     force PDO to either always emulate prepared statements (if
-    **`TRUE`** and emulated prepares are supported by the driver), or to
-    try to use native prepared statements (if **`FALSE`**). It will
+    **`true`** and emulated prepares are supported by the driver), or to
+    try to use native prepared statements (if **`false`**). It will
     always fall back to emulating the prepared statement if the driver
     cannot successfully prepare the current query. Requires <span
     class="type">bool</span>.
@@ -2479,7 +2479,7 @@ driver specific attributes.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 Introduction
 ------------
@@ -2555,7 +2555,7 @@ class="methodparam">void</span> )
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">execute</span> (\[ <span
 class="methodparam"><span class="type">array</span>
-`$input_parameters`<span class="initializer"> = **`NULL`**</span></span>
+`$input_parameters`<span class="initializer"> = **`null`**</span></span>
 \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
@@ -2679,7 +2679,7 @@ Optional parameter(s) for the driver.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2792,7 +2792,7 @@ parameter from a stored procedure, you must explicitly set the length.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2883,7 +2883,7 @@ Explicit data type for the parameter using the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2965,7 +2965,7 @@ do {
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3314,7 +3314,7 @@ Executes a prepared statement
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">PDOStatement::execute</span> (\[ <span
 class="methodparam"><span class="type">array</span>
-`$input_parameters`<span class="initializer"> = **`NULL`**</span></span>
+`$input_parameters`<span class="initializer"> = **`null`**</span></span>
 \] )
 
 Execute the
@@ -3347,7 +3347,7 @@ an error is emitted.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3487,7 +3487,7 @@ must be one of the *PDO::FETCH\_\** constants, defaulting to value of
     column name and 0-indexed column number as returned in your result
     set
 
--   *PDO::FETCH\_BOUND*: returns **`TRUE`** and assigns the values of
+-   *PDO::FETCH\_BOUND*: returns **`true`** and assigns the values of
     the columns in your result set to the PHP variables to which they
     were bound with the <span
     class="function">PDOStatement::bindColumn</span> method
@@ -3546,7 +3546,7 @@ value specifies the row to fetch relative to the cursor position before
 ### Return Values
 
 The return value of this function on success depends on the fetch type.
-In all cases, **`FALSE`** is returned on failure.
+In all cases, **`false`** is returned on failure.
 
 ### Examples
 
@@ -3778,7 +3778,7 @@ is **`PDO::FETCH_CLASS`**.
 containing all of the remaining rows in the result set. The array
 represents each row as either an array of column values or an object
 with properties corresponding to each column name. An empty array is
-returned if there are zero results to fetch, or **`FALSE`** on failure.
+returned if there are zero results to fetch, or **`false`** on failure.
 
 Using this method to fetch large result sets will result in a heavy
 demand on system and possibly network resources. Rather than retrieving
@@ -4023,14 +4023,14 @@ Returns a single column from the next row of a result set
 class="methodparam"><span class="type">int</span> `$column_number`<span
 class="initializer"> = 0</span></span> \] )
 
-Returns a single column from the next row of a result set or **`FALSE`**
+Returns a single column from the next row of a result set or **`false`**
 if there are no more rows.
 
 > **Note**:
 >
 > <span class="function">PDOStatement::fetchColumn</span> should not be
 > used to retrieve boolean columns, as it is impossible to distinguish a
-> value of **`FALSE`** from there being no more rows to retrieve. Use
+> value of **`false`** from there being no more rows to retrieve. Use
 > <span class="function">PDOStatement::fetch</span> instead.
 
 ### Parameters
@@ -4044,7 +4044,7 @@ column.
 ### Return Values
 
 <span class="function">PDOStatement::fetchColumn</span> returns a single
-column from the next row of a result set or **`FALSE`** if there are no
+column from the next row of a result set or **`false`** if there are no
 more rows.
 
 **Warning**
@@ -4120,7 +4120,7 @@ Elements of this array are passed to the constructor.
 ### Return Values
 
 Returns an instance of the required class with property names that
-correspond to the column names or **`FALSE`** on failure.
+correspond to the column names or **`false`** on failure.
 
 ### See Also
 
@@ -4204,7 +4204,7 @@ representing the metadata for a single column:
 | *precision*         | The numeric precision of this column. Normally *0* for types other than floating point decimals.                                                                                                                       |
 | *pdo\_type*         | The type of this column as represented by the <a href="/book/pdo.html#Predefined%20Constants" class="link"><em>PDO::PARAM_*</em> constants</a>.                                                                        |
 
-Returns **`FALSE`** if the requested column does not exist in the result
+Returns **`false`** if the requested column does not exist in the result
 set, or if no result set exists.
 
 ### Examples
@@ -4265,7 +4265,7 @@ rowset.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4432,7 +4432,7 @@ set but only driver specific:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -4490,7 +4490,7 @@ Object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5676,7 +5676,7 @@ to obtain the **`PDO::ATTR_DRIVER_NAME`** attribute to check the driver,
 if your code can run against multiple drivers.
 
 **`PDO::MYSQL_ATTR_USE_BUFFERED_QUERY`** (<span class="type">int</span>)  
-<span class="simpara"> If this attribute is set to **`TRUE`** on a <span
+<span class="simpara"> If this attribute is set to **`true`** on a <span
 class="classname">PDOStatement</span>, the MySQL driver will use the
 buffered versions of the MySQL API. If you're writing portable code, you
 should use <span class="function">PDOStatement::fetchAll</span> instead.
@@ -5781,7 +5781,7 @@ This exists as of PHP 7.0.18 and PHP 7.1.4.
 **`PDO::MYSQL_ATTR_MULTI_STATEMENTS`** (<span class="type">int</span>)  
 Disables multi query execution in both <span
 class="function">PDO::prepare</span> and <span
-class="function">PDO::query</span> when set to **`FALSE`**.
+class="function">PDO::query</span> when set to **`false`**.
 
 Note, this constant can only be used in the `driver_options` array when
 constructing a new database handle.
@@ -6038,14 +6038,14 @@ The application name used in tracing.
 
 *ConnectionPooling*  
 Specifies whether the connection is assigned from a connection pool (1
-or **`TRUE`**) or not (0 or **`FALSE`**).
+or **`true`**) or not (0 or **`false`**).
 
 *Database*  
 The name of the database.
 
 *Encrypt*  
 Specifies whether the communication with SQL Server is encrypted (1 or
-**`TRUE`**) or unencrypted (0 or **`FALSE`**).
+**`true`**) or unencrypted (0 or **`false`**).
 
 *Failover\_Partner*  
 Specifies the server and instance of the database's mirror (if enabled
@@ -6061,7 +6061,7 @@ Disables or explicitly enables support for multiple active Result sets
 
 *QuotedId*  
 Specifies whether to use SQL-92 rules for quoted identifiers (1 or
-**`TRUE`**) or to use legacy Transact-SQL rules (0 or **`FALSE`**).
+**`true`**) or to use legacy Transact-SQL rules (0 or **`false`**).
 
 *Server*  
 The name of the database server.
@@ -6070,8 +6070,8 @@ The name of the database server.
 Specifies the path for the file used for trace data.
 
 *TraceOn*  
-Specifies whether ODBC tracing is enabled (1 or **`TRUE`**) or disabled
-(0 or **`FALSE`**) for the connection being established.
+Specifies whether ODBC tracing is enabled (1 or **`true`**) or disabled
+(0 or **`false`**) for the connection being established.
 
 *TransactionIsolation*  
 Specifies the transaction isolation level. The accepted values for this
@@ -6080,8 +6080,8 @@ PDO::SQLSRV\_TXN\_READ\_COMMITTED, PDO::SQLSRV\_TXN\_REPEATABLE\_READ,
 PDO::SQLSRV\_TXN\_SNAPSHOT, and PDO::SQLSRV\_TXN\_SERIALIZABLE.
 
 *TrustServerCertificate*  
-Specifies whether the client should trust (1 or **`TRUE`**) or reject (0
-or **`FALSE`**) a self-signed server certificate.
+Specifies whether the client should trust (1 or **`true`**) or reject (0
+or **`false`**) a self-signed server certificate.
 
 *WSID*  
 Specifies the name of the computer for tracing.
@@ -6294,9 +6294,9 @@ following values are supported:
 -   **`PDO::ODBC_SQL_USE_ODBC`**: always use the ODBC cursor library.
 
 **`PDO::ODBC_ATTR_ASSUME_UTF8`** (<span class="type">bool</span>)  
-Windows only. If **`TRUE`**, UTF-16 encoded character data (*CHAR*,
+Windows only. If **`true`**, UTF-16 encoded character data (*CHAR*,
 *VARCHAR* and *LONGVARCHAR*) is converted to UTF-8 when reading from or
-writing data to the database. If **`FALSE`** (the default), no character
+writing data to the database. If **`false`** (the default), no character
 encoding conversion is done.
 
 Runtime Configuration
@@ -6521,7 +6521,7 @@ List of fields to insert
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure.
+Returns **`true`** on success, or **`false`** on failure.
 
 PDO::pgsqlCopyFromFile
 ======================
@@ -6564,7 +6564,7 @@ List of fields to insert
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure.
+Returns **`true`** on success, or **`false`** on failure.
 
 PDO::pgsqlCopyToArray
 =====================
@@ -6603,7 +6603,7 @@ List of fields to export
 
 ### Return Values
 
-Returns an array of rows, or **`FALSE`** on failure.
+Returns an array of rows, or **`false`** on failure.
 
 PDO::pgsqlCopyToFile
 ====================
@@ -6646,7 +6646,7 @@ List of fields to insert
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure.
+Returns **`true`** on success, or **`false`** on failure.
 
 PDO::pgsqlGetNotify
 ===================
@@ -6677,7 +6677,7 @@ The length of time to wait for a response, in milliseconds.
 ### Return Values
 
 If one or more notifications is pending, returns a single row, with
-fields *message* and *pid*, otherwise returns **`FALSE`**.
+fields *message* and *pid*, otherwise returns **`false`**.
 
 PDO::pgsqlGetPid
 ================
@@ -6734,7 +6734,7 @@ storage for optimal row size.
 ### Return Values
 
 Returns the OID of the newly created large object on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -6804,7 +6804,7 @@ stream for writing.
 
 ### Return Values
 
-Returns a stream resource on success or **`FALSE`** on failure.
+Returns a stream resource on success or **`false`** on failure.
 
 ### Examples
 
@@ -6859,7 +6859,7 @@ A large object identifier
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7029,7 +7029,7 @@ class="methodparam"><span class="type">int</span> `$rownumber`</span> ,
 class="type">mixed</span> `$values`</span> )
 
 `context`  
-**`NULL`** for the first row; on subsequent rows it will have the value
+**`null`** for the first row; on subsequent rows it will have the value
 that was previously returned from the step function; you should use this
 to maintain the aggregate state.
 
@@ -7075,7 +7075,7 @@ predetermined number of arguments.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7202,7 +7202,7 @@ class="methodparam"><span class="type">string</span> `$string1`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7307,7 +7307,7 @@ single SQL statement.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

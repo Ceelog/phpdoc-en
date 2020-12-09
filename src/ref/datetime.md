@@ -28,8 +28,8 @@ The year is between 1 and 32767 inclusive.
 
 ### Return Values
 
-Returns **`TRUE`** if the date given is valid; otherwise returns
-**`FALSE`**.
+Returns **`true`** if the date given is valid; otherwise returns
+**`false`**.
 
 ### Examples
 
@@ -232,8 +232,8 @@ or *Europe/Lisbon*. The list of valid identifiers is available in the
 
 ### Return Values
 
-This function returns **`FALSE`** if the `timezoneID` isn't valid, or
-**`TRUE`** otherwise.
+This function returns **`false`** if the `timezoneID` isn't valid, or
+**`true`** otherwise.
 
 ### Examples
 
@@ -438,7 +438,7 @@ class="function">DateTimeImmutable::\_\_construct</span>.
 ### Return Values
 
 Returns <span class="type">array</span> with information about the
-parsed date/time on success or **`FALSE`** on failure.
+parsed date/time on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -570,7 +570,7 @@ Longitude in degrees.
 
 ### Return Values
 
-Returns array on success or **`FALSE`** on failure. The structure of the
+Returns array on success or **`false`** on failure. The structure of the
 array is detailed in the following list:
 
 *sunrise*  
@@ -609,9 +609,9 @@ It starts at *sunset*. </span>
 <span class="simpara"> The end of the astronomical dusk (zenith angle =
 108°). It starts at *nautical\_twilight\_end*. </span>
 
-The values of the array elements are either UNIX timestamps, **`FALSE`**
+The values of the array elements are either UNIX timestamps, **`false`**
 if the sun is below the respective zenith for the whole day, or
-**`TRUE`** if the sun is above the respective zenith for the whole day.
+**`true`** if the sun is above the respective zenith for the whole day.
 
 ### Examples
 
@@ -770,7 +770,7 @@ Specified in hours. The `utcOffset` is ignored, if `returnFormat` is
 ### Return Values
 
 Returns the sunrise time in a specified `returnFormat` on success or
-**`FALSE`** on failure. One potential reason for failure is that the sun
+**`false`** on failure. One potential reason for failure is that the sun
 does not rise at all, which happens inside the polar circles for part of
 the year.
 
@@ -893,7 +893,7 @@ See also <span class="function">date\_default\_timezone\_set</span>
 ### Return Values
 
 Returns the sunset time in a specified `returnFormat` on success or
-**`FALSE`** on failure. One potential reason for failure is that the sun
+**`false`** on failure. One potential reason for failure is that the sun
 does not set at all, which happens inside the polar circles for part of
 the year.
 
@@ -1021,7 +1021,7 @@ class="function">time</span>.
 ### Return Values
 
 Returns a formatted date string. If a non-numeric value is used for
-`timestamp`, **`FALSE`** is returned and an **`E_WARNING`** level error
+`timestamp`, **`false`** is returned and an **`E_WARNING`** level error
 is emitted.
 
 ### Errors/Exceptions
@@ -1244,7 +1244,7 @@ Get current time
 <span class="type">mixed</span> <span
 class="methodname">gettimeofday</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$returnFloat`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 This is an interface to gettimeofday(2). It returns an associative array
 containing the data returned from the system call.
@@ -1252,7 +1252,7 @@ containing the data returned from the system call.
 ### Parameters
 
 `returnFloat`  
-When set to **`TRUE`**, a float instead of an array is returned.
+When set to **`true`**, a float instead of an array is returned.
 
 ### Return Values
 
@@ -1324,7 +1324,7 @@ class="function">time</span>.
 ### Return Values
 
 Returns a formatted date string. If a non-numeric value is used for
-`timestamp`, **`FALSE`** is returned and an **`E_WARNING`** level error
+`timestamp`, **`false`** is returned and an **`E_WARNING`** level error
 is emitted.
 
 ### Examples
@@ -1600,7 +1600,7 @@ class="methodname">localtime</span> (\[ <span class="methodparam"><span
 class="type">int</span> `$timestamp`<span class="initializer"> =
 time()</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$associative`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 The <span class="function">localtime</span> function returns an array
 identical to that of the structure returned by the C function call.
@@ -1614,8 +1614,8 @@ is not given. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 `associative`  
-If set to **`FALSE`** or not supplied then the array is returned as a
-regular, numerically indexed array. If the argument is set to **`TRUE`**
+If set to **`false`** or not supplied then the array is returned as a
+regular, numerically indexed array. If the argument is set to **`true`**
 then <span class="function">localtime</span> returns an associative
 array containing all the different elements of the structure returned by
 the C function call to localtime. The names of the different keys of the
@@ -1699,7 +1699,7 @@ Return current Unix timestamp with microseconds
 <span class="type">mixed</span> <span
 class="methodname">microtime</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$getAsFloat`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">microtime</span> returns the current Unix
 timestamp with microseconds. This function is only available on
@@ -1711,7 +1711,7 @@ is recommended.
 ### Parameters
 
 `getAsFloat`  
-If used and set to **`TRUE`**, <span class="function">microtime</span>
+If used and set to **`true`**, <span class="function">microtime</span>
 will return a <span class="type">float</span> instead of a <span
 class="type">string</span>, as described in the return values section
 below.
@@ -1724,7 +1724,7 @@ number of seconds since the Unix epoch (0:00:00 January 1,1970 GMT), and
 *msec* measures microseconds that have elapsed since *sec* and is also
 expressed in seconds.
 
-If `getAsFloat` is set to **`TRUE`**, then <span
+If `getAsFloat` is set to **`true`**, then <span
 class="function">microtime</span> returns a <span
 class="type">float</span>, which represents the current time in seconds
 since the Unix epoch accurate to the nearest microsecond.
@@ -1902,7 +1902,7 @@ day.
 
 <span class="function">mktime</span> returns the Unix timestamp of the
 arguments given. If the arguments are invalid, the function returns
-**`FALSE`**.
+**`false`**.
 
 ### Errors/Exceptions
 
@@ -2100,7 +2100,7 @@ See also <span class="function">date\_default\_timezone\_set</span>
 As the output is dependent upon the underlying C library, some
 conversion specifiers are not supported. On Windows, supplying unknown
 conversion specifiers will result in 5 **`E_WARNING`** messages and
-return **`FALSE`**. On other operating systems you may not get any
+return **`false`**. On other operating systems you may not get any
 **`E_WARNING`** messages and the output may contain the conversion
 specifiers unconverted.
 
@@ -2366,7 +2366,7 @@ class="type">string</span> `$date`</span> , <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
 <span class="function">strptime</span> returns an array with the `date`
-parsed, or **`FALSE`** on error.
+parsed, or **`false`** on error.
 
 Month and weekday names and other language dependent strings respect the
 current locale set with <span class="function">setlocale</span>
@@ -2391,7 +2391,7 @@ class="function">strftime</span> page.
 
 ### Return Values
 
-Returns an array or **`FALSE`** on failure.
+Returns an array or **`false`** on failure.
 
 | parameters   | Description                                                           |
 |--------------|-----------------------------------------------------------------------|
@@ -2513,7 +2513,7 @@ dates.
 
 ### Return Values
 
-Returns a timestamp on success, **`FALSE`** otherwise.
+Returns a timestamp on success, **`false`** otherwise.
 
 ### Errors/Exceptions
 
@@ -2721,7 +2721,7 @@ and `isDST`.
 
 ### Return Values
 
-Returns time zone name on success or **`FALSE`** on failure.
+Returns time zone name on success or **`false`** on failure.
 
 ### Examples
 

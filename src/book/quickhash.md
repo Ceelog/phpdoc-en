@@ -250,7 +250,7 @@ The key of the entry to add.
 
 ### Return Values
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### Examples
@@ -367,7 +367,7 @@ The key of the entry to delete.
 
 ### Return Values
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### Examples
@@ -415,7 +415,7 @@ The key of the entry to check for whether it exists in the set.
 
 ### Return Values
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 ### Examples
@@ -894,7 +894,7 @@ will be used.
 
 ### Return Values
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### Examples
@@ -1022,7 +1022,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### Parameters
@@ -1032,7 +1032,7 @@ The key of the entry to delete.
 
 ### Return Values
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### Examples
@@ -1080,7 +1080,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### Return Values
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 ### Examples
@@ -1140,7 +1140,7 @@ The key of the entry to add.
 
 ### Return Values
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### Examples
@@ -1562,7 +1562,7 @@ The new value to update the entry with.
 
 ### Return Values
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### Examples
@@ -1725,7 +1725,7 @@ The value of the entry to add.
 
 ### Return Values
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### Examples
@@ -1842,7 +1842,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### Parameters
@@ -1852,7 +1852,7 @@ The key of the entry to delete.
 
 ### Return Values
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### Examples
@@ -1904,7 +1904,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### Return Values
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 QuickHashStringIntHash::get
@@ -1927,7 +1927,7 @@ The key of the entry to add.
 
 ### Return Values
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### Examples
@@ -2374,7 +2374,7 @@ converted to a string automatically if possible.
 
 ### Return Values
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### Examples
@@ -2572,7 +2572,7 @@ converted to a string automatically if possible.
 
 ### Return Values
 
-**`TRUE`** when the entry was added, and **`FALSE`** if the entry was
+**`true`** when the entry was added, and **`false`** if the entry was
 not added.
 
 ### Examples
@@ -2694,7 +2694,7 @@ entry was deleted or not. Associated memory structures will not be freed
 immediately, but rather when the hash itself is freed.
 
 Elements can not be deleted when the hash is used in an iterator. The
-method will not throw an exception, but simply return **`FALSE`** like
+method will not throw an exception, but simply return **`false`** like
 would happen with any other deletion failure.
 
 ### Parameters
@@ -2704,7 +2704,7 @@ The key of the entry to delete.
 
 ### Return Values
 
-**`TRUE`** when the entry was deleted, and **`FALSE`** if the entry was
+**`true`** when the entry was deleted, and **`false`** if the entry was
 not deleted.
 
 ### Examples
@@ -2752,7 +2752,7 @@ The key of the entry to check for whether it exists in the hash.
 
 ### Return Values
 
-Returns **`TRUE`** when the entry was found, or **`FALSE`** when the
+Returns **`true`** when the entry was found, or **`false`** when the
 entry is not found.
 
 QuickHashIntStringHash::get
@@ -2775,7 +2775,7 @@ The key of the entry to add.
 
 ### Return Values
 
-The value if the key exists, or **`NULL`** if the key wasn't part of the
+The value if the key exists, or **`null`** if the key wasn't part of the
 hash.
 
 ### Examples
@@ -3214,7 +3214,7 @@ converted to a string automatically if possible.
 
 ### Return Values
 
-**`TRUE`** when the entry was found and updated, and **`FALSE`** if the
+**`true`** when the entry was found and updated, and **`false`** if the
 entry was not part of the hash already.
 
 ### Examples

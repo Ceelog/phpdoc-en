@@ -37,7 +37,7 @@ crucial for writing correct PHP code.
 > are not what it expects, such as passing an <span
 > class="type">array</span> where a <span class="type">string</span> is
 > expected, the return value of the function is undefined. In this case
-> it will likely return **`NULL`** but this is just a convention, and
+> it will likely return **`null`** but this is just a convention, and
 > cannot be relied upon. </span>
 
 ### See Also

@@ -20,7 +20,7 @@ class="type">int</span> `$flags`<span class="initializer"> =
 **`FILEINFO_NONE`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">resource</span><span
 class="type">null</span></span> `$context`<span class="initializer"> =
-**`NULL`**</span></span> \]\] )
+**`null`**</span></span> \]\] )
 
 Object oriented style
 
@@ -32,7 +32,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 `$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function is used to get information about binary data in a string.
 
@@ -52,7 +52,7 @@ One or disjunction of more
 
 ### Return Values
 
-Returns a textual description of the `string` argument, or **`FALSE`**
+Returns a textual description of the `string` argument, or **`false`**
 if an error occurred.
 
 ### Changelog
@@ -101,7 +101,7 @@ Fileinfo resource returned by <span class="function">finfo\_open</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 finfo\_file
 ===========
@@ -124,7 +124,7 @@ class="methodparam"><span class="type">string</span> `$filename`</span>
 `$flags`<span class="initializer"> = **`FILEINFO_NONE`**</span></span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Object oriented style
 
@@ -136,7 +136,7 @@ class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`FILEINFO_NONE`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$context`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$context`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function is used to get information about a file.
 
@@ -159,7 +159,7 @@ For a description of *contexts*, refer to
 ### Return Values
 
 Returns a textual description of the contents of the `filename`
-argument, or **`FALSE`** if an error occurred.
+argument, or **`false`** if an error occurred.
 
 ### Changelog
 
@@ -234,13 +234,13 @@ Name of a magic database file, usually something like
 variable is used. If the environment variable isn't set, then PHP's
 bundled magic database will be used.
 
-Passing **`NULL`** or an empty string will be equivalent to the default
+Passing **`null`** or an empty string will be equivalent to the default
 value.
 
 ### Return Values
 
 (Procedural style only) Returns a magic database resource on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Notes
 
@@ -342,7 +342,7 @@ One or disjunction of more
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 mime\_content\_type
 ===================
@@ -369,7 +369,7 @@ Path to the tested file.
 ### Return Values
 
 Returns the content type in MIME format, like *text/plain* or
-*application/octet-stream*, or **`FALSE`** on failure.
+*application/octet-stream*, or **`false`** on failure.
 
 ### Errors/Exceptions
 

@@ -35,7 +35,7 @@ for a detailed description of these constants.
 
 ### Return Values
 
-Returns a chunk of compressed data, or **`FALSE`** on failure.
+Returns a chunk of compressed data, or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -112,7 +112,7 @@ no preset dictionary).
 ### Return Values
 
 Returns a deflate context resource (*zlib.deflate*) on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -151,7 +151,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -213,7 +213,7 @@ One of **`ZLIB_ENCODING_*`** constants.
 
 ### Return Values
 
-The compressed string or **`FALSE`** if an error occurred.
+The compressed string or **`false`** if an error occurred.
 
 ### Examples
 
@@ -259,7 +259,7 @@ The maximum length of data to decode.
 
 ### Return Values
 
-The decoded string, or **`FALSE`** if an error occurred.
+The decoded string, or **`false`** if an error occurred.
 
 ### See Also
 
@@ -303,7 +303,7 @@ One of **`ZLIB_ENCODING_*`** constants.
 
 ### Return Values
 
-The deflated string or **`FALSE`** if an error occurred.
+The deflated string or **`false`** if an error occurred.
 
 ### Examples
 
@@ -370,7 +370,7 @@ checksum.
 
 ### Return Values
 
-The encoded string, or **`FALSE`** if an error occurred.
+The encoded string, or **`false`** if an error occurred.
 
 ### Examples
 
@@ -419,8 +419,8 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if the gz-file pointer is at EOF or an error occurs;
-otherwise returns **`FALSE`**.
+Returns **`true`** if the gz-file pointer is at EOF or an error occurs;
+otherwise returns **`false`**.
 
 ### Examples
 
@@ -467,7 +467,7 @@ too.
 ### Return Values
 
 An array containing the file, one line per cell, empty lines included,
-and with newlines still attached, or **`FALSE`** on failure.
+and with newlines still attached, or **`false`** on failure.
 
 ### Examples
 
@@ -510,7 +510,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### Return Values
 
-The uncompressed character or **`FALSE`** on EOF (unlike <span
+The uncompressed character or **`false`** on EOF (unlike <span
 class="function">gzeof</span>).
 
 ### Examples
@@ -561,7 +561,7 @@ The length of data to get.
 
 ### Return Values
 
-The uncompressed string, or **`FALSE`** on error.
+The uncompressed string, or **`false`** on error.
 
 ### Examples
 
@@ -621,7 +621,7 @@ stripped.
 
 ### Return Values
 
-The uncompressed and stripped string, or **`FALSE`** on error.
+The uncompressed and stripped string, or **`false`** on error.
 
 ### Examples
 
@@ -670,7 +670,7 @@ The maximum length of data to decode.
 
 ### Return Values
 
-The original uncompressed data or **`FALSE`** on error.
+The original uncompressed data or **`false`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
@@ -740,7 +740,7 @@ Returns a file pointer to the file opened, after that, everything you
 read from this file descriptor will be transparently decompressed and
 what you write gets compressed.
 
-If the open fails, the function returns **`FALSE`**.
+If the open fails, the function returns **`false`**.
 
 ### Examples
 
@@ -792,7 +792,7 @@ successfully opened by <span class="function">gzopen</span>.
 ### Return Values
 
 The number of uncompressed characters read from `gz` and passed through
-to the input, or **`FALSE`** on error.
+to the input, or **`false`** on error.
 
 ### Examples
 
@@ -843,13 +843,13 @@ The number of bytes to read.
 
 ### Return Values
 
-The data that have been read, or **`FALSE`** on failure.
+The data that have been read, or **`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                     |
 |---------|---------------------------------------------------------------------------------|
-| 7.4.0   | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
+| 7.4.0   | This functions returns **`false`** on failure now; previously *0* was returned. |
 
 ### Examples
 
@@ -896,7 +896,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -989,7 +989,7 @@ successfully opened by <span class="function">gzopen</span>.
 
 ### Return Values
 
-The position of the file pointer or **`FALSE`** if an error occurs.
+The position of the file pointer or **`false`** if an error occurs.
 
 ### See Also
 
@@ -1023,7 +1023,7 @@ The maximum length of data to decode.
 
 ### Return Values
 
-The original uncompressed data or **`FALSE`** on error.
+The original uncompressed data or **`false`** on error.
 
 The function will return an error if the uncompressed data is more than
 32768 times the length of the compressed input `data` or more than the
@@ -1062,7 +1062,7 @@ class="type">false</span></span> <span class="methodname">gzwrite</span>
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$length`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">gzwrite</span> writes the contents of `data` to
 the given gz-file.
@@ -1091,14 +1091,14 @@ stop after `length` (uncompressed) bytes have been written or the end of
 ### Return Values
 
 Returns the number of (uncompressed) bytes written to the given gz-file
-stream, or **`FALSE`** on failure.
+stream, or **`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                     |
 |---------|---------------------------------------------------------------------------------|
 | 8.0.0   | `length` is nullable now; previously, the default was *0*.                      |
-| 7.4.0   | This functions returns **`FALSE`** on failure now; previously *0* was returned. |
+| 7.4.0   | This functions returns **`false`** on failure now; previously *0* was returned. |
 
 ### Examples
 
@@ -1158,7 +1158,7 @@ for a detailed description of these constants.
 
 ### Return Values
 
-Returns a chunk of uncompressed data, or **`FALSE`** on failure.
+Returns a chunk of uncompressed data, or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1199,7 +1199,7 @@ available.
 
 ### Return Values
 
-Returns number of bytes read so far or **`FALSE`** on failure.
+Returns number of bytes read so far or **`false`** on failure.
 
 ### Changelog
 
@@ -1227,7 +1227,7 @@ Usually returns either **`ZLIB_OK`** or **`ZLIB_STREAM_END`**.
 
 ### Return Values
 
-Returns decompression status or **`FALSE`** on failure.
+Returns decompression status or **`false`** on failure.
 
 ### Changelog
 
@@ -1280,7 +1280,7 @@ no preset dictionary).
 ### Return Values
 
 Returns an inflate context resource (*zlib.inflate*) on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1334,7 +1334,7 @@ too.
 ### Return Values
 
 Returns the number of (uncompressed) bytes read from the file on
-success, or **`FALSE`** on failure
+success, or **`false`** on failure
 
 ### Errors/Exceptions
 
@@ -1375,7 +1375,7 @@ available.
 
 ### Return Values
 
-Returns the uncompressed data, or **`FALSE`** on failure.
+Returns the uncompressed data, or **`false`** on failure.
 
 ### See Also
 
@@ -1452,7 +1452,7 @@ Returns the coding type used for output compression.
 
 ### Return Values
 
-Possible return values are *gzip*, *deflate*, or **`FALSE`**.
+Possible return values are *gzip*, *deflate*, or **`false`**.
 
 ### See Also
 

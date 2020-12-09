@@ -387,9 +387,9 @@ abstracted module.
 
 ### Return Values
 
-Returns an object on success, **`FALSE`** on error. If a connection has
+Returns an object on success, **`false`** on error. If a connection has
 been made but the database could not be selected, the connection is
-closed and **`FALSE`** is returned.
+closed and **`false`** is returned.
 
 The returned `object` has three properties:
 
@@ -520,7 +520,7 @@ The string to escape.
 ### Return Values
 
 Returns the text, escaped where necessary (such as quotes, backslashes
-etc). On error, **`NULL`** is returned.
+etc). On error, **`null`** is returned.
 
 ### Examples
 
@@ -863,7 +863,7 @@ greater than the second.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

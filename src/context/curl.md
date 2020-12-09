@@ -46,7 +46,7 @@ Defaults to *20*.
 `curl_verify_ssl_host` <span class="type">bool</span>  
 Verify the host.
 
-Defaults to **`FALSE`**
+Defaults to **`false`**
 
 > **Note**:
 >
@@ -55,7 +55,7 @@ Defaults to **`FALSE`**
 `curl_verify_ssl_peer` <span class="type">bool</span>  
 Require verification of SSL certificate used.
 
-Defaults to **`FALSE`**
+Defaults to **`false`**
 
 > **Note**:
 >

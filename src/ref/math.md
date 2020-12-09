@@ -953,7 +953,7 @@ The numeric value to round
 class="function">floor</span> is still of type <span
 class="type">float</span> because the value range of <span
 class="type">float</span> is usually bigger than that of <span
-class="type">int</span>. This function returns **`FALSE`** in case of an
+class="type">int</span>. This function returns **`false`** in case of an
 error (e.g. passing an array).
 
 ### Examples
@@ -1228,8 +1228,8 @@ The value to check
 
 ### Return Values
 
-**`TRUE`** if `val` is a legal finite number within the allowed range
-for a PHP float on this platform, else **`FALSE`**.
+**`true`** if `val` is a legal finite number within the allowed range
+for a PHP float on this platform, else **`false`**.
 
 ### See Also
 
@@ -1247,7 +1247,7 @@ Finds whether a value is infinite
 class="methodname">is\_infinite</span> ( <span class="methodparam"><span
 class="type">float</span> `$val`</span> )
 
-Returns **`TRUE`** if `val` is infinite (positive or negative), like the
+Returns **`true`** if `val` is infinite (positive or negative), like the
 result of *log(0)* or any value too big to fit into a float on this
 platform.
 
@@ -1258,7 +1258,7 @@ The value to check
 
 ### Return Values
 
-**`TRUE`** if `val` is infinite, else **`FALSE`**.
+**`true`** if `val` is infinite, else **`false`**.
 
 ### See Also
 
@@ -1285,7 +1285,7 @@ The value to check
 
 ### Return Values
 
-Returns **`TRUE`** if `val` is 'not a number', else **`FALSE`**.
+Returns **`true`** if `val` is 'not a number', else **`false`**.
 
 ### Examples
 
@@ -1497,7 +1497,7 @@ values.
 different types evaluate as equal (e.g. *0* and *'abc'*) the first
 provided to the function will be returned.
 
-If an empty array is passed, then **`FALSE`** will be returned and an
+If an empty array is passed, then **`false`** will be returned and an
 **`E_WARNING`** error will be emitted.
 
 ### Examples
@@ -1601,7 +1601,7 @@ values.
 different types evaluate as equal (e.g. *0* and *'abc'*) the first
 provided to the function will be returned.
 
-If an empty array is passed, then **`FALSE`** will be returned and an
+If an empty array is passed, then **`false`** will be returned and an
 **`E_WARNING`** error will be emitted.
 
 ### Examples
@@ -1745,7 +1745,7 @@ class="function">mt\_getrandmax</span>)
 ### Return Values
 
 A random integer value between `min` (or 0) and `max` (or <span
-class="function">mt\_getrandmax</span>, inclusive), or **`FALSE`** if
+class="function">mt\_getrandmax</span>, inclusive), or **`false`** if
 `max` is less than `min`.
 
 ### Changelog
@@ -2100,7 +2100,7 @@ class="function">openssl\_random\_pseudo\_bytes</span> instead.
 > class="function">rand</span> uses the same random number generator as
 > <span class="function">mt\_rand</span>. To preserve backwards
 > compatibility <span class="function">rand</span> allows `max` to be
-> smaller than `min` as opposed to returning **`FALSE`** as <span
+> smaller than `min` as opposed to returning **`false`** as <span
 > class="function">mt\_rand</span>.</span>
 
 ### Parameters

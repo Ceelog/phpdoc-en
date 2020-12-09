@@ -100,7 +100,7 @@ Returns the number of fields (columns) in the opened filePro database.
 ### Return Values
 
 Returns the number of fields in the opened filePro database, or
-**`FALSE`** on errors.
+**`false`** on errors.
 
 ### See Also
 
@@ -127,7 +127,7 @@ The field number.
 
 ### Return Values
 
-Returns the name of the field as a string, or **`FALSE`** on errors.
+Returns the name of the field as a string, or **`false`** on errors.
 
 filepro\_fieldtype
 ==================
@@ -150,7 +150,7 @@ The field number.
 
 ### Return Values
 
-Returns the edit type of the field as a string, or **`FALSE`** on
+Returns the edit type of the field as a string, or **`false`** on
 errors.
 
 filepro\_fieldwidth
@@ -174,7 +174,7 @@ The field number.
 
 ### Return Values
 
-Returns the width of the field as a integer, or **`FALSE`** on errors.
+Returns the width of the field as a integer, or **`false`** on errors.
 
 filepro\_retrieve
 =================
@@ -204,7 +204,7 @@ fields minus one (0..<span class="function">filepro\_fieldcount</span> -
 
 ### Return Values
 
-Returns the specified data, or **`FALSE`** on errors.
+Returns the specified data, or **`false`** on errors.
 
 filepro\_rowcount
 =================
@@ -222,7 +222,7 @@ Returns the number of rows in the opened filePro database.
 ### Return Values
 
 Returns the number of rows in the opened filePro database, or
-**`FALSE`** on errors.
+**`false`** on errors.
 
 ### See Also
 
@@ -251,7 +251,7 @@ The map directory.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 **Table of Contents**
 

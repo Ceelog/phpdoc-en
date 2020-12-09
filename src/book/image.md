@@ -243,3 +243,19 @@ Image Processing and GD
         to WBMP image file
     -   [png2wbmp](/ref/image.html#png2wbmp) — Convert PNG image file to
         WBMP image file
+-   [GdImage](/class/gdimage.html) — The GdImage class
+
+Introduction
+------------
+
+A fully opaque class which replaces *gd* resources as of PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**GdImage**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**GdImage** </span> {
+
+}

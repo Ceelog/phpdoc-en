@@ -591,7 +591,7 @@ that is, if the pattern is constrained to match only at the start of the
 subject, it is said to be an "anchored" pattern. (There are also other
 constructs that can cause a pattern to be anchored.)
 
-A dollar character (*$*) is an assertion which is **`TRUE`** only if the
+A dollar character (*$*) is an assertion which is **`true`** only if the
 current matching point is at the end of the subject string, or
 immediately before a newline character that is the last character in the
 string (by default). Dollar (*$*) need not be the last character of the
@@ -1110,7 +1110,7 @@ semicolon, but does not include the semicolon in the match, and
 "bar". Note that the apparently similar pattern *(?!foo)bar* does not
 find an occurrence of "bar" that is preceded by something other than
 "foo"; it finds any occurrence of "bar" whatsoever, because the
-assertion (?!foo) is always **`TRUE`** when the next three characters
+assertion (?!foo) is always **`true`** when the next three characters
 are "bar". A lookbehind assertion is needed to achieve this effect.
 
 *Lookbehind* assertions start with (?\<= for positive assertions and
@@ -1271,7 +1271,7 @@ character is present, sets it as the first captured substring. The
 second part matches one or more characters that are not parentheses. The
 third part is a conditional subpattern that tests whether the first set
 of parentheses matched or not. If they did, that is, if subject started
-with an opening parenthesis, the condition is **`TRUE`**, and so the
+with an opening parenthesis, the condition is **`true`**, and so the
 yes-pattern is executed and a closing parenthesis is required.
 Otherwise, since no-pattern is not present, the subpattern matches
 nothing. In other words, this pattern matches a sequence of
@@ -1642,7 +1642,7 @@ The differences described here are with respect to Perl 5.005.
     matching "aabbaa" against /^(aa(bb)?)+$/ leaves $2 unset. However,
     if the pattern is changed to /^(aa(b(b))?)+$/ then $2 (and $3) get
     set. In Perl 5.004 $2 is set in both cases, and that is also
-    **`TRUE`** of PCRE. If in the future Perl changes to a consistent
+    **`true`** of PCRE. If in the future Perl changes to a consistent
     state that is different, PCRE may change to follow. </span>
 
 9.  <span class="simpara"> Another as yet unresolved discrepancy is that

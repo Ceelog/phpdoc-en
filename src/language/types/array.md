@@ -262,12 +262,12 @@ list(, $secondElement) = getArray();
 > Attempting to access an array key which has not been defined is the
 > same as accessing any other undefined variable: an
 > **`E_NOTICE`**-level error message will be issued, and the result will
-> be **`NULL`**.
+> be **`null`**.
 
 > **Note**:
 >
 > Array dereferencing a scalar value which is not a <span
-> class="type">string</span> yields **`NULL`**. Prior to PHP 7.4.0, that
+> class="type">string</span> yields **`null`**. Prior to PHP 7.4.0, that
 > did not issue an error message. As of PHP 7.4.0, this issues
 > **`E_NOTICE`**; as of PHP 8.0.0, this issues **`E_WARNING`**.
 
@@ -629,7 +629,7 @@ var_dump((array) new B());
 The above will appear to have two keys named 'AA', although one of them
 is actually named '\\0A\\0A'.
 
-Converting **`NULL`** to an <span class="type">array</span> results in
+Converting **`null`** to an <span class="type">array</span> results in
 an empty <span class="type">array</span>.
 
 ### Comparing

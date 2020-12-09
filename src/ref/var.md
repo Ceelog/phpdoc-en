@@ -201,7 +201,7 @@ Determine whether a variable is empty
 
 Determine whether a variable is considered to be empty. A variable is
 considered empty if it does not exist or if its value equals
-**`FALSE`**. <span class="function">empty</span> does not generate a
+**`false`**. <span class="function">empty</span> does not generate a
 warning if the variable does not exist.
 
 ### Parameters
@@ -222,18 +222,10 @@ class="function">empty</span> is essentially the concise equivalent to
 
 ### Return Values
 
-Returns **`FALSE`** if `var` exists and has a non-empty, non-zero value.
-Otherwise returns **`TRUE`**.
-
-The following values are considered to be empty:
-
--   *""* (an empty string)
--   *0* (0 as an integer)
--   *0.0* (0 as a float)
--   *"0"* (0 as a string)
--   **`NULL`**
--   **`FALSE`**
--   *array()* (an empty array)
+Returns **`false`** if `var` exists and has a non-empty, non-zero value,
+aka falsey, see
+<a href="/language/types/boolean.html#language.types.boolean.casting" class="link">conversion to boolean</a>.
+Otherwise returns **`true`**.
 
 ### Examples
 
@@ -505,7 +497,7 @@ If the given `handle` is a resource, this function will return a string
 representing its type. If the type is not identified by this function,
 the return value will be the string *Unknown*.
 
-This function will return **`NULL`** and generate an error if `handle`
+This function will return **`null`** and generate an error if `handle`
 is not a <span class="type">resource</span>.
 
 ### Examples
@@ -733,8 +725,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is an <span class="type">array</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is an <span class="type">array</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -785,8 +777,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a <span class="type">bool</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is a <span class="type">bool</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -828,7 +820,7 @@ Verify that the contents of a variable can be called as a function
 class="methodname">is\_callable</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$var`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$syntax_only`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
 `&$callable_name`</span> \]\] )
 
@@ -840,7 +832,7 @@ Verify that a value is a <span class="type">callable</span>.
 The value to check
 
 `syntax_only`  
-If set to **`TRUE`** the function only verifies that `var` might be a
+If set to **`true`** the function only verifies that `var` might be a
 function or method. It will only reject simple variables that are not
 strings, or an array that does not have a valid structure to be used as
 a callback. The valid ones are supposed to have only 2 entries, the
@@ -854,7 +846,7 @@ the case.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is callable, **`FALSE`** otherwise.
+Returns **`true`** if `var` is callable, **`false`** otherwise.
 
 ### Examples
 
@@ -958,7 +950,7 @@ The value to check
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is countable, **`FALSE`** otherwise.
+Returns **`true`** if `var` is countable, **`false`** otherwise.
 
 ### Changelog
 
@@ -1020,8 +1012,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a <span class="type">float</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is a <span class="type">float</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1081,8 +1073,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is an <span class="type">int</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is an <span class="type">int</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1151,7 +1143,7 @@ The value to check
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is iterable, **`FALSE`** otherwise.
+Returns **`true`** if `var` is iterable, **`false`** otherwise.
 
 ### Examples
 
@@ -1185,7 +1177,7 @@ This function is an alias of: <span class="function">is\_int</span>.
 is\_null
 ========
 
-Finds whether a variable is **`NULL`**
+Finds whether a variable is **`null`**
 
 ### Description
 
@@ -1193,7 +1185,7 @@ Finds whether a variable is **`NULL`**
 ( <span class="methodparam"><span class="type">mixed</span>
 `$var`</span> )
 
-Finds whether the given variable is **`NULL`**.
+Finds whether the given variable is **`null`**.
 
 ### Parameters
 
@@ -1202,8 +1194,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is <span class="type">null</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is <span class="type">null</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1227,7 +1219,7 @@ var_dump(is_null($inexistent), is_null($foo));
 ### See Also
 
 -   The
-    <a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>NULL</code></strong></a>
+    <a href="/language/types/null.html#language.types.null.syntax" class="link"><strong><code>null</code></strong></a>
     type
 -   <span class="function">isset</span>
 -   <span class="function">is\_bool</span>
@@ -1259,9 +1251,9 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a number or a
+Returns **`true`** if `var` is a number or a
 <a href="/language/types/numeric-strings.html" class="link">numeric string</a>,
-**`FALSE`** otherwise.
+**`false`** otherwise.
 
 ### Examples
 
@@ -1346,8 +1338,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is an <span class="type">object</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is an <span class="type">object</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1380,7 +1372,7 @@ var_dump(get_students($obj));
 
 | Version | Description                                                                                                                                                                                                                    |
 |---------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | <span class="function">is\_object</span> now returns **`TRUE`** for unserialized objects without a class definition (class of <span class="classname">\_\_PHP\_Incomplete\_Class</span>). Previously **`FALSE`** was returned. |
+| 7.2.0   | <span class="function">is\_object</span> now returns **`true`** for unserialized objects without a class definition (class of <span class="classname">\_\_PHP\_Incomplete\_Class</span>). Previously **`false`** was returned. |
 
 ### See Also
 
@@ -1424,8 +1416,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a <span class="type">resource</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is a <span class="type">resource</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1447,7 +1439,7 @@ if (!is_resource($db_link)) {
 > **Note**:
 >
 > <span class="function">is\_resource</span> is not a strict
-> type-checking method: it will return **`FALSE`** if `var` is a
+> type-checking method: it will return **`false`** if `var` is a
 > resource variable that has been closed.
 
 ### See Also
@@ -1493,7 +1485,7 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is a scalar, **`FALSE`** otherwise.
+Returns **`true`** if `var` is a scalar, **`false`** otherwise.
 
 ### Examples
 
@@ -1561,8 +1553,8 @@ The variable being evaluated.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` is of type <span class="type">string</span>,
-**`FALSE`** otherwise.
+Returns **`true`** if `var` is of type <span class="type">string</span>,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1606,7 +1598,7 @@ The above example will output:
 isset
 =====
 
-Determine if a variable is declared and is different than **`NULL`**
+Determine if a variable is declared and is different than **`null`**
 
 ### Description
 
@@ -1616,19 +1608,19 @@ Determine if a variable is declared and is different than **`NULL`**
 `$vars`</span> )
 
 Determine if a variable is considered set, this means if a variable is
-declared and is different than **`NULL`**.
+declared and is different than **`null`**.
 
 If a variable has been unset with the <span
 class="function">unset</span> function, it is no longer considered to be
 set.
 
-<span class="function">isset</span> will return **`FALSE`** when
-checking a variable that has been assigned to **`NULL`**. Also note that
-a null character (*"\\0"*) is not equivalent to the PHP **`NULL`**
+<span class="function">isset</span> will return **`false`** when
+checking a variable that has been assigned to **`null`**. Also note that
+a null character (*"\\0"*) is not equivalent to the PHP **`null`**
 constant.
 
 If multiple parameters are supplied then <span
-class="function">isset</span> will return **`TRUE`** only if all of the
+class="function">isset</span> will return **`true`** only if all of the
 parameters are considered set. Evaluation goes from left to right and
 stops as soon as an unset variable is encountered.
 
@@ -1642,8 +1634,8 @@ Further variables.
 
 ### Return Values
 
-Returns **`TRUE`** if `var` exists and has any value other than
-**`NULL`**. **`FALSE`** otherwise.
+Returns **`true`** if `var` exists and has any value other than
+**`null`**. **`false`** otherwise.
 
 ### Examples
 
@@ -1781,7 +1773,7 @@ Prints human-readable information about a variable
 ( <span class="methodparam"><span class="type">mixed</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">print\_r</span> displays information about a
 variable in a way that's readable by humans.
@@ -1799,7 +1791,7 @@ The expression to be printed.
 `return`  
 If you would like to capture the output of <span
 class="function">print\_r</span>, use the `return` parameter. When this
-parameter is set to **`TRUE`**, <span class="function">print\_r</span>
+parameter is set to **`true`**, <span class="function">print\_r</span>
 will return the information rather than print it.
 
 ### Return Values
@@ -1810,9 +1802,9 @@ itself will be printed. If given an <span class="type">array</span>,
 values will be presented in a format that shows keys and elements.
 Similar notation is used for <span class="type">object</span>s.
 
-When the `return` parameter is **`TRUE`**, this function will return a
+When the `return` parameter is **`true`**, this function will return a
 <span class="type">string</span>. Otherwise, the return value is
-**`TRUE`**.
+**`true`**.
 
 ### Notes
 
@@ -2014,7 +2006,7 @@ Possibles values of `type` are:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2171,7 +2163,7 @@ as an associative array.
 
 | Name               | Type                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
 |--------------------|---------------------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| *allowed\_classes* | <span class="type">mixed</span> | <span class="simpara"> Either an <span class="type">array</span> of class names which should be accepted, **`FALSE`** to accept no classes, or **`TRUE`** to accept all classes. If this option is defined and <span class="function">unserialize</span> encounters an object of a class that isn't to be accepted, then the object will be instantiated as <span class="classname">\_\_PHP\_Incomplete\_Class</span> instead. </span> <span class="simpara"> Omitting this option is the same as defining it as **`TRUE`**: PHP will attempt to instantiate objects of any class. </span> |
+| *allowed\_classes* | <span class="type">mixed</span> | <span class="simpara"> Either an <span class="type">array</span> of class names which should be accepted, **`false`** to accept no classes, or **`true`** to accept all classes. If this option is defined and <span class="function">unserialize</span> encounters an object of a class that isn't to be accepted, then the object will be instantiated as <span class="classname">\_\_PHP\_Incomplete\_Class</span> instead. </span> <span class="simpara"> Omitting this option is the same as defining it as **`true`**: PHP will attempt to instantiate objects of any class. </span> |
 
 ### Return Values
 
@@ -2180,7 +2172,7 @@ class="type">bool</span>, <span class="type">int</span>, <span
 class="type">float</span>, <span class="type">string</span>, <span
 class="type">array</span> or <span class="type">object</span>.
 
-In case the passed string is not unserializeable, **`FALSE`** is
+In case the passed string is not unserializeable, **`false`** is
 returned and **`E_NOTICE`** is issued.
 
 ### Errors/Exceptions
@@ -2192,7 +2184,7 @@ unserialization handlers.
 
 | Version | Description                                                                                                                                                                                                                                                                   |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | The *allowed\_classes* element of `options`) is now strictly typed, i.e. if anything other than an <span class="type">array</span> or a <span class="type">bool</span> is given, <span class="function">unserialize</span> returns **`FALSE`** and issues an **`E_WARNING`**. |
+| 7.1.0   | The *allowed\_classes* element of `options`) is now strictly typed, i.e. if anything other than an <span class="type">array</span> or a <span class="type">bool</span> is given, <span class="function">unserialize</span> returns **`false`** and issues an **`E_WARNING`**. |
 | 7.0.0   | The `options` parameter has been added.                                                                                                                                                                                                                                       |
 | 5.6.0   | Manipulating the serialised data by replacing *C:* with *O:* to force object instantiation without calling the constructor will now fail.                                                                                                                                     |
 
@@ -2243,8 +2235,8 @@ function mycallback($classname)
 
 **Warning**
 
-**`FALSE`** is returned both in the case of an error and if
-unserializing the serialized **`FALSE`** value. It is possible to catch
+**`false`** is returned both in the case of an error and if
+unserializing the serialized **`false`** value. It is possible to catch
 this special case by comparing `str` with *serialize(false)* or by
 catching the issued **`E_NOTICE`**.
 
@@ -2555,7 +2547,7 @@ Outputs or returns a parsable string representation of a variable
 class="methodname">var\_export</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$expression`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$return`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">var\_export</span> gets structured information
 about the given variable. It is similar to <span
@@ -2568,14 +2560,14 @@ representation is valid PHP code.
 The variable you want to export.
 
 `return`  
-If used and set to **`TRUE`**, <span class="function">var\_export</span>
+If used and set to **`true`**, <span class="function">var\_export</span>
 will return the variable representation instead of outputting it.
 
 ### Return Values
 
 Returns the variable representation when the `return` parameter is used
-and evaluates to **`TRUE`**. Otherwise, this function will return
-**`NULL`**.
+and evaluates to **`true`**. Otherwise, this function will return
+**`null`**.
 
 ### Notes
 
@@ -2775,7 +2767,7 @@ classes for maximum compatibility.
 -   [is\_iterable](/ref/var.html#is_iterable) — Verify that the contents
     of a variable is an iterable value
 -   [is\_long](/ref/var.html#is_long) — Alias of is\_int
--   [is\_null](/ref/var.html#is_null) — Finds whether a variable is NULL
+-   [is\_null](/ref/var.html#is_null) — Finds whether a variable is null
 -   [is\_numeric](/ref/var.html#is_numeric) — Finds whether a variable
     is a number or a numeric string
 -   [is\_object](/ref/var.html#is_object) — Finds whether a variable is
@@ -2788,7 +2780,7 @@ classes for maximum compatibility.
 -   [is\_string](/ref/var.html#is_string) — Find whether the type of a
     variable is string
 -   [isset](/ref/var.html#isset) — Determine if a variable is declared
-    and is different than NULL
+    and is different than null
 -   [print\_r](/ref/var.html#print_r) — Prints human-readable
     information about a variable
 -   [serialize](/ref/var.html#serialize) — Generates a storable

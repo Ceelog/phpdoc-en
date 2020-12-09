@@ -323,7 +323,7 @@ class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
 <span class="methodname">add</span> ( <span class="methodparam"><span
@@ -398,7 +398,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -478,7 +478,7 @@ A <span class="classname">DateInterval</span> object
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -576,7 +576,7 @@ class="methodname">DateTime::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Procedural style
 
@@ -585,7 +585,7 @@ class="methodname">date\_create</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns new DateTime object.
 
@@ -613,7 +613,7 @@ If `$timezone` is omitted, the current timezone will be used.
 
 ### Return Values
 
-Returns a new DateTime instance. Procedural style returns **`FALSE`** on
+Returns a new DateTime instance. Procedural style returns **`false`** on
 failure.
 
 ### Errors/Exceptions
@@ -831,7 +831,7 @@ current timezone will be used.
 
 ### Return Values
 
-Returns a new DateTime instance or **`FALSE`** on failure.
+Returns a new DateTime instance or **`false`** on failure.
 
 ### Changelog
 
@@ -1085,7 +1085,7 @@ A date/time string. Valid formats are explained in
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1218,7 +1218,7 @@ Day of the date.
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1327,7 +1327,7 @@ Offset from the first day of the week.
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1467,7 +1467,7 @@ Microsecond of the time.
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Changelog
 
@@ -1583,7 +1583,7 @@ Unix timestamp representing the date.
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1686,7 +1686,7 @@ desired time zone.
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1769,7 +1769,7 @@ A <span class="classname">DateInterval</span> object
 ### Return Values
 
 Returns the <span class="classname">DateTime</span> object for method
-chaining or **`FALSE`** on failure.
+chaining or **`false`** on failure.
 
 ### Examples
 
@@ -1925,7 +1925,7 @@ class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
 class="type">DateTimeImmutable</span> <span
@@ -2010,7 +2010,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -2070,7 +2070,7 @@ class="methodname">DateTimeImmutable::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Procedural style
 
@@ -2079,7 +2079,7 @@ class="methodname">date\_create\_immutable</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
 class="methodparam"><span class="type">DateTimeZone</span>
-`$timezone`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Like <span class="methodname">DateTime::\_\_construct</span> but works
 with <span class="classname">DateTimeImmutable</span>.
@@ -2201,7 +2201,7 @@ A date/time string. Valid formats are explained in
 
 ### Return Values
 
-Returns the newly created object or **`FALSE`** on failure.
+Returns the newly created object or **`false`** on failure.
 
 DateTimeImmutable::\_\_set\_state
 =================================
@@ -2396,7 +2396,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">diff</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">string</span><span class="type">false</span></span> <span
@@ -2526,7 +2526,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">DateInterval</span><span class="type">false</span></span>
@@ -2534,7 +2534,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type"><span
 class="type">DateInterval</span><span class="type">false</span></span>
@@ -2542,7 +2542,7 @@ class="type">DateInterval</span><span class="type">false</span></span>
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Procedural style
 
@@ -2553,7 +2553,7 @@ class="type">DateTimeInterface</span> `$originObject`</span> , <span
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Returns the difference between two <span
 class="classname">DateTimeInterface</span> objects.
@@ -2569,7 +2569,7 @@ Should the interval be forced to be positive?
 ### Return Values
 
 The <span class="classname">DateInterval</span> object represents the
-difference between the two dates or **`FALSE`** on failure.
+difference between the two dates or **`false`** on failure.
 
 The return value more specifically represents the interval to apply to
 the original object (`$this` or `$originObject`) to arrive at the
@@ -2754,7 +2754,7 @@ class="function">gmdate</span>.
 
 ### Return Values
 
-Returns the formatted date string on success or **`FALSE`** on failure.
+Returns the formatted date string on success or **`false`** on failure.
 
 ### Examples
 
@@ -2842,7 +2842,7 @@ returned by <span class="function">date\_create</span>
 ### Return Values
 
 Returns the timezone offset in seconds from UTC on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -3017,7 +3017,7 @@ returned by <span class="function">date\_create</span>
 ### Return Values
 
 Returns a <span class="classname">DateTimeZone</span> object on success
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 ### Examples
 
@@ -3187,7 +3187,7 @@ class="methodname">listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 }
 
@@ -3272,7 +3272,7 @@ value (+0200).
 ### Return Values
 
 Returns <span class="classname">DateTimeZone</span> on success.
-Procedural style returns **`FALSE`** on failure.
+Procedural style returns **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3346,7 +3346,7 @@ object returned by <span class="function">timezone\_open</span>
 
 ### Return Values
 
-Array containing location information about timezone or **`FALSE`** on
+Array containing location information about timezone or **`false`** on
 failure.
 
 ### Examples
@@ -3456,7 +3456,7 @@ DateTime that contains the date/time to compute the offset from.
 
 ### Return Values
 
-Returns time zone offset in seconds on success or **`FALSE`** on
+Returns time zone offset in seconds on success or **`false`** on
 failure.
 
 ### Changelog
@@ -3539,7 +3539,7 @@ End timestamp.
 ### Return Values
 
 Returns a numerically indexed array of transition arrays on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 | Key      | Type                             | Description                                  |
 |----------|----------------------------------|----------------------------------------------|
@@ -3628,7 +3628,7 @@ class="methodparam">void</span> )
 
 ### Return Values
 
-Returns array on success or **`FALSE`** on failure.
+Returns array on success or **`false`** on failure.
 
 ### Examples
 
@@ -3700,7 +3700,7 @@ class="methodname">DateTimeZone::listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 Procedural style
 
@@ -3710,7 +3710,7 @@ class="methodname">timezone\_identifiers\_list</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`NULL`**</span></span> \]\] )
+class="initializer"> = **`null`**</span></span> \]\] )
 
 ### Parameters
 
@@ -3726,7 +3726,7 @@ A two-letter ISO 3166-1 compatible country code.
 
 ### Return Values
 
-Returns array on success or **`FALSE`** on failure.
+Returns array on success or **`false`** on failure.
 
 ### Examples
 
@@ -3859,9 +3859,9 @@ otherwise. See <span class="methodname">DateInterval::format</span>.
 If the DateInterval object was created by <span
 class="function">DateTime::diff</span>, then this is the total number of
 days between the start and end dates. Otherwise, `days` will be
-**`FALSE`**.
+**`false`**.
 
-Before PHP 5.4.20/5.5.4 instead of **`FALSE`** you will receive -99999
+Before PHP 5.4.20/5.5.4 instead of **`false`** you will receive -99999
 upon accessing the property.
 
 Changelog
@@ -4400,7 +4400,7 @@ The above example will output:
 
 Unbound numbers of repetitions as specified by ISO 8601 section 4.5
 "Recurring time interval" are not supported, i.e. neither passing
-*"R/..."* as `isostr` nor passing **`NULL`** as `end` would work.
+*"R/..."* as `isostr` nor passing **`null`** as `end` would work.
 
 DatePeriod::getDateInterval
 ===========================
@@ -4473,7 +4473,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`NULL`** if the <span class="classname">DatePeriod</span> does
+Returns **`null`** if the <span class="classname">DatePeriod</span> does
 not have an end date. For example, when initialized with the
 `recurrences` parameter, or the `isostr` parameter without an end date.
 

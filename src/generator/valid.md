@@ -15,5 +15,5 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`FALSE`** if the iterator has been closed. Otherwise returns
-**`TRUE`**.
+Returns **`false`** if the iterator has been closed. Otherwise returns
+**`true`**.

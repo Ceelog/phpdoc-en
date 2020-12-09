@@ -37,7 +37,7 @@ Class synopsis
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">NULL</span>
-`SplType::__default` <span class="initializer"> = **`NULL`**</span> ;
+`SplType::__default` <span class="initializer"> = **`null`**</span> ;
 
 /\* Methods \*/
 
@@ -215,14 +215,14 @@ Class synopsis
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">NULL</span>
-`SplEnum::__default` <span class="initializer"> = **`NULL`**</span> ;
+`SplEnum::__default` <span class="initializer"> = **`null`**</span> ;
 
 /\* Methods \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 /\* Inherited methods \*/
@@ -288,7 +288,7 @@ Returns all consts (possible values) as an array
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SplEnum::getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 **Warning**
@@ -342,20 +342,20 @@ Class synopsis
 /\* Constants \*/
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::__default` <span class="initializer"> = **`FALSE`**</span> ;
+`SplBool::__default` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::false` <span class="initializer"> = **`FALSE`**</span> ;
+`SplBool::false` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">const</span> <span class="type">bool</span>
-`SplBool::true` <span class="initializer"> = **`TRUE`**</span> ;
+`SplBool::true` <span class="initializer"> = **`true`**</span> ;
 
 /\* Inherited methods \*/
 
 <span class="modifier">public</span> <span class="type">array</span>
 <span class="methodname">SplEnum::getConstList</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_default`<span class="initializer"> = **`FALSE`**</span></span>
+`$include_default`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 }

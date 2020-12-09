@@ -89,14 +89,14 @@ Exactly like you run local objects. You only have to pass the IP of the
 remote machine as second parameter to the COM constructor.
 
 Make sure that you have set
-<a href="/com/setup.html#" class="link">com.allow_dcom</a>*=***`TRUE`**
+<a href="/com/setup.html#" class="link">com.allow_dcom</a>*=***`true`**
 in your `php.ini`.
 
 <!-- -->
 
 **I get 'DCOM is disabled in C:\\path...\\scriptname.php on line 6', what can I do ?**  
 Edit your `php.ini` and set
-<a href="/com/setup.html#" class="link">com.allow_dcom</a>*=***`TRUE`**.
+<a href="/com/setup.html#" class="link">com.allow_dcom</a>*=***`true`**.
 
 <!-- -->
 

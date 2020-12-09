@@ -25,12 +25,12 @@ the anonymous function were a method of the class given as value of the
 `newscope` parameter.
 
 Static closures cannot have any bound object (the value of the parameter
-`newthis` should be **`NULL`**), but this function can nevertheless be
+`newthis` should be **`null`**), but this function can nevertheless be
 used to change their class scope.
 
 This function will ensure that for a non-static closure, having a bound
 instance will imply being scoped and vice-versa. To this end, non-static
-closures that are given a scope but a **`NULL`** instance are made
+closures that are given a scope but a **`null`** instance are made
 static and non-static non-scoped closures that are given a non-null
 instance are scoped to an unspecified class.
 
@@ -44,7 +44,7 @@ instance are scoped to an unspecified class.
 
 `newthis`  
 The object to which the given anonymous function should be bound, or
-**`NULL`** for the closure to be unbound.
+**`null`** for the closure to be unbound.
 
 `newscope`  
 The class scope to which the closure is to be associated, or 'static' to
@@ -56,7 +56,7 @@ internal class as this parameter.
 ### Return Values
 
 Returns the newly created <span class="classname">Closure</span> object
-or **`FALSE`** on failure
+or **`false`** on failure
 
 ### Examples
 

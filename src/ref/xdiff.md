@@ -79,7 +79,7 @@ human-unreadable.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -140,7 +140,7 @@ Path of the resulting file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -213,7 +213,7 @@ human-unreadable.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -259,7 +259,7 @@ class="type">string</span> `$dest`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$context`<span
 class="initializer"> = 3</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$minimal`<span
-class="initializer"> = **`FALSE`**</span></span> \]\] )
+class="initializer"> = **`false`**</span></span> \]\] )
 
 Makes an unified diff containing differences between `old_file` and
 `new_file` and stores it in `dest` file. The resulting file is
@@ -283,12 +283,12 @@ Path of the resulting patch file.
 Indicates how many lines of context you want to include in diff result.
 
 `minimal`  
-Set this parameter to **`TRUE`** if you want to minimalize size of the
+Set this parameter to **`true`** if you want to minimalize size of the
 result (can take a long time).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -355,8 +355,8 @@ Path of the resulting file, containing merged changed from both
 
 ### Return Values
 
-Returns **`TRUE`** if merge was successful, string with rejected chunks
-if it was not or **`FALSE`** if an internal error happened.
+Returns **`true`** if merge was successful, string with rejected chunks
+if it was not or **`false`** if an internal error happened.
 
 ### Examples
 
@@ -419,7 +419,7 @@ Path of the resulting file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -498,8 +498,8 @@ Starting from version 1.5.0, you can also use binary OR to enable
 
 ### Return Values
 
-Returns **`FALSE`** if an internal error happened, string with rejected
-chunks if patch couldn't be applied or **`TRUE`** if patch has been
+Returns **`false`** if an internal error happened, string with rejected
+chunks if patch couldn't be applied or **`true`** if patch has been
 successfully applied.
 
 ### Examples
@@ -587,7 +587,7 @@ human-unreadable.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -692,7 +692,7 @@ Second string with binary data. It acts as "new" data.
 ### Return Values
 
 Returns string with binary diff containing differences between "old" and
-"new" data or **`FALSE`** if an internal error occurred.
+"new" data or **`false`** if an internal error occurred.
 
 ### See Also
 
@@ -727,7 +727,7 @@ The binary patch string.
 
 ### Return Values
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### See Also
 
@@ -765,7 +765,7 @@ Second string with binary data. It acts as "new" data.
 
 ### Return Values
 
-Returns string with result or **`FALSE`** if an internal error happened.
+Returns string with result or **`false`** if an internal error happened.
 
 ### See Also
 
@@ -787,7 +787,7 @@ class="methodparam"><span class="type">string</span> `$old_data`</span>
 class="type">int</span> `$context`<span class="initializer"> =
 3</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$minimal`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 Makes an unified diff containing differences between `old_data` string
 and `new_data` string and returns it. The resulting diff is
@@ -809,12 +809,12 @@ Indicates how many lines of context you want to include in the diff
 result.
 
 `minimal`  
-Set this parameter to **`TRUE`** if you want to minimalize the size of
+Set this parameter to **`true`** if you want to minimalize the size of
 the result (can take a long time).
 
 ### Return Values
 
-Returns string with resulting diff or **`FALSE`** if an internal error
+Returns string with resulting diff or **`false`** if an internal error
 happened.
 
 ### Examples
@@ -888,8 +888,8 @@ If provided then rejected parts are stored inside this variable.
 
 ### Return Values
 
-Returns the merged string, **`FALSE`** if an internal error happened, or
-**`TRUE`** if merged string is empty.
+Returns the merged string, **`false`** if an internal error happened, or
+**`true`** if merged string is empty.
 
 ### See Also
 
@@ -927,7 +927,7 @@ The binary patch string.
 
 ### Return Values
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### See Also
 
@@ -980,7 +980,7 @@ If provided then rejected parts are stored inside this variable.
 
 ### Return Values
 
-Returns the patched string, or **`FALSE`** on error.
+Returns the patched string, or **`false`** on error.
 
 ### Examples
 
@@ -1052,7 +1052,7 @@ Second string with binary data. It acts as "new" data.
 ### Return Values
 
 Returns string with binary diff containing differences between "old" and
-"new" data or **`FALSE`** if an internal error occurred.
+"new" data or **`false`** if an internal error occurred.
 
 ### See Also
 

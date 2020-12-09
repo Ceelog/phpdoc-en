@@ -200,7 +200,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -311,7 +311,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -455,7 +455,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -514,7 +514,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -716,7 +716,7 @@ class="function">stomp\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -754,7 +754,7 @@ class="function">stomp\_connect</span>.
 
 ### Return Values
 
-Returns an error string or **`FALSE`** if no error occurred.
+Returns an error string or **`false`** if no error occurred.
 
 ### Examples
 
@@ -946,7 +946,7 @@ class="function">stomp\_connect</span>.
 
 ### Return Values
 
-<span class="type">string</span> session id on success or **`FALSE`** on
+<span class="type">string</span> session id on success or **`false`** on
 failure.
 
 ### Examples
@@ -1032,7 +1032,7 @@ class="function">stomp\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if a frame is ready to read, or **`FALSE`**
+Returns **`true`** if a frame is ready to read, or **`false`**
 otherwise.
 
 Stomp::readFrame
@@ -1232,7 +1232,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1379,7 +1379,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1437,7 +1437,7 @@ Associative array containing the additional headers (example: receipt).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 

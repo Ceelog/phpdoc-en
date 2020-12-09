@@ -142,7 +142,7 @@ of failure:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -180,7 +180,7 @@ Closes the connection given by parameter `id`.
 > **Note**:
 >
 > This function will only close a non-persistent connection opened by
-> setting the *persistent* option to **`FALSE`** with <span
+> setting the *persistent* option to **`false`** with <span
 > class="function">yaz\_connect</span>.
 
 ### Parameters
@@ -191,7 +191,7 @@ class="function">yaz\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -251,7 +251,7 @@ proxy
 Proxy for connection (YAZ proxy).
 
 persistent  
-A boolean. If **`TRUE`** the connection is persistent; If **`FALSE`**
+A boolean. If **`true`** the connection is persistent; If **`false`**
 the connection is not persistent. By default connections are persistent.
 
 > **Note**:
@@ -260,8 +260,8 @@ the connection is not persistent. By default connections are persistent.
 > later with <span class="function">yaz\_close</span>.
 
 piggyback  
-A boolean. If **`TRUE`** piggyback is enabled for searches; If
-**`FALSE`** piggyback is disabled. By default piggyback is enabled.
+A boolean. If **`true`** piggyback is enabled for searches; If
+**`false`** piggyback is disabled. By default piggyback is enabled.
 
 Enabling piggyback is more efficient and usually saves a
 network-round-trip for first time fetches of records. However, a few
@@ -299,7 +299,7 @@ Exceptional-record-size in the
 
 ### Return Values
 
-A connection resource on success, **`FALSE`** on error.
+A connection resource on success, **`false`** on error.
 
 ### Changelog
 
@@ -341,7 +341,7 @@ separated by a plus sign *+*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 yaz\_element
 ============
@@ -378,7 +378,7 @@ Most servers support *F* (for full records) and *B* (for brief records).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 yaz\_errno
 ==========
@@ -801,7 +801,7 @@ class="function">yaz\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 yaz\_range
 ==========
@@ -1257,7 +1257,7 @@ site.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1505,8 +1505,8 @@ A boolean.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. In event mode,
-returns resource or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure. In event mode,
+returns resource or **`false`** on failure.
 
 **Table of Contents**
 

@@ -100,3 +100,36 @@ Sockets
         — Imports a Socket from another Process
     -   [socket\_wsaprotocol\_info\_release](/ref/sockets.html#socket_wsaprotocol_info_release)
         — Releases an exported WSAPROTOCOL\_INFO Structure
+-   [Socket](/class/socket.html) — The Socket class
+-   [AddressInfo](/class/addressinfo.html) — The AddressInfo class
+
+Introduction
+------------
+
+A fully opaque class which replaces *Socket* resources as of PHP 8.0.0.
+
+Class synopsis
+--------------
+
+**Socket**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**Socket** </span> {
+
+}
+
+Introduction
+------------
+
+A fully opaque class which replaces *AddressInfo* resources as of PHP
+8.0.0.
+
+Class synopsis
+--------------
+
+**AddressInfo**
+
+<span class="ooclass"> <span class="modifier">final</span> class
+**AddressInfo** </span> {
+
+}

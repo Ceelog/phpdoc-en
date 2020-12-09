@@ -164,7 +164,7 @@ zero-cost (production mode). </span>
 
 `zend.ze1_compatibility_mode` <span class="type">bool</span>  
 Enable compatibility mode with Zend Engine 1 (PHP 4). It affects the
-cloning, casting (objects with no properties cast to **`FALSE`** or 0),
+cloning, casting (objects with no properties cast to **`false`** or 0),
 and
 <a href="/language/oop5/object-comparison.html" class="link">comparing of objects</a>.
 In this mode, objects are passed by value instead of reference by
@@ -535,7 +535,7 @@ is used.
 This feature was *DEPRECATED* in PHP 5.6.0, and *REMOVED* as of PHP
 7.0.0.
 
-If set to **`TRUE`**, PHP will always populate the `$HTTP_RAW_POST_DATA`
+If set to **`true`**, PHP will always populate the `$HTTP_RAW_POST_DATA`
 containing the raw POST data. Otherwise, the variable is populated only
 when the MIME type of the data is unrecognised.
 

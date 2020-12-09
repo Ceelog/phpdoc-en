@@ -64,7 +64,7 @@ The above example will output:
 **Caution**
 
 The value that will be assigned to `$data` is the value passed to <span
-class="methodname">Generator::send</span>, or **`NULL`** if <span
+class="methodname">Generator::send</span>, or **`null`** if <span
 class="methodname">Generator::next</span> is called instead.
 
 #### Yielding values with keys
@@ -132,10 +132,10 @@ $data = (yield $key => $value);
 
 #### Yielding null values
 
-Yield can be called without an argument to yield a **`NULL`** value with
+Yield can be called without an argument to yield a **`null`** value with
 an automatic key.
 
-**Example \#3 Yielding **`NULL`**s**
+**Example \#3 Yielding **`null`**s**
 
 ``` php
 <?php
@@ -218,7 +218,7 @@ A common case where this matters is <span
 class="function">iterator\_to\_array</span> returning a keyed array by
 default, leading to possibly unexpected results. <span
 class="function">iterator\_to\_array</span> has a second parameter
-`use_keys` which can be set to **`FALSE`** to collect all the values
+`use_keys` which can be set to **`false`** to collect all the values
 while ignoring the keys returned by the <span
 class="classname">Generator</span>.
 

@@ -21,7 +21,7 @@ The hostname or IP address.
 
 ### Return Values
 
-Returns the ASN on success, or **`FALSE`** if the address cannot be
+Returns the ASN on success, or **`false`** if the address cannot be
 found in the database.
 
 ### Examples
@@ -68,7 +68,7 @@ The hostname or IP address whose location is to be looked-up.
 
 ### Return Values
 
-Returns the two letter continent code on success, or **`FALSE`** if the
+Returns the two letter continent code on success, or **`false`** if the
 address cannot be found in the database.
 
 | Code | Continent name |
@@ -128,7 +128,7 @@ The hostname or IP address whose location is to be looked-up.
 
 ### Return Values
 
-Returns the two letter ISO country code on success, or **`FALSE`** if
+Returns the two letter ISO country code on success, or **`false`** if
 the address cannot be found in the database.
 
 ### Examples
@@ -187,7 +187,7 @@ The hostname or IP address whose location is to be looked-up.
 
 ### Return Values
 
-Returns the three letter country code on success, or **`FALSE`** if the
+Returns the three letter country code on success, or **`false`** if the
 address cannot be found in the database.
 
 ### Examples
@@ -238,7 +238,7 @@ The hostname or IP address whose location is to be looked-up.
 
 ### Return Values
 
-Returns the country name on success, or **`FALSE`** if the address
+Returns the country name on success, or **`false`** if the address
 cannot be found in the database.
 
 ### Examples
@@ -294,7 +294,7 @@ defined with this extension (ie: GEOIP\_\*\_EDITION).
 
 ### Return Values
 
-Returns the corresponding database version, or **`NULL`** on error.
+Returns the corresponding database version, or **`null`** on error.
 
 ### Examples
 
@@ -339,8 +339,8 @@ defined with this extension (ie: GEOIP\_\*\_EDITION).
 
 ### Return Values
 
-Returns **`TRUE`** is database exists, **`FALSE`** if not found, or
-**`NULL`** on error.
+Returns **`true`** is database exists, **`false`** if not found, or
+**`null`** on error.
 
 ### Examples
 
@@ -386,7 +386,7 @@ defined with this extension (ie: GEOIP\_\*\_EDITION).
 
 ### Return Values
 
-Returns the filename of the corresponding database, or **`NULL`** on
+Returns the filename of the corresponding database, or **`null`** on
 error.
 
 ### Examples
@@ -529,7 +529,7 @@ The hostname or IP address.
 
 ### Return Values
 
-Returns the domain name on success, or **`FALSE`** if the address cannot
+Returns the domain name on success, or **`false`** if the address cannot
 be found in the database.
 
 ### Examples
@@ -648,7 +648,7 @@ The hostname or IP address.
 
 ### Return Values
 
-Returns the ISP name on success, or **`FALSE`** if the address cannot be
+Returns the ISP name on success, or **`false`** if the address cannot be
 found in the database.
 
 ### Examples
@@ -708,7 +708,7 @@ The hostname or IP address.
 
 ### Return Values
 
-Returns the connection speed on success, or **`FALSE`** if the address
+Returns the connection speed on success, or **`false`** if the address
 cannot be found in the database.
 
 ### Examples
@@ -758,7 +758,7 @@ The hostname or IP address.
 
 ### Return Values
 
-Returns the organization name on success, or **`FALSE`** if the address
+Returns the organization name on success, or **`false`** if the address
 cannot be found in the database.
 
 ### Examples
@@ -836,7 +836,7 @@ The hostname or IP address whose record is to be looked-up.
 
 ### Return Values
 
-Returns the associative array on success, or **`FALSE`** if the address
+Returns the associative array on success, or **`false`** if the address
 cannot be found in the database.
 
 ### Changelog
@@ -915,7 +915,7 @@ The hostname or IP address whose region is to be looked-up.
 
 ### Return Values
 
-Returns the associative array on success, or **`FALSE`** if the address
+Returns the associative array on success, or **`false`** if the address
 cannot be found in the database.
 
 ### Examples
@@ -985,7 +985,7 @@ class="function">geoip\_region\_by\_name</span>)
 
 ### Return Values
 
-Returns the region name on success, or **`FALSE`** if the country and
+Returns the region name on success, or **`false`** if the country and
 region code combo cannot be found.
 
 ### Examples
@@ -1118,7 +1118,7 @@ class="function">geoip\_region\_by\_name</span>)
 
 ### Return Values
 
-Returns the time zone on success, or **`FALSE`** if the country and
+Returns the time zone on success, or **`false`** if the country and
 region code combo cannot be found.
 
 ### Examples

@@ -2,12 +2,12 @@ Booleans
 --------
 
 This is the simplest type. A <span class="type">bool</span> expresses a
-truth value. It can be either **`TRUE`** or **`FALSE`**.
+truth value. It can be either **`true`** or **`false`**.
 
 ### Syntax
 
 To specify a <span class="type">bool</span> literal, use the constants
-**`TRUE`** or **`FALSE`**. Both are case-insensitive.
+**`true`** or **`false`**. Both are case-insensitive.
 
 ``` php
 <?php
@@ -52,11 +52,11 @@ See also
 <a href="/language/types/type-juggling.html" class="link">Type Juggling</a>.
 
 When converting to <span class="type">bool</span>, the following values
-are considered **`FALSE`**:
+are considered **`false`**:
 
 -   <span class="simpara"> the
     <a href="/language/types/boolean.html" class="link">boolean</a>
-    **`FALSE`** itself </span>
+    **`false`** itself </span>
 -   <span class="simpara"> the
     <a href="/language/types/integer.html" class="link">integer</a>s 0
     and -0 (zero) </span>
@@ -77,13 +77,13 @@ are considered **`FALSE`**:
     <a href="/ref/simplexml.html" class="link">SimpleXML</a> objects
     created from empty tags </span>
 
-Every other value is considered **`TRUE`** (including any
+Every other value is considered **`true`** (including any
 <a href="/language/types/resource.html" class="link">resource</a> and
 **`NAN`**).
 
 **Warning**
 
-*-1* is considered **`TRUE`**, like any other non-zero (whether negative
+*-1* is considered **`true`**, like any other non-zero (whether negative
 or positive) number!
 
 ``` php

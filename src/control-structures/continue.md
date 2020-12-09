@@ -1,5 +1,5 @@
-*continue*
-----------
+continue
+--------
 
 *continue* is used within looping structures to skip the rest of the
 current loop iteration and continue execution at the condition

@@ -665,7 +665,7 @@ The above example will output:
 >
 > Accessing variables of other types (not including arrays or objects
 > implementing the appropriate interfaces) using *\[\]* or *{}* silently
-> returns **`NULL`**.
+> returns **`null`**.
 
 > **Note**:
 >
@@ -717,9 +717,9 @@ compared to a <span class="type">string</span>. The sections on
 will make the following clearer. See also the <span
 class="function">settype</span> function.
 
-A <span class="type">bool</span> **`TRUE`** value is converted to the
+A <span class="type">bool</span> **`true`** value is converted to the
 <span class="type">string</span> *"1"*. <span class="type">bool</span>
-**`FALSE`** is converted to *""* (the empty string). This allows
+**`false`** is converted to *""* (the empty string). This allows
 conversion back and forth between <span class="type">bool</span> and
 <span class="type">string</span> values.
 
@@ -759,7 +759,7 @@ lifetime of a script being executed (ie a Web request or CLI process)
 and won't be reused. To get a <span class="type">resource</span>'s type,
 use the <span class="function">get\_resource\_type</span> function.
 
-**`NULL`** is always converted to an empty string.
+**`null`** is always converted to an empty string.
 
 As stated above, directly converting an <span class="type">array</span>,
 <span class="type">object</span>, or <span class="type">resource</span>

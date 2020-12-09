@@ -54,7 +54,7 @@ Oracle OCI8
     -   [oci\_fetch](/book/oci8.html#oci_fetch) — Fetches the next row
         from a query into internal buffers
     -   [oci\_field\_is\_null](/book/oci8.html#oci_field_is_null) —
-        Checks if a field in the currently fetched row is NULL
+        Checks if a field in the currently fetched row is null
     -   [oci\_field\_name](/book/oci8.html#oci_field_name) — Returns the
         name of a field from the statement
     -   [oci\_field\_precision](/book/oci8.html#oci_field_precision) —
@@ -647,7 +647,7 @@ using the *SYSTEM* account. Some tests will fail if the test user does
 not have equivalent permissions.
 
 If Oracle Database Resident Connection Pooling is being tested, set
-$test\_drcp to **`TRUE`** and ensure the connection string uses an
+$test\_drcp to **`true`** and ensure the connection string uses an
 appropriate DRCP pooled server.
 
 An alternative to editing `details.inc` is the set environment
@@ -897,7 +897,7 @@ dynamically loaded at runtime.
 | **`OCI_NO_AUTO_COMMIT`**           | Statement execution mode for <span class="function">oci\_execute</span>. The transaction is not automatically committed when using this mode. For readability in new code, use this value instead of the older, equivalent **`OCI_DEFAULT`** constant. Introduced in PHP 5.3.2 (PECL OCI8 1.4).             |
 | **`OCI_NUM`**                      | Used with <span class="function">oci\_fetch\_all</span> and <span class="function">oci\_fetch\_array</span> to get results as an enumerated array.                                                                                                                                                          |
 | **`OCI_RETURN_LOBS`**              | Used with <span class="function">oci\_fetch\_array</span> to get the data value of the LOB instead of the descriptor.                                                                                                                                                                                       |
-| **`OCI_RETURN_NULLS`**             | Used with <span class="function">oci\_fetch\_array</span> to get empty array elements if the row items value is **`NULL`**.                                                                                                                                                                                 |
+| **`OCI_RETURN_NULLS`**             | Used with <span class="function">oci\_fetch\_array</span> to get empty array elements if the row items value is **`null`**.                                                                                                                                                                                 |
 | **`OCI_SEEK_CUR`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
 | **`OCI_SEEK_END`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
 | **`OCI_SEEK_SET`**                 | Used with <a href="/book/oci8.html#OCILob::seek" class="xref"></a> to set the seek position.                                                                                                                                                                                                                |
@@ -2038,7 +2038,7 @@ available types below:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2226,7 +2226,7 @@ Possible values for `type` are:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2719,7 +2719,7 @@ var_dump($output2);  // false
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -2790,7 +2790,7 @@ An OCI statement.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 oci\_client\_version
 ====================
@@ -2866,7 +2866,7 @@ class="function">oci\_new\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3055,7 +3055,7 @@ class="function">oci\_new\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3224,7 +3224,7 @@ be *On* or *Off*.
 
 ### Return Values
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### Examples
 
@@ -3492,7 +3492,7 @@ descriptors.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3695,7 +3695,7 @@ class="function">oci\_pconnect</span> do not pass `resource`.
 ### Return Values
 
 If no error is found, <span class="function">oci\_error</span> returns
-**`FALSE`**. Otherwise, <span class="function">oci\_error</span> returns
+**`false`**. Otherwise, <span class="function">oci\_error</span> returns
 the error information as an associative array.
 
 | Array key | Type                             | Description                                                                                |
@@ -3812,7 +3812,7 @@ modes in the same script.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4025,7 +4025,7 @@ associative array.
 ### Return Values
 
 Returns the number of rows in `output`, which may be 0 or more, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -4226,7 +4226,7 @@ class="type">int</span> `$mode`</span> \] )
 
 Returns an array containing the next result-set row of a query. Each
 array entry corresponds to a column of the row. This function is
-typically called in a loop until it returns **`FALSE`**, indicating no
+typically called in a loop until it returns **`false`**, indicating no
 more rows exist.
 
 If `statement` corresponds to a PL/SQL block returning Oracle Database
@@ -4259,7 +4259,7 @@ constants:
 | **`OCI_BOTH`**         | Returns an array with both associative and numeric indices. This is the same as **`OCI_ASSOC`** + **`OCI_NUM`** and is the default behavior. |
 | **`OCI_ASSOC`**        | Returns an associative array.                                                                                                                |
 | **`OCI_NUM`**          | Returns a numeric array.                                                                                                                     |
-| **`OCI_RETURN_NULLS`** | Creates elements for **`NULL`** fields. The element values will be a PHP **`NULL`**.                                                         |
+| **`OCI_RETURN_NULLS`** | Creates elements for **`null`** fields. The element values will be a PHP **`null`**.                                                         |
 | **`OCI_RETURN_LOBS`**  | Returns the contents of LOBs instead of the LOB descriptors.                                                                                 |
 
 The default `mode` is **`OCI_BOTH`**.
@@ -4269,7 +4269,7 @@ Use the addition operator "+" to specify more than one mode at a time.
 ### Return Values
 
 Returns an array with associative and/or numeric indices. If there are
-no more rows in the `statement` then **`FALSE`** is returned.
+no more rows in the `statement` then **`false`** is returned.
 
 By default, *LOB* columns are returned as LOB descriptors.
 
@@ -4796,7 +4796,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns an associative array containing the next result-set row of a
 query. Each array entry corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 Calling <span class="function">oci\_fetch\_assoc</span> is identical to
@@ -4814,7 +4814,7 @@ identifier.
 ### Return Values
 
 Returns an associative array. If there are no more rows in the
-`statement` then **`FALSE`** is returned.
+`statement` then **`false`** is returned.
 
 ### Examples
 
@@ -4871,7 +4871,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns an object containing the next result-set row of a query. Each
 attribute of the object corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 For details on the data type mapping performed by the OCI8 extension,
@@ -4890,7 +4890,7 @@ identifier.
 
 Returns an object. Each attribute of the object corresponds to a column
 of the row. If there are no more rows in the `statement` then
-**`FALSE`** is returned.
+**`false`** is returned.
 
 Any *LOB* columns are returned as LOB descriptors.
 
@@ -4905,7 +4905,7 @@ using the exact column case. Use <span class="function">var\_dump</span>
 on the result object to verify the appropriate case for attribute
 access.
 
-Attribute values will be **`NULL`** for any *NULL* data fields.
+Attribute values will be **`null`** for any *NULL* data fields.
 
 ### Examples
 
@@ -5045,7 +5045,7 @@ class="methodparam"><span class="type">resource</span>
 
 Returns a numerically indexed array containing the next result-set row
 of a query. Each array entry corresponds to a column of the row. This
-function is typically called in a loop until it returns **`FALSE`**,
+function is typically called in a loop until it returns **`false`**,
 indicating no more rows exist.
 
 Calling <span class="function">oci\_fetch\_row</span> is identical to
@@ -5063,7 +5063,7 @@ identifier.
 ### Return Values
 
 Returns a numerically indexed array. If there are no more rows in the
-`statement` then **`FALSE`** is returned.
+`statement` then **`false`** is returned.
 
 ### Examples
 
@@ -5135,7 +5135,7 @@ identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** if there are no more rows
+Returns **`true`** on success or **`false`** if there are no more rows
 in the `statement`.
 
 ### Examples
@@ -5227,7 +5227,7 @@ oci_close($conn);
 oci\_field\_is\_null
 ====================
 
-Checks if a field in the currently fetched row is **`NULL`**
+Checks if a field in the currently fetched row is **`null`**
 
 ### Description
 
@@ -5238,7 +5238,7 @@ class="methodparam"><span class="type">resource</span>
 class="type">mixed</span> `$field`</span> )
 
 Checks if the given `field` from the current row of `statement` is
-**`NULL`**.
+**`null`**.
 
 ### Parameters
 
@@ -5250,7 +5250,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns **`TRUE`** if `field` is **`NULL`**, **`FALSE`** otherwise.
+Returns **`true`** if `field` is **`null`**, **`false`** otherwise.
 
 ### Examples
 
@@ -5325,7 +5325,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns the name as a string, or **`FALSE`** on errors.
+Returns the name as a string, or **`false`** on errors.
 
 ### Examples
 
@@ -5425,7 +5425,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns the precision as an integer, or **`FALSE`** on errors.
+Returns the precision as an integer, or **`false`** on errors.
 
 ### Examples
 
@@ -5509,7 +5509,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns the scale as an integer, or **`FALSE`** on errors.
+Returns the scale as an integer, or **`false`** on errors.
 
 ### Examples
 
@@ -5589,7 +5589,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns the size of a `field` in bytes, or **`FALSE`** on errors.
+Returns the size of a `field` in bytes, or **`false`** on errors.
 
 ### Examples
 
@@ -5690,7 +5690,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns Oracle's raw data type as a number, or **`FALSE`** on errors.
+Returns Oracle's raw data type as a number, or **`false`** on errors.
 
 ### Examples
 
@@ -5763,7 +5763,7 @@ Can be the field's index (1-based) or name.
 
 ### Return Values
 
-Returns the field data type as a string, or **`FALSE`** on errors.
+Returns the field data type as a string, or **`false`** on errors.
 
 ### Examples
 
@@ -5854,7 +5854,7 @@ class="function">oci\_new\_descriptor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -5890,7 +5890,7 @@ A valid OCI statement identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 oci\_get\_implicit\_resultset
 =============================
@@ -5935,7 +5935,7 @@ Sets.
 ### Return Values
 
 Returns a statement handle for the next child statement available on
-`statement`. Returns **`FALSE`** when child statements do not exist, or
+`statement`. Returns **`false`** when child statements do not exist, or
 all child statements have been returned by previous calls to <span
 class="function">oci\_get\_implicit\_resultset</span>.
 
@@ -6190,7 +6190,7 @@ Indicates the length of data to be copied.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -6224,7 +6224,7 @@ A LOB identifier.
 
 ### Return Values
 
-Returns **`TRUE`** if these objects are equal, **`FALSE`** otherwise.
+Returns **`true`** if these objects are equal, **`false`** otherwise.
 
 ### Notes
 
@@ -6246,7 +6246,7 @@ class="methodparam"><span class="type">resource</span>
 `$connection`</span> , <span class="methodparam"><span
 class="type">string</span> `$tdo`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$schema`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 Allocates a new collection object.
 
@@ -6267,7 +6267,7 @@ of the current user is the default value.
 ### Return Values
 
 Returns a new <span class="classname">OCICollection</span> object or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Notes
 
@@ -6381,7 +6381,7 @@ be *On* or *Off*.
 
 ### Return Values
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### Examples
 
@@ -6464,7 +6464,7 @@ class="function">oci\_pconnect</span>.
 
 ### Return Values
 
-Returns a new statement handle, or **`FALSE`** on error.
+Returns a new statement handle, or **`false`** on error.
 
 ### Examples
 
@@ -6541,7 +6541,7 @@ and **`OCI_DTYPE_ROWID`**.
 
 ### Return Values
 
-Returns a new LOB or FILE descriptor on success, **`FALSE`** on error.
+Returns a new LOB or FILE descriptor on success, **`false`** on error.
 
 ### Examples
 
@@ -6684,7 +6684,7 @@ A valid OCI statement identifier.
 
 ### Return Values
 
-Returns the number of columns as an integer, or **`FALSE`** on errors.
+Returns the number of columns as an integer, or **`false`** on errors.
 
 ### Examples
 
@@ -6751,7 +6751,7 @@ A valid OCI statement identifier.
 
 ### Return Values
 
-Returns the number of rows affected as an integer, or **`FALSE`** on
+Returns the number of rows affected as an integer, or **`false`** on
 errors.
 
 ### Examples
@@ -6824,7 +6824,7 @@ class="function">oci\_execute</span> and other functions.
 
 Statement identifiers can be freed with <span
 class="function">oci\_free\_statement</span> or by setting the variable
-to **`NULL`**.
+to **`null`**.
 
 ### Parameters
 
@@ -6842,7 +6842,7 @@ statements *should* end with a semi-colon (";").
 
 ### Return Values
 
-Returns a statement handle on success, or **`FALSE`** on error.
+Returns a statement handle on success, or **`false`** on error.
 
 ### Examples
 
@@ -6975,7 +6975,7 @@ The database name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7159,7 +7159,7 @@ be *On* or *Off*.
 
 ### Return Values
 
-Returns a connection identifier or **`FALSE`** on error.
+Returns a connection identifier or **`false`** on error.
 
 ### Examples
 
@@ -7264,7 +7264,7 @@ page.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7302,7 +7302,7 @@ insensitively.
 ### Return Values
 
 Returns everything as strings except for abstract types (ROWIDs, LOBs
-and FILEs). Returns **`FALSE`** on error.
+and FILEs). Returns **`false`** on error.
 
 ### Examples
 
@@ -7392,7 +7392,7 @@ class="function">oci\_new\_connect</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7496,7 +7496,7 @@ Returns a string with the Oracle Database version and available options
 
 ### Return Values
 
-Returns the version information as a string or **`FALSE`** on error.
+Returns the version information as a string or **`false`** on error.
 
 ### Examples
 
@@ -7569,7 +7569,7 @@ User chosen string up to 32 bytes long.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7676,7 +7676,7 @@ and Oracle Database may take.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7734,7 +7734,7 @@ User chosen string up to 64 bytes long.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7811,7 +7811,7 @@ User chosen string up to 64 bytes long.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7906,7 +7906,7 @@ User chosen string.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8010,7 +8010,7 @@ has been removed with Oracle 11.2.0.2.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8091,7 +8091,7 @@ User chosen <span class="type">string</span> up to 48 bytes long.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -8214,7 +8214,7 @@ The number of rows to be prefetched, \>= 0
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8377,7 +8377,7 @@ Returns the type of `statement` as one of the following strings.
 | *UPDATE*      |                                           |
 | *UNKNOWN*     |                                           |
 
-Returns **`FALSE`** on error.
+Returns **`false`** on error.
 
 ### Examples
 
@@ -8428,7 +8428,7 @@ An Oracle connection identifier.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -8468,7 +8468,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 -   [oci\_fetch](/book/oci8.html#oci_fetch) — Fetches the next row from
     a query into internal buffers
 -   [oci\_field\_is\_null](/book/oci8.html#oci_field_is_null) — Checks
-    if a field in the currently fetched row is NULL
+    if a field in the currently fetched row is null
 -   [oci\_field\_name](/book/oci8.html#oci_field_name) — Returns the
     name of a field from the statement
 -   [oci\_field\_precision](/book/oci8.html#oci_field_precision) — Tell
@@ -8609,7 +8609,7 @@ The value to be added to the collection. Can be a string or a number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8644,7 +8644,7 @@ An instance of OCI-Collection.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8681,7 +8681,7 @@ Can be a string or a number.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8708,7 +8708,7 @@ Frees the resources associated with the collection object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8740,8 +8740,8 @@ The element index. First index is 0.
 
 ### Return Values
 
-Returns **`FALSE`** if such element doesn't exist; **`NULL`** if element
-is **`NULL`**; string if element is column of a string datatype or
+Returns **`false`** if such element doesn't exist; **`null`** if element
+is **`null`**; string if element is column of a string datatype or
 number if element is numeric field.
 
 ### Changelog
@@ -8769,7 +8769,7 @@ Returns the maximum number of elements in the collection.
 
 ### Return Values
 
-Returns the maximum number as an integer, or **`FALSE`** on errors.
+Returns the maximum number as an integer, or **`false`** on errors.
 
 If the returned value is 0, then the number of elements is not limited.
 
@@ -8798,7 +8798,7 @@ Returns the size of the collection.
 
 ### Return Values
 
-Returns the number of elements in the collection or **`FALSE`** on
+Returns the number of elements in the collection or **`false`** on
 error.
 
 ### Changelog
@@ -8831,7 +8831,7 @@ The number of elements to be trimmed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -8980,7 +8980,7 @@ The copied LOB.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9010,7 +9010,7 @@ Closes descriptor of LOB or FILE. This function should be used only with
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9037,8 +9037,8 @@ Tells whether the internal pointer of large object is at the end of LOB.
 
 ### Return Values
 
-Returns **`TRUE`** if internal pointer of large object is at the end of
-LOB. Otherwise returns **`FALSE`**.
+Returns **`true`** if internal pointer of large object is at the end of
+LOB. Otherwise returns **`false`**.
 
 ### Notes
 
@@ -9088,7 +9088,7 @@ spaces.
 
 ### Return Values
 
-Returns the actual number of characters/bytes erased or **`FALSE`** on
+Returns the actual number of characters/bytes erased or **`false`** on
 failure.
 
 ### Changelog
@@ -9130,7 +9130,7 @@ Indicates the length of data to be exported.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9168,9 +9168,9 @@ when you are not going to work with the LOB anymore.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
-Returns **`FALSE`** if buffering was not enabled or an error occurred.
+Returns **`false`** if buffering was not enabled or an error occurred.
 
 ### Changelog
 
@@ -9199,7 +9199,7 @@ with <span class="function">oci\_new\_descriptor</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9222,8 +9222,8 @@ Tells whether the buffering for the large object is on or off.
 
 ### Return Values
 
-Returns **`FALSE`** if buffering for the large object is off and
-**`TRUE`** if buffering is used.
+Returns **`false`** if buffering for the large object is off and
+**`true`** if buffering is used.
 
 ### Changelog
 
@@ -9257,7 +9257,7 @@ Path to the file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9290,7 +9290,7 @@ cases it's recommended to use
 
 ### Return Values
 
-Returns the contents of the object, or **`FALSE`** on errors.
+Returns the contents of the object, or **`false`** on errors.
 
 ### Changelog
 
@@ -9329,7 +9329,7 @@ to 1 MB.
 
 ### Return Values
 
-Returns the contents as a string, or **`FALSE`** on failure.
+Returns the contents as a string, or **`false`** on failure.
 
 ### Changelog
 
@@ -9357,7 +9357,7 @@ Sets the internal pointer to the beginning of the large object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9394,7 +9394,7 @@ Can be used to indicate offset from the beginning of the large object.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9455,7 +9455,7 @@ May be one of:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9492,12 +9492,12 @@ when you have finished working with the large object.
 ### Parameters
 
 `on_off`  
-**`TRUE`** for on and **`FALSE`** for off.
+**`true`** for on and **`false`** for off.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Repeated calls
-to this method with the same flag will return **`TRUE`**.
+Returns **`true`** on success or **`false`** on failure. Repeated calls
+to this method with the same flag will return **`true`**.
 
 ### Changelog
 
@@ -9525,7 +9525,7 @@ Gets the size of the large object.
 
 ### Return Values
 
-Returns length of large object value or **`FALSE`** on failure. Empty
+Returns length of large object value or **`false`** on failure. Empty
 objects have zero length.
 
 ### Changelog
@@ -9549,7 +9549,7 @@ Gets the current position of a LOB's internal pointer.
 
 ### Return Values
 
-Returns current position of a LOB's internal pointer or **`FALSE`** if
+Returns current position of a LOB's internal pointer or **`false`** if
 an error occurred.
 
 ### Changelog
@@ -9586,7 +9586,7 @@ Otherwise, it will completely purge the LOB.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9626,7 +9626,7 @@ been written or the end of `data` is reached, whichever comes first.
 
 ### Return Values
 
-Returns the number of bytes written or **`FALSE`** on failure.
+Returns the number of bytes written or **`false`** on failure.
 
 ### Changelog
 
@@ -9669,7 +9669,7 @@ Can be one of the following:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -9713,7 +9713,7 @@ Enables or disables internal debug output.
 ### Parameters
 
 `onoff`  
-Set this to **`FALSE`** to turn debug output off or **`TRUE`** to turn
+Set this to **`false`** to turn debug output off or **`true`** to turn
 it on.
 
 ### Return Values

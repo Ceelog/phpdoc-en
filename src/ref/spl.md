@@ -10,7 +10,7 @@ interface
 class="methodname">class\_implements</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autoload`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$autoload`<span class="initializer"> = **`true`**</span></span> \] )
 
 This function returns an array with the names of the interfaces that the
 given `class` and its parents implement.
@@ -26,7 +26,7 @@ the <span class="function">\_\_autoload</span> magic method.
 
 ### Return Values
 
-An array on success, or **`FALSE`** on error.
+An array on success, or **`false`** on error.
 
 ### Examples
 
@@ -82,7 +82,7 @@ Return the parent classes of the given class
 class="methodname">class\_parents</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$class`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$autoload`<span class="initializer"> = **`TRUE`**</span></span> \] )
+`$autoload`<span class="initializer"> = **`true`**</span></span> \] )
 
 This function returns an array with the name of the parent classes of
 the given `class`.
@@ -98,7 +98,7 @@ the <span class="function">\_\_autoload</span> magic method.
 
 ### Return Values
 
-An array on success, or **`FALSE`** on error.
+An array on success, or **`false`** on error.
 
 ### Examples
 
@@ -152,7 +152,7 @@ Return the traits used by the given class
 class="methodname">class\_uses</span> ( <span class="methodparam"><span
 class="type">mixed</span> `$class`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$autoload`<span
-class="initializer"> = **`TRUE`**</span></span> \] )
+class="initializer"> = **`true`**</span></span> \] )
 
 This function returns an array with the names of the traits that the
 given `class` uses. This does however not include any traits used by a
@@ -169,7 +169,7 @@ the <span class="function">\_\_autoload</span> magic method.
 
 ### Return Values
 
-An array on success, or **`FALSE`** on error.
+An array on success, or **`false`** on error.
 
 ### Examples
 
@@ -232,7 +232,7 @@ class="methodparam"><span class="type">Traversable</span>
 `$iterator`</span> , <span class="methodparam"><span
 class="type">callable</span> `$function`</span> \[, <span
 class="methodparam"><span class="type">array</span> `$args`<span
-class="initializer"> = **`NULL`**</span></span> \] )
+class="initializer"> = **`null`**</span></span> \] )
 
 Calls a function for every element in an iterator.
 
@@ -246,7 +246,7 @@ The callback function to call on every element. This function only
 receives the given `args`, so it is nullary by default. If *count($args)
 === 3*, for instance, the callback function is ternary.
 
-> **Note**: <span class="simpara"> The function must return **`TRUE`**
+> **Note**: <span class="simpara"> The function must return **`true`**
 > in order to continue iterating over the `iterator`. </span>
 
 `args`  
@@ -369,7 +369,7 @@ class="methodname">iterator\_to\_array</span> ( <span
 class="methodparam"><span class="type">Traversable</span>
 `$iterator`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$use_keys`<span class="initializer"> =
-**`TRUE`**</span></span> \] )
+**`true`**</span></span> \] )
 
 Copy the elements of an iterator into an array.
 
@@ -383,7 +383,7 @@ Whether to use the iterator element keys as index.
 
 In PHP 5.5 and later, if a key is an <span class="type">array</span> or
 <span class="type">object</span>, a warning will be generated.
-**`NULL`** keys will be converted to an empty string, <span
+**`null`** keys will be converted to an empty string, <span
 class="type">float</span> keys will be truncated to their <span
 class="type">int</span> counterpart, <span class="type">resource</span>
 keys will generate a warning and be converted to their resource ID, and
@@ -391,10 +391,10 @@ keys will generate a warning and be converted to their resource ID, and
 
 > **Note**:
 >
-> If this parameter is not set or set to **`TRUE`**, duplicate keys will
+> If this parameter is not set or set to **`true`**, duplicate keys will
 > be overwritten. The last value with a given key will be in the
 > returned <span class="type">array</span>. Set this parameter to
-> **`FALSE`** to get all the values in any case.
+> **`false`** to get all the values in any case.
 
 ### Return Values
 
@@ -526,7 +526,7 @@ This function has no parameters.
 
 An <span class="type">array</span> of all registered \_\_autoload
 functions. If the autoload queue is not activated then the return value
-is **`FALSE`**. If no function is registered the return value will be an
+is **`false`**. If no function is registered the return value will be an
 empty array.
 
 spl\_autoload\_register
@@ -541,9 +541,9 @@ class="methodname">spl\_autoload\_register</span> (\[ <span
 class="methodparam"><span class="type">callable</span>
 `$autoload_function`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$throw`<span class="initializer"> =
-**`TRUE`**</span></span> \[, <span class="methodparam"><span
+**`true`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$prepend`<span class="initializer"> =
-**`FALSE`**</span></span> \]\]\] )
+**`false`**</span></span> \]\]\] )
 
 Register a function with the spl provided \_\_autoload queue. If the
 queue is not yet activated it will be activated.
@@ -580,7 +580,7 @@ prepend the autoloader on the autoload queue instead of appending it.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -663,7 +663,7 @@ The autoload function being unregistered.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 spl\_autoload
 =============

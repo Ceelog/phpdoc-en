@@ -188,7 +188,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> \[,
 class="initializer"> = 11211</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$timeout`</span> \[,
 <span class="methodparam"><span class="type">int</span>
-`$retry_interval`<span class="initializer"> = **`FALSE`**</span></span>
+`$retry_interval`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$status`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$failure_callback`</span> \]\]\]\]\] )
@@ -234,8 +234,8 @@ exceed 2592000 (30 days).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Returns
-**`FALSE`** if such key already exist. For the rest <span
+Returns **`true`** on success or **`false`** on failure. Returns
+**`false`** if such key already exist. For the rest <span
 class="function">Memcache::add</span> behaves similarly to <span
 class="function">Memcache::set</span>.
 
@@ -324,7 +324,7 @@ if not specified. For this reason it is wise to specify the port
 explicitly in this method call.
 
 `persistent`  
-Controls the use of a persistent connection. Default to **`TRUE`**.
+Controls the use of a persistent connection. Default to **`true`**.
 
 `weight`  
 Number of buckets to create for this server which in turn control its
@@ -351,11 +351,11 @@ every `retry_interval` seconds when serving a page.
 
 `status`  
 Controls if the server should be flagged as online. Setting this
-parameter to **`FALSE`** and `retry_interval` to -1 allows a failed
+parameter to **`false`** and `retry_interval` to -1 allows a failed
 server to be kept in the pool so as not to affect the key distribution
 algorithm. Requests for this server will then failover or fail
 immediately depending on the `memcache.allow_failover` setting. Default
-to **`TRUE`**, meaning the server should be considered online.
+to **`true`**, meaning the server should be considered online.
 
 `failure_callback`  
 Allows the user to specify a callback function to run upon encountering
@@ -377,7 +377,7 @@ port explicitly in this method call.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -427,7 +427,7 @@ use <span class="function">memcache\_close</span> function.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -515,7 +515,7 @@ port explicitly in this method call.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -584,7 +584,7 @@ Decrement the item by `value`.
 
 ### Return Values
 
-Returns item's new value on success or **`FALSE`** on failure.
+Returns item's new value on success or **`false`** on failure.
 
 ### Examples
 
@@ -645,7 +645,7 @@ Do not use this parameter.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -693,7 +693,7 @@ can use <span class="function">memcache\_flush</span> function.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -759,7 +759,7 @@ compression and serialization status).
 
 Returns the value associated with the `key` or an array of found
 key-value pairs when `key` is an <span class="type">array</span>.
-Returns **`FALSE`** on failure, `key` is not found or `key` is an empty
+Returns **`false`** on failure, `key` is not found or `key` is an empty
 <span class="type">array</span>.
 
 ### Examples
@@ -814,7 +814,7 @@ class="methodparam"><span class="type">string</span> `$type`</span> \[,
 two-dimensional associative array with server statistics. Array keys
 correspond to host:port of server and values contain the individual
 server statistics. A failed server will have its corresponding entry set
-to **`FALSE`**. You can also use the <span
+to **`false`**. You can also use the <span
 class="function">memcache\_get\_extended\_stats</span> function.
 
 > **Note**:
@@ -846,7 +846,7 @@ to security reasons.
 ### Return Values
 
 Returns a two-dimensional associative array of server statistics or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -996,7 +996,7 @@ entries to dump.
 
 ### Return Values
 
-Returns an associative array of server statistics or **`FALSE`** on
+Returns an associative array of server statistics or **`false`** on
 failure.
 
 ### See Also
@@ -1022,7 +1022,7 @@ class="function">memcache\_get\_version</span> function.
 
 ### Return Values
 
-Returns a string of server version number or **`FALSE`** on failure.
+Returns a string of server version number or **`false`** on failure.
 
 ### Examples
 
@@ -1088,7 +1088,7 @@ Increment the item by `value`.
 
 ### Return Values
 
-Returns new items value on success or **`FALSE`** on failure.
+Returns new items value on success or **`false`** on failure.
 
 ### Examples
 
@@ -1157,7 +1157,7 @@ the advantages of caching if your connection is too slow.
 
 ### Return Values
 
-Returns a Memcache object or **`FALSE`** on failure.
+Returns a Memcache object or **`false`** on failure.
 
 ### Examples
 
@@ -1199,7 +1199,7 @@ class="type">int</span> `$expire`</span> \]\] )
 <span class="function">Memcache::replace</span> should be used to
 replace value of existing item with `key`. In case if item with such key
 doesn't exists, <span class="function">Memcache::replace</span> returns
-**`FALSE`**. For the rest <span
+**`false`**. For the rest <span
 class="function">Memcache::replace</span> behaves similarly to <span
 class="function">Memcache::set</span>. Also you can use <span
 class="function">memcache\_replace</span> function.
@@ -1224,7 +1224,7 @@ exceed 2592000 (30 days).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1300,7 +1300,7 @@ exceed 2592000 (30 days).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1386,7 +1386,7 @@ compressed. The supplied value must be between 0 and 1. Default value is
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1424,7 +1424,7 @@ class="methodparam"><span class="type">string</span> `$host`</span> \[,
 class="initializer"> = 11211</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$timeout`</span> \[,
 <span class="methodparam"><span class="type">int</span>
-`$retry_interval`<span class="initializer"> = **`FALSE`**</span></span>
+`$retry_interval`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$status`</span> \[, <span class="methodparam"><span
 class="type">callable</span> `$failure_callback`</span> \]\]\]\]\] )
@@ -1458,11 +1458,11 @@ extension is loaded dynamically via <span class="function">dl</span>.
 
 `status`  
 Controls if the server should be flagged as online. Setting this
-parameter to **`FALSE`** and `retry_interval` to -1 allows a failed
+parameter to **`false`** and `retry_interval` to -1 allows a failed
 server to be kept in the pool so as not to affect the key distribution
 algorithm. Requests for this server will then failover or fail
 immediately depending on the `memcache.allow_failover` setting. Default
-to **`TRUE`**, meaning the server should be considered online.
+to **`true`**, meaning the server should be considered online.
 
 `failure_callback`  
 Allows the user to specify a callback function to run upon encountering
@@ -1471,7 +1471,7 @@ takes two parameters, the hostname and port of the failed server.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 

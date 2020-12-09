@@ -56,7 +56,7 @@ class="function">inotify\_add\_watch</span>
 
 ### Return Values
 
-A stream resource or **`FALSE`** on error.
+A stream resource or **`false`** on error.
 
 ### Examples
 
@@ -176,7 +176,7 @@ Resource returned by <span class="function">inotify\_init</span>
 
 ### Return Values
 
-An array of inotify events or **`FALSE`** if no events was pending and
+An array of inotify events or **`false`** if no events was pending and
 `inotify_instance` is non-blocking. Each event is an array with the
 following keys:
 
@@ -222,7 +222,7 @@ Watch to remove from the instance
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 

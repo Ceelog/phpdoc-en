@@ -19,7 +19,7 @@ opened by <span class="function">bzopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -93,7 +93,7 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">bzdecompress</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$use_less_memory`<span class="initializer"> = **`FALSE`**</span></span>
+`$use_less_memory`<span class="initializer"> = **`false`**</span></span>
 \] )
 
 <span class="function">bzdecompress</span> decompresses the given string
@@ -105,7 +105,7 @@ containing bzip2 encoded data.
 The string to decompress.
 
 `use_less_memory`  
-If **`TRUE`**, an alternative decompression algorithm will be used which
+If **`true`**, an alternative decompression algorithm will be used which
 uses less memory (the maximum memory requirement drops to around 2300K)
 but works at roughly half the speed.
 
@@ -115,7 +115,7 @@ for more information about this feature.
 
 ### Return Values
 
-The decompressed string, or **`FALSE`** or an error number if an error
+The decompressed string, or **`false`** or an error number if an error
 occurred.
 
 ### Changelog
@@ -270,7 +270,7 @@ opened by <span class="function">bzopen</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -301,12 +301,12 @@ The name of the file to open, or an existing stream resource.
 
 `mode`  
 The modes *'r'* (read), and *'w'* (write) are supported. Everything else
-will cause <span class="function">bzopen</span> to return **`FALSE`**.
+will cause <span class="function">bzopen</span> to return **`false`**.
 
 ### Return Values
 
 If the open fails, <span class="function">bzopen</span> returns
-**`FALSE`**, otherwise it returns a pointer to the newly opened file.
+**`false`**, otherwise it returns a pointer to the newly opened file.
 
 ### Examples
 
@@ -359,7 +359,7 @@ will be read at a time.
 
 ### Return Values
 
-Returns the uncompressed data, or **`FALSE`** on error.
+Returns the uncompressed data, or **`false`** on error.
 
 ### Examples
 
@@ -403,7 +403,7 @@ class="type">false</span></span> <span class="methodname">bzwrite</span>
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$length`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">bzwrite</span> writes a string into the given
 bzip2 file stream.
@@ -423,7 +423,7 @@ been written or the end of `data` is reached, whichever comes first.
 
 ### Return Values
 
-Returns the number of bytes written, or **`FALSE`** on error.
+Returns the number of bytes written, or **`false`** on error.
 
 ### Changelog
 

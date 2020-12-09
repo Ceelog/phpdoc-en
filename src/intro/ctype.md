@@ -10,12 +10,12 @@ between -128 and -1 inclusive then 256 will be added and the check will
 be done on that.
 
 When called with a string argument they will check every character in
-the string and will only return **`TRUE`** if every character in the
+the string and will only return **`true`** if every character in the
 string matches the requested criteria. When called with an empty string
-the result will always be **`TRUE`** in PHP \< 5.1 and **`FALSE`** since
+the result will always be **`true`** in PHP \< 5.1 and **`false`** since
 5.1.
 
-Passing anything else but a string or integer will return **`FALSE`**
+Passing anything else but a string or integer will return **`false`**
 immediately.
 
 It should be noted that ctype functions are always preferred over

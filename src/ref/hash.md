@@ -175,7 +175,7 @@ The user-supplied string
 
 ### Return Values
 
-Returns **`TRUE`** when the two strings are equal, **`FALSE`**
+Returns **`true`** when the two strings are equal, **`false`**
 otherwise.
 
 ### Errors/Exceptions
@@ -208,7 +208,7 @@ The above example will output:
 > **Note**:
 >
 > Both arguments must be of the same length to be compared successfully.
-> When arguments of differing length are supplied, **`FALSE`** is
+> When arguments of differing length are supplied, **`false`** is
 > returned immediately and the length of the known string may be leaked
 > in case of a timing attack.
 
@@ -230,7 +230,7 @@ class="methodname">hash\_file</span> ( <span class="methodparam"><span
 class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$binary`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$binary`<span class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -243,7 +243,7 @@ class="function">hash\_algos</span>.
 URL describing location of file to be hashed; Supports fopen wrappers.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values
@@ -288,7 +288,7 @@ Finalize an incremental hash and return resulting digest
 class="methodname">hash\_final</span> ( <span class="methodparam"><span
 class="type">HashContext</span> `$context`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$binary`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -296,7 +296,7 @@ class="initializer"> = **`FALSE`**</span></span> \] )
 Hashing context returned by <span class="function">hash\_init</span>.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values
@@ -385,7 +385,7 @@ of HKDF.
 ### Return Values
 
 Returns a string containing a raw binary representation of the derived
-key (also known as output keying material - OKM); or **`FALSE`** on
+key (also known as output keying material - OKM); or **`false`** on
 failure.
 
 ### Errors/Exceptions
@@ -528,7 +528,7 @@ class="methodparam"><span class="type">string</span> `$algo`</span> ,
 `$data`</span> , <span class="methodparam"><span
 class="type">string</span> `$key`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$binary`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -545,14 +545,14 @@ Shared secret key used for generating the HMAC variant of the message
 digest.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
 hexits unless `binary` is set to true in which case the raw binary
-representation of the message digest is returned. Returns **`FALSE`**
+representation of the message digest is returned. Returns **`false`**
 when `algo` is unknown or is a non-cryptographic hash function, or if
 the file `data` cannot be read.
 
@@ -599,7 +599,7 @@ class="type">string</span> `$algo`</span> , <span
 class="methodparam"><span class="type">string</span> `$data`</span> ,
 <span class="methodparam"><span class="type">string</span> `$key`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$binary`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$binary`<span class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -616,14 +616,14 @@ Shared secret key used for generating the HMAC variant of the message
 digest.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the calculated message digest as lowercase
 hexits unless `binary` is set to true in which case the raw binary
-representation of the message digest is returned. Returns **`FALSE`**
+representation of the message digest is returned. Returns **`false`**
 when `algo` is unknown or is a non-cryptographic hash function.
 
 ### Changelog
@@ -740,7 +740,7 @@ class="methodparam"><span class="type">string</span> `$password`</span>
 class="type">int</span> `$length`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$binary`<span class="initializer"> =
-**`FALSE`**</span></span> \]\] )
+**`false`**</span></span> \]\] )
 
 ### Parameters
 
@@ -760,21 +760,21 @@ randomly.
 The number of internal iterations to perform for the derivation.
 
 `length`  
-The length of the output string. If `binary` is **`TRUE`** this
+The length of the output string. If `binary` is **`true`** this
 corresponds to the byte-length of the derived key, if `binary` is
-**`FALSE`** this corresponds to twice the byte-length of the derived key
+**`false`** this corresponds to twice the byte-length of the derived key
 (as every byte of the key is returned as two hexits).
 
 If *0* is passed, the entire output of the supplied algorithm is used.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values
 
 Returns a string containing the derived key as lowercase hexits unless
-`binary` is set to **`TRUE`** in which case the raw binary
+`binary` is set to **`true`** in which case the raw binary
 representation of the derived key is returned.
 
 ### Errors/Exceptions
@@ -848,7 +848,7 @@ class="methodparam"><span class="type">HashContext</span>
 class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">resource</span><span class="type">null</span></span>
-`$stream_context`<span class="initializer"> = **`NULL`**</span></span>
+`$stream_context`<span class="initializer"> = **`null`**</span></span>
 \] )
 
 ### Parameters
@@ -865,7 +865,7 @@ class="function">stream\_context\_create</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -971,7 +971,7 @@ Message to be included in the hash digest.
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### Changelog
 
@@ -999,7 +999,7 @@ class="type">false</span></span> <span class="methodname">hash</span> (
 `$algo`</span> , <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$binary`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 ### Parameters
 
@@ -1012,7 +1012,7 @@ class="function">hash\_algos</span>.
 Message to be hashed.
 
 `binary`  
-When set to **`TRUE`**, outputs raw binary data. **`FALSE`** outputs
+When set to **`true`**, outputs raw binary data. **`false`** outputs
 lowercase hexits.
 
 ### Return Values

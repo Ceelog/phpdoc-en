@@ -22,8 +22,8 @@ The path to the PHP script to be compiled.
 
 ### Return Values
 
-Returns **`TRUE`** if `filename` was compiled successfully or
-**`FALSE`** on failure.
+Returns **`true`** if `filename` was compiled successfully or
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -75,7 +75,7 @@ Get status information about the cache
 class="type">false</span></span> <span
 class="methodname">opcache\_get\_status</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
-`$include_scripts`<span class="initializer"> = **`TRUE`**</span></span>
+`$include_scripts`<span class="initializer"> = **`true`**</span></span>
 \] )
 
 This function returns state information about the cache instance
@@ -88,7 +88,7 @@ Include script specific state information
 ### Return Values
 
 Returns an array of information, optionally containing script specific
-state information, or **`FALSE`** on failure.
+state information, or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -111,10 +111,10 @@ Invalidates a cached script
 class="methodname">opcache\_invalidate</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$force`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$force`<span class="initializer"> = **`false`**</span></span> \] )
 
 This function invalidates a particular script from the opcode cache. If
-`force` is unset or **`FALSE`**, the script will only be invalidated if
+`force` is unset or **`false`**, the script will only be invalidated if
 the modification time of the script is newer than the cached opcodes.
 
 ### Parameters
@@ -123,13 +123,13 @@ the modification time of the script is newer than the cached opcodes.
 The path to the script being invalidated.
 
 `force`  
-If set to **`TRUE`**, the script will be invalidated regardless of
+If set to **`true`**, the script will be invalidated regardless of
 whether invalidation is necessary.
 
 ### Return Values
 
-Returns **`TRUE`** if the opcode cache for `filename` was invalidated or
-if there was nothing to invalidate, or **`FALSE`** if the opcode cache
+Returns **`true`** if the opcode cache for `filename` was invalidated or
+if there was nothing to invalidate, or **`false`** if the opcode cache
 is disabled.
 
 ### See Also
@@ -160,7 +160,7 @@ The path to the PHP script to be checked.
 
 ### Return Values
 
-Returns **`TRUE`** if `filename` is cached in OPCache, **`FALSE`**
+Returns **`true`** if `filename` is cached in OPCache, **`false`**
 otherwise.
 
 ### See Also
@@ -188,7 +188,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the opcode cache was reset, or **`FALSE`** if the
+Returns **`true`** if the opcode cache was reset, or **`false`** if the
 opcode cache is disabled.
 
 ### See Also

@@ -75,7 +75,7 @@ A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
-Returns a new cURL handle, or **`FALSE`** on failure.
+Returns a new cURL handle, or **`false`** on failure.
 
 ### Changelog
 
@@ -250,7 +250,7 @@ The string to be encoded.
 
 ### Return Values
 
-Returns escaped string or **`FALSE`** on failure.
+Returns escaped string or **`false`** on failure.
 
 ### Changelog
 
@@ -314,15 +314,15 @@ A cURL handle returned by <span class="function">curl\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. However, if the
+Returns **`true`** on success or **`false`** on failure. However, if the
 **`CURLOPT_RETURNTRANSFER`** option is
 <a href="/ref/curl.html#curl_setopt" class="link">set</a>, it will
-return the result on success, **`FALSE`** on failure.
+return the result on success, **`false`** on failure.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -388,7 +388,7 @@ class="methodname">curl\_getinfo</span> ( <span
 class="methodparam"><span class="type">CurlHandle</span>
 `$handle`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$option`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$option`<span class="initializer"> = **`null`**</span></span> \] )
 
 Gets information about the last transfer.
 
@@ -566,7 +566,7 @@ This may be one of the following constants:
 
 If `option` is given, returns its value. Otherwise, returns an
 associative array with the following elements (which correspond to
-`option`), or **`FALSE`** on failure:
+`option`), or **`false`** on failure:
 
 -   <span class="simpara"> "url" </span>
 -   <span class="simpara"> "content\_type" </span>
@@ -678,7 +678,7 @@ class="type">false</span></span> <span
 class="methodname">curl\_init</span> (\[ <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$url`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Initializes a new session and return a cURL handle for use with the
 <span class="function">curl\_setopt</span>, <span
@@ -700,7 +700,7 @@ class="function">curl\_setopt</span> function.
 
 ### Return Values
 
-Returns a cURL handle on success, **`FALSE`** on errors.
+Returns a cURL handle on success, **`false`** on errors.
 
 ### Changelog
 
@@ -925,7 +925,7 @@ Return an integer containing the last multi curl error number.
 
 | Version | Description                                                                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | The function no longer returns **`FALSE`** on failure.                                                                                               |
+| 8.0.0   | The function no longer returns **`false`** on failure.                                                                                               |
 | 8.0.0   | `multi_handle` expects a <span class="classname">CurlMultiHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
@@ -1074,14 +1074,14 @@ class="methodname">curl\_multi\_info\_read</span> ( <span
 class="methodparam"><span class="type">CurlMultiHandle</span>
 `$multi_handle`</span> \[, <span class="methodparam"><span
 class="type">int</span> `&$queued_messages`<span class="initializer"> =
-**`NULL`**</span></span> \] )
+**`null`**</span></span> \] )
 
 Ask the multi handle if there are any messages or information from the
 individual transfers. Messages may include information such as an error
 code from the transfer or just the fact that a transfer is completed.
 
 Repeated calls to this function will return a new result each time,
-until a **`FALSE`** is returned as a signal that there is no more to get
+until a **`false`** is returned as a signal that there is no more to get
 at this point. The integer pointed to with `queued_messages` will
 contain the number of remaining messages after this function was called.
 
@@ -1101,7 +1101,7 @@ Number of messages that are still in the queue
 
 ### Return Values
 
-On success, returns an associative array for the message, **`FALSE`** on
+On success, returns an associative array for the message, **`false`** on
 failure.
 
 | Key:     | Value:                                                                                          |
@@ -1209,7 +1209,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns a cURL multi handle on success, **`FALSE`** on failure.
+Returns a cURL multi handle on success, **`false`** on failure.
 
 ### Changelog
 
@@ -1447,7 +1447,7 @@ The push function is supposed to return either <strong><code>CURL_PUSH_OK</code>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1480,7 +1480,7 @@ constants.
 
 ### Return Values
 
-Returns error string for valid error code, **`NULL`** otherwise.
+Returns error string for valid error code, **`null`** otherwise.
 
 ### Examples
 
@@ -1651,8 +1651,8 @@ equivalents.
 
 ### Return Values
 
-Returns **`TRUE`** if all options were successfully set. If an option
-could not be successfully set, **`FALSE`** is immediately returned,
+Returns **`true`** if all options were successfully set. If an option
+could not be successfully set, **`false`** is immediately returned,
 ignoring any future options in the `options` array.
 
 ### Changelog
@@ -1765,112 +1765,112 @@ values of the `option` parameter:
 <tbody>
 <tr class="odd">
 <td><strong><code>CURLOPT_AUTOREFERER</code></strong></td>
-<td><strong><code>TRUE</code></strong> to automatically set the <em>Referer:</em> field in requests where it follows a <em>Location:</em> redirect.</td>
+<td><strong><code>true</code></strong> to automatically set the <em>Referer:</em> field in requests where it follows a <em>Location:</em> redirect.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_BINARYTRANSFER</code></strong></td>
-<td><strong><code>TRUE</code></strong> to return the raw output when <strong><code>CURLOPT_RETURNTRANSFER</code></strong> is used.</td>
+<td><strong><code>true</code></strong> to return the raw output when <strong><code>CURLOPT_RETURNTRANSFER</code></strong> is used.</td>
 <td>From PHP 5.1.3, this option has no effect: the raw output will always be returned when <strong><code>CURLOPT_RETURNTRANSFER</code></strong> is used.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_COOKIESESSION</code></strong></td>
-<td><strong><code>TRUE</code></strong> to mark this as a new cookie "session". It will force libcurl to ignore all cookies it is about to load that are "session cookies" from the previous session. By default, libcurl always stores and loads all cookies, independent if they are session cookies or not. Session cookies are cookies without expiry date and they are meant to be alive and existing for this "session" only.</td>
+<td><strong><code>true</code></strong> to mark this as a new cookie "session". It will force libcurl to ignore all cookies it is about to load that are "session cookies" from the previous session. By default, libcurl always stores and loads all cookies, independent if they are session cookies or not. Session cookies are cookies without expiry date and they are meant to be alive and existing for this "session" only.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_CERTINFO</code></strong></td>
-<td><strong><code>TRUE</code></strong> to output SSL certification information to <em>STDERR</em> on secure transfers.</td>
+<td><strong><code>true</code></strong> to output SSL certification information to <em>STDERR</em> on secure transfers.</td>
 <td>Added in cURL 7.19.1. Available since PHP 5.3.2. Requires <strong><code>CURLOPT_VERBOSE</code></strong> to be on to have an effect.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_CONNECT_ONLY</code></strong></td>
-<td><strong><code>TRUE</code></strong> tells the library to perform all the required proxy authentication and connection setup, but no data transfer. This option is implemented for HTTP, SMTP and POP3.</td>
+<td><strong><code>true</code></strong> tells the library to perform all the required proxy authentication and connection setup, but no data transfer. This option is implemented for HTTP, SMTP and POP3.</td>
 <td>Added in 7.15.2. Available since PHP 5.5.0.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_CRLF</code></strong></td>
-<td><strong><code>TRUE</code></strong> to convert Unix newlines to CRLF newlines on transfers.</td>
+<td><strong><code>true</code></strong> to convert Unix newlines to CRLF newlines on transfers.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_DISALLOW_USERNAME_IN_URL</code></strong></td>
-<td><strong><code>TRUE</code></strong> to not allow URLs that include a username. Usernames are allowed by default (0).</td>
+<td><strong><code>true</code></strong> to not allow URLs that include a username. Usernames are allowed by default (0).</td>
 <td>Added in cURL 7.61.0. Available since PHP 7.3.0.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_DNS_SHUFFLE_ADDRESSES</code></strong></td>
-<td><strong><code>TRUE</code></strong> to shuffle the order of all returned addresses so that they will be used in a random order, when a name is resolved and more than one IP address is returned. This may cause IPv4 to be used before IPv6 or vice versa.</td>
+<td><strong><code>true</code></strong> to shuffle the order of all returned addresses so that they will be used in a random order, when a name is resolved and more than one IP address is returned. This may cause IPv4 to be used before IPv6 or vice versa.</td>
 <td>Added in cURL 7.60.0. Available since PHP 7.3.0.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_HAPROXYPROTOCOL</code></strong></td>
-<td><strong><code>TRUE</code></strong> to send an HAProxy PROXY protocol v1 header at the start of the connection. The default action is not to send this header.</td>
+<td><strong><code>true</code></strong> to send an HAProxy PROXY protocol v1 header at the start of the connection. The default action is not to send this header.</td>
 <td>Added in cURL 7.60.0. Available since PHP 7.3.0.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_SSH_COMPRESSION</code></strong></td>
-<td><strong><code>TRUE</code></strong> to enable built-in SSH compression. This is a request, not an order; the server may or may not do it.</td>
+<td><strong><code>true</code></strong> to enable built-in SSH compression. This is a request, not an order; the server may or may not do it.</td>
 <td>Added in cURL 7.56.0. Available since PHP 7.3.0.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_DNS_USE_GLOBAL_CACHE</code></strong></td>
-<td><strong><code>TRUE</code></strong> to use a global DNS cache. This option is not thread-safe. It is conditionally enabled by default if PHP is built for non-threaded use (CLI, FCGI, Apache2-Prefork, etc.).</td>
+<td><strong><code>true</code></strong> to use a global DNS cache. This option is not thread-safe. It is conditionally enabled by default if PHP is built for non-threaded use (CLI, FCGI, Apache2-Prefork, etc.).</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FAILONERROR</code></strong></td>
-<td><strong><code>TRUE</code></strong> to fail verbosely if the HTTP code returned is greater than or equal to 400. The default behavior is to return the page normally, ignoring the code.</td>
+<td><strong><code>true</code></strong> to fail verbosely if the HTTP code returned is greater than or equal to 400. The default behavior is to return the page normally, ignoring the code.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_SSL_FALSESTART</code></strong></td>
-<td><strong><code>TRUE</code></strong> to enable TLS false start.</td>
+<td><strong><code>true</code></strong> to enable TLS false start.</td>
 <td>Added in cURL 7.42.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FILETIME</code></strong></td>
-<td><strong><code>TRUE</code></strong> to attempt to retrieve the modification date of the remote document. This value can be retrieved using the <strong><code>CURLINFO_FILETIME</code></strong> option with <span class="function">curl_getinfo</span>.</td>
+<td><strong><code>true</code></strong> to attempt to retrieve the modification date of the remote document. This value can be retrieved using the <strong><code>CURLINFO_FILETIME</code></strong> option with <span class="function">curl_getinfo</span>.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_FOLLOWLOCATION</code></strong></td>
-<td><strong><code>TRUE</code></strong> to follow any <em>"Location: "</em> header that the server sends as part of the HTTP header (note this is recursive, PHP will follow as many <em>"Location: "</em> headers that it is sent, unless <strong><code>CURLOPT_MAXREDIRS</code></strong> is set).</td>
+<td><strong><code>true</code></strong> to follow any <em>"Location: "</em> header that the server sends as part of the HTTP header (note this is recursive, PHP will follow as many <em>"Location: "</em> headers that it is sent, unless <strong><code>CURLOPT_MAXREDIRS</code></strong> is set).</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FORBID_REUSE</code></strong></td>
-<td><strong><code>TRUE</code></strong> to force the connection to explicitly close when it has finished processing, and not be pooled for reuse.</td>
+<td><strong><code>true</code></strong> to force the connection to explicitly close when it has finished processing, and not be pooled for reuse.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_FRESH_CONNECT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to force the use of a new connection instead of a cached one.</td>
+<td><strong><code>true</code></strong> to force the use of a new connection instead of a cached one.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FTP_USE_EPRT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to use EPRT (and LPRT) when doing active FTP downloads. Use <strong><code>FALSE</code></strong> to disable EPRT and LPRT and use PORT only.</td>
+<td><strong><code>true</code></strong> to use EPRT (and LPRT) when doing active FTP downloads. Use <strong><code>false</code></strong> to disable EPRT and LPRT and use PORT only.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_FTP_USE_EPSV</code></strong></td>
-<td><strong><code>TRUE</code></strong> to first try an EPSV command for FTP transfers before reverting back to PASV. Set to <strong><code>FALSE</code></strong> to disable EPSV.</td>
+<td><strong><code>true</code></strong> to first try an EPSV command for FTP transfers before reverting back to PASV. Set to <strong><code>false</code></strong> to disable EPSV.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FTP_CREATE_MISSING_DIRS</code></strong></td>
-<td><strong><code>TRUE</code></strong> to create missing directories when an FTP operation encounters a path that currently doesn't exist.</td>
+<td><strong><code>true</code></strong> to create missing directories when an FTP operation encounters a path that currently doesn't exist.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_FTPAPPEND</code></strong></td>
-<td><strong><code>TRUE</code></strong> to append to the remote file instead of overwriting it.</td>
+<td><strong><code>true</code></strong> to append to the remote file instead of overwriting it.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_TCP_NODELAY</code></strong></td>
-<td><strong><code>TRUE</code></strong> to disable TCP's Nagle algorithm, which tries to minimize the number of small packets on the network.</td>
+<td><strong><code>true</code></strong> to disable TCP's Nagle algorithm, which tries to minimize the number of small packets on the network.</td>
 <td>Available since PHP 5.2.1 for versions compiled with libcurl 7.11.2 or greater.</td>
 </tr>
 <tr class="odd">
@@ -1880,161 +1880,161 @@ values of the `option` parameter:
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_FTPLISTONLY</code></strong></td>
-<td><strong><code>TRUE</code></strong> to only list the names of an FTP directory.</td>
+<td><strong><code>true</code></strong> to only list the names of an FTP directory.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_HEADER</code></strong></td>
-<td><strong><code>TRUE</code></strong> to include the header in the output.</td>
+<td><strong><code>true</code></strong> to include the header in the output.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLINFO_HEADER_OUT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to track the handle's request string.</td>
+<td><strong><code>true</code></strong> to track the handle's request string.</td>
 <td>Available since PHP 5.1.3. The <strong><code>CURLINFO_</code></strong> prefix is intentional.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_HTTP09_ALLOWED </code></strong></td>
-<td>Whether to allow HTTP/0.9 responses. Defaults to <strong><code>FALSE</code></strong> as of libcurl 7.66.0; formerly it defaulted to <strong><code>TRUE</code></strong>.</td>
+<td>Whether to allow HTTP/0.9 responses. Defaults to <strong><code>false</code></strong> as of libcurl 7.66.0; formerly it defaulted to <strong><code>true</code></strong>.</td>
 <td>Available since PHP 7.3.15 and 7.4.3, respectively, if built against libcurl &gt;= 7.64.0</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_HTTPGET</code></strong></td>
-<td><strong><code>TRUE</code></strong> to reset the HTTP request method to GET. Since GET is the default, this is only necessary if the request method has been changed.</td>
+<td><strong><code>true</code></strong> to reset the HTTP request method to GET. Since GET is the default, this is only necessary if the request method has been changed.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_HTTPPROXYTUNNEL</code></strong></td>
-<td><strong><code>TRUE</code></strong> to tunnel through a given HTTP proxy.</td>
+<td><strong><code>true</code></strong> to tunnel through a given HTTP proxy.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_HTTP_CONTENT_DECODING</code></strong></td>
-<td><strong><code>FALSE</code></strong> to get the raw HTTP response body.</td>
+<td><strong><code>false</code></strong> to get the raw HTTP response body.</td>
 <td>Available as of PHP 5.5.0 if built against libcurl &gt;= 7.16.2.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_KEEP_SENDING_ON_ERROR</code></strong></td>
-<td><strong><code>TRUE</code></strong> to keep sending the request body if the HTTP code returned is equal to or larger than 300. The default action would be to stop sending and close the stream or connection. Suitable for manual NTLM authentication. Most applications do not need this option.</td>
+<td><strong><code>true</code></strong> to keep sending the request body if the HTTP code returned is equal to or larger than 300. The default action would be to stop sending and close the stream or connection. Suitable for manual NTLM authentication. Most applications do not need this option.</td>
 <td>Available as of PHP 7.3.0 if built against libcurl &gt;= 7.51.0.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_MUTE</code></strong></td>
-<td><strong><code>TRUE</code></strong> to be completely silent with regards to the cURL functions.</td>
+<td><strong><code>true</code></strong> to be completely silent with regards to the cURL functions.</td>
 <td>Removed in cURL 7.15.5 (You can use CURLOPT_RETURNTRANSFER instead)</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_NETRC</code></strong></td>
-<td><strong><code>TRUE</code></strong> to scan the <var class="filename">~/.netrc</var> file to find a username and password for the remote site that a connection is being established with.</td>
+<td><strong><code>true</code></strong> to scan the <var class="filename">~/.netrc</var> file to find a username and password for the remote site that a connection is being established with.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_NOBODY</code></strong></td>
-<td><strong><code>TRUE</code></strong> to exclude the body from the output. Request method is then set to HEAD. Changing this to <strong><code>FALSE</code></strong> does not change it to GET.</td>
+<td><strong><code>true</code></strong> to exclude the body from the output. Request method is then set to HEAD. Changing this to <strong><code>false</code></strong> does not change it to GET.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_NOPROGRESS</code></strong></td>
-<td><p><strong><code>TRUE</code></strong> to disable the progress meter for cURL transfers.</p>
+<td><p><strong><code>true</code></strong> to disable the progress meter for cURL transfers.</p>
 <blockquote>
 <p><strong>Note</strong>:</p>
-<p>PHP automatically sets this option to <strong><code>TRUE</code></strong>, this should only be changed for debugging purposes.</p>
+<p>PHP automatically sets this option to <strong><code>true</code></strong>, this should only be changed for debugging purposes.</p>
 </blockquote></td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_NOSIGNAL</code></strong></td>
-<td><strong><code>TRUE</code></strong> to ignore any cURL function that causes a signal to be sent to the PHP process. This is turned on by default in multi-threaded SAPIs so timeout options can still be used.</td>
+<td><strong><code>true</code></strong> to ignore any cURL function that causes a signal to be sent to the PHP process. This is turned on by default in multi-threaded SAPIs so timeout options can still be used.</td>
 <td>Added in cURL 7.10.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_PATH_AS_IS</code></strong></td>
-<td><strong><code>TRUE</code></strong> to not handle dot dot sequences.</td>
+<td><strong><code>true</code></strong> to not handle dot dot sequences.</td>
 <td>Added in cURL 7.42.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_PIPEWAIT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to wait for pipelining/multiplexing.</td>
+<td><strong><code>true</code></strong> to wait for pipelining/multiplexing.</td>
 <td>Added in cURL 7.43.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_POST</code></strong></td>
-<td><strong><code>TRUE</code></strong> to do a regular HTTP POST. This POST is the normal <em>application/x-www-form-urlencoded</em> kind, most commonly used by HTML forms.</td>
+<td><strong><code>true</code></strong> to do a regular HTTP POST. This POST is the normal <em>application/x-www-form-urlencoded</em> kind, most commonly used by HTML forms.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_PUT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to HTTP PUT a file. The file to PUT must be set with <strong><code>CURLOPT_INFILE</code></strong> and <strong><code>CURLOPT_INFILESIZE</code></strong>.</td>
+<td><strong><code>true</code></strong> to HTTP PUT a file. The file to PUT must be set with <strong><code>CURLOPT_INFILE</code></strong> and <strong><code>CURLOPT_INFILESIZE</code></strong>.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_RETURNTRANSFER</code></strong></td>
-<td><strong><code>TRUE</code></strong> to return the transfer as a string of the return value of <span class="function">curl_exec</span> instead of outputting it directly.</td>
+<td><strong><code>true</code></strong> to return the transfer as a string of the return value of <span class="function">curl_exec</span> instead of outputting it directly.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_SASL_IR</code></strong></td>
-<td><strong><code>TRUE</code></strong> to enable sending the initial response in the first packet.</td>
+<td><strong><code>true</code></strong> to enable sending the initial response in the first packet.</td>
 <td>Added in cURL 7.31.10. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_SSL_ENABLE_ALPN</code></strong></td>
-<td><strong><code>FALSE</code></strong> to disable ALPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
+<td><strong><code>false</code></strong> to disable ALPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
 <td>Added in cURL 7.36.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_SSL_ENABLE_NPN</code></strong></td>
-<td><strong><code>FALSE</code></strong> to disable NPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
+<td><strong><code>false</code></strong> to disable NPN in the SSL handshake (if the SSL backend libcurl is built to use supports it), which can be used to negotiate http2.</td>
 <td>Added in cURL 7.36.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_SSL_VERIFYPEER</code></strong></td>
-<td><strong><code>FALSE</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option.</td>
-<td><strong><code>TRUE</code></strong> by default as of cURL 7.10. Default bundle installed as of cURL 7.10.</td>
+<td><strong><code>false</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option.</td>
+<td><strong><code>true</code></strong> by default as of cURL 7.10. Default bundle installed as of cURL 7.10.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_SSL_VERIFYSTATUS</code></strong></td>
-<td><strong><code>TRUE</code></strong> to verify the certificate's status.</td>
+<td><strong><code>true</code></strong> to verify the certificate's status.</td>
 <td>Added in cURL 7.41.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_PROXY_SSL_VERIFYPEER</code></strong></td>
-<td><strong><code>FALSE</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option. When set to false, the peer certificate verification succeeds regardless.</td>
-<td><strong><code>TRUE</code></strong> by default. Available since PHP 7.3.0 and libcurl &gt;= cURL 7.52.0.</td>
+<td><strong><code>false</code></strong> to stop cURL from verifying the peer's certificate. Alternate certificates to verify against can be specified with the <strong><code>CURLOPT_CAINFO</code></strong> option or a certificate directory can be specified with the <strong><code>CURLOPT_CAPATH</code></strong> option. When set to false, the peer certificate verification succeeds regardless.</td>
+<td><strong><code>true</code></strong> by default. Available since PHP 7.3.0 and libcurl &gt;= cURL 7.52.0.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_SUPPRESS_CONNECT_HEADERS</code></strong></td>
-<td><strong><code>TRUE</code></strong> to suppress proxy CONNECT response headers from the user callback functions <strong><code>CURLOPT_HEADERFUNCTION</code></strong> and <strong><code>CURLOPT_WRITEFUNCTION</code></strong>, when <strong><code>CURLOPT_HTTPPROXYTUNNEL</code></strong> is used and a CONNECT request is made.</td>
+<td><strong><code>true</code></strong> to suppress proxy CONNECT response headers from the user callback functions <strong><code>CURLOPT_HEADERFUNCTION</code></strong> and <strong><code>CURLOPT_WRITEFUNCTION</code></strong>, when <strong><code>CURLOPT_HTTPPROXYTUNNEL</code></strong> is used and a CONNECT request is made.</td>
 <td>Added in cURL 7.54.0. Available since PHP 7.3.0.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_TCP_FASTOPEN</code></strong></td>
-<td><strong><code>TRUE</code></strong> to enable TCP Fast Open.</td>
+<td><strong><code>true</code></strong> to enable TCP Fast Open.</td>
 <td>Added in cURL 7.49.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_TFTP_NO_OPTIONS</code></strong></td>
-<td><strong><code>TRUE</code></strong> to not send TFTP options requests.</td>
+<td><strong><code>true</code></strong> to not send TFTP options requests.</td>
 <td>Added in cURL 7.48.0. Available since PHP 7.0.7.</td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_TRANSFERTEXT</code></strong></td>
-<td><strong><code>TRUE</code></strong> to use ASCII mode for FTP transfers. For LDAP, it retrieves data in plain text instead of HTML. On Windows systems, it will not set <em>STDOUT</em> to binary mode.</td>
+<td><strong><code>true</code></strong> to use ASCII mode for FTP transfers. For LDAP, it retrieves data in plain text instead of HTML. On Windows systems, it will not set <em>STDOUT</em> to binary mode.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_UNRESTRICTED_AUTH</code></strong></td>
-<td><strong><code>TRUE</code></strong> to keep sending the username and password when following locations (using <strong><code>CURLOPT_FOLLOWLOCATION</code></strong>), even when the hostname has changed.</td>
+<td><strong><code>true</code></strong> to keep sending the username and password when following locations (using <strong><code>CURLOPT_FOLLOWLOCATION</code></strong>), even when the hostname has changed.</td>
 <td></td>
 </tr>
 <tr class="odd">
 <td><strong><code>CURLOPT_UPLOAD</code></strong></td>
-<td><strong><code>TRUE</code></strong> to prepare for an upload.</td>
+<td><strong><code>true</code></strong> to prepare for an upload.</td>
 <td></td>
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_VERBOSE</code></strong></td>
-<td><strong><code>TRUE</code></strong> to output verbose information. Writes output to <em>STDERR</em>, or the file specified using <strong><code>CURLOPT_STDERR</code></strong>.</td>
+<td><strong><code>true</code></strong> to output verbose information. Writes output to <em>STDERR</em>, or the file specified using <strong><code>CURLOPT_STDERR</code></strong>.</td>
 <td></td>
 </tr>
 </tbody>
@@ -2255,7 +2255,7 @@ values of the `option` parameter:
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_TIMECONDITION</code></strong></td>
-<td>How <strong><code>CURLOPT_TIMEVALUE</code></strong> is treated. Use <strong><code>CURL_TIMECOND_IFMODSINCE</code></strong> to return the page only if it has been modified since the time specified in <strong><code>CURLOPT_TIMEVALUE</code></strong>. If it hasn't been modified, a <em>"304 Not Modified"</em> header will be returned assuming <strong><code>CURLOPT_HEADER</code></strong> is <strong><code>TRUE</code></strong>. Use <strong><code>CURL_TIMECOND_IFUNMODSINCE</code></strong> for the reverse effect. <strong><code>CURL_TIMECOND_IFMODSINCE</code></strong> is the default.</td>
+<td>How <strong><code>CURLOPT_TIMEVALUE</code></strong> is treated. Use <strong><code>CURL_TIMECOND_IFMODSINCE</code></strong> to return the page only if it has been modified since the time specified in <strong><code>CURLOPT_TIMEVALUE</code></strong>. If it hasn't been modified, a <em>"304 Not Modified"</em> header will be returned assuming <strong><code>CURLOPT_HEADER</code></strong> is <strong><code>true</code></strong>. Use <strong><code>CURL_TIMECOND_IFUNMODSINCE</code></strong> for the reverse effect. <strong><code>CURL_TIMECOND_IFMODSINCE</code></strong> is the default.</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -2414,7 +2414,7 @@ values of the `option` parameter:
 </tr>
 <tr class="even">
 <td><strong><code>CURLOPT_KRB4LEVEL</code></strong></td>
-<td>The KRB4 (Kerberos 4) security level. Any of the following values (in order from least to most powerful) are valid: <em>"clear"</em>, <em>"safe"</em>, <em>"confidential"</em>, <em>"private".</em>. If the string does not match one of these, <em>"private"</em> is used. Setting this option to <strong><code>NULL</code></strong> will disable KRB4 security. Currently KRB4 security only works with FTP transactions.</td>
+<td>The KRB4 (Kerberos 4) security level. Any of the following values (in order from least to most powerful) are valid: <em>"clear"</em>, <em>"safe"</em>, <em>"confidential"</em>, <em>"private".</em>. If the string does not match one of these, <em>"private"</em> is used. Setting this option to <strong><code>null</code></strong> will disable KRB4 security. Currently KRB4 security only works with FTP transactions.</td>
 <td></td>
 </tr>
 <tr class="odd">
@@ -2705,7 +2705,7 @@ following values of the `option` parameter:
 <td><p>A callback accepting five parameters. The first is the cURL resource, the second is the total number of bytes expected to be downloaded in this transfer, the third is the number of bytes downloaded so far, the fourth is the total number of bytes expected to be uploaded in this transfer, and the fifth is the number of bytes uploaded so far.</p>
 <blockquote>
 <p><strong>Note</strong>:</p>
-<p>The callback is only called when the <strong><code>CURLOPT_NOPROGRESS</code></strong> option is set to <strong><code>FALSE</code></strong>.</p>
+<p>The callback is only called when the <strong><code>CURLOPT_NOPROGRESS</code></strong> option is set to <strong><code>false</code></strong>.</p>
 </blockquote>
 <p>Return a non-zero value to abort the transfer. In which case, the transfer will set a <strong><code>CURLE_ABORTED_BY_CALLBACK</code></strong> error.</p></td>
 </tr>
@@ -2728,7 +2728,7 @@ Other values:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2867,13 +2867,13 @@ class="function">curl\_share\_init</span>.
 ### Return Values
 
 Returns an integer containing the last share curl error number, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
 | Version | Description                                                                                                                                          |
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | The function no longer returns **`FALSE`** on failure.                                                                                               |
+| 8.0.0   | The function no longer returns **`false`** on failure.                                                                                               |
 | 8.0.0   | `share_handle` expects a <span class="classname">CurlShareHandle</span> instance now; previously, a <span class="type">resource</span> was expected. |
 
 ### See Also
@@ -2986,7 +2986,7 @@ class="function">curl\_share\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -3055,7 +3055,7 @@ constants.
 
 ### Return Values
 
-Returns error description or **`NULL`** for invalid error code.
+Returns error description or **`null`** for invalid error code.
 
 ### See Also
 
@@ -3085,7 +3085,7 @@ constants.
 
 ### Return Values
 
-Returns error description or **`NULL`** for invalid error code.
+Returns error description or **`null`** for invalid error code.
 
 ### Examples
 
@@ -3147,7 +3147,7 @@ The URL encoded string to be decoded.
 
 ### Return Values
 
-Returns decoded string or **`FALSE`** on failure.
+Returns decoded string or **`false`** on failure.
 
 ### Changelog
 

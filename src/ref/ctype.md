@@ -27,8 +27,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is either a letter or a
-digit, **`FALSE`** otherwise.
+Returns **`true`** if every character in `text` is either a letter or a
+digit, **`false`** otherwise.
 
 ### Examples
 
@@ -93,8 +93,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is a letter from the
-current locale, **`FALSE`** otherwise.
+Returns **`true`** if every character in `text` is a letter from the
+current locale, **`false`** otherwise.
 
 ### Examples
 
@@ -155,8 +155,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is a control character
-from the current locale, **`FALSE`** otherwise.
+Returns **`true`** if every character in `text` is a control character
+from the current locale, **`false`** otherwise.
 
 ### Examples
 
@@ -213,8 +213,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in the string `text` is a decimal
-digit, **`FALSE`** otherwise.
+Returns **`true`** if every character in the string `text` is a decimal
+digit, **`false`** otherwise.
 
 ### Examples
 
@@ -293,8 +293,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is printable and
-actually creates visible output (no white space), **`FALSE`** otherwise.
+Returns **`true`** if every character in `text` is printable and
+actually creates visible output (no white space), **`false`** otherwise.
 
 ### Examples
 
@@ -354,7 +354,7 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is a lowercase letter in
+Returns **`true`** if every character in `text` is a lowercase letter in
 the current locale.
 
 ### Examples
@@ -416,8 +416,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` will actually create
-output (including blanks). Returns **`FALSE`** if `text` contains
+Returns **`true`** if every character in `text` will actually create
+output (including blanks). Returns **`false`** if `text` contains
 control characters or characters that do not have any output or control
 function at all.
 
@@ -480,8 +480,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is printable, but
-neither letter, digit or blank, **`FALSE`** otherwise.
+Returns **`true`** if every character in `text` is printable, but
+neither letter, digit or blank, **`false`** otherwise.
 
 ### Examples
 
@@ -540,8 +540,8 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` creates some sort of
-white space, **`FALSE`** otherwise. Besides the blank character this
+Returns **`true`** if every character in `text` creates some sort of
+white space, **`false`** otherwise. Besides the blank character this
 also includes tab, vertical tab, line feed, carriage return and form
 feed characters.
 
@@ -607,7 +607,7 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is an uppercase letter
+Returns **`true`** if every character in `text` is an uppercase letter
 in the current locale.
 
 ### Examples
@@ -669,9 +669,9 @@ The tested string.
 
 ### Return Values
 
-Returns **`TRUE`** if every character in `text` is a hexadecimal
+Returns **`true`** if every character in `text` is a hexadecimal
 'digit', that is a decimal digit or a character from *\[A-Fa-f\]* ,
-**`FALSE`** otherwise.
+**`false`** otherwise.
 
 ### Examples
 

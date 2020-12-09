@@ -1,5 +1,5 @@
-*declare*
----------
+declare
+-------
 
 The *declare* construct is used to set execution directives for a block
 of code. The syntax of *declare* is similar to the syntax of other flow

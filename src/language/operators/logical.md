@@ -3,12 +3,12 @@ Logical Operators
 
 | Example    | Name | Result                                                         |
 |------------|------|----------------------------------------------------------------|
-| $a and $b  | And  | **`TRUE`** if both `$a` and `$b` are **`TRUE`**.               |
-| $a or $b   | Or   | **`TRUE`** if either `$a` or `$b` is **`TRUE`**.               |
-| $a xor $b  | Xor  | **`TRUE`** if either `$a` or `$b` is **`TRUE`**, but not both. |
-| ! $a       | Not  | **`TRUE`** if `$a` is not **`TRUE`**.                          |
-| $a && $b   | And  | **`TRUE`** if both `$a` and `$b` are **`TRUE`**.               |
-| $a \|\| $b | Or   | **`TRUE`** if either `$a` or `$b` is **`TRUE`**.               |
+| $a and $b  | And  | **`true`** if both `$a` and `$b` are **`true`**.               |
+| $a or $b   | Or   | **`true`** if either `$a` or `$b` is **`true`**.               |
+| $a xor $b  | Xor  | **`true`** if either `$a` or `$b` is **`true`**, but not both. |
+| ! $a       | Not  | **`true`** if `$a` is not **`true`**.                          |
+| $a && $b   | And  | **`true`** if both `$a` and `$b` are **`true`**.               |
+| $a \|\| $b | Or   | **`true`** if either `$a` or `$b` is **`true`**.               |
 
 The reason for the two different variations of "and" and "or" operators
 is that they operate at different precedences. (See

@@ -306,7 +306,7 @@ class="type">int</span> `$flags`<span class="initializer"> =
 class="methodname">enableExceptions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$enableExceptions`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">string</span> <span
@@ -368,7 +368,7 @@ class="type">string</span> `$query`</span> )
 <span class="methodname">querySingle</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$entire_row`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$entire_row`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setAuthorizer</span> ( <span
@@ -420,7 +420,7 @@ Analogous to `source_dbname` but for the `destination_db`.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -457,7 +457,7 @@ equal to zero, will turn off an already set timeout handler.
 
 ### Return Values
 
-Returns **`TRUE`** on success, or **`FALSE`** on failure.
+Returns **`true`** on success, or **`false`** on failure.
 
 SQLite3::changes
 ================
@@ -518,7 +518,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -646,7 +646,7 @@ class="methodparam"><span class="type">int</span> `$rownumber`</span> ,
 class="type">mixed</span> `$values`</span> )
 
 `context`  
-**`NULL`** for the first row; on subsequent rows it will have the value
+**`null`** for the first row; on subsequent rows it will have the value
 that was previously returned from the step function; you should use this
 to maintain the aggregate state.
 
@@ -692,8 +692,8 @@ is negative, then the SQL aggregate may take any number of arguments.
 
 ### Return Values
 
-Returns **`TRUE`** upon successful creation of the aggregate, or
-**`FALSE`** on failure.
+Returns **`true`** upon successful creation of the aggregate, or
+**`false`** on failure.
 
 ### Examples
 
@@ -812,7 +812,7 @@ class="methodparam"><span class="type">mixed</span> `$value1`</span> ,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -924,7 +924,7 @@ single SQL statement.
 
 ### Return Values
 
-Returns **`TRUE`** upon successful creation of the function, **`FALSE`**
+Returns **`true`** upon successful creation of the function, **`false`**
 on failure.
 
 ### Changelog
@@ -966,7 +966,7 @@ Enable throwing exceptions
 class="methodname">SQLite3::enableExceptions</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$enableExceptions`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 Controls whether the <span class="classname">SQLite3</span> instance
 will throw exceptions or warnings on error.
@@ -974,12 +974,12 @@ will throw exceptions or warnings on error.
 ### Parameters
 
 `enable`  
-When **`TRUE`**, the <span class="classname">SQLite3</span> instance,
+When **`true`**, the <span class="classname">SQLite3</span> instance,
 and <span class="classname">SQLite3Stmt</span> and <span
 class="classname">SQLite3Result</span> instances derived from it, will
 throw exceptions on error.
 
-When **`FALSE`**, the <span class="classname">SQLite3</span> instance,
+When **`false`**, the <span class="classname">SQLite3</span> instance,
 and <span class="classname">SQLite3Stmt</span> and <span
 class="classname">SQLite3Result</span> instances derived from it, will
 raise warnings on error.
@@ -990,8 +990,8 @@ class="methodname">SQLite3::lastErrorMsg</span> respectively.
 
 ### Return Values
 
-Returns the old value; **`TRUE`** if exceptions were enabled,
-**`FALSE`** otherwise.
+Returns the old value; **`true`** if exceptions were enabled,
+**`false`** otherwise.
 
 ### Examples
 
@@ -1081,7 +1081,7 @@ The SQL query to execute (typically an INSERT, UPDATE, or DELETE query).
 
 ### Return Values
 
-Returns **`TRUE`** if the query succeeded, **`FALSE`** on failure.
+Returns **`true`** if the query succeeded, **`false`** on failure.
 
 ### Examples
 
@@ -1183,7 +1183,7 @@ directory specified in the configure option sqlite3.extension\_dir.
 
 ### Return Values
 
-Returns **`TRUE`** if the extension is successfully loaded, **`FALSE`**
+Returns **`true`** if the extension is successfully loaded, **`false`**
 on failure.
 
 ### Examples
@@ -1320,7 +1320,7 @@ respectively.
 
 ### Return Values
 
-Returns a stream resource, or **`FALSE`** on failure.
+Returns a stream resource, or **`false`** on failure.
 
 ### Changelog
 
@@ -1394,7 +1394,7 @@ The SQL query to prepare.
 ### Return Values
 
 Returns an <span class="classname">SQLite3Stmt</span> object on success
-or **`FALSE`** on failure.
+or **`false`** on failure.
 
 ### Examples
 
@@ -1448,7 +1448,7 @@ The SQL query to execute.
 ### Return Values
 
 Returns an <span class="classname">SQLite3Result</span> object, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -1476,7 +1476,7 @@ Executes a query and returns a single result
 <span class="methodname">SQLite3::querySingle</span> ( <span
 class="methodparam"><span class="type">string</span> `$query`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$entire_row`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$entire_row`<span class="initializer"> = **`false`**</span></span> \] )
 
 Executes a query and returns a single result.
 
@@ -1488,18 +1488,18 @@ The SQL query to execute.
 `entire_row`  
 By default, <span class="function">querySingle</span> returns the value
 of the first column returned by the query. If `entire_row` is
-**`TRUE`**, then it returns an array of the entire first row.
+**`true`**, then it returns an array of the entire first row.
 
 ### Return Values
 
 Returns the value of the first column of results or an array of the
-entire first row (if `entire_row` is **`TRUE`**).
+entire first row (if `entire_row` is **`true`**).
 
-If the query is valid but no results are returned, then **`NULL`** will
-be returned if `entire_row` is **`FALSE`**, otherwise an empty array is
+If the query is valid but no results are returned, then **`null`** will
+be returned if `entire_row` is **`false`**, otherwise an empty array is
 returned.
 
-Invalid or failing queries will return **`FALSE`**.
+Invalid or failing queries will return **`false`**.
 
 ### Examples
 
@@ -1563,45 +1563,45 @@ parameters according to the action:
 | Action                             | Second parameter | Third parameter                                    |
 |------------------------------------|------------------|----------------------------------------------------|
 | **`SQLite3::CREATE_INDEX`**        | Index Name       | Table Name                                         |
-| **`SQLite3::CREATE_TABLE`**        | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_TABLE`**        | Table Name       | **`null`**                                         |
 | **`SQLite3::CREATE_TEMP_INDEX`**   | Index Name       | Table Name                                         |
-| **`SQLite3::CREATE_TEMP_TABLE`**   | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_TEMP_TABLE`**   | Table Name       | **`null`**                                         |
 | **`SQLite3::CREATE_TEMP_TRIGGER`** | Trigger Name     | Table Name                                         |
-| **`SQLite3::CREATE_TEMP_VIEW`**    | View Name        | **`NULL`**                                         |
+| **`SQLite3::CREATE_TEMP_VIEW`**    | View Name        | **`null`**                                         |
 | **`SQLite3::CREATE_TRIGGER`**      | Trigger Name     | Table Name                                         |
-| **`SQLite3::CREATE_VIEW`**         | View Name        | **`NULL`**                                         |
-| **`SQLite3::DELETE`**              | Table Name       | **`NULL`**                                         |
+| **`SQLite3::CREATE_VIEW`**         | View Name        | **`null`**                                         |
+| **`SQLite3::DELETE`**              | Table Name       | **`null`**                                         |
 | **`SQLite3::DROP_INDEX`**          | Index Name       | Table Name                                         |
-| **`SQLite3::DROP_TABLE`**          | Table Name       | **`NULL`**                                         |
+| **`SQLite3::DROP_TABLE`**          | Table Name       | **`null`**                                         |
 | **`SQLite3::DROP_TEMP_INDEX`**     | Index Name       | Table Name                                         |
-| **`SQLite3::DROP_TEMP_TABLE`**     | Table Name       | **`NULL`**                                         |
+| **`SQLite3::DROP_TEMP_TABLE`**     | Table Name       | **`null`**                                         |
 | **`SQLite3::DROP_TEMP_TRIGGER`**   | Trigger Name     | Table Name                                         |
-| **`SQLite3::DROP_TEMP_VIEW`**      | View Name        | **`NULL`**                                         |
+| **`SQLite3::DROP_TEMP_VIEW`**      | View Name        | **`null`**                                         |
 | **`SQLite3::DROP_TRIGGER`**        | Trigger Name     | Table Name                                         |
-| **`SQLite3::DROP_VIEW`**           | View Name        | **`NULL`**                                         |
-| **`SQLite3::INSERT`**              | Table Name       | **`NULL`**                                         |
-| **`SQLite3::PRAGMA`**              | Pragma Name      | First argument passed to the pragma, or **`NULL`** |
+| **`SQLite3::DROP_VIEW`**           | View Name        | **`null`**                                         |
+| **`SQLite3::INSERT`**              | Table Name       | **`null`**                                         |
+| **`SQLite3::PRAGMA`**              | Pragma Name      | First argument passed to the pragma, or **`null`** |
 | **`SQLite3::READ`**                | Table Name       | Column Name                                        |
-| **`SQLite3::SELECT`**              | **`NULL`**       | **`NULL`**                                         |
-| **`SQLite3::TRANSACTION`**         | Operation        | **`NULL`**                                         |
+| **`SQLite3::SELECT`**              | **`null`**       | **`null`**                                         |
+| **`SQLite3::TRANSACTION`**         | Operation        | **`null`**                                         |
 | **`SQLite3::UPDATE`**              | Table Name       | Column Name                                        |
-| **`SQLite3::ATTACH`**              | Filename         | **`NULL`**                                         |
-| **`SQLite3::DETACH`**              | Database Name    | **`NULL`**                                         |
+| **`SQLite3::ATTACH`**              | Filename         | **`null`**                                         |
+| **`SQLite3::DETACH`**              | Database Name    | **`null`**                                         |
 | **`SQLite3::ALTER_TABLE`**         | Database Name    | Table Name                                         |
-| **`SQLite3::REINDEX`**             | Index Name       | **`NULL`**                                         |
-| **`SQLite3::ANALYZE`**             | Table Name       | **`NULL`**                                         |
+| **`SQLite3::REINDEX`**             | Index Name       | **`null`**                                         |
+| **`SQLite3::ANALYZE`**             | Table Name       | **`null`**                                         |
 | **`SQLite3::CREATE_VTABLE`**       | Table Name       | Module Name                                        |
 | **`SQLite3::DROP_VTABLE`**         | Table Name       | Module Name                                        |
-| **`SQLite3::FUNCTION`**            | **`NULL`**       | Function Name                                      |
+| **`SQLite3::FUNCTION`**            | **`null`**       | Function Name                                      |
 | **`SQLite3::SAVEPOINT`**           | Operation        | Savepoint Name                                     |
-| **`SQLite3::RECURSIVE`**           | **`NULL`**       | **`NULL`**                                         |
+| **`SQLite3::RECURSIVE`**           | **`null`**       | **`null`**                                         |
 
 The 5th parameter will be the name of the database (*"main"*, *"temp"*,
 etc.) if applicable.
 
 The 6th parameter to the authorizer callback is the name of the
 inner-most trigger or view that is responsible for the access attempt or
-**`NULL`** if this access attempt is directly from top-level SQL code.
+**`null`** if this access attempt is directly from top-level SQL code.
 
 When the callback returns **`SQLite3::OK`**, that means the operation
 requested is accepted. When the callback returns **`SQLite3::DENY`**,
@@ -1610,7 +1610,7 @@ explaining that access is denied.
 
 If the action code is **`SQLite3::READ`** and the callback returns
 **`SQLite3::IGNORE`** then the prepared statement statement is
-constructed to substitute a **`NULL`** value in place of the table
+constructed to substitute a **`null`** value in place of the table
 column that would have been read if **`SQLite3::OK`** had been returned.
 The **`SQLite3::IGNORE`** return can be used to deny an untrusted user
 access to individual columns of a table.
@@ -1628,7 +1628,7 @@ truncate optimization is disabled and all rows are deleted individually.
 Only a single authorizer can be in place on a database connection at a
 time. Each call to <span
 class="methodname">SQLite3::setAuthorizer</span> overrides the previous
-call. Disable the authorizer by installing a **`NULL`** callback. The
+call. Disable the authorizer by installing a **`null`** callback. The
 authorizer is disabled by default.
 
 The authorizer callback must not do anything that will modify the
@@ -1645,12 +1645,12 @@ More details can be found in the
 `callback`  
 The <span class="type">callable</span> to be called.
 
-If **`NULL`** is passed instead, this will disable the current
+If **`null`** is passed instead, this will disable the current
 authorizer callback.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -1665,7 +1665,7 @@ class="methodname">SQLite3::enableExceptions</span> method).
 example**
 
 This only allows access to reading, and only some columns of the *users*
-table will be returned. Other columns will be replaced with **`NULL`**.
+table will be returned. Other columns will be replaced with **`null`**.
 
 ``` php
 <?php
@@ -1788,7 +1788,7 @@ class="methodparam">void</span> )
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">getSQL</span> (\[ <span class="methodparam"><span
 class="type">bool</span> `$expanded`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">paramCount</span> ( <span
@@ -1872,13 +1872,13 @@ defaulted to **`SQLITE3_TEXT`**.
 
 > **Note**:
 >
-> If `param` is **`NULL`**, it is always treated as **`SQLITE3_NULL`**,
+> If `param` is **`null`**, it is always treated as **`SQLITE3_NULL`**,
 > regardless of the given `type`.
 
 ### Return Values
 
-Returns **`TRUE`** if the parameter is bound to the statement variable,
-**`FALSE`** on failure.
+Returns **`true`** if the parameter is bound to the statement variable,
+**`false`** on failure.
 
 ### Changelog
 
@@ -1993,13 +1993,13 @@ defaulted to **`SQLITE3_TEXT`**.
 
 > **Note**:
 >
-> If `value` is **`NULL`**, it is always treated as **`SQLITE3_NULL`**,
+> If `value` is **`null`**, it is always treated as **`SQLITE3_NULL`**,
 > regardless of the given `type`.
 
 ### Return Values
 
-Returns **`TRUE`** if the value is bound to the statement variable, or
-**`FALSE`** on failure.
+Returns **`true`** if the value is bound to the statement variable, or
+**`false`** on failure.
 
 ### Changelog
 
@@ -2050,7 +2050,7 @@ Clears all current bound parameters
 <span class="methodname">SQLite3Stmt::clear</span> ( <span
 class="methodparam">void</span> )
 
-Clears all current bound parameters (sets them to **`NULL`**).
+Clears all current bound parameters (sets them to **`null`**).
 
 **Caution**
 
@@ -2058,7 +2058,7 @@ This method needs to be used with <span
 class="methodname">SQLite3Stmt::reset</span>. If used alone, any call to
 <span class="methodname">SQLite3Stmt::bindValue</span> or <span
 class="methodname">SQLite3Stmt::bindParam</span> will be of no effect
-and all bound parameters will have the **`NULL`** value.
+and all bound parameters will have the **`null`** value.
 
 ### Parameters
 
@@ -2066,8 +2066,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on successful clearing of bound parameters,
-**`FALSE`** on failure.
+Returns **`true`** on successful clearing of bound parameters,
+**`false`** on failure.
 
 SQLite3Stmt::close
 ==================
@@ -2093,7 +2093,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`**
+Returns **`true`**
 
 SQLite3Stmt::execute
 ====================
@@ -2125,7 +2125,7 @@ This function has no parameters.
 ### Return Values
 
 Returns an <span class="classname">SQLite3Result</span> object on
-successful execution of the prepared statement, **`FALSE`** on failure.
+successful execution of the prepared statement, **`false`** on failure.
 
 ### See Also
 
@@ -2144,26 +2144,26 @@ Get the SQL of the statement
 class="type">string</span><span class="type">false</span></span> <span
 class="methodname">SQLite3Stmt::getSQL</span> (\[ <span
 class="methodparam"><span class="type">bool</span> `$expanded`<span
-class="initializer"> = **`FALSE`**</span></span> \] )
+class="initializer"> = **`false`**</span></span> \] )
 
 Retrieves the SQL of the prepared statement. If `expanded` is
-**`FALSE`**, the unmodified SQL is retrieved. If `expanded` is
-**`TRUE`**, all query parameters are replaced with their bound values,
+**`false`**, the unmodified SQL is retrieved. If `expanded` is
+**`true`**, all query parameters are replaced with their bound values,
 or with an SQL *NULL*, if not already bound.
 
 ### Parameters
 
 `expanded`  
-Whether to retrieve the expanded SQL. Passing **`TRUE`** is only
+Whether to retrieve the expanded SQL. Passing **`true`** is only
 supported as of libsqlite 3.14.
 
 ### Return Values
 
-Returns the SQL of the prepared statement, or **`FALSE`** on failure.
+Returns the SQL of the prepared statement, or **`false`** on failure.
 
 ### Errors/Exceptions
 
-If `expanded` is **`TRUE`**, but the libsqlite version is less than
+If `expanded` is **`true`**, but the libsqlite version is less than
 3.14, an error of level **`E_WARNING`** or an <span
 class="classname">Exception</span> is issued, according to <span
 class="methodname">SQLite3::enableExceptions</span>.
@@ -2234,7 +2234,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if a statement is definitely read only, **`FALSE`**
+Returns **`true`** if a statement is definitely read only, **`false`**
 otherwise.
 
 SQLite3Stmt::reset
@@ -2257,8 +2257,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the statement is successfully reset, or
-**`FALSE`** on failure.
+Returns **`true`** if the statement is successfully reset, or
+**`false`** on failure.
 
 Introduction
 ------------
@@ -2391,7 +2391,7 @@ must be one of either *SQLITE3\_ASSOC*, *SQLITE3\_NUM*, or
 ### Return Values
 
 Returns a result row as an associatively or numerically indexed array or
-both. Alternately will return **`FALSE`** if there are no more rows.
+both. Alternately will return **`false`** if there are no more rows.
 
 The types of the values of the returned array are mapped from SQLite3
 types as follows: integers are mapped to <span class="type">int</span>
@@ -2420,7 +2420,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 SQLite3Result::numColumns
 =========================
@@ -2462,5 +2462,5 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if the result set is successfully reset back to the
-first row, **`FALSE`** on failure.
+Returns **`true`** if the result set is successfully reset back to the
+first row, **`false`** on failure.

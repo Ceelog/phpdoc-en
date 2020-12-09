@@ -14,7 +14,7 @@ saving data. Thus the original values in session data are kept.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -44,7 +44,7 @@ class="type">false</span></span> <span
 class="methodname">session\_cache\_expire</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$value`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$value`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_cache\_expire</span> returns the current
 setting of *session.cache\_expire*.
@@ -58,7 +58,7 @@ before <span class="function">session\_start</span> is called).
 ### Parameters
 
 `value`  
-If `value` is given and not **`NULL`**, the current cache expire is
+If `value` is given and not **`null`**, the current cache expire is
 replaced with `value`.
 
 > **Note**: <span class="simpara"> Setting `value` is of value only, if
@@ -69,7 +69,7 @@ replaced with `value`.
 
 Returns the current setting of *session.cache\_expire*. The value
 returned should be read in minutes, defaults to 180. On failure to
-change the value, **`FALSE`** is returned.
+change the value, **`false`** is returned.
 
 ### Changelog
 
@@ -121,7 +121,7 @@ class="type">false</span></span> <span
 class="methodname">session\_cache\_limiter</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$value`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$value`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_cache\_limiter</span> returns the name
 of the current cache limiter.
@@ -152,7 +152,7 @@ before <span class="function">session\_start</span> is called).
 ### Parameters
 
 `value`  
-If `value` is specified and not **`NULL`**, the name of the current
+If `value` is specified and not **`null`**, the name of the current
 cache limiter is changed to the new value.
 
 <table>
@@ -213,7 +213,7 @@ Pragma: no-cache</code></pre>
 ### Return Values
 
 Returns the name of the current cache limiter. On failure to change the
-value, **`FALSE`** is returned.
+value, **`false`** is returned.
 
 ### Changelog
 
@@ -288,7 +288,7 @@ range *a-z A-Z 0-9 , (comma) and - (minus)* are allowed.
 
 <span class="function">session\_create\_id</span> returns new collision
 free session id for the current session. If it is used without active
-session, it omits collision check. On failure, **`FALSE`** is returned.
+session, it omits collision check. On failure, **`false`** is returned.
 
 ### Examples
 
@@ -378,7 +378,7 @@ The encoded data to be stored.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -437,7 +437,7 @@ class="function">session\_regenerate\_id</span> also.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -505,7 +505,7 @@ method can be set using
 
 ### Return Values
 
-Returns the contents of the current session encoded, or **`FALSE`** on
+Returns the contents of the current session encoded, or **`false`** on
 failure.
 
 ### Notes
@@ -550,7 +550,7 @@ to 0.
 ### Return Values
 
 <span class="function">session\_gc</span> returns number of deleted
-session data for success, **`FALSE`** for failure.
+session data for success, **`false`** for failure.
 
 Old save handlers do not return number of deleted session data, but only
 success/failure flag. If this is the case, number of deleted session
@@ -673,7 +673,7 @@ class="type">false</span></span> <span
 class="methodname">session\_id</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$id`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$id`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_id</span> is used to get or set the
 session id for the current session.
@@ -685,7 +685,7 @@ session id as a string suitable for adding to URLs. See also
 ### Parameters
 
 `id`  
-If `id` is specified and not **`NULL`**, it will replace the current
+If `id` is specified and not **`null`**, it will replace the current
 session id. <span class="function">session\_id</span> needs to be called
 before <span class="function">session\_start</span> for that purpose.
 Depending on the session handler, not all characters are allowed within
@@ -702,7 +702,7 @@ characters in the range *a-z A-Z 0-9 , (comma) and - (minus)*!
 
 <span class="function">session\_id</span> returns the session id for the
 current session or the empty string (*""*) if there is no current
-session (no current session id exists). On failure, **`FALSE`** is
+session (no current session id exists). On failure, **`false`** is
 returned.
 
 ### Changelog
@@ -743,9 +743,9 @@ The variable name.
 
 ### Return Values
 
-<span class="function">session\_is\_registered</span> returns **`TRUE`**
+<span class="function">session\_is\_registered</span> returns **`true`**
 if there is a global variable with the name `name` registered in the
-current session, **`FALSE`** otherwise.
+current session, **`false`** otherwise.
 
 ### Notes
 
@@ -773,7 +773,7 @@ class="type">false</span></span> <span
 class="methodname">session\_module\_name</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$module`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$module`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_module\_name</span> gets the name of the
 current session module, which is also known as
@@ -782,14 +782,14 @@ current session module, which is also known as
 ### Parameters
 
 `module`  
-If `module` is specified and not **`NULL`**, that module will be used
+If `module` is specified and not **`null`**, that module will be used
 instead. Passing *"user"* to this parameter is forbidden. Instead <span
 class="function">session\_set\_save\_handler</span> has to be called to
 set a user defined session handler.
 
 ### Return Values
 
-Returns the name of the current session module, or **`FALSE`** on
+Returns the name of the current session module, or **`false`** on
 failure.
 
 ### Changelog
@@ -811,7 +811,7 @@ class="type">false</span></span> <span
 class="methodname">session\_name</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$name`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$name`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_name</span> returns the name of the
 current session. If `name` is given, <span
@@ -836,7 +836,7 @@ class="function">session\_name</span> for every request (and before
 The session name references the name of the session, which is used in
 cookies and URLs (e.g. *PHPSESSID*). It should contain only alphanumeric
 characters; it should be short and descriptive (i.e. for users with
-enabled cookie warnings). If `name` is specified and not **`NULL`**, the
+enabled cookie warnings). If `name` is specified and not **`null`**, the
 name of the current session is changed to its value.
 
 **Warning**
@@ -847,7 +847,7 @@ be present. Otherwise a new session id is generated every time.
 
 Returns the name of the current session. If `name` is given and function
 updates the session name, name of the *old* session is returned, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -887,7 +887,7 @@ Update the current session id with a newly generated one
 class="methodname">session\_regenerate\_id</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$delete_old_session`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="function">session\_regenerate\_id</span> will replace the
 current session id with a new one, and keep the current session
@@ -921,7 +921,7 @@ detect/avoid session hijack attacks.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1114,7 +1114,7 @@ variable names or other arrays.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1190,7 +1190,7 @@ an active session and discards changes in $\_SESSION.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1220,7 +1220,7 @@ class="type">false</span></span> <span
 class="methodname">session\_save\_path</span> (\[ <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$path`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$path`<span class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">session\_save\_path</span> returns the path of
 the current directory used to save session data.
@@ -1228,7 +1228,7 @@ the current directory used to save session data.
 ### Parameters
 
 `path`  
-Session data path. If specified and not **`NULL`**, the path to which
+Session data path. If specified and not **`null`**, the path to which
 data is saved will be changed. <span
 class="function">session\_save\_path</span> needs to be called before
 <span class="function">session\_start</span> for that purpose.
@@ -1242,7 +1242,7 @@ class="function">session\_save\_path</span> needs to be called before
 ### Return Values
 
 Returns the path of the current directory used for data storage, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Changelog
 
@@ -1269,16 +1269,16 @@ class="methodparam"><span class="type">int</span>
 `$lifetime_or_options`</span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$path`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">string</span><span
 class="type">null</span></span> `$domain`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">bool</span><span
 class="type">null</span></span> `$secure`<span class="initializer"> =
-**`NULL`**</span></span> \[, <span class="methodparam"><span
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type"><span class="type">bool</span><span
 class="type">null</span></span> `$httponly`<span class="initializer"> =
-**`NULL`**</span></span> \]\]\]\] )
+**`null`**</span></span> \]\]\]\] )
 
 <span class="type">bool</span> <span
 class="methodname">session\_set\_cookie\_params</span> ( <span
@@ -1322,17 +1322,17 @@ example 'www.php.net'. To make cookies visible on all subdomains then
 the domain must be prefixed with a dot like '.php.net'.
 
 `secure`  
-If **`TRUE`** cookie will only be sent over
+If **`true`** cookie will only be sent over
 <a href="/session/setup.html#" class="link">secure</a> connections.
 
 `httponly`  
-If set to **`TRUE`** then PHP will attempt to send the
+If set to **`true`** then PHP will attempt to send the
 <a href="/session/setup.html#" class="link">httponly</a> flag when
 setting the session cookie.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1340,7 +1340,7 @@ Returns **`TRUE`** on success or **`FALSE`** on failure.
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `path`, `domain`, `secure` and `httponly` are nullable now.                                                                                                                         |
 | 7.3.0   | An alternative signature supporting an `lifetime_or_options` <span class="type">array</span> has been added. This signature supports also setting of the SameSite cookie attribute. |
-| 7.2.0   | Returns **`TRUE`** on success or **`FALSE`** on failure. Formerly the function returned <span class="type">void</span>.                                                             |
+| 7.2.0   | Returns **`true`** on success or **`false`** on failure. Formerly the function returned <span class="type">void</span>.                                                             |
 
 ### See Also
 
@@ -1382,7 +1382,7 @@ class="methodname">session\_set\_save\_handler</span> ( <span
 class="methodparam"><span class="type">object</span>
 `$sessionhandler`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$register_shutdown`<span class="initializer">
-= **`TRUE`**</span></span> \] )
+= **`true`**</span></span> \] )
 
 <span class="function">session\_set\_save\_handler</span> sets the
 user-level session storage functions which are used for storing and
@@ -1420,8 +1420,8 @@ class="methodparam"><span class="type">string</span>
 The open callback works like a constructor in classes and is executed
 when the session is being opened. It is the first callback function
 executed when the session is started automatically or manually with
-<span class="function">session\_start</span>. Return value is **`TRUE`**
-for success, **`FALSE`** for failure.
+<span class="function">session\_start</span>. Return value is **`true`**
+for success, **`false`** for failure.
 
 `close`  
 A callable with the following signature:
@@ -1433,7 +1433,7 @@ class="methodparam">void</span> )
 The close callback works like a destructor in classes and is executed
 after the session write callback has been called. It is also invoked
 when <span class="function">session\_write\_close</span> is called.
-Return value should be **`TRUE`** for success, **`FALSE`** for failure.
+Return value should be **`true`** for success, **`false`** for failure.
 
 `read`  
 A callable with the following signature:
@@ -1502,8 +1502,8 @@ class="methodparam"><span class="type">string</span> `$sessionId`</span>
 This callback is executed when a session is destroyed with <span
 class="function">session\_destroy</span> or with <span
 class="function">session\_regenerate\_id</span> with the destroy
-parameter set to **`TRUE`**. Return value should be **`TRUE`** for
-success, **`FALSE`** for failure.
+parameter set to **`true`**. Return value should be **`true`** for
+success, **`false`** for failure.
 
 `gc`  
 A callable with the following signature:
@@ -1518,7 +1518,7 @@ in order to purge old session data. The frequency is controlled by
 and <a href="/session/setup.html#" class="link">session.gc_divisor</a>.
 The value of lifetime which is passed to this callback can be set in
 <a href="/session/setup.html#" class="link">session.gc_maxlifetime</a>.
-Return value should be **`TRUE`** for success, **`FALSE`** for failure.
+Return value should be **`true`** for success, **`false`** for failure.
 
 `create_sid`  
 A callable with the following signature:
@@ -1543,7 +1543,7 @@ is supplied and
 <a href="/session/setup.html#" class="link">session.use_strict_mode</a>
 is enabled. The `key` is the session ID to validate. A session ID is
 valid, if a session with that ID already exists. The return value should
-be **`TRUE`** for success, **`FALSE`** for failure.
+be **`true`** for success, **`false`** for failure.
 
 `update_timestamp`  
 A callable with the following signature:
@@ -1556,11 +1556,11 @@ class="methodparam"><span class="type">string</span> `$key`</span> ,
 
 This callback is executed when a session is updated. `key` is the
 session ID, `val` is the session data. The return value should be
-**`TRUE`** for success, **`FALSE`** for failure.
+**`true`** for success, **`false`** for failure.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1776,21 +1776,21 @@ the currently set
 The keys should not include the *session.* prefix.
 
 In addition to the normal set of configuration directives, a
-*read\_and\_close* option may also be provided. If set to **`TRUE`**,
+*read\_and\_close* option may also be provided. If set to **`true`**,
 this will result in the session being closed immediately after being
 read, thereby avoiding unnecessary locking if the session data won't be
 changed.
 
 ### Return Values
 
-This function returns **`TRUE`** if a session was successfully started,
-otherwise **`FALSE`**.
+This function returns **`true`** if a session was successfully started,
+otherwise **`false`**.
 
 ### Changelog
 
 | Version | Description                                                                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | <span class="function">session\_start</span> now returns **`FALSE`** and no longer initializes `$_SESSION` when it failed to start the session. |
+| 7.1.0   | <span class="function">session\_start</span> now returns **`false`** and no longer initializes `$_SESSION` when it failed to start the session. |
 
 ### Examples
 
@@ -1952,7 +1952,7 @@ The variable name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -1993,7 +1993,7 @@ session variables currently registered.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -2043,7 +2043,7 @@ the session as soon as all changes to session variables are done.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 

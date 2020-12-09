@@ -29,7 +29,7 @@ The value of the optional `type` can be:
 ### Return Values
 
 Returns the current value of the internal configuration variable if
-successful or **`FALSE`** on failure.
+successful or **`false`** on failure.
 
 If `type` is omitted or set to "all", <span
 class="function">iconv\_get\_encoding</span> returns an array that
@@ -79,7 +79,7 @@ class="methodparam"><span class="type">string</span> `$headers`</span>
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Decodes multiple *MIME* header fields at once.
 
@@ -101,14 +101,14 @@ following bitmasks.
 
 `encoding`  
 The optional `encoding` parameter specifies the character set to
-represent the result by. If omitted or **`NULL`**,
+represent the result by. If omitted or **`null`**,
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>
 will be used.
 
 ### Return Values
 
 Returns an associative array that holds a whole set of *MIME* header
-fields specified by `headers` on success, or **`FALSE`** if an error
+fields specified by `headers` on success, or **`false`** if an error
 occurs during the decoding.
 
 Each key of the return value represents an individual field name and the
@@ -188,7 +188,7 @@ class="methodparam"><span class="type">string</span> `$string`</span>
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Decodes a *MIME* header field.
 
@@ -210,13 +210,13 @@ bitmasks.
 
 `encoding`  
 The optional `encoding` parameter specifies the character set to
-represent the result by. If omitted or **`NULL`**,
+represent the result by. If omitted or **`null`**,
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>
 will be used.
 
 ### Return Values
 
-Returns a decoded *MIME* field on success, or **`FALSE`** if an error
+Returns a decoded *MIME* field on success, or **`false`** if an error
 occurs during the decoding.
 
 ### Changelog
@@ -296,7 +296,7 @@ item names are treated case-sensitive.
 
 ### Return Values
 
-Returns an encoded *MIME* field on success, or **`FALSE`** if an error
+Returns an encoded *MIME* field on success, or **`false`** if an error
 occurs during the encoding.
 
 ### Examples
@@ -359,7 +359,7 @@ The character set.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -391,7 +391,7 @@ class="methodname">iconv\_strlen</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 In contrast to <span class="function">strlen</span>, <span
 class="function">iconv\_strlen</span> counts the occurrences of
@@ -405,13 +405,13 @@ identical to the length of the string in byte.
 The string.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` is assumed to
+If `encoding` parameter is omitted or **`null`**, `string` is assumed to
 be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
 ### Return Values
 
-Returns the character count of `string`, as an integer, or **`FALSE`**
+Returns the character count of `string`, as an integer, or **`false`**
 if an error occurs during the encoding.
 
 ### Changelog
@@ -442,7 +442,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 class="type">int</span> `$offset`<span class="initializer"> =
 0</span></span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Finds position of first occurrence of a `needle` within a `haystack`.
 
@@ -466,7 +466,7 @@ search should be performed. If the offset is negative, it is counted
 from the end of the string.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+If `encoding` parameter is omitted or **`null`**, `string` are assumed
 to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
@@ -479,12 +479,12 @@ Returns the numeric position of the first occurrence of `needle` in
 `haystack`.
 
 If `needle` is not found, <span class="function">iconv\_strpos</span>
-will return **`FALSE`**.
+will return **`false`**.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -518,7 +518,7 @@ class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$needle`</span> \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Finds the last occurrence of a `needle` within a `haystack`.
 
@@ -537,7 +537,7 @@ The entire string.
 The searched substring.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+If `encoding` parameter is omitted or **`null`**, `string` are assumed
 to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
@@ -550,12 +550,12 @@ Returns the numeric position of the last occurrence of `needle` in
 `haystack`.
 
 If `needle` is not found, <span class="function">iconv\_strrpos</span>
-will return **`FALSE`**.
+will return **`false`**.
 
 **Warning**
 
-This function may return Boolean **`FALSE`**, but may also return a
-non-Boolean value which evaluates to **`FALSE`**. Please read the
+This function may return Boolean **`false`**, but may also return a
+non-Boolean value which evaluates to **`false`**. Please read the
 section on
 <a href="/language/types/boolean.html" class="link">Booleans</a> for
 more information. Use
@@ -588,10 +588,10 @@ class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$offset`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">int</span><span class="type">null</span></span>
-`$length`<span class="initializer"> = **`NULL`**</span></span> \[, <span
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
 class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">null</span></span>
-`$encoding`<span class="initializer"> = **`NULL`**</span></span> \]\] )
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Cuts a portion of `string` specified by the `offset` and `length`
 parameters.
@@ -623,7 +623,7 @@ negative, the start position is calculated beforehand according to the
 rule explained above.
 
 `encoding`  
-If `encoding` parameter is omitted or **`NULL`**, `string` are assumed
+If `encoding` parameter is omitted or **`null`**, `string` are assumed
 to be encoded in
 <a href="/iconv/setup.html#Runtime%20Configuration" class="link">iconv.internal_encoding</a>.
 
@@ -637,7 +637,7 @@ class="function">substr</span> always takes these for byte offsets.
 Returns the portion of `string` specified by the `offset` and `length`
 parameters.
 
-If `string` is shorter than `offset` characters long, **`FALSE`** will
+If `string` is shorter than `offset` characters long, **`false`** will
 be returned. If `string` is exactly `offset` characters long, an empty
 string will be returned.
 
@@ -646,7 +646,7 @@ string will be returned.
 | Version | Description                                                                                                                                       |
 |---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
 | 8.0.0   | `length` and `encoding` are nullable now.                                                                                                         |
-| 7.0.11  | If `string` is equal to `offset` characters long, an empty string will be returned. Prior to this version, **`FALSE`** was returned in this case. |
+| 7.0.11  | If `string` is equal to `offset` characters long, an empty string will be returned. Prior to this version, **`false`** was returned in this case. |
 
 ### See Also
 
@@ -685,7 +685,7 @@ the target charset, it can be approximated through one or several
 similarly looking characters. If you append the string *//IGNORE*,
 characters that cannot be represented in the target charset are silently
 discarded. Otherwise, **`E_NOTICE`** is generated and the function will
-return **`FALSE`**.
+return **`false`**.
 
 **Caution**
 If and how *//TRANSLIT* works exactly depends on the system's iconv()
@@ -698,7 +698,7 @@ The string to be converted.
 
 ### Return Values
 
-Returns the converted string or **`FALSE`** on failure.
+Returns the converted string or **`false`** on failure.
 
 ### Examples
 

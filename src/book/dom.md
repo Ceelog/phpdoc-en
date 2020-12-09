@@ -388,9 +388,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -472,10 +472,10 @@ The name of the attribute
 The element which contains the attribute
 
 `schemaTypeInfo`  
-Not implemented yet, always is **`NULL`**
+Not implemented yet, always is **`null`**
 
 `specified`  
-Not implemented yet, always is **`NULL`**
+Not implemented yet, always is **`null`**
 
 `value`  
 The value of the attribute
@@ -557,7 +557,7 @@ or *DOMDocument::validateOnParse* before using this function.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -748,9 +748,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -1016,9 +1016,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -1453,9 +1453,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -1622,7 +1622,7 @@ class="modifier">readonly</span> <span
 class="type">DOMImplementation</span> `$implementation` ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$preserveWhiteSpace` <span class="initializer"> = **`TRUE`**</span> ;
+`$preserveWhiteSpace` <span class="initializer"> = **`true`**</span> ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
 `$recover` ;
@@ -1634,13 +1634,13 @@ class="type">DOMImplementation</span> `$implementation` ;
 `$standalone` ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$strictErrorChecking` <span class="initializer"> = **`TRUE`**</span> ;
+`$strictErrorChecking` <span class="initializer"> = **`true`**</span> ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
 `$substituteEntities` ;
 
 <span class="modifier">public</span> <span class="type">bool</span>
-`$validateOnParse` <span class="initializer"> = **`FALSE`**</span> ;
+`$validateOnParse` <span class="initializer"> = **`false`**</span> ;
 
 <span class="modifier">public</span> <span class="type">string</span>
 `$version` ;
@@ -1816,7 +1816,7 @@ class="type">string</span> `$localName`</span> )
 class="methodparam"><span class="type">DOMNode</span>
 `$importedNode`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$deep`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">mixed</span>
 <span class="methodname">load</span> ( <span class="methodparam"><span
@@ -1925,9 +1925,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -2018,7 +2018,7 @@ This is a convenience attribute that allows direct access to the child
 node that is the document element of the document.
 
 `documentURI`  
-The location of the document or **`NULL`** if undefined.
+The location of the document or **`null`** if undefined.
 
 `encoding`  
 Encoding of the document, as specified by the XML declaration. This
@@ -2035,8 +2035,8 @@ The <span class="classname">DOMImplementation</span> object that handles
 this document.
 
 `preserveWhiteSpace`  
-Do not remove redundant white space. Default to **`TRUE`**. Setting this
-to **`FALSE`** has the same effect as passing **`LIBXML_NOBLANKS`** as
+Do not remove redundant white space. Default to **`true`**. Setting this
+to **`false`** has the same effect as passing **`LIBXML_NOBLANKS`** as
 `option` to <span class="methodname">DOMDocument::load</span> etc.
 
 `recover`  
@@ -2045,7 +2045,7 @@ formed documents. This attribute is not part of the DOM specification
 and is specific to libxml.
 
 `resolveExternals`  
-Set it to **`TRUE`** to load external entities from a doctype
+Set it to **`true`** to load external entities from a doctype
 declaration. This is useful for including character entities in your XML
 document.
 
@@ -2055,7 +2055,7 @@ the XML declaration, corresponds to `xmlStandalone`.
 
 `strictErrorChecking`  
 Throws <span class="classname">DOMException</span> on errors. Default to
-**`TRUE`**.
+**`true`**.
 
 `substituteEntities`  
 *Proprietary*. Whether or not to substitute entities. This attribute is
@@ -2066,19 +2066,19 @@ Enabling entity substitution may facilitate XML External Entity (XXE)
 attacks.
 
 `validateOnParse`  
-Loads and validates against the DTD. Default to **`FALSE`**.
+Loads and validates against the DTD. Default to **`false`**.
 
 `version`  
 *Deprecated*. Version of XML, corresponds to `xmlVersion`.
 
 `xmlEncoding`  
 An attribute specifying, as part of the XML declaration, the encoding of
-this document. This is **`NULL`** when unspecified or when it is not
+this document. This is **`null`** when unspecified or when it is not
 known, such as when the Document was created in memory.
 
 `xmlStandalone`  
 An attribute specifying, as part of the XML declaration, whether this
-document is standalone. This is **`FALSE`** when unspecified.
+document is standalone. This is **`false`** when unspecified.
 
 `xmlVersion`  
 An attribute specifying, as part of the XML declaration, the version
@@ -2171,7 +2171,7 @@ The name of the attribute.
 
 ### Return Values
 
-The new <span class="classname">DOMAttr</span> or **`FALSE`** if an
+The new <span class="classname">DOMAttr</span> or **`false`** if an
 error occurred.
 
 ### Errors/Exceptions
@@ -2221,7 +2221,7 @@ The tag name and prefix of the attribute, as *prefix:tagname*.
 
 ### Return Values
 
-The new <span class="classname">DOMAttr</span> or **`FALSE`** if an
+The new <span class="classname">DOMAttr</span> or **`false`** if an
 error occurred.
 
 ### Errors/Exceptions
@@ -2231,7 +2231,7 @@ Raised if `qualifiedName` contains an invalid character.
 
 **`DOM_NAMESPACE_ERR`**  
 Raised if `qualifiedName` is a malformed qualified name, or if
-`qualifiedName` has a prefix and `namespaceURI` is **`NULL`**.
+`qualifiedName` has a prefix and `namespaceURI` is **`null`**.
 
 ### See Also
 
@@ -2271,7 +2271,7 @@ The content of the cdata.
 
 ### Return Values
 
-The new <span class="classname">DOMCDATASection</span> or **`FALSE`** if
+The new <span class="classname">DOMCDATASection</span> or **`false`** if
 an error occurred.
 
 ### See Also
@@ -2312,7 +2312,7 @@ The content of the comment.
 
 ### Return Values
 
-The new <span class="classname">DOMComment</span> or **`FALSE`** if an
+The new <span class="classname">DOMComment</span> or **`false`** if an
 error occurred.
 
 ### See Also
@@ -2349,7 +2349,7 @@ class="function">DOMNode::appendChild</span>.
 ### Return Values
 
 The new <span class="classname">DOMDocumentFragment</span> or
-**`FALSE`** if an error occurred.
+**`false`** if an error occurred.
 
 ### See Also
 
@@ -2401,7 +2401,7 @@ regarded as starting an entity reference. Also " won't be escaped.
 ### Return Values
 
 Returns a new instance of class <span
-class="classname">DOMElement</span> or **`FALSE`** if an error occurred.
+class="classname">DOMElement</span> or **`false`** if an error occurred.
 
 ### Errors/Exceptions
 
@@ -2505,7 +2505,7 @@ You can also set the value later with
 
 ### Return Values
 
-The new <span class="classname">DOMElement</span> or **`FALSE`** if an
+The new <span class="classname">DOMElement</span> or **`false`** if an
 error occurred.
 
 ### Errors/Exceptions
@@ -2609,7 +2609,7 @@ leading *&* and the trailing *;* characters.
 
 ### Return Values
 
-The new <span class="classname">DOMEntityReference</span> or **`FALSE`**
+The new <span class="classname">DOMEntityReference</span> or **`false`**
 if an error occurred.
 
 ### Errors/Exceptions
@@ -2661,7 +2661,7 @@ The content of the processing instruction.
 ### Return Values
 
 The new <span class="classname">DOMProcessingInstruction</span> or
-**`FALSE`** if an error occurred.
+**`false`** if an error occurred.
 
 ### Errors/Exceptions
 
@@ -2704,7 +2704,7 @@ The content of the text.
 
 ### Return Values
 
-The new <span class="classname">DOMText</span> or **`FALSE`** if an
+The new <span class="classname">DOMText</span> or **`false`** if an
 error occurred.
 
 ### See Also
@@ -2755,7 +2755,7 @@ The unique id value for an element.
 
 ### Return Values
 
-Returns the <span class="classname">DOMElement</span> or **`NULL`** if
+Returns the <span class="classname">DOMElement</span> or **`null`** if
 the element is not found.
 
 ### Examples
@@ -2964,7 +2964,7 @@ Import node into current document
 class="methodparam"><span class="type">DOMNode</span>
 `$importedNode`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$deep`<span class="initializer"> =
-**`FALSE`**</span></span> \] )
+**`false`**</span></span> \] )
 
 This function returns a copy of the node to import and associates it
 with the current document.
@@ -2975,16 +2975,16 @@ with the current document.
 The node to import.
 
 `deep`  
-If set to **`TRUE`**, this method will recursively import the subtree
+If set to **`true`**, this method will recursively import the subtree
 under the `importedNode`.
 
 > **Note**:
 >
-> To copy the nodes attributes `deep` needs to be set to **`TRUE`**
+> To copy the nodes attributes `deep` needs to be set to **`true`**
 
 ### Return Values
 
-The copied node or **`FALSE`**, if it cannot be copied.
+The copied node or **`false`**, if it cannot be copied.
 
 ### Errors/Exceptions
 
@@ -3078,9 +3078,9 @@ of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns a <span class="classname">DOMDocument</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3141,9 +3141,9 @@ parameter to specify
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns a <span class="classname">DOMDocument</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3205,9 +3205,9 @@ parameter to specify
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns a <span class="classname">DOMDocument</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3269,9 +3269,9 @@ of the
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If called
+Returns **`true`** on success or **`false`** on failure. If called
 statically, returns a <span class="classname">DOMDocument</span> or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -3359,12 +3359,12 @@ classes in the
 <a href="/book/dom.html" class="link">chapter introduction</a>.
 
 `extendedclass`  
-Your extended class name. If **`NULL`** is provided, any previously
+Your extended class name. If **`null`** is provided, any previously
 registered class extending `baseclass` will be removed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -3526,7 +3526,7 @@ The RNG file.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3558,7 +3558,7 @@ A string containing the RNG schema.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -3596,7 +3596,7 @@ supported.
 
 ### Return Values
 
-Returns the number of bytes written or **`FALSE`** if an error occurred.
+Returns the number of bytes written or **`false`** if an error occurred.
 
 ### Examples
 
@@ -3652,7 +3652,7 @@ Optional parameter to output a subset of the document.
 
 ### Return Values
 
-Returns the HTML, or **`FALSE`** if an error occurred.
+Returns the HTML, or **`false`** if an error occurred.
 
 ### Examples
 
@@ -3709,7 +3709,7 @@ The path to the saved HTML document.
 
 ### Return Values
 
-Returns the number of bytes written or **`FALSE`** if an error occurred.
+Returns the number of bytes written or **`false`** if an error occurred.
 
 ### Examples
 
@@ -3775,7 +3775,7 @@ supported.
 
 ### Return Values
 
-Returns the XML, or **`FALSE`** if an error occurred.
+Returns the XML, or **`false`** if an error occurred.
 
 ### Errors/Exceptions
 
@@ -3857,7 +3857,7 @@ Available since PHP 5.5.2 and Libxml 2.6.14.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -3900,7 +3900,7 @@ Available since PHP 5.5.2 and Libxml 2.6.14.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -3933,8 +3933,8 @@ class="classname">DOMDocument</span> to make a DTD validation.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If the document
-has no DTD attached, this method will return **`FALSE`**.
+Returns **`true`** on success or **`false`** on failure. If the document
+has no DTD attached, this method will return **`false`**.
 
 ### Examples
 
@@ -3998,7 +3998,7 @@ Available since PHP 5.1.0 and Libxml 2.6.7.
 ### Return Values
 
 Returns the number of XIncludes in the document, -1 if some processing
-failed, or **`FALSE`** if there were no substitutions.
+failed, or **`false`** if there were no substitutions.
 
 ### Examples
 
@@ -4176,9 +4176,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -4277,7 +4277,7 @@ XML to append.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -4303,7 +4303,7 @@ Introduction
 ------------
 
 Each <span class="classname">DOMDocument</span> has a *doctype*
-attribute whose value is either **`NULL`** or a <span
+attribute whose value is either **`null`** or a <span
 class="classname">DOMDocumentType</span> object.
 
 Class synopsis
@@ -4435,9 +4435,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -4754,9 +4754,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -4832,7 +4832,7 @@ Properties
 ----------
 
 `schemaTypeInfo`  
-Not implemented yet, always return **`NULL`**
+Not implemented yet, always return **`null`**
 
 `tagName`  
 The element name
@@ -5124,7 +5124,7 @@ The attribute name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -5159,7 +5159,7 @@ The local name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -5188,7 +5188,7 @@ The name of the attribute.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -5222,7 +5222,7 @@ The attribute node.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -5264,7 +5264,7 @@ The local name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -5303,7 +5303,7 @@ The value of the attribute.
 
 ### Return Values
 
-The new <span class="classname">DOMAttr</span> or **`FALSE`** if an
+The new <span class="classname">DOMAttr</span> or **`false`** if an
 error occurred.
 
 ### Errors/Exceptions
@@ -5350,7 +5350,7 @@ The attribute node.
 
 ### Return Values
 
-Returns old node if the attribute has been replaced or **`NULL`**.
+Returns old node if the attribute has been replaced or **`null`**.
 
 ### Errors/Exceptions
 
@@ -5435,7 +5435,7 @@ Raised if the node is readonly.
 
 **`DOM_NAMESPACE_ERR`**  
 Raised if `qualifiedName` is a malformed qualified name, or if
-`qualifiedName` has a prefix and `namespaceURI` is **`NULL`**.
+`qualifiedName` has a prefix and `namespaceURI` is **`null`**.
 
 ### See Also
 
@@ -5464,7 +5464,7 @@ Declares the attribute `name` to be of type ID.
 The name of the attribute.
 
 `isId`  
-Set it to **`TRUE`** if you want `name` to be of type ID, **`FALSE`**
+Set it to **`true`** if you want `name` to be of type ID, **`false`**
 otherwise.
 
 ### Return Values
@@ -5506,7 +5506,7 @@ Declares the attribute specified by `attr` to be of type ID.
 The attribute node.
 
 `isId`  
-Set it to **`TRUE`** if you want `name` to be of type ID, **`FALSE`**
+Set it to **`true`** if you want `name` to be of type ID, **`false`**
 otherwise.
 
 ### Return Values
@@ -5554,7 +5554,7 @@ The namespace URI of the attribute.
 The local name of the attribute, as *prefix:tagname*.
 
 `isId`  
-Set it to **`TRUE`** if you want `name` to be of type ID, **`FALSE`**
+Set it to **`true`** if you want `name` to be of type ID, **`false`**
 otherwise.
 
 ### Return Values
@@ -5709,9 +5709,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -5788,30 +5788,30 @@ Properties
 
 `publicId`  
 The public identifier associated with the entity if specified, and
-**`NULL`** otherwise.
+**`null`** otherwise.
 
 `systemId`  
 The system identifier associated with the entity if specified, and
-**`NULL`** otherwise. This may be an absolute URI or not.
+**`null`** otherwise. This may be an absolute URI or not.
 
 `notationName`  
 For unparsed entities, the name of the notation for the entity. For
-parsed entities, this is **`NULL`**.
+parsed entities, this is **`null`**.
 
 `actualEncoding`  
 An attribute specifying the encoding used for this entity at the time of
-parsing, when it is an external parsed entity. This is **`NULL`** if it
+parsing, when it is an external parsed entity. This is **`null`** if it
 an entity from the internal subset or if it is not known.
 
 `encoding`  
 An attribute specifying, as part of the text declaration, the encoding
-of this entity, when it is an external parsed entity. This is **`NULL`**
+of this entity, when it is an external parsed entity. This is **`null`**
 otherwise.
 
 `version`  
 An attribute specifying, as part of the text declaration, the version
 number of this entity, when it is an external parsed entity. This is
-**`NULL`** otherwise.
+**`null`** otherwise.
 
 Class synopsis
 --------------
@@ -5922,9 +5922,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -6149,21 +6149,21 @@ class="methodparam">void</span> )
 class="type">DOMDocument</span> <span
 class="methodname">createDocument</span> (\[ <span
 class="methodparam"><span class="type">string</span>
-`$namespaceURI`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$namespaceURI`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
+`$qualifiedName`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">DOMDocumentType</span>
-`$doctype`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$doctype`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 <span class="modifier">public</span> <span
 class="type">DOMDocumentType</span> <span
 class="methodname">createDocumentType</span> (\[ <span
 class="methodparam"><span class="type">string</span>
-`$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
+`$qualifiedName`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \]\]\]
+`$systemId`<span class="initializer"> = **`null`**</span></span> \]\]\]
 )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -6198,11 +6198,11 @@ element
 class="type">DOMDocument</span> <span
 class="methodname">DOMImplementation::createDocument</span> (\[ <span
 class="methodparam"><span class="type">string</span>
-`$namespaceURI`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$namespaceURI`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
+`$qualifiedName`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">DOMDocumentType</span>
-`$doctype`<span class="initializer"> = **`NULL`**</span></span> \]\]\] )
+`$doctype`<span class="initializer"> = **`null`**</span></span> \]\]\] )
 
 Creates a <span class="classname">DOMDocument</span> object of the
 specified type with its document element.
@@ -6216,7 +6216,7 @@ The namespace URI of the document element to create.
 The qualified name of the document element to create.
 
 `doctype`  
-The type of document to create or **`NULL`**.
+The type of document to create or **`null`**.
 
 ### Return Values
 
@@ -6255,11 +6255,11 @@ Creates an empty DOMDocumentType object
 class="type">DOMDocumentType</span> <span
 class="methodname">DOMImplementation::createDocumentType</span> (\[
 <span class="methodparam"><span class="type">string</span>
-`$qualifiedName`<span class="initializer"> = **`NULL`**</span></span>
+`$qualifiedName`<span class="initializer"> = **`null`**</span></span>
 \[, <span class="methodparam"><span class="type">string</span>
-`$publicId`<span class="initializer"> = **`NULL`**</span></span> \[,
+`$publicId`<span class="initializer"> = **`null`**</span></span> \[,
 <span class="methodparam"><span class="type">string</span>
-`$systemId`<span class="initializer"> = **`NULL`**</span></span> \]\]\]
+`$systemId`<span class="initializer"> = **`null`**</span></span> \]\]\]
 )
 
 Creates an empty <span class="classname">DOMDocumentType</span> object.
@@ -6280,7 +6280,7 @@ The external subset system identifier.
 ### Return Values
 
 A new <span class="classname">DOMDocumentType</span> node with its
-*ownerDocument* set to **`NULL`**.
+*ownerDocument* set to **`null`**.
 
 ### Errors/Exceptions
 
@@ -6363,7 +6363,7 @@ either *2.0* or *1.0*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -6497,7 +6497,7 @@ The *nodeName* of the node to retrieve.
 
 ### Return Values
 
-A node (of any type) with the specified *nodeName*, or **`NULL`** if no
+A node (of any type) with the specified *nodeName*, or **`null`** if no
 node is found.
 
 ### See Also
@@ -6530,7 +6530,7 @@ The local name of the node to retrieve.
 ### Return Values
 
 A node (of any type) with the specified local name and namespace URI, or
-**`NULL`** if no node is found.
+**`null`** if no node is found.
 
 ### See Also
 
@@ -6557,7 +6557,7 @@ Index into this map.
 
 ### Return Values
 
-The node at the `index`th position in the map, or **`NULL`** if that is
+The node at the `index`th position in the map, or **`null`** if that is
 not a valid index (greater than or equal to the number of nodes in this
 map).
 
@@ -6662,9 +6662,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">C14NFile</span> ( <span class="methodparam"><span
 class="type">string</span> `$uri`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$exclusive`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">bool</span> `$with_comments`<span
-class="initializer"> = **`FALSE`**</span></span> \[, <span
+class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">array</span> `$xpath`</span> \[,
 <span class="methodparam"><span class="type">array</span>
 `$ns_prefixes`</span> \]\]\]\] )
@@ -6747,7 +6747,7 @@ The value of this node, depending on its type. Contrary to the W3C
 specification, the node value of <span
 class="classname">DOMElement</span> nodes is equal to
 <a href="/class/domnode.html#" class="link">DOMNode::textContent</a>
-instead of **`NULL`**.
+instead of **`null`**.
 
 `nodeType`  
 Gets the type of the node. One of the predefined
@@ -6755,7 +6755,7 @@ Gets the type of the node. One of the predefined
 
 `parentNode`  
 The parent of this node. If there is no such node, this returns
-**`NULL`**.
+**`null`**.
 
 `childNodes`  
 A <span class="classname">DOMNodeList</span> that contains all children
@@ -6764,41 +6764,41 @@ class="classname">DOMNodeList</span>.
 
 `firstChild`  
 The first child of this node. If there is no such node, this returns
-**`NULL`**.
+**`null`**.
 
 `lastChild`  
 The last child of this node. If there is no such node, this returns
-**`NULL`**.
+**`null`**.
 
 `previousSibling`  
 The node immediately preceding this node. If there is no such node, this
-returns **`NULL`**.
+returns **`null`**.
 
 `nextSibling`  
 The node immediately following this node. If there is no such node, this
-returns **`NULL`**.
+returns **`null`**.
 
 `attributes`  
 A <span class="classname">DOMNamedNodeMap</span> containing the
 attributes of this node (if it is a <span
-class="classname">DOMElement</span>) or **`NULL`** otherwise.
+class="classname">DOMElement</span>) or **`null`** otherwise.
 
 `ownerDocument`  
 The <span class="classname">DOMDocument</span> object associated with
-this node, or **`NULL`** if this node is a <span
+this node, or **`null`** if this node is a <span
 class="classname">DOMDOcument</span>
 
 `namespaceURI`  
-The namespace URI of this node, or **`NULL`** if it is unspecified.
+The namespace URI of this node, or **`null`** if it is unspecified.
 
 `prefix`  
-The namespace prefix of this node, or **`NULL`** if it is unspecified.
+The namespace prefix of this node, or **`null`** if it is unspecified.
 
 `localName`  
 Returns the local part of the qualified name of this node.
 
 `baseURI`  
-The absolute base URI of this node or **`NULL`** if the implementation
+The absolute base URI of this node or **`null`** if the implementation
 wasn't able to obtain an absolute URI.
 
 `textContent`  
@@ -6948,7 +6948,7 @@ An array of namespace prefixes to filter the nodes by.
 
 ### Return Values
 
-Returns canonicalized nodes as a string or **`FALSE`** on failure
+Returns canonicalized nodes as a string or **`false`** on failure
 
 ### See Also
 
@@ -6966,9 +6966,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -6995,7 +6995,7 @@ An array of namespace prefixes to filter the nodes by.
 
 ### Return Values
 
-Number of bytes written or **`FALSE`** on failure
+Number of bytes written or **`false`** on failure
 
 ### See Also
 
@@ -7018,7 +7018,7 @@ Creates a copy of the node.
 
 `deep`  
 Indicates whether to copy all descendant nodes. This parameter is
-defaulted to **`FALSE`**.
+defaulted to **`false`**.
 
 ### Return Values
 
@@ -7095,7 +7095,7 @@ This function has no parameters.
 ### Return Values
 
 Returns a <span class="type">string</span> containing the XPath, or
-**`NULL`** in case of an error.
+**`null`** in case of an error.
 
 ### Examples
 
@@ -7156,7 +7156,7 @@ an **`XML_ELEMENT_NODE`**.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7177,7 +7177,7 @@ This function checks if the node has children.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7258,8 +7258,8 @@ The namespace URI to look for.
 
 ### Return Values
 
-Return **`TRUE`** if `namespaceURI` is the default namespace,
-**`FALSE`** otherwise.
+Return **`true`** if `namespaceURI` is the default namespace,
+**`false`** otherwise.
 
 DOMNode::isSameNode
 ===================
@@ -7282,7 +7282,7 @@ The compared node.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 DOMNode::isSupported
 ====================
@@ -7311,7 +7311,7 @@ The version number of the `feature` to test.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -7492,7 +7492,7 @@ The old node.
 
 ### Return Values
 
-The old node or **`FALSE`** if an error occur.
+The old node or **`false`** if an error occur.
 
 ### Errors/Exceptions
 
@@ -7615,7 +7615,7 @@ Index of the node into the collection.
 ### Return Values
 
 The node at the `index`th position in the <span
-class="classname">DOMNodeList</span>, or **`NULL`** if that is not a
+class="classname">DOMNodeList</span>, or **`null`** if that is not a
 valid index.
 
 ### Examples
@@ -7783,9 +7783,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -7984,9 +7984,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -8292,9 +8292,9 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DOMNode::C14NFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$uri`</span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$exclusive`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$exclusive`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">bool</span>
-`$with_comments`<span class="initializer"> = **`FALSE`**</span></span>
+`$with_comments`<span class="initializer"> = **`false`**</span></span>
 \[, <span class="methodparam"><span class="type">array</span>
 `$xpath`</span> \[, <span class="methodparam"><span
 class="type">array</span> `$ns_prefixes`</span> \]\]\]\] )
@@ -8429,7 +8429,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 DOMText::isWhitespaceInElementContent
 =====================================
@@ -8448,8 +8448,8 @@ content during the load of the document.
 
 ### Return Values
 
-Returns **`TRUE`** if node contains zero or more whitespace characters
-and nothing else. Returns **`FALSE`** otherwise.
+Returns **`true`** if node contains zero or more whitespace characters
+and nothing else. Returns **`false`** otherwise.
 
 DOMText::splitText
 ==================
@@ -8510,7 +8510,7 @@ class="methodparam"><span class="type">string</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">DOMNode</span> `$contextnode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
+`$registerNodeNS`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span
@@ -8519,7 +8519,7 @@ class="type">DOMNodeList</span> <span class="methodname">query</span> (
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">DOMNode</span> `$contextnode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
+`$registerNodeNS`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
@@ -8574,7 +8574,7 @@ class="methodparam"><span class="type">string</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">DOMNode</span> `$contextnode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
+`$registerNodeNS`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 Executes the given XPath `expression` and returns a typed result if
@@ -8600,7 +8600,7 @@ class="classname">DOMNodeList</span> containing all nodes matching the
 given XPath `expression`.
 
 If the `expression` is malformed or the `contextnode` is invalid, <span
-class="methodname">DOMXPath::evaluate</span> returns **`FALSE`**.
+class="methodname">DOMXPath::evaluate</span> returns **`false`**.
 
 ### Examples
 
@@ -8648,7 +8648,7 @@ class="methodparam"><span class="type">string</span>
 `$expression`</span> \[, <span class="methodparam"><span
 class="type">DOMNode</span> `$contextnode`</span> \[, <span
 class="methodparam"><span class="type">bool</span>
-`$registerNodeNS`<span class="initializer"> = **`TRUE`**</span></span>
+`$registerNodeNS`<span class="initializer"> = **`true`**</span></span>
 \]\] )
 
 Executes the given XPath `expression`.
@@ -8674,7 +8674,7 @@ not return nodes will return an empty <span
 class="classname">DOMNodeList</span>.
 
 If the `expression` is malformed or the `contextnode` is invalid, <span
-class="methodname">DOMXPath::query</span> returns **`FALSE`**.
+class="methodname">DOMXPath::query</span> returns **`false`**.
 
 ### Examples
 
@@ -8765,7 +8765,7 @@ The URI of the namespace.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 DOMXPath::registerPhpFunctions
 ==============================

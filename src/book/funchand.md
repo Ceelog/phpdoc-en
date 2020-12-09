@@ -29,7 +29,7 @@ Function Handling
     -   [func\_num\_args](/ref/funchand.html#func_num_args) — Returns
         the number of arguments passed to the function
     -   [function\_exists](/ref/funchand.html#function_exists) — Return
-        TRUE if the given function has been defined
+        true if the given function has been defined
     -   [get\_defined\_functions](/ref/funchand.html#get_defined_functions)
         — Returns an array of all defined functions
     -   [register\_shutdown\_function](/ref/funchand.html#register_shutdown_function)

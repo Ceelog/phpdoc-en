@@ -4717,7 +4717,7 @@ Whether to turn on auto-commit or not.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -4931,7 +4931,7 @@ Savepoint name for the transaction.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -5083,14 +5083,14 @@ The MySQL password.
 `database`  
 The database to change to.
 
-If desired, the **`NULL`** value may be passed resulting in only
+If desired, the **`null`** value may be passed resulting in only
 changing the user and not selecting a database. To select a database in
 this case use the <span class="function">mysqli\_select\_db</span>
 function.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -5327,7 +5327,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -5394,7 +5394,7 @@ If provided then *COMMIT/\*name\*/* is executed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -5522,7 +5522,7 @@ class="function">mysqli\_connect</span>.
 
 ### Return Values
 
-A string that describes the error. **`NULL`** is returned if no error
+A string that describes the error. **`null`** is returned if no error
 occurred.
 
 ### Examples
@@ -5649,7 +5649,7 @@ Opens a connection to the MySQL Server.
 ### Parameters
 
 `host`  
-Can be either a host name or an IP address. Passing the **`NULL`** value
+Can be either a host name or an IP address. Passing the **`null`** value
 or the string "localhost" to this parameter, the local host is assumed.
 When possible, pipes will be used instead of the TCP/IP protocol.
 
@@ -5661,7 +5661,7 @@ connections opened from the connection pool.
 The MySQL user name.
 
 `passwd`  
-If not provided or **`NULL`**, the MySQL server will attempt to
+If not provided or **`null`**, the MySQL server will attempt to
 authenticate the user against those user records which have no password
 only. This allows one username to be used with different permissions
 (depending on if a password is provided or not).
@@ -5686,7 +5686,7 @@ Specifies the socket or named pipe that should be used.
 ### Return Values
 
 Returns an object which represents the connection to a MySQL Server, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -5847,7 +5847,7 @@ A string representing the debugging operation to perform
 
 ### Return Values
 
-Returns **`TRUE`**.
+Returns **`true`**.
 
 ### Notes
 
@@ -5909,7 +5909,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -6552,7 +6552,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns an array with connection stats if success, **`FALSE`**
+Returns an array with connection stats if success, **`false`**
 otherwise.
 
 ### Examples
@@ -7394,7 +7394,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7500,9 +7500,9 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** if one or more result sets (including errors) are
+Returns **`true`** if one or more result sets (including errors) are
 available from a previous call to <span
-class="function">mysqli\_multi\_query</span>, otherwise **`FALSE`**.
+class="function">mysqli\_multi\_query</span>, otherwise **`false`**.
 
 ### Examples
 
@@ -7563,7 +7563,7 @@ Data inside the query should be
 
 ### Return Values
 
-Returns **`FALSE`** if the first statement failed. To retrieve
+Returns **`false`** if the first statement failed. To retrieve
 subsequent errors from other statements you have to call <span
 class="function">mysqli\_next\_result</span> first.
 
@@ -7700,8 +7700,8 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Also returns
-**`FALSE`** if the next statement resulted in an error, unlike <span
+Returns **`true`** on success or **`false`** on failure. Also returns
+**`false`** if the next statement resulted in an error, unlike <span
 class="methodname">mysqli\_more\_results</span>.
 
 ### Examples
@@ -7780,7 +7780,7 @@ The value for the option.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7849,7 +7849,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -7968,7 +7968,7 @@ Maximum number of microseconds to wait, must be non-negative.
 
 ### Return Values
 
-Returns number of ready connections upon success, **`FALSE`** otherwise.
+Returns number of ready connections upon success, **`false`** otherwise.
 
 ### Examples
 
@@ -8083,7 +8083,7 @@ positions.
 ### Return Values
 
 <span class="function">mysqli\_prepare</span> returns a statement object
-or **`FALSE`** if an error occurred.
+or **`false`** if an error occurred.
 
 ### Examples
 
@@ -8264,11 +8264,11 @@ is then used to get results from such queries.
 
 ### Return Values
 
-Returns **`FALSE`** on failure. For successful *SELECT, SHOW, DESCRIBE*
+Returns **`false`** on failure. For successful *SELECT, SHOW, DESCRIBE*
 or *EXPLAIN* queries <span class="function">mysqli\_query</span> will
 return a <span class="classname">mysqli\_result</span> object. For other
 successful queries <span class="function">mysqli\_query</span> will
-return **`TRUE`**.
+return **`true`**.
 
 ### Examples
 
@@ -8431,7 +8431,7 @@ class="function">mysqli\_connect</span> or <span
 class="function">mysqli\_init</span>
 
 `host`  
-Can be either a host name or an IP address. Passing the **`NULL`** value
+Can be either a host name or an IP address. Passing the **`null`** value
 or the string "localhost" to this parameter, the local host is assumed.
 When possible, pipes will be used instead of the TCP/IP protocol.
 
@@ -8439,7 +8439,7 @@ When possible, pipes will be used instead of the TCP/IP protocol.
 The MySQL user name.
 
 `passwd`  
-If provided or **`NULL`**, the MySQL server will attempt to authenticate
+If provided or **`null`**, the MySQL server will attempt to authenticate
 the user against those user records which have no password only. This
 allows one username to be used with different permissions (depending on
 if a password as provided or not).
@@ -8487,7 +8487,7 @@ With the parameter `flags` you can set different connection options:
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -8676,7 +8676,7 @@ Returns an escaped string.
 ### Errors/Exceptions
 
 Executing this function without a valid MySQLi connection passed in will
-return **`NULL`** and emit **`E_WARNING`** level errors.
+return **`null`** and emit **`E_WARNING`** level errors.
 
 ### Examples
 
@@ -8818,7 +8818,7 @@ Data inside the query should be
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -8862,7 +8862,7 @@ class="function">mysqli\_init</span>
 ### Return Values
 
 Returns <span class="classname">mysqli\_result</span> in success,
-**`FALSE`** otherwise.
+**`false`** otherwise.
 
 ### See Also
 
@@ -8913,7 +8913,7 @@ documentation.
 
 ### Return Values
 
-**`TRUE`** if the refresh was a success, otherwise **`FALSE`**
+**`true`** if the refresh was a success, otherwise **`false`**
 
 ### See Also
 
@@ -8960,7 +8960,7 @@ The identifier of the savepoint.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -9012,7 +9012,7 @@ If provided then *ROLLBACK/\*name\*/* is executed.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -9078,7 +9078,7 @@ The identifier of the savepoint.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -9129,7 +9129,7 @@ The database name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -9251,7 +9251,7 @@ The charset to be set as default.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -9505,7 +9505,7 @@ A list of allowable ciphers to use for SSL encryption.
 
 ### Return Values
 
-This function always returns **`TRUE`** value. If SSL setup is incorrect
+This function always returns **`true`** value. If SSL setup is incorrect
 <span class="function">mysqli\_real\_connect</span> will return an error
 when you attempt to connect.
 
@@ -9550,7 +9550,7 @@ class="function">mysqli\_init</span>
 
 ### Return Values
 
-A string describing the server status. **`FALSE`** if an error occurred.
+A string describing the server status. **`false`** if an error occurred.
 
 ### Examples
 
@@ -9694,20 +9694,20 @@ The option that you want to set. It can be one of the following values:
 
 ### Return Values
 
-Returns a buffered result object or **`FALSE`** if an error occurred.
+Returns a buffered result object or **`false`** if an error occurred.
 
 > **Note**:
 >
 > <span class="function">mysqli\_store\_result</span> returns
-> **`FALSE`** in case the query didn't return a result set (if the query
+> **`false`** in case the query didn't return a result set (if the query
 > was, for example an INSERT statement). This function also returns
-> **`FALSE`** if the reading of the result set failed. You can check if
+> **`false`** if the reading of the result set failed. You can check if
 > you have got an error by checking if <span
 > class="function">mysqli\_error</span> doesn't return an empty string,
 > if <span class="function">mysqli\_errno</span> returns a non zero
 > value, or if <span class="function">mysqli\_field\_count</span>
 > returns a non zero value. Also possible reason for this function
-> returning **`FALSE`** after successful call to <span
+> returning **`false`** after successful call to <span
 > class="function">mysqli\_query</span> can be too large result set
 > (memory for it cannot be allocated). If <span
 > class="function">mysqli\_field\_count</span> returns a non-zero value,
@@ -9876,7 +9876,7 @@ Tells whether the client library is compiled as thread-safe.
 
 ### Return Values
 
-**`TRUE`** if the client library is thread-safe, otherwise **`FALSE`**.
+**`true`** if the client library is thread-safe, otherwise **`false`**.
 
 mysqli::use\_result
 ===================
@@ -9925,7 +9925,7 @@ database connection from failing.
 
 ### Return Values
 
-Returns an unbuffered result object or **`FALSE`** if an error occurred.
+Returns an unbuffered result object or **`false`** if an error occurred.
 
 ### Examples
 
@@ -10440,7 +10440,7 @@ The attribute that you want to get.
 
 ### Return Values
 
-Returns **`FALSE`** if the attribute is not found, otherwise returns the
+Returns **`false`** if the attribute is not found, otherwise returns the
 value of the attribute.
 
 mysqli\_stmt::attr\_set
@@ -10484,7 +10484,7 @@ values:
 
 | Character                               | Description                                                                                                                                                                                                     |
 |-----------------------------------------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| MYSQLI\_STMT\_ATTR\_UPDATE\_MAX\_LENGTH | Setting to **`TRUE`** causes <span class="function">mysqli\_stmt\_store\_result</span> to update the metadata *MYSQL\_FIELD-\>max\_length* value.                                                               |
+| MYSQLI\_STMT\_ATTR\_UPDATE\_MAX\_LENGTH | Setting to **`true`** causes <span class="function">mysqli\_stmt\_store\_result</span> to update the metadata *MYSQL\_FIELD-\>max\_length* value.                                                               |
 | MYSQLI\_STMT\_ATTR\_CURSOR\_TYPE        | Type of cursor to open for statement when <span class="function">mysqli\_stmt\_execute</span> is invoked. `mode` can be *MYSQLI\_CURSOR\_TYPE\_NO\_CURSOR* (the default) or *MYSQLI\_CURSOR\_TYPE\_READ\_ONLY*. |
 | MYSQLI\_STMT\_ATTR\_PREFETCH\_ROWS      | Number of rows to fetch from server at a time when using a cursor. `mode` can be in the range from 1 to the maximum value of unsigned long. The default is 1.                                                   |
 
@@ -10583,7 +10583,7 @@ parameters in the statement.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -10735,7 +10735,7 @@ Further variables to be bound.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -10861,7 +10861,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -11472,7 +11472,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -11644,9 +11644,9 @@ class="function">mysqli\_stmt\_init</span>.
 
 | Value       | Description                                          |
 |-------------|------------------------------------------------------|
-| **`TRUE`**  | Success. Data has been fetched                       |
-| **`FALSE`** | Error occurred                                       |
-| **`NULL`**  | No more rows/data exists or data truncation occurred |
+| **`true`**  | Success. Data has been fetched                       |
+| **`false`** | Error occurred                                       |
+| **`null`**  | No more rows/data exists or data truncation occurred |
 
 ### Examples
 
@@ -11837,7 +11837,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns a resultset for successful SELECT queries, or **`FALSE`** for
+Returns a resultset for successful SELECT queries, or **`false`** for
 other DML queries or on failure. The <span
 class="function">mysqli\_errno</span> function can be used to
 distinguish between the two types of failure.
@@ -12044,7 +12044,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** if more results exist, otherwise **`FALSE`**.
+Returns **`true`** if more results exist, otherwise **`false`**.
 
 ### MySQL Native Driver Only
 
@@ -12089,7 +12089,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Errors/Exceptions
 
@@ -12413,7 +12413,7 @@ embedding question mark (*?*) characters at the appropriate positions.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -12555,7 +12555,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -12632,7 +12632,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns a result object or **`FALSE`** if an error occurred.
+Returns a result object or **`false`** if an error occurred.
 
 ### Examples
 
@@ -12749,7 +12749,7 @@ A string containing data to be sent.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -12942,7 +12942,7 @@ class="function">mysqli\_stmt\_fetch</span> call returns buffered data.
 > in all cases. You can detect whether the query produced a result set
 > by checking if <span
 > class="function">mysqli\_stmt\_result\_metadata</span> returns
-> **`FALSE`**.
+> **`false`**.
 
 ### Parameters
 
@@ -12952,7 +12952,7 @@ class="function">mysqli\_stmt\_init</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -13305,7 +13305,7 @@ minus one (0..<span class="function">mysqli\_num\_rows</span> - 1).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -13494,7 +13494,7 @@ class="methodparam"><span class="type">mysqli\_result</span>
 class="type">int</span> `$resulttype`<span class="initializer"> =
 MYSQLI\_BOTH</span></span> \] )
 
-Returns an array that corresponds to the fetched row or **`NULL`** if
+Returns an array that corresponds to the fetched row or **`null`** if
 there are no more rows for the resultset represented by the `result`
 parameter.
 
@@ -13509,7 +13509,7 @@ names of the result set as keys.
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 If two or more columns of the result have the same field names, the last
 column will take precedence and overwrite the earlier data. In order to
@@ -13540,7 +13540,7 @@ both.
 ### Return Values
 
 Returns an array of strings that corresponds to the fetched row or
-**`NULL`** if there are no more rows in resultset.
+**`null`** if there are no more rows in resultset.
 
 ### Examples
 
@@ -13652,13 +13652,13 @@ class="methodparam"><span class="type">mysqli\_result</span>
 `$result`</span> )
 
 Returns an associative array that corresponds to the fetched row or
-**`NULL`** if there are no more rows.
+**`null`** if there are no more rows.
 
 > **Note**: <span class="simpara">Field names returned by this function
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Parameters
 
@@ -13672,7 +13672,7 @@ class="function">mysqli\_use\_result</span>.
 
 Returns an associative array of strings representing the fetched row in
 the result set, where each key in the array represents the name of one
-of the result set's columns or **`NULL`** if there are no more rows in
+of the result set's columns or **`null`** if there are no more rows in
 resultset.
 
 If two or more columns of the result have the same field names, the last
@@ -13838,7 +13838,7 @@ fields - 1*.
 ### Return Values
 
 Returns an object which contains field definition information or
-**`FALSE`** if no field information for specified *fieldnr* is
+**`false`** if no field information for specified *fieldnr* is
 available.
 
 | Attribute   | Description                                                     |
@@ -13975,7 +13975,7 @@ class="function">mysqli\_use\_result</span>.
 ### Return Values
 
 Returns an object which contains field definition information or
-**`FALSE`** if no field information is available.
+**`false`** if no field information is available.
 
 | Property    | Description                                                     |
 |-------------|-----------------------------------------------------------------|
@@ -14121,7 +14121,7 @@ class="function">mysqli\_use\_result</span>.
 ### Return Values
 
 Returns an array of objects which contains field definition information
-or **`FALSE`** if no field information is available.
+or **`false`** if no field information is available.
 
 | Property    | Description                                                                                                                                                                                                                                                                                                                                                            |
 |-------------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
@@ -14328,13 +14328,13 @@ constructor for `class_name` objects.
 ### Return Values
 
 Returns an object with string properties that corresponds to the fetched
-row or **`NULL`** if there are no more rows in resultset.
+row or **`null`** if there are no more rows in resultset.
 
 > **Note**: <span class="simpara">Field names returned by this function
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Examples
 
@@ -14440,7 +14440,7 @@ class="methodparam"><span class="type">mysqli\_result</span>
 Fetches one row of data from the result set and returns it as an
 enumerated array, where each column is stored in an array offset
 starting from 0 (zero). Each subsequent call to this function will
-return the next row within the result set, or **`NULL`** if there are no
+return the next row within the result set, or **`null`** if there are no
 more rows.
 
 ### Parameters
@@ -14454,11 +14454,11 @@ class="function">mysqli\_use\_result</span>.
 ### Return Values
 
 <span class="function">mysqli\_fetch\_row</span> returns an array of
-strings that corresponds to the fetched row or **`NULL`** if there are
+strings that corresponds to the fetched row or **`null`** if there are
 no more rows in result set.
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### Examples
 
@@ -14685,7 +14685,7 @@ fields - 1*.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -14869,10 +14869,10 @@ class="function">mysqli\_use\_result</span>.
 ### Return Values
 
 An array of integers representing the size of each column (not including
-any terminating null characters). **`FALSE`** if an error occurred.
+any terminating null characters). **`false`** if an error occurred.
 
 <span class="function">mysqli\_fetch\_lengths</span> is valid only for
-the current row of the result set. It returns **`FALSE`** if you call it
+the current row of the result set. It returns **`false`** if you call it
 before calling mysqli\_fetch\_row/array/object or after retrieving all
 rows in the result.
 
@@ -15255,7 +15255,7 @@ calls or queries that don't use an index (or use a bad index).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -15394,8 +15394,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if next warning was fetched successfully. If there
-are no more warnings, it will return **`FALSE`**
+Returns **`true`** if next warning was fetched successfully. If there
+are no more warnings, it will return **`false`**
 
 Introduction
 ------------
@@ -15529,7 +15529,7 @@ Returns client per-process statistics. Available only with
 
 ### Return Values
 
-Returns an array with client stats if success, **`FALSE`** otherwise.
+Returns an array with client stats if success, **`false`** otherwise.
 
 ### Examples
 
@@ -17005,7 +17005,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if connections are closed.
+**`true`** if connections are closed.
 
 Client::\_\_construct
 =====================
@@ -17494,8 +17494,8 @@ A single IndexField description consists of the following fields:
     be added.
 
 -   `required`: bool, (optional) true if the field is required to exist
-    in the document. Defaults to **`FALSE`**, except for *GEOJSON* where
-    it defaults to **`TRUE`**.
+    in the document. Defaults to **`false`**, except for *GEOJSON* where
+    it defaults to **`true`**.
 
 -   `options`: integer, (optional) special option flags for use when
     decoding *GEOJSON* data.
@@ -17582,7 +17582,7 @@ Drop collection index
 Drop a collection index.
 
 This operation does not yield an error if the index does not exist, but
-**`FALSE`** is returned in that case.
+**`false`** is returned in that case.
 
 ### Parameters
 
@@ -17591,7 +17591,7 @@ Name of collection index to drop.
 
 ### Return Values
 
-**`TRUE`** if the DROP INDEX operation succeeded, otherwise **`FALSE`**.
+**`true`** if the DROP INDEX operation succeeded, otherwise **`false`**.
 
 ### Examples
 
@@ -17650,8 +17650,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if collection exists in the database, else
-**`FALSE`** if it does not.
+Returns **`true`** if collection exists in the database, else
+**`false`** if it does not.
 
 A table defined with two columns (doc and \_id) is considered a
 collection, and a third \_json\_schema column as of MySQL 8.0.21. Adding
@@ -17841,7 +17841,7 @@ The document \_id in the collection.
 
 ### Return Values
 
-The collection object, or **`NULL`** if the \_id does not match a
+The collection object, or **`null`** if the \_id does not match a
 document.
 
 ### Examples
@@ -17905,7 +17905,7 @@ This function has no parameters.
 
 ### Return Values
 
-The schema object on success, or **`NULL`** if the object cannot be
+The schema object on success, or **`null`** if the object cannot be
 retrieved for the given collection.
 
 ### Examples
@@ -18005,7 +18005,7 @@ operations are allowed, and parameter binding is supported.
 
 `search_condition`  
 Must be a valid SQL expression used to match the documents to modify.
-This expression might be as simple as **`TRUE`**, which matches all
+This expression might be as simple as **`true`**, which matches all
 documents, or it might use functions and operators such as
 `'CAST(_id AS SIGNED) >= 10'`, `'age MOD 2 = 0 OR age MOD 3 = 0'`, or
 `'_id IN ["2","5","7","10"]'`.
@@ -18071,7 +18071,7 @@ operations are allowed, and parameter binding is supported.
 
 `search_condition`  
 Must be a valid SQL expression used to match the documents to modify.
-This expression might be as simple as **`TRUE`**, which matches all
+This expression might be as simple as **`true`**, which matches all
 documents, or it might use functions and operators such as
 `'CAST(_id AS SIGNED) >= 10'`, `'age MOD 2 = 0 OR age MOD 3 = 0'`, or
 `'_id IN ["2","5","7","10"]'`.
@@ -20965,7 +20965,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a given column as a signed type.
+**`true`** if a given column as a signed type.
 
 ### Examples
 
@@ -21003,7 +21003,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if a given column is padded.
+**`true`** if a given column is padded.
 
 ### Examples
 
@@ -21335,7 +21335,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if object exists in the database, else **`FALSE`** if
+Returns **`true`** if object exists in the database, else **`false`** if
 it does not.
 
 ### Examples
@@ -21638,7 +21638,7 @@ This function has no parameters.
 
 ### Return Values
 
-The result, as an associative array or **`NULL`** if no results are
+The result, as an associative array or **`null`** if no results are
 present.
 
 ### Examples
@@ -22629,7 +22629,7 @@ This function has no parameters.
 
 ### Return Values
 
-The result, as an associative array or **`NULL`** if no results are
+The result, as an associative array or **`null`** if no results are
 present.
 
 ### Examples
@@ -23245,8 +23245,8 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the schema, table, collection, or view still exists in the
-schema, else **`FALSE`**.
+**`true`** if the schema, table, collection, or view still exists in the
+schema, else **`false`**.
 
 ### Examples
 
@@ -23833,7 +23833,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the session closed.
+**`true`** if the session closed.
 
 ### Examples
 
@@ -23992,7 +23992,7 @@ Name of the schema to drop.
 
 ### Return Values
 
-**`TRUE`** if the schema is dropped, or **`FALSE`** if it does not exist
+**`true`** if the schema is dropped, or **`false`** if it does not exist
 or can't be dropped.
 
 An **`E_WARNING`** level error is generated if the schema does not
@@ -24073,7 +24073,7 @@ This function has no parameters.
 
 ### Return Values
 
-Name of the default schema defined by the connection, or **`NULL`** if
+Name of the default schema defined by the connection, or **`null`** if
 one was not set.
 
 ### Examples
@@ -24871,7 +24871,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the result set has more objects to fetch.
+**`true`** if the result set has more objects to fetch.
 
 ### Examples
 
@@ -25450,7 +25450,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the result set has data.
+**`true`** if the result set has data.
 
 ### Examples
 
@@ -25912,7 +25912,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** if table exists in the database, else **`FALSE`** if
+Returns **`true`** if table exists in the database, else **`false`** if
 it does not.
 
 ### Examples
@@ -26159,7 +26159,7 @@ This function has no parameters.
 
 ### Return Values
 
-**`TRUE`** if the underlying object is a view, otherwise **`FALSE`**.
+**`true`** if the underlying object is a view, otherwise **`false`**.
 
 ### Examples
 
@@ -28463,7 +28463,7 @@ Notes
 > parameter. If it is not provided, last opened connection is used. If
 > it doesn't exist, connection is tried to establish with default
 > parameters defined in `php.ini`. If it is not successful, functions
-> return **`FALSE`**.
+> return **`false`**.
 
 mysql\_affected\_rows
 =====================
@@ -28685,7 +28685,7 @@ guide and
 for more information. Alternatives to this function include:
 
 -   <span class="function">mysqli\_close</span>
--   PDO: Assign the value of **`NULL`** to the PDO object
+-   PDO: Assign the value of **`null`** to the PDO object
 
 ### Description
 
@@ -28716,7 +28716,7 @@ is generated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -28784,7 +28784,7 @@ ini\_get("mysql.default\_user")</span></span> \[, <span
 class="methodparam"><span class="type">string</span> `$password`<span
 class="initializer"> = ini\_get("mysql.default\_password")</span></span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$new_link`<span class="initializer"> = **`FALSE`**</span></span> \[,
+`$new_link`<span class="initializer"> = **`false`**</span></span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$client_flags`<span class="initializer"> = 0</span></span> \]\]\]\]\] )
 
@@ -28841,7 +28841,7 @@ this parameter is ignored.
 
 ### Return Values
 
-Returns a MySQL link identifier on success or **`FALSE`** on failure.
+Returns a MySQL link identifier on success or **`false`** on failure.
 
 ### Changelog
 
@@ -28992,7 +28992,7 @@ level error is generated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -29080,7 +29080,7 @@ range from 0 to <span class="function">mysql\_num\_rows</span> - 1.
 However if the result set is empty (<span
 class="function">mysql\_num\_rows</span> == 0), a seek to 0 will fail
 with an **`E_WARNING`** and <span
-class="function">mysql\_data\_seek</span> will return **`FALSE`**.
+class="function">mysql\_data\_seek</span> will return **`false`**.
 
 ### Parameters
 
@@ -29094,7 +29094,7 @@ The desired row number of the new result pointer.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -29197,8 +29197,8 @@ The field name.
 
 ### Return Values
 
-Returns the database name on success, and **`FALSE`** on failure. If
-**`FALSE`** is returned, use <span class="function">mysql\_error</span>
+Returns the database name on success, and **`false`** on failure. If
+**`false`** is returned, use <span class="function">mysql\_error</span>
 to determine the nature of the error.
 
 ### Changelog
@@ -29296,7 +29296,7 @@ level error is generated.
 ### Return Values
 
 Returns a positive MySQL result resource to the query result, or
-**`FALSE`** on error. The function also returns **`TRUE`**/**`FALSE`**
+**`false`** on error. The function also returns **`true`**/**`false`**
 for *INSERT*/*UPDATE*/*DELETE* queries to indicate success/failure.
 
 ### Examples
@@ -29401,7 +29401,7 @@ level error is generated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -29726,7 +29726,7 @@ the following values: **`MYSQL_ASSOC`**, **`MYSQL_NUM`**, and
 ### Return Values
 
 Returns an array of strings that corresponds to the fetched row, or
-**`FALSE`** if there are no more rows. The type of returned array
+**`false`** if there are no more rows. The type of returned array
 depends on how `result_type` is defined. By using **`MYSQL_BOTH`**
 (default), you'll get an array with both associative and number indices.
 Using **`MYSQL_ASSOC`**, you only get associative indices (as <span
@@ -29818,7 +29818,7 @@ mysql_free_result($result);
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### See Also
 
@@ -29870,7 +29870,7 @@ class="function">mysql\_query</span>.
 ### Return Values
 
 Returns an associative array of strings that corresponds to the fetched
-row, or **`FALSE`** if there are no more rows.
+row, or **`false`** if there are no more rows.
 
 If two or more columns of the result have the same field names, the last
 column will take precedence. To access the other column(s) of the same
@@ -29943,7 +29943,7 @@ mysql_free_result($result);
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### See Also
 
@@ -30007,7 +30007,7 @@ information. The properties of the object are:
 -   <span class="simpara"> max\_length - maximum length of the column
     </span>
 -   <span class="simpara"> not\_null - 1 if the column cannot be
-    **`NULL`** </span>
+    **`null`** </span>
 -   <span class="simpara"> primary\_key - 1 if the column is a primary
     key </span>
 -   <span class="simpara"> unique\_key - 1 if the column is a unique key
@@ -30129,7 +30129,7 @@ class="function">mysql\_query</span>.
 
 ### Return Values
 
-An <span class="type">array</span> of lengths on success or **`FALSE`**
+An <span class="type">array</span> of lengths on success or **`false`**
 on failure.
 
 ### Examples
@@ -30222,7 +30222,7 @@ constructor for `class_name` objects.
 ### Return Values
 
 Returns an <span class="type">object</span> with string properties that
-correspond to the fetched row, or **`FALSE`** if there are no more rows.
+correspond to the fetched row, or **`false`** if there are no more rows.
 
 ### Examples
 
@@ -30281,7 +30281,7 @@ var_dump($obj);
 > are *case-sensitive*.</span>
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### See Also
 
@@ -30331,7 +30331,7 @@ class="function">mysql\_query</span>.
 ### Return Values
 
 Returns an numerical array of strings that corresponds to the fetched
-row, or **`FALSE`** if there are no more rows.
+row, or **`false`** if there are no more rows.
 
 <span class="function">mysql\_fetch\_row</span> fetches one row of data
 from the result associated with the specified result identifier. The row
@@ -30360,7 +30360,7 @@ echo $row[1]; // the email value
 ### Notes
 
 > **Note**: <span class="simpara">This function sets NULL fields to the
-> PHP **`NULL`** value.</span>
+> PHP **`null`** value.</span>
 
 ### See Also
 
@@ -30420,7 +30420,7 @@ issued.
 
 ### Return Values
 
-Returns a string of flags associated with the result or **`FALSE`** on
+Returns a string of flags associated with the result or **`false`** on
 failure.
 
 The following flags are reported, if your version of MySQL is current
@@ -30517,7 +30517,7 @@ issued.
 
 ### Return Values
 
-The length of the specified field index on success or **`FALSE`** on
+The length of the specified field index on success or **`false`** on
 failure.
 
 ### Examples
@@ -30598,7 +30598,7 @@ issued.
 
 ### Return Values
 
-The name of the specified field index on success or **`FALSE`** on
+The name of the specified field index on success or **`false`** on
 failure.
 
 ### Examples
@@ -30696,7 +30696,7 @@ issued.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -30901,7 +30901,7 @@ guide and
 for more information. Alternatives to this function include:
 
 -   <span class="function">mysqli\_free\_result</span>
--   Assign the value of **`NULL`** to the PDO object, or <span
+-   Assign the value of **`null`** to the PDO object, or <span
     class="methodname">PDOStatement::closeCursor</span>
 
 ### Description
@@ -30928,7 +30928,7 @@ class="function">mysql\_query</span>.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If a non-resource is used for the `result`, an error of level E\_WARNING
 will be emitted. It's worth noting that <span
@@ -31069,7 +31069,7 @@ level error is generated.
 ### Return Values
 
 Returns a string describing the type of MySQL connection in use for the
-connection or **`FALSE`** on failure.
+connection or **`false`** on failure.
 
 ### Examples
 
@@ -31137,7 +31137,7 @@ level error is generated.
 
 ### Return Values
 
-Returns the MySQL protocol on success or **`FALSE`** on failure.
+Returns the MySQL protocol on success or **`false`** on failure.
 
 ### Examples
 
@@ -31206,7 +31206,7 @@ level error is generated.
 
 ### Return Values
 
-Returns the MySQL server version on success or **`FALSE`** on failure.
+Returns the MySQL server version on success or **`false`** on failure.
 
 ### Examples
 
@@ -31274,10 +31274,10 @@ level error is generated.
 
 ### Return Values
 
-Returns information about the statement on success, or **`FALSE`** on
+Returns information about the statement on success, or **`false`** on
 failure. See the example below for which statements provide information,
 and what the returned value may look like. Statements that are not
-listed will return **`FALSE`**.
+listed will return **`false`**.
 
 ### Examples
 
@@ -31303,7 +31303,7 @@ String format: Rows matched: 65 Changed: 65 Warnings: 0
 
 > **Note**:
 >
-> <span class="function">mysql\_info</span> returns a non-**`FALSE`**
+> <span class="function">mysql\_info</span> returns a non-**`false`**
 > value for the INSERT ... VALUES statement only if multiple value lists
 > are specified in the statement.
 
@@ -31357,7 +31357,7 @@ level error is generated.
 
 The ID generated for an AUTO\_INCREMENT column by the previous query on
 success, *0* if the previous query does not generate an AUTO\_INCREMENT
-value, or **`FALSE`** if no MySQL connection was established.
+value, or **`false`** if no MySQL connection was established.
 
 ### Examples
 
@@ -31451,7 +31451,7 @@ level error is generated.
 ### Return Values
 
 Returns a result pointer <span class="type">resource</span> on success,
-or **`FALSE`** on failure. Use the <span
+or **`false`** on failure. Use the <span
 class="function">mysql\_tablename</span> function to traverse this
 result pointer, or any function for result tables, such as <span
 class="function">mysql\_fetch\_array</span>.
@@ -31553,7 +31553,7 @@ level error is generated.
 ### Return Values
 
 A result pointer <span class="type">resource</span> on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 The returned result can be used with <span
 class="function">mysql\_field\_flags</span>, <span
@@ -31656,7 +31656,7 @@ level error is generated.
 ### Return Values
 
 A result pointer <span class="type">resource</span> on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -31737,7 +31737,7 @@ level error is generated.
 ### Return Values
 
 A result pointer <span class="type">resource</span> on success or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 Use the <span class="function">mysql\_tablename</span> function to
 traverse this result pointer, or any function for result tables, such as
@@ -31832,7 +31832,7 @@ class="function">mysql\_query</span>.
 ### Return Values
 
 Returns the number of fields in the result set <span
-class="type">resource</span> on success or **`FALSE`** on failure.
+class="type">resource</span> on success or **`false`** on failure.
 
 ### Examples
 
@@ -31910,7 +31910,7 @@ class="function">mysql\_query</span>.
 
 ### Return Values
 
-The number of rows in a result set on success or **`FALSE`** on failure.
+The number of rows in a result set on success or **`false`** on failure.
 
 ### Examples
 
@@ -32030,7 +32030,7 @@ constants: 128 (enable *LOAD DATA LOCAL* handling),
 
 ### Return Values
 
-Returns a MySQL persistent link identifier on success, or **`FALSE`** on
+Returns a MySQL persistent link identifier on success, or **`false`** on
 failure.
 
 ### Changelog
@@ -32107,8 +32107,8 @@ level error is generated.
 
 ### Return Values
 
-Returns **`TRUE`** if the connection to the server MySQL server is
-working, otherwise **`FALSE`**.
+Returns **`true`** if the connection to the server MySQL server is
+working, otherwise **`false`**.
 
 ### Examples
 
@@ -32198,11 +32198,11 @@ level error is generated.
 
 For SELECT, SHOW, DESCRIBE, EXPLAIN and other statements returning
 resultset, <span class="function">mysql\_query</span> returns a <span
-class="type">resource</span> on success, or **`FALSE`** on error.
+class="type">resource</span> on success, or **`false`** on error.
 
 For other type of SQL statements, INSERT, UPDATE, DELETE, DROP, etc,
-<span class="function">mysql\_query</span> returns **`TRUE`** on success
-or **`FALSE`** on error.
+<span class="function">mysql\_query</span> returns **`true`** on success
+or **`false`** on error.
 
 The returned result resource should be passed to <span
 class="function">mysql\_fetch\_array</span>, and other functions for
@@ -32214,7 +32214,7 @@ class="function">mysql\_affected\_rows</span> to find out how many rows
 were affected by a DELETE, INSERT, REPLACE, or UPDATE statement.
 
 <span class="function">mysql\_query</span> will also fail and return
-**`FALSE`** if the user does not have permission to access the table(s)
+**`false`** if the user does not have permission to access the table(s)
 referenced by the query.
 
 ### Examples
@@ -32222,7 +32222,7 @@ referenced by the query.
 **Example \#1 Invalid Query**
 
 The following query is syntactically invalid, so <span
-class="function">mysql\_query</span> fails and returns **`FALSE`**.
+class="function">mysql\_query</span> fails and returns **`false`**.
 
 ``` php
 <?php
@@ -32357,7 +32357,7 @@ level error is generated.
 
 ### Return Values
 
-Returns the escaped string, or **`FALSE`** on error.
+Returns the escaped string, or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -32440,7 +32440,7 @@ This would allow anyone to log in without a valid password.
 >
 > A MySQL connection is required before using <span
 > class="function">mysql\_real\_escape\_string</span> otherwise an error
-> of level **`E_WARNING`** is generated, and **`FALSE`** is returned. If
+> of level **`E_WARNING`** is generated, and **`false`** is returned. If
 > `link_identifier` isn't defined, the last MySQL connection is used.
 
 > **Note**:
@@ -32535,7 +32535,7 @@ If undefined, the first field is retrieved.
 ### Return Values
 
 The contents of one cell from a MySQL result set on success, or
-**`FALSE`** on failure.
+**`false`** on failure.
 
 ### Examples
 
@@ -32623,7 +32623,7 @@ level error is generated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -32703,7 +32703,7 @@ level error is generated.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Notes
 
@@ -32770,7 +32770,7 @@ level error is generated.
 Returns a string with the status for uptime, threads, queries, open
 tables, flush tables and queries per second. For a complete list of
 other status variables, you have to use the *SHOW STATUS* SQL command.
-If `link_identifier` is invalid, **`NULL`** is returned.
+If `link_identifier` is invalid, **`null`** is returned.
 
 ### Examples
 
@@ -32873,7 +32873,7 @@ The integer index (row/table number)
 
 ### Return Values
 
-The name of the table on success or **`FALSE`** on failure.
+The name of the table on success or **`false`** on failure.
 
 Use the <span class="function">mysql\_tablename</span> function to
 traverse this result pointer, or any function for result tables, such as
@@ -32959,7 +32959,7 @@ level error is generated.
 
 ### Return Values
 
-The thread ID on success or **`FALSE`** on failure.
+The thread ID on success or **`false`** on failure.
 
 ### Examples
 
@@ -33044,11 +33044,11 @@ level error is generated.
 
 For SELECT, SHOW, DESCRIBE or EXPLAIN statements, <span
 class="function">mysql\_unbuffered\_query</span> returns a <span
-class="type">resource</span> on success, or **`FALSE`** on error.
+class="type">resource</span> on success, or **`false`** on error.
 
 For other type of SQL statements, UPDATE, DELETE, DROP, etc, <span
-class="function">mysql\_unbuffered\_query</span> returns **`TRUE`** on
-success or **`FALSE`** on error.
+class="function">mysql\_unbuffered\_query</span> returns **`true`** on
+success or **`false`** on error.
 
 ### Notes
 
@@ -40498,7 +40498,7 @@ The following parameters are passed from the plugin to the callback.
 </tr>
 <tr class="even">
 <td><em>in_transaction</em></td>
-<td><p>Boolean flag indicating whether the statement is part of an open transaction. If autocommit mode is turned off, this will be set to <strong><code>TRUE</code></strong>. Otherwise it is set to <strong><code>FALSE</code></strong>.</p>
+<td><p>Boolean flag indicating whether the statement is part of an open transaction. If autocommit mode is turned off, this will be set to <strong><code>true</code></strong>. Otherwise it is set to <strong><code>false</code></strong>.</p>
 <p>Transaction detection is based on monitoring the mysqlnd library call <em>set_autocommit</em>. Monitoring is not possible before PHP 5.4.0. Please, see <a href="/set/mysqlinfo.html#Connection%20pooling%20and%20switching" class="link">connection pooling and switching</a> concepts discussion for further details.</p></td>
 <td>Since 1.1.0.</td>
 </tr>
@@ -42187,7 +42187,7 @@ extensions.
 
 ### Return Values
 
-**`FALSE`** on error. Otherwise, returns an array with two entries
+**`false`** on error. Otherwise, returns an array with two entries
 *masters* and *slaves* each of which contains an array listing all
 corresponding servers.
 
@@ -42342,7 +42342,7 @@ The table name to ask Fabric about.
 
 ### Return Values
 
-**`FALSE`** on error. Otherwise, **`TRUE`**
+**`false`** on error. Otherwise, **`true`**
 
 ### Notes
 
@@ -42393,7 +42393,7 @@ The shard key to ask Fabric about.
 
 ### Return Values
 
-**`FALSE`** on error. Otherwise, **`TRUE`**
+**`false`** on error. Otherwise, **`true`**
 
 ### Notes
 
@@ -42433,7 +42433,7 @@ the above three MySQL driver extensions.
 ### Return Values
 
 Returns a global transaction ID (GTID) on success. Otherwise, returns
-**`FALSE`**.
+**`false`**.
 
 The function <span class="function">mysqlnd\_ms\_get\_last\_gtid</span>
 returns the GTID obtained when executing the SQL statement from the
@@ -42519,7 +42519,7 @@ extensions.
 
 ### Return Values
 
-**`FALSE`** on error. Otherwise, an array which describes the connection
+**`false`** on error. Otherwise, an array which describes the connection
 used to execute the last statement on.
 
 Array which describes the connection.
@@ -42620,7 +42620,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`NULL`** if the PHP configuration directive
+Returns **`null`** if the PHP configuration directive
 <a href="/set/mysqlinfo.html#" class="link"><em>mysqlnd_ms.enable</em></a>
 has disabled the plugin. Otherwise, returns array of statistics.
 
@@ -42997,8 +42997,8 @@ Placeholders can be escaped using *\\*.
 
 ### Return Values
 
-Returns **`TRUE`** *table\_name* is matched by *wildcard*. Otherwise,
-returns **`FALSE`**
+Returns **`true`** *table\_name* is matched by *wildcard*. Otherwise,
+returns **`false`**
 
 ### Examples
 
@@ -43220,8 +43220,8 @@ Parameter value for the service level option. See also the
 
 ### Return Values
 
-Returns **`TRUE`** if the connections service level has been switched to
-the requested. Otherwise, returns **`FALSE`**
+Returns **`true`** if the connections service level has been switched to
+the requested. Otherwise, returns **`false`**
 
 ### Notes
 
@@ -43551,8 +43551,8 @@ queries on the servers.
 
 ### Return Values
 
-Returns **`TRUE`** if there is no open local or global transaction and a
-new global transaction can be started. Otherwise, returns **`FALSE`**
+Returns **`true`** if there is no open local or global transaction and a
+new global transaction can be started. Otherwise, returns **`false`**
 
 ### See Also
 
@@ -43603,8 +43603,8 @@ Global transaction identifier (gtrid).
 
 ### Return Values
 
-Returns **`TRUE`** if the global transaction has been committed.
-Otherwise, returns **`FALSE`**
+Returns **`true`** if the global transaction has been committed.
+Otherwise, returns **`false`**
 
 ### See Also
 
@@ -43680,8 +43680,8 @@ setting *max\_retries = 0*.
 
 ### Return Values
 
-Returns **`TRUE`** if garbage collection was successful. Otherwise,
-returns **`FALSE`**
+Returns **`true`** if garbage collection was successful. Otherwise,
+returns **`false`**
 
 ### See Also
 
@@ -43729,8 +43729,8 @@ Global transaction identifier (gtrid).
 
 ### Return Values
 
-Returns **`TRUE`** if the global transaction has been rolled back.
-Otherwise, returns **`FALSE`**
+Returns **`true`** if the global transaction has been rolled back.
+Otherwise, returns **`false`**
 
 ### See Also
 
@@ -45130,8 +45130,8 @@ The callback is installed with the <span
 class="function">mysqlnd\_qc\_set\_is\_select</span> function. The
 callback is given the statement string of every statement inspected by
 the plugin. Then, the callback can decide whether to cache the function.
-The callback is supposed to return **`FALSE`** if the statement shall
-not be cached. A return value of **`TRUE`** makes the plugin try to add
+The callback is supposed to return **`false`** if the statement shall
+not be cached. A return value of **`true`** makes the plugin try to add
 the statement into the cache. The cache entry will be given the default
 TTL (
 *<a href="/set/mysqlinfo.html#Runtime%20Configuration" class="link">mysqlnd_qc.ttl</a>*).
@@ -45201,7 +45201,7 @@ The above examples will output something similar to:
     Cache hit: 1
 
 The examples callback tests if a statement string matches a pattern. If
-this is the case, it either returns **`TRUE`** to cache the statement
+this is the case, it either returns **`true`** to cache the statement
 using the global default TTL or an alternative TTL.
 
 To minimize application changes the callback can put into and registered
@@ -46374,9 +46374,9 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
-A return value of **`FALSE`** indicates that flushing all cache contents
+A return value of **`false`** indicates that flushing all cache contents
 has failed or the operation is not supported by the active storage
 handler. Applications must not expect that calling the function will
 always flush the cache.
@@ -47182,10 +47182,10 @@ a backtrace and further detail information.
 | *origin*                  | Code backtrace.                                                                                                                                                                                                                                                                                                                                                               |
 | *run\_time*               | Query run time in milliseconds. The collection of all times and the necessary *gettimeofday* system calls can be disabled by setting the PHP configuration directive *mysqlnd\_qc.time\_statistics* to *0*                                                                                                                                                                    |
 | *store\_time*             | Query result set store time in milliseconds. The collection of all times and the necessary *gettimeofday* system calls can be disabled by setting the PHP configuration directive *mysqlnd\_qc.time\_statistics* to *0*                                                                                                                                                       |
-| *eligible\_for\_caching*  | **`TRUE`** if query is cacheable otherwise **`FALSE`**.                                                                                                                                                                                                                                                                                                                       |
-| *no\_table*               | **`TRUE`** if the query has generated a result set and at least one column from the result set has no table name set in its metadata. This is usually the case with queries which one probably do not want to cache such as *SELECT SLEEP(1)*. By default any such query will not be added to the cache. See also PHP configuration directive *mysqlnd\_qc.cache\_no\_table*. |
-| *was\_added*              | **`TRUE`** if the query result has been put into the cache, otherwise **`FALSE`**.                                                                                                                                                                                                                                                                                            |
-| *was\_already\_in\_cache* | **`TRUE`** if the query result would have been added to the cache if it was not already in the cache (cache hit). Otherwise **`FALSE`**.                                                                                                                                                                                                                                      |
+| *eligible\_for\_caching*  | **`true`** if query is cacheable otherwise **`false`**.                                                                                                                                                                                                                                                                                                                       |
+| *no\_table*               | **`true`** if the query has generated a result set and at least one column from the result set has no table name set in its metadata. This is usually the case with queries which one probably do not want to cache such as *SELECT SLEEP(1)*. By default any such query will not be added to the cache. See also PHP configuration directive *mysqlnd\_qc.cache\_no\_table*. |
+| *was\_added*              | **`true`** if the query result has been put into the cache, otherwise **`false`**.                                                                                                                                                                                                                                                                                            |
+| *was\_already\_in\_cache* | **`true`** if the query result would have been added to the cache if it was not already in the cache (cache hit). Otherwise **`false`**.                                                                                                                                                                                                                                      |
 
 ### Examples
 
@@ -47475,7 +47475,7 @@ The callback is free to ignore the configuration setting
 
 The callback is invoked for every statement inspected by the plugin. It
 is given the statements string as a parameter. The callback returns
-**`FALSE`** if the statement shall not be cached. It returns **`TRUE`**
+**`false`** if the statement shall not be cached. It returns **`true`**
 to make the plugin attempt to cache the statements result set, if any. A
 so-created cache entry is given the default TTL set with the PHP
 configuration directive *mysqlnd\_qc.ttl*. If a different TTL shall be
@@ -47491,7 +47491,7 @@ This function has no parameters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -47581,7 +47581,7 @@ The names of the built-in storage handler are *default*, *APC*,
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 If changing the storage handler fails a catchable fatal error will be
 thrown. The query cache cannot operate if the previous storage handler
@@ -49244,7 +49244,7 @@ Length of the MySQL password.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -49387,7 +49387,7 @@ by a plugin.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -49475,7 +49475,7 @@ When possible, pipes will be used instead of the TCP/IP protocol.
 The MySQL user name.
 
 `password`  
-If not provided or **`NULL`**, the MySQL server will attempt to
+If not provided or **`null`**, the MySQL server will attempt to
 authenticate the user against those user records which have no password
 only. This allows one username to be used with different permissions
 (depending on if a password as provided or not).
@@ -49488,7 +49488,7 @@ queries.
 Specifies the port number to attempt to connect to the MySQL server.
 
 `socket`  
-Specifies the socket or named pipe that should be used. If **`NULL`**,
+Specifies the socket or named pipe that should be used. If **`null`**,
 mysqlnd will default to */tmp/mysql.sock*.
 
 `mysql_flags`  
@@ -49496,7 +49496,7 @@ Connection options.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -49587,7 +49587,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51167,7 +51167,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51226,7 +51226,7 @@ Thread Id of the connection to be killed.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51468,7 +51468,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51548,7 +51548,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51622,7 +51622,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51684,7 +51684,7 @@ The query string.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51751,12 +51751,12 @@ Read a result set header.
 Mysqlnd connection handle. Do not modify!
 
 `mysqlnd_stmt`  
-Mysqlnd statement handle. Do not modify! Set to **`NULL`**, if function
+Mysqlnd statement handle. Do not modify! Set to **`null`**, if function
 is not used in the context of a prepared statement.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51819,7 +51819,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -51948,7 +51948,7 @@ What to refresh.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52004,7 +52004,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52064,7 +52064,7 @@ The database name.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52122,7 +52122,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52185,7 +52185,7 @@ The query string.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52242,7 +52242,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52303,7 +52303,7 @@ Whether to turn on auto-commit or not.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52370,7 +52370,7 @@ The charset to be set as default.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52435,7 +52435,7 @@ Optional option value, if required.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52560,7 +52560,7 @@ The option to be set.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52682,7 +52682,7 @@ Whether to ignore *UPDATE*/*INSERT* status.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52831,7 +52831,7 @@ Whether to ignore *UPDATE*/*INSERT* status.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -52972,7 +52972,7 @@ A list of allowable ciphers to use for SSL encryption.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53183,7 +53183,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53240,7 +53240,7 @@ Mysqlnd connection handle. Do not modify!
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53418,7 +53418,7 @@ Mysqlnd prepared statement handle. Do not modify! Resource of type
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53490,7 +53490,7 @@ The query to be prepared.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53557,8 +53557,8 @@ available through user space API calls.
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_convert\_to\_mysqlnd(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -53645,8 +53645,8 @@ assuming that the listed extensions are compiled to use the
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_set\_connection\_proxy(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -53664,7 +53664,7 @@ particular connection only.
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### Examples
 
@@ -53743,8 +53743,8 @@ created them as long as the extension is compiled to use the
 The function can be disabled with
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>*. If
 *<a href="/set/mysqlinfo.html#" class="link">mysqlnd_uh.enable</a>* is
-set to **`FALSE`** the function will not install the proxy and always
-return **`TRUE`**. Additionally, an error of the type *E\_WARNING* may
+set to **`false`** the function will not install the proxy and always
+return **`true`**. Additionally, an error of the type *E\_WARNING* may
 be emitted. The error message may read like *PHP Warning:
 mysqlnd\_uh\_set\_statement\_proxy(): (Mysqlnd User Handler) The plugin
 has been disabled by setting the configuration parameter
@@ -53757,7 +53757,7 @@ The mysqlnd statement proxy object of type *MysqlndUhStatement*
 
 ### Return Values
 
-Returns **`TRUE`** on success. Otherwise, returns **`FALSE`**
+Returns **`true`** on success. Otherwise, returns **`false`**
 
 ### See Also
 
@@ -54516,7 +54516,7 @@ PHP, which are
 ### Return Values
 
 An array of mysqlnd\_memcache configuration information on success,
-otherwise **`FALSE`**.
+otherwise **`false`**.
 
 The returned array has these elements:
 
@@ -54687,7 +54687,7 @@ syntax used to identify potential Memcache-queries. The query should
 have three sub patterns. The first subpattern contains the requested
 field list, the second the name of the ID column from the query and the
 third the requested value. If this parameter is omitted or os set to
-**`NULL`**, then a default pattern will be used.
+**`null`**, then a default pattern will be used.
 
 `callback`  
 A callback which will be used whenever a query is being sent to MySQL.
@@ -54696,8 +54696,8 @@ parameter telling if a query was sent via Memcache.
 
 ### Return Values
 
-**`TRUE`** if the association or disassociation is successful, otherwise
-**`FALSE`** if there is an error.
+**`true`** if the association or disassociation is successful, otherwise
+**`false`** if there is an error.
 
 ### Examples
 

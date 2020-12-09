@@ -32,7 +32,7 @@ For more information, see
 > argument are not required and their use is discouraged. </span>
 
 > **Note**: <span class="simpara"> If no parameter is supplied, then the
-> parentheses must be omitted and **`NULL`** will be returned. Calling
+> parentheses must be omitted and **`null`** will be returned. Calling
 > *return* with parentheses but with no arguments will result in a parse
 > error. </span>
 

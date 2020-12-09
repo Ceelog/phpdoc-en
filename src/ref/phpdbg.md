@@ -237,8 +237,8 @@ available.
 ### Return Values
 
 If the execution context was set previously it is returned. If the
-execution context was not set previously **`TRUE`** is returned. If the
-request to set the context fails, **`FALSE`** is returned, and an
+execution context was not set previously **`true`** is returned. If the
+request to set the context fails, **`false`** is returned, and an
 **`E_WARNING`** raised.
 
 phpdbg\_get\_executable

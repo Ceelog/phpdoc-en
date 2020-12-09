@@ -18,8 +18,8 @@ file to be uploaded.
 > **Note**:
 >
 > Many FTP servers do not support this command. These servers may return
-> a failure code (**`FALSE`**) indicating the command is not supported
-> or a success code (**`TRUE`**) to indicate that pre-allocation is not
+> a failure code (**`false`**) indicating the command is not supported
+> or a success code (**`true`**) to indicate that pre-allocation is not
 > necessary and the client should continue as though the operation were
 > successful. Because of this, it may be best to reserve this function
 > for servers which explicitly require preallocation.
@@ -38,7 +38,7 @@ reference in `result` if a variable is provided.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -103,7 +103,7 @@ available.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ftp\_cdup
 =========
@@ -125,7 +125,7 @@ The link identifier of the FTP connection.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -187,7 +187,7 @@ The target directory.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If changing
+Returns **`true`** on success or **`false`** on failure. If changing
 directory fails, PHP will also throw a warning.
 
 ### Examples
@@ -255,7 +255,7 @@ The remote file.
 
 ### Return Values
 
-Returns the new file permissions on success or **`FALSE`** on error.
+Returns the new file permissions on success or **`false`** on error.
 
 ### Examples
 
@@ -314,7 +314,7 @@ The link identifier of the FTP connection.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -378,7 +378,7 @@ class="function">ftp\_get\_option</span>.
 
 ### Return Values
 
-Returns a FTP stream on success or **`FALSE`** on error.
+Returns a FTP stream on success or **`false`** on error.
 
 ### Examples
 
@@ -425,7 +425,7 @@ The file to delete.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -477,8 +477,8 @@ The command to execute.
 
 ### Return Values
 
-Returns **`TRUE`** if the command was successful (server sent response
-code: *200*); otherwise returns **`FALSE`**.
+Returns **`true`** if the command was successful (server sent response
+code: *200*); otherwise returns **`false`**.
 
 ### Examples
 
@@ -553,7 +553,7 @@ The position in the remote file to start downloading from.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -639,7 +639,7 @@ The position in the remote file to start uploading to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -711,11 +711,11 @@ Currently, the following options are supported:
 |                       |                                                                  |
 |-----------------------|------------------------------------------------------------------|
 | **`FTP_TIMEOUT_SEC`** | Returns the current timeout used for network related operations. |
-| **`FTP_AUTOSEEK`**    | Returns **`TRUE`** if this option is on, **`FALSE`** otherwise.  |
+| **`FTP_AUTOSEEK`**    | Returns **`true`** if this option is on, **`false`** otherwise.  |
 
 ### Return Values
 
-Returns the value on success or **`FALSE`** if the given `option` is not
+Returns the value on success or **`false`** if the given `option` is not
 supported. In the latter case, a warning message is also thrown.
 
 ### Examples
@@ -773,7 +773,7 @@ The position in the remote file to start downloading from.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -847,7 +847,7 @@ The password (*PASS*).
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. If login fails,
+Returns **`true`** on success or **`false`** on failure. If login fails,
 PHP will also throw a warning.
 
 ### Examples
@@ -969,7 +969,7 @@ The name of the directory that will be created.
 
 ### Return Values
 
-Returns the newly created directory name on success or **`FALSE`** on
+Returns the newly created directory name on success or **`false`** on
 error.
 
 ### Examples
@@ -1027,7 +1027,7 @@ The directory to be listed.
 ### Return Values
 
 Returns an array of arrays with file infos from the specified directory
-on success or **`FALSE`** on error.
+on success or **`false`** on error.
 
 ### Examples
 
@@ -1666,7 +1666,7 @@ spaces and other characters.
 ### Return Values
 
 Returns an array of filenames from the specified directory on success or
-**`FALSE`** on error.
+**`false`** on error.
 
 ### Examples
 
@@ -1730,11 +1730,11 @@ called after a successful login or otherwise it will fail.
 The link identifier of the FTP connection.
 
 `pasv`  
-If **`TRUE`**, the passive mode is turned on, else it's turned off.
+If **`true`**, the passive mode is turned on, else it's turned off.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -1806,7 +1806,7 @@ The position in the remote file to start uploading to.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
@@ -1866,7 +1866,7 @@ The link identifier of the FTP connection.
 
 ### Return Values
 
-Returns the current directory name or **`FALSE`** on error.
+Returns the current directory name or **`false`** on error.
 
 ### Examples
 
@@ -1966,7 +1966,7 @@ class="methodname">ftp\_rawlist</span> ( <span class="methodparam"><span
 class="type">resource</span> `$ftp_stream`</span> , <span
 class="methodparam"><span class="type">string</span> `$directory`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$recursive`<span class="initializer"> = **`FALSE`**</span></span> \] )
+`$recursive`<span class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">ftp\_rawlist</span> executes the FTP **LIST**
 command, and returns the result as an array.
@@ -1980,12 +1980,12 @@ The link identifier of the FTP connection.
 The directory path. May include arguments for the **LIST** command.
 
 `recursive`  
-If set to **`TRUE`**, the issued command will be **LIST -R**.
+If set to **`true`**, the issued command will be **LIST -R**.
 
 ### Return Values
 
 Returns an array where each element corresponds to one line of text.
-Returns **`FALSE`** when passed `directory` is invalid.
+Returns **`false`** when passed `directory` is invalid.
 
 The output is not parsed in any way. The system type identifier returned
 by <span class="function">ftp\_systype</span> can be used to determine
@@ -2061,7 +2061,7 @@ The new name.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure. Upon failure
+Returns **`true`** on success or **`false`** on failure. Upon failure
 (such as attempting to rename a non-existent file), an *E\_WARNING*
 error will be emitted.
 
@@ -2118,7 +2118,7 @@ path to an empty directory.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2187,7 +2187,7 @@ This parameter depends on which `option` is chosen to be altered.
 
 ### Return Values
 
-Returns **`TRUE`** if the option could be set; **`FALSE`** if not. A
+Returns **`true`** if the option could be set; **`false`** if not. A
 warning message will be thrown if the `option` is not supported or the
 passed `value` doesn't match the expected value for the given `option`.
 
@@ -2236,7 +2236,7 @@ some issues with filenames containing spaces and other characters.
 
 ### Return Values
 
-Returns **`TRUE`** on success or **`FALSE`** on failure.
+Returns **`true`** on success or **`false`** on failure.
 
 ### Examples
 
@@ -2387,7 +2387,7 @@ class="function">ftp\_get\_option</span>.
 
 ### Return Values
 
-Returns a SSL-FTP stream on success or **`FALSE`** on error.
+Returns a SSL-FTP stream on success or **`false`** on error.
 
 ### Examples
 
@@ -2438,7 +2438,7 @@ The link identifier of the FTP connection.
 
 ### Return Values
 
-Returns the remote system type, or **`FALSE`** on error.
+Returns the remote system type, or **`false`** on error.
 
 ### Examples
 

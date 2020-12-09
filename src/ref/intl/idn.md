@@ -46,7 +46,7 @@ representing a bitset of the error constants IDNA\_ERROR\_\*.
 
 ### Return Values
 
-The domain name encoded in ASCII-compatible form, or **`FALSE`** on
+The domain name encoded in ASCII-compatible form, or **`false`** on
 failure
 
 ### Changelog
@@ -124,7 +124,7 @@ representing a bitset of the error constants IDNA\_ERROR\_\*.
 
 ### Return Values
 
-The domain name in Unicode, encoded in UTF-8, or **`FALSE`** on failure
+The domain name in Unicode, encoded in UTF-8, or **`false`** on failure
 
 ### Changelog
 
