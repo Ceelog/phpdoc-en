@@ -252,7 +252,7 @@ Returns a string containing the error message.
 bzflush
 =======
 
-Force a write of all buffered data
+Do nothing
 
 ### Description
 
@@ -260,7 +260,9 @@ Force a write of all buffered data
 <span class="methodparam"><span class="type">resource</span>
 `$bz`</span> )
 
-Forces a write of all buffered bzip2 data for the file pointer `bz`.
+This function is supposed to force a write of all buffered bzip2 data
+for the file pointer `bz`, but is implemented as null function in
+libbz2, and as such does nothing.
 
 ### Parameters
 
@@ -460,8 +462,7 @@ bzclose($bz);
 -   [bzerror](/ref/bzip2.html#bzerror) — Returns the bzip2 error number
     and error string in an array
 -   [bzerrstr](/ref/bzip2.html#bzerrstr) — Returns a bzip2 error string
--   [bzflush](/ref/bzip2.html#bzflush) — Force a write of all buffered
-    data
+-   [bzflush](/ref/bzip2.html#bzflush) — Do nothing
 -   [bzopen](/ref/bzip2.html#bzopen) — Opens a bzip2 compressed file
 -   [bzread](/ref/bzip2.html#bzread) — Binary safe bzip2 file read
 -   [bzwrite](/ref/bzip2.html#bzwrite) — Binary safe bzip2 file write

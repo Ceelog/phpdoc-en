@@ -24,8 +24,7 @@ Bzip2
         number and error string in an array
     -   [bzerrstr](/ref/bzip2.html#bzerrstr) — Returns a bzip2 error
         string
-    -   [bzflush](/ref/bzip2.html#bzflush) — Force a write of all
-        buffered data
+    -   [bzflush](/ref/bzip2.html#bzflush) — Do nothing
     -   [bzopen](/ref/bzip2.html#bzopen) — Opens a bzip2 compressed file
     -   [bzread](/ref/bzip2.html#bzread) — Binary safe bzip2 file read
     -   [bzwrite](/ref/bzip2.html#bzwrite) — Binary safe bzip2 file

@@ -2577,14 +2577,16 @@ Returns values from a result resource
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">pg\_fetch\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">int</span> `$row`</span>
 , <span class="methodparam"><span class="type">mixed</span>
 `$field`</span> )
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">pg\_fetch\_result</span> ( <span
 class="methodparam"><span class="type">resource</span> `$result`</span>
 , <span class="methodparam"><span class="type">mixed</span>

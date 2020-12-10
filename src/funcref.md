@@ -89,6 +89,7 @@ Function Reference
         Mathematics
     -   [GMP](/book/gmp.html) — GNU Multiple Precision
     -   [Math](/book/math.html) — Mathematical Functions
+    -   [Statistics](/book/stats.html)
     -   [Trader](/book/trader.html) — Technical Analysis for Traders
 -   [Non-Text MIME Output](/refs/utilspec/nontext.html)
     -   [FDF](/book/fdf.html) — Forms Data Format

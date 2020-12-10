@@ -20,6 +20,11 @@ Mathematical Extensions
     -   [Installing/Configuring](/math/setup.html)
     -   [Predefined Constants](/math/constants.html)
     -   [Math Functions](/ref/math.html)
+-   [Statistics](/book/stats.html)
+    -   [Introduction](/intro/stats.html)
+    -   [Installing/Configuring](/stats/setup.html)
+    -   [Predefined Constants](/stats/constants.html)
+    -   [Statistic Functions](/ref/stats.html)
 -   [Trader](/book/trader.html) — Technical Analysis for Traders
     -   [Introduction](/intro/trader.html)
     -   [Installing/Configuring](/trader/setup.html)
