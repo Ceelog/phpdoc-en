@@ -2835,6 +2835,14 @@ specifier:
 <td>Like the <em>g</em> specifier but uses <em>E</em> and <em>f</em>.</td>
 </tr>
 <tr class="odd">
+<td><em>h</em></td>
+<td>Like the <em>g</em> specifier but uses <em>F</em>. Available as of PHP 8.0.0.</td>
+</tr>
+<tr class="even">
+<td><em>H</em></td>
+<td>Like the <em>g</em> specifier but uses <em>E</em> and <em>F</em>. Available as of PHP 8.0.0.</td>
+</tr>
+<tr class="odd">
 <td><em>o</em></td>
 <td>The argument is treated as an integer and presented as an octal number.</td>
 </tr>

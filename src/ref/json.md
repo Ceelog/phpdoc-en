@@ -39,7 +39,7 @@ or <span class="type">object</span>s depending on whether
 **`JSON_OBJECT_AS_ARRAY`** is set in the `flags`.
 
 `depth`  
-User specified recursion depth.
+Maximum nesting depth of the structure being decoded.
 
 `flags`  
 Bitmask of **`JSON_BIGINT_AS_STRING`**, **`JSON_INVALID_UTF8_IGNORE`**,
@@ -53,7 +53,7 @@ page.
 Returns the value encoded in `json` in appropriate PHP type. Values
 *true*, *false* and *null* are returned as **`true`**, **`false`** and
 **`null`** respectively. **`null`** is returned if the `json` cannot be
-decoded or if the encoded data is deeper than the recursion limit.
+decoded or if the encoded data is deeper than the nesting limit.
 
 ### Changelog
 
@@ -142,7 +142,7 @@ json_decode($bad_json); // null
 
 ``` php
 <?php
-// Encode the data.
+// Encode some data with a maximum depth  of 4 (array -> array -> array -> string)
 $json = json_encode(
     array(
         1 => array(
@@ -158,20 +158,12 @@ $json = json_encode(
     )
 );
 
-// Define the errors.
-$constants = get_defined_constants(true);
-$json_errors = array();
-foreach ($constants["json"] as $name => $value) {
-    if (!strncmp($name, "JSON_ERROR_", 11)) {
-        $json_errors[$value] = $name;
-    }
-}
-
 // Show the errors for different depths.
-foreach (range(4, 3, -1) as $depth) {
-    var_dump(json_decode($json, true, $depth));
-    echo 'Last error: ', $json_errors[json_last_error()], PHP_EOL, PHP_EOL;
-}
+var_dump(json_decode($json, true, 4));
+echo 'Last error: ', json_last_error_msg(), PHP_EOL, PHP_EOL;
+
+var_dump(json_decode($json, true, 3));
+echo 'Last error: ', json_last_error_msg(), PHP_EOL, PHP_EOL;
 ?>
 ```
 
@@ -196,10 +188,10 @@ The above example will output:
         }
       }
     }
-    Last error: JSON_ERROR_NONE
+    Last error: No error
 
     NULL
-    Last error: JSON_ERROR_DEPTH
+    Last error: Maximum stack depth exceeded
 
 **Example \#5 <span class="function">json\_decode</span> of large
 integers**
