@@ -928,6 +928,58 @@ The argument to process
 -   <span class="function">log1p</span>
 -   <span class="function">exp</span>
 
+fdiv
+====
+
+Divides two numbers, according to IEEE 754
+
+### Description
+
+<span class="type">float</span> <span class="methodname">fdiv</span> (
+<span class="methodparam"><span class="type">float</span>
+`$dividend`</span> , <span class="methodparam"><span
+class="type">float</span> `$divisor`</span> )
+
+Returns the floating point result of dividing the `dividend` by the
+`divisor`. If the `divisor` is zero, then one of *INF*, *-INF*, or *NAN*
+will be returned.
+
+Note that in comparisons, *NAN* will never `==` or `===`, any value,
+including itself.
+
+### Parameters
+
+`dividend`  
+The dividend (numerator)
+
+`divisor`  
+The divisor
+
+### Return Values
+
+The floating point result of `dividend`/`divisor`
+
+### Examples
+
+**Example \#1 Using <span class="function">fdiv</span>**
+
+``` php
+<?php
+var_dump(fdiv(5.7, 1.3)); // float(4.384615384615385)
+var_dump(fdiv(4, 2)); // float(2)
+var_dump(fdiv(1.0, 0.0)); // float(INF)
+var_dump(fdiv(-1.0, 0.0)); // float(-INF)
+var_dump(fdiv(0.0, 0.0)); // float(NAN)
+?>
+```
+
+### See Also
+
+-   <a href="/language/operators/arithmetic.html" class="link"><em>/</em></a> -
+    Floating-point division
+-   <span class="function">intdiv</span> - Integer division
+-   <span class="function">fmod</span> - Modulus
+
 floor
 =====
 
@@ -2625,6 +2677,8 @@ The hyperbolic tangent of `arg`
 -   [expm1](/ref/math.html#expm1) — Returns exp(number) - 1, computed in
     a way that is accurate even when the value of number is close to
     zero
+-   [fdiv](/ref/math.html#fdiv) — Divides two numbers, according to IEEE
+    754
 -   [floor](/ref/math.html#floor) — Round fractions down
 -   [fmod](/ref/math.html#fmod) — Returns the floating point remainder
     (modulo) of the division of the arguments

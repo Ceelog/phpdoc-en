@@ -35,6 +35,8 @@ Mathematical Functions
     -   [expm1](/ref/math.html#expm1) — Returns exp(number) - 1,
         computed in a way that is accurate even when the value of number
         is close to zero
+    -   [fdiv](/ref/math.html#fdiv) — Divides two numbers, according to
+        IEEE 754
     -   [floor](/ref/math.html#floor) — Round fractions down
     -   [fmod](/ref/math.html#fmod) — Returns the floating point
         remainder (modulo) of the division of the arguments

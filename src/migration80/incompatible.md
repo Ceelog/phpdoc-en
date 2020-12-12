@@ -712,7 +712,7 @@ errors are no longer supported.
 
 -   <span class="function">mb\_ereg</span> and <span
     class="function">mb\_eregi</span> will now return boolean **`true`**
-    on a successfuly match. Previously they returned integer *1* if
+    on a successful match. Previously they returned integer *1* if
     `matches` was not passed, or `max(1, strlen($matches[0]))` if
     `matches` was passed.
 
