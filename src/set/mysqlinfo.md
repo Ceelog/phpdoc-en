@@ -10883,17 +10883,6 @@ class="methodparam"><span class="type">mysqli</span> `$link`</span> \[,
 This method constructs a new <span class="classname">mysqli\_stmt</span>
 object.
 
-> **Note**:
->
-> In general, you should use either <span
-> class="function">mysqli\_prepare</span> or <span
-> class="function">mysqli\_stmt\_init</span> to create a <span
-> class="classname">mysqli\_stmt</span> object, rather than directly
-> instantiating the object with *new mysqli\_stmt*. This method (and the
-> ability to directly instantiate <span
-> class="classname">mysqli\_stmt</span> objects) may be deprecated and
-> removed in the future.
-
 ### Parameters
 
 ` link`  
@@ -14808,12 +14797,6 @@ class="methodparam"><span class="type">mysqli\_result</span>
 
 Frees the memory associated with the result.
 
-> **Note**:
->
-> You should always free your result with <span
-> class="function">mysqli\_free\_result</span>, when your result object
-> is not needed anymore.
-
 ### Parameters
 
 ` result`  
@@ -14829,7 +14812,7 @@ No value is returned.
 ### See Also
 
 -   <span class="function">mysqli\_query</span>
--   <span class="function">mysqli\_stmt\_store\_result</span>
+-   <span class="function">mysqli\_stmt\_get\_result</span>
 -   <span class="function">mysqli\_store\_result</span>
 -   <span class="function">mysqli\_use\_result</span>
 

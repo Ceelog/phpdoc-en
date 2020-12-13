@@ -20,19 +20,22 @@ Check if strings are valid for the specified encoding
 
 <span class="type">bool</span> <span
 class="methodname">mb\_check\_encoding</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$var`<span
-class="initializer"> = **`null`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$value`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`null`**</span></span> \]\] )
 
 Checks if the specified byte stream is valid for the specified encoding.
-If `var` is of type <span class="type">array</span>, all keys and values
-are validated recursively. It is useful to prevent so-called "Invalid
-Encoding Attack".
+If `value` is of type <span class="type">array</span>, all keys and
+values are validated recursively. It is useful to prevent so-called
+"Invalid Encoding Attack".
 
 ### Parameters
 
-`var`  
+`value`  
 The byte stream or <span class="type">array</span> to check. If it is
 omitted, this function checks all the input from the beginning of the
 request.
@@ -46,9 +49,10 @@ Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | This function now also accepts an <span class="type">array</span> as `var`. Formerly, only <span class="type">string</span>s have been supported. |
+| Version | Description                                                                                                                                         |
+|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `value` and `encoding` are nullable now.                                                                                                            |
+| 7.2.0   | This function now also accepts an <span class="type">array</span> as `value`. Formerly, only <span class="type">string</span>s have been supported. |
 
 mb\_chr
 =======
@@ -59,9 +63,11 @@ Get a specific character
 
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span class="methodname">mb\_chr</span>
-( <span class="methodparam"><span class="type">int</span> `$cp`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`</span> \] )
+( <span class="methodparam"><span class="type">int</span>
+`$codepoint`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 **Warning**
 
@@ -70,13 +76,19 @@ available.
 
 ### Parameters
 
-`cp`  
+`codepoint`  
 
 `encoding`  
 
 ### Return Values
 
 Returns a specific character or **`false`** on failure.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -92,18 +104,18 @@ Perform case folding on a string
 
 <span class="type">string</span> <span
 class="methodname">mb\_convert\_case</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
+class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$mode`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Performs case folding on a <span class="type">string</span>, converted
 in the way specified by `mode`.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being converted.
 
 `mode`  
@@ -113,8 +125,8 @@ The mode of the conversion. It can be one of **`MB_CASE_UPPER`**,
 **`MB_CASE_TITLE_SIMPLE`**, **`MB_CASE_FOLD_SIMPLE`**.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
@@ -182,27 +194,31 @@ Convert character encoding
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">mb\_convert\_encoding</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$val`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$to_encoding`</span> \[, <span class="methodparam"><span
-class="type">mixed</span> `$from_encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$string`</span> , <span class="methodparam"><span
+class="type">string</span> `$to_encoding`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$from_encoding`<span
+class="initializer"> = **`null`**</span></span> \] )
 
-Converts the character encoding of `val` to `to_encoding` from
-optionally `from_encoding`. If `val` is an <span
+Converts the character encoding of `string` to `to_encoding` from
+optionally `from_encoding`. If `string` is an <span
 class="type">array</span>, all its <span class="type">string</span>
 values will be converted recursively.
 
 ### Parameters
 
-`val`  
+`string`  
 The <span class="type">string</span> or <span class="type">array</span>
 being encoded.
 
 `to_encoding`  
-The type of encoding that `val` is being converted to.
+The type of encoding that `string` is being converted to.
 
 `from_encoding`  
 Is specified by character code names before conversion. It is either an
@@ -215,7 +231,14 @@ See
 ### Return Values
 
 The encoded <span class="type">string</span> or <span
-class="type">array</span>.
+class="type">array</span> on success, or **`false`** on failure.
+
+### Changelog
+
+| Version | Description                                                                                                                                          |
+|---------|------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `from_encoding` is nullable now.                                                                                                                     |
+| 7.2.0   | This function now also accepts an <span class="type">array</span> as `string`. Formerly, only <span class="type">string</span>s have been supported. |
 
 ### Examples
 
@@ -242,12 +265,6 @@ $str = mb_convert_encoding($str, "EUC-JP", "auto");
 
 -   <span class="function">mb\_detect\_order</span>
 
-### Changelog
-
-| Version | Description                                                                                                                                       |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.2.0   | This function now also accepts an <span class="type">array</span> as `val`. Formerly, only <span class="type">string</span>s have been supported. |
-
 mb\_convert\_kana
 =================
 
@@ -257,22 +274,23 @@ Convert "kana" one from another ("zen-kaku", "han-kaku" and more)
 
 <span class="type">string</span> <span
 class="methodname">mb\_convert\_kana</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "KV"</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$mode`<span class="initializer"> = "KV"</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a "han-kaku" - "zen-kaku" conversion for <span
-class="type">string</span> `str`. This function is only useful for
+class="type">string</span> `string`. This function is only useful for
 Japanese.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being converted.
 
-`option`  
+`mode`  
 The conversion option.
 
 Specify with a combination of following options.
@@ -296,12 +314,18 @@ Specify with a combination of following options.
 | *V*    | Collapse voiced sound notation and convert them into a character. Use with "K","H"                                                                            |
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
 The converted <span class="type">string</span>.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -325,11 +349,13 @@ Convert character code in variable(s)
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_convert\_variables</span> ( <span
 class="methodparam"><span class="type">string</span>
 `$to_encoding`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$from_encoding`</span> , <span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$from_encoding`</span> , <span
 class="methodparam"><span class="type">mixed</span> `&$var`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
 `&$vars`</span> )
@@ -390,14 +416,14 @@ Decode string in MIME header field
 
 <span class="type">string</span> <span
 class="methodname">mb\_decode\_mimeheader</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
-Decodes encoded-word <span class="type">string</span> `str` in MIME
+Decodes encoded-word <span class="type">string</span> `string` in MIME
 header.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being decoded.
 
 ### Return Values
@@ -418,29 +444,27 @@ Decode HTML numeric string reference to character
 
 <span class="type">string</span> <span
 class="methodname">mb\_decode\_numericentity</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
-<span class="methodparam"><span class="type">array</span>
-`$convmap`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$is_hex`<span
-class="initializer"> = **`false`**</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">array</span> `$map`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Convert numeric string reference of <span class="type">string</span>
-`str` in a specified block to character.
+`string` in a specified block to character.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being decoded.
 
-`convmap`  
-`convmap` is an <span class="type">array</span> that specifies the code
-area to convert.
+`map`  
+`map` is an <span class="type">array</span> that specifies the code area
+to convert.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 `is_hex`  
 This parameter is not used.
@@ -449,9 +473,15 @@ This parameter is not used.
 
 The converted <span class="type">string</span>.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### Examples
 
-**Example \#1 `convmap` example**
+**Example \#1 `map` example**
 
 ``` php
 <?php
@@ -466,7 +496,7 @@ $convmap = array (
 ?>
 ```
 
-**Example \#2 `convmap` example escapes JavaScript string**
+**Example \#2 `map` example escapes JavaScript string**
 
 ``` php
 <?php
@@ -541,27 +571,29 @@ Detect character encoding
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_detect\_encoding</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">mixed</span>
-`$encoding_list`<span class="initializer"> =
-mb\_detect\_order()</span></span> \[, <span class="methodparam"><span
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$encodings`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$strict`<span class="initializer"> =
 **`false`**</span></span> \]\] )
 
-Detects character encoding in <span class="type">string</span> `str`.
+Detects character encoding in <span class="type">string</span> `string`.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being detected.
 
-`encoding_list`  
-`encoding_list` is list of character encoding. Encoding order may be
+`encodings`  
+`encodings` is list of character encoding. Encoding order may be
 specified by array or comma separated list string.
 
-If `encoding_list` is omitted, detect\_order is used.
+If `encodings` is omitted or **`null`**, detect\_order is used.
 
 `strict`  
 `strict` specifies whether to use the strict encoding detection or not.
@@ -585,10 +617,10 @@ echo mb_detect_encoding($str);
 /* "auto" is expanded according to mbstring.language */
 echo mb_detect_encoding($str, "auto");
 
-/* Specify encoding_list character encoding by comma separated list */
+/* Specify "encodings" parameter by list separated by comma */
 echo mb_detect_encoding($str, "JIS, eucjp-win, sjis-win");
 
-/* Use array to specify encoding_list  */
+/* Use array to specify "encodings" parameter  */
 $ary[] = "ASCII";
 $ary[] = "JIS";
 $ary[] = "EUC-JP";
@@ -607,24 +639,25 @@ Set/Get character encoding detection order
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">mb\_detect\_order</span> (\[ <span
-class="methodparam"><span class="type">mixed</span>
-`$encoding_list`<span class="initializer"> =
-mb\_detect\_order()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span><span
+class="type">null</span></span> `$encoding`<span class="initializer"> =
+**`null`**</span></span> \] )
 
-Sets the automatic character encoding detection order to
-`encoding_list`.
+Sets the automatic character encoding detection order to `encoding`.
 
 ### Parameters
 
-`encoding_list`  
-`encoding_list` is an <span class="type">array</span> or comma separated
-list of character encoding. See
+`encoding`  
+`encoding` is an <span class="type">array</span> or comma separated list
+of character encoding. See
 <a href="/mbstring/supported-encodings.html" class="link">supported encodings</a>.
 
-If `encoding_list` is omitted, it returns the current character encoding
-detection order as array.
+If `encoding` is omitted or **`null`**, it returns the current character
+encoding detection order as array.
 
 This setting affects <span class="function">mb\_detect\_encoding</span>
 and <span class="function">mb\_send\_mail</span>.
@@ -648,6 +681,12 @@ success or **`false`** on failure.
 
 When getting the encoding detection order, an ordered array of the
 encodings is returned.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -694,27 +733,30 @@ Encode string for MIME header
 
 <span class="type">string</span> <span
 class="methodname">mb\_encode\_mimeheader</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$charset`<span class="initializer"> = mb\_language()</span></span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$transfer_encoding`<span class="initializer"> = "B"</span></span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$linefeed`<span class="initializer"> = "\\r\\n"</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$indent`<span
-class="initializer"> = 0</span></span> \]\]\]\] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$charset`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$transfer_encoding`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$newline`<span class="initializer"> =
+"\\r\\n"</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$indent`<span class="initializer"> =
+0</span></span> \]\]\]\] )
 
-Encodes a given <span class="type">string</span> `str` by the MIME
+Encodes a given <span class="type">string</span> `string` by the MIME
 header encoding scheme.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being encoded. Its encoding should
 be same as <span class="function">mb\_internal\_encoding</span>.
 
 `charset`  
-`charset` specifies the name of the character set in which `str` is
+`charset` specifies the name of the character set in which `string` is
 represented in. The default value is determined by the current NLS
 setting (*mbstring.language*).
 
@@ -723,8 +765,8 @@ setting (*mbstring.language*).
 either *"B"* (Base64) or *"Q"* (Quoted-Printable). Falls back to *"B"*
 if not given.
 
-`linefeed`  
-`linefeed` specifies the EOL (end-of-line) marker with which <span
+`newline`  
+`newline` specifies the EOL (end-of-line) marker with which <span
 class="function">mb\_encode\_mimeheader</span> performs line-folding (a
 <a href="http://www.faqs.org/rfcs/rfc2822" class="link external">» RFC</a>
 term, the act of breaking a line longer than a certain length into
@@ -733,12 +775,18 @@ Falls back to *"\\r\\n"* (CRLF) if not given.
 
 `indent`  
 Indentation of the first line (number of characters in the header before
-`str`).
+`string`).
 
 ### Return Values
 
 A converted version of the <span class="type">string</span> represented
 in ASCII.
+
+### Changelog
+
+| Version | Description                                         |
+|---------|-----------------------------------------------------|
+| 8.0.0   | `charset` and `transfer_encoding` are nullable now. |
 
 ### Examples
 
@@ -776,30 +824,30 @@ Encode character to HTML numeric string reference
 
 <span class="type">string</span> <span
 class="methodname">mb\_encode\_numericentity</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
-<span class="methodparam"><span class="type">array</span>
-`$convmap`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \[, <span
-class="methodparam"><span class="type">bool</span> `$is_hex`<span
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">array</span> `$map`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type">bool</span> `$hex`<span
 class="initializer"> = **`false`**</span></span> \]\] )
 
 Converts specified character codes in <span class="type">string</span>
-`str` from character code to HTML numeric character reference.
+`string` from character code to HTML numeric character reference.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being encoded.
 
-`convmap`  
-`convmap` is array specifies code area to convert.
+`map`  
+`map` is array specifies code area to convert.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
-`is_hex`  
+`hex`  
 Whether the returned entity reference should be in hexadecimal notation
 (otherwise it is in decimal notation).
 
@@ -807,9 +855,15 @@ Whether the returned entity reference should be in hexadecimal notation
 
 The converted <span class="type">string</span>.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### Examples
 
-**Example \#1 `convmap` example**
+**Example \#1 `map` example**
 
 ``` php
 <?php
@@ -823,8 +877,6 @@ $convmap = array (
 // it converts value to numeric string reference.
 ?>
 ```
-
-### Examples
 
 **Example \#2 <span class="function">mb\_encode\_numericentity</span>
 example**
@@ -863,8 +915,7 @@ Get aliases of a known encoding type
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mb\_encoding\_aliases</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
@@ -939,9 +990,9 @@ Regular expression match for multibyte string
 class="methodname">mb\_ereg\_match</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$string`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$option`<span class="initializer"> =
-"msr"</span></span> \] )
+`$string`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 A regular expression match for a multibyte string
 
@@ -953,7 +1004,7 @@ The regular expression pattern.
 `string`  
 The <span class="type">string</span> being evaluated.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -961,6 +1012,12 @@ class="function">mb\_regex\_set\_options</span> for explanation.
 
 Returns **`true`** if `string` matches the regular expression `pattern`,
 **`false`** if not.
+
+### Changelog
+
+| Version | Description                |
+|---------|----------------------------|
+| 8.0.0   | `options` is nullable now. |
 
 ### Notes
 
@@ -983,14 +1040,16 @@ using a callback
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_ereg\_replace\_callback</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">callable</span>
 `$callback`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msr"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with the output of `callback` function.
@@ -1024,14 +1083,15 @@ anywhere else.
 `string`  
 The <span class="type">string</span> being checked.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### Return Values
 
 The resultant <span class="type">string</span> on success, or
-**`false`** on error.
+**`false`** on error. If `string` is not valid for the current encoding,
+**`null`** is returned.
 
 ### Notes
 
@@ -1040,6 +1100,13 @@ The resultant <span class="type">string</span> on success, or
 > The internal encoding or the character encoding specified by <span
 > class="function">mb\_regex\_encoding</span> will be used as the
 > character encoding for this function.
+
+### Changelog
+
+| Version | Description                                                             |
+|---------|-------------------------------------------------------------------------|
+| 8.0.0   | `options` is nullable now.                                              |
+| 7.1.0   | The function checks whether `string` is valid for the current encoding. |
 
 ### Examples
 
@@ -1105,14 +1172,16 @@ Replace regular expression with multibyte support
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_ereg\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$replacement`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msr"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with `replacement`
@@ -1130,20 +1199,23 @@ The replacement text.
 `string`  
 The <span class="type">string</span> being checked.
 
-`option`  
+`options`  
 <span class="simpara"> The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### Return Values
 
 The resultant <span class="type">string</span> on success, or
-**`false`** on error.
+**`false`** on error. If `string` is not valid for the current encoding,
+**`null`** is returned.
 
 ### Changelog
 
-| Version | Description                           |
-|---------|---------------------------------------|
-| 7.1.0   | The *e* modifier has been deprecated. |
+| Version | Description                                                             |
+|---------|-------------------------------------------------------------------------|
+| 8.0.0   | `options` is nullable now.                                              |
+| 7.1.0   | The function checks whether `string` is valid for the current encoding. |
+| 7.1.0   | The *e* modifier has been deprecated.                                   |
 
 ### Notes
 
@@ -1212,7 +1284,8 @@ Retrieve the result from the last multibyte regular expression match
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_getregs</span> ( <span
 class="methodparam">void</span> )
 
@@ -1231,7 +1304,7 @@ class="function">mb\_ereg\_search\_regs</span>. If there are some
 matches, the first element will have the matched sub-string, the second
 element will have the first part grouped with brackets, the third
 element will have the second part grouped with brackets, and so on. It
-returns **`false`** on error;
+returns **`false`** on error.
 
 ### Notes
 
@@ -1257,10 +1330,12 @@ match
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search\_init</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$pattern`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$option`<span class="initializer"> =
-"msr"</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_ereg\_search\_init</span> sets `string` and
 `pattern` for a multibyte regular expression. These values are used for
@@ -1276,13 +1351,19 @@ The search string.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
 ### Return Values
 
 Returns **`true`** on success or **`false`** on failure.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `pattern` and `options` are nullable now. |
 
 ### Notes
 
@@ -1305,11 +1386,15 @@ expression for a predefined multibyte string
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_pos</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns position and length of a matched part of the multibyte regular
 expression for a predefined multibyte string
@@ -1323,7 +1408,7 @@ the previous one will be used.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1335,6 +1420,12 @@ start of the search string, and the second element is the length in
 bytes of the match.
 
 If an error occurs, **`false`** is returned.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `pattern` and `options` are nullable now. |
 
 ### Notes
 
@@ -1356,11 +1447,15 @@ Returns the matched part of a multibyte regular expression
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_ereg\_search\_regs</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns the matched part of a multibyte regular expression.
 
@@ -1369,7 +1464,7 @@ Returns the matched part of a multibyte regular expression.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1381,6 +1476,12 @@ it returns an <span class="type">array</span> including substring of
 matched part as first element, the first grouped part with brackets as
 second element, the second grouped part as third element, and so on. It
 returns **`false`** on error.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `pattern` and `options` are nullable now. |
 
 ### Notes
 
@@ -1404,14 +1505,14 @@ Set start point of next regular expression match
 
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search\_setpos</span> ( <span
-class="methodparam"><span class="type">int</span> `$position`</span> )
+class="methodparam"><span class="type">int</span> `$offset`</span> )
 
 <span class="function">mb\_ereg\_search\_setpos</span> sets the starting
 point of a match for <span class="function">mb\_ereg\_search</span>.
 
 ### Parameters
 
-`position`  
+`offset`  
 The position to set. If it is negative, it counts from the end of the
 string.
 
@@ -1421,9 +1522,9 @@ Returns **`true`** on success or **`false`** on failure.
 
 ### Changelog
 
-| Version | Description                                      |
-|---------|--------------------------------------------------|
-| 7.1.0   | Support for negative `position`s has been added. |
+| Version | Description                                    |
+|---------|------------------------------------------------|
+| 7.1.0   | Support for negative `offset`s has been added. |
 
 ### Notes
 
@@ -1447,9 +1548,12 @@ Multibyte regular expression match for predefined multibyte string
 
 <span class="type">bool</span> <span
 class="methodname">mb\_ereg\_search</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$pattern`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$option`<span class="initializer"> = "ms"</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pattern`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a multibyte regular expression match for a predefined multibyte
 string.
@@ -1459,7 +1563,7 @@ string.
 `pattern`  
 The search pattern.
 
-`option`  
+`options`  
 The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation.
 
@@ -1470,6 +1574,12 @@ multibyte string matches with the regular expression, or **`false`**
 otherwise. The <span class="type">string</span> for matching is set by
 <span class="function">mb\_ereg\_search\_init</span>. If `pattern` is
 not specified, the previous one is used.
+
+### Changelog
+
+| Version | Description                               |
+|---------|-------------------------------------------|
+| 8.0.0   | `pattern` and `options` are nullable now. |
 
 ### Notes
 
@@ -1491,11 +1601,12 @@ Regular expression match with multibyte support
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_ereg</span> (
-<span class="methodparam"><span class="type">string</span>
+<span class="type">bool</span> <span class="methodname">mb\_ereg</span>
+( <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+class="methodparam"><span class="type">array</span> `&$matches`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Executes the regular expression match with multibyte support.
 
@@ -1507,31 +1618,27 @@ The search pattern.
 `string`  
 The search <span class="type">string</span>.
 
-`regs`  
+`matches`  
 If matches are found for parenthesized substrings of `pattern` and the
-function is called with the third argument `regs`, the matches will be
-stored in the elements of the array `regs`. If no matches are found,
-`regs` is set to an empty array.
+function is called with the third argument `matches`, the matches will
+be stored in the elements of the array `matches`. If no matches are
+found, `matches` is set to an empty array.
 
-`$regs[1]` will contain the substring which starts at the first left
-parenthesis; `$regs[2]` will contain the substring starting at the
-second, and so on. `$regs[0]` will contain a copy of the complete string
-matched.
+`$matches[1]` will contain the substring which starts at the first left
+parenthesis; `$matches[2]` will contain the substring starting at the
+second, and so on. `$matches[0]` will contain a copy of the complete
+string matched.
 
 ### Return Values
 
-Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`false`** if no matches were found or an
-error occurred.
-
-If the optional parameter `regs` was not passed or the length of the
-matched string is *0*, this function returns *1*.
+Returns whether `pattern` matches `string`.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                 |
-|---------|-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | <span class="function">mb\_ereg</span> will now set `regs` to an empty <span class="type">array</span>, if nothing matched. Formerly, `regs` was not modified in that case. |
+| Version | Description                                                                                                                                                                                                                                                                                                         |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function returns **`true`** on success now. Previously, it returned the byte length of the matched string if a match for `pattern` was found in `string` and `matches` was passed. If the optional parameter `matches` was not passed or the length of the matched string was *0*, this function returned *1*. |
+| 7.1.0   | <span class="function">mb\_ereg</span> will now set `matches` to an empty <span class="type">array</span>, if nothing matched. Formerly, `matches` was not modified in that case.                                                                                                                                   |
 
 ### Notes
 
@@ -1553,14 +1660,16 @@ Replace regular expression with multibyte support ignoring case
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span><span class="type">null</span></span> <span
 class="methodname">mb\_eregi\_replace</span> ( <span
 class="methodparam"><span class="type">string</span> `$pattern`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$replace`</span> , <span class="methodparam"><span
+`$replacement`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$option`<span
-class="initializer"> = "msri"</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Scans `string` for matches to `pattern`, then replaces the matched text
 with `replacement`.
@@ -1571,25 +1680,29 @@ with `replacement`.
 The regular expression pattern. Multibyte characters may be used. The
 case will be ignored.
 
-`replace`  
+`replacement`  
 The replacement text.
 
 `string`  
 The searched <span class="type">string</span>.
 
-`option`  
+`options`  
 <span class="simpara"> The search option. See <span
 class="function">mb\_regex\_set\_options</span> for explanation. </span>
 
 ### Return Values
 
 The resultant <span class="type">string</span> or **`false`** on error.
+If `string` is not valid for the current encoding, **`null`** is
+returned.
 
 ### Changelog
 
-| Version | Description                           |
-|---------|---------------------------------------|
-| 7.1.0   | The *e* modifier has been deprecated. |
+| Version | Description                                                             |
+|---------|-------------------------------------------------------------------------|
+| 8.0.0   | `options` is nullable now.                                              |
+| 7.1.0   | The function checks whether `string` is valid for the current encoding. |
+| 7.1.0   | The *e* modifier has been deprecated.                                   |
 
 ### Notes
 
@@ -1619,11 +1732,12 @@ Regular expression match ignoring case with multibyte support
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mb\_eregi</span>
+<span class="type">bool</span> <span class="methodname">mb\_eregi</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
 class="type">string</span> `$string`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$regs`</span> \] )
+class="methodparam"><span class="type">array</span> `&$matches`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Executes the case insensitive regular expression match with multibyte
 support.
@@ -1636,31 +1750,27 @@ The regular expression pattern.
 `string`  
 The <span class="type">string</span> being searched.
 
-`regs`  
+`matches`  
 If matches are found for parenthesized substrings of `pattern` and the
-function is called with the third argument `regs`, the matches will be
-stored in the elements of the array `regs`. If no matches are found,
-`regs` is set to an empty array.
+function is called with the third argument `matches`, the matches will
+be stored in the elements of the array `matches`. If no matches are
+found, `matches` is set to an empty array.
 
-`$regs[1]` will contain the substring which starts at the first left
-parenthesis; `$regs[2]` will contain the substring starting at the
-second, and so on. `$regs[0]` will contain a copy of the complete string
-matched.
+`$matches[1]` will contain the substring which starts at the first left
+parenthesis; `$matches[2]` will contain the substring starting at the
+second, and so on. `$matches[0]` will contain a copy of the complete
+string matched.
 
 ### Return Values
 
-Returns the byte length of the matched string if a match for `pattern`
-was found in `string`, or **`false`** if no matches were found or an
-error occurred.
-
-If the optional parameter `regs` was not passed or the length of the
-matched string is *0*, this function returns *1*.
+Returns whether `pattern` matches `string`.
 
 ### Changelog
 
-| Version | Description                                                                                                                                                                  |
-|---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | <span class="function">mb\_eregi</span> will now set `regs` to an empty <span class="type">array</span>, if nothing matched. Formerly, `regs` was not modified in that case. |
+| Version | Description                                                                                                                                                                                                                                                                                                         |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | This function returns **`true`** on success now. Previously, it returned the byte length of the matched string if a match for `pattern` was found in `string` and `matches` was passed. If the optional parameter `matches` was not passed or the length of the matched string was *0*, this function returned *1*. |
+| 7.1.0   | <span class="function">mb\_eregi</span> will now set `matches` to an empty <span class="type">array</span>, if nothing matched. Formerly, `matches` was not modified in that case.                                                                                                                                  |
 
 ### Notes
 
@@ -1682,7 +1792,9 @@ Get internal settings of mbstring
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_get\_info</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$type`<span
 class="initializer"> = "all"</span></span> \] )
@@ -1705,7 +1817,7 @@ will be returned.
 ### Return Values
 
 An <span class="type">array</span> of type information if `type` is not
-specified, otherwise a specific `type`.
+specified, otherwise a specific `type`, or **`false`** on failure.
 
 ### See Also
 
@@ -1719,26 +1831,35 @@ Detect HTTP input character encoding
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">string</span><span class="type">false</span></span> <span
 class="methodname">mb\_http\_input</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$type`<span
-class="initializer"> = ""</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$type`<span class="initializer"> = **`null`**</span></span> \] )
 
 Detects the HTTP input character encoding.
 
 ### Parameters
 
 `type`  
-Input string specifies the input type. "G" for GET, "P" for POST, "C"
-for COOKIE, "S" for string, "L" for list, and "I" for the whole list
-(will return <span class="type">array</span>). If type is omitted, it
-returns the last input type processed.
+Input string specifies the input type. *"G"* for GET, *"P"* for POST,
+*"C"* for COOKIE, *"S"* for string, *"L"* for list, and *"I"* for the
+whole list (will return <span class="type">array</span>). If type is
+omitted, it returns the last input type processed.
 
 ### Return Values
 
-The character encoding name, as per the `type`. If <span
+The character encoding name, as per the `type`, or an array of character
+encoding names, if `type` is *"I"*. If <span
 class="function">mb\_http\_input</span> does not process specified HTTP
 input, it returns **`false`**.
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `type` is nullable now. |
 
 ### See Also
 
@@ -1753,10 +1874,12 @@ Set/Get HTTP output character encoding
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">mb\_http\_output</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_http\_output()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Set/Get the HTTP output character encoding. Output after this function
 is called will be converted from the set internal encoding to
@@ -1777,6 +1900,12 @@ If `encoding` is omitted, <span class="function">mb\_http\_output</span>
 returns the current HTTP output character encoding. Otherwise, Returns
 **`true`** on success or **`false`** on failure.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">mb\_internal\_encoding</span>
@@ -1790,10 +1919,12 @@ Set/Get internal character encoding
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">mb\_internal\_encoding</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Set/Get the internal character encoding
 
@@ -1812,6 +1943,12 @@ If `encoding` is set, then Returns **`true`** on success or **`false`**
 on failure. In this case, the character encoding for multibyte regex is
 NOT changed. If `encoding` is omitted, then the current character
 encoding name is returned.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -1842,13 +1979,12 @@ Set/Get current language
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">mb\_language</span> ( <span class="methodparam"><span
-class="type">string</span> `$language`</span> )
-
-<span class="type">string</span> <span
-class="methodname">mb\_language</span> ( <span
-class="methodparam">void</span> )
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
+class="methodname">mb\_language</span> (\[ <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$language`<span class="initializer"> = **`null`**</span></span> \] )
 
 Set/Get the current language.
 
@@ -1877,8 +2013,15 @@ setting to encode e-mail.
 ### Return Values
 
 If `language` is set and `language` is valid, it returns **`true`**.
-Otherwise, it returns **`false`**. When `language` is omitted, it
-returns the language name as a <span class="type">string</span>.
+Otherwise, it returns **`false`**. When `language` is omitted or
+**`null`**, it returns the language name as a <span
+class="type">string</span>.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `language` is nullable now. |
 
 ### See Also
 
@@ -1998,8 +2141,9 @@ Get code point of character
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span class="methodname">mb\_ord</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`</span> \] )
+`$string`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
@@ -2008,13 +2152,19 @@ available.
 
 ### Parameters
 
-`str`  
+`string`  
 
 `encoding`  
 
 ### Return Values
 
 Returns a code point of character or **`false`** on failure.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -2030,9 +2180,9 @@ Callback function converts character encoding in output buffer
 
 <span class="type">string</span> <span
 class="methodname">mb\_output\_handler</span> ( <span
-class="methodparam"><span class="type">string</span> `$contents`</span>
-, <span class="methodparam"><span class="type">int</span>
-`$status`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">int</span> `$status`</span>
+)
 
 <span class="function">mb\_output\_handler</span> is <span
 class="function">ob\_start</span> callback function. <span
@@ -2042,7 +2192,7 @@ encoding.
 
 ### Parameters
 
-`contents`  
+`string`  
 The contents of the output buffer.
 
 `status`  
@@ -2090,9 +2240,9 @@ Parse GET/POST/COOKIE data and set global variable
 
 <span class="type">bool</span> <span
 class="methodname">mb\_parse\_str</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$encoded_string`</span> , <span class="methodparam"><span
-class="type">array</span> `&$result`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> ,
+<span class="methodparam"><span class="type">array</span>
+`&$result`</span> )
 
 Parses GET/POST/COOKIE data and sets global variables. Since PHP does
 not provide raw POST/COOKIE data, it can only be used for GET data for
@@ -2102,7 +2252,7 @@ class="type">array</span> or global variables.
 
 ### Parameters
 
-`encoded_string`  
+`string`  
 The URL encoded data.
 
 `result`  
@@ -2132,7 +2282,8 @@ Get MIME charset string
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_preferred\_mime\_name</span> ( <span
 class="methodparam"><span class="type">string</span> `$encoding`</span>
 )
@@ -2148,7 +2299,8 @@ The encoding being checked.
 ### Return Values
 
 The MIME *charset* <span class="type">string</span> for character
-encoding `encoding`.
+encoding `encoding`, or **`false`** if no charset is preferred for the
+given `encoding`.
 
 ### Examples
 
@@ -2171,18 +2323,20 @@ Set/Get character encoding for multibyte regex
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">mb\_regex\_encoding</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_regex\_encoding()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Set/Get character encoding for a multibyte regex.
 
 ### Parameters
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
@@ -2195,6 +2349,7 @@ name for a multibyte regex is returned.
 
 | Version | Description                                                     |
 |---------|-----------------------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                                     |
 | 5.6.0   | Default encoding is changed to UTF-8. It was EUC-JP Previously. |
 
 ### See Also
@@ -2211,8 +2366,9 @@ Set/Get the default options for mbregex functions
 
 <span class="type">string</span> <span
 class="methodname">mb\_regex\_set\_options</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$options`<span
-class="initializer"> = mb\_regex\_set\_options()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$options`<span class="initializer"> = **`null`**</span></span> \] )
 
 Sets the default options described by `options` for multibyte regex
 functions.
@@ -2248,14 +2404,15 @@ there can only be set one mode but multiple options.
 
 ### Return Values
 
-The previous options. If `options` is omitted, it returns the <span
-class="type">string</span> that describes the current options.
+The previous options. If `options` is omitted or **`null`**, it returns
+the <span class="type">string</span> that describes the current options.
 
 ### Changelog
 
-| Version | Description                                                                                                                   |
-|---------|-------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | If the parameter `options` is given, the *previous* options are returned. Formerly, the *current* options have been returned. |
+| Version | Description                                                                                                                                      |
+|---------|--------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | If the parameter `options` is given and not **`null`**, the *previous* options are returned. Formerly, the *current* options have been returned. |
+| 8.0.0   | `options` is nullable now.                                                                                                                       |
 
 ### See Also
 
@@ -2272,9 +2429,10 @@ Description
 
 <span class="type">string</span> <span
 class="methodname">mb\_scrub</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`</span>
-\] )
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 **Warning**
 
@@ -2283,11 +2441,17 @@ available.
 
 ### Parameters
 
-`str`  
+`string`  
 
 `encoding`  
 
 ### Return Values
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 mb\_send\_mail
 ==============
@@ -2302,11 +2466,13 @@ class="methodparam"><span class="type">string</span> `$to`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$subject`</span> , <span class="methodparam"><span
 class="type">string</span> `$message`</span> \[, <span
-class="methodparam"><span class="type">mixed</span>
-`$additional_headers`<span class="initializer"> =
-**`null`**</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$additional_parameter`<span
-class="initializer"> = **`null`**</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$additional_headers`<span class="initializer"> = \[\]</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$additional_params`<span class="initializer"> =
+**`null`**</span></span> \]\] )
 
 Sends email. Headers and messages are converted and encoded according to
 the <span class="function">mb\_language</span> setting. It's a wrapper
@@ -2357,9 +2523,9 @@ names and its values are the respective header values.
 > is used). This should be a last resort, as it does not comply with
 > <a href="http://www.faqs.org/rfcs/rfc2822" class="link external">» RFC 2822</a>.
 
-`additional_parameter`  
-`additional_parameter` is a MTA command line parameter. It is useful
-when setting the correct Return-Path header when using sendmail.
+`additional_params`  
+`additional_params` is a MTA command line parameter. It is useful when
+setting the correct Return-Path header when using sendmail.
 
 This parameter is escaped by <span
 class="function">escapeshellcmd</span> internally to prevent command
@@ -2385,6 +2551,7 @@ Returns **`true`** on success or **`false`** on failure.
 
 | Version | Description                                                                             |
 |---------|-----------------------------------------------------------------------------------------|
+| 8.0.0   | `additional_params` is nullable now.                                                    |
 | 7.2.0   | The `additional_headers` parameter now also accepts an <span class="type">array</span>. |
 
 ### See Also
@@ -2448,42 +2615,49 @@ Given a multibyte string, return an array of its characters
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">mb\_str\_split</span> ( <span
 class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">int</span>
-`$split_length`<span class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+`$length`<span class="initializer"> = 1</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 This function will return an array of strings, it is a version of <span
 class="function">str\_split</span> with support for encodings of
 variable character size as well as fixed-size encodings of 1,2 or 4 byte
-characters. If the `split_length` parameter is specified, the string is
-broken down into chunks of the specified length in characters (not
-bytes). The `encoding` parameter can be optionally specified and it is
-good practice to do so.
+characters. If the `length` parameter is specified, the string is broken
+down into chunks of the specified length in characters (not bytes). The
+`encoding` parameter can be optionally specified and it is good practice
+to do so.
 
 ### Parameters
 
 `string`  
 The <span class="type">string</span> to split into characters or chunks.
 
-`split_length`  
+`length`  
 If specified, each element of the returned array will be composed of
 multiple characters instead of a single character.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 A string specifying one of the supported encodings.
 
 ### Return Values
 
 <span class="function">mb\_str\_split</span> returns an array of
-strings, or **`false`** on failure.
+strings.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                             |
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 ### See Also
 
@@ -2498,12 +2672,14 @@ Get part of string
 
 <span class="type">string</span> <span
 class="methodname">mb\_strcut</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> , <span
+class="type">string</span> `$string`</span> , <span
 class="methodparam"><span class="type">int</span> `$start`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = NULL</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_strcut</span> extracts a substring from a
 string similarly to <span class="function">mb\_substr</span>, but
@@ -2516,37 +2692,43 @@ malformed byte sequence.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being cut.
 
 `start`  
 If `start` is non-negative, the returned string will start at the
-`start`'th *byte* position in `str`, counting from zero. For instance,
-in the string '*abcdef*', the byte at position *0* is '*a*', the byte at
-position *2* is '*c*', and so forth.
+`start`'th *byte* position in `string`, counting from zero. For
+instance, in the string '*abcdef*', the byte at position *0* is '*a*',
+the byte at position *2* is '*c*', and so forth.
 
 If `start` is negative, the returned string will start at the `start`'th
-byte counting back from the end of `str`. However, if the magnitude of a
-negative `start` is greater than the length of the string, the returned
-portion will start from the beginning of `str`.
+byte counting back from the end of `string`. However, if the magnitude
+of a negative `start` is greater than the length of the string, the
+returned portion will start from the beginning of `string`.
 
 `length`  
 Length in *bytes*. If omitted or *NULL* is passed, extract all bytes to
 the end of the string.
 
 If `length` is negative, the returned string will end at the `length`'th
-byte counting back from the end of `str`. However, if the magnitude of a
-negative `length` is greater than the number of characters after the
-`start` position, an empty string will be returned.
+byte counting back from the end of `string`. However, if the magnitude
+of a negative `length` is greater than the number of characters after
+the `start` position, an empty string will be returned.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-<span class="function">mb\_strcut</span> returns the portion of `str`
+<span class="function">mb\_strcut</span> returns the portion of `string`
 specified by the `start` and `length` parameters.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -2562,20 +2744,21 @@ Get truncated string with specified width
 
 <span class="type">string</span> <span
 class="methodname">mb\_strimwidth</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> ,
+class="methodparam"><span class="type">string</span> `$string`</span> ,
 <span class="methodparam"><span class="type">int</span> `$start`</span>
 , <span class="methodparam"><span class="type">int</span>
 `$width`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$trimmarker`<span class="initializer"> =
-""</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \]\] )
+class="type">string</span> `$trim_marker`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
-Truncates <span class="type">string</span> `str` to specified `width`.
+Truncates <span class="type">string</span> `string` to specified
+`width`.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being decoded.
 
 `start`  
@@ -2587,22 +2770,23 @@ characters from the end of the string.
 The width of the desired trim. Negative widths count from the end of the
 string.
 
-`trimmarker`  
+`trim_marker`  
 A string that is added to the end of string when string is truncated.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-The truncated <span class="type">string</span>. If `trimmarker` is set,
-`trimmarker` replaces the last chars to match the `width`.
+The truncated <span class="type">string</span>. If `trim_marker` is set,
+`trim_marker` replaces the last chars to match the `width`.
 
 ### Changelog
 
 | Version | Description                                                |
 |---------|------------------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                                |
 | 7.1.0   | Support for negative `start`s and `width`s has been added. |
 
 ### Examples
@@ -2629,14 +2813,16 @@ insensitive
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_stripos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$offset`<span class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_stripos</span> returns the numeric position
 of the first occurrence of `needle` in the `haystack` string. Unlike
@@ -2670,6 +2856,7 @@ Return the numeric position of the first occurrence of `needle` in the
 
 | Version | Description                                    |
 |---------|------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                    |
 | 7.1.0   | Support for negative `offset`s has been added. |
 
 ### See Also
@@ -2685,15 +2872,16 @@ Finds first occurrence of a string within another, case insensitive
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_stristr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$before_needle`<span class="initializer"> = **`false`**</span></span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_stristr</span> finds the first occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. Unlike
@@ -2725,6 +2913,12 @@ encoding is used.
 Returns the portion of `haystack`, or **`false`** if `needle` is not
 found.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">stristr</span>
@@ -2740,31 +2934,37 @@ Get string length
 
 <span class="type">int</span> <span class="methodname">mb\_strlen</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$str`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+`$string`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Gets the length of a <span class="type">string</span>.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being checked for length.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
 Returns the number of characters in <span class="type">string</span>
-`str` having character encoding `encoding`. A multi-byte character is
+`string` having character encoding `encoding`. A multi-byte character is
 counted as 1.
 
 ### Errors/Exceptions
 
 If the encoding is unknown, an error of level **`E_WARNING`** is
 generated.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -2787,8 +2987,9 @@ class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$offset`<span class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Finds position of the first occurrence of a <span
 class="type">string</span> in a <span class="type">string</span>.
@@ -2812,8 +3013,8 @@ The search offset. If it is not specified, 0 is used. A negative offset
 counts from the end of the string.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
@@ -2825,6 +3026,7 @@ it returns **`false`**.
 
 | Version | Description                                    |
 |---------|------------------------------------------------|
+| 8.0.0   | `encoding` is nullable now.                    |
 | 7.1.0   | Support for negative `offset`s has been added. |
 
 ### See Also
@@ -2839,14 +3041,16 @@ Finds the last occurrence of a character in a string within another
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrchr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$part`<span class="initializer"> = **`false`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+`$before_needle`<span class="initializer"> = **`false`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_strrchr</span> finds the last occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. If
@@ -2860,7 +3064,7 @@ The string from which to get the last occurrence of `needle`
 `needle`  
 The string to find in `haystack`
 
-`part`  
+`before_needle`  
 Determines which portion of `haystack` this function returns. If set to
 **`true`**, it returns all of `haystack` from the beginning to the last
 occurrence of `needle`. If set to **`false`**, it returns all of
@@ -2874,6 +3078,12 @@ encoding is used.
 
 Returns the portion of `haystack`. or **`false`** if `needle` is not
 found.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -2889,14 +3099,16 @@ case insensitive
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrichr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
-`$part`<span class="initializer"> = **`false`**</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+`$before_needle`<span class="initializer"> = **`false`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_strrichr</span> finds the last occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. Unlike
@@ -2912,7 +3124,7 @@ The string from which to get the last occurrence of `needle`
 `needle`  
 The string to find in `haystack`
 
-`part`  
+`before_needle`  
 Determines which portion of `haystack` this function returns. If set to
 **`true`**, it returns all of `haystack` from the beginning to the last
 occurrence of `needle`. If set to **`false`**, it returns all of
@@ -2927,6 +3139,12 @@ encoding is used.
 Returns the portion of `haystack`. or **`false`** if `needle` is not
 found.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">mb\_stristr</span>
@@ -2940,14 +3158,16 @@ insensitive
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strripos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$offset`<span class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_strripos</span> performs multi-byte safe
 <span class="function">strripos</span> operation based on number of
@@ -2977,6 +3197,12 @@ encoding is used.
 Return the numeric position of the last occurrence of `needle` in the
 `haystack` string, or **`false`** if `needle` is not found.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">strripos</span>
@@ -2990,14 +3216,16 @@ Find position of last occurrence of a string in a string
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strrpos</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$offset`<span class="initializer"> = 0</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a multibyte safe <span class="function">strrpos</span>
 operation based on the number of characters. `needle` position is
@@ -3020,8 +3248,8 @@ values will stop searching at an arbitrary point prior to the end of the
 <span class="type">string</span>. </span>
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
@@ -3036,6 +3264,12 @@ it returns **`false`**.
 > compatibility, `encoding` can be specified as the third parameter, but
 > doing so is deprecated and will be removed in the future. </span>
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">mb\_strpos</span>
@@ -3049,15 +3283,16 @@ Finds first occurrence of a string within another
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">mb\_strstr</span> ( <span class="methodparam"><span
 class="type">string</span> `$haystack`</span> , <span
 class="methodparam"><span class="type">string</span> `$needle`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$before_needle`<span class="initializer"> = **`false`**</span></span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \]\] )
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="function">mb\_strstr</span> finds the first occurrence of
 `needle` in `haystack` and returns the portion of `haystack`. If
@@ -3087,6 +3322,12 @@ encoding is used.
 Returns the portion of `haystack`, or **`false`** if `needle` is not
 found.
 
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
+
 ### See Also
 
 -   <span class="function">stristr</span>
@@ -3102,25 +3343,25 @@ Make a string lowercase
 
 <span class="type">string</span> <span
 class="methodname">mb\_strtolower</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
-Returns `str` with all alphabetic characters converted to lowercase.
+Returns `string` with all alphabetic characters converted to lowercase.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being lowercased.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-`str` with all alphabetic characters converted to lowercase.
+`string` with all alphabetic characters converted to lowercase.
 
 ### Unicode
 
@@ -3170,25 +3411,25 @@ Make a string uppercase
 
 <span class="type">string</span> <span
 class="methodname">mb\_strtoupper</span> ( <span
-class="methodparam"><span class="type">string</span> `$str`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
-Returns `str` with all alphabetic characters converted to uppercase.
+Returns `string` with all alphabetic characters converted to uppercase.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being uppercased.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-`str` with all alphabetic characters converted to uppercase.
+`string` with all alphabetic characters converted to uppercase.
 
 ### Unicode
 
@@ -3238,11 +3479,12 @@ Return width of string
 
 <span class="type">int</span> <span
 class="methodname">mb\_strwidth</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \] )
+class="type">string</span> `$string`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
-Returns the width of <span class="type">string</span> `str`, where
+Returns the width of <span class="type">string</span> `string`, where
 halfwidth characters count as *1*, and fullwidth characters count as
 *2*.
 
@@ -3263,16 +3505,22 @@ The fullwidth characters are: *U+1100*-*U+115F*, *U+11A3*-*U+11A7*,
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> being decoded.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-The width of <span class="type">string</span> `str`.
+The width of <span class="type">string</span> `string`.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 
@@ -3286,14 +3534,17 @@ Set/Get substitution character
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span><span class="type">bool</span></span> <span
 class="methodname">mb\_substitute\_character</span> (\[ <span
-class="methodparam"><span class="type">mixed</span> `$substchar`<span
-class="initializer"> = mb\_substitute\_character()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span><span
+class="type">null</span></span> `$substitute_character`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Specifies a substitution character when input character encoding is
 invalid or character code does not exist in output character encoding.
-Invalid characters may be substituted **`null`** (no output), <span
+Invalid characters may be substituted *"none"* (no output), <span
 class="type">string</span> or <span class="type">int</span> value
 (Unicode character code value).
 
@@ -3305,7 +3556,7 @@ class="function">mb\_send\_mail</span>.
 
 ### Parameters
 
-`substchar`  
+`substitute_character`  
 Specify the Unicode value as an <span class="type">int</span>, or as one
 of the following <span class="type">string</span>s:
 
@@ -3317,9 +3568,16 @@ of the following <span class="type">string</span>s:
 
 ### Return Values
 
-If `substchar` is set, it returns **`true`** for success, otherwise
-returns **`false`**. If `substchar` is not set, it returns the current
-setting.
+If `substitute_character` is set, it returns **`true`** for success,
+otherwise returns **`false`**. If `substitute_character` is not set, it
+returns the current setting.
+
+### Changelog
+
+| Version | Description                                                                                                  |
+|---------|--------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | Passing an empty string to `substitute_character` is no longer supported; *"none"* should be passed instead. |
+| 8.0.0   | `encoding` is nullable now.                                                                                  |
 
 ### Examples
 
@@ -3350,9 +3608,9 @@ Count the number of substring occurrences
 class="methodname">mb\_substr\_count</span> ( <span
 class="methodparam"><span class="type">string</span> `$haystack`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$needle`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$encoding`<span class="initializer"> =
-mb\_internal\_encoding()</span></span> \] )
+`$needle`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \] )
 
 Counts the number of times the `needle` substring occurs in the
 `haystack` <span class="type">string</span>.
@@ -3366,13 +3624,19 @@ The <span class="type">string</span> being checked.
 The <span class="type">string</span> being found.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
 The number of times the `needle` substring occurs in the `haystack`
 <span class="type">string</span>.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### Examples
 
@@ -3399,44 +3663,52 @@ Get part of string
 
 <span class="type">string</span> <span
 class="methodname">mb\_substr</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> , <span
+class="type">string</span> `$string`</span> , <span
 class="methodparam"><span class="type">int</span> `$start`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$length`<span
-class="initializer"> = NULL</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$encoding`<span
-class="initializer"> = mb\_internal\_encoding()</span></span> \]\] )
+<span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$length`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$encoding`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Performs a multi-byte safe <span class="function">substr</span>
 operation based on number of characters. Position is counted from the
-beginning of `str`. First character's position is 0. Second character
+beginning of `string`. First character's position is 0. Second character
 position is 1, and so on.
 
 ### Parameters
 
-`str`  
+`string`  
 The <span class="type">string</span> to extract the substring from.
 
 `start`  
 If `start` is non-negative, the returned string will start at the
-`start`'th position in `str`, counting from zero. For instance, in the
-string '*abcdef*', the character at position *0* is '*a*', the character
-at position *2* is '*c*', and so forth.
+`start`'th position in `string`, counting from zero. For instance, in
+the string '*abcdef*', the character at position *0* is '*a*', the
+character at position *2* is '*c*', and so forth.
 
 If `start` is negative, the returned string will start at the `start`'th
-character from the end of `str`.
+character from the end of `string`.
 
 `length`  
-Maximum number of characters to use from `str`. If omitted or *NULL* is
-passed, extract all characters to the end of the string.
+Maximum number of characters to use from `string`. If omitted or *NULL*
+is passed, extract all characters to the end of the string.
 
 `encoding`  
-The `encoding` parameter is the character encoding. If it is omitted,
-the internal character encoding value will be used.
+The `encoding` parameter is the character encoding. If it is omitted or
+**`null`**, the internal character encoding value will be used.
 
 ### Return Values
 
-<span class="function">mb\_substr</span> returns the portion of `str`
+<span class="function">mb\_substr</span> returns the portion of `string`
 specified by the `start` and `length` parameters.
+
+### Changelog
+
+| Version | Description                 |
+|---------|-----------------------------|
+| 8.0.0   | `encoding` is nullable now. |
 
 ### See Also
 

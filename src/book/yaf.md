@@ -1745,7 +1745,7 @@ class="methodparam"><span class="type">bool</span> `$flag`</span> \] )
 While the application.dispatcher.throwException is On(you can also
 calling to <span
 class="methodname">Yaf\_Dispatcher::throwException(TRUE)</span> to
-enable it), Yaf will throw Exception whe error occurrs instead of
+enable it), Yaf will throw Exception when error occurrs instead of
 trigger error.
 
 then if you enable <span

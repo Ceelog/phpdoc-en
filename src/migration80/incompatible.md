@@ -52,8 +52,8 @@ this means that `0 == "not-a-number"` is considered false now.
     <span class="function">spl\_autoload\_register</span> should be used
     instead.
 
--   The `errcontext` argument for custom error handlers has been
-    removed.
+-   The `errcontext` argument will no longer be passed to custom error
+    handlers set with <span class="function">set\_error\_handler</span>.
 
 -   <span class="function">create\_function</span> has been removed.
     Anonymous functions may be used instead.

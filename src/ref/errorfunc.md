@@ -651,32 +651,35 @@ class="methodparam"><span class="type">int</span> `$errline`</span> \[,
 `$errcontext`</span> \]\]\] )
 
 `errno`  
-<span class="simpara"> The first parameter, `errno`, contains the level
-of the error raised, as an integer. </span>
+<span class="simpara"> The first parameter, `errno`, will be passed the
+level of the error raised, as an integer. </span>
 
 `errstr`  
-<span class="simpara"> The second parameter, `errstr`, contains the
-error message, as a string. </span>
+<span class="simpara"> The second parameter, `errstr`, will be passed
+the error message, as a string. </span>
 
 `errfile`  
-<span class="simpara"> The third parameter is optional, `errfile`, which
-contains the filename that the error was raised in, as a string. </span>
+<span class="simpara"> If the callback accepts a third parameter,
+`errfile`, it will be passed the filename that the error was raised in,
+as a string. </span>
 
 `errline`  
-<span class="simpara"> The fourth parameter is optional, `errline`,
-which contains the line number the error was raised at, as an integer.
-</span>
+<span class="simpara"> If the callback accepts a fourth parameter,
+`errline`, it will be passed the line number where the error was raised,
+as an integer. </span>
 
 `errcontext`  
-<span class="simpara"> The fifth parameter is optional, `errcontext`,
-which is an array that points to the active symbol table at the point
-the error occurred. In other words, `errcontext` will contain an array
-of every variable that existed in the scope the error was triggered in.
-User error handler must not modify error context. </span>
+<span class="simpara"> If the callback accepts a fifth parameter,
+`errcontext`, it will be passed an array that points to the active
+symbol table at the point the error occurred. In other words,
+`errcontext` will contain an array of every variable that existed in the
+scope the error was triggered in. User error handlers must not modify
+the error context. </span>
 
 **Warning**
-This parameter has been *DEPRECATED* as of PHP 7.2.0. Relying on it is
-highly discouraged.
+This parameter has been *DEPRECATED* as of PHP 7.2.0, and *REMOVED* as
+of PHP 8.0.0. If your function defines this parameter without a default,
+an error of "too few arguments" will be raised when it is called.
 
 If the function returns **`false`** then the normal error handler
 continues.
@@ -704,6 +707,7 @@ name.
 
 | Version | Description                                                                                     |
 |---------|-------------------------------------------------------------------------------------------------|
+| 8.0.0   | `errcontext` was removed, and will no longer be passed to user callbacks.                       |
 | 7.2.0   | `errcontext` became deprecated. Usage of this parameter now emits an **`E_DEPRECATED`** notice. |
 
 ### Examples

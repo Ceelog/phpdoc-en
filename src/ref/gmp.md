@@ -13,21 +13,21 @@ Absolute value
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_abs</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Get the absolute value of a number.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns the absolute value of `a`, as a GMP number.
+Returns the absolute value of `num`, as a GMP number.
 
 ### Examples
 
@@ -56,28 +56,28 @@ Add numbers
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_add</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Add two numbers.
 
 ### Parameters
 
-`a`  
+`num1`  
 The first summand (augent).
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
+`num2`  
 The second summand (addend).
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -106,24 +106,24 @@ Bitwise AND
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_and</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise AND of two GMP numbers.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -154,10 +154,11 @@ Calculates binomial coefficient
 
 ### Description
 
-<span class="type"><span class="type">GMP</span><span
-class="type">false</span></span> <span
+<span class="type">GMP</span> <span
 class="methodname">gmp\_binomial</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$n`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$n`</span> , <span
 class="methodparam"><span class="type">int</span> `$k`</span> )
 
 Calculates the binomial coefficient C(n, k).
@@ -165,20 +166,25 @@ Calculates the binomial coefficient C(n, k).
 ### Parameters
 
 `n`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `k`  
 
 ### Return Values
 
-Returns the binomial coefficient C(n, k), or **`false`** on failure.
+Returns the binomial coefficient C(n, k).
 
 ### Errors/Exceptions
 
-Issues E\_WARNING if `k` is negative.
+Throws <span class="classname">ValueError</span> if `k` is negative.
+Prior to PHP 8.0.0, **`E_WARNING`** was issued instead.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 gmp\_clrbit
 ===========
@@ -189,18 +195,16 @@ Clear bit
 
 <span class="type">void</span> <span
 class="methodname">gmp\_clrbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
+class="type">GMP</span> `$num`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> )
 
-Clears (sets to 0) bit `index` in `a`. The index starts at 0.
+Clears (sets to 0) bit `index` in `num`. The index starts at 0.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `index`  
 The index of the bit to clear. Index 0 represents the least significant
@@ -231,7 +235,7 @@ The above example will output:
 > **Note**:
 >
 > Unlike most of the other GMP functions, <span
-> class="function">gmp\_clrbit</span> must be called with a GMP resource
+> class="function">gmp\_clrbit</span> must be called with a GMP object
 > that already exists (using <span class="function">gmp\_init</span> for
 > example). One will not be automatically created.
 
@@ -248,24 +252,24 @@ Compare numbers
 ### Description
 
 <span class="type">int</span> <span class="methodname">gmp\_cmp</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Compares two numbers.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -298,21 +302,21 @@ Calculates one's complement
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_com</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Returns the one's complement of `a`.
+Returns the one's complement of `num`.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns the one's complement of `a`, as a GMP number.
+Returns the one's complement of `num`, as a GMP number.
 
 ### Examples
 
@@ -338,34 +342,33 @@ Divide numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_div\_q</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-Divides `a` by `b` and returns the integer result.
+Divides `num1` by `num2` and returns the integer result.
 
 ### Parameters
 
-`a`  
+`num1`  
 The number being divided.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-The number that `a` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`round`  
-The result rounding is defined by the `round`, which can have the
-following values:
+`rounding_mode`  
+The result rounding is defined by the `rounding_mode`, which can have
+the following values:
 
 -   <span class="simpara"> **`GMP_ROUND_ZERO`**: The result is truncated
     towards 0. </span>
@@ -374,10 +377,8 @@ following values:
 -   <span class="simpara"> **`GMP_ROUND_MINUSINF`**: The result is
     rounded towards *-infinity*. </span>
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -435,34 +436,33 @@ Divide numbers and get quotient and remainder
 
 <span class="type">array</span> <span
 class="methodname">gmp\_div\_qr</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$n`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$d`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-The function divides `n` by `d`.
+The function divides `num1` by `num2`.
 
 ### Parameters
 
-`n`  
+`num1`  
 The number being divided.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`d`  
-The number that `n` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`round`  
+`rounding_mode`  
 See the <span class="function">gmp\_div\_q</span> function for
-description of the `round` argument.
+description of the `rounding_mode` argument.
 
 ### Return Values
 
@@ -497,35 +497,34 @@ Remainder of the division of numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_div\_r</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$n`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$d`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$round`<span class="initializer"> =
-GMP\_ROUND\_ZERO</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$rounding_mode`<span
+class="initializer"> = **`GMP_ROUND_ZERO`**</span></span> \] )
 
-Calculates remainder of the integer division of `n` by `d`. The
-remainder has the sign of the `n` argument, if not zero.
+Calculates remainder of the integer division of `num1` by `num2`. The
+remainder has the sign of the `num1` argument, if not zero.
 
 ### Parameters
 
-`n`  
+`num1`  
 The number being divided.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`d`  
-The number that `n` is being divided by.
+`num2`  
+The number that `num1` is being divided by.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`round`  
+`rounding_mode`  
 See the <span class="function">gmp\_div\_q</span> function for
-description of the `round` argument.
+description of the `rounding_mode` argument.
 
 ### Return Values
 
@@ -569,30 +568,30 @@ Exact division of numbers
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_divexact</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$n`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$d`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Divides `n` by `d`, using fast "exact division" algorithm. This function
-produces correct results only when it is known in advance that `d`
-divides `n`.
+Divides `num1` by `num2`, using fast "exact division" algorithm. This
+function produces correct results only when it is known in advance that
+`num2` divides `num1`.
 
 ### Parameters
 
-`n`  
+`num1`  
 The number being divided.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`d`  
+`num2`  
 The number that `a` is being divided by.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -624,33 +623,39 @@ Export to a binary string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">gmp\_export</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$word_size`<span
-class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
-class="initializer"> = **`GMP_MSW_FIRST`** \|
-**`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$word_size`<span class="initializer"> =
+1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$flags`<span class="initializer"> =
+**`GMP_MSW_FIRST`** \| **`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
 
 Export a GMP number to a binary string
 
 ### Parameters
 
-`gmpnumber`  
+`num`  
 The GMP number being exported
 
 `word_size`  
 Default value is 1. The number of bytes in each chunk of binary data.
 This is mainly used in conjunction with the options parameter.
 
-`options`  
+`flags`  
 Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### Return Values
 
-Returns a string or **`false`** on failure.
+Returns a string.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 ### Examples
 
@@ -679,20 +684,19 @@ Factorial
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_fact</span>
-( <span class="methodparam"><span class="type">mixed</span> `$a`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Calculates factorial (*a!*) of `a`.
+Calculates factorial (*num!*) of `num`.
 
 ### Parameters
 
-`a`  
+`num`  
 The factorial number.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -725,29 +729,29 @@ Calculate GCD
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_gcd</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Calculate greatest common divisor of `a` and `b`. The result is always
-positive even if either of, or both, input operands are negative.
+Calculate greatest common divisor of `num1` and `num2`. The result is
+always positive even if either of, or both, input operands are negative.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-A positive GMP number that divides into both `a` and `b`.
+A positive GMP number that divides into both `num1` and `num2`.
 
 ### Examples
 
@@ -777,8 +781,11 @@ Calculate GCD and multipliers
 
 <span class="type">array</span> <span
 class="methodname">gmp\_gcdext</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates g, s, and t, such that *a\*s + b\*t = g = gcd(a,b)*, where
 gcd is the greatest common divisor. Returns an array with respective
@@ -791,17 +798,13 @@ have the form: *a\*x + b\*y = c*. For more information, go to the
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -845,33 +848,32 @@ Hamming distance
 
 <span class="type">int</span> <span
 class="methodname">gmp\_hamdist</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Returns the hamming distance between `a` and `b`. Both operands should
-be non-negative.
+Returns the hamming distance between `num1` and `num2`. Both operands
+should be non-negative.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 It should be positive.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 It should be positive.
 
 ### Return Values
 
-The hamming distance between `a` and `b`, as an <span
+The hamming distance between `num1` and `num2`, as an <span
 class="type">int</span>.
 
 ### Examples
@@ -906,13 +908,12 @@ Import from a binary string
 
 ### Description
 
-<span class="type"><span class="type">GMP</span><span
-class="type">false</span></span> <span
+<span class="type">GMP</span> <span
 class="methodname">gmp\_import</span> ( <span class="methodparam"><span
 class="type">string</span> `$data`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$word_size`<span
 class="initializer"> = 1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$options`<span
+class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`GMP_MSW_FIRST`** \|
 **`GMP_NATIVE_ENDIAN`**</span></span> \]\] )
 
@@ -927,12 +928,18 @@ The binary string being imported
 Default value is 1. The number of bytes in each chunk of binary data.
 This is mainly used in conjunction with the options parameter.
 
-`options`  
+`flags`  
 Default value is GMP\_MSW\_FIRST \| GMP\_NATIVE\_ENDIAN.
 
 ### Return Values
 
-Returns a GMP number or **`false`** on failure.
+Returns a GMP number.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 ### Examples
 
@@ -965,8 +972,9 @@ Create GMP number
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_init</span>
-( <span class="methodparam"><span class="type">mixed</span>
-`$number`</span> \[, <span class="methodparam"><span
+( <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$base`<span class="initializer"> =
 0</span></span> \] )
 
@@ -974,7 +982,7 @@ Creates a GMP number from an integer or string.
 
 ### Parameters
 
-`number`  
+`num`  
 An integer or a string. The string representation can be decimal,
 hexadecimal or octal.
 
@@ -989,13 +997,6 @@ first character is "0", octal is assumed, otherwise decimal is assumed.
 ### Return Values
 
 A <span class="classname">GMP</span> object.
-
-### Notes
-
-> **Note**:
->
-> To use the extended base introduced in PHP 5.3.2, then PHP must be
-> compiled against GMP 4.2.0 or greater.
 
 ### Examples
 
@@ -1028,22 +1029,22 @@ Convert GMP number to integer
 
 <span class="type">int</span> <span
 class="methodname">gmp\_intval</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> )
 
 This function converts GMP number into native PHP <span
 class="type">int</span>s.
 
 ### Parameters
 
-`gmpnumber`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-The <span class="type">int</span> value of `gmpnumber`.
+The <span class="type">int</span> value of `num`.
 
 ### Examples
 
@@ -1083,26 +1084,26 @@ Inverse by modulo
 
 ### Description
 
-<span class="type">GMP</span> <span
+<span class="type"><span class="type">GMP</span><span
+class="type">false</span></span> <span
 class="methodname">gmp\_invert</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$b`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Computes the inverse of `a` modulo `b`.
+Computes the inverse of `num1` modulo `num2`.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1133,26 +1134,25 @@ Jacobi symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_jacobi</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">GMP</span> `$p`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num1`</span> , <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Computes
 <a href="http://primes.utm.edu/glossary/page.php?sort=JacobiSymbol" class="link external">» Jacobi symbol</a>
-of `a` and `p`. `p` should be odd and must be positive.
+of `num1` and `num2`. `num2` should be odd and must be positive.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`p`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 Should be odd and must be positive.
 
@@ -1190,28 +1190,28 @@ Kronecker symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_kronecker</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$a`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$b`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-This function computes the Kronecker symbol of `a` and `b`.
+This function computes the Kronecker symbol of `num1` and `num2`.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns the Kronecker symbol of `a` and `b`
+Returns the Kronecker symbol of `num1` and `num2`
 
 ### See Also
 
@@ -1226,24 +1226,25 @@ Calculate LCM
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_lcm</span> (
-<span class="methodparam"><span class="type">mixed</span> `$a`</span> ,
-<span class="methodparam"><span class="type">mixed</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-This function computes the least common multiple (lcm) of `a` and `b`.
+This function computes the least common multiple (lcm) of `num1` and
+`num2`.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1262,26 +1263,26 @@ Legendre symbol
 
 <span class="type">int</span> <span
 class="methodname">gmp\_legendre</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$p`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Compute the
 <a href="http://primes.utm.edu/glossary/page.php?sort=LegendreSymbol" class="link external">»  Legendre symbol</a>
-of `a` and `p`. `p` should be odd and must be positive.
+of `num1` and `num2`. `num2` should be odd and must be positive.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`p`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 Should be odd and must be positive.
 
@@ -1318,27 +1319,27 @@ Modulo operation
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_mod</span> (
-<span class="methodparam"><span class="type">GMP</span> `$n`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$d`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Calculates `n` modulo `d`. The result is always non-negative, the sign
-of `d` is ignored.
+Calculates `num1` modulo `num2`. The result is always non-negative, the
+sign of `num2` is ignored.
 
 ### Parameters
 
-`n`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`d`  
+`num2`  
 The modulo that is being evaluated.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1367,28 +1368,28 @@ Multiply numbers
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_mul</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Multiplies `a` by `b` and returns the result.
+Multiplies `num1` by `num2` and returns the result.
 
 ### Parameters
 
-`a`  
-A number that will be multiplied by `b`.
+`num1`  
+A number that will be multiplied by `num2`.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-A number that will be multiplied by `a`.
+`num2`  
+A number that will be multiplied by `num1`.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1417,21 +1418,21 @@ Negate number
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_neg</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Returns the negative value of a number.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns -`a`, as a GMP number.
+Returns -`num`, as a GMP number.
 
 ### Examples
 
@@ -1460,21 +1461,21 @@ Find next prime number
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_nextprime</span> ( <span
-class="methodparam"><span class="type">int</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Find next prime number
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Return the next prime number greater than `a`, as a GMP number.
+Return the next prime number greater than `num`, as a GMP number.
 
 ### Examples
 
@@ -1510,24 +1511,24 @@ Bitwise OR
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_or</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise inclusive OR of two GMP numbers.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1560,21 +1561,21 @@ Perfect power check
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_perfect\_power</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Checks whether `a` is a perfect power.
+Checks whether `num` is a perfect power.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns **`true`** if `a` is a perfect power, **`false`** otherwise.
+Returns **`true`** if `num` is a perfect power, **`false`** otherwise.
 
 ### See Also
 
@@ -1589,23 +1590,23 @@ Perfect square check
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_perfect\_square</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Check if a number is a perfect square.
 
 ### Parameters
 
-`a`  
+`num`  
 The number being checked as a perfect square.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns **`true`** if `a` is a perfect square, **`false`** otherwise.
+Returns **`true`** if `num` is a perfect square, **`false`** otherwise.
 
 ### Examples
 
@@ -1646,21 +1647,21 @@ Population count
 
 <span class="type">int</span> <span
 class="methodname">gmp\_popcount</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Get the population count.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-The population count of `a`, as an <span class="type">int</span>.
+The population count of `num`, as an <span class="type">int</span>.
 
 ### Examples
 
@@ -1688,23 +1689,23 @@ Raise number into power
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_pow</span> (
-<span class="methodparam"><span class="type">GMP</span> `$base`</span> ,
-<span class="methodparam"><span class="type">int</span> `$exp`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type">int</span> `$exponent`</span> )
 
-Raise `base` into power `exp`.
+Raise `num` into power `exponent`.
 
 ### Parameters
 
-`base`  
+`num`  
 The base number.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`exp`  
-The positive power to raise the `base`.
+`exponent`  
+The positive power to raise the `num`.
 
 ### Return Values
 
@@ -1738,39 +1739,38 @@ Raise number into power with modulo
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_powm</span>
-( <span class="methodparam"><span class="type">GMP</span> `$base`</span>
-, <span class="methodparam"><span class="type">GMP</span> `$exp`</span>
-, <span class="methodparam"><span class="type">GMP</span> `$mod`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$exponent`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$modulus`</span> )
 
-Calculate (`base` raised into power `exp`) modulo `mod`. If `exp` is
-negative, result is undefined.
+Calculate (`num` raised into power `exponent`) modulo `modulus`. If
+`exponent` is negative, result is undefined.
 
 ### Parameters
 
-`base`  
+`num`  
 The base number.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`exp`  
-The positive power to raise the `base`.
+`exponent`  
+The positive power to raise the `num`.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`mod`  
+`modulus`  
 The modulo.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -1800,8 +1800,10 @@ Check if number is "probably prime"
 
 <span class="type">int</span> <span
 class="methodname">gmp\_prob\_prime</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$a`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$reps`<span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$repetitions`<span
 class="initializer"> = 10</span></span> \] )
 
 The function uses Miller-Rabin's probabilistic test to check if a number
@@ -1809,28 +1811,24 @@ is a prime.
 
 ### Parameters
 
-`a`  
+`num`  
 The number being checked as a prime.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`reps`  
-Reasonable values of `reps` vary from 5 to 10 (default being 10); a
-higher value lowers the probability for a non-prime to pass as a
+`repetitions`  
+Reasonable values of `repetitions` vary from 5 to 10 (default being 10);
+a higher value lowers the probability for a non-prime to pass as a
 "probable" prime.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-If this function returns 0, `a` is definitely not prime. If it returns
-1, then `a` is "probably" prime. If it returns 2, then `a` is surely
+If this function returns 0, `num` is definitely not prime. If it returns
+1, then `num` is "probably" prime. If it returns 2, then `num` is surely
 prime.
 
 ### Examples
@@ -1910,8 +1908,12 @@ Random number
 
 <span class="type">GMP</span> <span
 class="methodname">gmp\_random\_range</span> ( <span
-class="methodparam"><span class="type">GMP</span> `$min`</span> , <span
-class="methodparam"><span class="type">GMP</span> `$max`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$min`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$max`</span> )
 
 Generate a random number. The number will be between `min` and `max`.
 
@@ -1958,7 +1960,9 @@ Sets the RNG seed
 
 <span class="type">void</span> <span
 class="methodname">gmp\_random\_seed</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$seed`</span> )
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$seed`</span> )
 
 ### Parameters
 
@@ -1967,10 +1971,8 @@ The seed to be set for the <span class="function">gmp\_random</span>,
 <span class="function">gmp\_random\_bits</span>, and <span
 class="function">gmp\_random\_range</span> functions.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -2046,10 +2048,8 @@ bits in a limb is either 32 or 64, but this is not guaranteed.
 `limiter`  
 The limiter.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -2082,22 +2082,22 @@ Take the integer part of nth root
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_root</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$nth`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> , <span
+class="methodparam"><span class="type">int</span> `$nth`</span> )
 
-Takes the `nth` root of `a` and returns the integer component of the
+Takes the `nth` root of `num` and returns the integer component of the
 result.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `nth`  
-The positive root to take of `a`.
+The positive root to take of `num`.
 
 ### Return Values
 
@@ -2112,22 +2112,22 @@ Take the integer part and remainder of nth root
 
 <span class="type">array</span> <span
 class="methodname">gmp\_rootrem</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">int</span> `$nth`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> , <span class="methodparam"><span class="type">int</span>
+`$nth`</span> )
 
-Takes the `nth` root of `a` and returns the integer component and
+Takes the `nth` root of `num` and returns the integer component and
 remainder of the result.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `nth`  
-The positive root to take of `a`.
+The positive root to take of `num`.
 
 ### Return Values
 
@@ -2143,22 +2143,21 @@ Scan for 0
 ### Description
 
 <span class="type">int</span> <span class="methodname">gmp\_scan0</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type">int</span> `$start`</span> )
 
-Scans `a`, starting with bit `start`, towards more significant bits,
+Scans `num1`, starting with bit `start`, towards more significant bits,
 until the first clear bit is found.
 
 ### Parameters
 
-`a`  
+`num1`  
 The number to scan.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `start`  
 The starting bit.
@@ -2197,22 +2196,21 @@ Scan for 1
 ### Description
 
 <span class="type">int</span> <span class="methodname">gmp\_scan1</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">int</span> `$start`</span>
-)
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type">int</span> `$start`</span> )
 
-Scans `a`, starting with bit `start`, towards more significant bits,
+Scans `num1`, starting with bit `start`, towards more significant bits,
 until the first set bit is found.
 
 ### Parameters
 
-`a`  
+`num1`  
 The number to scan.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `start`  
 The starting bit.
@@ -2252,28 +2250,26 @@ Set bit
 
 <span class="type">void</span> <span
 class="methodname">gmp\_setbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
+class="type">GMP</span> `$num`</span> , <span class="methodparam"><span
 class="type">int</span> `$index`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$bit_on`<span
+class="methodparam"><span class="type">bool</span> `$value`<span
 class="initializer"> = **`true`**</span></span> \] )
 
-Sets bit `index` in `a`.
+Sets bit `index` in `num`.
 
 ### Parameters
 
-`a`  
+`num`  
 The value to modify.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `index`  
 The index of the bit to set. Index 0 represents the least significant
 bit.
 
-`bit_on`  
+`value`  
 True to set the bit (set it to 1/on); false to clear the bit (set it to
 0/off).
 
@@ -2339,7 +2335,7 @@ The above example will output:
 > **Note**:
 >
 > Unlike most of the other GMP functions, <span
-> class="function">gmp\_setbit</span> must be called with a GMP resource
+> class="function">gmp\_setbit</span> must be called with a GMP object
 > that already exists (using <span class="function">gmp\_init</span> for
 > example). One will not be automatically created.
 
@@ -2356,13 +2352,15 @@ Sign of number
 ### Description
 
 <span class="type">int</span> <span class="methodname">gmp\_sign</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
 Checks the sign of a number.
 
 ### Parameters
 
-`a`  
+`num`  
 Either a GMP number <span class="type">resource</span> in PHP 5.5 and
 earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
 later, or a numeric string provided that it is possible to convert the
@@ -2370,8 +2368,8 @@ latter to an <span class="type">int</span>.
 
 ### Return Values
 
-Returns 1 if `a` is positive, -1 if `a` is negative, and 0 if `a` is
-zero.
+Returns 1 if `num` is positive, -1 if `num` is negative, and 0 if `num`
+is zero.
 
 ### Examples
 
@@ -2409,17 +2407,17 @@ Calculate square root
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_sqrt</span>
-( <span class="methodparam"><span class="type">GMP</span> `$a`</span> )
+( <span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num`</span> )
 
-Calculates square root of `a`.
+Calculates square root of `num`.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -2456,25 +2454,25 @@ Square root with remainder
 
 <span class="type">array</span> <span
 class="methodname">gmp\_sqrtrem</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> )
 
 Calculate the square root of a number, with remainder.
 
 ### Parameters
 
-`a`  
+`num`  
 The number being square rooted.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
-Returns array where first element is the integer square root of `a` and
-the second is the remainder (i.e., the difference between `a` and the
-first element squared).
+Returns array where first element is the integer square root of `num`
+and the second is the remainder (i.e., the difference between `num` and
+the first element squared).
 
 ### Examples
 
@@ -2507,22 +2505,22 @@ Convert GMP number to string
 
 <span class="type">string</span> <span
 class="methodname">gmp\_strval</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$gmpnumber`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$base`<span
-class="initializer"> = 10</span></span> \] )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$base`<span class="initializer"> =
+10</span></span> \] )
 
 Convert GMP number to string representation in base `base`. The default
 base is 10.
 
 ### Parameters
 
-`gmpnumber`  
+`num`  
 The GMP number that will be converted to a string.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `base`  
 The base of the returned number. The default base is 10. Allowed values
@@ -2531,13 +2529,6 @@ for the base are from 2 to 62 and -2 to -36.
 ### Return Values
 
 The number, as a <span class="type">string</span>.
-
-### Notes
-
-> **Note**:
->
-> To use the extended base introduced in PHP 5.3.2, then PHP must be
-> compiled against GMP 4.2.0 or greater.
 
 ### Examples
 
@@ -2558,28 +2549,28 @@ Subtract numbers
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_sub</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
-Subtracts `b` from `a` and returns the result.
+Subtracts `num2` from `num1` and returns the result.
 
 ### Parameters
 
-`a`  
+`num1`  
 The number being subtracted from.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-The number subtracted from `a`.
+`num2`  
+The number subtracted from `num1`.
 
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
@@ -2609,18 +2600,18 @@ Tests if a bit is set
 
 <span class="type">bool</span> <span
 class="methodname">gmp\_testbit</span> ( <span class="methodparam"><span
-class="type">GMP</span> `$a`</span> , <span class="methodparam"><span
-class="type">int</span> `$index`</span> )
+class="type"><span class="type">GMP</span><span
+class="type">int</span><span class="type">string</span></span>
+`$num`</span> , <span class="methodparam"><span class="type">int</span>
+`$index`</span> )
 
 Tests if the specified bit is set.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 `index`  
 The bit to test
@@ -2666,24 +2657,24 @@ Bitwise XOR
 ### Description
 
 <span class="type">GMP</span> <span class="methodname">gmp\_xor</span> (
-<span class="methodparam"><span class="type">GMP</span> `$a`</span> ,
-<span class="methodparam"><span class="type">GMP</span> `$b`</span> )
+<span class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num1`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">GMP</span><span class="type">int</span><span
+class="type">string</span></span> `$num2`</span> )
 
 Calculates bitwise exclusive OR (XOR) of two GMP numbers.
 
 ### Parameters
 
-`a`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num1`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
-`b`  
-Either a GMP number <span class="type">resource</span> in PHP 5.5 and
-earlier, a <span class="classname">GMP</span> object in PHP 5.6 and
-later, or a numeric string provided that it is possible to convert the
-latter to a number.
+`num2`  
+A <span class="classname">GMP</span> object, an <span
+class="type">int</span> or a numeric <span class="type">string</span>.
 
 ### Return Values
 
