@@ -849,6 +849,13 @@ Returns the name of the current session. If `name` is given and function
 updates the session name, name of the *old* session is returned, or
 **`false`** on failure.
 
+### Changelog
+
+| Version | Description                                                                                                                                                                                                                                                                                                                                 |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | `name` is nullable now.                                                                                                                                                                                                                                                                                                                     |
+| 7.2.0   | <span class="function">session\_name</span> checks session status, previously it only checked cookie status. Therefore, older <span class="function">session\_name</span> allows to call <span class="function">session\_name</span> after <span class="function">session\_start</span> which may crash PHP and may result in misbehaviors. |
+
 ### Examples
 
 **Example \#1 <span class="function">session\_name</span> example**
@@ -863,13 +870,6 @@ $previous_name = session_name("WebsiteID");
 echo "The previous session name was $previous_name<br />";
 ?>
 ```
-
-### Changelog
-
-| Version | Description                                                                                                                                                                                                                                                                                                                                 |
-|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| 8.0.0   | `name` is nullable now.                                                                                                                                                                                                                                                                                                                     |
-| 7.2.0   | <span class="function">session\_name</span> checks session status, previously it only checked cookie status. Therefore, older <span class="function">session\_name</span> allows to call <span class="function">session\_name</span> after <span class="function">session\_start</span> which may crash PHP and may result in misbehaviors. |
 
 ### See Also
 
@@ -1279,6 +1279,8 @@ class="type">null</span></span> `$secure`<span class="initializer"> =
 class="type"><span class="type">bool</span><span
 class="type">null</span></span> `$httponly`<span class="initializer"> =
 **`null`**</span></span> \]\]\]\] )
+
+Alternative signature available as of PHP 7.3.0:
 
 <span class="type">bool</span> <span
 class="methodname">session\_set\_cookie\_params</span> ( <span

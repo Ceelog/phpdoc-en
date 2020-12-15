@@ -2242,6 +2242,8 @@ class="type">bool</span> `$secure`<span class="initializer"> =
 class="type">bool</span> `$httponly`<span class="initializer"> =
 **`false`**</span></span> \]\]\]\]\]\] )
 
+Alternative signature available as of PHP 7.3.0:
+
 <span class="type">bool</span> <span
 class="methodname">setrawcookie</span> ( <span class="methodparam"><span
 class="type">string</span> `$name`</span> \[, <span

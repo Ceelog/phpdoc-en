@@ -1744,21 +1744,21 @@ The above example will output:
 
     array(3) {
       [0]=>
-      &object(ReflectionMethod)#2 (2) {
+      object(ReflectionMethod)#2 (2) {
         ["name"]=>
         string(11) "firstMethod"
         ["class"]=>
         string(5) "Apple"
       }
       [1]=>
-      &object(ReflectionMethod)#3 (2) {
+      object(ReflectionMethod)#3 (2) {
         ["name"]=>
         string(12) "secondMethod"
         ["class"]=>
         string(5) "Apple"
       }
       [2]=>
-      &object(ReflectionMethod)#4 (2) {
+      object(ReflectionMethod)#4 (2) {
         ["name"]=>
         string(11) "thirdMethod"
         ["class"]=>
@@ -1787,14 +1787,14 @@ The above example will output:
 
     array(2) {
       [0]=>
-      &object(ReflectionMethod)#2 (2) {
+      object(ReflectionMethod)#2 (2) {
         ["name"]=>
         string(12) "secondMethod"
         ["class"]=>
         string(5) "Apple"
       }
       [1]=>
-      &object(ReflectionMethod)#3 (2) {
+      object(ReflectionMethod)#3 (2) {
         ["name"]=>
         string(11) "thirdMethod"
         ["class"]=>
@@ -4595,7 +4595,7 @@ The above example will output something similar to:
 
     array(1) {
       ["XMLWriter"]=>
-      &object(ReflectionClass)#2 (1) {
+      object(ReflectionClass)#2 (1) {
         ["name"]=>
         string(9) "XMLWriter"
       }
