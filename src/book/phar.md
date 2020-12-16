@@ -208,9 +208,9 @@ Phar
     -   [PharData::setDefaultStub](/class/phardata.html#PharData::setDefaultStub)
         — Dummy function (Phar::setDefaultStub is not valid for
         PharData)
-    -   [Phar::setMetadata](/class/phardata.html#Phar::setMetadata) —
-        Sets phar archive meta-data
-    -   [Phar::setSignatureAlgorithm](/class/phardata.html#Phar::setSignatureAlgorithm)
+    -   [PharData::setMetadata](/class/phardata.html#PharData::setMetadata)
+        — Sets phar archive meta-data
+    -   [PharData::setSignatureAlgorithm](/class/phardata.html#PharData::setSignatureAlgorithm)
         — Set the signature algorithm for a phar and apply it
     -   [PharData::setStub](/class/phardata.html#PharData::setStub) —
         Dummy function (Phar::setStub is not valid for PharData)
@@ -4201,6 +4201,9 @@ Class synopsis
 
 <span class="ooclass"> class **PharData** </span> <span class="ooclass">
 <span class="modifier">extends</span> **RecursiveDirectoryIterator**
+</span> <span class="oointerface">implements <span
+class="interfacename">Countable</span> </span> <span
+class="oointerface">, <span class="interfacename">ArrayAccess</span>
 </span> {
 
 /\* Inherited constants \*/
@@ -4251,46 +4254,47 @@ Class synopsis
 
 /\* Methods \*/
 
-<span class="type">void</span> <span
-class="methodname">addEmptyDir</span> ( <span class="methodparam"><span
-class="type">string</span> `$dirname`</span> )
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">addEmptyDir</span> ( <span
+class="methodparam"><span class="type">string</span> `$dirname`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::addFile</span> ( <span
+<span class="methodname">addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$file`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$localname`</span> \] )
 
-<span class="type">void</span> <span
-class="methodname">addFromString</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">addFromString</span> ( <span
 class="methodparam"><span class="type">string</span> `$localname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$contents`</span> )
 
 <span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Phar::buildFromDirectory</span> ( <span
+<span class="methodname">buildFromDirectory</span> ( <span
 class="methodparam"><span class="type">string</span> `$base_dir`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$regex`</span> \] )
 
-<span class="type">array</span> <span
-class="methodname">buildFromIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">buildFromIterator</span> ( <span
 class="methodparam"><span class="type">Iterator</span> `$iter`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$base_directory`</span> \] )
 
-<span class="type">PharData</span> <span
-class="methodname">compress</span> ( <span class="methodparam"><span
-class="type">int</span> `$compression`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$extension`</span>
-\] )
+<span class="modifier">public</span> <span class="type">PharData</span>
+<span class="methodname">compress</span> ( <span
+class="methodparam"><span class="type">int</span> `$compression`</span>
+\[, <span class="methodparam"><span class="type">string</span>
+`$extension`</span> \] )
 
-<span class="type">void</span> <span
-class="methodname">compressFiles</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">compressFiles</span> ( <span
 class="methodparam"><span class="type">int</span> `$compression`</span>
 )
 
-<span class="methodname">\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$fname`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -4298,205 +4302,44 @@ class="methodparam"><span class="type">string</span> `$fname`</span> \[,
 class="type">int</span> `$format`<span class="initializer"> =
 **`Phar::TAR`**</span></span> \]\]\] )
 
-<span class="type">PharData</span> <span
-class="methodname">convertToData</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$format`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$compression`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$extension`</span> \]\]\] )
-
-<span class="type">Phar</span> <span
-class="methodname">convertToExecutable</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$format`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$compression`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$extension`</span> \]\]\] )
-
-<span class="type">bool</span> <span class="methodname">copy</span> (
-<span class="methodparam"><span class="type">string</span>
-`$oldfile`</span> , <span class="methodparam"><span
-class="type">string</span> `$newfile`</span> )
-
-<span class="type">PharData</span> <span
-class="methodname">decompress</span> (\[ <span class="methodparam"><span
-class="type">string</span> `$extension`</span> \] )
-
-<span class="type">bool</span> <span
-class="methodname">decompressFiles</span> ( <span
-class="methodparam">void</span> )
-
-<span class="type">bool</span> <span
-class="methodname">delMetadata</span> ( <span
-class="methodparam">void</span> )
-
-<span class="type">bool</span> <span class="methodname">delete</span> (
-<span class="methodparam"><span class="type">string</span>
-`$entry`</span> )
-
-<span class="type">bool</span> <span class="methodname">extractTo</span>
-( <span class="methodparam"><span class="type">string</span>
-`$pathto`</span> \[, <span class="methodparam"><span class="type"><span
-class="type">string</span><span class="type">array</span><span
-class="type">null</span></span> `$files`<span class="initializer"> =
-**`null`**</span></span> \[, <span class="methodparam"><span
-class="type">bool</span> `$overwrite`<span class="initializer"> =
-**`false`**</span></span> \]\] )
-
-<span class="type">bool</span> <span
-class="methodname">isWritable</span> ( <span
-class="methodparam">void</span> )
-
-<span class="type">void</span> <span class="methodname">offsetSet</span>
-( <span class="methodparam"><span class="type">string</span>
-`$offset`</span> , <span class="methodparam"><span
-class="type">string</span> `$value`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">offsetUnset</span> ( <span class="methodparam"><span
-class="type">string</span> `$offset`</span> )
-
-<span class="type">bool</span> <span class="methodname">setAlias</span>
-( <span class="methodparam"><span class="type">string</span>
-`$alias`</span> )
-
-<span class="type">bool</span> <span
-class="methodname">setDefaultStub</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$index`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$webindex`</span> \]\] )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setMetadata</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$metadata`</span> )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setSignatureAlgorithm</span> ( <span
-class="methodparam"><span class="type">int</span> `$sigtype`</span> )
-
-<span class="type">bool</span> <span class="methodname">setStub</span> (
-<span class="methodparam"><span class="type">string</span>
-`$stub`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$len`<span class="initializer"> =
--1</span></span> \] )
-
-/\* Inherited methods \*/
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::addEmptyDir</span> ( <span
-class="methodparam"><span class="type">string</span> `$dirname`</span> )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::addFile</span> ( <span
-class="methodparam"><span class="type">string</span> `$file`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$localname`</span> \] )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::addFromString</span> ( <span
-class="methodparam"><span class="type">string</span> `$localname`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$contents`</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">string</span>
-<span class="methodname">Phar::apiVersion</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Phar::buildFromDirectory</span> ( <span
-class="methodparam"><span class="type">string</span> `$base_dir`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$regex`</span> \] )
-
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Phar::buildFromIterator</span> ( <span
-class="methodparam"><span class="type">Iterator</span> `$iter`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$base_directory`</span> \] )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::canCompress</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$type`<span
-class="initializer"> = 0</span></span> \] )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::canWrite</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">Phar</span>
-<span class="methodname">Phar::compress</span> ( <span
-class="methodparam"><span class="type">int</span> `$compression`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$extension`</span> \] )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::compressFiles</span> ( <span
-class="methodparam"><span class="type">int</span> `$compression`</span>
-)
-
-<span class="modifier">public</span> <span
-class="methodname">Phar::\_\_construct</span> ( <span
-class="methodparam"><span class="type">string</span> `$fname`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$flags`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$alias`</span> \]\] )
-
 <span class="modifier">public</span> <span class="type">PharData</span>
-<span class="methodname">Phar::convertToData</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$format`<span
-class="initializer"> = 9021976</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$compression`<span
-class="initializer"> = 9021976</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$extension`</span>
-\]\]\] )
+<span class="methodname">convertToData</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$format`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$compression`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$extension`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">Phar</span>
-<span class="methodname">Phar::convertToExecutable</span> (\[ <span
-class="methodparam"><span class="type">int</span> `$format`<span
-class="initializer"> = 9021976</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$compression`<span
-class="initializer"> = 9021976</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$extension`</span>
-\]\]\] )
+<span class="methodname">convertToExecutable</span> (\[ <span
+class="methodparam"><span class="type">int</span> `$format`</span> \[,
+<span class="methodparam"><span class="type">int</span>
+`$compression`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$extension`</span> \]\]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::copy</span> ( <span
-class="methodparam"><span class="type">string</span> `$oldfile`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$newfile`</span> )
+<span class="methodname">copy</span> ( <span class="methodparam"><span
+class="type">string</span> `$oldfile`</span> , <span
+class="methodparam"><span class="type">string</span> `$newfile`</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
-class="methodname">Phar::count</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">string</span>
-<span class="methodname">Phar::createDefaultStub</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$indexfile`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$webindexfile`</span> \]\] )
-
-<span class="modifier">public</span> <span class="type">Phar</span>
-<span class="methodname">Phar::decompress</span> (\[ <span
+<span class="modifier">public</span> <span class="type">PharData</span>
+<span class="methodname">decompress</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::decompressFiles</span> ( <span
+<span class="methodname">decompressFiles</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::delMetadata</span> ( <span
+<span class="methodname">delMetadata</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::delete</span> ( <span
-class="methodparam"><span class="type">string</span> `$entry`</span> )
+<span class="methodname">delete</span> ( <span class="methodparam"><span
+class="type">string</span> `$entry`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::extractTo</span> ( <span
+<span class="methodname">extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
@@ -4505,176 +4348,43 @@ class="type">null</span></span> `$files`<span class="initializer"> =
 class="type">bool</span> `$overwrite`<span class="initializer"> =
 **`false`**</span></span> \]\] )
 
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getAlias</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">Phar::getMetadata</span> ( <span
-class="methodparam">void</span> )
-
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::getModified</span> ( <span
+<span class="methodname">isWritable</span> ( <span
 class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getPath</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Phar::getSignature</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getStub</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">array</span>
-<span class="methodname">Phar::getSupportedCompression</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">array</span>
-<span class="methodname">Phar::getSupportedSignatures</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">string</span>
-<span class="methodname">Phar::getVersion</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::hasMetadata</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">void</span>
-<span class="methodname">Phar::interceptFileFuncs</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::isBuffering</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">Phar::isCompressed</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::isFileFormat</span> ( <span
-class="methodparam"><span class="type">int</span> `$format`</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::isValidPharFilename</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$executable`<span class="initializer"> = **`true`**</span></span> \] )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::isWritable</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::loadPhar</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$alias`</span> \] )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::mapPhar</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$alias`</span> \[,
-<span class="methodparam"><span class="type">int</span>
-`$dataoffset`<span class="initializer"> = 0</span></span> \]\] )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">void</span>
-<span class="methodname">Phar::mount</span> ( <span
-class="methodparam"><span class="type">string</span> `$pharpath`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$externalpath`</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">void</span>
-<span class="methodname">Phar::mungServer</span> ( <span
-class="methodparam"><span class="type">array</span> `$munglist`</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::offsetExists</span> ( <span
-class="methodparam"><span class="type">string</span> `$offset`</span> )
-
-<span class="modifier">public</span> <span
-class="type">PharFileInfo</span> <span
-class="methodname">Phar::offsetGet</span> ( <span
-class="methodparam"><span class="type">string</span> `$offset`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::offsetSet</span> ( <span
+<span class="methodname">offsetSet</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::offsetUnset</span> ( <span
+<span class="methodname">offsetUnset</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">string</span>
-<span class="methodname">Phar::running</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$retphar`<span
-class="initializer"> = **`true`**</span></span> \] )
-
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::setAlias</span> ( <span
+<span class="methodname">setAlias</span> ( <span
 class="methodparam"><span class="type">string</span> `$alias`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::setDefaultStub</span> (\[ <span
+<span class="methodname">setDefaultStub</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$webindex`</span> \]\] )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setMetadata</span> ( <span
+<span class="methodname">setMetadata</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$metadata`</span> )
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setSignatureAlgorithm</span> ( <span
-class="methodparam"><span class="type">int</span> `$sigtype`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`$privatekey`</span> \] )
+<span class="methodname">setSignatureAlgorithm</span> ( <span
+class="methodparam"><span class="type">int</span> `$sigtype`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">Phar::setStub</span> ( <span
+<span class="methodname">setStub</span> ( <span
 class="methodparam"><span class="type">string</span> `$stub`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$len`<span
 class="initializer"> = -1</span></span> \] )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::startBuffering</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::stopBuffering</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">bool</span>
-<span class="methodname">Phar::unlinkArchive</span> ( <span
-class="methodparam"><span class="type">string</span> `$archive`</span> )
-
-<span class="modifier">final</span> <span class="modifier">public</span>
-<span class="modifier">static</span> <span class="type">void</span>
-<span class="methodname">Phar::webPhar</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$alias`</span> \[,
-<span class="methodparam"><span class="type">string</span> `$index`<span
-class="initializer"> = "index.php"</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$f404`</span> \[,
-<span class="methodparam"><span class="type">array</span>
-`$mimetypes`</span> \[, <span class="methodparam"><span
-class="type">callable</span> `$rewrites`</span> \]\]\]\]\] )
 
 }
 
@@ -4685,8 +4395,8 @@ Add an empty directory to the tar/zip archive
 
 ### Description
 
-<span class="type">void</span> <span
-class="methodname">PharData::addEmptyDir</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">PharData::addEmptyDir</span> ( <span
 class="methodparam"><span class="type">string</span> `$dirname`</span> )
 
 With this method, an empty directory is created with path *dirname*.
@@ -4735,7 +4445,7 @@ Add a file from the filesystem to the tar/zip archive
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::addFile</span> ( <span
+<span class="methodname">PharData::addFile</span> ( <span
 class="methodparam"><span class="type">string</span> `$file`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$localname`</span> \] )
@@ -4798,8 +4508,8 @@ Add a file from the filesystem to the tar/zip archive
 
 ### Description
 
-<span class="type">void</span> <span
-class="methodname">PharData::addFromString</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">PharData::addFromString</span> ( <span
 class="methodparam"><span class="type">string</span> `$localname`</span>
 , <span class="methodparam"><span class="type">string</span>
 `$contents`</span> )
@@ -4859,7 +4569,7 @@ Construct a tar/zip archive from the files within a directory
 ### Description
 
 <span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">Phar::buildFromDirectory</span> ( <span
+<span class="methodname">PharData::buildFromDirectory</span> ( <span
 class="methodparam"><span class="type">string</span> `$base_dir`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$regex`</span> \] )
@@ -4923,8 +4633,8 @@ Construct a tar or zip archive from an iterator
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">PharData::buildFromIterator</span> ( <span
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">PharData::buildFromIterator</span> ( <span
 class="methodparam"><span class="type">Iterator</span> `$iter`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$base_directory`</span> \] )
@@ -5052,8 +4762,8 @@ Compresses the entire tar/zip archive using Gzip or Bzip2 compression
 
 ### Description
 
-<span class="type">PharData</span> <span
-class="methodname">PharData::compress</span> ( <span
+<span class="modifier">public</span> <span class="type">PharData</span>
+<span class="methodname">PharData::compress</span> ( <span
 class="methodparam"><span class="type">int</span> `$compression`</span>
 \[, <span class="methodparam"><span class="type">string</span>
 `$extension`</span> \] )
@@ -5122,8 +4832,8 @@ Compresses all files in the current tar/zip archive
 
 ### Description
 
-<span class="type">void</span> <span
-class="methodname">PharData::compressFiles</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">PharData::compressFiles</span> ( <span
 class="methodparam"><span class="type">int</span> `$compression`</span>
 )
 
@@ -5226,7 +4936,8 @@ Construct a non-executable tar or zip archive object
 
 ### Description
 
-<span class="methodname">PharData::\_\_construct</span> ( <span
+<span class="modifier">public</span> <span
+class="methodname">PharData::\_\_construct</span> ( <span
 class="methodparam"><span class="type">string</span> `$fname`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$flags`</span>
 \[, <span class="methodparam"><span class="type">string</span>
@@ -5283,8 +4994,8 @@ Convert a phar archive to a non-executable tar or zip file
 
 ### Description
 
-<span class="type">PharData</span> <span
-class="methodname">PharData::convertToData</span> (\[ <span
+<span class="modifier">public</span> <span class="type">PharData</span>
+<span class="methodname">PharData::convertToData</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$format`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$compression`</span> \[, <span class="methodparam"><span
@@ -5379,8 +5090,8 @@ Convert a non-executable tar/zip archive to an executable phar archive
 
 ### Description
 
-<span class="type">Phar</span> <span
-class="methodname">PharData::convertToExecutable</span> (\[ <span
+<span class="modifier">public</span> <span class="type">Phar</span>
+<span class="methodname">PharData::convertToExecutable</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$format`</span> \[,
 <span class="methodparam"><span class="type">int</span>
 `$compression`</span> \[, <span class="methodparam"><span
@@ -5482,8 +5193,8 @@ phar
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::copy</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::copy</span> ( <span
 class="methodparam"><span class="type">string</span> `$oldfile`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$newfile`</span> )
@@ -5546,8 +5257,8 @@ Decompresses the entire Phar archive
 
 ### Description
 
-<span class="type">PharData</span> <span
-class="methodname">PharData::decompress</span> (\[ <span
+<span class="modifier">public</span> <span class="type">PharData</span>
+<span class="methodname">PharData::decompress</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$extension`</span>
 \] )
 
@@ -5615,8 +5326,8 @@ Decompresses all files in the current zip archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::decompressFiles</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::decompressFiles</span> ( <span
 class="methodparam">void</span> )
 
 > **Note**:
@@ -5716,8 +5427,8 @@ Deletes the global metadata of a zip archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::delMetadata</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::delMetadata</span> ( <span
 class="methodparam">void</span> )
 
 > **Note**:
@@ -5778,8 +5489,8 @@ Delete a file within a tar/zip archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::delete</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::delete</span> ( <span
 class="methodparam"><span class="type">string</span> `$entry`</span> )
 
 Delete a file within an archive. This is the functional equivalent of
@@ -5829,8 +5540,8 @@ Extract the contents of a tar/zip archive to a directory
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::extractTo</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::extractTo</span> ( <span
 class="methodparam"><span class="type">string</span> `$pathto`</span>
 \[, <span class="methodparam"><span class="type"><span
 class="type">string</span><span class="type">array</span><span
@@ -5902,8 +5613,8 @@ Returns true if the tar/zip archive can be modified
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::isWritable</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::isWritable</span> ( <span
 class="methodparam">void</span> )
 
 This method returns **`true`** if the tar/zip archive on disk is not
@@ -5932,8 +5643,8 @@ file or string
 
 ### Description
 
-<span class="type">void</span> <span
-class="methodname">PharData::offsetSet</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">PharData::offsetSet</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$value`</span> )
@@ -5992,8 +5703,8 @@ Remove a file from a tar/zip archive
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::offsetUnset</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::offsetUnset</span> ( <span
 class="methodparam"><span class="type">string</span> `$offset`</span> )
 
 This is an implementation of the <span
@@ -6044,8 +5755,8 @@ Dummy function (Phar::setAlias is not valid for PharData)
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::setAlias</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::setAlias</span> ( <span
 class="methodparam"><span class="type">string</span> `$alias`</span> )
 
 Non-executable tar/zip archives cannot have an alias, so this method
@@ -6074,8 +5785,8 @@ Dummy function (Phar::setDefaultStub is not valid for PharData)
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::setDefaultStub</span> (\[ <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::setDefaultStub</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$index`</span> \[,
 <span class="methodparam"><span class="type">string</span>
 `$webindex`</span> \]\] )
@@ -6105,15 +5816,15 @@ Throws <span class="classname">PharException</span> on all method calls
 
 -   <span class="function">Phar::setDefaultStub</span>
 
-Phar::setMetadata
-=================
+PharData::setMetadata
+=====================
 
 Sets phar archive meta-data
 
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setMetadata</span> ( <span
+<span class="methodname">PharData::setMetadata</span> ( <span
 class="methodparam"><span class="type">mixed</span> `$metadata`</span> )
 
 > **Note**:
@@ -6179,15 +5890,15 @@ The above example will output:
 -   <span class="function">Phar::delMetadata</span>
 -   <span class="function">Phar::hasMetadata</span>
 
-Phar::setSignatureAlgorithm
-===========================
+PharData::setSignatureAlgorithm
+===============================
 
 Set the signature algorithm for a phar and apply it
 
 ### Description
 
 <span class="modifier">public</span> <span class="type">void</span>
-<span class="methodname">Phar::setSignatureAlgorithm</span> ( <span
+<span class="methodname">PharData::setSignatureAlgorithm</span> ( <span
 class="methodparam"><span class="type">int</span> `$sigtype`</span> )
 
 > **Note**:
@@ -6199,14 +5910,13 @@ class="methodparam"><span class="type">int</span> `$sigtype`</span> )
 
 Set the signature algorithm for a phar and apply it. The signature
 algorithm must be one of *Phar::MD5*, *Phar::SHA1*, *Phar::SHA256*,
-*Phar::SHA512*, or *Phar::PGP* (pgp not yet supported and falls back to
-SHA-1).
+*Phar::SHA512*, or *Phar::OPENSSL*.
 
 ### Parameters
 
 `sigtype`  
 One of *Phar::MD5*, *Phar::SHA1*, *Phar::SHA256*, *Phar::SHA512*, or
-*Phar::PGP*
+*Phar::OPENSSL*
 
 ### Return Values
 
@@ -6232,8 +5942,8 @@ Dummy function (Phar::setStub is not valid for PharData)
 
 ### Description
 
-<span class="type">bool</span> <span
-class="methodname">PharData::setStub</span> ( <span
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">PharData::setStub</span> ( <span
 class="methodparam"><span class="type">string</span> `$stub`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$len`<span
 class="initializer"> = -1</span></span> \] )
