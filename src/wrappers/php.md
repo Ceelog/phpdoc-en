@@ -93,7 +93,7 @@ to the examples for specifics on using these parameters.
 | Allows Writing                                                                     | *php://stdout*, *php://stderr*, *php://output*, *php://fd*, *php://memory* and *php://temp* only.                         |
 | Allows Appending                                                                   | *php://stdout*, *php://stderr*, *php://output*, *php://fd*, *php://memory* and *php://temp* only. (Equivalent to writing) |
 | Allows Simultaneous Reading and Writing                                            | *php://fd*, *php://memory* and *php://temp* only.                                                                         |
-| Supports <span class="function">stat</span>                                        | *php://memory* and *php://temp* only.                                                                                     |
+| Supports <span class="function">stat</span>                                        | No. However, *php://memory* and *php://temp* support <span class="function">fstat</span>.                                 |
 | Supports <span class="function">unlink</span>                                      | No                                                                                                                        |
 | Supports <span class="function">rename</span>                                      | No                                                                                                                        |
 | Supports <span class="function">mkdir</span>                                       | No                                                                                                                        |

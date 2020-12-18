@@ -18,6 +18,13 @@ cases.
 ?>
 ```
 
+Parentheses are *not* required when nesting into the middle operand, as
+this is always unambiguous and not affected by associativity:
+
+``` php
+1 ? 2 ? 3 : 4 : 5 // ok
+```
+
 #### Array and string offset access using curly braces
 
 The array and string offset access syntax using curly braces is

@@ -2056,8 +2056,6 @@ conversion specifiers can be found at
 |          *%t*          | A Tab character ("\\t")                                                                                                                                 | ---                                                                    |
 |          *%%*          | A literal percentage character ("%")                                                                                                                    | ---                                                                    |
 
-Maximum length of this parameter is 1023 characters.
-
 **Warning**
 Contrary to ISO-9899:1999, Sun Solaris starts with Sunday as 1. As a
 result, *%u* may not function as described in this manual.
@@ -2088,7 +2086,10 @@ class="function">time</span>.
 Returns a string formatted according `format` using the given
 `timestamp` or the current local time if no timestamp is given. Month
 and weekday names and other language-dependent strings respect the
-current locale set with <span class="function">setlocale</span>.
+current locale set with <span class="function">setlocale</span>. The
+function returns **`false`** if `format` is empty, contains unsupported
+conversion specifiers, or if the length of the returned string would be
+greater than *4095*.
 
 ### Errors/Exceptions
 
