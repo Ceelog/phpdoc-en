@@ -206,7 +206,7 @@ Sets the default timezone used by all date/time functions in a script
 <span class="type">bool</span> <span
 class="methodname">date\_default\_timezone\_set</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$timezoneID`</span> )
+`$timezoneId`</span> )
 
 <span class="function">date\_default\_timezone\_set</span> sets the
 default timezone used by all date/time functions.
@@ -225,14 +225,14 @@ the default timezone.
 
 ### Parameters
 
-`timezoneID`  
+`timezoneId`  
 The timezone identifier, like *UTC*, *Africa/Lagos*, *Asia/Hong\_Kong*,
 or *Europe/Lisbon*. The list of valid identifiers is available in the
 <a href="/timezones.html" class="xref">List of Supported Timezones</a>.
 
 ### Return Values
 
-This function returns **`false`** if the `timezoneID` isn't valid, or
+This function returns **`false`** if the `timezoneId` isn't valid, or
 **`true`** otherwise.
 
 ### Examples
@@ -424,8 +424,7 @@ Returns associative array with detailed info about given date/time
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">date\_parse</span> ( <span class="methodparam"><span
 class="type">string</span> `$datetime`</span> )
 
@@ -549,8 +548,7 @@ begin/end
 
 ### Description
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">date\_sun\_info</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span> ,
 <span class="methodparam"><span class="type">float</span>
@@ -712,21 +710,26 @@ Returns time of sunrise for a given day and location
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">date\_sunrise</span> ( <span
 class="methodparam"><span class="type">int</span> `$timestamp`</span>
 \[, <span class="methodparam"><span class="type">int</span>
 `$returnFormat`<span class="initializer"> =
-SUNFUNCS\_RET\_STRING</span></span> \[, <span class="methodparam"><span
-class="type">float</span> `$latitude`<span class="initializer"> =
-ini\_get("date.default\_latitude")</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$longitude`<span
-class="initializer"> = ini\_get("date.default\_longitude")</span></span>
-\[, <span class="methodparam"><span class="type">float</span>
-`$zenith`<span class="initializer"> =
-ini\_get("date.sunrise\_zenith")</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$utcOffset`<span
-class="initializer"> = 0</span></span> \]\]\]\]\] )
+**`SUNFUNCS_RET_STRING`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$latitude`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$longitude`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$zenith`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$utcOffset`<span class="initializer"> = 0</span></span> \]\]\]\]\] )
 
 <span class="function">date\_sunrise</span> returns the sunrise time for
 a given day (specified as a `timestamp`) and location.
@@ -781,6 +784,12 @@ time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
 
+### Changelog
+
+| Version | Description                                                        |
+|---------|--------------------------------------------------------------------|
+| 8.0.0   | `latitude`, `longitude`, `zenith` and `latitude` are nullable now. |
+
 ### Examples
 
 **Example \#1 <span class="function">date\_sunrise</span> example**
@@ -829,19 +838,24 @@ Returns time of sunset for a given day and location
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">int</span><span class="type">float</span><span
+class="type">false</span></span> <span
 class="methodname">date\_sunset</span> ( <span class="methodparam"><span
 class="type">int</span> `$timestamp`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$returnFormat`<span
-class="initializer"> = SUNFUNCS\_RET\_STRING</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$latitude`<span
-class="initializer"> = ini\_get("date.default\_latitude")</span></span>
-\[, <span class="methodparam"><span class="type">float</span>
-`$longitude`<span class="initializer"> =
-ini\_get("date.default\_longitude")</span></span> \[, <span
-class="methodparam"><span class="type">float</span> `$zenith`<span
-class="initializer"> = ini\_get("date.sunset\_zenith")</span></span> \[,
-<span class="methodparam"><span class="type">float</span>
+class="initializer"> = **`SUNFUNCS_RET_STRING`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$latitude`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$longitude`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$zenith`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
 `$utcOffset`<span class="initializer"> = 0</span></span> \]\]\]\]\] )
 
 <span class="function">date\_sunset</span> returns the sunset time for a
@@ -896,6 +910,12 @@ Returns the sunset time in a specified `returnFormat` on success or
 **`false`** on failure. One potential reason for failure is that the sun
 does not set at all, which happens inside the polar circles for part of
 the year.
+
+### Changelog
+
+| Version | Description                                                        |
+|---------|--------------------------------------------------------------------|
+| 8.0.0   | `latitude`, `longitude`, `zenith` and `latitude` are nullable now. |
 
 ### Examples
 
@@ -997,9 +1017,9 @@ Format a local time/date
 
 <span class="type">string</span> <span class="methodname">date</span> (
 <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp`<span class="initializer"> =
-time()</span></span> \] )
+`$format`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns a string formatted according to the given format string using
 the given integer `timestamp` or the current time if no timestamp is
@@ -1014,8 +1034,8 @@ class="function">DateTimeInterface::format</span>.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
@@ -1030,6 +1050,12 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1163,19 +1189,20 @@ Get date/time information
 ### Description
 
 <span class="type">array</span> <span class="methodname">getdate</span>
-(\[ <span class="methodparam"><span class="type">int</span>
-`$timestamp`<span class="initializer"> = time()</span></span> \] )
+(\[ <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns an associative <span class="type">array</span> containing the
-date information of the `timestamp`, or the current local time if no
-`timestamp` is given.
+date information of the `timestamp`, or the current local time if
+`timestamp` is omitted or **`null`**.
 
 ### Parameters
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
@@ -1197,6 +1224,12 @@ are as follows:
 | *"weekday"* | A full textual representation of the day of the week                                                                                               | *Sunday* through *Saturday*                                     |
 | *"month"*   | A full textual representation of a month, such as January or March                                                                                 | *January* through *December*                                    |
 | *0*         | Seconds since the Unix Epoch, similar to the values returned by <span class="function">time</span> and used by <span class="function">date</span>. | System Dependent, typically *-2147483648* through *2147483647*. |
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1301,9 +1334,9 @@ Format a GMT/UTC date/time
 
 <span class="type">string</span> <span class="methodname">gmdate</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp`<span class="initializer"> =
-time()</span></span> \] )
+`$format`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Identical to the <span class="function">date</span> function except that
 the time returned is Greenwich Mean Time (GMT).
@@ -1317,15 +1350,19 @@ function.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
 
-Returns a formatted date string. If a non-numeric value is used for
-`timestamp`, **`false`** is returned and an **`E_WARNING`** level error
-is emitted.
+Returns a formatted date string.
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1355,21 +1392,26 @@ Get Unix timestamp for a GMT date
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">gmmktime</span>
-(\[ <span class="methodparam"><span class="type">int</span> `$hour`<span
-class="initializer"> = gmdate("H")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$minute`<span
-class="initializer"> = gmdate("i")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$second`<span
-class="initializer"> = gmdate("s")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$month`<span
-class="initializer"> = gmdate("n")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = gmdate("j")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$year`<span
-class="initializer"> = gmdate("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$isDST`<span
-class="initializer"> = -1</span></span> \]\]\]\]\]\]\] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">gmmktime</span> ( <span class="methodparam"><span
+class="type">int</span> `$hour`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$minute`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$second`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$month`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span> `$day`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$year`<span class="initializer"> = **`null`**</span></span> \]\]\]\]\]
+)
 
 Identical to <span class="function">mktime</span> except the passed
 parameters represents a GMT date. <span class="function">gmmktime</span>
@@ -1428,7 +1470,15 @@ result.
 
 ### Return Values
 
-Returns a <span class="type">int</span> Unix timestamp.
+Returns a <span class="type">int</span> Unix timestamp on success, or
+**`false`** on failure.
+
+### Changelog
+
+| Version | Description                                                     |
+|---------|-----------------------------------------------------------------|
+| 8.0.0   | `hour` is no longer optional.                                   |
+| 8.0.0   | `minute`, `second`, `month`, `day` and `year` are nullable now. |
 
 ### Examples
 
@@ -1454,11 +1504,13 @@ Format a GMT/UTC time/date according to locale settings
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gmstrftime</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timestamp`<span
-class="initializer"> = time()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Behaves the same as <span class="function">strftime</span> except that
 the time returned is Greenwich Mean Time (GMT). For example, when run in
@@ -1472,8 +1524,8 @@ See description in <span class="function">strftime</span>.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
@@ -1482,7 +1534,13 @@ Returns a string formatted according to the given format string using
 the given `timestamp` or the current local time if no timestamp is
 given. Month and weekday names and other language dependent strings
 respect the current locale set with <span
-class="function">setlocale</span>.
+class="function">setlocale</span>. On failure, **`false`** is returned.
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1507,11 +1565,12 @@ Format a local time/date as integer
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">idate</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">idate</span> (
 <span class="methodparam"><span class="type">string</span>
-`$format`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$timestamp`<span class="initializer"> =
-time()</span></span> \] )
+`$format`</span> \[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns a number formatted according to the given format string using
 the given integer `timestamp` or the current local time if no timestamp
@@ -1547,13 +1606,14 @@ parameter.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
 
-Returns an <span class="type">int</span>.
+Returns an <span class="type">int</span> on success, or **`false`** on
+failure.
 
 As <span class="function">idate</span> always returns an <span
 class="type">int</span> and as they can't start with a "0", <span
@@ -1566,6 +1626,12 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1597,8 +1663,9 @@ Get the local time
 
 <span class="type">array</span> <span
 class="methodname">localtime</span> (\[ <span class="methodparam"><span
-class="type">int</span> `$timestamp`<span class="initializer"> =
-time()</span></span> \[, <span class="methodparam"><span
+class="type"><span class="type">int</span><span
+class="type">null</span></span> `$timestamp`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
 class="type">bool</span> `$associative`<span class="initializer"> =
 **`false`**</span></span> \]\] )
 
@@ -1609,8 +1676,8 @@ identical to that of the structure returned by the C function call.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 `associative`  
@@ -1643,6 +1710,12 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -1801,21 +1874,25 @@ Get Unix timestamp for a date
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">mktime</span> (\[
-<span class="methodparam"><span class="type">int</span> `$hour`<span
-class="initializer"> = date("H")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$minute`<span
-class="initializer"> = date("i")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$second`<span
-class="initializer"> = date("s")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$month`<span
-class="initializer"> = date("n")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = date("j")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$year`<span
-class="initializer"> = date("Y")</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$isDST`<span
-class="initializer"> = -1</span></span> \]\]\]\]\]\]\] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">mktime</span>
+( <span class="methodparam"><span class="type">int</span> `$hour`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$minute`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$second`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$month`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span> `$day`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$year`<span class="initializer"> = **`null`**</span></span> \]\]\]\]\]
+)
 
 Returns the Unix timestamp corresponding to the arguments given. This
 timestamp is a long integer containing the number of seconds between the
@@ -1911,6 +1988,13 @@ time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
 
+### Changelog
+
+| Version | Description                                                     |
+|---------|-----------------------------------------------------------------|
+| 8.0.0   | `hour` is no longer optional.                                   |
+| 8.0.0   | `minute`, `second`, `month`, `day` and `year` are nullable now. |
+
 ### Examples
 
 **Example \#1 <span class="function">mktime</span> basic example**
@@ -1981,11 +2065,13 @@ Format a local time/date according to locale settings
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">strftime</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timestamp`<span
-class="initializer"> = time()</span></span> \] )
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$timestamp`<span class="initializer"> = **`null`**</span></span> \] )
 
 Format the time and/or date according to locale settings. Month and
 weekday names and other language-dependent strings respect the current
@@ -2077,8 +2163,8 @@ implementation of this function.
 
 `timestamp`  
 The optional `timestamp` parameter is an <span class="type">int</span>
-Unix timestamp that defaults to the current local time if a `timestamp`
-is not given. In other words, it defaults to the value of <span
+Unix timestamp that defaults to the current local time if `timestamp` is
+omitted or **`null`**. In other words, it defaults to the value of <span
 class="function">time</span>.
 
 ### Return Values
@@ -2104,6 +2190,12 @@ conversion specifiers will result in 5 **`E_WARNING`** messages and
 return **`false`**. On other operating systems you may not get any
 **`E_WARNING`** messages and the output may contain the conversion
 specifiers unconverted.
+
+### Changelog
+
+| Version | Description                  |
+|---------|------------------------------|
+| 8.0.0   | `timestamp` is nullable now. |
 
 ### Examples
 
@@ -2478,16 +2570,20 @@ timestamp
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">strtotime</span>
-( <span class="methodparam"><span class="type">string</span>
-`$datetime`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$now`<span class="initializer"> =
-time()</span></span> \] )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">strtotime</span> ( <span class="methodparam"><span
+class="type">string</span> `$datetime`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">int</span><span class="type">null</span></span>
+`$baseTimestamp`<span class="initializer"> = **`null`**</span></span> \]
+)
 
 The function expects to be given a string containing an English date
 format and will try to parse that format into a Unix timestamp (the
 number of seconds since January 1 1970 00:00:00 UTC), relative to the
-timestamp given in `now`, or the current time if `now` is not supplied.
+timestamp given in `baseTimestamp`, or the current time if
+`baseTimestamp` is not supplied.
 
 **Warning**
 
@@ -2508,7 +2604,7 @@ to define the default time zone.
 A date/time string. Valid formats are explained in
 <a href="/datetime/formats.html" class="link">Date and Time Formats</a>.
 
-`now`  
+`baseTimestamp`  
 The timestamp which is used as a base for the calculation of relative
 dates.
 
@@ -2522,6 +2618,12 @@ Every call to a date/time function will generate a **`E_NOTICE`** if the
 time zone is not valid, and/or a **`E_STRICT`** or **`E_WARNING`**
 message if using the system settings or the `TZ` environment variable.
 See also <span class="function">date\_default\_timezone\_set</span>
+
+### Changelog
+
+| Version | Description                      |
+|---------|----------------------------------|
+| 8.0.0   | `baseTimestamp` is nullable now. |
 
 ### Examples
 

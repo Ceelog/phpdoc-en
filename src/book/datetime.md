@@ -328,7 +328,8 @@ O"</span> ;
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">DateTime</span>
@@ -342,7 +343,9 @@ class="methodname">createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span class="type">DateTime</span> <span
@@ -357,12 +360,14 @@ class="methodparam"><span class="type">DateTimeInterface</span>
 `$object`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">getLastErrors</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">DateTime</span>
-<span class="methodname">modify</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTime</span><span class="type">false</span></span> <span
+class="methodname">modify</span> ( <span class="methodparam"><span
 class="type">string</span> `$modifier`</span> )
 
 <span class="modifier">public</span> <span
@@ -412,9 +417,8 @@ class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
 class="initializer"> = **`false`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -431,8 +435,8 @@ class="type">DateTimeZone</span><span class="type">false</span></span>
 <span class="methodname">getTimezone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -587,16 +591,19 @@ Object oriented style
 class="methodname">DateTime::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Procedural style
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">date\_create</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Returns new DateTime object.
@@ -614,7 +621,8 @@ parameter.
 A <span class="classname">DateTimeZone</span> object representing the
 timezone of `$datetime`.
 
-If `$timezone` is omitted, the current timezone will be used.
+If `$timezone` is omitted or **`null`**, the current timezone will be
+used.
 
 > **Note**:
 >
@@ -749,7 +757,9 @@ class="methodname">DateTime::createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Procedural style
 
@@ -759,7 +769,9 @@ class="methodname">date\_create\_from\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Returns a new DateTime object representing the date and time specified
 by the `datetime` string, which was formatted in the given `format`.
@@ -831,8 +843,8 @@ String representing the time.
 A <span class="classname">DateTimeZone</span> object representing the
 desired time zone.
 
-If `timezone` is omitted and `datetime` contains no timezone, the
-current timezone will be used.
+If `timezone` is omitted or **`null`** and `datetime` contains no
+timezone, the current timezone will be used.
 
 > **Note**:
 >
@@ -1023,13 +1035,15 @@ Returns the warnings and errors
 Object oriented style
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">DateTime::getLastErrors</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">date\_get\_last\_errors</span> ( <span
 class="methodparam">void</span> )
 
@@ -1042,7 +1056,8 @@ This function has no parameters.
 
 ### Return Values
 
-Returns array containing info about warnings and errors.
+Returns array containing info about warnings and errors, or **`false`**
+if there are neither warnings nor errors.
 
 ### Examples
 
@@ -1107,14 +1122,16 @@ Alters the timestamp
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">DateTime</span>
-<span class="methodname">DateTime::modify</span> ( <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTime</span><span class="type">false</span></span> <span
+class="methodname">DateTime::modify</span> ( <span
 class="methodparam"><span class="type">string</span> `$modifier`</span>
 )
 
 Procedural style
 
-<span class="type">DateTime</span> <span
+<span class="type"><span class="type">DateTime</span><span
+class="type">false</span></span> <span
 class="methodname">date\_modify</span> ( <span class="methodparam"><span
 class="type">DateTime</span> `$object`</span> , <span
 class="methodparam"><span class="type">string</span> `$modifier`</span>
@@ -1977,7 +1994,8 @@ O"</span> ;
 class="methodname">\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
@@ -1986,13 +2004,16 @@ class="methodname">add</span> ( <span class="methodparam"><span
 class="type">DateInterval</span> `$interval`</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span
-class="type">DateTimeImmutable</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">DateTimeImmutable</span><span
+class="type">false</span></span> <span
 class="methodname">createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 <span class="modifier">public</span> <span
 class="modifier">static</span> <span
@@ -2009,7 +2030,8 @@ class="methodparam"><span class="type">DateTime</span> `$object`</span>
 )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">getLastErrors</span> ( <span
 class="methodparam">void</span> )
 
@@ -2037,7 +2059,7 @@ class="type">DateTimeImmutable</span> <span
 class="methodname">setISODate</span> ( <span class="methodparam"><span
 class="type">int</span> `$year`</span> , <span class="methodparam"><span
 class="type">int</span> `$week`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$day`<span
+class="methodparam"><span class="type">int</span> `$dayOfWeek`<span
 class="initializer"> = 1</span></span> \] )
 
 <span class="modifier">public</span> <span
@@ -2072,9 +2094,8 @@ class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
 class="initializer"> = **`false`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -2091,8 +2112,8 @@ class="type">DateTimeZone</span><span class="type">false</span></span>
 <span class="methodname">getTimezone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -2129,16 +2150,19 @@ Object oriented style
 class="methodname">DateTimeImmutable::\_\_construct</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Procedural style
 
-<span class="type">DateTimeImmutable</span> <span
+<span class="type"><span class="type">DateTimeImmutable</span><span
+class="type">false</span></span> <span
 class="methodname">date\_create\_immutable</span> (\[ <span
 class="methodparam"><span class="type">string</span> `$datetime`<span
 class="initializer"> = "now"</span></span> \[, <span
-class="methodparam"><span class="type">DateTimeZone</span>
+class="methodparam"><span class="type"><span
+class="type">DateTimeZone</span><span class="type">null</span></span>
 `$timezone`<span class="initializer"> = **`null`**</span></span> \]\] )
 
 Like <span class="methodname">DateTime::\_\_construct</span> but works
@@ -2157,22 +2181,28 @@ Parses a time string according to a specified format
 Object oriented style
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span
-class="type">DateTimeImmutable</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">DateTimeImmutable</span><span
+class="type">false</span></span> <span
 class="methodname">DateTimeImmutable::createFromFormat</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Procedural style
 
-<span class="type">DateTimeImmutable</span> <span
+<span class="type"><span class="type">DateTimeImmutable</span><span
+class="type">false</span></span> <span
 class="methodname">date\_create\_immutable\_from\_format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> \[, <span class="methodparam"><span
-class="type">DateTimeZone</span> `$timezone`</span> \] )
+class="type"><span class="type">DateTimeZone</span><span
+class="type">null</span></span> `$timezone`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Like <span class="methodname">DateTime::createFromFormat</span> but
 works with <span class="classname">DateTimeImmutable</span>.
@@ -2267,7 +2297,8 @@ Returns the warnings and errors
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">array</span> <span
+class="modifier">static</span> <span class="type"><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">DateTimeImmutable::getLastErrors</span> ( <span
 class="methodparam">void</span> )
 
@@ -2351,8 +2382,8 @@ class="type">DateTimeImmutable</span> <span
 class="methodname">DateTimeImmutable::setISODate</span> ( <span
 class="methodparam"><span class="type">int</span> `$year`</span> , <span
 class="methodparam"><span class="type">int</span> `$week`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$day`<span
-class="initializer"> = 1</span></span> \] )
+<span class="methodparam"><span class="type">int</span>
+`$dayOfWeek`<span class="initializer"> = 1</span></span> \] )
 
 Like <span class="methodname">DateTime::setISODate</span> but works with
 <span class="classname">DateTimeImmutable</span>.
@@ -2501,9 +2532,8 @@ class="type">DateTimeInterface</span> `$targetObject`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$absolute`<span
 class="initializer"> = **`false`**</span></span> \] )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">format</span> ( <span class="methodparam"><span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
 <span class="modifier">public</span> <span class="type"><span
@@ -2511,7 +2541,8 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -2520,8 +2551,8 @@ class="type">DateTimeZone</span><span class="type">false</span></span>
 <span class="methodname">getTimezone</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
 }
@@ -2649,10 +2680,9 @@ class="type">bool</span> `$absolute`<span class="initializer"> =
 
 Procedural style
 
-<span class="type"><span class="type">DateInterval</span><span
-class="type">false</span></span> <span
+<span class="type">DateInterval</span> <span
 class="methodname">date\_diff</span> ( <span class="methodparam"><span
-class="type">DateTimeInterface</span> `$originObject`</span> , <span
+class="type">DateTimeInterface</span> `$baseObject`</span> , <span
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$targetObject`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$absolute`<span class="initializer"> =
@@ -2757,25 +2787,21 @@ Returns date formatted according to given format
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">DateTime::format</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">DateTime::format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">DateTimeImmutable::format</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">DateTimeImmutable::format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">string</span><span class="type">false</span></span> <span
-class="methodname">DateTimeInterface::format</span> ( <span
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">DateTimeInterface::format</span> ( <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
 Procedural style
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">date\_format</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$object`</span> , <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
@@ -2857,7 +2883,13 @@ class="function">gmdate</span>.
 
 ### Return Values
 
-Returns the formatted date string on success or **`false`** on failure.
+Returns the formatted date string on success.
+
+### Changelog
+
+| Version | Description                                                 |
+|---------|-------------------------------------------------------------|
+| 8.0.0   | Prior to this version, **`false`** was returned on failure. |
 
 ### Examples
 
@@ -2928,8 +2960,7 @@ class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">date\_offset\_get</span> ( <span
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$object`</span> )
@@ -2944,8 +2975,13 @@ returned by <span class="function">date\_create</span>
 
 ### Return Values
 
-Returns the timezone offset in seconds from UTC on success or
-**`false`** on failure.
+Returns the timezone offset in seconds from UTC on success.
+
+### Changelog
+
+| Version | Description                                                 |
+|---------|-------------------------------------------------------------|
+| 8.0.0   | Prior to this version, **`false`** was returned on failure. |
 
 ### Examples
 
@@ -3009,7 +3045,8 @@ class="methodparam">void</span> )
 class="methodname">DateTimeImmutable::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">false</span></span> <span
 class="methodname">DateTimeInterface::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -3168,16 +3205,16 @@ The \_\_wakeup handler
 
 ### Description
 
-<span class="modifier">public</span> <span
-class="methodname">DateTime::\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">DateTime::\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">DateTimeImmutable::\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">DateTimeImmutable::\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="methodname">DateTimeInterface::\_\_wakeup</span> ( <span
+<span class="modifier">public</span> <span class="type">void</span>
+<span class="methodname">DateTimeInterface::\_\_wakeup</span> ( <span
 class="methodparam">void</span> )
 
 The
@@ -3264,8 +3301,7 @@ class="methodparam">void</span> )
 <span class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getOffset</span> ( <span class="methodparam"><span
 class="type">DateTimeInterface</span> `$datetime`</span> )
 
@@ -3278,19 +3314,19 @@ class="methodparam"><span class="type">int</span> `$timestampEnd`<span
 class="initializer"> = **`PHP_INT_MAX`**</span></span> \]\] )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">listAbbreviations</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`null`**</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$countryCode`<span class="initializer"> = **`null`**</span></span> \]\]
+)
 
 }
 
@@ -3358,7 +3394,8 @@ class="methodparam"><span class="type">string</span> `$timezone`</span>
 
 Procedural style
 
-<span class="type">DateTimeZone</span> <span
+<span class="type"><span class="type">DateTimeZone</span><span
+class="type">false</span></span> <span
 class="methodname">timezone\_open</span> ( <span
 class="methodparam"><span class="type">string</span> `$timezone`</span>
 )
@@ -3529,16 +3566,14 @@ Returns the timezone offset from GMT
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">DateTimeZone::getOffset</span> ( <span
 class="methodparam"><span class="type">DateTimeInterface</span>
 `$datetime`</span> )
 
 Procedural style
 
-<span class="type"><span class="type">int</span><span
-class="type">false</span></span> <span
+<span class="type">int</span> <span
 class="methodname">timezone\_offset\_get</span> ( <span
 class="methodparam"><span class="type">DateTimeZone</span>
 `$object`</span> , <span class="methodparam"><span
@@ -3559,13 +3594,13 @@ DateTime that contains the date/time to compute the offset from.
 
 ### Return Values
 
-Returns time zone offset in seconds on success or **`false`** on
-failure.
+Returns time zone offset in seconds.
 
 ### Changelog
 
 | Version       | Description                                                                                                                           |
 |---------------|---------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0         | Prior to this version, **`false`** was returned on failure.                                                                           |
 | 5.5.19, 5.6.3 | `datetime` type changed to <span class="interfacename">DateTimeInterface</span>. Previously, <span class="classname">DateTime</span>. |
 
 ### Examples
@@ -3711,15 +3746,13 @@ Returns associative array containing dst, offset and the timezone name
 Object oriented style
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">DateTimeZone::listAbbreviations</span> ( <span
 class="methodparam">void</span> )
 
 Procedural style
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">timezone\_abbreviations\_list</span> ( <span
 class="methodparam">void</span> )
 
@@ -3731,7 +3764,7 @@ class="methodparam">void</span> )
 
 ### Return Values
 
-Returns array on success or **`false`** on failure.
+Returns the array of timezone abbreviations.
 
 ### Examples
 
@@ -3797,23 +3830,25 @@ identifiers
 Object oriented style
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type"><span
-class="type">array</span><span class="type">false</span></span> <span
+class="modifier">static</span> <span class="type">array</span> <span
 class="methodname">DateTimeZone::listIdentifiers</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`null`**</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$countryCode`<span class="initializer"> = **`null`**</span></span> \]\]
+)
 
 Procedural style
 
-<span class="type"><span class="type">array</span><span
-class="type">false</span></span> <span
+<span class="type">array</span> <span
 class="methodname">timezone\_identifiers\_list</span> (\[ <span
 class="methodparam"><span class="type">int</span> `$timezoneGroup`<span
 class="initializer"> = DateTimeZone::ALL</span></span> \[, <span
-class="methodparam"><span class="type">string</span> `$countryCode`<span
-class="initializer"> = **`null`**</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$countryCode`<span class="initializer"> = **`null`**</span></span> \]\]
+)
 
 ### Parameters
 
@@ -3829,7 +3864,14 @@ A two-letter ISO 3166-1 compatible country code.
 
 ### Return Values
 
-Returns array on success or **`false`** on failure.
+Returns the array of timezone identifiers.
+
+### Changelog
+
+| Version | Description                                                 |
+|---------|-------------------------------------------------------------|
+| 8.0.0   | Prior to this version, **`false`** was returned on failure. |
+| 7.1.0   | `countryCode` is nullable now.                              |
 
 ### Examples
 
@@ -3919,7 +3961,8 @@ class="methodparam"><span class="type">string</span> `$duration`</span>
 )
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">DateInterval</span>
+class="modifier">static</span> <span class="type"><span
+class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">createFromDateString</span> ( <span
 class="methodparam"><span class="type">string</span> `$datetime`</span>
 )
@@ -4080,7 +4123,8 @@ Sets up a DateInterval from the relative parts of the string
 ### Description
 
 <span class="modifier">public</span> <span
-class="modifier">static</span> <span class="type">DateInterval</span>
+class="modifier">static</span> <span class="type"><span
+class="type">DateInterval</span><span class="type">false</span></span>
 <span class="methodname">DateInterval::createFromDateString</span> (
 <span class="methodparam"><span class="type">string</span>
 `$datetime`</span> )
@@ -4129,7 +4173,8 @@ $i = DateInterval::createFromDateString('3600 seconds');
 
 ### Return Values
 
-Returns a new <span class="classname">DateInterval</span> instance.
+Returns a new <span class="classname">DateInterval</span> instance on
+success, or **`false`** on failure.
 
 DateInterval::format
 ====================
@@ -4323,12 +4368,14 @@ class="type">DateInterval</span> <span
 class="methodname">getDateInterval</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">getEndDate</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">getRecurrences</span> ( <span
 class="methodparam">void</span> )
 
@@ -4563,8 +4610,9 @@ Gets the end date
 
 Object oriented style
 
-<span class="modifier">public</span> <span
-class="type">DateTimeInterface</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">DateTimeInterface</span><span
+class="type">null</span></span> <span
 class="methodname">DatePeriod::getEndDate</span> ( <span
 class="methodparam">void</span> )
 
@@ -4642,7 +4690,8 @@ Gets the number of recurrences
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type">int</span> <span
+<span class="modifier">public</span> <span class="type"><span
+class="type">int</span><span class="type">null</span></span> <span
 class="methodname">DatePeriod::getRecurrences</span> ( <span
 class="methodparam">void</span> )
 
