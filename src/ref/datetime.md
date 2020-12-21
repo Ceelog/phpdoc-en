@@ -1422,6 +1422,10 @@ Like <span class="function">mktime</span>, arguments may be left out in
 order from right to left, with any omitted arguments being set to the
 current corresponding GMT value.
 
+Calling <span class="function">gmmktime</span> without arguments is
+deprecated. <span class="function">time</span> can be used to get the
+current timestamp.
+
 ### Parameters
 
 `hour`  
@@ -1902,13 +1906,9 @@ Arguments may be left out in order from right to left; any arguments
 thus omitted will be set to the current value according to the local
 date and time.
 
-### Notes
-
-> **Note**:
->
-> As of PHP 5.1, when called with no arguments, <span
-> class="function">mktime</span> throws an **`E_STRICT`** notice: use
-> the <span class="function">time</span> function instead.
+Calling <span class="function">mktime</span> without arguments is
+deprecated. <span class="function">time</span> can be used to get the
+current timestamp.
 
 ### Parameters
 

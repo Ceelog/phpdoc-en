@@ -2541,8 +2541,7 @@ class="type">int</span><span class="type">false</span></span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -3045,8 +3044,7 @@ class="methodparam">void</span> )
 class="methodname">DateTimeImmutable::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span> <span class="type">int</span> <span
 class="methodname">DateTimeInterface::getTimestamp</span> ( <span
 class="methodparam">void</span> )
 
@@ -3066,6 +3064,12 @@ This function has no parameters.
 ### Return Values
 
 Returns the Unix timestamp representing the date.
+
+### Changelog
+
+| Version | Description                                              |
+|---------|----------------------------------------------------------|
+| 8.0.0   | These functions no longer return **`false`** on failure. |
 
 ### Examples
 
