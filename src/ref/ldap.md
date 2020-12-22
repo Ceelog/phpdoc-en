@@ -535,8 +535,11 @@ Retrieve the LDAP pagination cookie
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
-function is highly discouraged.
+This function has been *DEPRECATED* as of PHP 7.4.0, and *REMOVED* as of
+PHP 8.0.0. Instead the `controls` parameter of <span
+class="function">ldap\_search</span> should be used. See also
+<a href="/ldap/controls.html" class="link">LDAP Controls</a> for
+details.
 
 ### Description
 
@@ -587,8 +590,11 @@ Send LDAP pagination control
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.4.0. Relying on this
-function is highly discouraged.
+This function has been *DEPRECATED* as of PHP 7.4.0, and *REMOVED* as of
+PHP 8.0.0. Instead the `controls` parameter of <span
+class="function">ldap\_search</span> should be used. See also
+<a href="/ldap/controls.html" class="link">LDAP Controls</a> for
+details.
 
 ### Description
 

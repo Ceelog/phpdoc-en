@@ -49,7 +49,7 @@ By default an attribute can only be used once per declaration. If the
 attribute should be repeatable on declarations it must be specified as
 part of the bitmask to the *\#\[Attribute\]* declaration.
 
-**Example \#3 Using IS\_REPEATBLE to allow attribute on a declaration
+**Example \#3 Using IS\_REPEATABLE to allow attribute on a declaration
 multiple times**
 
 ``` php

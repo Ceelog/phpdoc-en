@@ -35,7 +35,7 @@ or the
 
 **What is the relation between the versions?**  
 PHP/FI 2.0 is an early and no longer supported version of PHP. PHP 3 is
-the successor to PHP/FI 2.0 and is a lot nicer. PHP 7 is the current
+the successor to PHP/FI 2.0 and is a lot nicer. PHP 8 is the current
 generation of PHP, which uses the Zend engine 3 which, among other
 things, offers many additional
 <a href="/language/oop5.html" class="link">OOP</a> features.
