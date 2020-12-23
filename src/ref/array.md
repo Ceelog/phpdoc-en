@@ -5281,8 +5281,28 @@ element order is significant.
 The input array.
 
 `flags`  
-You may modify the behavior of the sort using the optional parameter
-`flags`, for details see <span class="function">sort</span>.
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### Return Values
 
@@ -5347,8 +5367,28 @@ order is significant.
 The input array.
 
 `flags`  
-You may modify the behavior of the sort using the optional parameter
-`flags`, for details see <span class="function">sort</span>.
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### Return Values
 
@@ -6292,8 +6332,28 @@ correlations. This is useful mainly for associative arrays.
 The input array.
 
 `flags`  
-You may modify the behavior of the sort using the optional parameter
-`flags`, for details see <span class="function">sort</span>.
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### Return Values
 
@@ -6349,8 +6409,28 @@ useful mainly for associative arrays.
 The input array.
 
 `flags`  
-You may modify the behavior of the sort using the optional parameter
-`flags`, for details see <span class="function">sort</span>.
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### Return Values
 
@@ -7184,8 +7264,28 @@ This function sorts an array in reverse order (highest to lowest).
 The input array.
 
 `flags`  
-You may modify the behavior of the sort using the optional parameter
-`flags`, for details see <span class="function">sort</span>.
+The optional second parameter `flags` may be used to modify the sorting
+behavior using these values:
+
+Sorting type flags:
+
+-   <span class="simpara">**`SORT_REGULAR`** - compare items normally;
+    the details are described in the
+    <a href="/language/operators/comparison.html" class="link">comparison operators</a>
+    section</span>
+-   <span class="simpara">**`SORT_NUMERIC`** - compare items
+    numerically</span>
+-   <span class="simpara">**`SORT_STRING`** - compare items as
+    strings</span>
+-   <span class="simpara"> **`SORT_LOCALE_STRING`** - compare items as
+    strings, based on the current locale. It uses the locale, which can
+    be changed using <span class="function">setlocale</span> </span>
+-   <span class="simpara"> **`SORT_NATURAL`** - compare items as strings
+    using "natural ordering" like <span class="function">natsort</span>
+    </span>
+-   <span class="simpara"> **`SORT_FLAG_CASE`** - can be combined
+    (bitwise OR) with **`SORT_STRING`** or **`SORT_NATURAL`** to sort
+    strings case-insensitively </span>
 
 ### Return Values
 
