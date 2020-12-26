@@ -22,7 +22,6 @@ MySQL Drivers and Plugins
     -   [Notes](/set/mysqlinfo.html#Notes)
     -   [The MySQLi Extension Function
         Summary](/set/mysqlinfo.html#The%20MySQLi%20Extension%20Function%20Summary)
-    -   [Examples](/set/mysqlinfo.html#Examples)
     -   [mysqli](/set/mysqlinfo.html#mysqli) — The mysqli class
     -   [mysqli\_stmt](/set/mysqlinfo.html#mysqli_stmt) — The
         mysqli\_stmt class
@@ -683,9 +682,6 @@ MySQL Improved Extension
 -   [Notes](/set/mysqlinfo.html#Notes)
 -   [The MySQLi Extension Function
     Summary](/set/mysqlinfo.html#The%20MySQLi%20Extension%20Function%20Summary)
--   [Examples](/set/mysqlinfo.html#Examples)
-    -   [MySQLi extension basic
-        examples](/set/mysqlinfo.html#MySQLi%20extension%20basic%20examples)
 -   [mysqli](/set/mysqlinfo.html#mysqli) — The mysqli class
     -   [mysqli::$affected\_rows](/set/mysqlinfo.html#mysqli::$affected_rows)
         — Gets the number of affected rows in a previous MySQL operation
@@ -4125,120 +4121,6 @@ NOT DOCUMENTED
 >
 > Alias functions are provided for backward compatibility purposes only.
 > Do not use them in new projects.
-
-Examples
-========
-
-**Table of Contents**
-
--   [MySQLi extension basic
-    examples](/set/mysqlinfo.html#MySQLi%20extension%20basic%20examples)
-
-MySQLi extension basic examples
--------------------------------
-
-This example shows how to connect, execute a query, use basic error
-handling, print resulting rows, and disconnect from a MySQL database.
-
-This example uses the freely available Sakila database that can be
-downloaded from
-<a href="http://dev.mysql.com/doc/sakila/en/index.html" class="link external">» dev.mysql.com, as described here</a>.
-To get this example to work, (a) install sakila and (b) modify the
-connection variables (host, your\_user, your\_pass).
-
-**Example \#1 MySQLi extension overview example**
-
-``` php
-<?php
-// Let's pass in a $_GET variable to our example, in this case
-// it's aid for actor_id in our Sakila database. Let's make it
-// default to 1, and cast it to an integer as to avoid SQL injection
-// and/or related security problems. Handling all of this goes beyond
-// the scope of this simple example. Example:
-//   http://example.org/script.php?aid=42
-if (isset($_GET['aid']) && is_numeric($_GET['aid'])) {
-    $aid = (int) $_GET['aid'];
-} else {
-    $aid = 1;
-}
-
-// Connecting to and selecting a MySQL database named sakila
-// Hostname: 127.0.0.1, username: your_user, password: your_pass, db: sakila
-$mysqli = new mysqli('127.0.0.1', 'your_user', 'your_pass', 'sakila');
-
-// Oh no! A connect_errno exists so the connection attempt failed!
-if ($mysqli->connect_errno) {
-    // The connection failed. What do you want to do? 
-    // You could contact yourself (email?), log the error, show a nice page, etc.
-    // You do not want to reveal sensitive information
-
-    // Let's try this:
-    echo "Sorry, this website is experiencing problems.";
-
-    // Something you should not do on a public site, but this example will show you
-    // anyways, is print out MySQL error related information -- you might log this
-    echo "Error: Failed to make a MySQL connection, here is why: \n";
-    echo "Errno: " . $mysqli->connect_errno . "\n";
-    echo "Error: " . $mysqli->connect_error . "\n";
-    
-    // You might want to show them something nice, but we will simply exit
-    exit;
-}
-
-// Perform an SQL query
-$sql = "SELECT actor_id, first_name, last_name FROM actor WHERE actor_id = $aid";
-if (!$result = $mysqli->query($sql)) {
-    // Oh no! The query failed. 
-    echo "Sorry, the website is experiencing problems.";
-
-    // Again, do not do this on a public site, but we'll show you how
-    // to get the error information
-    echo "Error: Our query failed to execute and here is why: \n";
-    echo "Query: " . $sql . "\n";
-    echo "Errno: " . $mysqli->errno . "\n";
-    echo "Error: " . $mysqli->error . "\n";
-    exit;
-}
-
-// Phew, we made it. We know our MySQL connection and query 
-// succeeded, but do we have a result?
-if ($result->num_rows === 0) {
-    // Oh, no rows! Sometimes that's expected and okay, sometimes
-    // it is not. You decide. In this case, maybe actor_id was too
-    // large? 
-    echo "We could not find a match for ID $aid, sorry about that. Please try again.";
-    exit;
-}
-
-// Now, we know only one result will exist in this example so let's 
-// fetch it into an associated array where the array's keys are the 
-// table's column names
-$actor = $result->fetch_assoc();
-echo "Sometimes I see " . $actor['first_name'] . " " . $actor['last_name'] . " on TV.";
-
-// Now, let's fetch five random actors and output their names to a list.
-// We'll add less error handling here as you can do that on your own now
-$sql = "SELECT actor_id, first_name, last_name FROM actor ORDER BY rand() LIMIT 5";
-if (!$result = $mysqli->query($sql)) {
-    echo "Sorry, the website is experiencing problems.";
-    exit;
-}
-
-// Print our 5 random actors in a list, and link to each actor
-echo "<ul>\n";
-while ($actor = $result->fetch_assoc()) {
-    echo "<li><a href='" . $_SERVER['SCRIPT_FILENAME'] . "?aid=" . $actor['actor_id'] . "'>\n";
-    echo $actor['first_name'] . ' ' . $actor['last_name'];
-    echo "</a></li>\n";
-}
-echo "</ul>\n";
-
-// The script will automatically free the result and close the MySQL
-// connection when it exits, but let's just do it anyways
-$result->free();
-$mysqli->close();
-?>
-```
 
 Introduction
 ------------
@@ -40747,7 +40629,7 @@ candidates down to one for statement execution.
 <td><p>One or more node groups must be defined. A node group can have an arbitrary user defined name. The name is used in combination with a SQL hint to restrict query execution to the nodes listed for the node group. To run a query on any of the servers of a node group, the query must begin with the SQL hint <em>/*user defined node group name*/</em>. Please note, no white space is allowed around <em>user defined node group name</em>. Because <em>user defined node group name</em> is used as-is as part of a SQL hint, you should choose the name that is compliant with the SQL language.</p>
 <p>Each node group entry must contain a list of <em>master</em> servers. Additional <em>slave</em> servers are allowed. Failing to provide a list of <em>master</em> for a node group <em>name_of_group</em> may cause an error of type <strong><code>E_RECOVERABLE_ERROR</code></strong> like <em>(mysqlnd_ms) No masters configured in node group 'name_of_group' for 'node_groups' filter</em>.</p>
 <p>The list of master and slave servers must reference corresponding entries in the <a href="/set/mysqlinfo.html#" class="link">global master</a> respectively <a href="/set/mysqlinfo.html#" class="link">slave</a> server list. Referencing an unknown server in either of the both server lists may cause an <strong><code>E_RECOVERABLE_ERROR</code></strong> error like <em>(mysqlnd_ms) Unknown master 'server_alias_name' (section 'name_of_group') in 'node_groups' filter configuration</em>.</p>
-<div id="example-2094" class="example">
+<div id="example-2093" class="example">
 <p><strong>Example #23 Manual partitioning</strong></p>
 <div class="example-contents">
 <div class="inicode">
@@ -40836,7 +40718,7 @@ file is the combination of eventual consistency and maximum slave lag.
 <td><p>Request eventual consistency. Allows the use of all master and slave servers. Data returned may or may not be current.</p>
 <p>Eventual consistency accepts an optional <em>age</em> parameter. If <em>age</em> is given the plugin considers only slaves for reading for which MySQL replication reports a slave lag less or equal to <em>age</em>. The replication lag is measure using <em>SHOW SLAVE STATUS</em>. If the plugin fails to fetch the replication lag, the slave tested is skipped. Implementation details and tips are given in the <a href="/set/mysqlinfo.html#Service%20level%20and%20consistency" class="link">quality of service concepts section</a>.</p>
 <p>Please note, if a filter chain generates an empty slave list and the PHP configuration directive <em>mysqlnd_ms.multi_master=0</em> is used, the plugin may emit a warning.</p>
-<div id="example-2095" class="example">
+<div id="example-2094" class="example">
 <p><strong>Example #24 Global limit on slave lag</strong></p>
 <div class="example-contents">
 <div class="inicode">

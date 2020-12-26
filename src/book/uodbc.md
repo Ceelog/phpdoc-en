@@ -464,12 +464,12 @@ Toggle autocommit behaviour
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">bool</span></span> <span
 class="methodname">odbc\_autocommit</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$OnOff`<span class="initializer"> =
-**`false`**</span></span> \] )
+class="methodparam"><span class="type">resource</span> `$odbc`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$enable`<span class="initializer"> = **`false`**</span></span> \] )
 
 Toggles autocommit behaviour.
 
@@ -478,21 +478,21 @@ equivalent with starting a transaction.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`OnOff`  
-If `OnOff` is **`true`**, auto-commit is enabled, if it is **`false`**
+`enable`  
+If `enable` is **`true`**, auto-commit is enabled, if it is **`false`**
 auto-commit is disabled.
 
 ### Return Values
 
-Without the `OnOff` parameter, this function returns auto-commit status
-for `connection_id`. Non-zero is returned if auto-commit is on, 0 if it
-is off, or **`false`** if an error occurs.
+Without the `enable` parameter, this function returns auto-commit status
+for `odbc`. Non-zero is returned if auto-commit is on, 0 if it is off,
+or **`false`** if an error occurs.
 
-If `OnOff` is set, this function returns **`true`** on success and
+If `enable` is set, this function returns **`true`** on success and
 **`false`** on failure.
 
 ### See Also
@@ -510,7 +510,7 @@ Handling of binary column data
 <span class="type">bool</span> <span
 class="methodname">odbc\_binmode</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
+`$statement`</span> , <span class="methodparam"><span
 class="type">int</span> `$mode`</span> )
 
 Controls handling of binary column data. ODBC SQL types affected are
@@ -546,10 +546,10 @@ data are sent directly to the client (i.e. printed).
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-If `result_id` is *0*, the settings apply as default for new results.
+If `statement` is *0*, the settings apply as default for new results.
 
 `mode`  
 Possible values for `mode` are:
@@ -607,13 +607,13 @@ Close an ODBC connection
 
 <span class="type">void</span> <span
 class="methodname">odbc\_close</span> ( <span class="methodparam"><span
-class="type">resource</span> `$connection_id`</span> )
+class="type">resource</span> `$odbc`</span> )
 
 Closes down the connection to the database server.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -638,19 +638,20 @@ Lists columns and associated privileges for the given table
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_columnprivileges</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$table`</span> ,
 <span class="methodparam"><span class="type">string</span>
-`$table_name`</span> , <span class="methodparam"><span
-class="type">string</span> `$column_name`</span> )
+`$column`</span> )
 
 Lists columns and associated privileges for the given table.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -662,12 +663,12 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`table_name`  
+`table`  
 The table name. This parameter accepts the following search patterns:
 *%* to match zero or more characters, and *\_* to match a single
 character.
 
-`column_name`  
+`column`  
 The column name. This parameter accepts the following search patterns:
 *%* to match zero or more characters, and *\_* to match a single
 character.
@@ -733,19 +734,26 @@ Lists the column names in specified tables
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_columns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$schema`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$table_name`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$column_name`</span> \]\]\]\] )
+class="methodparam"><span class="type">resource</span> `$odbc`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$schema`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$table`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$column`<span class="initializer"> = **`null`**</span></span> \]\]\]\]
+)
 
 Lists all columns in the requested range.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -757,12 +765,12 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`table_name`  
+`table`  
 The table name. This parameter accepts the following search patterns:
 *%* to match zero or more characters, and *\_* to match a single
 character.
 
-`column_name`  
+`column`  
 The column name. This parameter accepts the following search patterns:
 *%* to match zero or more characters, and *\_* to match a single
 character.
@@ -796,6 +804,12 @@ Drivers can report additional columns.
 
 The result set is ordered by *TABLE\_CAT*, *TABLE\_SCHEM*, *TABLE\_NAME*
 and *ORDINAL\_POSITION*.
+
+### Changelog
+
+| Version | Description                                      |
+|---------|--------------------------------------------------|
+| 8.0.0   | `schema`, `table` and `column` are now nullable. |
 
 ### Examples
 
@@ -850,13 +864,13 @@ Commit an ODBC transaction
 
 <span class="type">bool</span> <span
 class="methodname">odbc\_commit</span> ( <span class="methodparam"><span
-class="type">resource</span> `$connection_id`</span> )
+class="type">resource</span> `$odbc`</span> )
 
 Commits all pending transactions on the connection.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -871,14 +885,15 @@ Connect to a datasource
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_connect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$user`</span> , <span class="methodparam"><span
 class="type">string</span> `$password`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$cursor_type`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$cursor_option`<span
+class="initializer"> = **`SQL_CUR_USE_DRIVER`**</span></span> \] )
 
 The connection id returned by this functions is needed by other ODBC
 functions. You can have multiple connections open at once as long as
@@ -904,7 +919,7 @@ The username.
 `password`  
 The password.
 
-`cursor_type`  
+`cursor_option`  
 This sets the type of cursor to be used for this connection. This
 parameter is not normally needed, but can be useful for working around
 problems with some ODBC drivers.
@@ -918,7 +933,7 @@ cursortype: </span>
 
 ### Return Values
 
-Returns an ODBC connection or (**`false`**) on error.
+Returns an ODBC connection, or **`false`** on failure.
 
 ### Examples
 
@@ -951,20 +966,21 @@ Get cursorname
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_cursor</span> ( <span class="methodparam"><span
-class="type">resource</span> `$result_id`</span> )
+class="type">resource</span> `$statement`</span> )
 
 Gets the cursorname for the given result\_id.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
 ### Return Values
 
-Returns the cursor name, as a string.
+Returns the cursor name, as a string, or **`false`** on failure.
 
 odbc\_data\_source
 ==================
@@ -973,18 +989,19 @@ Returns information about available DSNs
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_data\_source</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$fetch_type`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$fetch_type`</span> )
 
 This function will return the list of available DSN (after calling it
 several times).
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -1045,25 +1062,32 @@ Get the last error code
 
 <span class="type">string</span> <span
 class="methodname">odbc\_error</span> (\[ <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$odbc`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns a six-digit ODBC state, or an empty string if there has been no
 errors.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-If `connection_id` is specified, the last state of that connection is
-returned, else the last state of any connection is returned.
+If `odbc` is specified, the last state of that connection is returned,
+else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
 (i.e. <span class="function">odbc\_exec</span> returned **`false`**).
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `odbc` is nullable now. |
 
 ### See Also
 
@@ -1079,25 +1103,32 @@ Get the last error message
 
 <span class="type">string</span> <span
 class="methodname">odbc\_errormsg</span> (\[ <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">null</span></span>
+`$odbc`<span class="initializer"> = **`null`**</span></span> \] )
 
 Returns a string containing the last ODBC error message, or an empty
 string if there has been no errors.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-If `connection_id` is specified, the last state of that connection is
-returned, else the last state of any connection is returned.
+If `odbc` is specified, the last state of that connection is returned,
+else the last state of any connection is returned.
 
 This function returns meaningful value only if last odbc query failed
 (i.e. <span class="function">odbc\_exec</span> returned **`false`**).
+
+### Changelog
+
+| Version | Description             |
+|---------|-------------------------|
+| 8.0.0   | `odbc` is nullable now. |
 
 ### See Also
 
@@ -1111,31 +1142,33 @@ Directly execute an SQL statement
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_exec</span> ( <span class="methodparam"><span
-class="type">resource</span> `$connection_id`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$query_string`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$flags`</span> \] )
+class="type">resource</span> `$odbc`</span> , <span
+class="methodparam"><span class="type">string</span> `$query`</span> )
 
 Sends an SQL statement to the database server.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`query_string`  
+`query`  
 The SQL statement.
-
-`flags`  
-This parameter is currently not used.
 
 ### Return Values
 
 Returns an ODBC result identifier if the SQL command was executed
 successfully, or **`false`** on error.
+
+### Changelog
+
+| Version | Description          |
+|---------|----------------------|
+| 8.0.0   | `flags` was removed. |
 
 ### See Also
 
@@ -1152,19 +1185,20 @@ Execute a prepared statement
 <span class="type">bool</span> <span
 class="methodname">odbc\_execute</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$parameters_array`</span> \] )
+`$statement`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$params`<span class="initializer"> =
+\[\]</span></span> \] )
 
 Executes a statement prepared with <span
 class="function">odbc\_prepare</span>.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result id <span class="type">resource</span>, from <span
 class="function">odbc\_prepare</span>.
 
-`parameters_array`  
+`params`  
 Parameters in `parameter_array` will be substituted for placeholders in
 the prepared statement in order. Elements of this array will be
 converted to strings by calling this function.
@@ -1220,20 +1254,22 @@ Fetch a result row as an associative array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_array</span> ( <span
-class="methodparam"><span class="type">resource</span> `$result`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$rownumber`</span> \] )
+class="methodparam"><span class="type">resource</span>
+`$statement`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$row`<span class="initializer"> =
+-1</span></span> \] )
 
 Fetch an associative <span class="type">array</span> from an ODBC query.
 
 ### Parameters
 
-`result`  
+`statement`  
 The result resource from <span class="function">odbc\_exec</span>.
 
-`rownumber`  
+`row`  
 Optionally choose which row number to retrieve.
 
 ### Return Values
@@ -1259,27 +1295,28 @@ Fetch one result row into array
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_into</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">array</span> `&$result_array`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$rownumber`</span> \]
-)
+`$statement`</span> , <span class="methodparam"><span
+class="type">array</span> `&$array`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$row`<span
+class="initializer"> = 0</span></span> \] )
 
 Fetch one result row into <span class="type">array</span>.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result <span class="type">resource</span>.
 
-`result_array`  
+`array`  
 The result <span class="type">array</span> that can be of any type since
 it will be converted to type array. The array will contain the column
 values starting at array index 0.
 
-`rownumber`  
+`row`  
 The row number.
 
 ### Return Values
@@ -1311,20 +1348,22 @@ Fetch a result row as an object
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_fetch\_object</span> ( <span
-class="methodparam"><span class="type">resource</span> `$result`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$rownumber`</span> \] )
+class="methodparam"><span class="type">resource</span>
+`$statement`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$row`<span class="initializer"> =
+-1</span></span> \] )
 
 Fetch an <span class="type">object</span> from an ODBC query.
 
 ### Parameters
 
-`result`  
+`statement`  
 The result resource from <span class="function">odbc\_exec</span>.
 
-`rownumber`  
+`row`  
 Optionally choose which row number to retrieve.
 
 ### Return Values
@@ -1353,9 +1392,10 @@ Fetch a row
 <span class="type">bool</span> <span
 class="methodname">odbc\_fetch\_row</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$row_number`<span class="initializer"> =
-1</span></span> \] )
+`$statement`</span> \[, <span class="methodparam"><span
+class="type"><span class="type">int</span><span
+class="type">null</span></span> `$row`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 Fetches a row of the data that was returned by <span
 class="function">odbc\_do</span> or <span
@@ -1365,25 +1405,31 @@ row can be accessed with <span class="function">odbc\_result</span>.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`row_number`  
-If `row_number` is not specified, <span
+`row`  
+If `row` is not specified, <span
 class="function">odbc\_fetch\_row</span> will try to fetch the next row
 in the result set. Calls to <span
-class="function">odbc\_fetch\_row</span> with and without `row_number`
-can be mixed.
+class="function">odbc\_fetch\_row</span> with and without `row` can be
+mixed.
 
 To step through the result more than once, you can call <span
-class="function">odbc\_fetch\_row</span> with `row_number` 1, and then
-continue doing <span class="function">odbc\_fetch\_row</span> without
-`row_number` to review the result. If a driver doesn't support fetching
-rows by number, the `row_number` parameter is ignored.
+class="function">odbc\_fetch\_row</span> with `row` 1, and then continue
+doing <span class="function">odbc\_fetch\_row</span> without `row` to
+review the result. If a driver doesn't support fetching rows by number,
+the `row` parameter is ignored.
 
 ### Return Values
 
 Returns **`true`** if there was a row, **`false`** otherwise.
+
+### Changelog
+
+| Version | Description            |
+|---------|------------------------|
+| 8.0.0   | `row` is nullable now. |
 
 odbc\_field\_len
 ================
@@ -1392,21 +1438,22 @@ Get the length (precision) of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_len</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$field_number`</span> )
+`$statement`</span> , <span class="methodparam"><span
+class="type">int</span> `$field`</span> )
 
 Gets the length of the field referenced by number in the given result
 identifier.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`field_number`  
+`field`  
 The field number. Field numbering starts at 1.
 
 ### Return Values
@@ -1425,21 +1472,22 @@ Get the columnname
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_name</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$field_number`</span> )
+`$statement`</span> , <span class="methodparam"><span
+class="type">int</span> `$field`</span> )
 
 Gets the name of the field occupying the given column number in the
 given result identifier.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`field_number`  
+`field`  
 The field number. Field numbering starts at 1.
 
 ### Return Values
@@ -1453,21 +1501,22 @@ Return column number
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_num</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$field_name`</span> )
+`$statement`</span> , <span class="methodparam"><span
+class="type">string</span> `$field`</span> )
 
 Gets the number of the column slot that corresponds to the named field
 in the given result identifier.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`field_name`  
+`field`  
 The field name.
 
 ### Return Values
@@ -1497,21 +1546,22 @@ Get the scale of a field
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_scale</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$field_number`</span> )
+`$statement`</span> , <span class="methodparam"><span
+class="type">int</span> `$field`</span> )
 
 Gets the scale of the field referenced by number in the given result
 identifier.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`field_number`  
+`field`  
 The field number. Field numbering starts at 1.
 
 ### Return Values
@@ -1525,21 +1575,22 @@ Datatype of a field
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_field\_type</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$field_number`</span> )
+`$statement`</span> , <span class="methodparam"><span
+class="type">int</span> `$field`</span> )
 
 Gets the SQL type of the field referenced by number in the given result
 identifier.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
-`field_number`  
+`field`  
 The field number. Field numbering starts at 1.
 
 ### Return Values
@@ -1556,16 +1607,17 @@ Retrieves a list of foreign keys
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_foreignkeys</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$pk_catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$pk_schema`</span>
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$pk_catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$pk_schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$pk_table`</span>
 , <span class="methodparam"><span class="type">string</span>
-`$pk_table`</span> , <span class="methodparam"><span
-class="type">string</span> `$fk_catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$fk_schema`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$fk_table`</span> )
+`$fk_catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$fk_schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$fk_table`</span>
+)
 
 Retrieves a list of foreign keys in the specified table or a list of
 foreign keys in other tables that refer to the primary key in the
@@ -1573,7 +1625,7 @@ specified table
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -1654,7 +1706,7 @@ Free resources associated with a result
 <span class="type">bool</span> <span
 class="methodname">odbc\_free\_result</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> )
+`$statement`</span> )
 
 Free resources associated with a result.
 
@@ -1665,7 +1717,7 @@ is finished.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
 ### Return Values
@@ -1688,17 +1740,18 @@ Retrieves information about data types supported by the data source
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_gettypeinfo</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$data_type`</span> \] )
+class="methodparam"><span class="type">resource</span> `$odbc`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$data_type`<span class="initializer"> = 0</span></span> \] )
 
 Retrieves information about data types supported by the data source.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -1740,7 +1793,7 @@ Handling of LONG columns
 <span class="type">bool</span> <span
 class="methodname">odbc\_longreadlen</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> , <span class="methodparam"><span
+`$statement`</span> , <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
 
 Controls handling of *LONG*, *LONGVARCHAR* and *LONGVARBINARY* columns.
@@ -1750,7 +1803,7 @@ directive.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
 `length`  
@@ -1780,7 +1833,7 @@ Checks if multiple results are available
 <span class="type">bool</span> <span
 class="methodname">odbc\_next\_result</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> )
+`$statement`</span> )
 
 Checks if there are more result sets available as well as allowing
 access to the next result set via <span
@@ -1790,7 +1843,7 @@ class="function">odbc\_result</span>, etc.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
 ### Return Values
@@ -1870,13 +1923,13 @@ Number of columns in a result
 <span class="type">int</span> <span
 class="methodname">odbc\_num\_fields</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> )
+`$statement`</span> )
 
 Gets the number of fields (columns) in an ODBC result.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier returned by <span
 class="function">odbc\_exec</span>.
 
@@ -1894,7 +1947,7 @@ Number of rows in a result
 <span class="type">int</span> <span
 class="methodname">odbc\_num\_rows</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> )
+`$statement`</span> )
 
 Gets the number of rows in a result. For INSERT, UPDATE and DELETE
 statements <span class="function">odbc\_num\_rows</span> returns the
@@ -1903,7 +1956,7 @@ rows available.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier returned by <span
 class="function">odbc\_exec</span>.
 
@@ -1927,14 +1980,15 @@ Open a persistent database connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_pconnect</span> ( <span
 class="methodparam"><span class="type">string</span> `$dsn`</span> ,
 <span class="methodparam"><span class="type">string</span>
 `$user`</span> , <span class="methodparam"><span
 class="type">string</span> `$password`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$cursor_type`</span>
-\] )
+class="methodparam"><span class="type">int</span> `$cursor_option`<span
+class="initializer"> = **`SQL_CUR_USE_DRIVER`**</span></span> \] )
 
 Opens a persistent database connection.
 
@@ -1951,7 +2005,7 @@ See <span class="function">odbc\_connect</span> for details.
 
 ### Return Values
 
-Returns an ODBC connection id or 0 (**`false`**) on error.
+Returns an ODBC connection, or **`false`** on failure. error.
 
 ### Notes
 
@@ -1970,11 +2024,12 @@ Prepares a statement for execution
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_prepare</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$query_string`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type">string</span>
+`$query`</span> )
 
 Prepares a statement for execution. The result identifier can be used
 later to execute the statement with <span
@@ -1987,11 +2042,11 @@ currently only supports parameters of type IN to stored procedures.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
-`query_string`  
+`query`  
 The query string statement being prepared.
 
 ### Return Values
@@ -2037,19 +2092,19 @@ Gets the primary keys for a table
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_primarykeys</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$table`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$table`</span> )
 
 Returns a result identifier that can be used to fetch the column names
 that comprise the primary key for a table.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2121,25 +2176,26 @@ Retrieve information about parameters to procedures
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_procedurecolumns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> )
-
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
-class="methodname">odbc\_procedurecolumns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$proc`</span> , <span class="methodparam"><span
-class="type">string</span> `$column`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$schema`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$procedure`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$column`<span class="initializer"> = **`null`**</span></span> \]\]\]\]
+)
 
 Retrieve information about parameters to procedures.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2151,7 +2207,7 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`proc`  
+`procedure`  
 The proc. This parameter accepts the following search patterns: *%* to
 match zero or more characters, and *\_* to match a single character.
 
@@ -2191,6 +2247,12 @@ Drivers can report additional columns.
 
 The result set is ordered by *PROCEDURE\_CAT*, *PROCEDURE\_SCHEM*,
 *PROCEDURE\_NAME* and *COLUMN\_TYPE*.
+
+### Changelog
+
+| Version | Description                                                                                 |
+|---------|---------------------------------------------------------------------------------------------|
+| 8.0.0   | Prior to this version, the function could only be called with either one or five arguments. |
 
 ### Examples
 
@@ -2246,24 +2308,23 @@ Get the list of procedures stored in a specific data source
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_procedures</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> )
-
-<span class="type"><span class="type">resource</span><span
-class="type">false</span></span> <span
-class="methodname">odbc\_procedures</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$schema`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$procedure`<span class="initializer"> = **`null`**</span></span> \]\]\]
+)
 
 Lists all procedures in the requested range.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2275,7 +2336,7 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`name`  
+`procedure`  
 The name. This parameter accepts the following search patterns: *%* to
 match zero or more characters, and *\_* to match a single character.
 
@@ -2299,6 +2360,12 @@ Drivers can report additional columns.
 
 The result set is ordered by *PROCEDURE\_CAT*, *PROCEDURE\_SCHEMA* and
 *PROCEDURE\_NAME*.
+
+### Changelog
+
+| Version | Description                                                                                 |
+|---------|---------------------------------------------------------------------------------------------|
+| 8.0.0   | Prior to this version, the function could only be called with either one or four arguments. |
 
 ### Examples
 
@@ -2341,11 +2408,13 @@ Print result as HTML table
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_result\_all</span> ( <span
 class="methodparam"><span class="type">resource</span>
-`$result_id`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$format`</span> \] )
+`$statement`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$format`<span class="initializer"> =
+""</span></span> \] )
 
 Prints all rows from a result identifier produced by <span
 class="function">odbc\_exec</span>. The result is printed in HTML table
@@ -2357,7 +2426,7 @@ rendered.
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The result identifier.
 
 `format`  
@@ -2374,16 +2443,19 @@ Get result data
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span><span class="type">null</span></span> <span
 class="methodname">odbc\_result</span> ( <span class="methodparam"><span
-class="type">resource</span> `$result_id`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$field`</span> )
+class="type">resource</span> `$statement`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$field`</span> )
 
 Get result data
 
 ### Parameters
 
-`result_id`  
+`statement`  
 The ODBC <span class="type">resource</span>.
 
 `field`  
@@ -2432,14 +2504,13 @@ Rollback a transaction
 
 <span class="type">bool</span> <span
 class="methodname">odbc\_rollback</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> )
 
 Rolls back all pending statements on the connection.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2456,11 +2527,11 @@ Adjust ODBC settings
 
 <span class="type">bool</span> <span
 class="methodname">odbc\_setoption</span> ( <span
-class="methodparam"><span class="type">resource</span> `$id`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$function`</span> , <span class="methodparam"><span
-class="type">int</span> `$option`</span> , <span
-class="methodparam"><span class="type">int</span> `$param`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type">int</span> `$which`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$option`</span> , <span class="methodparam"><span
+class="type">int</span> `$value`</span> )
 
 This function allows fiddling with the ODBC options for a particular
 connection or query result. It was written to help find work around to
@@ -2480,19 +2551,19 @@ that really matters.
 
 ### Parameters
 
-`id`  
+`odbc`  
 Is a connection id or result id on which to change the settings. For
 SQLSetConnectOption(), this is a connection id. For SQLSetStmtOption(),
 this is a result id.
 
-`function`  
+`which`  
 Is the ODBC function to use. The value should be 1 for
 SQLSetConnectOption() and 2 for SQLSetStmtOption().
 
 `option`  
 The option to set.
 
-`param`  
+`value`  
 The value for the given `option`.
 
 ### Return Values
@@ -2528,17 +2599,19 @@ Retrieves special columns
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">odbc\_specialcolumns</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">int</span> `$type`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$table`</span> , <span class="methodparam"><span
-class="type">int</span> `$scope`</span> , <span
-class="methodparam"><span class="type">int</span> `$nullable`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type">int</span> `$type`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$table`</span> ,
+<span class="methodparam"><span class="type">int</span> `$scope`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$nullable`</span> )
 
 Retrieves either the optimal set of columns that uniquely identifies a
 row in the table, or columns that are automatically updated when any
@@ -2546,7 +2619,7 @@ value in the row is updated by a transaction.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2610,20 +2683,21 @@ Retrieve statistics about a table
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_statistics</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$table_name`</span> , <span class="methodparam"><span
-class="type">int</span> `$unique`</span> , <span
-class="methodparam"><span class="type">int</span> `$accuracy`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$table`</span> ,
+<span class="methodparam"><span class="type">int</span> `$unique`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$accuracy`</span> )
 
 Get statistics about a table and its indexes.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2633,7 +2707,7 @@ The catalog ('qualifier' in ODBC 2 parlance).
 `schema`  
 The schema ('owner' in ODBC 2 parlance).
 
-`table_name`  
+`table`  
 The table name.
 
 `unique`  
@@ -2718,19 +2792,19 @@ Lists tables and the privileges associated with each table
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_tableprivileges</span> ( <span
-class="methodparam"><span class="type">resource</span>
-`$connection_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$catalog`</span> , <span
-class="methodparam"><span class="type">string</span> `$schema`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$name`</span> )
+class="methodparam"><span class="type">resource</span> `$odbc`</span> ,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`</span> , <span class="methodparam"><span
+class="type">string</span> `$schema`</span> , <span
+class="methodparam"><span class="type">string</span> `$table`</span> )
 
 Lists tables in the requested range and the privileges associated with
 each table.
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2742,7 +2816,7 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`name`  
+`table`  
 The name. This parameter accepts the following search patterns: *%* to
 match zero or more characters, and *\_* to match a single character.
 
@@ -2807,36 +2881,42 @@ Get the list of table names stored in a specific data source
 <span class="type"><span class="type">resource</span><span
 class="type">false</span></span> <span
 class="methodname">odbc\_tables</span> ( <span class="methodparam"><span
-class="type">resource</span> `$connection_id`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$catalog`</span>
-\[, <span class="methodparam"><span class="type">string</span>
-`$schema`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$name`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$types`</span>
-\]\]\]\] )
+class="type">resource</span> `$odbc`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$catalog`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$schema`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$table`<span class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$types`<span class="initializer"> = **`null`**</span></span> \]\]\]\] )
 
 Lists all tables in the requested range.
 
 To support enumeration of qualifiers, owners, and table types, the
-following special semantics for the `catalog`, `schema`, `name`, and
+following special semantics for the `catalog`, `schema`, `table`, and
 `table_type` are available:
 
 -   <span class="simpara"> If `catalog` is a single percent character
-    (%) and `schema` and `name` are empty strings, then the result set
+    (%) and `schema` and `table` are empty strings, then the result set
     contains a list of valid qualifiers for the data source. (All
     columns except the TABLE\_QUALIFIER column contain NULLs.) </span>
 -   <span class="simpara"> If `schema` is a single percent character (%)
-    and `catalog` and `name` are empty strings, then the result set
+    and `catalog` and `table` are empty strings, then the result set
     contains a list of valid owners for the data source. (All columns
     except the TABLE\_OWNER column contain NULLs.) </span>
 -   <span class="simpara"> If `table_type` is a single percent character
-    (%) and `catalog`, `schema` and `name` are empty strings, then the
+    (%) and `catalog`, `schema` and `table` are empty strings, then the
     result set contains a list of valid table types for the data source.
     (All columns except the TABLE\_TYPE column contain NULLs.) </span>
 
 ### Parameters
 
-`connection_id`  
+`odbc`  
 The ODBC connection identifier, see <span
 class="function">odbc\_connect</span> for details.
 
@@ -2848,7 +2928,7 @@ The schema ('owner' in ODBC 2 parlance). This parameter accepts the
 following search patterns: *%* to match zero or more characters, and
 *\_* to match a single character.
 
-`name`  
+`table`  
 The name. This parameter accepts the following search patterns: *%* to
 match zero or more characters, and *\_* to match a single character.
 
@@ -2877,6 +2957,12 @@ Drivers can report additional columns.
 
 The result set is ordered by *TABLE\_TYPE*, *TABLE\_CAT*, *TABLE\_SCHEM*
 and *TABLE\_NAME*.
+
+### Changelog
+
+| Version | Description                                     |
+|---------|-------------------------------------------------|
+| 8.0.0   | `schema`, `table` and `types` are now nullable. |
 
 ### Examples
 

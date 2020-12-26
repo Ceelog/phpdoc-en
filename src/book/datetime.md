@@ -421,8 +421,7 @@ class="initializer"> = **`false`**</span></span> \] )
 <span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
@@ -2098,8 +2097,7 @@ class="initializer"> = **`false`**</span></span> \] )
 <span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
@@ -2536,8 +2534,7 @@ class="initializer"> = **`false`**</span></span> \] )
 <span class="methodname">format</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">getOffset</span> ( <span
 class="methodparam">void</span> )
 
@@ -2942,18 +2939,15 @@ Returns the timezone offset
 
 Object oriented style
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">DateTime::getOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">DateTimeImmutable::getOffset</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type"><span
-class="type">int</span><span class="type">false</span></span> <span
+<span class="modifier">public</span><span class="type">int</span> <span
 class="methodname">DateTimeInterface::getOffset</span> ( <span
 class="methodparam">void</span> )
 

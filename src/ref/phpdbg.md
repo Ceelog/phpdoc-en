@@ -197,10 +197,11 @@ phpdbg\_end\_oplog
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">phpdbg\_end\_oplog</span> (\[ <span
-class="methodparam"><span class="type">array</span> `$options`</span> \]
-)
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = \[\]</span></span> \] )
 
 **Warning**
 
@@ -220,10 +221,10 @@ Attempts to set the execution context
 
 ### Description
 
-<span class="type">mixed</span> <span
-class="methodname">phpdbg\_exec</span> (\[ <span
-class="methodparam"><span class="type">string</span> `$context`</span>
-\] )
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
+class="methodname">phpdbg\_exec</span> ( <span class="methodparam"><span
+class="type">string</span> `$context`</span> )
 
 **Warning**
 
@@ -248,8 +249,8 @@ phpdbg\_get\_executable
 
 <span class="type">array</span> <span
 class="methodname">phpdbg\_get\_executable</span> (\[ <span
-class="methodparam"><span class="type">array</span> `$options`</span> \]
-)
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = \[\]</span></span> \] )
 
 **Warning**
 

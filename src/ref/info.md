@@ -412,7 +412,8 @@ Returns the current process title
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">cli\_get\_process\_title</span> ( <span
 class="methodparam">void</span> )
 

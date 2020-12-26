@@ -5,7 +5,7 @@ Terminate apache process after this request
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type">void</span> <span
 class="methodname">apache\_child\_terminate</span> ( <span
 class="methodparam">void</span> )
 
@@ -22,12 +22,7 @@ Netscape/iPlanet/SunONE webservers.
 
 ### Return Values
 
-Returns **`true`** if PHP is running as an Apache 1 module, the Apache
-version is non-multithreaded, and the
-<a href="/apache/setup.html#" class="link">child_terminate</a> PHP
-directive is enabled (disabled by default). If these conditions are not
-met, **`false`** is returned and an error of level **`E_WARNING`** is
-generated.
+No value is returned.
 
 ### Notes
 
@@ -123,7 +118,8 @@ Get an Apache subprocess\_env variable
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_getenv</span> ( <span
 class="methodparam"><span class="type">string</span> `$variable`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -131,8 +127,6 @@ class="methodparam"><span class="type">string</span> `$variable`</span>
 )
 
 Retrieve an Apache environment variable specified by `variable`.
-
-This function requires Apache 2 otherwise it's undefined.
 
 ### Parameters
 
@@ -179,7 +173,8 @@ about it
 
 ### Description
 
-<span class="type">object</span> <span
+<span class="type"><span class="type">object</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_lookup\_uri</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 )
@@ -222,6 +217,8 @@ properties of this <span class="type">object</span> are:
 -   unparsed\_uri
 -   mtime
 -   request\_time
+
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -270,15 +267,13 @@ Get and set apache request notes
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">apache\_note</span> ( <span class="methodparam"><span
-class="type">string</span> `$note_name`</span> )
-
-<span class="type">string</span> <span
-class="methodname">apache\_note</span> ( <span class="methodparam"><span
-class="type">string</span> `$note_name`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$note_value`</span> )
+class="type">string</span> `$note_name`</span> \[, <span
+class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">null</span></span>
+`$note_value`<span class="initializer"> = **`null`**</span></span> \] )
 
 This function is a wrapper for Apache's *table\_get* and *table\_set*.
 It edits the table of notes that exists during a request. The table's
@@ -297,10 +292,16 @@ The value of the note.
 
 ### Return Values
 
-If called with one argument, it returns the current value of note
-*note\_name*. If called with two arguments, it sets the value of note
-*note\_name* to *note\_value* and returns the previous value of note
-*note\_name*. If the note cannot be retrieved, **`false`** is returned.
+If `note_value` is omitted or **`null`**, it returns the current value
+of note *note\_name*. Otherwise, it sets the value of note *note\_name*
+to *note\_value* and returns the previous value of note *note\_name*. If
+the note cannot be retrieved, **`false`** is returned.
+
+### Changelog
+
+| Version | Description                   |
+|---------|-------------------------------|
+| 8.0.0   | `note_value` is nullable now. |
 
 ### Examples
 
@@ -605,8 +606,8 @@ Perform an Apache sub-request
 ### Description
 
 <span class="type">bool</span> <span class="methodname">virtual</span> (
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="methodparam"><span class="type">string</span> `$uri`</span>
+)
 
 <span class="function">virtual</span> is an Apache-specific function
 which is similar to *\<!--\#include virtual...--\>* in *mod\_include*.
@@ -625,7 +626,7 @@ in Netscape/iPlanet/SunONE webservers.
 
 ### Parameters
 
-`filename`  
+`uri`  
 The file that the virtual command will be performed on.
 
 ### Return Values
