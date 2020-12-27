@@ -516,9 +516,9 @@ Loads a PHP extension at runtime
 
 <span class="type">bool</span> <span class="methodname">dl</span> (
 <span class="methodparam"><span class="type">string</span>
-`$library`</span> )
+`$extension_filename`</span> )
 
-Loads the PHP extension given by the parameter `library`.
+Loads the PHP extension given by the parameter `extension_filename`.
 
 Use <span class="function">extension\_loaded</span> to test whether a
 given extension is already available or not. This works on both built-in
@@ -532,7 +532,7 @@ from PHP-FPM in PHP 7.0.0.
 
 ### Parameters
 
-`library`  
+`extension_filename`  
 This parameter is *only* the filename of the extension to load which
 also depends on your platform. For example, the
 <a href="/ref/sockets.html" class="link">sockets</a> extension (if
@@ -890,7 +890,8 @@ Gets the value of a PHP configuration option
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">array</span><span class="type">false</span></span> <span
 class="methodname">get\_cfg\_var</span> ( <span
 class="methodparam"><span class="type">string</span> `$option`</span> )
 
@@ -1151,7 +1152,8 @@ Gets the current include\_path configuration option
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">get\_include\_path</span> ( <span
 class="methodparam">void</span> )
 
@@ -1161,7 +1163,7 @@ configuration option value.
 
 ### Return Values
 
-Returns the path, as a string.
+Returns the path, as a string, or **`false`** on failure.
 
 ### Examples
 
@@ -1607,8 +1609,10 @@ Gets time of last page modification
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">getlastmod</span>
-( <span class="methodparam">void</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">getlastmod</span> ( <span
+class="methodparam">void</span> )
 
 Gets the time of the last modification of the main script of execution.
 
@@ -1649,8 +1653,10 @@ Get PHP script owner's GID
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">getmygid</span> (
-<span class="methodparam">void</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">getmygid</span> ( <span
+class="methodparam">void</span> )
 
 Gets the group ID of the current script.
 
@@ -1673,8 +1679,10 @@ Gets the inode of the current script
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">getmyinode</span>
-( <span class="methodparam">void</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">getmyinode</span> ( <span
+class="methodparam">void</span> )
 
 Gets the inode of the current script.
 
@@ -1698,8 +1706,10 @@ Gets PHP's process ID
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">getmypid</span> (
-<span class="methodparam">void</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">getmypid</span> ( <span
+class="methodparam">void</span> )
 
 Gets the current PHP process ID.
 
@@ -1729,8 +1739,10 @@ Gets PHP script owner's UID
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">getmyuid</span> (
-<span class="methodparam">void</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">getmyuid</span> ( <span
+class="methodparam">void</span> )
 
 Gets the user ID of the current script.
 
@@ -1756,35 +1768,36 @@ Gets options from the command line argument list
 <span class="type"><span class="type">array</span><span
 class="type">false</span></span> <span class="methodname">getopt</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$options`</span> \[, <span class="methodparam"><span
-class="type">array</span> `$longopts`</span> \[, <span
-class="methodparam"><span class="type">int</span> `&$optind`</span> \]\]
-)
+`$short_options`</span> \[, <span class="methodparam"><span
+class="type">array</span> `$long_options`<span class="initializer"> =
+\[\]</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$rest_index`<span class="initializer"> =
+**`null`**</span></span> \]\] )
 
 Parses options passed to the script.
 
 ### Parameters
 
-`options`  
+`short_options`  
 <span class="simpara"> Each character in this string will be used as
 option characters and matched against options passed to the script
 starting with a single hyphen (*-*). </span> <span class="simpara"> For
 example, an option string *"x"* recognizes an option *-x*. </span> <span
 class="simpara"> Only a-z, A-Z and 0-9 are allowed. </span>
 
-`longopts`  
+`long_options`  
 <span class="simpara"> An array of options. Each element in this array
 will be used as option strings and matched against options passed to the
 script starting with two hyphens (*--*). </span> <span class="simpara">
 For example, an longopts element *"opt"* recognizes an option *--opt*.
 </span>
 
-`optind`  
-<span class="simpara"> If the `optind` parameter is present, then the
-index where argument parsing stopped will be written to this variable.
-</span>
+`rest_index`  
+<span class="simpara"> If the `rest_index` parameter is present, then
+the index where argument parsing stopped will be written to this
+variable. </span>
 
-The `options` parameter may contain the following elements:
+The `short_options` parameter may contain the following elements:
 
 -   Individual characters (do not accept values)
 -   Characters followed by a colon (parameter requires value)
@@ -1799,10 +1812,10 @@ or not. See note.
 
 > **Note**:
 >
-> The format for the `options` and `longopts` is almost the same, the
-> only difference is that `longopts` takes an array of options (where
-> each element is the option) whereas `options` takes a string (where
-> each character is the option).
+> The format for the `short_options` and `long_options` is almost the
+> same, the only difference is that `long_options` takes an array of
+> options (where each element is the option) whereas `short_options`
+> takes a string (where each character is the option).
 
 ### Return Values
 
@@ -1816,9 +1829,9 @@ This function will return an array of option / argument pairs, or
 
 ### Changelog
 
-| Version | Description                   |
-|---------|-------------------------------|
-| 7.1.0   | Added the `optind` parameter. |
+| Version | Description                       |
+|---------|-----------------------------------|
+| 7.1.0   | Added the `rest_index` parameter. |
 
 ### Examples
 
@@ -1920,7 +1933,7 @@ The above example will output:
     }
 
 **Example \#4 <span class="function">getopt</span> example: Using
-`optind`**
+`rest_index`**
 
 ``` php
 <?php
@@ -1953,9 +1966,10 @@ Gets the current resource usages
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">getrusage</span> (\[ <span class="methodparam"><span
-class="type">int</span> `$who`<span class="initializer"> =
+class="type">int</span> `$mode`<span class="initializer"> =
 0</span></span> \] )
 
 This is an interface to **getrusage(2)**. It gets data returned from the
@@ -1963,14 +1977,14 @@ system call.
 
 ### Parameters
 
-`who`  
-If `who` is 1, getrusage will be called with **`RUSAGE_CHILDREN`**.
+`mode`  
+If `mode` is 1, getrusage will be called with **`RUSAGE_CHILDREN`**.
 
 ### Return Values
 
 Returns an associative array containing the data returned from the
 system call. All entries are accessible by using their documented field
-names.
+names. Returns **`false`** on failure.
 
 ### Examples
 
@@ -2015,11 +2029,11 @@ echo $dat["ru_stime.tv_usec"]; // system time used (microseconds)
 > -   *"ru\_stime.tv\_usec"*
 > -   *"ru\_utime.tv\_sec"*
 > -   *"ru\_utime.tv\_usec"*
-> -   *"ru\_majflt"* (only if `who` is **`RUSAGE_SELF`**)
-> -   *"ru\_maxrss"* (only if `who` is **`RUSAGE_SELF`**)
+> -   *"ru\_majflt"* (only if `mode` is **`RUSAGE_SELF`**)
+> -   *"ru\_maxrss"* (only if `mode` is **`RUSAGE_SELF`**)
 >
-> If <span class="function">getrusage</span> is called with `who` set to
-> *1* (**`RUSAGE_CHILDREN`**), then resource usage for threads are
+> If <span class="function">getrusage</span> is called with `mode` set
+> to *1* (**`RUSAGE_CHILDREN`**), then resource usage for threads are
 > collected (meaning that internally the function is called with
 > **`RUSAGE_THREAD`**).
 
@@ -2190,15 +2204,16 @@ Gets the value of a configuration option
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ini\_get</span> ( <span class="methodparam"><span
-class="type">string</span> `$varname`</span> )
+class="type">string</span> `$option`</span> )
 
 Returns the value of the configuration option on success.
 
 ### Parameters
 
-`varname`  
+`option`  
 The configuration option name.
 
 ### Return Values
@@ -2296,13 +2311,13 @@ Restores the value of a configuration option
 
 <span class="type">void</span> <span
 class="methodname">ini\_restore</span> ( <span class="methodparam"><span
-class="type">string</span> `$varname`</span> )
+class="type">string</span> `$option`</span> )
 
 Restores a given configuration option to its original value.
 
 ### Parameters
 
-`varname`  
+`option`  
 The configuration option name.
 
 ### Return Values
@@ -2346,11 +2361,11 @@ Sets the value of a configuration option
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ini\_set</span> ( <span class="methodparam"><span
-class="type">string</span> `$varname`</span> , <span
-class="methodparam"><span class="type">string</span> `$newvalue`</span>
-)
+class="type">string</span> `$option`</span> , <span
+class="methodparam"><span class="type">string</span> `$value`</span> )
 
 Sets the value of the given configuration option. The configuration
 option will keep this new value during the script's execution, and will
@@ -2358,12 +2373,12 @@ be restored at the script's ending.
 
 ### Parameters
 
-`varname`  
+`option`  
 Not all the available options can be changed using <span
 class="function">ini\_set</span>. There is a list of all available
 options in the <a href="/ini/list.html" class="link">appendix</a>.
 
-`newvalue`  
+`value`  
 The new value for the option.
 
 ### Return Values
@@ -2526,7 +2541,8 @@ Retrieve a path to the loaded php.ini file
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">php\_ini\_loaded\_file</span> ( <span
 class="methodparam">void</span> )
 
@@ -2574,7 +2590,8 @@ Return a list of .ini files parsed from the additional ini dir
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">php\_ini\_scanned\_files</span> ( <span
 class="methodparam">void</span> )
 
@@ -2630,7 +2647,8 @@ Returns the type of interface between web server and PHP
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">php\_sapi\_name</span> ( <span
 class="methodparam">void</span> )
 
@@ -2641,7 +2659,8 @@ depending on the exact SAPI used. Possible values are listed below.
 
 ### Return Values
 
-Returns the interface type, as a lowercase string.
+Returns the interface type, as a lowercase string, or **`false`** on
+failure.
 
 Although not exhaustive, the possible return values include *apache*,
 *apache2handler*, *cgi* (until PHP 5.3), *cgi-fcgi*, *cli*,
@@ -2790,8 +2809,8 @@ Prints out the credits for PHP
 
 <span class="type">bool</span> <span
 class="methodname">phpcredits</span> (\[ <span class="methodparam"><span
-class="type">int</span> `$flag`<span class="initializer"> =
-CREDITS\_ALL</span></span> \] )
+class="type">int</span> `$flags`<span class="initializer"> =
+**`CREDITS_ALL`**</span></span> \] )
 
 This function prints out the credits listing the PHP developers,
 modules, etc. It generates the appropriate HTML codes to insert the
@@ -2799,8 +2818,8 @@ information in a page.
 
 ### Parameters
 
-`flag`  
-To generate a custom credits page, you may want to use the `flag`
+`flags`  
+To generate a custom credits page, you may want to use the `flags`
 parameter.
 
 | name              | description                                                                                                                                                                                                                       |
@@ -2873,8 +2892,8 @@ Outputs information about PHP's configuration
 ### Description
 
 <span class="type">bool</span> <span class="methodname">phpinfo</span>
-(\[ <span class="methodparam"><span class="type">int</span> `$what`<span
-class="initializer"> = INFO\_ALL</span></span> \] )
+(\[ <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = **`INFO_ALL`**</span></span> \] )
 
 Outputs a large amount of information about the current state of PHP.
 This includes information about PHP compilation options and extensions,
@@ -2895,9 +2914,9 @@ as it contains all EGPCS (Environment, GET, POST, Cookie, Server) data.
 
 ### Parameters
 
-`what`  
+`flags`  
 The output may be customized by passing one or more of the following
-*constants* bitwise values summed together in the optional `what`
+*constants* bitwise values summed together in the optional `flags`
 parameter. One can also combine the respective constants or bitwise
 values together with the
 <a href="/language/operators/bitwise.html" class="link">bitwise or operator</a>.
@@ -3060,15 +3079,15 @@ Sets the value of an environment variable
 
 <span class="type">bool</span> <span class="methodname">putenv</span> (
 <span class="methodparam"><span class="type">string</span>
-`$setting`</span> )
+`$assignment`</span> )
 
-Adds `setting` to the server environment. The environment variable will
-only exist for the duration of the current request. At the end of the
-request the environment is restored to its original state.
+Adds `assignment` to the server environment. The environment variable
+will only exist for the duration of the current request. At the end of
+the request the environment is restored to its original state.
 
 ### Parameters
 
-`setting`  
+`assignment`  
 The setting, like *"FOO=BAR"*
 
 ### Return Values
@@ -3157,7 +3176,7 @@ Sets the include\_path configuration option
 class="type">false</span></span> <span
 class="methodname">set\_include\_path</span> ( <span
 class="methodparam"><span class="type">string</span>
-`$new_include_path`</span> )
+`$include_path`</span> )
 
 Sets the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
@@ -3165,7 +3184,7 @@ configuration option for the duration of the script.
 
 ### Parameters
 
-`new_include_path`  
+`include_path`  
 The new value for the
 <a href="/ini/core.html#ini.include-path" class="link">include_path</a>
 

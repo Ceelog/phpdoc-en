@@ -812,10 +812,11 @@ Get the system's high resolution time
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">hrtime</span>
+<span class="type"><span class="type">array</span><span
+class="type">int</span><span class="type">float</span><span
+class="type">false</span></span> <span class="methodname">hrtime</span>
 (\[ <span class="methodparam"><span class="type">bool</span>
-`$get_as_number`<span class="initializer"> = **`false`**</span></span>
-\] )
+`$as_number`<span class="initializer"> = **`false`**</span></span> \] )
 
 Returns the system's high resolution time, counted from an arbitrary
 point in time. The delivered timestamp is monotonic and can not be
@@ -823,16 +824,17 @@ adjusted.
 
 ### Parameters
 
-`get_as_number`  
+`as_number`  
 Whether the high resolution time should be returned as <span
 class="type">array</span> or number.
 
 ### Return Values
 
 Returns an array of integers in the form \[seconds, nanoseconds\], if
-the parameter `get_as_number` is false. Otherwise the nanoseconds are
+the parameter `as_number` is false. Otherwise the nanoseconds are
 returned as <span class="type">int</span> (64bit platforms) or <span
-class="type">float</span> (32bit platforms).
+class="type">float</span> (32bit platforms). Returns **`false`** on
+failure.
 
 ### Examples
 
@@ -870,26 +872,34 @@ Set whether a client disconnect should abort script execution
 
 <span class="type">int</span> <span
 class="methodname">ignore\_user\_abort</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$value`</span> \] )
+class="methodparam"><span class="type"><span
+class="type">bool</span><span class="type">null</span></span>
+`$enable`<span class="initializer"> = **`null`**</span></span> \] )
 
 Sets whether a client disconnect should cause a script to be aborted.
 
 When running PHP as a command line script, and the script's tty goes
 away without the script being terminated then the script will die the
-next time it tries to write anything, unless `value` is set to
+next time it tries to write anything, unless `enable` is set to
 **`true`**
 
 ### Parameters
 
-`value`  
-If set, this function will set the
+`enable`  
+If set and not **`null`**, this function will set the
 <a href="/misc/setup.html#" class="link">ignore_user_abort</a> ini
-setting to the given `value`. If not, this function will only return the
-previous setting without changing it.
+setting to the given `enable`. Otherwise, this function will only return
+the previous setting without changing it.
 
 ### Return Values
 
 Returns the previous setting, as an integer.
+
+### Changelog
+
+| Version | Description               |
+|---------|---------------------------|
+| 8.0.0   | `enable` is nullable now. |
 
 ### Examples
 
@@ -950,8 +960,7 @@ Pack data into binary string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">pack</span> (
+<span class="type">string</span> <span class="methodname">pack</span> (
 <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> )
@@ -1023,6 +1032,7 @@ Returns a binary string containing data, or **`false`** on failure.
 
 | Version      | Description                                                                                                            |
 |--------------|------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0        | This function no longer returns **`false`** on failure.                                                                |
 | 7.2.0        | <span class="type">float</span> and <span class="type">double</span> types supports both Big Endian and Little Endian. |
 | 7.0.15,7.1.1 | The "e", "E", "g" and "G" codes were added to enable byte order support for float and double.                          |
 | 5.6.3        | The "q", "Q", "J" and "P" codes were added to enable working with 64-bit numbers.                                      |
@@ -1599,13 +1609,14 @@ Gets system load average
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">sys\_getloadavg</span> ( <span
 class="methodparam">void</span> )
 
 Returns three samples representing the average system load (the number
 of processes in the system run queue) over the last 1, 5 and 15 minutes,
-respectively.
+respectively. Returns **`false`** on failure.
 
 ### Return Values
 
@@ -1638,7 +1649,8 @@ Delay for a number of seconds and nanoseconds
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">time\_nanosleep</span> ( <span
 class="methodparam"><span class="type">int</span> `$seconds`</span> ,
 <span class="methodparam"><span class="type">int</span>
@@ -1868,7 +1880,7 @@ Unpack data from binary string
 class="type">false</span></span> <span class="methodname">unpack</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
-class="type">string</span> `$data`</span> \[, <span
+class="type">string</span> `$string`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$offset`<span
 class="initializer"> = 0</span></span> \] )
 
@@ -1886,7 +1898,7 @@ have a sequence number behind the given name.
 See <span class="function">pack</span> for an explanation of the format
 codes.
 
-`data`  
+`string`  
 The packed data.
 
 `offset`  
@@ -2020,13 +2032,13 @@ Delay execution in microseconds
 
 <span class="type">void</span> <span class="methodname">usleep</span> (
 <span class="methodparam"><span class="type">int</span>
-`$micro_seconds`</span> )
+`$microseconds`</span> )
 
 Delays program execution for the given number of microseconds.
 
 ### Parameters
 
-`micro_seconds`  
+`microseconds`  
 Halt time in microseconds. A microsecond is one millionth of a second.
 
 > **Note**: <span class="simpara"> On Windows, the system may sleep

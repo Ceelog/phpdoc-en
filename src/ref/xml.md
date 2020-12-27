@@ -8,9 +8,9 @@ single-byte ISO-8859-1
 
 <span class="type">string</span> <span
 class="methodname">utf8\_decode</span> ( <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
+class="type">string</span> `$string`</span> )
 
-This function converts the string `data` from the *UTF-8* encoding to
+This function converts the string `string` from the *UTF-8* encoding to
 *ISO-8859-1*. Bytes in the string which are not valid *UTF-8*, and
 *UTF-8* characters which do not exist in *ISO-8859-1* (that is,
 characters above *U+00FF*) are replaced with *?*.
@@ -28,12 +28,12 @@ characters above *U+00FF*) are replaced with *?*.
 
 ### Parameters
 
-`data`  
+`string`  
 A UTF-8 encoded string.
 
 ### Return Values
 
-Returns the ISO-8859-1 translation of `data`.
+Returns the ISO-8859-1 translation of `string`.
 
 ### Changelog
 
@@ -62,10 +62,10 @@ Encodes an ISO-8859-1 string to UTF-8
 
 <span class="type">string</span> <span
 class="methodname">utf8\_encode</span> ( <span class="methodparam"><span
-class="type">string</span> `$data`</span> )
+class="type">string</span> `$string`</span> )
 
-This function converts the string `data` from the *ISO-8859-1* encoding
-to *UTF-8*.
+This function converts the string `string` from the *ISO-8859-1*
+encoding to *UTF-8*.
 
 > **Note**:
 >
@@ -80,12 +80,12 @@ to *UTF-8*.
 
 ### Parameters
 
-`data`  
+`string`  
 An ISO-8859-1 string.
 
 ### Return Values
 
-Returns the UTF-8 translation of `data`.
+Returns the UTF-8 translation of `string`.
 
 ### Changelog
 

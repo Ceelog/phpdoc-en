@@ -8,15 +8,15 @@ Decodes data encoded with MIME base64
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">base64\_decode</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> \[,
-<span class="methodparam"><span class="type">bool</span> `$strict`<span
-class="initializer"> = **`false`**</span></span> \] )
+class="methodparam"><span class="type">string</span> `$string`</span>
+\[, <span class="methodparam"><span class="type">bool</span>
+`$strict`<span class="initializer"> = **`false`**</span></span> \] )
 
-Decodes a base64 encoded `data`.
+Decodes a base64 encoded `string`.
 
 ### Parameters
 
-`data`  
+`string`  
 The encoded data.
 
 `strict`  
@@ -60,9 +60,9 @@ Encodes data with MIME base64
 
 <span class="type">string</span> <span
 class="methodname">base64\_encode</span> ( <span
-class="methodparam"><span class="type">string</span> `$data`</span> )
+class="methodparam"><span class="type">string</span> `$string`</span> )
 
-Encodes the given `data` with base64.
+Encodes the given `string` with base64.
 
 This encoding is designed to make binary data survive transport through
 transport layers that are not 8-bit clean, such as mail bodies.
@@ -71,7 +71,7 @@ Base64-encoded data takes about 33% more space than the original data.
 
 ### Parameters
 
-`data`  
+`string`  
 The data to encode.
 
 ### Return Values
@@ -217,7 +217,8 @@ array
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">get\_meta\_tags</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
@@ -263,6 +264,8 @@ standard array functions to traverse it or access single values. Special
 characters in the value of the name property are substituted with '\_',
 the rest is converted to lower case. If two meta tags have the same
 name, only the last one is returned.
+
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -645,14 +648,14 @@ Decode URL-encoded strings
 
 <span class="type">string</span> <span
 class="methodname">rawurldecode</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Returns a string in which the sequences with percent (*%*) signs
 followed by two hex digits have been replaced with literal characters.
 
 ### Parameters
 
-`str`  
+`string`  
 The URL to be decoded.
 
 ### Return Values
@@ -695,14 +698,14 @@ URL-encode according to RFC 3986
 
 <span class="type">string</span> <span
 class="methodname">rawurlencode</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Encodes the given string according to
 <a href="http://www.faqs.org/rfcs/rfc3986" class="link external">» RFC 3986</a>.
 
 ### Parameters
 
-`str`  
+`string`  
 The URL to be encoded.
 
 ### Return Values
@@ -766,14 +769,14 @@ Decodes URL-encoded string
 
 <span class="type">string</span> <span
 class="methodname">urldecode</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 Decodes any *%<span class="replaceable">\#\#</span>* encoding in the
 given string. Plus symbols ('*+*') are decoded to a space character.
 
 ### Parameters
 
-`str`  
+`string`  
 The string to be decoded.
 
 ### Return Values
@@ -822,14 +825,14 @@ URL-encodes string
 
 <span class="type">string</span> <span
 class="methodname">urlencode</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> )
+class="type">string</span> `$string`</span> )
 
 This function is convenient when encoding a string to be used in a query
 part of a URL, as a convenient way to pass variables to the next page.
 
 ### Parameters
 
-`str`  
+`string`  
 The string to be encoded.
 
 ### Return Values

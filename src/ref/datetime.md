@@ -1274,9 +1274,10 @@ Get current time
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">float</span></span> <span
 class="methodname">gettimeofday</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$returnFloat`<span
+class="methodparam"><span class="type">bool</span> `$as_float`<span
 class="initializer"> = **`false`**</span></span> \] )
 
 This is an interface to gettimeofday(2). It returns an associative array
@@ -1284,14 +1285,13 @@ containing the data returned from the system call.
 
 ### Parameters
 
-`returnFloat`  
+`as_float`  
 When set to **`true`**, a float instead of an array is returned.
 
 ### Return Values
 
-By default an <span class="type">array</span> is returned. If
-`returnFloat` is set, then a <span class="type">float</span> is
-returned.
+By default an <span class="type">array</span> is returned. If `as_float`
+is set, then a <span class="type">float</span> is returned.
 
 Array keys:
 
@@ -1773,9 +1773,10 @@ Return current Unix timestamp with microseconds
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">float</span></span> <span
 class="methodname">microtime</span> (\[ <span class="methodparam"><span
-class="type">bool</span> `$getAsFloat`<span class="initializer"> =
+class="type">bool</span> `$as_float`<span class="initializer"> =
 **`false`**</span></span> \] )
 
 <span class="function">microtime</span> returns the current Unix
@@ -1787,7 +1788,7 @@ is recommended.
 
 ### Parameters
 
-`getAsFloat`  
+`as_float`  
 If used and set to **`true`**, <span class="function">microtime</span>
 will return a <span class="type">float</span> instead of a <span
 class="type">string</span>, as described in the return values section
@@ -1801,7 +1802,7 @@ number of seconds since the Unix epoch (0:00:00 January 1,1970 GMT), and
 *msec* measures microseconds that have elapsed since *sec* and is also
 expressed in seconds.
 
-If `getAsFloat` is set to **`true`**, then <span
+If `as_float` is set to **`true`**, then <span
 class="function">microtime</span> returns a <span
 class="type">float</span>, which represents the current time in seconds
 since the Unix epoch accurate to the nearest microsecond.
@@ -2455,11 +2456,11 @@ Parse a time/date generated with <span class="function">strftime</span>
 <span class="type"><span class="type">array</span><span
 class="type">false</span></span> <span
 class="methodname">strptime</span> ( <span class="methodparam"><span
-class="type">string</span> `$date`</span> , <span
+class="type">string</span> `$timestamp`</span> , <span
 class="methodparam"><span class="type">string</span> `$format`</span> )
 
-<span class="function">strptime</span> returns an array with the `date`
-parsed, or **`false`** on error.
+<span class="function">strptime</span> returns an array with the
+`timestamp` parsed, or **`false`** on error.
 
 Month and weekday names and other language dependent strings respect the
 current locale set with <span class="function">setlocale</span>
@@ -2467,12 +2468,12 @@ current locale set with <span class="function">setlocale</span>
 
 ### Parameters
 
-`date` (<span class="type">string</span>)  
+`timestamp` (<span class="type">string</span>)  
 The string to parse (e.g. returned from <span
 class="function">strftime</span>).
 
 `format` (<span class="type">string</span>)  
-The format used in `date` (e.g. the same as used in <span
+The format used in `timestamp` (e.g. the same as used in <span
 class="function">strftime</span>). Note that some of the format options
 available to <span class="function">strftime</span> may not have any
 effect within <span class="function">strptime</span>; the exact subset
@@ -2486,17 +2487,17 @@ class="function">strftime</span> page.
 
 Returns an array or **`false`** on failure.
 
-| parameters   | Description                                                           |
-|--------------|-----------------------------------------------------------------------|
-| *"tm\_sec"*  | Seconds after the minute (0-61)                                       |
-| *"tm\_min"*  | Minutes after the hour (0-59)                                         |
-| *"tm\_hour"* | Hour since midnight (0-23)                                            |
-| *"tm\_mday"* | Day of the month (1-31)                                               |
-| *"tm\_mon"*  | Months since January (0-11)                                           |
-| *"tm\_year"* | Years since 1900                                                      |
-| *"tm\_wday"* | Days since Sunday (0-6)                                               |
-| *"tm\_yday"* | Days since January 1 (0-365)                                          |
-| *"unparsed"* | the `date` part which was not recognized using the specified `format` |
+| parameters   | Description                                                                |
+|--------------|----------------------------------------------------------------------------|
+| *"tm\_sec"*  | Seconds after the minute (0-61)                                            |
+| *"tm\_min"*  | Minutes after the hour (0-59)                                              |
+| *"tm\_hour"* | Hour since midnight (0-23)                                                 |
+| *"tm\_mday"* | Day of the month (1-31)                                                    |
+| *"tm\_mon"*  | Months since January (0-11)                                                |
+| *"tm\_year"* | Years since 1900                                                           |
+| *"tm\_wday"* | Days since Sunday (0-6)                                                    |
+| *"tm\_yday"* | Days since January 1 (0-365)                                               |
+| *"unparsed"* | the `timestamp` part which was not recognized using the specified `format` |
 
 ### Examples
 

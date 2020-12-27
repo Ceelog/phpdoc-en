@@ -134,12 +134,14 @@ Execute an external program
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">exec</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">exec</span> (
 <span class="methodparam"><span class="type">string</span>
 `$command`</span> \[, <span class="methodparam"><span
-class="type">array</span> `&$output`</span> \[, <span
-class="methodparam"><span class="type">int</span> `&$return_var`</span>
-\]\] )
+class="type">array</span> `&$output`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `&$result_code`<span class="initializer"> =
+**`null`**</span></span> \]\] )
 
 <span class="function">exec</span> executes the given `command`.
 
@@ -157,8 +159,8 @@ append to the end of the array. If you do not want the function to
 append elements, call <span class="function">unset</span> on the array
 before passing it to <span class="function">exec</span>.
 
-`return_var`  
-If the `return_var` argument is present along with the `output`
+`result_code`  
+If the `result_code` argument is present along with the `output`
 argument, then the return status of the executed command will be written
 to this variable.
 
@@ -168,6 +170,8 @@ The last line from the result of the command. If you need to execute a
 command and have all the data from the command passed directly back
 without any interference, use the <span class="function">passthru</span>
 function.
+
+Returns **`false`** on failure.
 
 To get the output of the executed command, be sure to set and use the
 `output` parameter.
@@ -375,12 +379,12 @@ Change the priority of the current process
 
 <span class="type">bool</span> <span
 class="methodname">proc\_nice</span> ( <span class="methodparam"><span
-class="type">int</span> `$increment`</span> )
+class="type">int</span> `$priority`</span> )
 
 <span class="function">proc\_nice</span> changes the priority of the
-current process by the amount specified in `increment`. A positive
-`increment` will lower the priority of the current process, whereas a
-negative `increment` will raise the priority.
+current process by the amount specified in `priority`. A positive
+`priority` will lower the priority of the current process, whereas a
+negative `priority` will raise the priority.
 
 <span class="function">proc\_nice</span> is not related to <span
 class="function">proc\_open</span> and its associated functions in any
@@ -388,21 +392,21 @@ way.
 
 ### Parameters
 
-`increment`  
+`priority`  
 The new priority value, the value of this may differ on platforms.
 
 On Unix, a low value, such as *-20* means high priority wheras a
 positive value have a lower priority.
 
-For Windows the `increment` parameter have the following meanings:
+For Windows the `priority` parameter have the following meanings:
 
-| Priority class        | Possible values                          |
-|-----------------------|------------------------------------------|
-| High priority         | `increment` *\< -9*                      |
-| Above normal priority | `increment` *\< -4*                      |
-| Normal priority       | `increment` *\< 5* & `increment` *\> -5* |
-| Below normal priority | `increment` *\> 5*                       |
-| Idle priority         | `increment` *\> 9*                       |
+| Priority class        | Possible values                        |
+|-----------------------|----------------------------------------|
+| High priority         | `priority` *\< -9*                     |
+| Above normal priority | `priority` *\< -4*                     |
+| Normal priority       | `priority` *\< 5* & `priority` *\> -5* |
+| Below normal priority | `priority` *\> 5*                      |
+| Idle priority         | `priority` *\> 9*                      |
 
 ### Return Values
 
@@ -768,10 +772,12 @@ Execute an external program and display the output
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">system</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">system</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$command`</span> \[, <span class="methodparam"><span
-class="type">int</span> `&$return_var`</span> \] )
+class="type">int</span> `&$result_code`<span class="initializer"> =
+**`null`**</span></span> \] )
 
 <span class="function">system</span> is just like the C version of the
 function in that it executes the given `command` and outputs the result.
@@ -789,8 +795,8 @@ class="function">passthru</span> function.
 `command`  
 The command that will be executed.
 
-`return_var`  
-If the `return_var` argument is present, then the return status of the
+`result_code`  
+If the `result_code` argument is present, then the return status of the
 executed command will be written to this variable.
 
 ### Return Values

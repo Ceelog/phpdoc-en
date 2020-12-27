@@ -50,10 +50,10 @@ Arc cosine
 ### Description
 
 <span class="type">float</span> <span class="methodname">acos</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the arc cosine of `arg` in radians. <span
+Returns the arc cosine of `num` in radians. <span
 class="function">acos</span> is the inverse function of <span
 class="function">cos</span>, which means that *a==cos(acos(a))* for
 every value of a that is within <span class="function">acos</span>'
@@ -61,12 +61,12 @@ range.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The arc cosine of `arg` in radians.
+The arc cosine of `num` in radians.
 
 ### See Also
 
@@ -83,20 +83,20 @@ Inverse hyperbolic cosine
 ### Description
 
 <span class="type">float</span> <span class="methodname">acosh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the inverse hyperbolic cosine of `arg`, i.e. the value whose
-hyperbolic cosine is `arg`.
+Returns the inverse hyperbolic cosine of `num`, i.e. the value whose
+hyperbolic cosine is `num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The value to process
 
 ### Return Values
 
-The inverse hyperbolic cosine of `arg`
+The inverse hyperbolic cosine of `num`
 
 ### See Also
 
@@ -113,10 +113,10 @@ Arc sine
 ### Description
 
 <span class="type">float</span> <span class="methodname">asin</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the arc sine of `arg` in radians. <span
+Returns the arc sine of `num` in radians. <span
 class="function">asin</span> is the inverse function of <span
 class="function">sin</span>, which means that *a==sin(asin(a))* for
 every value of a that is within <span class="function">asin</span>'s
@@ -124,12 +124,12 @@ range.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The arc sine of `arg` in radians
+The arc sine of `num` in radians
 
 ### See Also
 
@@ -146,20 +146,20 @@ Inverse hyperbolic sine
 ### Description
 
 <span class="type">float</span> <span class="methodname">asinh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the inverse hyperbolic sine of `arg`, i.e. the value whose
-hyperbolic sine is `arg`.
+Returns the inverse hyperbolic sine of `num`, i.e. the value whose
+hyperbolic sine is `num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The inverse hyperbolic sine of `arg`
+The inverse hyperbolic sine of `num`
 
 ### See Also
 
@@ -211,10 +211,10 @@ Arc tangent
 ### Description
 
 <span class="type">float</span> <span class="methodname">atan</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the arc tangent of `arg` in radians. <span
+Returns the arc tangent of `num` in radians. <span
 class="function">atan</span> is the inverse function of <span
 class="function">tan</span>, which means that *a==tan(atan(a))* for
 every value of a that is within <span class="function">atan</span>'s
@@ -222,12 +222,12 @@ range.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The arc tangent of `arg` in radians.
+The arc tangent of `num` in radians.
 
 ### See Also
 
@@ -244,20 +244,20 @@ Inverse hyperbolic tangent
 ### Description
 
 <span class="type">float</span> <span class="methodname">atanh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the inverse hyperbolic tangent of `arg`, i.e. the value whose
-hyperbolic tangent is `arg`.
+Returns the inverse hyperbolic tangent of `num`, i.e. the value whose
+hyperbolic tangent is `num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-Inverse hyperbolic tangent of `arg`
+Inverse hyperbolic tangent of `num`
 
 ### See Also
 
@@ -275,17 +275,17 @@ Convert a number between arbitrary bases
 
 <span class="type">string</span> <span
 class="methodname">base\_convert</span> ( <span
-class="methodparam"><span class="type">string</span> `$number`</span> ,
+class="methodparam"><span class="type">string</span> `$num`</span> ,
 <span class="methodparam"><span class="type">int</span>
-`$frombase`</span> , <span class="methodparam"><span
-class="type">int</span> `$tobase`</span> )
+`$from_base`</span> , <span class="methodparam"><span
+class="type">int</span> `$to_base`</span> )
 
-Returns a string containing `number` represented in base `tobase`. The
-base in which `number` is given is specified in `frombase`. Both
-`frombase` and `tobase` have to be between 2 and 36, inclusive. Digits
+Returns a string containing `num` represented in base `to_base`. The
+base in which `num` is given is specified in `from_base`. Both
+`from_base` and `to_base` have to be between 2 and 36, inclusive. Digits
 in numbers with a base higher than 10 will be represented with the
 letters a-z, with a meaning 10, b meaning 11 and z meaning 35. The case
-of the letters doesn't matter, i.e. `number` is interpreted
+of the letters doesn't matter, i.e. `num` is interpreted
 case-insensitively.
 
 **Warning**
@@ -298,19 +298,19 @@ section in the manual for more specific information and limitations.
 
 ### Parameters
 
-`number`  
-The number to convert. Any invalid characters in `number` are silently
+`num`  
+The number to convert. Any invalid characters in `num` are silently
 ignored. As of PHP 7.4.0 supplying any invalid characters is deprecated.
 
-`frombase`  
-The base `number` is in
+`from_base`  
+The base `num` is in
 
-`tobase`  
-The base to convert `number` to
+`to_base`  
+The base to convert `num` to
 
 ### Return Values
 
-`number` converted to base `tobase`
+`num` converted to base `to_base`
 
 ### Changelog
 
@@ -568,20 +568,20 @@ Cosine
 ### Description
 
 <span class="type">float</span> <span class="methodname">cos</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-<span class="function">cos</span> returns the cosine of the `arg`
-parameter. The `arg` parameter is in radians.
+<span class="function">cos</span> returns the cosine of the `num`
+parameter. The `num` parameter is in radians.
 
 ### Parameters
 
-`arg`  
+`num`  
 An angle in radians
 
 ### Return Values
 
-The cosine of `arg`
+The cosine of `num`
 
 ### Examples
 
@@ -610,20 +610,20 @@ Hyperbolic cosine
 ### Description
 
 <span class="type">float</span> <span class="methodname">cosh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the hyperbolic cosine of `arg`, defined as *(exp(arg) +
+Returns the hyperbolic cosine of `num`, defined as *(exp(arg) +
 exp(-arg))/2*.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The hyperbolic cosine of `arg`
+The hyperbolic cosine of `num`
 
 ### See Also
 
@@ -640,24 +640,24 @@ Decimal to binary
 ### Description
 
 <span class="type">string</span> <span class="methodname">decbin</span>
-( <span class="methodparam"><span class="type">int</span>
-`$number`</span> )
+( <span class="methodparam"><span class="type">int</span> `$num`</span>
+)
 
-Returns a string containing a binary representation of the given
-`number` argument.
+Returns a string containing a binary representation of the given `num`
+argument.
 
 ### Parameters
 
-`number`  
+`num`  
 Decimal value to convert
 
 **Range of inputs on 32-bit machines**
 
-positive `number`
+positive `num`
 
 ### Return Values
 
-Binary string representation of `number`
+Binary string representation of `num`
 
 ### Examples
 
@@ -694,11 +694,11 @@ Decimal to hexadecimal
 ### Description
 
 <span class="type">string</span> <span class="methodname">dechex</span>
-( <span class="methodparam"><span class="type">int</span>
-`$number`</span> )
+( <span class="methodparam"><span class="type">int</span> `$num`</span>
+)
 
 Returns a string containing a hexadecimal representation of the given
-unsigned `number` argument.
+unsigned `num` argument.
 
 The largest number that can be converted is **`PHP_INT_MAX`** *\* 2 + 1*
 (or *-1*): on 32-bit platforms, this will be *4294967295* in decimal,
@@ -707,7 +707,7 @@ which results in <span class="function">dechex</span> returning
 
 ### Parameters
 
-`number`  
+`num`  
 The decimal value to convert.
 
 As PHP's <span class="type">int</span> type is signed, but <span
@@ -716,7 +716,7 @@ integers will be treated as though they were unsigned.
 
 ### Return Values
 
-Hexadecimal string representation of `number`.
+Hexadecimal string representation of `num`.
 
 ### Examples
 
@@ -768,24 +768,23 @@ Decimal to octal
 ### Description
 
 <span class="type">string</span> <span class="methodname">decoct</span>
-( <span class="methodparam"><span class="type">int</span>
-`$number`</span> )
+( <span class="methodparam"><span class="type">int</span> `$num`</span>
+)
 
-Returns a string containing an octal representation of the given
-`number` argument. The largest number that can be converted depends on
-the platform in use. For 32-bit platforms this is usually *4294967295*
-in decimal resulting in *37777777777*. For 64-bit platforms this is
-usually *9223372036854775807* in decimal resulting in
-*777777777777777777777*.
+Returns a string containing an octal representation of the given `num`
+argument. The largest number that can be converted depends on the
+platform in use. For 32-bit platforms this is usually *4294967295* in
+decimal resulting in *37777777777*. For 64-bit platforms this is usually
+*9223372036854775807* in decimal resulting in *777777777777777777777*.
 
 ### Parameters
 
-`number`  
+`num`  
 Decimal value to convert
 
 ### Return Values
 
-Octal string representation of `number`
+Octal string representation of `num`
 
 ### Examples
 
@@ -819,18 +818,18 @@ Converts the number in degrees to the radian equivalent
 
 <span class="type">float</span> <span class="methodname">deg2rad</span>
 ( <span class="methodparam"><span class="type">float</span>
-`$number`</span> )
+`$num`</span> )
 
-This function converts `number` from degrees to the radian equivalent.
+This function converts `num` from degrees to the radian equivalent.
 
 ### Parameters
 
-`number`  
+`num`  
 Angular value in degrees
 
 ### Return Values
 
-The radian equivalent of `number`
+The radian equivalent of `num`
 
 ### Examples
 
@@ -857,10 +856,10 @@ Calculates the exponent of **`e`**
 ### Description
 
 <span class="type">float</span> <span class="methodname">exp</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns **`e`** raised to the power of `arg`.
+Returns **`e`** raised to the power of `num`.
 
 > **Note**:
 >
@@ -869,12 +868,12 @@ Returns **`e`** raised to the power of `arg`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-'e' raised to the power of `arg`
+'e' raised to the power of `num`
 
 ### Examples
 
@@ -906,22 +905,22 @@ the value of number is close to zero
 ### Description
 
 <span class="type">float</span> <span class="methodname">expm1</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
 <span class="function">expm1</span> returns the equivalent to
-'exp(`arg`) - 1' computed in a way that is accurate even if the value of
-`arg` is near zero, a case where 'exp (`arg`) - 1' would be inaccurate
+'exp(`num`) - 1' computed in a way that is accurate even if the value of
+`num` is near zero, a case where 'exp (`num`) - 1' would be inaccurate
 due to subtraction of two numbers that are nearly equal.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-'e' to the power of `arg` minus one
+'e' to the power of `num` minus one
 
 ### See Also
 
@@ -936,28 +935,28 @@ Divides two numbers, according to IEEE 754
 ### Description
 
 <span class="type">float</span> <span class="methodname">fdiv</span> (
-<span class="methodparam"><span class="type">float</span>
-`$dividend`</span> , <span class="methodparam"><span
-class="type">float</span> `$divisor`</span> )
+<span class="methodparam"><span class="type">float</span> `$num1`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$num2`</span> )
 
-Returns the floating point result of dividing the `dividend` by the
-`divisor`. If the `divisor` is zero, then one of *INF*, *-INF*, or *NAN*
-will be returned.
+Returns the floating point result of dividing the `num1` by the `num2`.
+If the `num2` is zero, then one of *INF*, *-INF*, or *NAN* will be
+returned.
 
 Note that in comparisons, *NAN* will never `==` or `===`, any value,
 including itself.
 
 ### Parameters
 
-`dividend`  
+`num1`  
 The dividend (numerator)
 
-`divisor`  
+`num2`  
 The divisor
 
 ### Return Values
 
-The floating point result of `dividend`/`divisor`
+The floating point result of `num1`/`num2`
 
 ### Examples
 
@@ -1034,25 +1033,26 @@ arguments
 ### Description
 
 <span class="type">float</span> <span class="methodname">fmod</span> (
-<span class="methodparam"><span class="type">float</span> `$x`</span> ,
-<span class="methodparam"><span class="type">float</span> `$y`</span> )
+<span class="methodparam"><span class="type">float</span> `$num1`</span>
+, <span class="methodparam"><span class="type">float</span>
+`$num2`</span> )
 
-Returns the floating point remainder of dividing the dividend (`x`) by
-the divisor (`y`). The remainder (`r`) is defined as: x = i \* y + r,
-for some integer `i`. If `y` is non-zero, `r` has the same sign as `x`
-and a magnitude less than the magnitude of `y`.
+Returns the floating point remainder of dividing the dividend (`num1`)
+by the divisor (`num2`). The remainder (`r`) is defined as: num1 = i \*
+num2 + r, for some integer `i`. If `num2` is non-zero, `r` has the same
+sign as `num1` and a magnitude less than the magnitude of `num2`.
 
 ### Parameters
 
-`x`  
+`num1`  
 The dividend
 
-`y`  
+`num2`  
 The divisor
 
 ### Return Values
 
-The floating point remainder of `x`/`y`
+The floating point remainder of `num1`/`num2`
 
 ### Examples
 
@@ -1200,30 +1200,29 @@ Integer division
 ### Description
 
 <span class="type">int</span> <span class="methodname">intdiv</span> (
-<span class="methodparam"><span class="type">int</span>
-`$dividend`</span> , <span class="methodparam"><span
-class="type">int</span> `$divisor`</span> )
+<span class="methodparam"><span class="type">int</span> `$num1`</span> ,
+<span class="methodparam"><span class="type">int</span> `$num2`</span> )
 
-Returns the integer quotient of the division of `dividend` by `divisor`.
+Returns the integer quotient of the division of `num1` by `num2`.
 
 ### Parameters
 
-`dividend`  
+`num1`  
 Number to be divided.
 
-`divisor`  
-Number which divides the `dividend`.
+`num2`  
+Number which divides the `num1`.
 
 ### Return Values
 
-The integer quotient of the division of `dividend` by `divisor`.
+The integer quotient of the division of `num1` by `num2`.
 
 ### Errors/Exceptions
 
-If `divisor` is *0*, a <span
-class="classname">DivisionByZeroError</span> exception is thrown. If the
-`dividend` is **`PHP_INT_MIN`** and the `divisor` is *-1*, then an <span
-class="classname">ArithmeticError</span> exception is thrown.
+If `num2` is *0*, a <span class="classname">DivisionByZeroError</span>
+exception is thrown. If the `num1` is **`PHP_INT_MIN`** and the `num2`
+is *-1*, then an <span class="classname">ArithmeticError</span>
+exception is thrown.
 
 ### Examples
 
@@ -1269,18 +1268,18 @@ Finds whether a value is a legal finite number
 
 <span class="type">bool</span> <span
 class="methodname">is\_finite</span> ( <span class="methodparam"><span
-class="type">float</span> `$val`</span> )
+class="type">float</span> `$num`</span> )
 
-Checks whether `val` is a legal finite on this platform.
+Checks whether `num` is a legal finite on this platform.
 
 ### Parameters
 
-`val`  
+`num`  
 The value to check
 
 ### Return Values
 
-**`true`** if `val` is a legal finite number within the allowed range
+**`true`** if `num` is a legal finite number within the allowed range
 for a PHP float on this platform, else **`false`**.
 
 ### See Also
@@ -1297,20 +1296,20 @@ Finds whether a value is infinite
 
 <span class="type">bool</span> <span
 class="methodname">is\_infinite</span> ( <span class="methodparam"><span
-class="type">float</span> `$val`</span> )
+class="type">float</span> `$num`</span> )
 
-Returns **`true`** if `val` is infinite (positive or negative), like the
+Returns **`true`** if `num` is infinite (positive or negative), like the
 result of *log(0)* or any value too big to fit into a float on this
 platform.
 
 ### Parameters
 
-`val`  
+`num`  
 The value to check
 
 ### Return Values
 
-**`true`** if `val` is infinite, else **`false`**.
+**`true`** if `num` is infinite, else **`false`**.
 
 ### See Also
 
@@ -1325,19 +1324,19 @@ Finds whether a value is not a number
 ### Description
 
 <span class="type">bool</span> <span class="methodname">is\_nan</span> (
-<span class="methodparam"><span class="type">float</span> `$val`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Checks whether `val` is 'not a number', like the result of *acos(1.01)*.
+Checks whether `num` is 'not a number', like the result of *acos(1.01)*.
 
 ### Parameters
 
-`val`  
+`num`  
 The value to check
 
 ### Return Values
 
-Returns **`true`** if `val` is 'not a number', else **`false`**.
+Returns **`true`** if `num` is 'not a number', else **`false`**.
 
 ### Examples
 
@@ -1405,19 +1404,19 @@ Base-10 logarithm
 ### Description
 
 <span class="type">float</span> <span class="methodname">log10</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the base-10 logarithm of `arg`.
+Returns the base-10 logarithm of `num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The base-10 logarithm of `arg`
+The base-10 logarithm of `num`
 
 ### See Also
 
@@ -1432,22 +1431,22 @@ the value of number is close to zero
 ### Description
 
 <span class="type">float</span> <span class="methodname">log1p</span> (
-<span class="methodparam"><span class="type">float</span>
-`$number`</span> )
+<span class="methodparam"><span class="type">float</span> `$num`</span>
+)
 
-<span class="function">log1p</span> returns log(1 + `number`) computed
-in a way that is accurate even when the value of `number` is close to
-zero. <span class="function">log</span> might only return log(1) in this
-case due to lack of precision.
+<span class="function">log1p</span> returns log(1 + `num`) computed in a
+way that is accurate even when the value of `num` is close to zero.
+<span class="function">log</span> might only return log(1) in this case
+due to lack of precision.
 
 ### Parameters
 
-`number`  
+`num`  
 The argument to process
 
 ### Return Values
 
-log(1 + `number`)
+log(1 + `num`)
 
 ### See Also
 
@@ -1463,18 +1462,18 @@ Natural logarithm
 ### Description
 
 <span class="type">float</span> <span class="methodname">log</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 \[, <span class="methodparam"><span class="type">float</span>
-`$base`<span class="initializer"> = M\_E</span></span> \] )
+`$base`<span class="initializer"> = **`M_E`**</span></span> \] )
 
 If the optional `base` parameter is specified, <span
-class="function">log</span> returns log<sub>base</sub> `arg`, otherwise
+class="function">log</span> returns log<sub>base</sub> `num`, otherwise
 <span class="function">log</span> returns the natural logarithm of
-`arg`.
+`num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The value to calculate the logarithm for
 
 `base`  
@@ -1483,7 +1482,7 @@ natural logarithm).
 
 ### Return Values
 
-The logarithm of `arg` to `base`, if given, or the natural logarithm.
+The logarithm of `num` to `base`, if given, or the natural logarithm.
 
 ### See Also
 
@@ -1854,10 +1853,10 @@ Seeds the Mersenne Twister Random Number Generator
 ### Description
 
 <span class="type">void</span> <span class="methodname">mt\_srand</span>
-(\[ <span class="methodparam"><span class="type">int</span>
-`$seed`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$mode`<span class="initializer"> =
-MT\_RAND\_MT19937</span></span> \]\] )
+(\[ <span class="methodparam"><span class="type">int</span> `$seed`<span
+class="initializer"> = 0</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$mode`<span
+class="initializer"> = **`MT_RAND_MT19937`**</span></span> \]\] )
 
 Seeds the random number generator with `seed` or with a random value if
 no `seed` is given.
@@ -2085,18 +2084,18 @@ Converts the radian number to the equivalent number in degrees
 
 <span class="type">float</span> <span class="methodname">rad2deg</span>
 ( <span class="methodparam"><span class="type">float</span>
-`$number`</span> )
+`$num`</span> )
 
-This function converts `number` from radian to degrees.
+This function converts `num` from radian to degrees.
 
 ### Parameters
 
-`number`  
+`num`  
 A radian value
 
 ### Return Values
 
-The equivalent of `number` in degrees
+The equivalent of `num` in degrees
 
 ### Examples
 
@@ -2411,20 +2410,20 @@ Sine
 ### Description
 
 <span class="type">float</span> <span class="methodname">sin</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-<span class="function">sin</span> returns the sine of the `arg`
-parameter. The `arg` parameter is in radians.
+<span class="function">sin</span> returns the sine of the `num`
+parameter. The `num` parameter is in radians.
 
 ### Parameters
 
-`arg`  
+`num`  
 A value in radians
 
 ### Return Values
 
-The sine of `arg`
+The sine of `num`
 
 ### Examples
 
@@ -2456,20 +2455,20 @@ Hyperbolic sine
 ### Description
 
 <span class="type">float</span> <span class="methodname">sinh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the hyperbolic sine of `arg`, defined as *(exp(arg) -
-exp(-arg))/2*.
+Returns the hyperbolic sine of `num`, defined as *(exp(num) -
+exp(-num))/2*.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The hyperbolic sine of `arg`
+The hyperbolic sine of `num`
 
 ### See Also
 
@@ -2486,19 +2485,19 @@ Square root
 ### Description
 
 <span class="type">float</span> <span class="methodname">sqrt</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the square root of `arg`.
+Returns the square root of `num`.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The square root of `arg` or the special value *NAN* for negative
+The square root of `num` or the special value *NAN* for negative
 numbers.
 
 ### Examples
@@ -2586,20 +2585,20 @@ Tangent
 ### Description
 
 <span class="type">float</span> <span class="methodname">tan</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-<span class="function">tan</span> returns the tangent of the `arg`
-parameter. The `arg` parameter is in radians.
+<span class="function">tan</span> returns the tangent of the `num`
+parameter. The `num` parameter is in radians.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process in radians
 
 ### Return Values
 
-The tangent of `arg`
+The tangent of `num`
 
 ### Examples
 
@@ -2630,20 +2629,20 @@ Hyperbolic tangent
 ### Description
 
 <span class="type">float</span> <span class="methodname">tanh</span> (
-<span class="methodparam"><span class="type">float</span> `$arg`</span>
+<span class="methodparam"><span class="type">float</span> `$num`</span>
 )
 
-Returns the hyperbolic tangent of `arg`, defined as
-*sinh(arg)/cosh(arg)*.
+Returns the hyperbolic tangent of `num`, defined as
+*sinh(num)/cosh(num)*.
 
 ### Parameters
 
-`arg`  
+`num`  
 The argument to process
 
 ### Return Values
 
-The hyperbolic tangent of `arg`
+The hyperbolic tangent of `num`
 
 ### See Also
 

@@ -8,17 +8,17 @@ address
 
 <span class="type">bool</span> <span
 class="methodname">checkdnsrr</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> \[, <span
+class="type">string</span> `$hostname`</span> \[, <span
 class="methodparam"><span class="type">string</span> `$type`<span
 class="initializer"> = "MX"</span></span> \] )
 
-Searches DNS for records of type `type` corresponding to `host`.
+Searches DNS for records of type `type` corresponding to `hostname`.
 
 ### Parameters
 
-`host`  
-`host` may either be the IP address in dotted-quad notation or the host
-name.
+`hostname`  
+`hostname` may either be the IP address in dotted-quad notation or the
+host name.
 
 `type`  
 `type` may be any one of: A, MX, NS, SOA, PTR, CNAME, AAAA, A6, SRV,
@@ -477,16 +477,20 @@ Open Internet or Unix domain socket connection
 
 ### Description
 
-<span class="type">resource</span> <span
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span
 class="methodname">fsockopen</span> ( <span class="methodparam"><span
 class="type">string</span> `$hostname`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$port`<span
 class="initializer"> = -1</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `&$errno`</span> \[,
-<span class="methodparam"><span class="type">string</span>
-`&$errstr`</span> \[, <span class="methodparam"><span
-class="type">float</span> `$timeout`<span class="initializer"> =
-ini\_get("default\_socket\_timeout")</span></span> \]\]\]\] )
+class="methodparam"><span class="type">int</span> `&$error_code`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`&$error_message`<span class="initializer"> = **`null`**</span></span>
+\[, <span class="methodparam"><span class="type"><span
+class="type">float</span><span class="type">null</span></span>
+`$timeout`<span class="initializer"> = **`null`**</span></span> \]\]\]\]
+)
 
 Initiates a socket connection to the resource specified by `hostname`.
 
@@ -515,16 +519,16 @@ SSL or TLS client connection over TCP/IP to connect to the remote host.
 The port number. This can be omitted and skipped with *-1* for
 transports that do not use ports, such as *unix://*.
 
-`errno`  
+`error_code`  
 If provided, holds the system level error number that occurred in the
 system-level *connect()* call.
 
-If the value returned in `errno` is *0* and the function returned
+If the value returned in `error_code` is *0* and the function returned
 **`false`**, it is an indication that the error occurred before the
 *connect()* call. This is most likely due to a problem initializing the
 socket.
 
-`errstr`  
+`error_message`  
 The error message as a string.
 
 `timeout`  
@@ -549,6 +553,12 @@ If the call fails, it will return **`false`**
 ### Errors/Exceptions
 
 Throws **`E_WARNING`** if `hostname` is not a valid domain.
+
+### Changelog
+
+| Version | Description                |
+|---------|----------------------------|
+| 8.0.0   | `timeout` is nullable now. |
 
 ### Examples
 
@@ -631,22 +641,22 @@ Get the Internet host name corresponding to a given IP address
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gethostbyaddr</span> ( <span
-class="methodparam"><span class="type">string</span>
-`$ip_address`</span> )
+class="methodparam"><span class="type">string</span> `$ip`</span> )
 
-Returns the host name of the Internet host specified by `ip_address`.
+Returns the host name of the Internet host specified by `ip`.
 
 ### Parameters
 
-`ip_address`  
+`ip`  
 The host IP address.
 
 ### Return Values
 
-Returns the host name on success, the unmodified `ip_address` on
-failure, or **`false`** on malformed input.
+Returns the host name on success, the unmodified `ip` on failure, or
+**`false`** on malformed input.
 
 ### Examples
 
@@ -717,7 +727,8 @@ Get a list of IPv4 addresses corresponding to a given Internet host name
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">gethostbynamel</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 )
@@ -768,7 +779,8 @@ Gets the host name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">gethostname</span> ( <span
 class="methodparam">void</span> )
 
@@ -810,9 +822,9 @@ Get MX records corresponding to a given Internet host name
 <span class="type">bool</span> <span class="methodname">getmxrr</span> (
 <span class="methodparam"><span class="type">string</span>
 `$hostname`</span> , <span class="methodparam"><span
-class="type">array</span> `&$mxhosts`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$weight`</span> \]
-)
+class="type">array</span> `&$hosts`</span> \[, <span
+class="methodparam"><span class="type">array</span> `&$weights`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 Searches DNS for MX records corresponding to `hostname`.
 
@@ -821,11 +833,11 @@ Searches DNS for MX records corresponding to `hostname`.
 `hostname`  
 The Internet host name.
 
-`mxhosts`  
-A list of the MX records found is placed into the array `mxhosts`.
+`hosts`  
+A list of the MX records found is placed into the array `hosts`.
 
-`weight`  
-If the `weight` array is given, it will be filled with the weight
+`weights`  
+If the `weights` array is given, it will be filled with the weight
 information gathered.
 
 ### Return Values
@@ -870,14 +882,15 @@ Get protocol number associated with protocol name
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
 class="methodname">getprotobyname</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> )
+class="methodparam"><span class="type">string</span> `$protocol`</span>
+)
 
 <span class="function">getprotobyname</span> returns the protocol number
-associated with the protocol `name` as per `/etc/protocols`.
+associated with the protocol `protocol` as per `/etc/protocols`.
 
 ### Parameters
 
-`name`  
+`protocol`  
 The protocol name.
 
 ### Return Values
@@ -914,14 +927,14 @@ Get protocol name associated with protocol number
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">getprotobynumber</span> ( <span
-class="methodparam"><span class="type">int</span> `$number`</span> )
+class="methodparam"><span class="type">int</span> `$protocol`</span> )
 
 <span class="function">getprotobynumber</span> returns the protocol name
-associated with protocol `number` as per `/etc/protocols`.
+associated with protocol `protocol` as per `/etc/protocols`.
 
 ### Parameters
 
-`number`  
+`protocol`  
 The protocol number.
 
 ### Return Values
@@ -939,7 +952,8 @@ Get port number associated with an Internet service and protocol
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">getservbyname</span> ( <span
 class="methodparam"><span class="type">string</span> `$service`</span> ,
 <span class="methodparam"><span class="type">string</span>
@@ -991,7 +1005,8 @@ Get Internet service which corresponds to port and protocol
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">getservbyport</span> ( <span
 class="methodparam"><span class="type">int</span> `$port`</span> , <span
 class="methodparam"><span class="type">string</span> `$protocol`</span>
@@ -1011,7 +1026,8 @@ The port number.
 
 ### Return Values
 
-Returns the Internet service name as a string.
+Returns the Internet service name as a string, or **`false`** on
+failure.
 
 ### See Also
 
@@ -1176,7 +1192,8 @@ Send a raw HTTP header
 `$header`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$replace`<span class="initializer"> =
 **`true`**</span></span> \[, <span class="methodparam"><span
-class="type">int</span> `$http_response_code`</span> \]\] )
+class="type">int</span> `$response_code`<span class="initializer"> =
+0</span></span> \]\] )
 
 <span class="function">header</span> is used to send a raw HTTP header.
 See the
@@ -1248,7 +1265,7 @@ header('WWW-Authenticate: NTLM', false);
 ?>
 ```
 
-`http_response_code`  
+`response_code`  
 Forces the HTTP response code to the specified value. Note that this
 parameter only has an effect if the `header` is not empty.
 
@@ -1455,9 +1472,10 @@ Checks if or where headers have been sent
 
 <span class="type">bool</span> <span
 class="methodname">headers\_sent</span> (\[ <span
-class="methodparam"><span class="type">string</span> `&$file`</span> \[,
-<span class="methodparam"><span class="type">int</span> `&$line`</span>
-\]\] )
+class="methodparam"><span class="type">string</span> `&$filename`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `&$line`<span
+class="initializer"> = **`null`**</span></span> \]\] )
 
 Checks if or where headers have been sent.
 
@@ -1469,10 +1487,11 @@ HTTP header related error messages. Another option is to use
 
 ### Parameters
 
-`file`  
-If the optional `file` and `line` parameters are set, <span
+`filename`  
+If the optional `filename` and `line` parameters are set, <span
 class="function">headers\_sent</span> will put the PHP source file name
-and line number where output started in the `file` and `line` variables.
+and line number where output started in the `filename` and `line`
+variables.
 
 `line`  
 The line number where the output started.
@@ -1537,10 +1556,11 @@ Get or Set the HTTP response code
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">bool</span></span> <span
 class="methodname">http\_response\_code</span> (\[ <span
-class="methodparam"><span class="type">int</span>
-`$response_code`</span> \] )
+class="methodparam"><span class="type">int</span> `$response_code`<span
+class="initializer"> = 0</span></span> \] )
 
 Gets or sets the HTTP response status code.
 
@@ -1621,7 +1641,7 @@ Converts a packed internet address to a human readable representation
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span
 class="methodname">inet\_ntop</span> ( <span class="methodparam"><span
-class="type">string</span> `$in_addr`</span> )
+class="type">string</span> `$ip`</span> )
 
 This function converts a 32bit IPv4, or 128bit IPv6 address (if PHP was
 built with IPv6 support enabled) into an address family appropriate
@@ -1629,7 +1649,7 @@ string representation.
 
 ### Parameters
 
-`in_addr`  
+`ip`  
 A 32bit IPv4, or 128bit IPv6 address.
 
 ### Return Values
@@ -1671,9 +1691,10 @@ representation
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">inet\_pton</span> ( <span class="methodparam"><span
-class="type">string</span> `$address`</span> )
+class="type">string</span> `$ip`</span> )
 
 This function converts a human readable IPv4 or IPv6 address (if PHP was
 built with IPv6 support enabled) into an address family appropriate
@@ -1681,14 +1702,14 @@ built with IPv6 support enabled) into an address family appropriate
 
 ### Parameters
 
-`address`  
+`ip`  
 A human readable IPv4 or IPv6 address.
 
 ### Return Values
 
-Returns the *in\_addr* representation of the given `address`, or
-**`false`** if a syntactically invalid `address` is given (for example,
-an IPv4 address without dots or an IPv6 address without colons).
+Returns the *in\_addr* representation of the given `ip`, or **`false`**
+if a syntactically invalid `ip` is given (for example, an IPv4 address
+without dots or an IPv6 address without colons).
 
 ### Examples
 
@@ -1716,9 +1737,10 @@ into a long integer
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">ip2long</span> (
-<span class="methodparam"><span class="type">string</span>
-`$ip_address`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">ip2long</span>
+( <span class="methodparam"><span class="type">string</span>
+`$ip`</span> )
 
 The function <span class="function">ip2long</span> generates a long
 integer representation of IPv4 Internet network address from its
@@ -1731,12 +1753,12 @@ for more info.
 
 ### Parameters
 
-`ip_address`  
+`ip`  
 A standard format address.
 
 ### Return Values
 
-Returns the long integer or **`false`** if `ip_address` is invalid.
+Returns the long integer or **`false`** if `ip` is invalid.
 
 ### Examples
 
@@ -1803,9 +1825,9 @@ standard dotted format
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">long2ip</span>
-( <span class="methodparam"><span class="type">int</span>
-`$proper_address`</span> )
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">long2ip</span>
+( <span class="methodparam"><span class="type">int</span> `$ip`</span> )
 
 The function <span class="function">long2ip</span> generates an Internet
 address in dotted format (i.e.: aaa.bbb.ccc.ddd) from the long integer
@@ -1813,18 +1835,18 @@ representation.
 
 ### Parameters
 
-`proper_address`  
+`ip`  
 A proper address representation in long integer.
 
 ### Return Values
 
-Returns the Internet IP address as a string.
+Returns the Internet IP address as a string, or **`false`** on failure.
 
 ### Changelog
 
-| Version | Description                                                                                                                     |
-|---------|---------------------------------------------------------------------------------------------------------------------------------|
-| 7.1.0   | The parameter type of `proper_address` has been changed from <span class="type">string</span> to <span class="type">int</span>. |
+| Version | Description                                                                                                         |
+|---------|---------------------------------------------------------------------------------------------------------------------|
+| 7.1.0   | The parameter type of `ip` has been changed from <span class="type">string</span> to <span class="type">int</span>. |
 
 ### Notes
 
@@ -1848,8 +1870,8 @@ Open connection to system logger
 
 <span class="type">bool</span> <span class="methodname">openlog</span> (
 <span class="methodparam"><span class="type">string</span>
-`$ident`</span> , <span class="methodparam"><span
-class="type">int</span> `$option`</span> , <span
+`$prefix`</span> , <span class="methodparam"><span
+class="type">int</span> `$flags`</span> , <span
 class="methodparam"><span class="type">int</span> `$facility`</span> )
 
 <span class="function">openlog</span> opens a connection to the system
@@ -1857,15 +1879,15 @@ logger for a program.
 
 The use of <span class="function">openlog</span> is optional. It will
 automatically be called by <span class="function">syslog</span> if
-necessary, in which case `ident` will default to **`false`**.
+necessary, in which case `prefix` will default to **`false`**.
 
 ### Parameters
 
-`ident`  
-The string `ident` is added to each message.
+`prefix`  
+The string `prefix` is added to each message.
 
-`option`  
-The `option` argument is used to indicate what logging options will be
+`flags`  
+The `flags` argument is used to indicate what logging options will be
 used when generating a log message.
 
 | Constant         | Description                                                                                        |

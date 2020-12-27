@@ -59,7 +59,7 @@ Clean (erase) the output buffer
 
 ### Description
 
-<span class="type">void</span> <span class="methodname">ob\_clean</span>
+<span class="type">bool</span> <span class="methodname">ob\_clean</span>
 ( <span class="methodparam">void</span> )
 
 This function discards the contents of the output buffer.
@@ -74,7 +74,7 @@ flag. Otherwise <span class="function">ob\_clean</span> will not work.
 
 ### Return Values
 
-No value is returned.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -210,7 +210,7 @@ Flush (send) the output buffer
 
 ### Description
 
-<span class="type">void</span> <span class="methodname">ob\_flush</span>
+<span class="type">bool</span> <span class="methodname">ob\_flush</span>
 ( <span class="methodparam">void</span> )
 
 This function will send the contents of the output buffer (if any). If
@@ -224,7 +224,7 @@ class="function">ob\_end\_flush</span> does.
 
 ### Return Values
 
-No value is returned.
+Returns **`true`** on success or **`false`** on failure.
 
 ### See Also
 
@@ -240,7 +240,8 @@ Get current buffer contents and delete current output buffer
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_clean</span> ( <span
 class="methodparam">void</span> )
 
@@ -299,7 +300,8 @@ Return the contents of the output buffer
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_contents</span> ( <span
 class="methodparam">void</span> )
 
@@ -352,7 +354,8 @@ buffering
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_flush</span> ( <span
 class="methodparam">void</span> )
 
@@ -413,7 +416,8 @@ Return the length of the output buffer
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">ob\_get\_length</span> ( <span
 class="methodparam">void</span> )
 
@@ -490,8 +494,8 @@ Get status of output buffers
 
 <span class="type">array</span> <span
 class="methodname">ob\_get\_status</span> (\[ <span
-class="methodparam"><span class="type">bool</span> `$full_status` <span
-class="initializer"> = FALSE</span></span> \] )
+class="methodparam"><span class="type">bool</span> `$full_status`<span
+class="initializer"> = **`false`**</span></span> \] )
 
 <span class="function">ob\_get\_status</span> returns status information
 on either the top level output buffer or all active output buffer levels
@@ -748,8 +752,8 @@ Turn on output buffering
 
 <span class="type">bool</span> <span class="methodname">ob\_start</span>
 (\[ <span class="methodparam"><span class="type">callable</span>
-`$output_callback`<span class="initializer"> = **`null`**</span></span>
-\[, <span class="methodparam"><span class="type">int</span>
+`$callback`<span class="initializer"> = **`null`**</span></span> \[,
+<span class="methodparam"><span class="type">int</span>
 `$chunk_size`<span class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = **`PHP_OUTPUT_HANDLER_STDFLAGS`**</span></span>
@@ -782,18 +786,18 @@ being filtered sequentially through each of them in nesting order.
 
 ### Parameters
 
-`output_callback`  
-An optional `output_callback` function may be specified. This function
-takes a string as a parameter and should return a string. The function
-will be called when the output buffer is flushed (sent) or cleaned (with
-<span class="function">ob\_flush</span>, <span
+`callback`  
+An optional `callback` function may be specified. This function takes a
+string as a parameter and should return a string. The function will be
+called when the output buffer is flushed (sent) or cleaned (with <span
+class="function">ob\_flush</span>, <span
 class="function">ob\_clean</span> or similar function) or when the
 output buffer is flushed to the browser at the end of the request. When
-`output_callback` is called, it will receive the contents of the output
-buffer as its parameter and is expected to return a new output buffer as
-a result, which will be sent to the browser. If the `output_callback` is
-not a callable function, this function will return **`false`**. This is
-the callback signature:
+`callback` is called, it will receive the contents of the output buffer
+as its parameter and is expected to return a new output buffer as a
+result, which will be sent to the browser. If the `callback` is not a
+callable function, this function will return **`false`**. This is the
+callback signature:
 
 <span class="type">string</span> <span class="methodname"><span
 class="replaceable">handler</span></span> ( <span
@@ -809,11 +813,9 @@ class="methodparam"><span class="type">string</span> `$buffer`</span>
 <a href="/outcontrol/constants.html" class="link"><strong><code>PHP_OUTPUT_HANDLER_*</code></strong> constants</a>.
 </span>
 
-If `output_callback` returns **`false`** original input is sent to the
-browser.
+If `callback` returns **`false`** original input is sent to the browser.
 
-The `output_callback` parameter may be bypassed by passing a **`null`**
-value.
+The `callback` parameter may be bypassed by passing a **`null`** value.
 
 <span class="function">ob\_end\_clean</span>, <span
 class="function">ob\_end\_flush</span>, <span

@@ -77,11 +77,12 @@ Get the size of an image
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">getimagesize</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> \[, <span
-class="methodparam"><span class="type">array</span> `&$imageinfo`</span>
-\] )
+class="methodparam"><span class="type">array</span> `&$image_info`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 The <span class="function">getimagesize</span> function will determine
 the size of any supported given image file and return the dimensions
@@ -89,7 +90,7 @@ along with the file type and a *height/width* text string to be used
 inside a normal HTML `IMG` tag and the correspondent HTTP content type.
 
 <span class="function">getimagesize</span> can also return some more
-information in `imageinfo` parameter.
+information in `image_info` parameter.
 
 **Caution**
 
@@ -127,7 +128,7 @@ about. It can reference a local file or (configuration permitting) a
 remote file using one of the
 <a href="/wrappers.html" class="link">supported streams</a>.
 
-`imageinfo`  
+`image_info`  
 This optional parameter allows you to extract some extended information
 from the image file. Currently, this will return the different JPG APP
 markers as an associative array. Some programs use these APP markers to
@@ -139,7 +140,7 @@ marker into something readable.
 
 > **Note**:
 >
-> The `imageinfo` only supports JFIF files.
+> The `image_info` only supports JFIF files.
 
 ### Return Values
 
@@ -266,11 +267,12 @@ Get the size of an image from a string
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">getimagesizefromstring</span> ( <span
-class="methodparam"><span class="type">string</span> `$imagedata`</span>
+class="methodparam"><span class="type">string</span> `$string`</span>
 \[, <span class="methodparam"><span class="type">array</span>
-`&$imageinfo`</span> \] )
+`&$image_info`<span class="initializer"> = **`null`**</span></span> \] )
 
 Identical to <span class="function">getimagesize</span> except that
 <span class="function">getimagesizefromstring</span> accepts a string
@@ -281,10 +283,10 @@ details on how this function works.
 
 ### Parameters
 
-`imagedata`  
+`string`  
 The image data, as a string.
 
-`imageinfo`  
+`image_info`  
 See <span class="function">getimagesize</span>.
 
 ### Return Values
@@ -320,9 +322,10 @@ Get file extension for image type
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">image\_type\_to\_extension</span> ( <span
-class="methodparam"><span class="type">int</span> `$imagetype`</span>
+class="methodparam"><span class="type">int</span> `$image_type`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$include_dot`<span class="initializer"> = **`true`**</span></span> \] )
 
@@ -330,7 +333,7 @@ Returns the extension for the given *IMAGETYPE\_XXX* constant.
 
 ### Parameters
 
-`imagetype`  
+`image_type`  
 One of the *IMAGETYPE\_XXX* constant.
 
 `include_dot`  
@@ -338,7 +341,8 @@ Whether to prepend a dot to the extension or not. Default to **`true`**.
 
 ### Return Values
 
-A string with the extension corresponding to the given image type.
+A string with the extension corresponding to the given image type, or
+**`false`** on failure.
 
 ### Examples
 
@@ -372,21 +376,21 @@ exif\_thumbnail, exif\_imagetype
 
 <span class="type">string</span> <span
 class="methodname">image\_type\_to\_mime\_type</span> ( <span
-class="methodparam"><span class="type">int</span> `$imagetype`</span> )
+class="methodparam"><span class="type">int</span> `$image_type`</span> )
 
 The <span class="function">image\_type\_to\_mime\_type</span> function
 will determine the Mime-Type for an IMAGETYPE constant.
 
 ### Parameters
 
-`imagetype`  
+`image_type`  
 One of the *IMAGETYPE\_XXX* constants.
 
 ### Return Values
 
 The returned values are as follows
 
-| `imagetype`                                   | Returned value                  |
+| `image_type`                                  | Returned value                  |
 |-----------------------------------------------|---------------------------------|
 | **`IMAGETYPE_GIF`**                           | *image/gif*                     |
 | **`IMAGETYPE_JPEG`**                          | *image/jpeg*                    |
@@ -8976,22 +8980,22 @@ Embeds binary IPTC data into a JPEG image
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">iptcembed</span> ( <span class="methodparam"><span
-class="type">string</span> `$iptcdata`</span> , <span
-class="methodparam"><span class="type">string</span>
-`$jpeg_file_name`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$spool`<span class="initializer"> =
-0</span></span> \] )
+class="type">string</span> `$iptc_data`</span> , <span
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$spool`<span class="initializer"> = 0</span></span> \] )
 
 Embeds binary IPTC data into a JPEG image.
 
 ### Parameters
 
-`iptcdata`  
+`iptc_data`  
 The data to be written.
 
-`jpeg_file_name`  
+`filename`  
 Path to the JPEG image.
 
 `spool`  
@@ -9075,9 +9079,10 @@ Parse a binary IPTC block into single tags
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">iptcparse</span> ( <span class="methodparam"><span
-class="type">string</span> `$iptcblock`</span> )
+class="type">string</span> `$iptc_block`</span> )
 
 Parses an
 <a href="http://www.iptc.org/" class="link external">» IPTC</a> block
@@ -9085,7 +9090,7 @@ into its single tags.
 
 ### Parameters
 
-`iptcblock`  
+`iptc_block`  
 A binary IPTC block.
 
 ### Return Values

@@ -9,17 +9,17 @@ Call a callback with an array of parameters
 class="methodname">call\_user\_func\_array</span> ( <span
 class="methodparam"><span class="type">callable</span>
 `$callback`</span> , <span class="methodparam"><span
-class="type">array</span> `$param_arr`</span> )
+class="type">array</span> `$args`</span> )
 
 Calls the `callback` given by the first parameter with the parameters in
-`param_arr`.
+`args`.
 
 ### Parameters
 
 `callback`  
 The <span class="type">callable</span> to be called.
 
-`param_arr`  
+`args`  
 The parameters to be passed to the callback, as an indexed array.
 
 ### Return Values
@@ -128,7 +128,7 @@ The above example will output:
 
 > **Note**:
 >
-> Before PHP 5.4, referenced variables in `param_arr` are passed to the
+> Before PHP 5.4, referenced variables in `args` are passed to the
 > function by reference, regardless of whether the function expects the
 > respective parameter to be passed by reference. This form of call-time
 > pass by reference does not emit a deprecation notice, but it is
@@ -329,8 +329,8 @@ Create an anonymous (lambda-style) function
 
 **Warning**
 
-This function has been *DEPRECATED* as of PHP 7.2.0. Relying on this
-function is highly discouraged.
+This function has been *DEPRECATED* as of PHP 7.2.0, and *REMOVED* as of
+PHP 8.0.0. Relying on this function is highly discouraged.
 
 ### Description
 
@@ -530,10 +530,10 @@ Call a static method and pass the arguments as array
 <span class="type">mixed</span> <span
 class="methodname">forward\_static\_call\_array</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> , <span class="methodparam"><span
-class="type">array</span> `$parameters`</span> )
+`$callback`</span> , <span class="methodparam"><span
+class="type">array</span> `$args`</span> )
 
-Calls a user defined function or method given by the `function`
+Calls a user defined function or method given by the `callback`
 parameter. This function must be called within a method context, it
 can't be used outside a class. It uses the
 <a href="/language/oop5/late-static-bindings.html" class="link">late static binding</a>.
@@ -543,7 +543,7 @@ class="function">call\_user\_func\_array</span>.
 
 ### Parameters
 
-`function`  
+`callback`  
 The function or method to be called. This parameter may be an <span
 class="type">array</span>, with the name of the class, and the method,
 or a <span class="type">string</span>, with a function name.
@@ -622,17 +622,17 @@ Call a static method
 <span class="type">mixed</span> <span
 class="methodname">forward\_static\_call</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> , <span class="methodparam"><span
+`$callback`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$args`</span> )
 
-Calls a user defined function or method given by the `function`
+Calls a user defined function or method given by the `callback`
 parameter, with the following arguments. This function must be called
 within a method context, it can't be used outside a class. It uses the
 <a href="/language/oop5/late-static-bindings.html" class="link">late static binding</a>.
 
 ### Parameters
 
-`function`  
+`callback`  
 The function or method to be called. This parameter may be an array,
 with the name of the class, and the method, or a string, with a function
 name.
@@ -1362,16 +1362,16 @@ Register a function for execution on each tick
 <span class="type">bool</span> <span
 class="methodname">register\_tick\_function</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> , <span class="methodparam"><span
+`$callback`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$args`</span> )
 
-Registers the given `function` to be executed when a
+Registers the given `callback` to be executed when a
 <a href="/control-structures/declare.html#control-structures.declare.ticks" class="link">tick</a>
 is called.
 
 ### Parameters
 
-`function`  
+`callback`  
 The function to register.
 
 `args`  
@@ -1420,7 +1420,7 @@ De-register a function for execution on each tick
 <span class="type">void</span> <span
 class="methodname">unregister\_tick\_function</span> ( <span
 class="methodparam"><span class="type">callable</span>
-`$function`</span> )
+`$callback`</span> )
 
 De-registers the function `function` so it is no longer executed when a
 <a href="/control-structures/declare.html" class="link">tick</a> is
@@ -1428,7 +1428,7 @@ called.
 
 ### Parameters
 
-`function`  
+`callback`  
 The function to de-register.
 
 ### Return Values

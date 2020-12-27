@@ -6,19 +6,19 @@ Get the boolean value of a variable
 ### Description
 
 <span class="type">bool</span> <span class="methodname">boolval</span> (
-<span class="methodparam"><span class="type">mixed</span> `$var`</span>
-)
+<span class="methodparam"><span class="type">mixed</span>
+`$value`</span> )
 
-Returns the <span class="type">bool</span> value of `var`.
+Returns the <span class="type">bool</span> value of `value`.
 
 ### Parameters
 
-`var`  
+`value`  
 The scalar value being converted to a <span class="type">bool</span>.
 
 ### Return Values
 
-The <span class="type">bool</span> value of `var`.
+The <span class="type">bool</span> value of `value`.
 
 ### Examples
 
@@ -72,18 +72,18 @@ Dumps a string representation of an internal zend value to output
 
 <span class="type">void</span> <span
 class="methodname">debug\_zval\_dump</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$variable`</span> ,
+class="methodparam"><span class="type">mixed</span> `$value`</span> ,
 <span class="methodparam"><span class="type">mixed</span>
-`$variables`</span> )
+`$values`</span> )
 
 Dumps a string representation of an internal zend value to output.
 
 ### Parameters
 
-`variable`  
+`value`  
 The variable to dump.
 
-`variables`  
+`values`  
 Further variables to dump.
 
 ### Return Values
@@ -315,13 +315,13 @@ Get float value of a variable
 
 <span class="type">float</span> <span class="methodname">floatval</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
-Gets the <span class="type">float</span> value of `var`.
+Gets the <span class="type">float</span> value of `value`.
 
 ### Parameters
 
-`var`  
+`value`  
 May be any scalar type. <span class="function">floatval</span> should
 not be used on objects, as doing so will emit an **`E_NOTICE`** level
 error and return 1.
@@ -534,14 +534,14 @@ Get the type of a variable
 
 <span class="type">string</span> <span class="methodname">gettype</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
-Returns the type of the PHP variable `var`. For type checking, use
+Returns the type of the PHP variable `value`. For type checking, use
 *is\_\** functions.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being type checked.
 
 ### Return Values
@@ -616,18 +616,19 @@ Get the integer value of a variable
 ### Description
 
 <span class="type">int</span> <span class="methodname">intval</span> (
-<span class="methodparam"><span class="type">mixed</span> `$var`</span>
-\[, <span class="methodparam"><span class="type">int</span> `$base`<span
-class="initializer"> = 10</span></span> \] )
+<span class="methodparam"><span class="type">mixed</span>
+`$value`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$base`<span class="initializer"> =
+10</span></span> \] )
 
-Returns the <span class="type">int</span> value of `var`, using the
+Returns the <span class="type">int</span> value of `value`, using the
 specified `base` for the conversion (the default is base 10). <span
 class="function">intval</span> should not be used on objects, as doing
 so will emit an **`E_NOTICE`** level error and return 1.
 
 ### Parameters
 
-`var`  
+`value`  
 The scalar value being converted to an integer
 
 `base`  
@@ -635,7 +636,7 @@ The base for the conversion
 
 > **Note**:
 >
-> If `base` is 0, the base used is determined by the format of `var`:
+> If `base` is 0, the base used is determined by the format of `value`:
 >
 > -   <span class="simpara"> if string includes a "0x" (or "0X") prefix,
 >     the base is taken as 16 (hex); otherwise, </span>
@@ -645,7 +646,7 @@ The base for the conversion
 
 ### Return Values
 
-The integer value of `var` on success, or 0 on failure. Empty arrays
+The integer value of `value` on success, or 0 on failure. Empty arrays
 return 0, non-empty arrays return 1.
 
 The maximum value depends on the system. 32 bit systems have a maximum
@@ -692,7 +693,7 @@ echo intval(true);                    // 1
 
 > **Note**:
 >
-> The `base` parameter has no effect unless the `var` parameter is a
+> The `base` parameter has no effect unless the `value` parameter is a
 > string.
 
 ### See Also
@@ -714,18 +715,18 @@ Finds whether a variable is an array
 
 <span class="type">bool</span> <span class="methodname">is\_array</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
 Finds whether the given variable is an array.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is an <span class="type">array</span>,
+Returns **`true`** if `value` is an <span class="type">array</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -766,18 +767,18 @@ Finds out whether a variable is a boolean
 
 <span class="type">bool</span> <span class="methodname">is\_bool</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
 Finds whether the given variable is a boolean.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is a <span class="type">bool</span>,
+Returns **`true`** if `value` is a <span class="type">bool</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -818,21 +819,22 @@ Verify that the contents of a variable can be called as a function
 
 <span class="type">bool</span> <span
 class="methodname">is\_callable</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> \[, <span
+class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$syntax_only`<span
 class="initializer"> = **`false`**</span></span> \[, <span
 class="methodparam"><span class="type">string</span>
-`&$callable_name`</span> \]\] )
+`&$callable_name`<span class="initializer"> = **`null`**</span></span>
+\]\] )
 
 Verify that a value is a <span class="type">callable</span>.
 
 ### Parameters
 
-`var`  
+`value`  
 The value to check
 
 `syntax_only`  
-If set to **`true`** the function only verifies that `var` might be a
+If set to **`true`** the function only verifies that `value` might be a
 function or method. It will only reject simple variables that are not
 strings, or an array that does not have a valid structure to be used as
 a callback. The valid ones are supposed to have only 2 entries, the
@@ -846,7 +848,7 @@ the case.
 
 ### Return Values
 
-Returns **`true`** if `var` is callable, **`false`** otherwise.
+Returns **`true`** if `value` is callable, **`false`** otherwise.
 
 ### Examples
 
@@ -937,7 +939,7 @@ Verify that the contents of a variable is a countable value
 
 <span class="type">bool</span> <span
 class="methodname">is\_countable</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$var`</span> )
+class="methodparam"><span class="type">mixed</span> `$value`</span> )
 
 Verify that the contents of a variable is an <span
 class="type">array</span> or an object implementing <span
@@ -945,12 +947,12 @@ class="classname">Countable</span>
 
 ### Parameters
 
-`var`  
+`value`  
 The value to check
 
 ### Return Values
 
-Returns **`true`** if `var` is countable, **`false`** otherwise.
+Returns **`true`** if `value` is countable, **`false`** otherwise.
 
 ### Changelog
 
@@ -995,7 +997,7 @@ Finds whether the type of a variable is float
 
 <span class="type">bool</span> <span class="methodname">is\_float</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
 Finds whether the type of the given variable is float.
 
@@ -1007,12 +1009,12 @@ Finds whether the type of the given variable is float.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is a <span class="type">float</span>,
+Returns **`true`** if `value` is a <span class="type">float</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -1055,8 +1057,8 @@ Find whether the type of a variable is integer
 ### Description
 
 <span class="type">bool</span> <span class="methodname">is\_int</span> (
-<span class="methodparam"><span class="type">mixed</span> `$var`</span>
-)
+<span class="methodparam"><span class="type">mixed</span>
+`$value`</span> )
 
 Finds whether the type of the given variable is integer.
 
@@ -1068,12 +1070,12 @@ Finds whether the type of the given variable is integer.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is an <span class="type">int</span>,
+Returns **`true`** if `value` is an <span class="type">int</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -1129,7 +1131,7 @@ Verify that the contents of a variable is an iterable value
 
 <span class="type">bool</span> <span
 class="methodname">is\_iterable</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Verify that the contents of a variable is accepted by the <span
 class="type">iterable</span> pseudo-type, i.e. that it is either an
@@ -1138,12 +1140,12 @@ class="classname">Traversable</span>
 
 ### Parameters
 
-`var`  
+`value`  
 The value to check
 
 ### Return Values
 
-Returns **`true`** if `var` is iterable, **`false`** otherwise.
+Returns **`true`** if `value` is iterable, **`false`** otherwise.
 
 ### Examples
 
@@ -1183,18 +1185,18 @@ Finds whether a variable is **`null`**
 
 <span class="type">bool</span> <span class="methodname">is\_null</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
 Finds whether the given variable is **`null`**.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is <span class="type">null</span>,
+Returns **`true`** if `value` is <span class="type">null</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -1239,19 +1241,19 @@ Finds whether a variable is a number or a numeric string
 
 <span class="type">bool</span> <span
 class="methodname">is\_numeric</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Determines if the given variable is a number or a
 <a href="/language/types/numeric-strings.html" class="link">numeric string</a>.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is a number or a
+Returns **`true`** if `value` is a number or a
 <a href="/language/types/numeric-strings.html" class="link">numeric string</a>,
 **`false`** otherwise.
 
@@ -1327,18 +1329,18 @@ Finds whether a variable is an object
 
 <span class="type">bool</span> <span
 class="methodname">is\_object</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Finds whether the given variable is an object.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is an <span class="type">object</span>,
+Returns **`true`** if `value` is an <span class="type">object</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -1404,19 +1406,19 @@ Finds whether a variable is a resource
 
 <span class="type">bool</span> <span
 class="methodname">is\_resource</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Finds whether the given variable is a <span
 class="type">resource</span>.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is a <span class="type">resource</span>,
+Returns **`true`** if `value` is a <span class="type">resource</span>,
 **`false`** otherwise.
 
 ### Examples
@@ -1439,7 +1441,7 @@ if (!is_resource($db_link)) {
 > **Note**:
 >
 > <span class="function">is\_resource</span> is not a strict
-> type-checking method: it will return **`false`** if `var` is a
+> type-checking method: it will return **`false`** if `value` is a
 > resource variable that has been closed.
 
 ### See Also
@@ -1456,7 +1458,7 @@ Finds whether a variable is a scalar
 
 <span class="type">bool</span> <span
 class="methodname">is\_scalar</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Finds whether the given variable is a scalar.
 
@@ -1480,12 +1482,12 @@ are not scalar.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is a scalar, **`false`** otherwise.
+Returns **`true`** if `value` is a scalar, **`false`** otherwise.
 
 ### Examples
 
@@ -1542,19 +1544,19 @@ Find whether the type of a variable is string
 
 <span class="type">bool</span> <span
 class="methodname">is\_string</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$var`</span> )
+class="type">mixed</span> `$value`</span> )
 
 Finds whether the type of the given variable is string.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable being evaluated.
 
 ### Return Values
 
-Returns **`true`** if `var` is of type <span class="type">string</span>,
-**`false`** otherwise.
+Returns **`true`** if `value` is of type <span
+class="type">string</span>, **`false`** otherwise.
 
 ### Examples
 
@@ -1769,9 +1771,10 @@ Prints human-readable information about a variable
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">print\_r</span>
+<span class="type"><span class="type">string</span><span
+class="type">bool</span></span> <span class="methodname">print\_r</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$expression`</span> \[, <span class="methodparam"><span
+`$value`</span> \[, <span class="methodparam"><span
 class="type">bool</span> `$return`<span class="initializer"> =
 **`false`**</span></span> \] )
 
@@ -1785,7 +1788,7 @@ properties of objects. Static class members will not be shown.
 
 ### Parameters
 
-`expression`  
+`value`  
 The expression to be printed.
 
 `return`  
@@ -2043,7 +2046,7 @@ Get string value of a variable
 
 <span class="type">string</span> <span class="methodname">strval</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$var`</span> )
+`$value`</span> )
 
 Get the string value of a variable. See the documentation on <span
 class="type">string</span> for more information on converting to string.
@@ -2055,11 +2058,11 @@ class="function">number\_format</span>.
 
 ### Parameters
 
-`var`  
+`value`  
 The variable that is being converted to a <span
 class="type">string</span>.
 
-`var` may be any scalar type or an object that implements the
+`value` may be any scalar type or an object that implements the
 <a href="/language/oop5/magic.html#object.tostring" class="link">__toString()</a>
 method. You cannot use <span class="function">strval</span> on arrays or
 on objects that do not implement the
@@ -2068,7 +2071,7 @@ method.
 
 ### Return Values
 
-The <span class="type">string</span> value of `var`.
+The <span class="type">string</span> value of `value`.
 
 ### Examples
 
@@ -2112,9 +2115,9 @@ Creates a PHP value from a stored representation
 
 <span class="type">mixed</span> <span
 class="methodname">unserialize</span> ( <span class="methodparam"><span
-class="type">string</span> `$str`</span> \[, <span
-class="methodparam"><span class="type">array</span> `$options`</span> \]
-)
+class="type">string</span> `$data`</span> \[, <span
+class="methodparam"><span class="type">array</span> `$options`<span
+class="initializer"> = \[\]</span></span> \] )
 
 <span class="function">unserialize</span> takes a single serialized
 variable and converts it back into a PHP value.
@@ -2136,7 +2139,7 @@ sure data is not modified by anyone but you.
 
 ### Parameters
 
-`str`  
+`data`  
 The serialized string.
 
 If the variable being unserialized is an object, after successfully
@@ -2237,7 +2240,7 @@ function mycallback($classname)
 
 **`false`** is returned both in the case of an error and if
 unserializing the serialized **`false`** value. It is possible to catch
-this special case by comparing `str` with *serialize(false)* or by
+this special case by comparing `data` with *serialize(false)* or by
 catching the issued **`E_NOTICE`**.
 
 ### See Also
@@ -2454,8 +2457,8 @@ Dumps information about a variable
 
 <span class="type">void</span> <span class="methodname">var\_dump</span>
 ( <span class="methodparam"><span class="type">mixed</span>
-`$expression`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$expressions`</span> )
+`$value`</span> , <span class="methodparam"><span
+class="type">mixed</span> `$values`</span> )
 
 This function displays structured information about one or more
 expressions that includes its type and value. Arrays and objects are
@@ -2475,10 +2478,10 @@ can be used to capture the output of this function, and save it in a
 
 ### Parameters
 
-`expression`  
+`value`  
 The expression to dump.
 
-`expressions`  
+`values`  
 Further expressions to dump.
 
 ### Return Values
@@ -2543,9 +2546,10 @@ Outputs or returns a parsable string representation of a variable
 
 ### Description
 
-<span class="type">mixed</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">null</span></span> <span
 class="methodname">var\_export</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$expression`</span> \[, <span
+class="type">mixed</span> `$value`</span> \[, <span
 class="methodparam"><span class="type">bool</span> `$return`<span
 class="initializer"> = **`false`**</span></span> \] )
 
@@ -2556,7 +2560,7 @@ representation is valid PHP code.
 
 ### Parameters
 
-`expression`  
+`value`  
 The variable you want to export.
 
 `return`  

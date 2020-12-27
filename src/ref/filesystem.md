@@ -16,8 +16,8 @@ Returns trailing name component of path
 <span class="type">string</span> <span
 class="methodname">basename</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> \[, <span
-class="methodparam"><span class="type">string</span> `$suffix`</span> \]
-)
+class="methodparam"><span class="type">string</span> `$suffix`<span
+class="initializer"> = ""</span></span> \] )
 
 Given a string containing the path to a file or directory, this function
 will return the trailing name component.
@@ -88,8 +88,9 @@ Changes file group
 
 <span class="type">bool</span> <span class="methodname">chgrp</span> (
 <span class="methodparam"><span class="type">string</span>
-`$filename`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$group`</span> )
+`$filename`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$group`</span> )
 
 Attempts to change the group of the file `filename` to `group`.
 
@@ -149,20 +150,21 @@ Changes file mode
 <span class="type">bool</span> <span class="methodname">chmod</span> (
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> , <span class="methodparam"><span
-class="type">int</span> `$mode`</span> )
+class="type">int</span> `$permissions`</span> )
 
 Attempts to change the mode of the specified file to that given in
-`mode`.
+`permissions`.
 
 ### Parameters
 
 `filename`  
 Path to the file.
 
-`mode`  
-Note that `mode` is not automatically assumed to be an octal value, so
-to ensure the expected operation, you need to prefix `mode` with a zero
-(0). Strings such as "g+w" will not work properly.
+`permissions`  
+Note that `permissions` is not automatically assumed to be an octal
+value, so to ensure the expected operation, you need to prefix
+`permissions` with a zero (0). Strings such as "g+w" will not work
+properly.
 
 ``` php
 <?php
@@ -172,7 +174,7 @@ chmod("/somedir/somefile", 0755);  // octal; correct value of mode
 ?>
 ```
 
-The `mode` parameter consists of three octal number components
+The `permissions` parameter consists of three octal number components
 specifying access restrictions for the owner, the user group in which
 the owner is in, and to everybody else in this order. One component can
 be computed by adding up the needed permissions for that target user
@@ -231,8 +233,9 @@ Changes file owner
 
 <span class="type">bool</span> <span class="methodname">chown</span> (
 <span class="methodparam"><span class="type">string</span>
-`$filename`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$user`</span> )
+`$filename`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$user`</span> )
 
 Attempts to change the owner of the file `filename` to user `user`. Only
 the superuser may change the owner of a file.
@@ -311,7 +314,8 @@ class="methodname">clearstatcache</span> (\[ <span
 class="methodparam"><span class="type">bool</span>
 `$clear_realpath_cache`<span class="initializer"> =
 **`false`**</span></span> \[, <span class="methodparam"><span
-class="type">string</span> `$filename`</span> \]\] )
+class="type">string</span> `$filename`<span class="initializer"> =
+""</span></span> \]\] )
 
 When you use <span class="function">stat</span>, <span
 class="function">lstat</span>, or any of the other functions listed in
@@ -696,13 +700,13 @@ Closes an open file pointer
 
 <span class="type">bool</span> <span class="methodname">fclose</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
-The file pointed to by `handle` is closed.
+The file pointed to by `stream` is closed.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">fsockopen</span>.
@@ -739,13 +743,13 @@ Tests for end-of-file on a file pointer
 
 <span class="type">bool</span> <span class="methodname">feof</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
 Tests for end-of-file on a file pointer.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">fsockopen</span> (and not yet closed by <span
@@ -817,14 +821,14 @@ Flushes the output to a file
 
 <span class="type">bool</span> <span class="methodname">fflush</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
 This function forces a write of all buffered output to the resource
-pointed to by the file `handle`.
+pointed to by the file `stream`.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">fsockopen</span> (and not yet closed by <span
@@ -864,15 +868,16 @@ Gets character from file pointer
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">fgetc</span> (
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">fgetc</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
 Gets a character from the given file pointer.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">fsockopen</span> (and not yet closed by <span
@@ -881,7 +886,7 @@ class="function">fclose</span>).
 ### Return Values
 
 Returns a string containing a single character read from the file
-pointed to by `handle`. Returns **`false`** on EOF.
+pointed to by `stream`. Returns **`false`** on EOF.
 
 **Warning**
 
@@ -1912,9 +1917,10 @@ Gets file group
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">filegroup</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">filegroup</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the file group. The group ID is returned in numerical format, use
 <span class="function">posix\_getgrgid</span> to resolve it to a group
@@ -2162,9 +2168,10 @@ Gets file permissions
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">fileperms</span>
-( <span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">fileperms</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets permissions for the given file.
 
@@ -2189,6 +2196,8 @@ class="function">stat</span> function. Exactly which bits are set can
 vary from platform to platform, and looking up your specific platform's
 documentation is recommended if parsing the non-permission bits of the
 return value is required.
+
+Returns **`false`** on failure.
 
 ### Examples
 
@@ -2298,9 +2307,10 @@ Gets file size
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">filesize</span> (
-<span class="methodparam"><span class="type">string</span>
-`$filename`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">filesize</span> ( <span class="methodparam"><span
+class="type">string</span> `$filename`</span> )
 
 Gets the size for the given file.
 
@@ -2362,7 +2372,8 @@ Gets file type
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">filetype</span> ( <span class="methodparam"><span
 class="type">string</span> `$filename`</span> )
 
@@ -2432,10 +2443,10 @@ Portable advisory file locking
 
 <span class="type">bool</span> <span class="methodname">flock</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">int</span> `$operation`</span> \[, <span
-class="methodparam"><span class="type">int</span> `&$wouldblock`</span>
-\] )
+class="methodparam"><span class="type">int</span> `&$would_block`<span
+class="initializer"> = **`null`**</span></span> \] )
 
 <span class="function">flock</span> allows you to perform a simple
 reader/writer model which can be used on virtually every platform
@@ -2453,7 +2464,7 @@ requested lock is acquired; this may be controlled with the
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -2471,7 +2482,7 @@ It is also possible to add **`LOCK_NB`** as a bitmask to one of the
 above operations, if <span class="function">flock</span> should not
 block during the locking attempt.
 
-`wouldblock`  
+`would_block`  
 The optional third argument is set to 1 if the lock would block
 (EWOULDBLOCK errno condition).
 
@@ -2549,7 +2560,7 @@ fclose($fp);
 
 **Warning**
 
-Assigning another value to `handle` argument in subsequent code will
+Assigning another value to `stream` argument in subsequent code will
 release the lock.
 
 **Warning**
@@ -2574,11 +2585,11 @@ Match filename against a pattern
 <span class="type">bool</span> <span class="methodname">fnmatch</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> , <span class="methodparam"><span
-class="type">string</span> `$string`</span> \[, <span
+class="type">string</span> `$filename`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$flags`<span
 class="initializer"> = 0</span></span> \] )
 
-<span class="function">fnmatch</span> checks if the passed `string`
+<span class="function">fnmatch</span> checks if the passed `filename`
 would match the given shell wildcard `pattern`.
 
 ### Parameters
@@ -2586,7 +2597,7 @@ would match the given shell wildcard `pattern`.
 `pattern`  
 The shell wildcard pattern.
 
-`string`  
+`filename`  
 The tested string. This function is especially useful for filenames, but
 may also be used on regular strings.
 
@@ -2846,7 +2857,7 @@ Output all remaining data on a file pointer
 
 <span class="type">int</span> <span class="methodname">fpassthru</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
 Reads to EOF on the given file pointer from the current position and
 writes the results to the output buffer.
@@ -2862,7 +2873,7 @@ the <span class="function">fopen</span> call.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">fsockopen</span> (and not yet closed by <span
@@ -2872,7 +2883,7 @@ class="function">fclose</span>).
 
 If an error occurs, <span class="function">fpassthru</span> returns
 **`false`**. Otherwise, <span class="function">fpassthru</span> returns
-the number of characters read from `handle` and passed through to the
+the number of characters read from `stream` and passed through to the
 output.
 
 ### Examples
@@ -3042,11 +3053,11 @@ Binary-safe file read
 <span class="type"><span class="type">string</span><span
 class="type">false</span></span> <span class="methodname">fread</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">int</span> `$length`</span> )
 
 <span class="function">fread</span> reads up to `length` bytes from the
-file pointer referenced by `handle`. Reading stops as soon as one of the
+file pointer referenced by `stream`. Reading stops as soon as one of the
 following conditions is met:
 
 -   <span class="simpara"> `length` bytes have been read </span>
@@ -3062,7 +3073,7 @@ following conditions is met:
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -3178,15 +3189,17 @@ Parses input from a file according to a format
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">fscanf</span> (
+<span class="type"><span class="type">array</span><span
+class="type">int</span><span class="type">false</span><span
+class="type">null</span></span> <span class="methodname">fscanf</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">string</span> `$format`</span> , <span
 class="methodparam"><span class="type">mixed</span> `&$vars`</span> )
 
 The function <span class="function">fscanf</span> is similar to <span
 class="function">sscanf</span>, but it takes its input from a file
-associated with `handle` and interprets the input according to the
+associated with `stream` and interprets the input according to the
 specified `format`, which is described in the documentation for <span
 class="function">sprintf</span>.
 
@@ -3199,7 +3212,7 @@ the file.
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -3362,6 +3375,10 @@ will be returned as an array. Otherwise, if optional parameters are
 passed, the function will return the number of assigned values. The
 optional parameters must be passed by reference.
 
+If there are more substrings expected in the `format` than there are
+available within `string`, **`null`** will be returned. On other errors,
+**`false`** will be returned.
+
 ### Examples
 
 **Example \#1 <span class="function">fscanf</span> Example**
@@ -3404,12 +3421,12 @@ Seeks on a file pointer
 
 <span class="type">int</span> <span class="methodname">fseek</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">int</span> `$offset`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$whence`<span
-class="initializer"> = SEEK\_SET</span></span> \] )
+class="initializer"> = **`SEEK_SET`**</span></span> \] )
 
-Sets the file position indicator for the file referenced by `handle`.
+Sets the file position indicator for the file referenced by `stream`.
 The new position, measured in bytes from the beginning of the file, is
 obtained by adding `offset` to the position specified by `whence`.
 
@@ -3421,7 +3438,7 @@ fixed size storage.
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -3488,18 +3505,19 @@ Gets information about a file using an open file pointer
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">fstat</span> (
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">fstat</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
-Gathers the statistics of the file opened by the file pointer `handle`.
+Gathers the statistics of the file opened by the file pointer `stream`.
 This function is similar to the <span class="function">stat</span>
 function except that it operates on an open file pointer instead of a
 filename.
 
 ### Parameters
 
-`handle`  
+`stream`  
 A file system pointer <span class="type">resource</span> that is
 typically created using <span class="function">fopen</span>.
 
@@ -3507,7 +3525,7 @@ typically created using <span class="function">fopen</span>.
 
 Returns an array with the statistics of the file; the format of the
 array is described in detail on the <span class="function">stat</span>
-manual page.
+manual page. Returns **`false`** on failure.
 
 ### Examples
 
@@ -3564,15 +3582,16 @@ Returns the current position of the file read/write pointer
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">ftell</span> (
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span class="methodname">ftell</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
-Returns the position of the file pointer referenced by `handle`.
+Returns the position of the file pointer referenced by `stream`.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span> or <span
 class="function">popen</span>. <span class="function">ftell</span> gives
@@ -3580,7 +3599,7 @@ undefined results for append-only streams (opened with "a" flag).
 
 ### Return Values
 
-Returns the position of the file pointer referenced by `handle` as an
+Returns the position of the file pointer referenced by `stream` as an
 integer; i.e., its offset into the file stream.
 
 If an error occurs, returns **`false`**.
@@ -3624,20 +3643,20 @@ Truncates a file to a given length
 
 <span class="type">bool</span> <span class="methodname">ftruncate</span>
 ( <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> , <span class="methodparam"><span
+`$stream`</span> , <span class="methodparam"><span
 class="type">int</span> `$size`</span> )
 
-Takes the filepointer, `handle`, and truncates the file to length,
+Takes the filepointer, `stream`, and truncates the file to length,
 `size`.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer.
 
 > **Note**:
 >
-> The `handle` must be open for writing.
+> The `stream` must be open for writing.
 
 `size`  
 The size to truncate to.
@@ -3827,7 +3846,8 @@ Find pathnames matching a pattern
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">glob</span> (
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">glob</span> (
 <span class="methodparam"><span class="type">string</span>
 `$pattern`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$flags`<span class="initializer"> =
@@ -4410,8 +4430,9 @@ Changes group ownership of symlink
 
 <span class="type">bool</span> <span class="methodname">lchgrp</span> (
 <span class="methodparam"><span class="type">string</span>
-`$filename`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$group`</span> )
+`$filename`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$group`</span> )
 
 Attempts to change the group of the symlink `filename` to `group`.
 
@@ -4471,8 +4492,9 @@ Changes user ownership of symlink
 
 <span class="type">bool</span> <span class="methodname">lchown</span> (
 <span class="methodparam"><span class="type">string</span>
-`$filename`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$user`</span> )
+`$filename`</span> , <span class="methodparam"><span class="type"><span
+class="type">string</span><span class="type">int</span></span>
+`$user`</span> )
 
 Attempts to change the owner of the symlink `filename` to user `user`.
 
@@ -4590,9 +4612,10 @@ Gets information about a link
 
 ### Description
 
-<span class="type">int</span> <span class="methodname">linkinfo</span> (
-<span class="methodparam"><span class="type">string</span>
-`$path`</span> )
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
+class="methodname">linkinfo</span> ( <span class="methodparam"><span
+class="type">string</span> `$path`</span> )
 
 Gets information about a link.
 
@@ -4637,7 +4660,8 @@ Gives information about a file or symbolic link
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">lstat</span> (
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">lstat</span> (
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
@@ -4656,6 +4680,8 @@ class="function">lstat</span> returns. This function is identical to the
 <span class="function">stat</span> function except that if the
 `filename` parameter is a symbolic link, the status of the symbolic link
 is returned, not the status of the file pointed to by the symbolic link.
+
+On failure, **`false`** is returned.
 
 ### Examples
 
@@ -4807,14 +4833,14 @@ Moves an uploaded file to a new location
 
 <span class="type">bool</span> <span
 class="methodname">move\_uploaded\_file</span> ( <span
-class="methodparam"><span class="type">string</span> `$filename`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$destination`</span> )
+class="methodparam"><span class="type">string</span> `$from`</span> ,
+<span class="methodparam"><span class="type">string</span> `$to`</span>
+)
 
-This function checks to ensure that the file designated by `filename` is
-a valid upload file (meaning that it was uploaded via PHP's HTTP POST
+This function checks to ensure that the file designated by `from` is a
+valid upload file (meaning that it was uploaded via PHP's HTTP POST
 upload mechanism). If the file is valid, it will be moved to the
-filename given by `destination`.
+filename given by `to`.
 
 This sort of check is especially important if there is any chance that
 anything done with uploaded files could reveal their contents to the
@@ -4822,22 +4848,22 @@ user, or even to other users on the same system.
 
 ### Parameters
 
-`filename`  
+`from`  
 The filename of the uploaded file.
 
-`destination`  
+`to`  
 The destination of the moved file.
 
 ### Return Values
 
 Returns **`true`** on success.
 
-If `filename` is not a valid upload file, then no action will occur, and
+If `from` is not a valid upload file, then no action will occur, and
 <span class="function">move\_uploaded\_file</span> will return
 **`false`**.
 
-If `filename` is a valid upload file, but cannot be moved for some
-reason, no action will occur, and <span
+If `from` is a valid upload file, but cannot be moved for some reason,
+no action will occur, and <span
 class="function">move\_uploaded\_file</span> will return **`false`**.
 Additionally, a warning will be issued.
 
@@ -4866,12 +4892,11 @@ foreach ($_FILES["pictures"]["error"] as $key => $error) {
 >
 > <span class="function">move\_uploaded\_file</span> is
 > <a href="/ini/core.html#ini.open-basedir" class="link">open_basedir</a>
-> aware. However, restrictions are placed only on the `destination` path
-> as to allow the moving of uploaded files in which `filename` may
-> conflict with such restrictions. <span
-> class="function">move\_uploaded\_file</span> ensures the safety of
-> this operation by allowing only those files uploaded through PHP to be
-> moved.
+> aware. However, restrictions are placed only on the `to` path as to
+> allow the moving of uploaded files in which `from` may conflict with
+> such restrictions. <span class="function">move\_uploaded\_file</span>
+> ensures the safety of this operation by allowing only those files
+> uploaded through PHP to be moved.
 
 **Warning**
 
@@ -4892,14 +4917,15 @@ Parse a configuration file
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">parse\_ini\_file</span> ( <span
 class="methodparam"><span class="type">string</span> `$filename`</span>
 \[, <span class="methodparam"><span class="type">bool</span>
 `$process_sections`<span class="initializer"> =
 **`false`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$scanner_mode`<span class="initializer"> =
-INI\_SCANNER\_NORMAL</span></span> \]\] )
+**`INI_SCANNER_NORMAL`**</span></span> \]\] )
 
 <span class="function">parse\_ini\_file</span> loads in the ini file
 specified in `filename`, and returns the settings in it in an
@@ -5155,23 +5181,24 @@ Parse a configuration string
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">parse\_ini\_string</span> ( <span
-class="methodparam"><span class="type">string</span> `$ini`</span> \[,
-<span class="methodparam"><span class="type">bool</span>
-`$process_sections`<span class="initializer"> =
+class="methodparam"><span class="type">string</span>
+`$ini_string`</span> \[, <span class="methodparam"><span
+class="type">bool</span> `$process_sections`<span class="initializer"> =
 **`false`**</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$scanner_mode`<span class="initializer"> =
-INI\_SCANNER\_NORMAL</span></span> \]\] )
+**`INI_SCANNER_NORMAL`**</span></span> \]\] )
 
 <span class="function">parse\_ini\_string</span> returns the settings in
-string `ini` in an associative array.
+string `ini_string` in an associative array.
 
 The structure of the ini string is the same as the `php.ini`'s.
 
 ### Parameters
 
-`ini`  
+`ini_string`  
 The contents of the ini file being parsed.
 
 `process_sections`  
@@ -5217,15 +5244,15 @@ Returns information about a file path
 
 ### Description
 
-<span class="type">mixed</span> <span class="methodname">pathinfo</span>
-( <span class="methodparam"><span class="type">string</span>
-`$path`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$options`<span class="initializer"> =
-PATHINFO\_DIRNAME \| PATHINFO\_BASENAME \| PATHINFO\_EXTENSION \|
-PATHINFO\_FILENAME</span></span> \] )
+<span class="type"><span class="type">array</span><span
+class="type">string</span></span> <span
+class="methodname">pathinfo</span> ( <span class="methodparam"><span
+class="type">string</span> `$path`</span> \[, <span
+class="methodparam"><span class="type">int</span> `$flags`<span
+class="initializer"> = **`PATHINFO_ALL`**</span></span> \] )
 
 <span class="function">pathinfo</span> returns information about `path`:
-either an associative array or a string, depending on `options`.
+either an associative array or a string, depending on `flags`.
 
 > **Note**:
 >
@@ -5245,16 +5272,16 @@ function.
 `path`  
 The path to be parsed.
 
-`options`  
+`flags`  
 If present, specifies a specific element to be returned; one of
 **`PATHINFO_DIRNAME`**, **`PATHINFO_BASENAME`**,
 **`PATHINFO_EXTENSION`** or **`PATHINFO_FILENAME`**.
 
-If `options` is not specified, returns all available elements.
+If `flags` is not specified, returns all available elements.
 
 ### Return Values
 
-If the `options` parameter is not passed, an associative <span
+If the `flags` parameter is not passed, an associative <span
 class="type">array</span> containing the following elements is returned:
 *dirname*, *basename*, *extension* (if any), and *filename*.
 
@@ -5275,7 +5302,7 @@ class="type">array</span> containing the following elements is returned:
 > characters are interpreted as *extension*, and the *filename* is empty
 > (see third example below).
 
-If `options` is present, returns a <span class="type">string</span>
+If `flags` is present, returns a <span class="type">string</span>
 containing the requested element.
 
 ### Examples
@@ -5407,8 +5434,9 @@ Opens process file pointer
 
 ### Description
 
-<span class="type">resource</span> <span class="methodname">popen</span>
-( <span class="methodparam"><span class="type">string</span>
+<span class="type"><span class="type">resource</span><span
+class="type">false</span></span> <span class="methodname">popen</span> (
+<span class="methodparam"><span class="type">string</span>
 `$command`</span> , <span class="methodparam"><span
 class="type">string</span> `$mode`</span> )
 
@@ -5593,7 +5621,8 @@ Returns the target of a symbolic link
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">readlink</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> )
 
@@ -5739,7 +5768,8 @@ Returns canonicalized absolute pathname
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">realpath</span> ( <span class="methodparam"><span
 class="type">string</span> `$path`</span> )
 
@@ -5906,9 +5936,9 @@ Rewind the position of a file pointer
 
 <span class="type">bool</span> <span class="methodname">rewind</span> (
 <span class="methodparam"><span class="type">resource</span>
-`$handle`</span> )
+`$stream`</span> )
 
-Sets the file position indicator for `handle` to the beginning of the
+Sets the file position indicator for `stream` to the beginning of the
 file stream.
 
 > **Note**:
@@ -5919,7 +5949,7 @@ file stream.
 
 ### Parameters
 
-`handle`  
+`stream`  
 The file pointer must be valid, and must point to a file successfully
 opened by <span class="function">fopen</span>.
 
@@ -6024,7 +6054,8 @@ Gives information about a file
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">stat</span> (
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span class="methodname">stat</span> (
 <span class="methodparam"><span class="type">string</span>
 `$filename`</span> )
 
@@ -6249,9 +6280,10 @@ Create file with unique file name
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">tempnam</span>
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span class="methodname">tempnam</span>
 ( <span class="methodparam"><span class="type">string</span>
-`$dir`</span> , <span class="methodparam"><span
+`$directory`</span> , <span class="methodparam"><span
 class="type">string</span> `$prefix`</span> )
 
 Creates a file with a unique filename, with access permission set to
@@ -6262,7 +6294,7 @@ file, including its name.
 
 ### Parameters
 
-`dir`  
+`directory`  
 The directory where the temporary filename will be created.
 
 `prefix`  
@@ -6298,9 +6330,9 @@ unlink($tmpfname);
 ### Notes
 
 > **Note**: <span class="simpara"> If PHP cannot create a file in the
-> specified `dir` parameter, it falls back on the system default. On
-> NTFS this also happens if the specified `dir` contains more than 65534
-> files. </span>
+> specified `directory` parameter, it falls back on the system default.
+> On NTFS this also happens if the specified `directory` contains more
+> than 65534 files. </span>
 
 ### See Also
 

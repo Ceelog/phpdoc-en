@@ -53,9 +53,11 @@ Send mail
 , <span class="methodparam"><span class="type">string</span>
 `$subject`</span> , <span class="methodparam"><span
 class="type">string</span> `$message`</span> \[, <span
-class="methodparam"><span class="type">mixed</span>
-`$additional_headers`</span> \[, <span class="methodparam"><span
-class="type">string</span> `$additional_parameters`</span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$additional_headers`<span class="initializer"> = \[\]</span></span> \[,
+<span class="methodparam"><span class="type">string</span>
+`$additional_params`<span class="initializer"> = ""</span></span> \]\] )
 
 Sends an email.
 
@@ -136,9 +138,9 @@ names and its values are the respective header values.
 > is used). This should be a last resort, as it does not comply with
 > <a href="http://www.faqs.org/rfcs/rfc2822" class="link external">» RFC 2822</a>.
 
-`additional_parameters` (optional)  
-The `additional_parameters` parameter can be used to pass additional
-flags as command line options to the program configured to be used when
+`additional_params` (optional)  
+The `additional_params` parameter can be used to pass additional flags
+as command line options to the program configured to be used when
 sending mail, as defined by the *sendmail\_path* configuration setting.
 For example, this can be used to set the envelope sender address when
 using sendmail with the *-f* sendmail option.
@@ -237,7 +239,7 @@ mail($to, $subject, $message, $headers);
 
 **Example \#4 Sending mail with an additional command line parameter.**
 
-The `additional_parameters` parameter can be used to pass an additional
+The `additional_params` parameter can be used to pass an additional
 parameter to the program configured to use when sending mail using the
 *sendmail\_path*.
 

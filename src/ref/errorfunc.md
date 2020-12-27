@@ -247,7 +247,8 @@ Get the last occurred error
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">null</span></span> <span
 class="methodname">error\_get\_last</span> ( <span
 class="methodparam">void</span> )
 
