@@ -877,7 +877,9 @@ The cipher method. For a list of available cipher methods, use <span
 class="function">openssl\_get\_cipher\_methods</span>.
 
 `key`  
-The key.
+The passphrase . If the passphrase is shorted than expected, it is
+silently padded with *NUL* characters; if the passphrase is longer than
+expected, it is silently truncated.
 
 `options`  
 `options` is a bitwise disjunction of the flags **`OPENSSL_RAW_DATA`**

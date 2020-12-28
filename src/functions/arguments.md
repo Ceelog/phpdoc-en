@@ -88,6 +88,9 @@ echo $str;    // outputs 'This is a string, and something extra.'
 ?>
 ```
 
+It is an error to pass a value as argument which is supposed to be
+passed by reference.
+
 ### Default argument values
 
 A function may define C++-style default values for scalar arguments as

@@ -1,6 +1,9 @@
 For arbitrary precision mathematics PHP offers BCMath which supports
 numbers of any size and precision up to *2147483647* (or *0x7FFFFFFF*)
-decimals, if there is sufficient memory, represented as strings.
+decimal digits, if there is sufficient memory, represented as strings.
+
+Valid (aka. well-formed) BCMath numbers are strings which match the
+regular expression */^\[+-\]?\[0\]\*\[1-9\]\*\[.\]?\[0-9\]\*$/*.
 
 **Caution**
 

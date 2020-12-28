@@ -51,19 +51,13 @@ Prerequisite knowledge and software for compiling:
 When building directly from Git sources or after custom modifications
 you might also need:
 
--   <span class="simpara"> autoconf: 2.13+ (for PHP \< 5.4.0), 2.59+
-    (for PHP \>= 5.4.0), 2.64+ (for PHP \>= 7.2.0) </span>
+-   <span class="simpara"> autoconf: 2.59+ (for PHP \>= 7.0.0), 2.64+
+    (for PHP \>= 7.2.0) </span>
 -   <span class="simpara"> automake: 1.4+ </span>
 -   <span class="simpara"> libtool: 1.4.x+ (except 1.4.2) </span>
--   <span class="simpara"> re2c: Version 0.13.4 or newer </span>
--   <span class="simpara"> flex: Version 2.5.4 (for PHP \<= 5.2) </span>
+-   <span class="simpara"> re2c: 0.13.4+ (for PHP \> 7.0.0), 0.13.7+
+    (for PHP \> 8.0.0) </span>
 -   <span class="simpara"> bison: </span>
-    -   <span class="simpara"> PHP 5.4: 1.28, 1.35, 1.75, 1.875, 2.0,
-        2.1, 2.2, 2.3, 2.4, 2.4.1, 2.4.2, 2.4.3, 2.5, 2.5.1, 2.6, 2.6.1,
-        2.6.2, 2.6.4 </span>
-    -   <span class="simpara"> PHP 5.5: 2.4, 2.4.1, 2.4.2, 2.4.3, 2.5,
-        2.5.1, 2.6, 2.6.1, 2.6.2, 2.6.3, 2.6.4, 2.6.5, 2.7 </span>
-    -   <span class="simpara"> PHP 5.6: \>= 2.4, \< 3.0 </span>
     -   <span class="simpara"> PHP 7.0 - 7.3: 2.4 or later (including
         Bison 3.x) </span>
     -   <span class="simpara"> PHP 7.4: \> 3.0 </span>

@@ -4434,8 +4434,7 @@ Return a formatted string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span class="methodname">sprintf</span>
+<span class="type">string</span> <span class="methodname">sprintf</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$format`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> )
@@ -4597,8 +4596,13 @@ Variables will be co-erced to a suitable type for the specifier:
 
 ### Return Values
 
-Returns a string produced according to the formatting string `format`,
-or **`false`** on failure.
+Returns a string produced according to the formatting string `format`.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 ### Examples
 
@@ -8996,11 +9000,10 @@ Return a formatted string
 
 ### Description
 
-<span class="type"><span class="type">string</span><span
-class="type">false</span></span> <span
+<span class="type">string</span> <span
 class="methodname">vsprintf</span> ( <span class="methodparam"><span
 class="type">string</span> `$format`</span> , <span
-class="methodparam"><span class="type">array</span> `$args`</span> )
+class="methodparam"><span class="type">array</span> `$values`</span> )
 
 Operates as <span class="function">sprintf</span> but accepts an array
 of arguments, rather than a variable number of arguments.
@@ -9156,12 +9159,17 @@ Variables will be co-erced to a suitable type for the specifier:
 | *integer* | *d*, *u*, *c*, *o*, *x*, *X*, *b* |
 | *double*  | *g*, *G*, *e*, *E*, *f*, *F*      |
 
-`args`  
+`values`  
 
 ### Return Values
 
-Return array values as a formatted string according to `format`, or
-**`false`** on failure.
+Return array values as a formatted string according to `format`.
+
+### Changelog
+
+| Version | Description                                             |
+|---------|---------------------------------------------------------|
+| 8.0.0   | This function no longer returns **`false`** on failure. |
 
 ### Examples
 

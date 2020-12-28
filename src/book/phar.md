@@ -729,6 +729,17 @@ try {
 ?>
 ```
 
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">Phar::addFile</span>, <span
+> class="function">Phar::addFromString</span> and <span
+> class="function">Phar::offsetSet</span> save a new phar archive each
+> time they are called. If performance is a concern, <span
+> class="function">Phar::buildFromDirectory</span> or <span
+> class="function">Phar::buildFromIterator</span> should be used
+> instead. </span>
+
 ### See Also
 
 -   <span class="function">Phar::offsetSet</span>
@@ -794,6 +805,17 @@ try {
 }
 ?>
 ```
+
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">Phar::addFile</span>, <span
+> class="function">Phar::addFromString</span> and <span
+> class="function">Phar::offsetSet</span> save a new phar archive each
+> time they are called. If performance is a concern, <span
+> class="function">Phar::buildFromDirectory</span> or <span
+> class="function">Phar::buildFromIterator</span> should be used
+> instead. </span>
 
 ### See Also
 
@@ -3333,6 +3355,17 @@ try {
 ?>
 ```
 
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">Phar::addFile</span>, <span
+> class="function">Phar::addFromString</span> and <span
+> class="function">Phar::offsetSet</span> save a new phar archive each
+> time they are called. If performance is a concern, <span
+> class="function">Phar::buildFromDirectory</span> or <span
+> class="function">Phar::buildFromIterator</span> should be used
+> instead. </span>
+
 ### See Also
 
 -   <span class="function">Phar::offsetExists</span>
@@ -4494,6 +4527,17 @@ try {
 ?>
 ```
 
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">PharData::addFile</span>, <span
+> class="function">PharData::addFromString</span> and <span
+> class="function">PharData::offsetSet</span> save a new phar archive
+> each time they are called. If performance is a concern, <span
+> class="function">PharData::buildFromDirectory</span> or <span
+> class="function">PharData::buildFromIterator</span> should be used
+> instead. </span>
+
 ### See Also
 
 -   <span class="function">PharData::offsetSet</span>
@@ -4553,6 +4597,17 @@ try {
 }
 ?>
 ```
+
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">PharData::addFile</span>, <span
+> class="function">PharData::addFromString</span> and <span
+> class="function">PharData::offsetSet</span> save a new phar archive
+> each time they are called. If performance is a concern, <span
+> class="function">PharData::buildFromDirectory</span> or <span
+> class="function">PharData::buildFromIterator</span> should be used
+> instead. </span>
 
 ### See Also
 
@@ -5691,6 +5746,17 @@ try {
 }
 ?>
 ```
+
+### Notes
+
+> **Note**: <span class="simpara"> <span
+> class="function">PharData::addFile</span>, <span
+> class="function">PharData::addFromString</span> and <span
+> class="function">PharData::offsetSet</span> save a new phar archive
+> each time they are called. If performance is a concern, <span
+> class="function">PharData::buildFromDirectory</span> or <span
+> class="function">PharData::buildFromIterator</span> should be used
+> instead. </span>
 
 ### See Also
 

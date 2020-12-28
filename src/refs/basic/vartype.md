@@ -81,6 +81,8 @@ Variable and Type Related Extensions
         ReflectionProperty class
     -   [ReflectionType](/class/reflectiontype.html) — The
         ReflectionType class
+    -   [ReflectionUnionType](/class/reflectionuniontype.html) — The
+        ReflectionUnionType class
     -   [ReflectionGenerator](/class/reflectiongenerator.html) — The
         ReflectionGenerator class
     -   [ReflectionReference](/class/reflectionreference.html) — The

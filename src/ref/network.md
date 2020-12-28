@@ -190,12 +190,14 @@ class="type">false</span></span> <span
 class="methodname">dns\_get\_record</span> ( <span
 class="methodparam"><span class="type">string</span> `$hostname`</span>
 \[, <span class="methodparam"><span class="type">int</span> `$type`<span
-class="initializer"> = DNS\_ANY</span></span> \[, <span
-class="methodparam"><span class="type">array</span> `&$authns`</span>
-\[, <span class="methodparam"><span class="type">array</span>
-`&$addtl`</span> \[, <span class="methodparam"><span
-class="type">bool</span> `$raw`<span class="initializer"> =
-**`false`**</span></span> \]\]\]\] )
+class="initializer"> = **`DNS_ANY`**</span></span> \[, <span
+class="methodparam"><span class="type">array</span>
+`&$authoritative_name_servers`<span class="initializer"> =
+**`null`**</span></span> \[, <span class="methodparam"><span
+class="type">array</span> `&$additional_records`<span
+class="initializer"> = **`null`**</span></span> \[, <span
+class="methodparam"><span class="type">bool</span> `$raw`<span
+class="initializer"> = **`false`**</span></span> \]\]\]\] )
 
 Fetch DNS Resource Records associated with the given `hostname`.
 
@@ -234,11 +236,11 @@ specify the optional `type` parameter. May be any one of the following:
 >
 > **`DNS_CAA`** is not supported on Windows.
 
-`authns`  
+`authoritative_name_servers`  
 Passed by reference and, if given, will be populated with Resource
 Records for the *Authoritative Name Servers*.
 
-`addtl`  
+`additional_records`  
 Passed by reference and, if given, will be populated with any
 *Additional Records*.
 
@@ -324,8 +326,9 @@ DNS\_ANY**
 Since it's very common to want the IP address of a mail server once the
 MX record has been resolved, <span
 class="function">dns\_get\_record</span> also returns an array in
-`addtl` which contains associate records. `authns` is returned as well
-containing a list of authoritative name servers.
+`additional_records` which contains associate records.
+`authoritative_name_servers` is returned as well containing a list of
+authoritative name servers.
 
 ``` php
 <?php

@@ -1498,13 +1498,15 @@ Find highest value
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">max</span> (
-<span class="methodparam"><span class="type">array</span>
-`$value_array`</span> )
-
-<span class="type">mixed</span> <span class="methodname">max</span> (
 <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> )
+
+Alternative signature (not supported with named arguments):
+
+<span class="type">mixed</span> <span class="methodname">max</span> (
+<span class="methodparam"><span class="type">array</span>
+`$value_array`</span> )
 
 If the first and only parameter is an array, <span
 class="function">max</span> returns the highest value in that array. If
@@ -1523,13 +1525,10 @@ returns the biggest of these values.
 
 **Caution**
 
-Be careful when passing arguments with mixed types values because <span
+Be careful when passing arguments of different types because <span
 class="function">max</span> can produce unpredictable results.
 
 ### Parameters
-
-`value_array`  
-An array containing the values.
 
 `value`  
 Any
@@ -1540,6 +1539,9 @@ value.
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
 values.
+
+`value_array`  
+An array containing the values.
 
 ### Return Values
 
@@ -1602,13 +1604,15 @@ Find lowest value
 ### Description
 
 <span class="type">mixed</span> <span class="methodname">min</span> (
-<span class="methodparam"><span class="type">array</span>
-`$value_array`</span> )
-
-<span class="type">mixed</span> <span class="methodname">min</span> (
 <span class="methodparam"><span class="type">mixed</span>
 `$value`</span> , <span class="methodparam"><span
 class="type">mixed</span> `$values`</span> )
+
+Alternative signature (not supported with named arguments):
+
+<span class="type">mixed</span> <span class="methodname">min</span> (
+<span class="methodparam"><span class="type">array</span>
+`$value_array`</span> )
 
 If the first and only parameter is an array, <span
 class="function">min</span> returns the lowest value in that array. If
@@ -1627,13 +1631,10 @@ returns the smallest of these values.
 
 **Caution**
 
-Be careful when passing arguments with mixed types values because <span
+Be careful when passing arguments of different types because <span
 class="function">min</span> can produce unpredictable results.
 
 ### Parameters
-
-`value_array`  
-An array containing the values.
 
 `value`  
 Any
@@ -1644,6 +1645,9 @@ value.
 Any
 <a href="/language/operators/comparison.html" class="link">comparable</a>
 values.
+
+`value_array`  
+An array containing the values.
 
 ### Return Values
 

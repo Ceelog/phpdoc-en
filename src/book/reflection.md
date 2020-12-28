@@ -322,6 +322,8 @@ Reflection
     ReflectionNamedType class
     -   [ReflectionNamedType::getName](/class/reflectionnamedtype.html#ReflectionNamedType::getName)
         — Get the text of the type hint
+    -   [ReflectionNamedType::isBuiltin](/class/reflectionnamedtype.html#ReflectionNamedType::isBuiltin)
+        — Checks if it is a built-in type
 -   [ReflectionObject](/class/reflectionobject.html) — The
     ReflectionObject class
     -   [ReflectionObject::\_\_construct](/class/reflectionobject.html#ReflectionObject::__construct)
@@ -424,10 +426,12 @@ Reflection
     class
     -   [ReflectionType::allowsNull](/class/reflectiontype.html#ReflectionType::allowsNull)
         — Checks if null is allowed
-    -   [ReflectionType::isBuiltin](/class/reflectiontype.html#ReflectionType::isBuiltin)
-        — Checks if it is a built-in type
     -   [ReflectionType::\_\_toString](/class/reflectiontype.html#ReflectionType::__toString)
         — To string
+-   [ReflectionUnionType](/class/reflectionuniontype.html) — The
+    ReflectionUnionType class
+    -   [ReflectionUnionType::getTypes](/class/reflectionuniontype.html#ReflectionUnionType::getTypes)
+        — Returns the types included in the union type
 -   [ReflectionGenerator](/class/reflectiongenerator.html) — The
     ReflectionGenerator class
     -   [ReflectionGenerator::\_\_construct](/class/reflectiongenerator.html#ReflectionGenerator::__construct)
@@ -8009,14 +8013,14 @@ class="ooclass"> <span class="modifier">extends</span>
 <span class="methodname">getName</span> ( <span
 class="methodparam">void</span> )
 
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">isBuiltin</span> ( <span
+class="methodparam">void</span> )
+
 /\* Inherited methods \*/
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">ReflectionType::allowsNull</span> ( <span
-class="methodparam">void</span> )
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">ReflectionType::isBuiltin</span> ( <span
 class="methodparam">void</span> )
 
 <span class="modifier">public</span> <span class="type">string</span>
@@ -8047,6 +8051,66 @@ Returns the text of the type hint.
 ### See Also
 
 -   <span class="methodname">ReflectionType::\_\_toString</span>
+
+ReflectionNamedType::isBuiltin
+==============================
+
+Checks if it is a built-in type
+
+### Description
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionNamedType::isBuiltin</span> ( <span
+class="methodparam">void</span> )
+
+Checks if the type is a built-in type in PHP.
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+**`true`** if it's a built-in type, otherwise **`false`**
+
+### Examples
+
+**Example \#1 <span
+class="methodname">ReflectionNamedType::isBuiltin</span> example**
+
+``` php
+<?php
+class SomeClass {}
+
+function someFunction(string $param, SomeClass $param2, StdClass $param3) {}
+
+$reflectionFunc = new ReflectionFunction('someFunction');
+$reflectionParams = $reflectionFunc->getParameters();
+
+var_dump($reflectionParams[0]->getType()->isBuiltin());
+var_dump($reflectionParams[1]->getType()->isBuiltin());
+var_dump($reflectionParams[2]->getType()->isBuiltin());
+```
+
+The above example will output:
+
+    bool(true)
+    bool(false)
+    bool(false)
+
+Note that the <span
+class="methodname">ReflectionNamedType::isBuiltin</span> method does not
+distinguish between internal and custom classes. To make this
+distinction, the <span
+class="methodname">ReflectionClass::isInternal</span> method should be
+used on the returned class name.
+
+### See Also
+
+-   <span class="methodname">ReflectionType::allowsNull</span>
+-   <span class="methodname">ReflectionType::\_\_toString</span>
+-   <span class="methodname">ReflectionClass::isInternal</span>
+-   <span class="methodname">ReflectionParameter::getType</span>
 
 Introduction
 ------------
@@ -10661,7 +10725,8 @@ Class synopsis
 
 **ReflectionType**
 
-<span class="ooclass"> class **ReflectionType** </span> {
+<span class="ooclass"> <span class="modifier">abstract</span> class
+**ReflectionType** </span> {
 
 /\* Methods \*/
 
@@ -10669,15 +10734,18 @@ Class synopsis
 <span class="methodname">allowsNull</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">isBuiltin</span> ( <span
-class="methodparam">void</span> )
-
 <span class="modifier">public</span> <span class="type">string</span>
 <span class="methodname">\_\_toString</span> ( <span
 class="methodparam">void</span> )
 
 }
+
+Changelog
+---------
+
+| Version | Description                                                                                                                                                                                                   |
+|---------|---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| 8.0.0   | <span class="classname">ReflectionType</span> has become abstract and <span class="function">ReflectionType::isBuiltin</span> has been moved to <span class="function">ReflectionNamedType::isBuiltin</span>. |
 
 ReflectionType::allowsNull
 ==========================
@@ -10716,74 +10784,15 @@ var_dump($reflectionParams[0]->getType()->allowsNull());
 var_dump($reflectionParams[1]->getType()->allowsNull());
 ```
 
-The above example will output something similar to:
+The above example will output:
 
     bool(false)
     bool(true)
 
 ### See Also
 
--   <span class="methodname">ReflectionType::isBuiltin</span>
+-   <span class="methodname">ReflectionNamedType::isBuiltin</span>
 -   <span class="methodname">ReflectionType::\_\_toString</span>
--   <span class="methodname">ReflectionParameter::getType</span>
-
-ReflectionType::isBuiltin
-=========================
-
-Checks if it is a built-in type
-
-### Description
-
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">ReflectionType::isBuiltin</span> ( <span
-class="methodparam">void</span> )
-
-Checks if the type is a built-in type in PHP.
-
-### Parameters
-
-This function has no parameters.
-
-### Return Values
-
-**`true`** if it's a built-in type, otherwise **`false`**
-
-### Examples
-
-**Example \#1 <span class="methodname">ReflectionType::isBuiltin</span>
-example**
-
-``` php
-<?php
-class SomeClass {}
-
-function someFunction(string $param, SomeClass $param2, StdClass $param3) {}
-
-$reflectionFunc = new ReflectionFunction('someFunction');
-$reflectionParams = $reflectionFunc->getParameters();
-
-var_dump($reflectionParams[0]->getType()->isBuiltin());
-var_dump($reflectionParams[1]->getType()->isBuiltin());
-var_dump($reflectionParams[2]->getType()->isBuiltin());
-```
-
-The above example will output something similar to:
-
-    bool(true)
-    bool(false)
-    bool(false)
-
-Note that the <span class="methodname">ReflectionType::isBuiltin</span>
-method does not distinguish between internal and custom classes. To make
-this distinction, the <span
-class="methodname">ReflectionClass::isInternal</span> method should be
-used on the returned class name.
-
-### See Also
-
--   <span class="methodname">ReflectionType::allowsNull</span>
--   <span class="methodname">ReflectionType::\_\_toString</span>
--   <span class="methodname">ReflectionClass::isInternal</span>
 -   <span class="methodname">ReflectionParameter::getType</span>
 
 ReflectionType::\_\_toString
@@ -10840,8 +10849,91 @@ The above example will output something similar to:
 ### See Also
 
 -   <span class="methodname">ReflectionNamedType::getName</span>
+-   <span class="methodname">ReflectionNamedType::isBuiltin</span>
 -   <span class="methodname">ReflectionType::allowsNull</span>
--   <span class="methodname">ReflectionType::isBuiltin</span>
+-   <span class="methodname">ReflectionUnionType::getTypes</span>
+-   <span class="methodname">ReflectionParameter::getType</span>
+
+Introduction
+------------
+
+Class synopsis
+--------------
+
+**ReflectionUnionType**
+
+<span class="ooclass"> class **ReflectionUnionType** </span> <span
+class="ooclass"> <span class="modifier">extends</span>
+**ReflectionType** </span> {
+
+/\* Methods \*/
+
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">getTypes</span> ( <span
+class="methodparam">void</span> )
+
+/\* Inherited methods \*/
+
+<span class="modifier">public</span> <span class="type">bool</span>
+<span class="methodname">ReflectionType::allowsNull</span> ( <span
+class="methodparam">void</span> )
+
+<span class="modifier">public</span> <span class="type">string</span>
+<span class="methodname">ReflectionType::\_\_toString</span> ( <span
+class="methodparam">void</span> )
+
+}
+
+ReflectionUnionType::getTypes
+=============================
+
+Returns the types included in the union type
+
+### Description
+
+<span class="modifier">public</span> <span class="type">array</span>
+<span class="methodname">ReflectionUnionType::getTypes</span> ( <span
+class="methodparam">void</span> )
+
+Returns the reflections of types included in the union type.
+
+### Parameters
+
+This function has no parameters.
+
+### Return Values
+
+An array of <span class="classname">ReflectionType</span> objects.
+
+### Examples
+
+**Example \#1 <span
+class="methodname">ReflectionUnionType::getTypes</span> example**
+
+``` php
+<?php
+function someFunction(int|float $number) {}
+
+$reflectionFunc = new ReflectionFunction('someFunction');
+$reflectionParam = $reflectionFunc->getParameters()[0];
+
+var_dump($reflectionParam->getType()->getTypes());
+```
+
+The above example will output something similar to:
+
+    array(2) {
+        [0] =>
+        class ReflectionNamedType#4(0) {
+        }
+        [1] =>
+        class ReflectionNamedType#5(0) {
+        }
+    }
+
+### See Also
+
+-   <span class="methodname">ReflectionType::allowsNull</span>
 -   <span class="methodname">ReflectionParameter::getType</span>
 
 Introduction
