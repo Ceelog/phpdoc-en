@@ -11,19 +11,19 @@ Determine accessibility of a file
 
 <span class="type">bool</span> <span
 class="methodname">posix\_access</span> ( <span
-class="methodparam"><span class="type">string</span> `$file`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$mode`<span
-class="initializer"> = POSIX\_F\_OK</span></span> \] )
+class="methodparam"><span class="type">string</span> `$filename`</span>
+\[, <span class="methodparam"><span class="type">int</span>
+`$flags`<span class="initializer"> = 0</span></span> \] )
 
 <span class="function">posix\_access</span> checks the user's permission
 of a file.
 
 ### Parameters
 
-`file`  
+`filename`  
 The name of the file to be tested.
 
-`mode`  
+`flags`  
 A mask consisting of one or more of **`POSIX_F_OK`**, **`POSIX_R_OK`**,
 **`POSIX_W_OK`** and **`POSIX_X_OK`**.
 
@@ -74,7 +74,8 @@ Get path name of controlling terminal
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_ctermid</span> ( <span
 class="methodparam">void</span> )
 
@@ -163,7 +164,8 @@ Pathname of current directory
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getcwd</span> ( <span
 class="methodparam">void</span> )
 
@@ -336,15 +338,16 @@ Return info about a group by group id
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getgrgid</span> ( <span
-class="methodparam"><span class="type">int</span> `$gid`</span> )
+class="methodparam"><span class="type">int</span> `$group_id`</span> )
 
 Gets information about a group provided its id.
 
 ### Parameters
 
-`gid`  
+`group_id`  
 The group id.
 
 ### Return Values
@@ -355,8 +358,10 @@ The array elements returned are:
 |---------|------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name    | The name element contains the name of the group. This is a short, usually less than 16 character "handle" of the group, not the real, full name.                       |
 | passwd  | The passwd element contains the group's password in an encrypted format. Often, for example on a system employing "shadow" passwords, an asterisk is returned instead. |
-| gid     | Group ID, should be the same as the `gid` parameter used when calling the function, and hence redundant.                                                               |
+| gid     | Group ID, should be the same as the `group_id` parameter used when calling the function, and hence redundant.                                                          |
 | members | This consists of an <span class="type">array</span> of <span class="type">string</span>'s for all the members in the group.                                            |
+
+The function returns **`false`** on failure.
 
 ### Examples
 
@@ -469,7 +474,8 @@ Return the group set of the current process
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getgroups</span> ( <span
 class="methodparam">void</span> )
 
@@ -478,7 +484,7 @@ Gets the group set of the current process.
 ### Return Values
 
 Returns an array of integers containing the numeric group ids of the
-group set of the current process.
+group set of the current process, or **`false`** on failure.
 
 ### Examples
 
@@ -524,7 +530,8 @@ Return login name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getlogin</span> ( <span
 class="methodparam">void</span> )
 
@@ -533,7 +540,7 @@ Returns the login name of the user owning the current process.
 ### Return Values
 
 Returns the login name of the user, as a <span
-class="type">string</span>.
+class="type">string</span>, or **`false`** on failure.
 
 ### Examples
 
@@ -561,14 +568,14 @@ Get process group id for job control
 <span class="type"><span class="type">int</span><span
 class="type">false</span></span> <span
 class="methodname">posix\_getpgid</span> ( <span
-class="methodparam"><span class="type">int</span> `$pid`</span> )
+class="methodparam"><span class="type">int</span> `$process_id`</span> )
 
-Returns the process group identifier of the process `pid` or **`false`**
-on failure.
+Returns the process group identifier of the process `process_id` or
+**`false`** on failure.
 
 ### Parameters
 
-`pid`  
+`process_id`  
 The process id.
 
 ### Return Values
@@ -692,7 +699,8 @@ Return info about a user by username
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getpwnam</span> ( <span
 class="methodparam"><span class="type">string</span> `$username`</span>
 )
@@ -759,16 +767,17 @@ Return info about a user by user id
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getpwuid</span> ( <span
-class="methodparam"><span class="type">int</span> `$uid`</span> )
+class="methodparam"><span class="type">int</span> `$user_id`</span> )
 
 Returns an <span class="type">array</span> of information about the user
 referenced by the given user ID.
 
 ### Parameters
 
-`uid`  
+`user_id`  
 The user identifier.
 
 ### Return Values
@@ -779,11 +788,13 @@ Returns an associative array with the following elements:
 |---------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
 | name    | The name element contains the username of the user. This is a short, usually less than 16 character "handle" of the user, not the real, full name.                                                                                                                                                                                                                                  |
 | passwd  | The passwd element contains the user's password in an encrypted format. Often, for example on a system employing "shadow" passwords, an asterisk is returned instead.                                                                                                                                                                                                               |
-| uid     | User ID, should be the same as the `uid` parameter used when calling the function, and hence redundant.                                                                                                                                                                                                                                                                             |
+| uid     | User ID, should be the same as the `user_id` parameter used when calling the function, and hence redundant.                                                                                                                                                                                                                                                                         |
 | gid     | The group ID of the user. Use the function <span class="function">posix\_getgrgid</span> to resolve the group name and a list of its members.                                                                                                                                                                                                                                       |
 | gecos   | GECOS is an obsolete term that refers to the finger information field on a Honeywell batch processing system. The field, however, lives on, and its contents have been formalized by POSIX. The field contains a comma separated list containing the user's full name, office phone, office number, and home phone number. On most systems, only the user's full name is available. |
 | dir     | This element contains the absolute path to the home directory of the user.                                                                                                                                                                                                                                                                                                          |
 | shell   | The shell element contains the absolute path to the executable of the user's default shell.                                                                                                                                                                                                                                                                                         |
+
+The function returns **`false`** on failure.
 
 ### Examples
 
@@ -824,7 +835,8 @@ Return info about system resource limits
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getrlimit</span> ( <span
 class="methodparam">void</span> )
 
@@ -856,6 +868,8 @@ each limit that is defined. Each limit has a soft and a hard limit.
 | cpu        | The amount of time the process is allowed to use the CPU.                                                                                              |
 | filesize   | The maximum size of the data segment for the process, in bytes.                                                                                        |
 | openfiles  | One more than the maximum number of open file descriptors.                                                                                             |
+
+The function returns **`false`** on failure.
 
 ### Examples
 
@@ -909,24 +923,26 @@ Get the current sid of the process
 
 ### Description
 
-<span class="type">int</span> <span
+<span class="type"><span class="type">int</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_getsid</span> ( <span
-class="methodparam"><span class="type">int</span> `$pid`</span> )
+class="methodparam"><span class="type">int</span> `$process_id`</span> )
 
-Return the session id of the process `pid`. The session id of a process
-is the process group id of the session leader.
+Return the session id of the process `process_id`. The session id of a
+process is the process group id of the session leader.
 
 ### Parameters
 
-`pid`  
+`process_id`  
 The process identifier. If set to 0, the current process is assumed. If
-an invalid `pid` is specified, then **`false`** is returned and an error
-is set which can be checked with <span
+an invalid `process_id` is specified, then **`false`** is returned and
+an error is set which can be checked with <span
 class="function">posix\_get\_last\_error</span>.
 
 ### Return Values
 
-Returns the identifier, as an <span class="type">int</span>.
+Returns the identifier, as an <span class="type">int</span>, or
+**`false`** on failure.
 
 ### Examples
 
@@ -988,18 +1004,18 @@ Calculate the group access list
 
 <span class="type">bool</span> <span
 class="methodname">posix\_initgroups</span> ( <span
-class="methodparam"><span class="type">string</span> `$name`</span> ,
-<span class="methodparam"><span class="type">int</span>
-`$base_group_id`</span> )
+class="methodparam"><span class="type">string</span> `$username`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$group_id`</span> )
 
 Calculates the group access list for the user specified in name.
 
 ### Parameters
 
-`name`  
+`username`  
 The user to calculate the list for.
 
-`base_group_id`  
+`group_id`  
 Typically the group number from the password file.
 
 ### Return Values
@@ -1019,10 +1035,12 @@ Determine if a file descriptor is an interactive terminal
 
 <span class="type">bool</span> <span
 class="methodname">posix\_isatty</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$fd`</span> )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">int</span></span>
+`$file_descriptor`</span> )
 
-Determines if the file descriptor `fd` refers to a valid terminal type
-device.
+Determines if the file descriptor `file_descriptor` refers to a valid
+terminal type device.
 
 ### Parameters
 
@@ -1037,8 +1055,8 @@ class="type">resource</span>.
 
 ### Return Values
 
-Returns **`true`** if `fd` is an open descriptor connected to a terminal
-and **`false`** otherwise.
+Returns **`true`** if `file_descriptor` is an open descriptor connected
+to a terminal and **`false`** otherwise.
 
 ### See Also
 
@@ -1054,17 +1072,18 @@ Send a signal to a process
 
 <span class="type">bool</span> <span
 class="methodname">posix\_kill</span> ( <span class="methodparam"><span
-class="type">int</span> `$pid`</span> , <span class="methodparam"><span
-class="type">int</span> `$sig`</span> )
+class="type">int</span> `$process_id`</span> , <span
+class="methodparam"><span class="type">int</span> `$signal`</span> )
 
-Send the signal `sig` to the process with the process identifier `pid`.
+Send the signal `signal` to the process with the process identifier
+`process_id`.
 
 ### Parameters
 
-`pid`  
+`process_id`  
 The process identifier.
 
-`sig`  
+`signal`  
 One of the
 <a href="/pcntl/constants.html" class="link">PCNTL signals constants</a>.
 
@@ -1087,9 +1106,9 @@ Create a fifo special file (a named pipe)
 
 <span class="type">bool</span> <span
 class="methodname">posix\_mkfifo</span> ( <span
-class="methodparam"><span class="type">string</span> `$pathname`</span>
-, <span class="methodparam"><span class="type">int</span> `$mode`</span>
-)
+class="methodparam"><span class="type">string</span> `$filename`</span>
+, <span class="methodparam"><span class="type">int</span>
+`$permissions`</span> )
 
 <span class="function">posix\_mkfifo</span> creates a special *FIFO*
 file which exists in the file system and acts as a bidirectional
@@ -1097,13 +1116,13 @@ communication endpoint for processes.
 
 ### Parameters
 
-`pathname`  
+`filename`  
 Path to the *FIFO* file.
 
-`mode`  
-The second parameter `mode` has to be given in octal notation (e.g.
-0644). The permission of the newly created *FIFO* also depends on the
-setting of the current <span class="function">umask</span>. The
+`permissions`  
+The second parameter `permissions` has to be given in octal notation
+(e.g. 0644). The permission of the newly created *FIFO* also depends on
+the setting of the current <span class="function">umask</span>. The
 permissions of the created file are (mode & \~umask).
 
 ### Return Values
@@ -1119,8 +1138,8 @@ Create a special or ordinary file (POSIX.1)
 
 <span class="type">bool</span> <span
 class="methodname">posix\_mknod</span> ( <span class="methodparam"><span
-class="type">string</span> `$pathname`</span> , <span
-class="methodparam"><span class="type">int</span> `$mode`</span> \[,
+class="type">string</span> `$filename`</span> , <span
+class="methodparam"><span class="type">int</span> `$flags`</span> \[,
 <span class="methodparam"><span class="type">int</span> `$major`<span
 class="initializer"> = 0</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$minor`<span
@@ -1130,10 +1149,10 @@ Creates a special or ordinary file.
 
 ### Parameters
 
-`pathname`  
+`filename`  
 The file to create
 
-`mode`  
+`flags`  
 This parameter is constructed by a bitwise OR between file type (one of
 the following constants: **`POSIX_S_IFREG`**, **`POSIX_S_IFCHR`**,
 **`POSIX_S_IFBLK`**, **`POSIX_S_IFIFO`** or **`POSIX_S_IFSOCK`**) and
@@ -1183,7 +1202,7 @@ Set the effective GID of the current process
 
 <span class="type">bool</span> <span
 class="methodname">posix\_setegid</span> ( <span
-class="methodparam"><span class="type">int</span> `$gid`</span> )
+class="methodparam"><span class="type">int</span> `$group_id`</span> )
 
 Set the effective group ID of the current process. This is a privileged
 function and needs appropriate privileges (usually root) on the system
@@ -1191,7 +1210,7 @@ to be able to perform this function.
 
 ### Parameters
 
-`gid`  
+`group_id`  
 The group id.
 
 ### Return Values
@@ -1228,7 +1247,7 @@ Set the effective UID of the current process
 
 <span class="type">bool</span> <span
 class="methodname">posix\_seteuid</span> ( <span
-class="methodparam"><span class="type">int</span> `$uid`</span> )
+class="methodparam"><span class="type">int</span> `$user_id`</span> )
 
 Set the effective user ID of the current process. This is a privileged
 function and needs appropriate privileges (usually root) on the system
@@ -1236,7 +1255,7 @@ to be able to perform this function.
 
 ### Parameters
 
-`uid`  
+`user_id`  
 The user id.
 
 ### Return Values
@@ -1258,7 +1277,7 @@ Set the GID of the current process
 
 <span class="type">bool</span> <span
 class="methodname">posix\_setgid</span> ( <span
-class="methodparam"><span class="type">int</span> `$gid`</span> )
+class="methodparam"><span class="type">int</span> `$group_id`</span> )
 
 Set the real group ID of the current process. This is a privileged
 function and needs appropriate privileges (usually root) on the system
@@ -1273,7 +1292,7 @@ class="function">posix\_setuid</span> last.
 
 ### Parameters
 
-`gid`  
+`group_id`  
 The group id.
 
 ### Return Values
@@ -1309,17 +1328,18 @@ Set process group id for job control
 
 <span class="type">bool</span> <span
 class="methodname">posix\_setpgid</span> ( <span
-class="methodparam"><span class="type">int</span> `$pid`</span> , <span
-class="methodparam"><span class="type">int</span> `$pgid`</span> )
+class="methodparam"><span class="type">int</span> `$process_id`</span> ,
+<span class="methodparam"><span class="type">int</span>
+`$process_group_id`</span> )
 
-Let the process `pid` join the process group `pgid`.
+Let the process `process_id` join the process group `process_group_id`.
 
 ### Parameters
 
-`pid`  
+`process_id`  
 The process id.
 
-`pgid`  
+`process_group_id`  
 The process group id.
 
 ### Return Values
@@ -1342,8 +1362,8 @@ Set system resource limits
 class="methodname">posix\_setrlimit</span> ( <span
 class="methodparam"><span class="type">int</span> `$resource`</span> ,
 <span class="methodparam"><span class="type">int</span>
-`$softlimit`</span> , <span class="methodparam"><span
-class="type">int</span> `$hardlimit`</span> )
+`$soft_limit`</span> , <span class="methodparam"><span
+class="type">int</span> `$hard_limit`</span> )
 
 <span class="function">posix\_setrlimit</span> sets the soft and hard
 limits for a given system resource.
@@ -1361,11 +1381,11 @@ The
 <a href="/posix/constants.html#posix_setrlimit%20constants" class="link">resource limit constant</a>
 corresponding to the limit that is being set.
 
-`softlimit`  
+`soft_limit`  
 The soft limit, in whatever unit the resource limit requires, or
 **`POSIX_RLIMIT_INFINITY`**.
 
-`hardlimit`  
+`hard_limit`  
 The hard limit, in whatever unit the resource limit requires, or
 **`POSIX_RLIMIT_INFINITY`**.
 
@@ -1409,7 +1429,7 @@ Set the UID of the current process
 
 <span class="type">bool</span> <span
 class="methodname">posix\_setuid</span> ( <span
-class="methodparam"><span class="type">int</span> `$uid`</span> )
+class="methodparam"><span class="type">int</span> `$user_id`</span> )
 
 Set the real user ID of the current process. This is a privileged
 function that needs appropriate privileges (usually root) on the system
@@ -1417,7 +1437,7 @@ to be able to perform this function.
 
 ### Parameters
 
-`uid`  
+`user_id`  
 The user id.
 
 ### Return Values
@@ -1457,15 +1477,15 @@ Retrieve the system error message associated with the given errno
 
 <span class="type">string</span> <span
 class="methodname">posix\_strerror</span> ( <span
-class="methodparam"><span class="type">int</span> `$errno`</span> )
+class="methodparam"><span class="type">int</span> `$error_code`</span> )
 
 Returns the POSIX system error message associated with the given
-`errno`. You may get the `errno` parameter by calling <span
+`error_code`. You may get the `error_code` parameter by calling <span
 class="function">posix\_get\_last\_error</span>.
 
 ### Parameters
 
-`errno`  
+`error_code`  
 A POSIX error number, returned by <span
 class="function">posix\_get\_last\_error</span>. If set to 0, then the
 string "Success" is returned.
@@ -1503,7 +1523,8 @@ Get process times
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_times</span> ( <span
 class="methodparam">void</span> )
 
@@ -1524,6 +1545,8 @@ usage. The indices of the hash are:
     and children. </span>
 -   <span class="simpara"> cstime - system time used by current process
     and children. </span>
+
+The function returns **`false`** on failure.
 
 ### Notes
 
@@ -1564,12 +1587,16 @@ Determine terminal device name
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">string</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_ttyname</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$fd`</span> )
+class="methodparam"><span class="type"><span
+class="type">resource</span><span class="type">int</span></span>
+`$file_descriptor`</span> )
 
 Returns a <span class="type">string</span> for the absolute path to the
-current terminal device that is open on the file descriptor `fd`.
+current terminal device that is open on the file descriptor
+`file_descriptor`.
 
 ### Parameters
 
@@ -1585,7 +1612,7 @@ class="type">resource</span>.
 ### Return Values
 
 On success, returns a <span class="type">string</span> of the absolute
-path of the `fd`. On failure, returns **`false`**
+path of the `file_descriptor`. On failure, returns **`false`**
 
 posix\_uname
 ============
@@ -1594,7 +1621,8 @@ Get system name
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">false</span></span> <span
 class="methodname">posix\_uname</span> ( <span
 class="methodparam">void</span> )
 
@@ -1623,6 +1651,8 @@ of the hash are
 
 domainname is a GNU extension and not part of POSIX.1, so this field is
 only available on GNU systems or when using the GNU libc.
+
+The function returns **`false`** on failure.
 
 ### Examples
 

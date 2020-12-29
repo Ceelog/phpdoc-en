@@ -1,7 +1,7 @@
 snmp\_get\_quick\_print
 =======================
 
-Fetches the current value of the UCD library's quick\_print setting
+Fetches the current value of the NET-SNMP library's quick\_print setting
 
 ### Description
 
@@ -9,8 +9,8 @@ Fetches the current value of the UCD library's quick\_print setting
 class="methodname">snmp\_get\_quick\_print</span> ( <span
 class="methodparam">void</span> )
 
-Returns the current value stored in the UCD Library for quick\_print.
-quick\_print is off by default.
+Returns the current value stored in the NET-SNMP Library for
+quick\_print. quick\_print is off by default.
 
 ### Return Values
 
@@ -128,7 +128,7 @@ raw integer
 
 <span class="type">bool</span> <span
 class="methodname">snmp\_set\_enum\_print</span> ( <span
-class="methodparam"><span class="type">int</span> `$enum_print`</span> )
+class="methodparam"><span class="type">bool</span> `$enable`</span> )
 
 This function toggles if snmpwalk/snmpget etc. should automatically
 lookup enum values in the MIB and return them together with their human
@@ -136,7 +136,7 @@ readable string.
 
 ### Parameters
 
-`enum_print`  
+`enable`  
 As the value is interpreted as boolean by the Net-SNMP library, it can
 only be "0" or "1".
 
@@ -160,14 +160,6 @@ The above would return
      INTEGER: up(1)
      INTEGER: 1
 
-### Notes
-
-> **Note**:
->
-> <span class="function">snmp\_set\_enum\_print</span> is only available
-> when using the UCD SNMP library. This function is not available when
-> using the Windows SNMP library.
-
 snmp\_set\_oid\_numeric\_print
 ==============================
 
@@ -175,9 +167,9 @@ Set the OID output format
 
 ### Description
 
-<span class="type">void</span> <span
+<span class="type">bool</span> <span
 class="methodname">snmp\_set\_oid\_numeric\_print</span> ( <span
-class="methodparam"><span class="type">int</span> `$oid_format`</span> )
+class="methodparam"><span class="type">int</span> `$format`</span> )
 
 This function is an alias of: <span
 class="function">snmp\_set\_oid\_output\_format</span>.
@@ -195,15 +187,14 @@ Set the OID output format
 
 <span class="type">bool</span> <span
 class="methodname">snmp\_set\_oid\_output\_format</span> ( <span
-class="methodparam"><span class="type">int</span> `$oid_format`<span
-class="initializer"> = SNMP\_OID\_OUTPUT\_MODULE</span></span> )
+class="methodparam"><span class="type">int</span> `$format`</span> )
 
 <span class="function">snmp\_set\_oid\_output\_format</span> sets the
 output format to be full or numeric.
 
 ### Parameters
 
-`oid_format`  
+`format`  
 |                               |                                                                     |
 |-------------------------------|---------------------------------------------------------------------|
 | **`SNMP_OID_OUTPUT_FULL`**    | .iso.org.dod.internet.mgmt.mib-2.system.sysUpTime.sysUpTimeInstance |
@@ -221,14 +212,6 @@ Begining from PHP 5.4.0 four additional constants available:
 ### Return Values
 
 No value is returned.
-
-### Notes
-
-> **Note**:
->
-> <span class="function">snmp\_set\_oid\_output\_format</span> is only
-> available when using the UCD SNMP library. This function is not
-> available when using the Windows SNMP library.
 
 ### Examples
 
@@ -268,24 +251,23 @@ The above would output:
 snmp\_set\_quick\_print
 =======================
 
-Set the value of `quick_print` within the UCD SNMP library
+Set the value of `enable` within the NET-SNMP library
 
 ### Description
 
 <span class="type">bool</span> <span
 class="methodname">snmp\_set\_quick\_print</span> ( <span
-class="methodparam"><span class="type">bool</span> `$quick_print`</span>
-)
+class="methodparam"><span class="type">bool</span> `$enable`</span> )
 
-Sets the value of `quick_print` within the UCD SNMP library. When this
-is set (1), the SNMP library will return 'quick printed' values. This
-means that just the value will be printed. When `quick_print` is not
-enabled (default) the UCD SNMP library prints extra information
-including the type of the value (i.e. IpAddress or OID). Additionally,
-if quick\_print is not enabled, the library prints additional hex values
-for all strings of three characters or less.
+Sets the value of `enable` within the NET-SNMP library. When this is set
+(1), the SNMP library will return 'quick printed' values. This means
+that just the value will be printed. When `enable` is not enabled
+(default) the NET-SNMP library prints extra information including the
+type of the value (i.e. IpAddress or OID). Additionally, if quick\_print
+is not enabled, the library prints additional hex values for all strings
+of three characters or less.
 
-By default the UCD SNMP library returns verbose values, quick\_print is
+By default the NET-SNMP library returns verbose values, quick\_print is
 used to return only the value.
 
 Currently strings are still returned with extra quotes, this will be
@@ -293,7 +275,7 @@ corrected in a later release.
 
 ### Parameters
 
-`quick_print`  
+`enable`  
 
 ### Return Values
 
@@ -336,8 +318,7 @@ Specify the method how the SNMP values will be returned
 
 <span class="type">bool</span> <span
 class="methodname">snmp\_set\_valueretrieval</span> ( <span
-class="methodparam"> <span class="type">int</span> `$method` <span
-class="initializer"> = SNMP\_VALUE\_LIBRARY</span> </span> )
+class="methodparam"><span class="type">int</span> `$method`</span> )
 
 ### Parameters
 
@@ -403,23 +384,26 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp2\_get</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$object_id`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 The <span class="function">snmp2\_get</span> function is used to read
 the value of an SNMP object specified by the `object_id`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The SNMP agent.
 
 `community`  
@@ -459,16 +443,19 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp2\_getnext</span> ( <span
-class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$community`</span> , <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$hostname`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$community`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmp2\_get\_next</span> function is used to
 read the value of the SNMP object that follows the specified
@@ -476,7 +463,7 @@ read the value of the SNMP object that follows the specified
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -519,16 +506,18 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp2\_real\_walk</span> ( <span
-class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$community`</span> , <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="methodparam"><span class="type">string</span> `$hostname`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$community`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmp2\_real\_walk</span> function is used to
 traverse over a number of SNMP objects starting from `object_id` and
@@ -536,7 +525,7 @@ return not only their values but also their object ids.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -589,25 +578,29 @@ Set the value of an SNMP object
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp2\_set</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$object_id`</span> , <span class="methodparam"><span
-class="type">string</span> `$type`</span> , <span
-class="methodparam"><span class="type">string</span> `$value`</span> \[,
-<span class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$value`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 <span class="function">snmp2\_set</span> is used to set the value of an
 SNMP object specified by the `object_id`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -715,23 +708,25 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp2\_walk</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$object_id`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 <span class="function">snmp2\_walk</span> function is used to read all
 the values from an SNMP agent specified by the `hostname`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The SNMP agent (server).
 
 `community`  
@@ -784,36 +779,40 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp3\_get</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
-class="methodparam"><span class="type">string</span> `$sec_name`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$sec_level`</span> , <span class="methodparam"><span
-class="type">string</span> `$auth_protocol`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$auth_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$priv_protocol`</span> , <span
+`$security_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$security_level`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$priv_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+`$auth_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$auth_passphrase`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$privacy_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$privacy_passphrase`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmp3\_get</span> function is used to read
 the value of an SNMP object specified by the `object_id`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
-`sec_name`  
+`security_name`  
 the security name, usually some kind of username
 
-`sec_level`  
+`security_level`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
 `auth_protocol`  
@@ -822,10 +821,10 @@ the authentication protocol (MD5 or SHA)
 `auth_passphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacy_protocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacy_passphrase`  
 the privacy pass phrase
 
 `object_id`  
@@ -862,23 +861,27 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp3\_getnext</span> ( <span
-class="methodparam"><span class="type">string</span> `$host`</span> ,
-<span class="methodparam"><span class="type">string</span>
-`$sec_name`</span> , <span class="methodparam"><span
-class="type">string</span> `$sec_level`</span> , <span
+class="methodparam"><span class="type">string</span> `$hostname`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$security_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$security_level`</span> , <span
 class="methodparam"><span class="type">string</span>
 `$auth_protocol`</span> , <span class="methodparam"><span
 class="type">string</span> `$auth_passphrase`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$priv_protocol`</span> , <span class="methodparam"><span
-class="type">string</span> `$priv_passphrase`</span> , <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$timeout`<span class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+`$privacy_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$privacy_passphrase`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmp3\_getnext</span> function is used to
 read the value of the SNMP object that follows the specified
@@ -886,13 +889,13 @@ read the value of the SNMP object that follows the specified
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
-`sec_name`  
+`security_name`  
 the security name, usually some kind of username
 
-`sec_level`  
+`security_level`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
 `auth_protocol`  
@@ -901,10 +904,10 @@ the authentication protocol (MD5 or SHA)
 `auth_passphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacy_protocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacy_passphrase`  
 the privacy pass phrase
 
 `object_id`  
@@ -944,22 +947,26 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
-class="methodname">snmp3\_real\_walk</span> ( <span class="methodparam">
-<span class="type">string</span> `$host` </span> , <span
-class="methodparam"> <span class="type">string</span> `$sec_name`
-</span> , <span class="methodparam"> <span class="type">string</span>
-`$sec_level` </span> , <span class="methodparam"> <span
-class="type">string</span> `$auth_protocol` </span> , <span
-class="methodparam"> <span class="type">string</span> `$auth_passphrase`
-</span> , <span class="methodparam"> <span class="type">string</span>
-`$priv_protocol` </span> , <span class="methodparam"> <span
-class="type">string</span> `$priv_passphrase` </span> , <span
-class="methodparam"> <span class="type">string</span> `$object_id`
-</span> \[, <span class="methodparam"> <span class="type">int</span>
-`$timeout` <span class="initializer"> = 1000000</span> </span> \[, <span
-class="methodparam"> <span class="type">int</span> `$retries` <span
-class="initializer"> = 5</span> </span> \]\] )
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
+class="methodname">snmp3\_real\_walk</span> ( <span
+class="methodparam"><span class="type">string</span> `$hostname`</span>
+, <span class="methodparam"><span class="type">string</span>
+`$security_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$security_level`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$auth_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$auth_passphrase`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$privacy_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$privacy_passphrase`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmp3\_real\_walk</span> function is used to
 traverse over a number of SNMP objects starting from `object_id` and
@@ -967,13 +974,13 @@ return not only their values but also their object ids.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
-`sec_name`  
+`security_name`  
 the security name, usually some kind of username
 
-`sec_level`  
+`security_level`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
 `auth_protocol`  
@@ -982,10 +989,10 @@ the authentication protocol (MD5 or SHA)
 `auth_passphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacy_protocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacy_passphrase`  
 the privacy pass phrase
 
 `object_id`  
@@ -1034,26 +1041,30 @@ Set the value of an SNMP object
 
 ### Description
 
-<span class="type">bool</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp3\_set</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
-class="methodparam"><span class="type">string</span> `$sec_name`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$sec_level`</span> , <span class="methodparam"><span
-class="type">string</span> `$auth_protocol`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$auth_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$priv_protocol`</span> , <span
+`$security_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$security_level`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$priv_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> , <span
-class="methodparam"><span class="type">string</span> `$type`</span> ,
-<span class="methodparam"><span class="type">string</span>
+`$auth_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$auth_passphrase`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$privacy_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$privacy_passphrase`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$value`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 <span class="function">snmp3\_set</span> is used to set the value of an
 SNMP object specified by the `object_id`.
@@ -1063,13 +1074,13 @@ protocol/password valid values have to be specified.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
-`sec_name`  
+`security_name`  
 the security name, usually some kind of username
 
-`sec_level`  
+`security_level`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
 `auth_protocol`  
@@ -1078,10 +1089,10 @@ the authentication protocol (MD5 or SHA)
 `auth_passphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacy_protocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacy_passphrase`  
 the privacy pass phrase
 
 `object_id`  
@@ -1182,23 +1193,26 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmp3\_walk</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
-class="methodparam"><span class="type">string</span> `$sec_name`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$sec_level`</span> , <span class="methodparam"><span
-class="type">string</span> `$auth_protocol`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$auth_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$priv_protocol`</span> , <span
+`$security_name`</span> , <span class="methodparam"><span
+class="type">string</span> `$security_level`</span> , <span
 class="methodparam"><span class="type">string</span>
-`$priv_passphrase`</span> , <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+`$auth_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$auth_passphrase`</span> , <span
+class="methodparam"><span class="type">string</span>
+`$privacy_protocol`</span> , <span class="methodparam"><span
+class="type">string</span> `$privacy_passphrase`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 <span class="function">snmp3\_walk</span> function is used to read all
 the values from an SNMP agent specified by the `hostname`.
@@ -1208,13 +1222,13 @@ protocol/password valid values have to be specified.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
-`sec_name`  
+`security_name`  
 the security name, usually some kind of username
 
-`sec_level`  
+`security_level`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
 `auth_protocol`  
@@ -1223,10 +1237,10 @@ the authentication protocol (MD5 or SHA)
 `auth_passphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacy_protocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacy_passphrase`  
 the privacy pass phrase
 
 `object_id`  
@@ -1281,15 +1295,19 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="type">string</span> <span class="methodname">snmpget</span>
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span class="methodname">snmpget</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> , <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$timeout`<span class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 The <span class="function">snmpget</span> function is used to read the
 value of an SNMP object specified by the `object_id`.
@@ -1336,23 +1354,26 @@ Fetch the SNMP object which follows the given object id
 
 ### Description
 
-<span class="type">string</span> <span
+<span class="type"><span class="type">stdClass</span><span
+class="type">array</span><span class="type">string</span><span
+class="type">bool</span></span> <span
 class="methodname">snmpgetnext</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$object_id`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 The <span class="function">snmpgetnext</span> function is used to read
 the value of the SNMP object that follows the specified `object_id`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -1395,16 +1416,18 @@ specified one
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmprealwalk</span> ( <span class="methodparam"><span
-class="type">string</span> `$host`</span> , <span
+class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$object_id`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 The <span class="function">snmprealwalk</span> function is used to
 traverse over a number of SNMP objects starting from `object_id` and
@@ -1412,7 +1435,7 @@ return not only their values but also their object ids.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -1466,25 +1489,29 @@ Set the value of an SNMP object
 
 ### Description
 
-<span class="type">bool</span> <span class="methodname">snmpset</span> (
-<span class="methodparam"><span class="type">string</span>
-`$host`</span> , <span class="methodparam"><span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span class="methodname">snmpset</span>
+( <span class="methodparam"><span class="type">string</span>
+`$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> , <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-, <span class="methodparam"><span class="type">string</span>
-`$type`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$value`</span> \[, <span
-class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$value`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 <span class="function">snmpset</span> is used to set the value of an
 SNMP object specified by the `object_id`.
 
 ### Parameters
 
-`host`  
+`hostname`  
 The hostname of the SNMP agent (server).
 
 `community`  
@@ -1592,15 +1619,18 @@ Fetch all the SNMP objects from an agent
 
 ### Description
 
-<span class="type">array</span> <span class="methodname">snmpwalk</span>
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span class="methodname">snmpwalk</span>
 ( <span class="methodparam"><span class="type">string</span>
 `$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> , <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$timeout`<span class="initializer"> = 1000000</span></span> \[, <span
-class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$object_id`</span> \[, <span class="methodparam"><span
+class="type">int</span> `$timeout`<span class="initializer"> =
+-1</span></span> \[, <span class="methodparam"><span
+class="type">int</span> `$retries`<span class="initializer"> =
+-1</span></span> \]\] )
 
 <span class="function">snmpwalk</span> function is used to read all the
 values from an SNMP agent specified by the `hostname`.
@@ -1660,16 +1690,18 @@ Query for a tree of information about a network entity
 
 ### Description
 
-<span class="type">array</span> <span
+<span class="type"><span class="type">array</span><span
+class="type">bool</span></span> <span
 class="methodname">snmpwalkoid</span> ( <span class="methodparam"><span
 class="type">string</span> `$hostname`</span> , <span
 class="methodparam"><span class="type">string</span> `$community`</span>
-, <span class="methodparam"><span class="type">string</span>
+, <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$object_id`</span> \[, <span class="methodparam"><span
 class="type">int</span> `$timeout`<span class="initializer"> =
-1000000</span></span> \[, <span class="methodparam"><span
+-1</span></span> \[, <span class="methodparam"><span
 class="type">int</span> `$retries`<span class="initializer"> =
-5</span></span> \]\] )
+-1</span></span> \]\] )
 
 <span class="function">snmpwalkoid</span> function is used to read all
 object ids and their respective values from an SNMP agent specified by
@@ -1729,7 +1761,8 @@ agent running on localhost. One can step through the values with a loop
 **Table of Contents**
 
 -   [snmp\_get\_quick\_print](/ref/snmp.html#snmp_get_quick_print) —
-    Fetches the current value of the UCD library's quick\_print setting
+    Fetches the current value of the NET-SNMP library's quick\_print
+    setting
 -   [snmp\_get\_valueretrieval](/ref/snmp.html#snmp_get_valueretrieval)
     — Return the method how the SNMP values will be returned
 -   [snmp\_read\_mib](/ref/snmp.html#snmp_read_mib) — Reads and parses a
@@ -1742,7 +1775,7 @@ agent running on localhost. One can step through the values with a loop
 -   [snmp\_set\_oid\_output\_format](/ref/snmp.html#snmp_set_oid_output_format)
     — Set the OID output format
 -   [snmp\_set\_quick\_print](/ref/snmp.html#snmp_set_quick_print) — Set
-    the value of quick\_print within the UCD SNMP library
+    the value of enable within the NET-SNMP library
 -   [snmp\_set\_valueretrieval](/ref/snmp.html#snmp_set_valueretrieval)
     — Specify the method how the SNMP values will be returned
 -   [snmp2\_get](/ref/snmp.html#snmp2_get) — Fetch an SNMP object

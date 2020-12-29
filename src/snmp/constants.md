@@ -6,22 +6,22 @@ available when the extension has either been compiled into PHP or
 dynamically loaded at runtime.
 
 **`SNMP_OID_OUTPUT_SUFFIX`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.4.0 </span>
+<span class="simpara"> </span>
 
 **`SNMP_OID_OUTPUT_MODULE`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.4.0 </span>
+<span class="simpara"> </span>
 
 **`SNMP_OID_OUTPUT_FULL`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.2.0 </span>
+<span class="simpara"> </span>
 
 **`SNMP_OID_OUTPUT_NUMERIC`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.2.0 </span>
+<span class="simpara"> </span>
 
 **`SNMP_OID_OUTPUT_UCD`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.4.0 </span>
+<span class="simpara"> </span>
 
 **`SNMP_OID_OUTPUT_NONE`** (<span class="type">int</span>)  
-<span class="simpara"> As of 5.4.0 </span>
+<span class="simpara"> </span>
 
 <!-- -->
 

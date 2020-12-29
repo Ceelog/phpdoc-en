@@ -13,7 +13,7 @@ SNMP
 -   [Predefined Constants](/snmp/constants.html)
 -   [SNMP Functions](/ref/snmp.html)
     -   [snmp\_get\_quick\_print](/ref/snmp.html#snmp_get_quick_print) —
-        Fetches the current value of the UCD library's quick\_print
+        Fetches the current value of the NET-SNMP library's quick\_print
         setting
     -   [snmp\_get\_valueretrieval](/ref/snmp.html#snmp_get_valueretrieval)
         — Return the method how the SNMP values will be returned
@@ -27,7 +27,7 @@ SNMP
     -   [snmp\_set\_oid\_output\_format](/ref/snmp.html#snmp_set_oid_output_format)
         — Set the OID output format
     -   [snmp\_set\_quick\_print](/ref/snmp.html#snmp_set_quick_print) —
-        Set the value of quick\_print within the UCD SNMP library
+        Set the value of enable within the NET-SNMP library
     -   [snmp\_set\_valueretrieval](/ref/snmp.html#snmp_set_valueretrieval)
         — Specify the method how the SNMP values will be returned
     -   [snmp2\_get](/ref/snmp.html#snmp2_get) — Fetch an SNMP object
@@ -127,18 +127,20 @@ class="methodparam"><span class="type">int</span> `$version`</span> ,
 `$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
+class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="initializer"> = -1</span></span> \]\] )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">close</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">get</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$preserve_keys`<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">get</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$preserveKeys`<span
 class="initializer"> = **`false`**</span></span> \] )
 
 <span class="modifier">public</span> <span class="type">int</span> <span
@@ -149,39 +151,52 @@ class="methodparam">void</span> )
 <span class="methodname">getError</span> ( <span
 class="methodparam">void</span> )
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">getnext</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$object_id`</span>
-)
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">getnext</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> )
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">set</span> ( <span class="methodparam"><span
-class="type">mixed</span> `$object_id`</span> , <span
-class="methodparam"><span class="type">mixed</span> `$type`</span> ,
-<span class="methodparam"><span class="type">mixed</span>
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">set</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
 `$value`</span> )
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">setSecurity</span> ( <span
-class="methodparam"><span class="type">string</span> `$sec_level`</span>
-\[, <span class="type">string</span> `$auth_protocol`<span
-class="initializer"> = </span> \[, <span class="type">string</span>
-`$auth_passphrase`<span class="initializer"> = </span> \[, <span
-class="type">string</span> `$priv_protocol`<span class="initializer"> =
-</span> \[, <span class="type">string</span> `$priv_passphrase`<span
-class="initializer"> = </span> \[, <span class="type">string</span>
-`$contextName`<span class="initializer"> = </span> \[, <span
-class="type">string</span> `$contextEngineID`<span class="initializer">
-= </span> \]\]\]\]\]\] )
+class="methodparam"><span class="type">string</span>
+`$securityLevel`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$authProtocol`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$authPassphrase`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$privacyProtocol`<span class="initializer">
+= ""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$privacyPassphrase`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$contextName`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$contextEngineId`<span class="initializer"> = ""</span></span>
+\]\]\]\]\]\] )
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">walk</span> ( <span class="methodparam"><span
-class="type">string</span> `$object_id`</span> \[, <span
-class="methodparam"><span class="type">bool</span> `$suffix_as_key`<span
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">walk</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$suffixAsKey`<span
 class="initializer"> = **`false`**</span></span> \[, <span
-class="methodparam"><span class="type">int</span>
-`$max_repetitions`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$non_repeaters`</span> \]\]\] )
+class="methodparam"><span class="type">int</span> `$maxRepetitions`<span
+class="initializer"> = -1</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$nonRepeaters`<span
+class="initializer"> = -1</span></span> \]\]\] )
 
 /\* Constants \*/
 
@@ -246,7 +261,7 @@ Value of `quick_print` within the NET-SNMP library
 Sets the value of `quick_print` within the NET-SNMP library. When this
 is set (1), the SNMP library will return 'quick printed' values. This
 means that just the value will be printed. When `quick_print` is not
-enabled (default) the UCD SNMP library prints extra information
+enabled (default) the NET-SNMP library prints extra information
 including the type of the value (i.e. IpAddress or OID). Additionally,
 if quick\_print is not enabled, the library prints additional hex values
 for all strings of three characters or less.
@@ -383,9 +398,9 @@ class="methodparam"><span class="type">int</span> `$version`</span> ,
 `$hostname`</span> , <span class="methodparam"><span
 class="type">string</span> `$community`</span> \[, <span
 class="methodparam"><span class="type">int</span> `$timeout`<span
-class="initializer"> = 1000000</span></span> \[, <span
+class="initializer"> = -1</span></span> \[, <span
 class="methodparam"><span class="type">int</span> `$retries`<span
-class="initializer"> = 5</span></span> \]\] )
+class="initializer"> = -1</span></span> \]\] )
 
 The function description goes here.
 
@@ -466,35 +481,36 @@ Fetch an SNMP object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">SNMP::get</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$preserve_keys`<span class="initializer"> = **`false`**</span></span>
-\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">SNMP::get</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$preserveKeys`<span
+class="initializer"> = **`false`**</span></span> \] )
 
-Fetch an SNMP object specified in `object_id` using GET query.
+Fetch an SNMP object specified in `objectId` using GET query.
 
 ### Parameters
 
-If `object_id` is a string, then <span
+If `objectId` is a string, then <span
 class="methodname">SNMP::get</span> will return SNMP object as string.
-If `object_id` is a array, all requested SNMP objects will be returned
-as associative array of the SNMP object ids and their values.
+If `objectId` is a array, all requested SNMP objects will be returned as
+associative array of the SNMP object ids and their values.
 
-`object_id`  
+`objectId`  
 The SNMP object (OID) or objects
 
-`preserve_keys`  
-When `object_id` is a array and `preserve_keys` set to **`true`** keys
-in results will be taken exactly as in `object_id`, otherwise
+`preserveKeys`  
+When `objectId` is a array and `preserveKeys` set to **`true`** keys in
+results will be taken exactly as in `objectId`, otherwise
 `SNMP::oid_output_format` property is used to determinate the form of
 keys.
 
 ### Return Values
 
 Returns SNMP objects requested as string or array depending on
-`object_id` type or **`false`** on error.
+`objectId` type or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -636,27 +652,29 @@ Fetch an SNMP object which follows the given object id
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">mixed</span>
-<span class="methodname">SNMP::getnext</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$object_id`</span>
-)
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">SNMP::getnext</span> ( <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$objectId`</span> )
 
-Fetch an SNMP object that follows specified `object_id`.
+Fetch an SNMP object that follows specified `objectId`.
 
 ### Parameters
 
-If `object_id` is a string, then <span
+If `objectId` is a string, then <span
 class="methodname">SNMP::getnext</span> will return SNMP object as
-string. If `object_id` is a array, all requested SNMP objects will be
+string. If `objectId` is a array, all requested SNMP objects will be
 returned as associative array of the SNMP object ids and their values.
 
-`object_id`  
+`objectId`  
 The SNMP object (OID) or objects
 
 ### Return Values
 
 Returns SNMP objects requested as string or array depending on
-`object_id` type or **`false`** on error.
+`objectId` type or **`false`** on error.
 
 ### Errors/Exceptions
 
@@ -724,19 +742,23 @@ Set the value of an SNMP object
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">bool</span>
-<span class="methodname">SNMP::set</span> ( <span
-class="methodparam"><span class="type">mixed</span> `$object_id`</span>
-, <span class="methodparam"><span class="type">mixed</span>
-`$type`</span> , <span class="methodparam"><span
-class="type">mixed</span> `$value`</span> )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">SNMP::set</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> , <span
+class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$type`</span> , <span class="methodparam"><span class="type"><span
+class="type">array</span><span class="type">string</span></span>
+`$value`</span> )
 
 Requests remote SNMP agent setting the value of one or more SNMP objects
-specified by the `object_id`.
+specified by the `objectId`.
 
 ### Parameters
 
-`object_id`  
+`objectId`  
 The SNMP object id
 
 When count of OIDs in object\_id array is greater than max\_oids object
@@ -859,41 +881,46 @@ Configures security-related SNMPv3 session parameters
 
 <span class="modifier">public</span> <span class="type">bool</span>
 <span class="methodname">SNMP::setSecurity</span> ( <span
-class="methodparam"><span class="type">string</span> `$sec_level`</span>
-\[, <span class="type">string</span> `$auth_protocol`<span
-class="initializer"> = </span> \[, <span class="type">string</span>
-`$auth_passphrase`<span class="initializer"> = </span> \[, <span
-class="type">string</span> `$priv_protocol`<span class="initializer"> =
-</span> \[, <span class="type">string</span> `$priv_passphrase`<span
-class="initializer"> = </span> \[, <span class="type">string</span>
-`$contextName`<span class="initializer"> = </span> \[, <span
-class="type">string</span> `$contextEngineID`<span class="initializer">
-= </span> \]\]\]\]\]\] )
+class="methodparam"><span class="type">string</span>
+`$securityLevel`</span> \[, <span class="methodparam"><span
+class="type">string</span> `$authProtocol`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$authPassphrase`<span class="initializer"> =
+""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$privacyProtocol`<span class="initializer">
+= ""</span></span> \[, <span class="methodparam"><span
+class="type">string</span> `$privacyPassphrase`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span> `$contextName`<span
+class="initializer"> = ""</span></span> \[, <span
+class="methodparam"><span class="type">string</span>
+`$contextEngineId`<span class="initializer"> = ""</span></span>
+\]\]\]\]\]\] )
 
 setSecurity configures security-related session parameters used in SNMP
 protocol version 3
 
 ### Parameters
 
-`sec_level`  
+`securityLevel`  
 the security level (noAuthNoPriv\|authNoPriv\|authPriv)
 
-`auth_protocol`  
+`authProtocol`  
 the authentication protocol (MD5 or SHA)
 
-`auth_passphrase`  
+`authPassphrase`  
 the authentication pass phrase
 
-`priv_protocol`  
+`privacyProtocol`  
 the privacy protocol (DES or AES)
 
-`priv_passphrase`  
+`privacyPassphrase`  
 the privacy pass phrase
 
 `contextName`  
 the context name
 
-`contextEngineID`  
+`contextEngineId`  
 the context EngineID
 
 ### Return Values
@@ -923,33 +950,36 @@ Fetch SNMP object subtree
 
 ### Description
 
-<span class="modifier">public</span> <span class="type">array</span>
-<span class="methodname">SNMP::walk</span> ( <span
-class="methodparam"><span class="type">string</span> `$object_id`</span>
-\[, <span class="methodparam"><span class="type">bool</span>
-`$suffix_as_key`<span class="initializer"> = **`false`**</span></span>
-\[, <span class="methodparam"><span class="type">int</span>
-`$max_repetitions`</span> \[, <span class="methodparam"><span
-class="type">int</span> `$non_repeaters`</span> \]\]\] )
+<span class="modifier">public</span> <span class="type"><span
+class="type">array</span><span class="type">bool</span></span> <span
+class="methodname">SNMP::walk</span> ( <span class="methodparam"><span
+class="type"><span class="type">array</span><span
+class="type">string</span></span> `$objectId`</span> \[, <span
+class="methodparam"><span class="type">bool</span> `$suffixAsKey`<span
+class="initializer"> = **`false`**</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$maxRepetitions`<span
+class="initializer"> = -1</span></span> \[, <span
+class="methodparam"><span class="type">int</span> `$nonRepeaters`<span
+class="initializer"> = -1</span></span> \]\]\] )
 
 <span class="methodname">SNMP::walk</span> is used to read SNMP subtree
-rooted at specified `object_id`.
+rooted at specified `objectId`.
 
 ### Parameters
 
-`object_id`  
+`objectId`  
 Root of subtree to be fetched
 
-`suffix_as_key`  
+`suffixAsKey`  
 By default full OID notation is used for keys in output array. If set to
 **`true`** subtree prefix will be removed from keys leaving only suffix
 of object\_id.
 
-`non_repeaters`  
+`nonRepeaters`  
 This specifies the number of supplied variables that should not be
 iterated over. The default is to use this value from SNMP object.
 
-`max_repetitions`  
+`maxRepetitions`  
 This specifies the maximum number of iterations over the repeating
 variables. The default is to use this value from SNMP object.
 
@@ -996,10 +1026,10 @@ The above example will output something similar to:
         ...
     )
 
-**Example \#2 `suffix_as_key` example**
+**Example \#2 `suffixAsKey` example**
 
-`suffix_as_key` may be used when merging multiple SNMP subtrees into
-one. This example maps interface names to their type.
+`suffixAsKey` may be used when merging multiple SNMP subtrees into one.
+This example maps interface names to their type.
 
 ``` php
 <?php
