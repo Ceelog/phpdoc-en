@@ -205,7 +205,7 @@ being called externally. If so, only a static method will be able to
 instantiate the class. Because they are in the same class definition
 they have access to private methods, even if not of the same object
 instance. The private constructor is optional and may or may not make
-sense depending on the use case..
+sense depending on the use case.
 
 The three public static methods then demonstrate different ways of
 instantiating the object.

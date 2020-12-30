@@ -439,7 +439,7 @@ Returns **`true`** on success or **`false`** on failure.
 /* procedural API */
 $memcache_obj = memcache_connect('memcache_host', 11211);
 /* 
-do something here ..
+do something here...
 */
 memcache_close($memcache_obj);
 
@@ -447,7 +447,7 @@ memcache_close($memcache_obj);
 $memcache_obj = new Memcache;
 $memcache_obj->connect('memcache_host', 11211);
 /* 
-do something here ..
+do something here...
 */
 $memcache_obj->close();
 
