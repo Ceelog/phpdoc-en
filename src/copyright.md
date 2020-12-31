@@ -1,4 +1,4 @@
-Copyright © 1997 - 2020 by the PHP Documentation Group. This material
+Copyright © 1997 - 2021 by the PHP Documentation Group. This material
 may be distributed only subject to the terms and conditions set forth in
 the Creative Commons Attribution 3.0 License or later. A copy of the
 <a href="/cc/license.html" class="link">Creative Commons Attribution 3.0 license</a>

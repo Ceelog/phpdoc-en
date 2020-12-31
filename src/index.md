@@ -196,11 +196,11 @@ class="surname family-name">Vrana</span> </span>
 <a href="/preface.html#contributors" class="link">And several others</a>
 </span> </span>
 
-2020-12-31
+2021-01-01
 
 **Edited By**: <span class="personname fn"> <span
 class="firstname given-name">Peter</span> <span
 class="surname family-name">Cowburn</span> </span>
 
-© <span class="year">1997-2020</span> <span class="holder">the PHP
+© <span class="year">1997-2021</span> <span class="holder">the PHP
 Documentation Group</span>
